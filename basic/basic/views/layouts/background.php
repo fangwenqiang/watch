@@ -74,7 +74,8 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品类型管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/add']);?>"><i class="article"></i><em>添加</em></a></li>
+                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/show']);?>"><i class="article"></i><em>展示</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="backup"></i><em>订单管理</em></a></li>
