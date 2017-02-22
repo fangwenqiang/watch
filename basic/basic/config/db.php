@@ -7,4 +7,5 @@ return [
     'password' => 'qiang',
     'charset' => 'utf8',
     'tablePrefix'=>'mb_'
+
 ];

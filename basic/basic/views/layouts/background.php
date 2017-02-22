@@ -58,7 +58,7 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="product_category.html"><i class="productCat"></i><em>权限管理</em></a></li>
-                <li><a href="product.html"><i class="product"></i><em>子栏</em></a></li>
+                <li><a href="<?=url::to(['admin/rbac/admin'])?>"><i class="product"></i><em>管理员</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品管理</em></a></li>
