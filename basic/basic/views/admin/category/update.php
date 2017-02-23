@@ -6,7 +6,7 @@ use yii\helpers\Url;
     <!-- 当前位置 -->
     <div id="urHere">DouPHP 管理中心<b>></b><strong>修改修改</strong></div>
     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="product_category.php" class="actionBtn">商品分类</a>修改分类</h3>
+        <h3><a href="<?php echo Url::to(['admin/category/list'])?>" class="actionBtn">商品分类</a>修改分类</h3>
         <form action="<?php echo Url::to(['admin/category/update'])?>" method="post">
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                 <tr>
