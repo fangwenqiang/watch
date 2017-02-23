@@ -49,7 +49,7 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="mobile"></i><em>首页设置</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>轮播图</em></a></li>
+                <li><a href="<?=\yii\helpers\Url::to(['admin/carousel/index'])?>"><i class="article"></i><em>轮播图</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>导航栏</em></a></li>
             </ul>
             <ul>
@@ -58,7 +58,8 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="product_category.html"><i class="productCat"></i><em>权限管理</em></a></li>
-                <li><a href="product.html"><i class="product"></i><em>子栏</em></a></li>
+                <li><a href="<?=url::to(['admin/rbac/admin'])?>"><i class="product"></i><em>管理员</em></a></li>
+                <li><a href="<?=url::to(['admin/rbac/role'])?>"><i class="product"></i><em>角色</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品管理</em></a></li>
@@ -74,7 +75,8 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品类型管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/add']);?>"><i class="article"></i><em>添加</em></a></li>
+                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/show']);?>"><i class="article"></i><em>展示</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="backup"></i><em>订单管理</em></a></li>
