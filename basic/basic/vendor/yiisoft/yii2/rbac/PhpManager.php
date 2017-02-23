@@ -20,7 +20,7 @@ use yii\helpers\VarDumper;
  * specified by [[itemFile]], [[assignmentFile]] and [[ruleFile]].
  *
  * PhpManager is mainly suitable for authorization data that is not too big
- * (for example, the authorization data for a personal blog system).
+ * (for example, the authorization data for a personal blog nav).
  * Use [[DbManager]] for more complex authorization data.
  *
  * Note that PhpManager is not compatible with facebooks [HHVM](http://hhvm.com/) because

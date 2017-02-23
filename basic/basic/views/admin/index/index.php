@@ -42,7 +42,7 @@
                                     </tr>
                                     <tr>
                                         <td>URL 重写：</td>
-                                        <td><strong>关闭<a href="system.php" class="cueRed ml">（点击开启）</a>
+                                        <td><strong>关闭<a href="../system/system.php" class="cueRed ml">（点击开启）</a>
                                             </strong></td>
                                         <td>编码：</td>
                                         <td><strong>UTF-8</strong></td>

@@ -1,5 +1,4 @@
 <?php
-use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 <!DOCTYPE>
@@ -12,6 +11,7 @@ use yii\helpers\Url;
     <link href="css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
+
 </head>
 <body>
 <div id="dcWrap"> <div id="dcHead">
@@ -41,12 +41,15 @@ use yii\helpers\Url;
     </div>
     <!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
             <ul class="top">
-                <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/index/index']);?>"><i class="home"></i><em>管理首页</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="system"></i><em>系统设置</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/system/index']);?>"><i class="system"></i><em>系统设置</em></a></li>
             </ul>
+            <ul>
+                <li><a href="<?php echo Url::to(['admin/nav/index']);?>"><i class="nav"></i><em>导航管理</em></a></li>
+            </ul>
+
             <ul>
                 <li><a href="article_category.html"><i class="mobile"></i><em>首页设置</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>轮播图</em></a></li>
@@ -81,8 +84,7 @@ use yii\helpers\Url;
                 <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="manager"></i><em>操作记录</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/log/index']);?>"><i class="manager"></i><em>操作记录</em></a></li>
             </ul>
         </div>
     </div>

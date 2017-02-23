@@ -12,7 +12,7 @@ use yii\base\InvalidConfigException;
 use yii\helpers\FileHelper;
 
 /**
- * FileMutex implements mutex "lock" mechanism via local file system files.
+ * FileMutex implements mutex "lock" mechanism via local file nav files.
  * This component relies on PHP `flock()` function.
  *
  * Application configuration example:
@@ -73,7 +73,7 @@ class FileMutex extends Mutex
     public function init()
     {
         if (DIRECTORY_SEPARATOR === '\\') {
-            throw new InvalidConfigException('FileMutex does not have MS Windows operating system support.');
+            throw new InvalidConfigException('FileMutex does not have MS Windows operating nav support.');
         }
         $this->mutexPath = Yii::getAlias($this->mutexPath);
         if (!is_dir($this->mutexPath)) {

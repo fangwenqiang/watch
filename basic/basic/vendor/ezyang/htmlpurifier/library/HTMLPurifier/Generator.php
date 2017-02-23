@@ -118,7 +118,7 @@ class HTMLPurifier_Generator
             $html = (string) $tidy; // explicit cast necessary
         }
 
-        // Normalize newlines to system defined value
+        // Normalize newlines to nav defined value
         if ($this->config->get('Core.NormalizeNewlines')) {
             $nl = $this->config->get('Output.Newline');
             if ($nl === null) {

@@ -37,7 +37,7 @@ use yii\helpers\Html;
  * a fallback implementation. Without intl month and day names are in English only.
  * Note that even if the intl extension is installed, formatting date and time values for years >=2038 or <=1901
  * on 32bit systems will fall back to the PHP implementation because intl uses a 32bit UNIX timestamp internally.
- * On a 64bit system the intl formatter is used in all cases if installed.
+ * On a 64bit nav the intl formatter is used in all cases if installed.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Enrica Ruedin <e.ruedin@guggach.com>

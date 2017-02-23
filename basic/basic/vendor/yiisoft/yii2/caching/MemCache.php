@@ -24,7 +24,7 @@ use yii\base\InvalidConfigException;
  * See [[Cache]] for common cache operations that MemCache supports.
  *
  * Note, there is no security measure to protected data in memcache.
- * All data in memcache can be accessed by any process running in the system.
+ * All data in memcache can be accessed by any process running in the nav.
  *
  * To use MemCache as the cache application component, configure the application as follows,
  *

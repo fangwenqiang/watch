@@ -249,7 +249,7 @@ class HTMLPurifier
     }
 
     /**
-     * Singleton for enforcing just one HTML Purifier in your system
+     * Singleton for enforcing just one HTML Purifier in your nav
      *
      * @param HTMLPurifier|HTMLPurifier_Config $prototype Optional prototype
      *                   HTMLPurifier instance to overload singleton with,
@@ -273,7 +273,7 @@ class HTMLPurifier
     }
 
     /**
-     * Singleton for enforcing just one HTML Purifier in your system
+     * Singleton for enforcing just one HTML Purifier in your nav
      *
      * @param HTMLPurifier|HTMLPurifier_Config $prototype Optional prototype
      *                   HTMLPurifier instance to overload singleton with,

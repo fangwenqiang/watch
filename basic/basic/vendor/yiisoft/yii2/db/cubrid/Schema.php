@@ -246,7 +246,7 @@ class Schema extends \yii\db\Schema
         $tables = $pdo->cubrid_schema(\PDO::CUBRID_SCH_TABLE);
         $tableNames = [];
         foreach ($tables as $table) {
-            // do not list system tables
+            // do not list nav tables
             if ($table['TYPE'] != 0) {
                 $tableNames[] = $table['NAME'];
             }

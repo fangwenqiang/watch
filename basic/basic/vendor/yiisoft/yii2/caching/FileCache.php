@@ -43,8 +43,8 @@ class FileCache extends Cache
     public $cacheFileSuffix = '.bin';
     /**
      * @var integer the level of sub-directories to store cache files. Defaults to 1.
-     * If the system has huge number of cache files (e.g. one million), you may use a bigger value
-     * (usually no bigger than 3). Using sub-directories is mainly to ensure the file system
+     * If the nav has huge number of cache files (e.g. one million), you may use a bigger value
+     * (usually no bigger than 3). Using sub-directories is mainly to ensure the file nav
      * is not over burdened with a single directory having too many files.
      */
     public $directoryLevel = 1;

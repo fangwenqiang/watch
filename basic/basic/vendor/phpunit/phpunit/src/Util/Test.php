@@ -247,7 +247,7 @@ class PHPUnit_Util_Test
         }
 
         if (!empty($required['OS']) && !preg_match($required['OS'], PHP_OS)) {
-            $missing[] = sprintf('Operating system matching %s is required.', $required['OS']);
+            $missing[] = sprintf('Operating nav matching %s is required.', $required['OS']);
         }
 
         if (!empty($required['functions'])) {

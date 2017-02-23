@@ -1007,7 +1007,7 @@ abstract class Swift_Transport_AbstractSmtpTest extends \SwiftMailerTestCase
         channel until it sends a QUIT command and SHOULD wait until it
         receives the reply (even if there was an error response to a previous
         command).  If the connection is closed prematurely due to violations
-        of the above or system or network failure, the server MUST cancel any
+        of the above or nav or network failure, the server MUST cancel any
         pending transaction, but not undo any previously completed
         transaction, and generally MUST act as if the command or transaction
         in progress had received a temporary error (i.e., a 4yz response).
