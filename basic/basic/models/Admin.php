@@ -9,10 +9,13 @@
 namespace app\models;
 
 use yii\db\ActiveRecord;
+
 /*
  *管理员表model层
  * */
-class Admin extends ActiveRecord{
+
+class Admin extends ActiveRecord
+{
 
     static public function tableName()
     {
@@ -24,11 +27,20 @@ class Admin extends ActiveRecord{
      * */
     public function show($id = null)
     {
-        if(!empty($id)){
-            return $this->find()->where(['admin_id'=>$id])->asArray()->one();
-        }else{
+
+        if (isset($id)) {
+            return $this->find()->where(['admin_id' => $id])->asArray()->one();
+        } else {
+
             return $this->find()->asArray()->all();
         }
+    }
+
+    //按条件查找
+    public function select($where = null)
+    {
+        return $this->find()->where($where)->asArray()->all();
+
     }
 
     /*
@@ -37,9 +49,9 @@ class Admin extends ActiveRecord{
     public function del($id)
     {
         $request = $this->find()->where(['admin_id' => $id])->one();
-        if($request->delete()){
+        if ($request->delete()) {
             return 0;
-        }else{
+        } else {
             return 1;
         }
     }
