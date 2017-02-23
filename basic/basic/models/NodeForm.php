@@ -35,7 +35,7 @@ class NodeForm extends Model{
      * */
     public function create()
     {
-        $node_id = \Yii::$app->request->post()['NodeForm']['node_id'];
+        $node_id = \Yii::$app->request->post('node_id');
         $co_ac = \Yii::$app->request->post()['NodeForm']['co_ac'];
         $transaction = \Yii::$app->db->beginTransaction();
         try{
@@ -60,8 +60,8 @@ class NodeForm extends Model{
      * */
     public function update()
     {
-        $node_id = \Yii::$app->request->post()['NodeForm']['node_id'];
-        $parent_id = \Yii::$app->request->post()['NodeForm']['parent_id'];
+        $node_id = \Yii::$app->request->post()['NodeForm']['node_id'];;
+        $parent_id = \Yii::$app->request->post('parent_id');
         $co_ac = \Yii::$app->request->post()['NodeForm']['co_ac'];
         $transaction = \Yii::$app->db->beginTransaction();
         try{
