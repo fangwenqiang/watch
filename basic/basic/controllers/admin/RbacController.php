@@ -32,13 +32,23 @@ class RbacController extends Controller
         $model = new AdminForm();
         if($model->load(\Yii::$app->request->post()) && $model->validate()) {
             if($model->create()){
-                return $this->redirect('?r=admin/rbac/admin');
+                return $this->redirect(['admin/rbac/msg', ['msg' => '添加成功','url'=>'/admin/rbac/admin']]);
             }else{
                 exit(\Yii::$app->session->getFlash('waring'));
             }
         }
         return $this->render('addmanager',['model'=>$model]);
 	}
-	
+
+    /**
+     * 页面跳转提示
+     */
+    public function actionMsg()
+    {
+        $request = \Yii::$app->request;
+        return $this->render('/error/msg',$request->get('1'));
+    }
+
+
 	
 }
