@@ -48,7 +48,7 @@ class Goodstype extends \yii\db\ActiveRecord
     * @param  $data 添加数据
     * @author pjp
     */
-    public function add($data)
+    public function addData($data)
     {
         $this->type_name = $data['type_name'];
 
@@ -62,8 +62,50 @@ class Goodstype extends \yii\db\ActiveRecord
     * @param 
     * @author pjp
     */
-    public function select()
+    public function selectData()
     {
         return $this->find()->asArray()->all();
+    }
+
+
+    /**
+    * 查询单条商品类型
+    *
+    * @param  $where 查询条件
+    * @author pjp
+    */
+    public function findData($where)
+    {
+        return $this->find()->where($where)->asArray()->one();
+    }
+
+
+    /**
+    * 修改商品类型
+    *
+    * @param  $data 修改的数据
+    * @author pjp
+    */
+    public function updateData($data)
+    {
+        $obj = $this->findOne($data['type_id']);
+        $obj->type_name = $data['type_name'];
+        
+        return $obj->save();
+    }
+
+
+
+    /**
+    * 删除商品类型
+    *
+    * @param  $type_id int 类型id
+    * @author pjp
+    */
+    public function deleteData($type_id)
+    {
+        $object = $this->findOne($type_id);
+
+        return $object->delete();
     }
 }
