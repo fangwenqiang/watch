@@ -67,12 +67,12 @@ use yii\helpers\Url;
                 <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>品牌管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/brand/list'])?>"><i class="articleCat"></i><em>品牌管理</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/brand/add'])?>"><i class="article"></i><em>品牌添加</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>商品分类管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/category/list'])?>"><i class="articleCat"></i><em>商品分类管理</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/category/add'])?>"><i class="article"></i><em>商品分类添加</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品类型管理</em></a></li>
