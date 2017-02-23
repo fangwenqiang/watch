@@ -49,7 +49,7 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="mobile"></i><em>首页设置</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>轮播图</em></a></li>
+                <li><a href="<?=\yii\helpers\Url::to(['admin/carousel/index'])?>"><i class="article"></i><em>轮播图</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>导航栏</em></a></li>
             </ul>
             <ul>
