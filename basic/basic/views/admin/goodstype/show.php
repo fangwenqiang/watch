@@ -14,11 +14,12 @@
       <tr>
         <td align="left"><a href="product.php?cat_id=4"><?=$value['type_id']?></a></td>
         <td align="left"><a href="product.php?cat_id=4"><?=$value['type_name']?></a></td>
-        <td>智能手机销售</td>
+        <td>1</td>
         <td align="center">
-          <a href="product_category.php?rec=edit&cat_id=4">属性列表</a> |
-          <a href="product_category.php?rec=edit&cat_id=4">编辑</a> | 
-          <a href="product_category.php?rec=del&cat_id=4">删除</a></td>
+          <a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/attribute_show']);?>">属性列表</a> |
+          <a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/update']).'&type_id='.$value['type_id'];?>">编辑</a> | 
+          <a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/delete']).'&type_id='.$value['type_id'];?>">删除</a>
+        </td>
      </tr>
     <?php } ?>
     </table>
