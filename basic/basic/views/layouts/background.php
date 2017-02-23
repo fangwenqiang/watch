@@ -59,6 +59,7 @@ use yii\helpers\Url;
             <ul>
                 <li><a href="product_category.html"><i class="productCat"></i><em>权限管理</em></a></li>
                 <li><a href="<?=url::to(['admin/rbac/admin'])?>"><i class="product"></i><em>管理员</em></a></li>
+                <li><a href="<?=url::to(['admin/rbac/role'])?>"><i class="product"></i><em>角色</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品管理</em></a></li>
