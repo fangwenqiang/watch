@@ -62,7 +62,7 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="mobile"></i><em>首页设置</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>轮播图</em></a></li>
+                <li><a href="<?=\yii\helpers\Url::to(['admin/carousel/index'])?>"><i class="article"></i><em>轮播图</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>导航栏</em></a></li>
             </ul>
             <ul>
@@ -71,19 +71,24 @@ use yii\helpers\Url;
             </ul>
             <ul>
                 <li><a href="product_category.html"><i class="productCat"></i><em>权限管理</em></a></li>
-                <li><a href="<?= url::to(['admin/rbac/admin']) ?>"><i class="product"></i><em>管理员</em></a></li>
+
+        
+                <li><a href="<?=url::to(['admin/rbac/admin'])?>"><i class="product"></i><em>管理员</em></a></li>
+                <li><a href="<?=url::to(['admin/rbac/role'])?>"><i class="product"></i><em>角色</em></a></li>
+                <li><a href="<?=url::to(['admin/rbac/node'])?>"><i class="product"></i><em>权限</em></a></li>
+
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>品牌管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/brand/list'])?>"><i class="articleCat"></i><em>品牌管理</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/brand/add'])?>"><i class="article"></i><em>品牌添加</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>商品分类管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/category/list'])?>"><i class="articleCat"></i><em>商品分类管理</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/category/add'])?>"><i class="article"></i><em>商品分类添加</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>商品类型管理</em></a></li>

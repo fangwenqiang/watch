@@ -7,16 +7,14 @@
  */
 namespace app\models;
 
-
 use yii\base\Model;
+/*
+ * 角色表单模型
+ * */
+class RoleForm extends Model{
 
-class AdminForm extends Model{
-
-    public $admin_id;
-    public $username;
-    public $password;
-    public $espassword;
-    public $email;
+    public $role_id;
+    public $role_name;
 
     /*
      * 验证
@@ -24,10 +22,7 @@ class AdminForm extends Model{
     public function rules()
     {
         return [
-            [['username','email','password','espassword'],'required','message'=>'{attribute}不能为空'],
-            ['email','email','message'=>'{attribute}格式不正确'],
-            ['password','match','pattern'=>'/^\w{4,20}$/','message'=>'{attribute}密码长度必须是4-9位字符'],
-            ['espassword', 'compare','compareAttribute'=>'password','message'=>'{attribute}必须和密码相同']
+            [['role_name'],'required','message'=>'{attribute}不能为空'],
         ];
     }
 
@@ -38,10 +33,8 @@ class AdminForm extends Model{
     {
         $transaction = \Yii::$app->db->beginTransaction();
         try{
-            $model = new Admin();
-            $model->username = $this->username;
-            $model->password = substr(md5($this->password),0,20);
-            $model->email = $this->email;
+            $model = new Role();
+            $model->role_name = $this->role_name;
             if(!$model->save()){
                 return \Exception('注册失败');
             }
@@ -59,18 +52,11 @@ class AdminForm extends Model{
      * */
     public function update()
     {
-        $admin_id = \Yii::$app->request->post()['AdminForm']['admin_id'];
+        $role_id = \Yii::$app->request->post()['RoleForm']['role_id'];
         $transaction = \Yii::$app->db->beginTransaction();
-        if($this->password == 20){
-            $pwd = $this->password;
-        }else{
-            $pwd = md5($this->password);
-        }
         try{
-            $model = Admin::findOne($admin_id);
-            $model->username = $this->username;
-            $model->password = $pwd;
-            $model->email = $this->email;
+            $model = Role::findOne($role_id);
+            $model->role_name = $this->role_name;
             if(!$model->save()){
                 return \Exception('修改失败');
             }
@@ -89,11 +75,8 @@ class AdminForm extends Model{
     public function attributeLabels()
     {
         return[
-          'admin_id'=>'ID',
-          'username'=>'管理员名称',
-          'password'=>'密码',
-          'espassword'=>'确认密码',
-          'email'=>'E-mail地址'
+            'role_id'=>'ID',
+            'role_name'=>'角色名称',
         ];
     }
 

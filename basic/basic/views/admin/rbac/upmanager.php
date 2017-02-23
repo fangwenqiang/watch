@@ -16,32 +16,32 @@ use yii\bootstrap\Html;
             <tr>
                 <td width="100" align="right">管理员名称</td>
                 <td >
-                    <?=$form->field($model,'username')->input('test',['class' => 'inpMain','size'=>'40','value'=>$data['0']['username']])->label('')?>
-                    <?=$form->field($model,'admin_id')->input('hidden',['class' => 'inpMain','size'=>'40','value'=>$data['0']['admin_id']])->label('')?>
+                    <?=$form->field($model,'username')->input('test',['class' => 'inpMain','size'=>'40','value'=>$data['username']])->label('')?>
+                    <?=$form->field($model,'admin_id')->input('hidden',['class' => 'inpMain','size'=>'40','value'=>$data['admin_id']])->label('')?>
                 </td>
             </tr>
             <tr>
                 <td width="100" align="right">E-mail地址</td>
                 <td>
-                    <?=$form->field($model,'email')->input('email',['class' => 'inpMain','size'=>'40','value'=>$data['0']['email']])->label('')?>
+                    <?=$form->field($model,'email')->input('email',['class' => 'inpMain','size'=>'40','value'=>$data['email']])->label('')?>
                 </td>
             </tr>
             <tr>
                 <td align="right">密码</td>
                 <td>
-                    <?=$form->field($model,'password')->input('password',['class' => 'inpMain','size'=>'40','value'=>$data['0']['password']])->label('')?>
+                    <?=$form->field($model,'password')->input('password',['class' => 'inpMain','size'=>'40','value'=>$data['password']])->label('')?>
                 </td>
             </tr>
             <tr>
                 <td align="right">确认密码</td>
                 <td>
-                    <?=$form->field($model,'espassword')->input('password',['class' => 'inpMain','size'=>'40','value'=>$data['0']['password']])->label('')?>
+                    <?=$form->field($model,'espassword')->input('password',['class' => 'inpMain','size'=>'40','value'=>$data['password']])->label('')?>
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td>
-                    <input type="hidden" name="token" value="5a58b748" />
+                    <input type="hidden" class="_csrf" value="<?=Yii::$app->request->getCsrfToken() ?>">
                     <?= Html::submitButton('提交', ['class' => 'btn', 'name' => 'submit']) ?>
                 </td>
             </tr>

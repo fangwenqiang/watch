@@ -21,7 +21,8 @@ use yii\helpers\Url;
       <td align="center"><?=$val['email']?></td>
       <td align="center">2016-02-25</td>
       <td align="center">2016-02-26 20:53:17</td>
-      <td align="center"><a href="<?=url::to(['admin/rbac/update','id'=>$val['admin_id']])?>">编辑</a> | <a href="javascript:void(0)" class="del" admin_id="<?=$val['admin_id']?>">删除</a></td>
+      <td align="center"><a href="<?=url::to(['admin/rbac/update','admin_id'=>$val['admin_id']])?>">编辑</a>
+          | <a href="javascript:void(0)" class="del" admin_id="<?=$val['admin_id']?>">删除</a></td>
      </tr>
       <?php } ?>
          </table>

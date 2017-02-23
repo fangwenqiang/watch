@@ -37,6 +37,7 @@ use yii\bootstrap\Html;
                 <td>
                     <?= $form->field($model, 'espassword')->input('password', ['class' => 'inpMain', 'size' => '40'])->label('') ?>
 
+
                 </td>
             </tr>
             <tr>
@@ -50,3 +51,4 @@ use yii\bootstrap\Html;
         <?php ActiveForm::end() ?>
     </div>
 </div>
+

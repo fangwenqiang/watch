@@ -27,9 +27,11 @@ class Admin extends ActiveRecord
      * */
     public function show($id = null)
     {
+
         if (isset($id)) {
             return $this->find()->where(['admin_id' => $id])->asArray()->one();
         } else {
+
             return $this->find()->asArray()->all();
         }
     }
