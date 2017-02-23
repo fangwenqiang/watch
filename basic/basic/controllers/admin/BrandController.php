@@ -47,25 +47,25 @@ class BrandController extends Controller
             $post['brand_logo']=$model->brandUpload($_FILES['brand_logo']);
             //判断前台接收的数据
             if(empty($post['brand_name'])) {
-                die('品牌名称不能为空');
+                return $this->redirect(['admin/brand/msg', ['msg' => '品牌名称不能为空','url'=>'/admin/brand/update']]);
             }
             if(empty($post['brand_desc'])) {
-                die('品牌介绍不能为空');
+                return $this->redirect(['admin/brand/msg', ['msg' => '品牌介绍不能为空','url'=>'/admin/brand/update']]);
             }
             if(empty($post['sort'])) {
-                die('排序不能为空');
+                return $this->redirect(['admin/brand/msg', ['msg' => '排序不能为空','url'=>'/admin/brand/update']]);
+            }
+            if(!is_integer($post['sort'])) {
+                return $this->redirect(['admin/brand/msg', ['msg' => '排序必须为数字','url'=>'/admin/brand/update']]);
             }
             //删除csrf 因为yii框架的方法不过率
             unset($post['_csrf']);
             //调用修改方法
             $res=$model->brandUpdate($post);
-
             if($res) {
-                Yii::$app->session->addFlash('success','修改成功');
-                $this->redirect(\yii\helpers\Url::toRoute(['list']));
+                return $this->redirect(['admin/brand/msg', ['msg' => '修改成功','url'=>'/admin/brand/list']]);
             } else {
-                Yii::$app->session->addFlash('error','修改失败');
-                $this->redirect(\yii\helpers\Url::toRoute(['list']));
+                return $this->redirect(['admin/brand/msg',['msg' => '修改失败','url'=>'/admin/brand/update']]);
             }
 
         } else {
@@ -77,7 +77,7 @@ class BrandController extends Controller
     }
 
     /*
-     * 品牌-->修改操作
+     * 品牌-->删除操作
      */
     public function actionDelete()
     {
@@ -85,11 +85,9 @@ class BrandController extends Controller
         $model=new Brand();
         $res = $model->brandDel($id);
         if($res) {
-            Yii::$app->session->addFlash('success','删除成功');
-            $this->redirect(\yii\helpers\Url::toRoute(['list']));
+            return $this->redirect(['admin/brand/msg', ['msg' => '删除成功','url'=>'/admin/brand/list']]);
         } else {
-            Yii::$app->session->addFlash('error','删除失败');
-            $this->redirect(\yii\helpers\Url::toRoute(['list']));
+            return $this->redirect(['admin/brand/msg',['msg' => '删除失败','url'=>'/admin/brand/list']]);          
         }
     }
     /*
@@ -104,26 +102,24 @@ class BrandController extends Controller
             $post['brand_logo']=$model->brandUpload($_FILES['brand_logo']);
 
             if(empty($post['brand_name'])) {
-                die('分类名称不能为空');
+                return $this->redirect(['admin/brand/msg', ['msg' => '分类名称不能为空','url'=>'/admin/brand/add']]);
             }
             if(empty($post['brand_desc'])) {
-                die('链接地址不能为空');
+                return $this->redirect(['admin/brand/msg', ['msg' => '链接地址不能为空','url'=>'/admin/brand/add']]);
             }
             if(empty($post['sort'])) {
-                die('排序不能为空');
+                return $this->redirect(['admin/brand/msg', ['msg' => '排序不能为空','url'=>'/admin/brand/add']]);
+            }
+            if(!is_integer($post['sort'])) {
+                return $this->redirect(['admin/brand/msg', ['msg' => '排序必须为数字','url'=>'/admin/brand/update']]);
             }
             unset($post['_csrf']);
             //调用添加方法
             $res = $model->brandAdd($post);
-            if($res)
-            {
-                Yii::$app->session->addFlash('success','添加成功');
-                $this->redirect(\yii\helpers\Url::toRoute(['list'])); 
-            }
-            else
-            {
-                Yii::$app->session->addFlash('error','添加失败');
-                $this->redirect(\yii\helpers\Url::toRoute(['list']));
+            if($res) {
+                return $this->redirect(['admin/brand/msg', ['msg' => '添加成功','url'=>'/admin/brand/list']]);
+            } else {
+                return $this->redirect(['admin/brand/msg',['msg' => '添加失败','url'=>'/admin/brand/add']]);
             }
             
         } else {
@@ -147,6 +143,19 @@ class BrandController extends Controller
     {
         $model=new Test();
         echo $model->test();
+    }
+
+    /**
+     * 页面跳转提示
+     *
+     * @param
+     * @author pjp
+     */
+    public function actionMsg()
+    {
+        $request = Yii::$app->request;
+
+        return $this->render('/error/msg',$request->get('1'));
     }
     
 }
