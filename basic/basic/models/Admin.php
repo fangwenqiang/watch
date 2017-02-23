@@ -22,9 +22,25 @@ class Admin extends ActiveRecord{
     /*
      * 查询数据
      * */
-    public function show()
+    public function show($id = null)
     {
-        return $this->find()->asArray()->all();
+        if(isset($id)){
+            return $this->find()->where(['admin_id'=>$id])->asArray()->one();
+        }else{
+            return $this->find()->asArray()->all();
+        }
     }
 
+    /*
+     * 删除指定ID数据
+     * */
+    public function del($id)
+    {
+        $request = $this->find()->where(['admin_id' => $id])->one();
+        if($request->delete()){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
 }

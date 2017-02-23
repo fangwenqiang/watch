@@ -21,9 +21,31 @@ use yii\helpers\Url;
       <td align="center"><?=$val['email']?></td>
       <td align="center">2016-02-25</td>
       <td align="center">2016-02-26 20:53:17</td>
-      <td align="center"><a href="addmanager.html?rec=edit&id=1">编辑</a> | <a href="manager.html?rec=del&id=1">删除</a></td>
+      <td align="center"><a href="<?=url::to(['admin/rbac/update','id'=>$val['admin_id']])?>">编辑</a> | <a href="javascript:void(0)" class="del" admin_id="<?=$val['admin_id']?>">删除</a></td>
      </tr>
       <?php } ?>
          </table>
-                       </div>
+         <input type="hidden" class="_csrf" value="<?=Yii::$app->request->getCsrfToken() ?>">
+    </div>
  </div>
+<script>
+    $(function () {
+        //删除管理员
+        $('.del').click(function () {
+            var admin_id = $(this).attr('admin_id');    //管理员ID
+            var csrf = $('._csrf').val();
+            var _this = $(this);
+            if(confirm('确定删除此管理员，该操作不可恢复！')){
+                $.post("<?=url::to(['admin/rbac/delete'])?>",{admin_id:admin_id,_csrf:csrf}, function (msg) {
+                        if(msg == 0){
+                            _this.parent().parent().remove();
+                        }else{
+                            alert('删除失败');
+                        }
+                });
+            }else{
+                return false;
+            }
+        })
+    })
+</script>
