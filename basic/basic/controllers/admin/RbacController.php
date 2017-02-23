@@ -4,6 +4,8 @@ namespace app\controllers\admin;
 
 use app\models\Admin;
 use app\models\AdminForm;
+use app\models\Node;
+use app\models\NodeForm;
 use app\models\Role;
 use app\models\RoleForm;
 use yii\web\Controller;
@@ -51,7 +53,6 @@ class RbacController extends Controller
         return $this->render('/error/msg',$request->get('1'));
     }
 
-
     /*
      * 删除
      * */
@@ -59,6 +60,7 @@ class RbacController extends Controller
     {
         $admin_id = \Yii::$app->request->post('admin_id');  //管理员ID
         $role_id = \Yii::$app->request->post('role_id');    //角色ID
+        $node_id = \Yii::$app->request->post('node_id');    //角色ID
         if(!empty($admin_id)){
             $model = new Admin();
             $res = $model->del($admin_id);
@@ -66,6 +68,10 @@ class RbacController extends Controller
         }elseif(!empty($role_id)){
             $model = new Role();
             $res = $model->del($role_id);
+            die($res);
+        }elseif(!empty($node_id)){
+            $model = new Node();
+            $res = $model->del($node_id);
             die($res);
         }
     }
@@ -133,6 +139,74 @@ class RbacController extends Controller
         }
         return $this->render('uprole',['data'=>$data,'model'=>$modelForm]);
     }
+
+    /*
+     * 权限列表
+     * */
+    public function actionNode()
+    {
+        $model = new Node();
+        $data = $model->show();
+        $data = $this->tree($data,$parent_id = 0,$level = 0);
+        return $this->render('node',['data'=>$data]);
+    }
+
+    /*
+     * 添加权限表
+     * */
+    public function actionAddnode()
+    {
+        $modelForm = new NodeForm();
+        $data = Node::getAllnode();
+        if($modelForm->load(\Yii::$app->request->post()) && $modelForm->validate()) {
+            if($modelForm->create()){
+                return $this->redirect(['admin/rbac/msg', ['msg' => '添加成功','url'=>'/admin/rbac/node']]);
+            }else{
+                exit(\Yii::$app->session->getFlash('waring'));
+            }
+        }
+        return $this->render('addnode',['model'=>$modelForm,'data'=>$data]);
+    }
+
+    /*
+     * 修改权限表
+     * */
+    public function actionUpnode()
+    {
+        $node_id = \Yii::$app->request->get('node_id');
+        $model = new Node();
+        $list = $model->getAllnode();
+        $modelForm = new NodeForm();
+        $data = $model->show($node_id);
+        $data['list'] = $list;
+        if($modelForm->load(\Yii::$app->request->post()) && $modelForm->validate()) {
+            if($modelForm->update()){
+                return $this->redirect(['admin/rbac/msg', ['msg' => '修改成功','url'=>'/admin/rbac/node']]);
+            }else{
+                exit(\Yii::$app->session->getFlash('waring'));
+            }
+        }
+        return $this->render('upnode',['data'=>$data,'model'=>$modelForm]);
+    }
+
+    /*
+    * 递归
+    * */
+    public function tree($arr,$parent_id = 0,$level = 0)
+    {
+        static $data = array();
+        foreach($arr as $key => $val)
+        {
+            if($val['parent_id'] == $parent_id)
+            {
+                $val['level'] = $level;
+                $data[] = $val;
+                $this->tree($arr,$val['node_id'],$level+1);
+            }
+        }
+        return $data;
+    }
+
 
 
 }
