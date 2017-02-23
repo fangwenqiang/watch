@@ -157,7 +157,10 @@ class RbacController extends Controller
     public function actionAddnode()
     {
         $modelForm = new NodeForm();
-        $data = Node::getAllnode();
+        $model = new Node();
+        $data = $model->show();
+        $data = $this->tree($data,$parent_id = 0,$level = 0);
+
         if($modelForm->load(\Yii::$app->request->post()) && $modelForm->validate()) {
             if($modelForm->create()){
                 return $this->redirect(['admin/rbac/msg', ['msg' => '添加成功','url'=>'/admin/rbac/node']]);
@@ -175,7 +178,8 @@ class RbacController extends Controller
     {
         $node_id = \Yii::$app->request->get('node_id');
         $model = new Node();
-        $list = $model->getAllnode();
+        $list = $model->show();;
+        $list = $this->tree($list,$parent_id = 0,$level = 0);
         $modelForm = new NodeForm();
         $data = $model->show($node_id);
         $data['list'] = $list;

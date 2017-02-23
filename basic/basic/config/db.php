@@ -6,10 +6,7 @@ return [
     'username' => 'qiang',
     'password' => 'qiang',
     'charset' => 'utf8',
-
     'tablePrefix' => 'mb_',
-];
-
 ];
 
 

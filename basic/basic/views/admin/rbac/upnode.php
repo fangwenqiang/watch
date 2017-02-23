@@ -15,7 +15,13 @@ use yii\bootstrap\Html;
             <tr>
                 <td width="100" align="right">父级权限</td>
                 <td >
-                    <?=$form->field($model,'parent_id')->dropDownList($data['list'],['value'=>$data['parent_id']])->label('')?>
+                    <select name="parent_id">
+                        <option value="0">顶级分类</option>
+                        <?php foreach($data['list'] as $key=>$val){ ?>
+                            <option value="<?=$val['node_id']?>" <?php if($val['node_id'] == $data['parent_id']){?> selected <?php } ?>>
+                                <?=str_repeat('---',$val['level']).$val['node_name']?></option>
+                        <?php } ?>
+                    </select>
                     <?=$form->field($model,'node_id')->input('hidden',['class' => 'inpMain','size'=>'40','value'=>$data['node_id']])->label('')?>
                 </td>
             </tr>
