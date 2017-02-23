@@ -50,5 +50,35 @@ class RbacController extends Controller
     }
 
 
+    /*
+     * 删除管理员
+     * */
+    public function actionDelete()
+    {
+        $admin_id = \Yii::$app->request->post('admin_id');
+        $model = new Admin();
+        $res = $model->del($admin_id);
+        echo $res;
+    }
+
+    /*
+     * 修改管理员信息
+     * */
+    public function actionUpdate()
+    {
+        $admin_id = \Yii::$app->request->post('admin_id');
+        $model = new Admin();
+        $modelForm = new AdminForm();
+        $data = $model->show($admin_id);
+        if($modelForm->load(\Yii::$app->request->post()) && $modelForm->validate()) {
+            if($modelForm->update()){
+                return $this->redirect('?r=admin/rbac/admin');
+            }else{
+                exit(\Yii::$app->session->getFlash('waring'));
+            }
+        }
+        return $this->render('upmanager',['data'=>$data,'model'=>$modelForm]);
+    }
 	
+
 }
