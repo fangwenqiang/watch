@@ -18,6 +18,8 @@ use yii\web\Controller;
 class RbacController extends Controller
 {
 	// 后台公共视图
+
+    /*haoba */
     public  $layout = '/background';
 	
     /*
