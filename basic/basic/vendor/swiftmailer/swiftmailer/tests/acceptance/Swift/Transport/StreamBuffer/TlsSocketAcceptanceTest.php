@@ -10,7 +10,7 @@ class Swift_Transport_StreamBuffer_TlsSocketAcceptanceTest
         $streams = stream_get_transports();
         if (!in_array('tls', $streams)) {
             $this->markTestSkipped(
-                'TLS is not configured for your system.  It is not possible to run this test'
+                'TLS is not configured for your nav.  It is not possible to run this test'
              );
         }
         if (!defined('SWIFT_TLS_HOST')) {

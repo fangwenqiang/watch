@@ -49,7 +49,7 @@ class BaseStringHelper
     /**
      * Returns the trailing name component of a path.
      * This method is similar to the php function `basename()` except that it will
-     * treat both \ and / as directory separators, independent of the operating system.
+     * treat both \ and / as directory separators, independent of the operating nav.
      * This method was mainly created to work on php namespaces. When working with real
      * file paths, php's `basename()` should work fine for you.
      * Note: this method is not aware of the actual filesystem, or path components such as "..".
@@ -75,7 +75,7 @@ class BaseStringHelper
     /**
      * Returns parent directory's path.
      * This method is similar to `dirname()` except that it will treat
-     * both \ and / as directory separators, independent of the operating system.
+     * both \ and / as directory separators, independent of the operating nav.
      *
      * @param string $path A path string.
      * @return string the parent directory's path.

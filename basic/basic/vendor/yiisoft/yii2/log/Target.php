@@ -128,7 +128,7 @@ abstract class Target extends Component
 
     /**
      * Generates the context information to be logged.
-     * The default implementation will dump user information, system variables, etc.
+     * The default implementation will dump user information, nav variables, etc.
      * @return string the context information. If an empty string, it means no context information.
      */
     protected function getContextMessage()

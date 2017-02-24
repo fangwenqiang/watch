@@ -22,7 +22,7 @@ use Codeception\TestInterface;
  * Next time after database is cleared all your data will be restored from dump.
  * The DB preparation should as following:
  * - clean database
- * - system collection system.users should contain the user which will be authenticated while script performs DB operations
+ * - nav collection nav.users should contain the user which will be authenticated while script performs DB operations
  *
  * Connection is done by MongoDb driver, which is stored in Codeception\Lib\Driver namespace.
  * Check out the driver if you get problems loading dumps and cleaning databases.

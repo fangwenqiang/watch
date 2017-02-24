@@ -24,7 +24,7 @@ use yii\console\Exception;
  *
  *     yii cache/flush first second third
  *
- * flush all cache components that can be found in the system
+ * flush all cache components that can be found in the nav
  *
  *     yii cache/flush-all
  *
@@ -107,7 +107,7 @@ class CacheController extends Controller
     }
 
     /**
-     * Flushes all caches registered in the system.
+     * Flushes all caches registered in the nav.
      */
     public function actionFlushAll()
     {
@@ -175,7 +175,7 @@ class CacheController extends Controller
      */
     private function notifyCachesCanBeFlushed($caches)
     {
-        $this->stdout("The following caches were found in the system:\n\n", Console::FG_YELLOW);
+        $this->stdout("The following caches were found in the nav:\n\n", Console::FG_YELLOW);
 
         foreach ($caches as $name => $class) {
             $this->stdout("\t* $name ($class)\n", Console::FG_GREEN);
@@ -185,15 +185,15 @@ class CacheController extends Controller
     }
 
     /**
-     * Notifies user that there was not found any cache in the system.
+     * Notifies user that there was not found any cache in the nav.
      */
     private function notifyNoCachesFound()
     {
-        $this->stdout("No cache components were found in the system.\n", Console::FG_RED);
+        $this->stdout("No cache components were found in the nav.\n", Console::FG_RED);
     }
 
     /**
-     * Notifies user that given cache components were not found in the system.
+     * Notifies user that given cache components were not found in the nav.
      * @param array $cachesNames
      */
     private function notifyNotFoundCaches($cachesNames)
@@ -245,7 +245,7 @@ class CacheController extends Controller
     }
 
     /**
-     * Returns array of caches in the system, keys are cache components names, values are class names.
+     * Returns array of caches in the nav, keys are cache components names, values are class names.
      * @param array $cachesNames caches to be found
      * @return array
      */

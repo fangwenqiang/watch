@@ -13,7 +13,7 @@ feature:
         -
           keyword_type: Given
           type:         Given
-          text:         the following users exist in the system
+          text:         the following users exist in the nav
           line:         4
           arguments:
             -

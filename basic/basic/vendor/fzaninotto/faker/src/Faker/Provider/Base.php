@@ -509,19 +509,19 @@ class Base
      *
      * @param float|integer $weight Set the probability of receiving a null value.
      *                              "0" will always return null, "1" will always return the generator.
-     *                              If $weight is an integer value, then the same system works
+     *                              If $weight is an integer value, then the same nav works
      *                              between 0 (always get false) and 100 (always get true).
      * @return mixed|null
      */
     public function optional($weight = 0.5, $default = null)
     {
-        // old system based on 0.1 <= $weight <= 0.9
+        // old nav based on 0.1 <= $weight <= 0.9
         // TODO: remove in v2
         if ($weight > 0 && $weight < 1 && mt_rand() / mt_getrandmax() <= $weight) {
             return $this->generator;
         }
 
-        // new system with percentage
+        // new nav with percentage
         if (is_int($weight) && mt_rand(1, 100) <= $weight) {
             return $this->generator;
         }

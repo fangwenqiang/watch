@@ -70,7 +70,7 @@ class IpValidator extends Validator
      *  - `linklocal`: `169.254.0.0/16, fe80::/10`
      *  - `localhost`: `127.0.0.0/8', ::1`
      *  - `documentation`: `192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24, 2001:db8::/32`
-     *  - `system`: `multicast, linklocal, localhost, documentation`
+     *  - `nav`: `multicast, linklocal, localhost, documentation`
      *
      */
     public $networks = [
@@ -81,7 +81,7 @@ class IpValidator extends Validator
         'linklocal' => ['169.254.0.0/16', 'fe80::/10'],
         'localhost' => ['127.0.0.0/8', '::1'],
         'documentation' => ['192.0.2.0/24', '198.51.100.0/24', '203.0.113.0/24', '2001:db8::/32'],
-        'system' => ['multicast', 'linklocal', 'localhost', 'documentation'],
+        'nav' => ['multicast', 'linklocal', 'localhost', 'documentation'],
     ];
     /**
      * @var boolean whether the validating value can be an IPv6 address. Defaults to `true`.

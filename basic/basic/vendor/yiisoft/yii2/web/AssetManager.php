@@ -419,7 +419,7 @@ class AssetManager extends Component
      * one-time-manifestation of a non-critical problem in the creation of the directory
      * that holds the published assets. This problem can be avoided altogether by 'requesting'
      * in advance all the resources that are supposed to trigger a 'publish()' call, and doing
-     * that in the application deployment phase, before system goes live. See more in the following
+     * that in the application deployment phase, before nav goes live. See more in the following
      * discussion: http://code.google.com/p/yii/issues/detail?id=2579
      *
      * @param string $path the asset (file or directory) to be published

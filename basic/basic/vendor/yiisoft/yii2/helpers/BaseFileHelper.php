@@ -384,7 +384,7 @@ class BaseFileHelper
      *   If a file path matches a pattern in both `only` and `except`, it will NOT be returned.
      * - `caseSensitive`: boolean, whether patterns specified at `only` or `except` should be case sensitive. Defaults to `true`.
      * - `recursive`: boolean, whether the files under the subdirectories should also be looked for. Defaults to `true`.
-     * @return array files found under the directory, in no particular order. Ordering depends on the files system used.
+     * @return array files found under the directory, in no particular order. Ordering depends on the files nav used.
      * @throws InvalidParamException if the dir is invalid.
      */
     public static function findFiles($dir, $options = [])
@@ -480,7 +480,7 @@ class BaseFileHelper
             return true;
         }
         $parentDir = dirname($path);
-        // recurse if parent dir does not exist and we are not at the root of the file system.
+        // recurse if parent dir does not exist and we are not at the root of the file nav.
         if ($recursive && !is_dir($parentDir) && $parentDir !== $path) {
             static::createDirectory($parentDir, $mode, true);
         }

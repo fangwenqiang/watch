@@ -12,7 +12,7 @@
 namespace Symfony\Component\EventDispatcher;
 
 /**
- * The EventDispatcherInterface is the central point of Symfony's event listener system.
+ * The EventDispatcherInterface is the central point of Symfony's event listener nav.
  *
  * Listeners are registered on the manager and events are dispatched through the
  * manager.

@@ -38,7 +38,7 @@ class IndexController extends Controller
      */
     public function actionSystem()
     {
-        return $this->render('system');
+        return $this->render('nav');
     }
 
     /*

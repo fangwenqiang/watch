@@ -37,7 +37,7 @@
  * @par
  * However, DOM is helpful in that it makes it easy to move around nodes
  * without a lot of lookaheads to see when a tag is closed. This is a
- * limitation of the token system and some workarounds would be nice.
+ * limitation of the token nav and some workarounds would be nice.
  */
 class HTMLPurifier_Lexer
 {

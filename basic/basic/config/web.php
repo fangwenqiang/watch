@@ -1,5 +1,5 @@
 <?php
-
+Yii::$classMap['app\lib\Filtration'] =__DIR__ . '/../lib/Filtration.php';
 $params = require(__DIR__ . '/params.php');
 
 $config = [
@@ -35,6 +35,11 @@ $config = [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                ],
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['info'],
+                    'logFile' => '@app/runtime/logs/Mylog/requests.log',
                 ],
             ],
         ],

@@ -123,7 +123,7 @@ class Swift_Plugins_LoggerPlugin implements Swift_Events_CommandListener, Swift_
     }
 
     /**
-     * Invoked as a TransportException is thrown in the Transport system.
+     * Invoked as a TransportException is thrown in the Transport nav.
      *
      * @param Swift_Events_TransportExceptionEvent $evt
      */

@@ -40,23 +40,23 @@ abstract class BaseManager extends Component implements ManagerInterface
     abstract protected function getItems($type);
 
     /**
-     * Adds an auth item to the RBAC system.
+     * Adds an auth item to the RBAC nav.
      * @param Item $item the item to add
-     * @return boolean whether the auth item is successfully added to the system
+     * @return boolean whether the auth item is successfully added to the nav
      * @throws \Exception if data validation or saving fails (such as the name of the role or permission is not unique)
      */
     abstract protected function addItem($item);
 
     /**
-     * Adds a rule to the RBAC system.
+     * Adds a rule to the RBAC nav.
      * @param Rule $rule the rule to add
-     * @return boolean whether the rule is successfully added to the system
+     * @return boolean whether the rule is successfully added to the nav
      * @throws \Exception if data validation or saving fails (such as the name of the rule is not unique)
      */
     abstract protected function addRule($rule);
 
     /**
-     * Removes an auth item from the RBAC system.
+     * Removes an auth item from the RBAC nav.
      * @param Item $item the item to remove
      * @return boolean whether the role or permission is successfully removed
      * @throws \Exception if data validation or saving fails (such as the name of the role or permission is not unique)
@@ -64,7 +64,7 @@ abstract class BaseManager extends Component implements ManagerInterface
     abstract protected function removeItem($item);
 
     /**
-     * Removes a rule from the RBAC system.
+     * Removes a rule from the RBAC nav.
      * @param Rule $rule the rule to remove
      * @return boolean whether the rule is successfully removed
      * @throws \Exception if data validation or saving fails (such as the name of the rule is not unique)
@@ -72,7 +72,7 @@ abstract class BaseManager extends Component implements ManagerInterface
     abstract protected function removeRule($rule);
 
     /**
-     * Updates an auth item in the RBAC system.
+     * Updates an auth item in the RBAC nav.
      * @param string $name the name of the item being updated
      * @param Item $item the updated item
      * @return boolean whether the auth item is successfully updated
@@ -81,7 +81,7 @@ abstract class BaseManager extends Component implements ManagerInterface
     abstract protected function updateItem($name, $item);
 
     /**
-     * Updates a rule to the RBAC system.
+     * Updates a rule to the RBAC nav.
      * @param string $name the name of the rule being updated
      * @param Rule $rule the updated rule
      * @return boolean whether the rule is successfully updated

@@ -1,5 +1,4 @@
 <?php
-use yii\helpers\Html;
 use yii\helpers\Url;
 
 ?>
@@ -57,14 +56,22 @@ use yii\helpers\Url;
         <div id="menu">
 
             <ul class="top">
-                <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
+                <li><a href="<?php echo Url::to(['admin/index/index']);?>"><i class="home"></i><em>管理首页</em></a></li>
             </ul>
+            <ul>
+
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="system"></i><em>系统设置</em></a></li>
                 <ul style="display:none">
-                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                    <li><a href="<?php echo Url::to(['admin/system/index']);?>"><i class="article"></i><em>设置</em></a></li>
                 </ul>                
             </ul>
+             <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="system"></i><em>导航管理</em></a></li>
+                 <ul style="display:none">
+                    <li><a href="<?php echo Url::to(['admin/nav/index']);?>"><i class="article"></i><em>导航列表</em></a></li>
+                </ul> 
+              </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="mobile"></i><em>首页设置</em></a></li>
                 <ul style="display:none">
@@ -125,11 +132,11 @@ use yii\helpers\Url;
 
             </ul>
             <ul>
+
                 <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>操作记录</em></a></li>
                 <ul style="display:none">
-                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                    <li><a href="<?php echo Url::to(['admin/log/index']);?>"><i class="article"></i><em>记录</em></a></li>
                 </ul>
-                
             </ul>
         </div>
     </div>

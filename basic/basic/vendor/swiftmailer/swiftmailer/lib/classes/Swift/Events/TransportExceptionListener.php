@@ -9,14 +9,14 @@
  */
 
 /**
- * Listens for Exceptions thrown from within the Transport system.
+ * Listens for Exceptions thrown from within the Transport nav.
  *
  * @author Chris Corbyn
  */
 interface Swift_Events_TransportExceptionListener extends Swift_Events_EventListener
 {
     /**
-     * Invoked as a TransportException is thrown in the Transport system.
+     * Invoked as a TransportException is thrown in the Transport nav.
      *
      * @param Swift_Events_TransportExceptionEvent $evt
      */
