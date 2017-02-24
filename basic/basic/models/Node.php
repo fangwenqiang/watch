@@ -36,12 +36,26 @@ class Node extends ActiveRecord{
     * */
     public function del($id)
     {
-        $request = $this->find()->where(['node_id' => $id])->one();
-        if($request->delete()){
-            return 0;
-        }else{
-            return 1;
+        $nodeAll = Role_node::find()->where(['node_id' => $id])->all();
+        if (!empty($nodeAll)) {
+            return 3;
+        } else {
+            $transaction = \Yii::$app->db->beginTransaction();
+            try {
+                $request = $this->find()->where(['node_id' => $id])->one();
+                $request->delete(); //删除权限表
+                foreach ($nodeAll as $v) {
+                    $v->delete();   //删除权限 角色 关联表
+                }
+                $transaction->commit();
+                return 0;
+            } catch (\Exception $e) {
+                $transaction->rollBack();
+                \Yii::$app->session->setFlash('waring', $e->getMessage());
+                return 1;
+            }
         }
+
     }
 
 

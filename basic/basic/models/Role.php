@@ -35,11 +35,28 @@ class Role extends ActiveRecord{
     * */
     public function del($id)
     {
-        $request = $this->find()->where(['role_id' => $id])->one();
-        if($request->delete()){
-            return 0;
+        $adminAll = Role_admin::find()->where(['role_id'=>$id])->all(); //角色管理员表
+        $nodeAll = Role_node::find()->where(['role_id'=>$id])->all();   //角色权限表
+        if(!empty($adminAll)){
+            return 3;
         }else{
-            return 1;
+            $transaction = \Yii::$app->db->beginTransaction();
+            try {
+                $request = $this->find()->where(['role_id' => $id])->one();
+                $request->delete(); //删除角色表
+                foreach ($nodeAll as $v) {
+                    $v->delete();   //删除权限 角色 关联表
+                }
+                foreach($adminAll as $v){
+                    $v->delete();   //删除 角色 管理员关联表
+                }
+                $transaction->commit();
+                return 0;
+            } catch (\Exception $e) {
+                $transaction->rollBack();
+                \Yii::$app->session->setFlash('waring', $e->getMessage());
+                return 1;
+            }
         }
     }
 
