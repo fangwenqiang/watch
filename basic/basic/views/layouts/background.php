@@ -53,57 +53,79 @@ use yii\helpers\Url;
     <!-- dcHead 结束 -->
     <div id="dcLeft">
         <div id="menu">
+
             <ul class="top">
                 <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="system"></i><em>系统设置</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li class="gao"><a href="javascript:void(0)"><i class="system"></i><em>系统设置</em></a></li>
+                <ul style="display:none">
+                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                </ul>                
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="mobile"></i><em>首页设置</em></a></li>
-                <li><a href="<?=\yii\helpers\Url::to(['admin/carousel/index'])?>"><i class="article"></i><em>轮播图</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>导航栏</em></a></li>
+                <li class="gao"><a href="javascript:void(0)"><i class="mobile"></i><em>首页设置</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?=\yii\helpers\Url::to(['admin/carousel/index'])?>"><i class="article"></i><em>轮播图</em></a></li>
+                    <li><a href="article.html"><i class="article"></i><em>导航栏</em></a></li>
+                </ul>
             </ul>
             <ul>
-                <li><a href="system.html"><i class="manager"></i><em>用户管理</em></a></li>
-                <li><a href="nav.html"><i class="nav"></i><em>子栏</em></a></li>
+                <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>用户管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="nav.html"><i class="nav"></i><em>子栏</em></a></li>
+                </ul>
             </ul>
             <ul>
-                <li><a href="product_category.html"><i class="productCat"></i><em>权限管理</em></a></li>
+                <li class="gao"><a href="javascript:void(0)"><i class="productCat"></i><em>权限管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?=url::to(['admin/rbac/admin'])?>"><i class="product"></i><em>管理员</em></a></li>
+                    <li><a href="<?=url::to(['admin/rbac/role'])?>"><i class="product"></i><em>角色</em></a></li>
+                    <li><a href="<?=url::to(['admin/rbac/node'])?>"><i class="product"></i><em>权限</em></a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>商品管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>品牌管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?php echo Url::to(['admin/brand/list'])?>"><i class="article"></i><em>品牌展示</em></a></li>
+                    <li><a href="<?php echo Url::to(['admin/brand/add'])?>"><i class="article"></i><em>品牌添加</em></a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>商品分类管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?php echo Url::to(['admin/category/list'])?>"><i class="article"></i><em>分类展示</em></a></li>
+                    <li><a href="<?php echo Url::to(['admin/category/add'])?>"><i class="article"></i><em>分类添加</em></a></li>
+                </ul>
+                
+            </ul>
+            <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>商品类型管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/add']);?>"><i class="article"></i><em>添加</em></a></li>
+                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/show']);?>"><i class="article"></i><em>展示</em></a></li>
+                </ul>
+                
+            </ul>
+            <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="backup"></i><em>订单管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                </ul>
 
-        
-                <li><a href="<?=url::to(['admin/rbac/admin'])?>"><i class="product"></i><em>管理员</em></a></li>
-                <li><a href="<?=url::to(['admin/rbac/role'])?>"><i class="product"></i><em>角色</em></a></li>
-                <li><a href="<?=url::to(['admin/rbac/node'])?>"><i class="product"></i><em>权限</em></a></li>
-
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>商品管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
-            </ul>
-            <ul>
-                <li><a href="<?php echo Url::to(['admin/brand/list'])?>"><i class="articleCat"></i><em>品牌管理</em></a></li>
-                <li><a href="<?php echo Url::to(['admin/brand/add'])?>"><i class="article"></i><em>品牌添加</em></a></li>
-            </ul>
-            <ul>
-                <li><a href="<?php echo Url::to(['admin/category/list'])?>"><i class="articleCat"></i><em>商品分类管理</em></a></li>
-                <li><a href="<?php echo Url::to(['admin/category/add'])?>"><i class="article"></i><em>商品分类添加</em></a></li>
-            </ul>
-            <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>商品类型管理</em></a></li>
-                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/add']); ?>"><i
-                            class="article"></i><em>添加</em></a></li>
-                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/show']); ?>"><i
-                            class="article"></i><em>展示</em></a></li>
-            </ul>
-            <ul>
-                <li><a href="article_category.html"><i class="backup"></i><em>订单管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
-            </ul>
-            <ul>
-                <li><a href="article_category.html"><i class="manager"></i><em>操作记录</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>操作记录</em></a></li>
+                <ul style="display:none">
+                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                </ul>
+                
             </ul>
         </div>
     </div>
@@ -122,6 +144,8 @@ use yii\helpers\Url;
 </body>
 </html>
 <script type="text/javascript" src="public/admin/js/jquery.min.js"></script>
+<script src="jquery.js"></script>
+<script src="jquery.easing.1.3.js"></script>
 <script>
     $('#out').click(function () {
         $.ajax({
@@ -136,4 +160,11 @@ use yii\helpers\Url;
             }
         });
     })
+    $(function(){
+      $.easing.def = 'easeOutElastic';
+      var oBtn = $('.gao');
+      oBtn.click(function(){
+        $(this).next('ul').slideToggle().siblings('ul').slideUp();
+      });
+    });
 </script>
