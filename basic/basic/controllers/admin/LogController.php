@@ -23,6 +23,7 @@ class LogController extends Controller
      */
     public function actionIndex()
     {
+
         $data = $this->log_model->select_all();
         return $this->render('log',array('data'=>$data));
     }
@@ -37,7 +38,7 @@ class LogController extends Controller
         $data['log_msg'] = $msg;
         $data['log_time'] = time();
         $data['log_ip'] = $_SERVER['REMOTE_ADDR'];
-        $data['admin_id'] = $session->get('admin_id');;
+        $data['admin_id'] = $session->get('admin_id');
         $this->log_model->write($data);
     }
 }
