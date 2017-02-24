@@ -44,10 +44,20 @@ class NavController extends Controller
     public function actionNav_compile()
     {
         if(!empty($_POST)){
-            if($this->nav_model->add_Nav(Filtration::check_arr($_POST),1)){
-                return "修改成功";
+            if($_FILES['nav_icon']['name'] == ''){
+                $filename = true;
+                $FILES['nav_icon'] = "";
             } else {
-                return "修改失败";
+                $file_name = "tubiao".time().'.gif';
+                $filename = Filtration::image_upload('./public/admin/upload_files/',$file_name,$_FILES['nav_icon']);
+                $FILES['nav_icon'] = "upload_files/".$file_name;
+            }
+            if($filename) {
+                $post = array_merge($FILES,$_POST);
+                $this->nav_model->add_Nav(Filtration::check_arr($post), 1);
+                return "修改成功";
+            }else {
+                return "图片上传失败";
             }
         }
         $id = Filtration::check_id($_GET['id']);
@@ -63,10 +73,17 @@ class NavController extends Controller
     {
 
         if(!empty($_POST)){
-            if($this->nav_model->add_Nav(Filtration::check_arr($_POST),0)){
-                return "添加成功";
-            } else {
-                return "添加失败";
+            $filename = "tubiao".time().'.gif';
+            if(Filtration::image_upload('./public/admin/upload_files/',$filename,$_FILES['nav_icon'])) {
+                $FILES['nav_icon'] = "upload_files/".$filename;
+                $post = array_merge($FILES,$_POST);
+                if ($this->nav_model->add_Nav(Filtration::check_arr($post), 0)) {
+                    return "添加成功";
+                } else {
+                    return "添加失败";
+                }
+            }else{
+                return "图片上传失败";
             }
         }
         return $this->render('addnav');

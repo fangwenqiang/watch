@@ -26,7 +26,7 @@ use yii\helpers\Url;
                 </ul>
                 <div class="items">
                     <div id="nav_add">
-                        <form action="<?php echo Url::to(['admin/nav/add_nav']);?>" method="post" id="form">
+                        <form action="<?php echo Url::to(['admin/nav/add_nav']);?>" method="post" id="form" enctype="multipart/form-data">
                             <table width="100%" border="0" cellpadding="5" cellspacing="1" class="tableBasic">
                                 <tr>
                                     <td width="80" height="35" align="right">导航位置</td>
@@ -68,13 +68,13 @@ use yii\helpers\Url;
                                         <span class="errorInfo"></span>
                                     </td>
                                 </tr>
-<!--                                <tr>-->
-<!--                                    <td width="80" height="35" align="right">导航图标</td>-->
-<!--                                    <td>-->
-<!--                                        <input type="file" id="nav_icon" name="nav_icon" required data-rule-icon="true" value="" size="40" class="inpMain" />-->
-<!--                                        <span class="errorInfo"></span>-->
-<!--                                    </td>-->
-<!--                                </tr>-->
+                                <tr>
+                                    <td width="80" height="35" align="right">导航图标</td>
+                                    <td>
+                                        <input type="file" id="nav_icon" name="nav_icon" required data-rule-icon="true" value="" size="40" class="inpMain" />
+                                        <span class="errorInfo"></span>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td></td>
                                     <td>
@@ -122,7 +122,8 @@ use yii\helpers\Url;
                 nav_name:{required:'不能为空'},
                 nav_place:{required:'请选择'},
                 nav_link:{required:'不能为空'},
-                nav_sort:{required:'不能为空'}
+                nav_sort:{required:'不能为空'},
+                nav_icon:{required:'请选择图片'}
             }
         });
         //表单验证  -----   end
@@ -137,7 +138,7 @@ use yii\helpers\Url;
                data:"nav_place="+nav_place+"&_csrf="+csrfToken,
                dataType:'json',
                success:function(msg){
-                   var html = '<select id="nav_type" name="nav_type" style="width: 120px;;"><option value="0">一级导航</option>';
+                   var html = '<select id="nav_type" name="nav_type" style="width: 120px;;"><option value="-1">一级导航</option>';
                    if(msg.length != 0){
                        $.each(msg,function(k,v){
                            html += "<option value='"+ v.nav_id+"'";

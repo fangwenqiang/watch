@@ -26,7 +26,7 @@ use yii\helpers\Url;
                 </ul>
                 <div class="items">
                     <div id="nav_add">
-                        <form action="<?php echo Url::to(['admin/nav/nav_compile']);?>" method="post" id="form">
+                        <form action="<?php echo Url::to(['admin/nav/nav_compile']);?>" method="post" id="form" enctype="multipart/form-data">
                             <table width="100%" border="0" cellpadding="5" cellspacing="1" class="tableBasic">
                                 <tr>
                                     <td width="80" height="35" align="right">导航位置</td>
@@ -42,7 +42,7 @@ use yii\helpers\Url;
                                     <td>
                                         <span id="select">
                                             <select id="nav_type" name="nav_type" style="width: 120px;">
-                                                <option value="0">一级导航</option>
+                                                <option value="-1">一级导航</option>
                                                 <?php foreach($data as $key=>$val){ ?>
                                                       <option value="<?php echo $val['nav_id']?>" <?php if(substr_count($val['nav_pid'],'-') == 2) { echo "disabled";}  $pid = explode('-',$arr['nav_pid']);  if($val['nav_id'] == $pid[(count($pid)-1)]) { echo "selected";}  ?>>
                                                           <?php echo str_repeat('-',(substr_count($val['nav_pid'],'-')*3)); echo $val['nav_name']?></option>
@@ -61,7 +61,7 @@ use yii\helpers\Url;
                                 <tr>
                                     <td width="80" height="35" align="right">导航链接</td>
                                     <td>
-                                        <input type="text" id="nav_link" name="nav_link" required value="<?php echo $arr['nav_link']?>" placeholder="请输入导航链接" size="40" class="inpMain" />
+                                        <input type="text" id="nav_link" name="nav_link" required value="<?php echo substr($arr['nav_link'],strpos($arr['nav_link'],"r=")+2)?>" placeholder="请输入导航链接" size="40" class="inpMain" />
                                         <span class="errorInfo"></span>
                                     </td>
                                 </tr>
@@ -72,13 +72,16 @@ use yii\helpers\Url;
                                         <span class="errorInfo"></span>
                                     </td>
                                 </tr>
-<!--                                <tr>-->
-<!--                                    <td width="80" height="35" align="right">导航图标</td>-->
-<!--                                    <td>-->
-<!--                                        <input type="file" id="nav_icon" name="nav_icon" required data-rule-icon="true" value="" size="40" class="inpMain" />-->
-<!--                                        <span class="errorInfo"></span>-->
-<!--                                    </td>-->
-<!--                                </tr>-->
+                                <tr>
+                                    <td width="80" height="35" align="right">导航图标</td>
+                                    <td>
+                                        <input type="file" id="nav_icon" name="nav_icon"  data-rule-icon="true" value="" size="40" class="inpMain" />
+                                        <a href="javascript:void(0)">
+                                            原图标：<?php  echo "<img src='".$arr['nav_icon']."' >"?>
+                                        </a>
+                                        <span class="errorInfo"></span>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td></td>
                                     <td>
@@ -142,7 +145,7 @@ use yii\helpers\Url;
                data:"nav_place="+nav_place+"&_csrf="+csrfToken,
                dataType:'json',
                success:function(msg){
-                   var html = '<select id="nav_type" name="nav_type" style="width: 120px;;"><option value="0">一级导航</option>';
+                   var html = '<select id="nav_type" name="nav_type" style="width: 120px;;"><option value="-1">一级导航</option>';
                    if(msg.length != 0){
                        $.each(msg,function(k,v){
                            html += "<option value='"+ v.nav_id+"'";
@@ -162,5 +165,4 @@ use yii\helpers\Url;
         });
         //选择导航事件  -----   end
     });
-
 </script>

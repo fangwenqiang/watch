@@ -61,17 +61,20 @@ use yii\helpers\Url;
                                 <tr>
                                     <td align="right">LOGO</td>
                                     <td>
-
-                                        <input type="file" name="site_logo" id="site_logo" size="18" required data-rule-logo="true"/>
-                                        <a href="../theme/default/images/logo.gif" target="_blank"></a>
-
-                                        <a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg()">
-                                            <img src="../../upload_files/logo_cdk.gif" id="image">
-                                        </a>
-                                        <div id="wxImg" style="display:none;back-ground:#f00;position:absolute;top: 20px;">
-                                            <img src="../../upload_files/logo.gif" id="image">
-                                        </div>
-
+                                        <?php
+                                        if($data['code'] == 0){  ?>
+                                            <input type="file" name="site_logo" id="site_logo" size="18" required data-rule-logo="true"/>
+                                            <a href="../theme/default/images/logo.gif" target="_blank"></a>
+                                        <?php  } else { ?>
+                                            <input type="file" name="site_logo" id="site_logo" size="18"  data-rule-logo="true"/>
+                                            <a href="../theme/default/images/logo.gif" target="_blank"></a>
+                                            <a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg()">
+                                                <?php if($data['code'] == 1){ echo "<img src='".$data['msg']['site_logo_cdk']."' >";}?>
+                                            </a>
+                                            <div id="wxImg" style="display:none;back-ground:#f00;">
+                                                <?php if($data['code'] == 1){ echo "<img src='".$data['msg']['site_logo']."' >";}?>
+                                            </div>
+                                        <?php  } ?>
                                         <span class="errorInfo"></span>
                                     </td>
                                     <td></td>
@@ -149,6 +152,8 @@ use yii\helpers\Url;
                                 <td>
                                     <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
                                     <input type="hidden" name="token" value="24760807" />
+                                    <input type="hidden" name="code" id="code" value="<?php echo $data['code']?>" />
+
                                     <input name="submit" class="btn" type="submit" value="提交" />
                                 </td>
                             </tr>
@@ -168,11 +173,12 @@ use yii\helpers\Url;
                 error.appendTo(element.parent().find(".errorInfo"));
             }
         });
-
         jQuery.validator.addMethod("logo", function (value, element) {
-            var chinese = /.(gif|jpg|jpeg|png|gif|jpg|png)$/i;
-            return this.optional(element) || (chinese.test(value));
+                var chinese = /.(gif|jpg|jpeg|png|gif|jpg|png)$/i;
+                return this.optional(element) || (chinese.test(value));
         }, "请正确选择图片");
+
+
 
         $("#form").validate({
             submitHandler: function (form) {

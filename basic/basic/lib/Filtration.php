@@ -73,7 +73,7 @@ class Filtration
     public static function image_upload($path,$filename,$files)
     {
         if(!file_exists($path)){ mkdir($path,0777,true);}
-        if (move_uploaded_file($_FILES['site_logo']['tmp_name'],$path.$filename)){
+        if (move_uploaded_file($files['tmp_name'],$path.$filename)){
             return $path.$filename;
         } else {
             return false;
@@ -82,25 +82,26 @@ class Filtration
     /*
      * 图片缩略
      */
-    public static function breviary($new_file)
+    public static function breviary($new_file,$width)
     {
         //源图片长宽
         $image_info = getimagesize($new_file);
-        $dst_w=240; //目标图片的宽
-        $dst_h=($image_info[1]/($image_info[0]/240)); //目标图片的长
-        $dst_image=imagecreatetruecolor ($dst_w , $dst_h ) ;
-        $src_image=imagecreatefromjpeg($new_file);
-        $dst_x=0; //目标图片的起始x坐标
-        $dst_y=0; //目标图片的起始y坐标
-        $src_x=0;//源图片的起始x坐标
-        $src_y=0;//源图片的起始y坐标
-        $src=getimagesize($new_file); //获取源图片大小，以数组方式返回宽高等信息，具体用var_damp（）输出查看
+        $dst_w = $width; //目标图片的宽
+        $dst_h = ($image_info[1]/($image_info[0]/$width)); //目标图片的长
+        $dst_image = imagecreatetruecolor ($dst_w , $dst_h ) ;
+
+        $src_image = imagecreatefromjpeg($new_file);
+        $dst_x = 0; //目标图片的起始x坐标
+        $dst_y = 0; //目标图片的起始y坐标
+        $src_x = 0;//源图片的起始x坐标
+        $src_y = 0;//源图片的起始y坐标
+        $src = getimagesize($new_file); //获取源图片大小，以数组方式返回宽高等信息，具体用var_damp（）输出查看
         //var_dump($src);
-        $src_w=$src[0];
-        $src_h=$src[1];
+        $src_w = $src[0];
+        $src_h = $src[1];
 
         imagecopyresampled ( $dst_image , $src_image , $dst_x , $dst_y ,$src_x ,  $src_y , $dst_w , $dst_h ,  $src_w , $src_h );
-        $newfile=dirname($new_file).'/logo_cdk.gif';
+        $newfile = dirname($new_file).'/cdk_'.basename($new_file);
         imagejpeg($dst_image, $newfile, 100);
         imagedestroy($dst_image );
         imagedestroy($src_image );  //释放和暂存图片的内存

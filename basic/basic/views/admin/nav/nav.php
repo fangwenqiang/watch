@@ -28,6 +28,7 @@ use yii\helpers\Url;
                                 <th width="113" align="center">导航名称</th>
                                 <th width="113" align="center">导航类型</th>
                                 <th align="left">链接地址</th>
+                                <th align="left">导航图标</th>
                                 <th width="80" align="center">排序</th>
                                 <th width="120" align="center">操作</th>
                             </tr>
@@ -43,6 +44,7 @@ use yii\helpers\Url;
                                            }
                                            ?></td>
                                        <td><?php echo $val['nav_link']?></td>
+                                       <td><img src="<?php echo $val['nav_icon']?>"></td>
                                        <td align="center"><?php echo $val['nav_sort']?></td>
                                        <td align="center"><a href="<?php echo Url::toRoute(['admin/nav/nav_compile','id'=>$val['nav_id']]);?>">编辑</a> | <a href="javascript:void(0);" class="del" data-id="<?php echo $val['nav_id']?>" data-type="<?php echo $val['nav_type']?>">删除</a></td>
                                    </tr>
@@ -53,14 +55,24 @@ use yii\helpers\Url;
                         <table width="100%" border="0" cellpadding="10" cellspacing="0" class="tableBasic">
                             <tr>
                                 <th width="113" align="center">导航名称</th>
+                                <th width="113">导航类型</th>
                                 <th align="left">链接地址</th>
+                                <th align="left">导航图标</th>
                                 <th width="80" align="center">排序</th>
                                 <th width="120" align="center">操作</th>
                             </tr>
                             <?php  foreach($data as $key=>$val) { if($val['nav_place'] == 2) { ?>
                                 <tr>
                                     <td><?php echo $val['nav_name']?></td>
+                                    <td><?php
+                                        switch($val['nav_type']){
+                                            case 1;echo "一级导航";break;
+                                            case 2;echo "二级导航";break;
+                                            case 3;echo "三级导航";break;
+                                        }
+                                        ?></td>
                                     <td><?php echo $val['nav_link']?></td>
+                                    <td><img src="<?php echo $val['nav_icon']?>"></td>
                                     <td align="center"><?php echo $val['nav_sort']?></td>
                                     <td align="center"><a href="<?php echo Url::toRoute(['admin/nav/nav_compile','id'=>$val['nav_id']]);?>">编辑</a> | <a href="javascript:void(0);" class="del" data-id="<?php echo $val['nav_id']?>" data-type="<?php echo $val['nav_type']?>">删除</a></td>
                                 </tr>
@@ -71,7 +83,9 @@ use yii\helpers\Url;
                         <table width="100%" border="0" cellpadding="10" cellspacing="0" class="tableBasic">
                             <tr>
                                 <th width="113" align="center">导航名称</th>
+                                <th width="113">导航类型</th>
                                 <th align="left">链接地址</th>
+                                <th align="left">导航图标</th>
                                 <th width="80" align="center">排序</th>
                                 <th width="120" align="center">操作</th>
                             </tr>
@@ -79,7 +93,15 @@ use yii\helpers\Url;
                             foreach($data as $key=>$val) { if($val['nav_place'] == 3) { ?>
                                 <tr>
                                     <td><?php echo $val['nav_name']?></td>
+                                    <td><?php
+                                        switch($val['nav_type']){
+                                            case 1;echo "一级导航";break;
+                                            case 2;echo "二级导航";break;
+                                            case 3;echo "三级导航";break;
+                                        }
+                                        ?></td>
                                     <td><?php echo $val['nav_link']?></td>
+                                    <td><img src="<?php echo $val['nav_icon']?>"></td>
                                     <td align="center"><?php echo $val['nav_sort']?></td>
                                     <td align="center"><a href="<?php echo Url::toRoute(['admin/nav/nav_compile','id'=>$val['nav_id']]);?>">编辑</a> | <a href="javascript:void(0);" class="del" data-id="<?php echo $val['nav_id']?>" data-type="<?php echo $val['nav_type']?>">删除</a></td>
                                 </tr>

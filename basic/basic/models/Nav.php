@@ -12,8 +12,13 @@ class Nav extends \yii\db\ActiveRecord
      * 添加导航   0 添加  1 修改
      */
     public function add_Nav($arr,$type){
-        $data = array_slice($arr,0,5);
+        $data = array_slice($arr,0,6);
+        $data = array_filter($data);
         //查询所属导航的该条数据
+        //value=0 提交过来为空，所以先赋值。
+        if($data['nav_type'] == -1){
+            $data['nav_type'] = 0;
+        }
         $info =  Nav::find()->where(['nav_id' => $data['nav_type']])->asArray()->one();
         //导航
         $data['nav_link'] = $_SERVER['SERVER_NAME'].'/'.$_SERVER['SCRIPT_NAME'].'?r='.$data['nav_link'];
@@ -22,7 +27,6 @@ class Nav extends \yii\db\ActiveRecord
         if($data['nav_type'] == 0){ $data['nav_pid'] =0;}
         //给nav_type赋值
         $data['nav_type'] = $info['nav_type']+1;
-
         if($type == 0){
             return \Yii::$app->db ->createCommand() ->insert('mb_nav',$data) ->execute();
         } else {
