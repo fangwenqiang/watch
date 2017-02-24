@@ -18,7 +18,7 @@ use yii\helpers\Url;
       <td align="center"><?=$val['admin_id']?></td>
       <td><?=$val['username']?></td>
       <td align="center"><?=$val['email']?></td>
-      <td align="center" class=="addmove">鼠标移上查询</td>
+      <td align="center" class="addmove" admin_id="<?=$val['admin_id']?>">鼠标移上查询</td>
       <td align="center"><a href="<?=url::to(['admin/rbac/addroad','admin_id'=>$val['admin_id']])?>">赋角色</a> | <a href="<?=url::to(['admin/rbac/update','admin_id'=>$val['admin_id']])?>">编辑</a>
           | <a href="javascript:void(0)" class="del" admin_id="<?=$val['admin_id']?>">删除</a></td>
      </tr>
@@ -47,5 +47,6 @@ use yii\helpers\Url;
             }
         });
     })
+
 
 </script>

@@ -20,7 +20,6 @@ class IndexController extends Controller
      */
     public function actionIndex()
     {
-
         $session = \Yii::$app->session;
         $user = $session->get('user');
         if (empty($user)) {
@@ -29,8 +28,6 @@ class IndexController extends Controller
         } else {
             return $this->render('index');
         }
-
-
     }
 
     /*
