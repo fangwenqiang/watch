@@ -10,8 +10,7 @@ use yii\helpers\Url;
       <th width="30" align="center">编号</th>
       <th align="left">管理员名称</th>
       <th align="center">E-mail地址</th>
-      <th align="center">添加时间</th>
-      <th align="center">最后登录时间</th>
+      <th align="center">查看管理员当前拥有的角色</th>
       <th align="center">操作</th>
      </tr>
       <?php foreach($data as $key=>$val){ ?>
@@ -19,9 +18,8 @@ use yii\helpers\Url;
       <td align="center"><?=$val['admin_id']?></td>
       <td><?=$val['username']?></td>
       <td align="center"><?=$val['email']?></td>
-      <td align="center">2016-02-25</td>
-      <td align="center">2016-02-26 20:53:17</td>
-      <td align="center"><a href="<?=url::to(['admin/rbac/update','admin_id'=>$val['admin_id']])?>">编辑</a>
+      <td align="center" class=="addmove">鼠标移上查询</td>
+      <td align="center"><a href="<?=url::to(['admin/rbac/addroad','admin_id'=>$val['admin_id']])?>">赋角色</a> | <a href="<?=url::to(['admin/rbac/update','admin_id'=>$val['admin_id']])?>">编辑</a>
           | <a href="javascript:void(0)" class="del" admin_id="<?=$val['admin_id']?>">删除</a></td>
      </tr>
       <?php } ?>
@@ -47,6 +45,8 @@ use yii\helpers\Url;
             }else{
                 return false;
             }
-        })
+        });
+
     })
+
 </script>
