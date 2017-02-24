@@ -64,7 +64,12 @@ class Goodstype extends \yii\db\ActiveRecord
     */
     public function selectData()
     {
-        return $this->find()->asArray()->all();
+        return $this->find()
+        ->select(['count(*) as attrNum','mb_goodstype.type_id','type_name'])
+        ->leftjoin('mb_attribute','mb_attribute.type_id=mb_goodstype.type_id')
+        ->groupBy('type_name')
+        ->asArray()
+        ->all();
     }
 
 
