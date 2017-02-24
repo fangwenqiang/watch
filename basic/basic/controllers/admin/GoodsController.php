@@ -68,8 +68,6 @@ class GoodsController extends Controller
     {
         $model = new Goods();
 
-
-
         if (Yii::$app->request->post()) {
            
             $post = Yii::$app->request->post();
@@ -82,6 +80,7 @@ class GoodsController extends Controller
                 $insertId = Yii::$app->db->getLastInsertID(); 
             } catch(Exception $e) {
                 echo '添加失败';
+                exit();
             }
 
 
@@ -102,6 +101,7 @@ class GoodsController extends Controller
                 $groupInsert['attr_list'] .= ','.$insertAttrtypeId;
             } catch(Exception $e) {
                 echo '添加类型失败';
+                 exit();
             }
 
             }
@@ -114,8 +114,10 @@ class GoodsController extends Controller
                 Yii::$app->db->createCommand()->insert('mb_group',$groupInsert)->execute();
             } catch(Exception $e) {
                 echo '添加类型失败';
+                 exit();
             }
 
+            echo "<script>alert('添加成功');history.go(-1)</script>"; 
             
 
         } else {
