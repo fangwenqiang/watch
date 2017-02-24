@@ -58,7 +58,7 @@ class UrlNormalizer extends Object
      * - `callable` - custom user callback, for example:
      *
      *   ```php
-     *   function ($route, $normalizer) {
+     *   functions ($route, $normalizer) {
      *       // use custom action for redirections
      *       $route[1]['oldRoute'] = $route[0];
      *       $route[0] = 'site/redirect';

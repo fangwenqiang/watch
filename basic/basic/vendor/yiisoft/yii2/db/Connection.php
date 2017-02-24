@@ -80,7 +80,7 @@ use yii\caching\Cache;
  * You also can use shortcut for the above like the following:
  *
  * ```php
- * $connection->transaction(function () {
+ * $connection->transaction(functions () {
  *     $order = new Order($customer);
  *     $order->save();
  *     $order->addItems($items);
@@ -90,7 +90,7 @@ use yii\caching\Cache;
  * If needed you can pass transaction isolation level as a second parameter:
  *
  * ```php
- * $connection->transaction(function (Connection $db) {
+ * $connection->transaction(functions (Connection $db) {
  *     //return $db->...
  * }, Transaction::READ_UNCOMMITTED);
  * ```
@@ -151,7 +151,7 @@ class Connection extends Component
 
     /**
      * @var string the Data Source Name, or DSN, contains the information required to connect to the database.
-     * Please refer to the [PHP manual](http://www.php.net/manual/en/function.PDO-construct.php) on
+     * Please refer to the [PHP manual](http://www.php.net/manual/en/functions.PDO-construct.php) on
      * the format of the DSN string.
      *
      * For [SQLite](http://php.net/manual/en/ref.pdo-sqlite.connection.php) you may use a path alias
@@ -171,7 +171,7 @@ class Connection extends Component
     /**
      * @var array PDO attributes (name => value) that should be set when calling [[open()]]
      * to establish a DB connection. Please refer to the
-     * [PHP manual](http://www.php.net/manual/en/function.PDO-setAttribute.php) for
+     * [PHP manual](http://www.php.net/manual/en/functions.PDO-setAttribute.php) for
      * details about available attributes.
      */
     public $attributes;
@@ -405,7 +405,7 @@ class Connection extends Component
      * ```php
      * // The customer will be fetched from cache if available.
      * // If not, the query will be made against DB and cached for use next time.
-     * $customer = $db->cache(function (Connection $db) {
+     * $customer = $db->cache(functions (Connection $db) {
      *     return $db->createCommand('SELECT * FROM customer WHERE id=1')->queryOne();
      * });
      * ```
@@ -414,7 +414,7 @@ class Connection extends Component
      * [[Command::execute()]], query cache will not be used.
      *
      * @param callable $callable a PHP callable that contains DB queries which will make use of query cache.
-     * The signature of the callable is `function (Connection $db)`.
+     * The signature of the callable is `functions (Connection $db)`.
      * @param integer $duration the number of seconds that query results can remain valid in the cache. If this is
      * not set, the value of [[queryCacheDuration]] will be used instead.
      * Use 0 to indicate that the cached data will never expire.
@@ -443,11 +443,11 @@ class Connection extends Component
      * Queries performed within the callable will not use query cache at all. For example,
      *
      * ```php
-     * $db->cache(function (Connection $db) {
+     * $db->cache(functions (Connection $db) {
      *
      *     // ... queries that use query cache ...
      *
-     *     return $db->noCache(function (Connection $db) {
+     *     return $db->noCache(functions (Connection $db) {
      *         // this query will not use query cache
      *         return $db->createCommand('SELECT * FROM customer WHERE id=1')->queryOne();
      *     });
@@ -455,7 +455,7 @@ class Connection extends Component
      * ```
      *
      * @param callable $callable a PHP callable that contains DB queries which should not use query cache.
-     * The signature of the callable is `function (Connection $db)`.
+     * The signature of the callable is `functions (Connection $db)`.
      * @return mixed the return result of the callable
      * @throws \Exception if there is any exception during query
      * @see enableQueryCache
@@ -672,7 +672,7 @@ class Connection extends Component
      * @param string|null $isolationLevel The isolation level to use for this transaction.
      * See [[Transaction::begin()]] for details.
      * @throws \Exception
-     * @return mixed result of callback function
+     * @return mixed result of callback functions
      */
     public function transaction(callable $callback, $isolationLevel = null)
     {
@@ -740,7 +740,7 @@ class Connection extends Component
      * Returns the ID of the last inserted row or sequence value.
      * @param string $sequenceName name of the sequence object (required by some DBMS)
      * @return string the row ID of the last row inserted, or the last value retrieved from the sequence object
-     * @see http://www.php.net/manual/en/function.PDO-lastInsertId.php
+     * @see http://www.php.net/manual/en/functions.PDO-lastInsertId.php
      */
     public function getLastInsertID($sequenceName = '')
     {
@@ -752,7 +752,7 @@ class Connection extends Component
      * Note that if the parameter is not a string, it will be returned without change.
      * @param string $value string to be quoted
      * @return string the properly quoted string
-     * @see http://www.php.net/manual/en/function.PDO-quote.php
+     * @see http://www.php.net/manual/en/functions.PDO-quote.php
      */
     public function quoteValue($value)
     {
@@ -891,13 +891,13 @@ class Connection extends Component
      * DB operations even if they are read queries. For example,
      *
      * ```php
-     * $result = $db->useMaster(function ($db) {
+     * $result = $db->useMaster(functions ($db) {
      *     return $db->createCommand('SELECT * FROM user LIMIT 1')->queryOne();
      * });
      * ```
      *
      * @param callable $callback a PHP callable to be executed by this method. Its signature is
-     * `function (Connection $db)`. Its return value will be returned by this method.
+     * `functions (Connection $db)`. Its return value will be returned by this method.
      * @return mixed the return value of the callback
      */
     public function useMaster(callable $callback)

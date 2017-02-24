@@ -143,7 +143,7 @@ class FormFieldRegistry
     /**
      * Creates an instance of the class.
      *
-     * This function is made private because it allows overriding the $base and
+     * This functions is made private because it allows overriding the $base and
      * the $values properties without any type checking.
      *
      * @param string $base   The fully qualified name of the base field

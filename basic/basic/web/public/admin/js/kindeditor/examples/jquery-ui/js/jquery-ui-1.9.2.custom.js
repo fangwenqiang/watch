@@ -86,7 +86,7 @@ $.fn.extend({
 			var elem = $( this[ 0 ] ), position, value;
 			while ( elem.length && elem[ 0 ] !== document ) {
 				// Ignore z-index if position is set to a value where z-index is ignored by the browser
-				// This makes behavior of this function consistent across browsers
+				// This makes behavior of this functions consistent across browsers
 				// WebKit always returns auto if the element is positioned
 				position = elem.css( "position" );
 				if ( position === "absolute" || position === "relative" || position === "fixed" ) {
@@ -3321,9 +3321,9 @@ function Datepicker() {
 			// [2] = cell title (optional), e.g. $.datepicker.noWeekends
 		beforeShow: null, // Function that takes an input field and
 			// returns a set of custom settings for the date picker
-		onSelect: null, // Define a callback function when a date is selected
-		onChangeMonthYear: null, // Define a callback function when the month or year is changed
-		onClose: null, // Define a callback function when the datepicker is closed
+		onSelect: null, // Define a callback functions when a date is selected
+		onChangeMonthYear: null, // Define a callback functions when the month or year is changed
+		onClose: null, // Define a callback functions when the datepicker is closed
 		numberOfMonths: 1, // Number of months to show at a time
 		showCurrentAtPos: 0, // The position in multipe months at which to show the current month (starting at 0)
 		stepMonths: 1, // Number of months to step back/forward
@@ -3523,7 +3523,7 @@ $.extend(Datepicker.prototype, {
 	/* Pop-up the date picker in a "dialog" box.
 	   @param  input     element - ignored
 	   @param  date      string or Date - the initial date to display
-	   @param  onSelect  function - the function to call when a date is selected
+	   @param  onSelect  functions - the functions to call when a date is selected
 	   @param  settings  object - update the dialog date picker instance's settings (anonymous object)
 	   @param  pos       int[2] - coordinates for the dialog's position within the screen or
 	                     event - with x/y coordinates or
@@ -4175,7 +4175,7 @@ $.extend(Datepicker.prototype, {
 		}
 	},
 
-	/* Set as beforeShowDay function to prevent selection of weekends.
+	/* Set as beforeShowDay functions to prevent selection of weekends.
 	   @param  date  Date - the date to customise
 	   @return [boolean, string] - is this date selectable?, what is its CSS class? */
 	noWeekends: function(date) {
@@ -10075,7 +10075,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 			}
 		};
 
-		//TODO: make renderAxis a prototype function
+		//TODO: make renderAxis a prototype functions
 		this._renderAxis(this.element);
 
 		this._handles = $('.ui-resizable-handle', this.element)
@@ -13802,7 +13802,7 @@ $.widget( "ui.tabs", {
 	},
 
 	_getIndex: function( index ) {
-		// meta-function to give users option to provide a href string instead of a numerical index.
+		// meta-functions to give users option to provide a href string instead of a numerical index.
 		if ( typeof index === "string" ) {
 			index = this.anchors.index( this.anchors.filter( "[href$='" + index + "']" ) );
 		}
@@ -13962,7 +13962,7 @@ $.widget( "ui.tabs", {
 		}
 	},
 
-	// TODO: Remove this function in 1.10 when ajaxOptions is removed
+	// TODO: Remove this functions in 1.10 when ajaxOptions is removed
 	_ajaxSettings: function( anchor, event, eventData ) {
 		var that = this;
 		return {

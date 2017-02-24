@@ -183,7 +183,7 @@ class ActiveField extends Component
      * If a callable, it will be called to generate the content. The signature of the callable should be:
      *
      * ```php
-     * function ($field) {
+     * functions ($field) {
      *     return $html;
      * }
      * ```
@@ -776,7 +776,7 @@ class ActiveField extends Component
         }
 
         if (!empty($validators)) {
-            $options['validate'] = new JsExpression("function (attribute, value, messages, deferred, \$form) {" . implode('', $validators) . '}');
+            $options['validate'] = new JsExpression("functions (attribute, value, messages, deferred, \$form) {" . implode('', $validators) . '}');
         }
 
         // only get the options that are different from the default ones (set in yii.activeForm.js)

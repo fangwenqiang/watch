@@ -423,7 +423,7 @@ class Services_JSON
     }
 
    /**
-    * array-walking function for use in generating JSON-formatted name-value pairs
+    * array-walking functions for use in generating JSON-formatted name-value pairs
     *
     * @param    string  $name   name of key to use
     * @param    mixed   $value  reference to an array element to be encoded

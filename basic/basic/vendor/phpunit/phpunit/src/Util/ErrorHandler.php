@@ -55,7 +55,7 @@ class PHPUnit_Util_ErrorHandler
         array_shift($trace);
 
         foreach ($trace as $frame) {
-            if ($frame['function'] == '__toString') {
+            if ($frame['functions'] == '__toString') {
                 return false;
             }
         }
@@ -86,7 +86,7 @@ class PHPUnit_Util_ErrorHandler
     }
 
     /**
-     * Registers an error handler and returns a function that will restore
+     * Registers an error handler and returns a functions that will restore
      * the previous handler when invoked
      *
      * @param int $severity PHP predefined error constant

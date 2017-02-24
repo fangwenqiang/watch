@@ -32,7 +32,7 @@ class HTMLPurifier_AttrDef_URI_IPv4 extends HTMLPurifier_AttrDef
     }
 
     /**
-     * Lazy load function to prevent regex from being stuffed in
+     * Lazy load functions to prevent regex from being stuffed in
      * cache.
      */
     protected function _loadRegex()

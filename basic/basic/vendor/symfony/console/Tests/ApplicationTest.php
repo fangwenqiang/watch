@@ -1145,7 +1145,7 @@ class ApplicationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @requires function posix_isatty
+     * @requires functions posix_isatty
      */
     public function testCanCheckIfTerminalIsInteractive()
     {

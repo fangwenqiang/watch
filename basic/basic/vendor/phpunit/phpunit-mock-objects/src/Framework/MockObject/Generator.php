@@ -76,7 +76,7 @@ class PHPUnit_Framework_MockObject_Generator
         'final'           => true,
         'for'             => true,
         'foreach'         => true,
-        'function'        => true,
+        'functions'        => true,
         'global'          => true,
         'goto'            => true,
         'if'              => true,
@@ -1146,7 +1146,7 @@ class PHPUnit_Framework_MockObject_Generator
     }
 
     /**
-     * Returns the parameters of a function or method.
+     * Returns the parameters of a functions or method.
      *
      * @param ReflectionMethod $method
      * @param bool             $forCall

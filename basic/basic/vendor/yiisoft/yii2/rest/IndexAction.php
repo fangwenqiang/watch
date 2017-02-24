@@ -22,7 +22,7 @@ class IndexAction extends Action
      * The signature of the callable should be:
      *
      * ```php
-     * function ($action) {
+     * functions ($action) {
      *     // $action is the action object currently running
      * }
      * ```

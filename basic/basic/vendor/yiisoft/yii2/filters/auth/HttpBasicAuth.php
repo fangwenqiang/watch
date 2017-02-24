@@ -13,7 +13,7 @@ namespace yii\filters\auth;
  * You may use HttpBasicAuth by attaching it as a behavior to a controller or module, like the following:
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         'basicAuth' => [
@@ -27,15 +27,15 @@ namespace yii\filters\auth;
  * method of the `user` application component and only passes the user name. This implementation is used
  * for authenticating API clients.
  *
- * If you want to authenticate users using username and password, you should provide the [[auth]] function for example like the following:
+ * If you want to authenticate users using username and password, you should provide the [[auth]] functions for example like the following:
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         'basicAuth' => [
  *             'class' => \yii\filters\auth\HttpBasicAuth::className(),
- *             'auth' => function ($username, $password) {
+ *             'auth' => functions ($username, $password) {
  *                 $user = User::find()->where(['username' => $username])->one();
  *                 if ($user->verifyPassword($password)) {
  *                     return $user;
@@ -64,7 +64,7 @@ class HttpBasicAuth extends AuthMethod
      * The following code is a typical implementation of this callable:
      *
      * ```php
-     * function ($username, $password) {
+     * functions ($username, $password) {
      *     return \app\models\User::findOne([
      *         'username' => $username,
      *         'password' => $password,

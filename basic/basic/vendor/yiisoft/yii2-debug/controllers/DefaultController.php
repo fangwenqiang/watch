@@ -147,7 +147,7 @@ class DefaultController extends Controller
 
     public function loadData($tag, $maxRetry = 0)
     {
-        // retry loading debug data because the debug data is logged in shutdown function
+        // retry loading debug data because the debug data is logged in shutdown functions
         // which may be delayed in some environment if xdebug is enabled.
         // See: https://github.com/yiisoft/yii2/issues/1504
         for ($retry = 0; $retry <= $maxRetry; ++$retry) {

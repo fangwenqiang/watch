@@ -26,12 +26,12 @@ class BuildTest extends BaseCommandRunner
 
         $this->content = $this->log[0]['content'];
         // methods from Filesystem module
-        $this->assertContains('public function amInPath($path)', $this->content);
-        $this->assertContains('public function copyDir($src, $dst)', $this->content);
-        $this->assertContains('public function seeInThisFile($text)', $this->content);
+        $this->assertContains('public functions amInPath($path)', $this->content);
+        $this->assertContains('public functions copyDir($src, $dst)', $this->content);
+        $this->assertContains('public functions seeInThisFile($text)', $this->content);
 
         // methods from EmulateHelper
-        $this->assertContains('public function seeEquals($expected, $actual)', $this->content);
+        $this->assertContains('public functions seeEquals($expected, $actual)', $this->content);
 
         $this->assertContains('HobbitGuyActions.php generated successfully.', $this->output);
         $this->assertIsValidPhp($this->content);

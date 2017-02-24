@@ -14,16 +14,16 @@ class PhpUnit
 {{namespace}}
 class {{name}}Test extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
+    protected functions setUp()
     {
     }
 
-    protected function tearDown()
+    protected functions tearDown()
     {
     }
 
     // tests
-    public function testMe()
+    public functions testMe()
     {
     }
 }

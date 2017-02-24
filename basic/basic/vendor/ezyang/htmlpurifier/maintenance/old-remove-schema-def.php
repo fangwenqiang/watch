@@ -10,7 +10,7 @@ exit;
 
 /**
  * @file
- * Removes ConfigSchema function calls from source files.
+ * Removes ConfigSchema functions calls from source files.
  */
 
 chdir(dirname(__FILE__) . '/../library/');

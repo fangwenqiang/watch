@@ -35,7 +35,7 @@ use yii\mail\BaseMailer;
  * ~~~
  *
  * You may also skip the configuration of the [[transport]] property. In that case, the default
- * PHP `mail()` function will be used to send emails.
+ * PHP `mail()` functions will be used to send emails.
  *
  * You specify the transport constructor arguments using 'constructArgs' key in the config.
  * You can also specify the list of plugins, which should be registered to the transport using

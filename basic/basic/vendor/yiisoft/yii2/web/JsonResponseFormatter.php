@@ -40,12 +40,12 @@ class JsonResponseFormatter extends Component implements ResponseFormatterInterf
     /**
      * @var boolean whether to use JSONP response format. When this is true, the [[Response::data|response data]]
      * must be an array consisting of `data` and `callback` members. The latter should be a JavaScript
-     * function name while the former will be passed to this function as a parameter.
+     * functions name while the former will be passed to this functions as a parameter.
      */
     public $useJsonp = false;
     /**
      * @var integer the encoding options passed to [[Json::encode()]]. For more details please refer to
-     * <http://www.php.net/manual/en/function.json-encode.php>.
+     * <http://www.php.net/manual/en/functions.json-encode.php>.
      * Default is `JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE`.
      * This property has no effect, when [[useJsonp]] is `true`.
      * @since 2.0.7

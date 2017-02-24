@@ -161,7 +161,7 @@ class Application extends \yii\base\Application
      * instances. It then calls [[Controller::runAction()]] to run the action with the given parameters.
      * If the route is empty, the method will use [[defaultRoute]].
      *
-     * For example, to run `public function actionTest($a, $b)` assuming that the controller has options the following
+     * For example, to run `public functions actionTest($a, $b)` assuming that the controller has options the following
      * code should be used:
      *
      * ```php

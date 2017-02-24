@@ -37,7 +37,7 @@ use yii\base\InvalidCallException;
  * Doing it the second time will throw an exception.
  *
  * It is possible to use a specific mode of data fetching by setting
- * [[fetchMode]]. See the [PHP manual](http://www.php.net/manual/en/function.PDOStatement-setFetchMode.php)
+ * [[fetchMode]]. See the [PHP manual](http://www.php.net/manual/en/functions.PDOStatement-setFetchMode.php)
  * for more details about possible fetch mode.
  *
  * @property integer $columnCount The number of columns in the result set. This property is read-only.
@@ -80,7 +80,7 @@ class DataReader extends \yii\base\Object implements \Iterator, \Countable
      * should match the case of the column, as returned by the driver.
      * @param mixed $value Name of the PHP variable to which the column will be bound.
      * @param integer $dataType Data type of the parameter
-     * @see http://www.php.net/manual/en/function.PDOStatement-bindColumn.php
+     * @see http://www.php.net/manual/en/functions.PDOStatement-bindColumn.php
      */
     public function bindColumn($column, &$value, $dataType = null)
     {
@@ -94,7 +94,7 @@ class DataReader extends \yii\base\Object implements \Iterator, \Countable
     /**
      * Set the default fetch mode for this statement
      * @param integer $mode fetch mode
-     * @see http://www.php.net/manual/en/function.PDOStatement-setFetchMode.php
+     * @see http://www.php.net/manual/en/functions.PDOStatement-setFetchMode.php
      */
     public function setFetchMode($mode)
     {

@@ -157,8 +157,8 @@ class ServiceLocator extends Component
      *     'charset' => 'utf8',
      * ]);
      *
-     * // an anonymous function
-     * $locator->set('cache', function ($params) {
+     * // an anonymous functions
+     * $locator->set('cache', functions ($params) {
      *     return new \yii\caching\FileCache;
      * });
      *
@@ -176,7 +176,7 @@ class ServiceLocator extends Component
      * - a configuration array: the array contains name-value pairs that will be used to
      *   initialize the property values of the newly created object when [[get()]] is called.
      *   The `class` element is required and stands for the the class of the object to be created.
-     * - a PHP callable: either an anonymous function or an array representing a class method (e.g. `['Foo', 'bar']`).
+     * - a PHP callable: either an anonymous functions or an array representing a class method (e.g. `['Foo', 'bar']`).
      *   The callable will be called by [[get()]] to return an object associated with the specified component ID.
      * - an object: When [[get()]] is called, this object will be returned.
      *

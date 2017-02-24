@@ -757,7 +757,7 @@ class BaseConsole
      * - `required`: whether it is required or not
      * - `default`: default value if no input is inserted by the user
      * - `pattern`: regular expression pattern to validate user input
-     * - `validator`: a callable function to validate input. The function must accept two parameters:
+     * - `validator`: a callable functions to validate input. The functions must accept two parameters:
      * - `input`: the user input to validate
      * - `error`: the error value passed by reference if validation failed.
      *

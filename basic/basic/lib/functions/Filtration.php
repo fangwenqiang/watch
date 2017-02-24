@@ -1,5 +1,5 @@
 <?php
-namespace app\Lib;
+namespace app\Lib\Functions;
 class Filtration
 {
     /*

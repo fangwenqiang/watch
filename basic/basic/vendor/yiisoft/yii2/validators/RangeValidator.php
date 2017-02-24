@@ -24,11 +24,11 @@ use yii\helpers\ArrayHelper;
 class RangeValidator extends Validator
 {
     /**
-     * @var array|\Traversable|\Closure a list of valid values that the attribute value should be among or an anonymous function that returns
-     * such a list. The signature of the anonymous function should be as follows,
+     * @var array|\Traversable|\Closure a list of valid values that the attribute value should be among or an anonymous functions that returns
+     * such a list. The signature of the anonymous functions should be as follows,
      *
      * ```php
-     * function($model, $attribute) {
+     * functions($model, $attribute) {
      *     // compute range
      *     return $range;
      * }

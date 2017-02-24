@@ -9,14 +9,14 @@
  */
 
 /**
- * Sends Messages using the mail() function.
+ * Sends Messages using the mail() functions.
  *
  * It is advised that users do not use this transport if at all possible
  * since a number of plugin features cannot be used in conjunction with this
  * transport due to the internal interface in PHP itself.
  *
  * The level of error reporting with this transport is incredibly weak, again
- * due to limitations of PHP's internal mail() function.  You'll get an
+ * due to limitations of PHP's internal mail() functions.  You'll get an
  * all-or-nothing result from sending.
  *
  * @author Chris Corbyn
@@ -29,7 +29,7 @@ class Swift_Transport_MailTransport implements Swift_Transport
     /** The event dispatcher from the plugin API */
     private $_eventDispatcher;
 
-    /** An invoker that calls the mail() function */
+    /** An invoker that calls the mail() functions */
     private $_invoker;
 
     /**
@@ -67,7 +67,7 @@ class Swift_Transport_MailTransport implements Swift_Transport
     }
 
     /**
-     * Set the additional parameters used on the mail() function.
+     * Set the additional parameters used on the mail() functions.
      *
      * This string is formatted for sprintf() where %s is the sender address.
      *
@@ -83,7 +83,7 @@ class Swift_Transport_MailTransport implements Swift_Transport
     }
 
     /**
-     * Get the additional parameters used on the mail() function.
+     * Get the additional parameters used on the mail() functions.
      *
      * This string is formatted for sprintf() where %s is the sender address.
      *

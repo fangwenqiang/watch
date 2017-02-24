@@ -78,7 +78,7 @@ abstract class HTMLPurifier_Token
     }
 
     /**
-     * Convenience function for DirectLex settings line/col position.
+     * Convenience functions for DirectLex settings line/col position.
      * @param int $l
      * @param int $c
      */

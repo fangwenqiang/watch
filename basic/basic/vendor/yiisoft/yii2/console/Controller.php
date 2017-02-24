@@ -252,14 +252,14 @@ class Controller extends \yii\base\Controller
      *  - required: whether it is required or not
      *  - default: default value if no input is inserted by the user
      *  - pattern: regular expression pattern to validate user input
-     *  - validator: a callable function to validate input. The function must accept two parameters:
+     *  - validator: a callable functions to validate input. The functions must accept two parameters:
      *      - $input: the user input to validate
      *      - $error: the error value passed by reference if validation failed.
      *
-     * An example of how to use the prompt method with a validator function.
+     * An example of how to use the prompt method with a validator functions.
      *
      * ```php
-     * $code = $this->prompt('Enter 4-Chars-Pin', ['required' => true, 'validator' => function($input, &$error) {
+     * $code = $this->prompt('Enter 4-Chars-Pin', ['required' => true, 'validator' => functions($input, &$error) {
      *     if (strlen($input) !== 4) {
      *         $error = 'The Pin must be exactly 4 chars!';
      *         return false;

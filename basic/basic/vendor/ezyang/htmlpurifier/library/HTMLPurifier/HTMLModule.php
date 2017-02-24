@@ -90,7 +90,7 @@ class HTMLPurifier_HTMLModule
 
     /**
      * Boolean flag that indicates whether or not getChildDef is implemented.
-     * For optimization reasons: may save a call to a function. Be sure
+     * For optimization reasons: may save a call to a functions. Be sure
      * to set it if you do implement getChildDef(), otherwise it will have
      * no effect!
      * @type bool
@@ -115,7 +115,7 @@ class HTMLPurifier_HTMLModule
     /**
      * Retrieves a proper HTMLPurifier_ChildDef subclass based on
      * content_model and content_model_type member variables of
-     * the HTMLPurifier_ElementDef class. There is a similar function
+     * the HTMLPurifier_ElementDef class. There is a similar functions
      * in HTMLPurifier_HTMLDefinition.
      * @param HTMLPurifier_ElementDef $def
      * @return HTMLPurifier_ChildDef subclass
@@ -128,7 +128,7 @@ class HTMLPurifier_HTMLModule
     // -- Convenience -----------------------------------------------------
 
     /**
-     * Convenience function that sets up a new element
+     * Convenience functions that sets up a new element
      * @param string $element Name of element to add
      * @param string|bool $type What content set should element be registered to?
      *              Set as false to skip this step.
@@ -166,7 +166,7 @@ class HTMLPurifier_HTMLModule
     }
 
     /**
-     * Convenience function that creates a totally blank, non-standalone
+     * Convenience functions that creates a totally blank, non-standalone
      * element.
      * @param string $element Name of element to create
      * @return HTMLPurifier_ElementDef Created element
@@ -184,7 +184,7 @@ class HTMLPurifier_HTMLModule
     }
 
     /**
-     * Convenience function that registers an element to a content set
+     * Convenience functions that registers an element to a content set
      * @param string $element Element to register
      * @param string $type Name content set (warning: case sensitive, usually upper-case
      *        first letter)
@@ -200,7 +200,7 @@ class HTMLPurifier_HTMLModule
     }
 
     /**
-     * Convenience function that transforms single-string contents
+     * Convenience functions that transforms single-string contents
      * into separate content model and content model type
      * @param string $contents Allowed children in form of:
      *                  "$content_model_type: $content_model"
@@ -230,7 +230,7 @@ class HTMLPurifier_HTMLModule
     }
 
     /**
-     * Convenience function that merges a list of attribute includes into
+     * Convenience functions that merges a list of attribute includes into
      * an attribute array.
      * @param array $attr Reference to attr array to modify
      * @param array $attr_includes Array of includes / string include to merge in
@@ -248,7 +248,7 @@ class HTMLPurifier_HTMLModule
     }
 
     /**
-     * Convenience function that generates a lookup table with boolean
+     * Convenience functions that generates a lookup table with boolean
      * true as value.
      * @param string $list List of values to turn into a lookup
      * @note You can also pass an arbitrary number of arguments in

@@ -42,7 +42,7 @@ describe('options parser', function() {
     expect(o.sorter([2, 1, 3])).toEqual([1, 2, 3]);
   });
 
-  it('should default sorter to identity function', function() {
+  it('should default sorter to identity functions', function() {
     var o = build();
     expect(o.sorter([2, 1, 3])).toEqual([2, 1, 3]);
   });
@@ -53,7 +53,7 @@ describe('options parser', function() {
       expect(o.local).toEqual([]);
     });
 
-    it('should support function', function() {
+    it('should support functions', function() {
       var o = build({ local: function() { return [1]; } });
       expect(o.local).toEqual([1]);
     });
@@ -84,7 +84,7 @@ describe('options parser', function() {
       expect(o.prefetch.cache).toBe(true);
     });
 
-    it('should default transform to identiy function', function() {
+    it('should default transform to identiy functions', function() {
       var o = prefetch();
       expect(o.prefetch.transform('foo')).toBe('foo');
     });
@@ -137,7 +137,7 @@ describe('options parser', function() {
       expect(build({ remote: '/remote' }).remote).toBeDefined();
     });
 
-    it('should default transform to identiy function', function() {
+    it('should default transform to identiy functions', function() {
       var o = remote();
       expect(o.remote.transform('foo')).toBe('foo');
     });
@@ -152,7 +152,7 @@ describe('options parser', function() {
       expect(o.remote.limiter.name).toBe('debounce');
     });
 
-    it('should default prepare to identity function', function() {
+    it('should default prepare to identity functions', function() {
       var o = remote();
       expect(o.remote.prepare('q', { url: '/foo' })).toEqual({ url: '/foo' });
     });

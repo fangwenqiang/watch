@@ -118,7 +118,7 @@ interface MessageInterface
      * Return an instance with the provided value replacing the specified header.
      *
      * While header names are case-insensitive, the casing of the header will
-     * be preserved by this function, and returned from getHeaders().
+     * be preserved by this functions, and returned from getHeaders().
      *
      * This method MUST be implemented in such a way as to retain the
      * immutability of the message, and MUST return an instance that has the

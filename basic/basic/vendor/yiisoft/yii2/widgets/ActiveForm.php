@@ -57,11 +57,11 @@ class ActiveForm extends Widget
     public $fieldClass = 'yii\widgets\ActiveField';
     /**
      * @var array|\Closure the default configuration used by [[field()]] when creating a new field object.
-     * This can be either a configuration array or an anonymous function returning a configuration array.
+     * This can be either a configuration array or an anonymous functions returning a configuration array.
      * If the latter, the signature should be as follows:
      *
      * ```php
-     * function ($model, $attribute)
+     * functions ($model, $attribute)
      * ```
      *
      * The value of this property will be merged recursively with the `$options` parameter passed to [[field()]].

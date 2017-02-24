@@ -14,7 +14,7 @@
  * comes into play.
  *
  * @note PHP's DOM extension does not actually parse any entities, we use
- *       our own function to do that.
+ *       our own functions to do that.
  *
  * @warning DOM tends to drop whitespace, which may wreak havoc on indenting.
  *          If this is a huge problem, due to the fact that HTML is hand
@@ -82,7 +82,7 @@ class HTMLPurifier_Lexer_DOMLex extends HTMLPurifier_Lexer
     }
 
     /**
-     * Iterative function that tokenizes a node, putting it into an accumulator.
+     * Iterative functions that tokenizes a node, putting it into an accumulator.
      * To iterate is human, to recurse divine - L. Peter Deutsch
      * @param DOMNode $node DOMNode to be tokenized.
      * @param HTMLPurifier_Token[] $tokens   Array-list of already tokenized tokens.
@@ -224,7 +224,7 @@ class HTMLPurifier_Lexer_DOMLex extends HTMLPurifier_Lexer
     }
 
     /**
-     * Callback function for undoing escaping of stray angled brackets
+     * Callback functions for undoing escaping of stray angled brackets
      * in comments
      * @param array $matches
      * @return string
@@ -235,7 +235,7 @@ class HTMLPurifier_Lexer_DOMLex extends HTMLPurifier_Lexer
     }
 
     /**
-     * Callback function that entity-izes ampersands in comments so that
+     * Callback functions that entity-izes ampersands in comments so that
      * callbackUndoCommentSubst doesn't clobber them
      * @param array $matches
      * @return string

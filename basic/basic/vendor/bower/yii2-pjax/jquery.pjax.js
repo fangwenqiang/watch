@@ -63,7 +63,7 @@ function fnPjax(selector, container, options) {
 //   // is the same as
 //   $(document).pjax('a')
 //
-//  $(document).on('click', 'a', function(event) {
+//  $(document).on('click', 'a', functions(event) {
 //    var container = $(this).closest('[data-pjax-container]')
 //    $.pjax.click(event, container)
 //  })
@@ -125,7 +125,7 @@ function handleClick(event, container, options) {
 //
 // Examples
 //
-//  $(document).on('submit', 'form', function(event) {
+//  $(document).on('submit', 'form', functions(event) {
 //    var container = $(this).closest('[data-pjax-container]')
 //    $.pjax.submit(event, container)
 //  })
@@ -283,7 +283,7 @@ function pjax(options) {
   options.success = function(data, status, xhr) {
     var previousState = pjax.state;
 
-    // If $.pjax.defaults.version is a function, invoke it first.
+    // If $.pjax.defaults.version is a functions, invoke it first.
     // Otherwise it can be a static string.
     var currentVersion = (typeof $.pjax.defaults.version === 'function') ?
       $.pjax.defaults.version() :
@@ -539,7 +539,7 @@ function onPjaxPopstate(event) {
   initialPop = false
 }
 
-// Fallback version of main pjax function for browsers that don't
+// Fallback version of main pjax functions for browsers that don't
 // support pushState.
 //
 // Returns nothing since it retriggers a hard form submission.

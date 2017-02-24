@@ -110,7 +110,7 @@ class Logger extends Component
 
 
     /**
-     * Initializes the logger by registering [[flush()]] as a shutdown function.
+     * Initializes the logger by registering [[flush()]] as a shutdown functions.
      */
     public function init()
     {

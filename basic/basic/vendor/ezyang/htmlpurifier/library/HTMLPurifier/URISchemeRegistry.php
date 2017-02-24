@@ -12,7 +12,7 @@ class HTMLPurifier_URISchemeRegistry
      *                   or bool true to reset to default registry.
      * @return HTMLPurifier_URISchemeRegistry
      * @note Pass a registry object $prototype with a compatible interface and
-     *       the function will copy it and return it all further times.
+     *       the functions will copy it and return it all further times.
      */
     public static function instance($prototype = null)
     {

@@ -26,7 +26,7 @@ use yii\web\Response;
  * It also stores different versions of the page depending on the application language.
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         'pageCache' => [

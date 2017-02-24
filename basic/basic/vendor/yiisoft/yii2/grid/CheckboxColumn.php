@@ -46,16 +46,16 @@ class CheckboxColumn extends Column
     public $name = 'selection';
     /**
      * @var array|\Closure the HTML attributes for checkboxes. This can either be an array of
-     * attributes or an anonymous function ([[Closure]]) that returns such an array.
-     * The signature of the function should be the following: `function ($model, $key, $index, $column)`.
+     * attributes or an anonymous functions ([[Closure]]) that returns such an array.
+     * The signature of the functions should be the following: `functions ($model, $key, $index, $column)`.
      * Where `$model`, `$key`, and `$index` refer to the model, key and index of the row currently being rendered
      * and `$column` is a reference to the [[CheckboxColumn]] object.
-     * A function may be used to assign different attributes to different rows based on the data in that row.
+     * A functions may be used to assign different attributes to different rows based on the data in that row.
      * Specifically if you want to set a different value for the checkbox
      * you can use this option in the following way (in this example using the `name` attribute of the model):
      *
      * ```php
-     * 'checkboxOptions' => function ($model, $key, $index, $column) {
+     * 'checkboxOptions' => functions ($model, $key, $index, $column) {
      *     return ['value' => $model->name];
      * }
      * ```

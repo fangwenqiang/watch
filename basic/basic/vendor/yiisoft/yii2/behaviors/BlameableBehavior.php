@@ -18,7 +18,7 @@ use yii\db\BaseActiveRecord;
  * ```php
  * use yii\behaviors\BlameableBehavior;
  *
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         BlameableBehavior::className(),
@@ -37,7 +37,7 @@ use yii\db\BaseActiveRecord;
  * properties like the following:
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         [

@@ -42,7 +42,7 @@ class CloverTest extends TestCase
         $clover = new Clover;
 
         $this->assertStringMatchesFormatFile(
-            TEST_FILES_PATH . 'class-with-anonymous-function-clover.xml',
+            TEST_FILES_PATH . 'class-with-anonymous-functions-clover.xml',
             $clover->process($this->getCoverageForClassWithAnonymousFunction())
         );
     }

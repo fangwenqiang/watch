@@ -36,7 +36,7 @@ final class Object_ implements Type
     {
         if (strpos((string)$fqsen, '::') !== false || strpos((string)$fqsen, '()') !== false) {
             throw new \InvalidArgumentException(
-                'Object types can only refer to a class, interface or trait but a method, function, constant or '
+                'Object types can only refer to a class, interface or trait but a method, functions, constant or '
                 . 'property was received: ' . (string)$fqsen
             );
         }

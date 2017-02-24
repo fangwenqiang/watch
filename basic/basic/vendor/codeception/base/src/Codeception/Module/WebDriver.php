@@ -1823,13 +1823,13 @@ class WebDriver extends CodeceptionModule implements
 
     /**
      * Waits up to $timeout seconds for the given element to change.
-     * Element "change" is determined by a callback function which is called repeatedly
+     * Element "change" is determined by a callback functions which is called repeatedly
      * until the return value evaluates to true.
      *
      * ``` php
      * <?php
      * use \Facebook\WebDriver\WebDriverElement
-     * $I->waitForElementChange('#menu', function(WebDriverElement $el) {
+     * $I->waitForElementChange('#menu', functions(WebDriverElement $el) {
      *     return $el->isDisplayed();
      * }, 100);
      * ?>
@@ -1963,7 +1963,7 @@ class WebDriver extends CodeceptionModule implements
      * If Codeception commands are not enough, this allows you to use Selenium WebDriver methods directly:
      *
      * ``` php
-     * $I->executeInSelenium(function(\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+     * $I->executeInSelenium(functions(\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
      *   $webdriver->get('http://google.com');
      * });
      * ```
@@ -2004,7 +2004,7 @@ class WebDriver extends CodeceptionModule implements
      *
      * ``` php
      * <?php
-     * $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+     * $I->executeInSelenium(functions (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
      *      $handles=$webdriver->getWindowHandles();
      *      $last_window = end($handles);
      *      $webdriver->switchTo()->window($last_window);

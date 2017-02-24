@@ -155,7 +155,7 @@ class HTMLPurifier_HTMLModuleManager
      * @param $overload Boolean whether or not to overload previous modules.
      *                  If this is not set, and you do overload a module,
      *                  HTML Purifier will complain with a warning.
-     * @note This function will not call autoload, you must instantiate
+     * @note This functions will not call autoload, you must instantiate
      *       (and thus invoke) autoload outside the method.
      * @note If a string is passed as a module name, different variants
      *       will be tested in this order:

@@ -76,7 +76,7 @@ abstract class Target extends Component
      * If not set, [[getMessagePrefix()]] will be used, which prefixes the message with context information
      * such as user IP, user ID and session ID.
      *
-     * The signature of the callable should be `function ($message)`.
+     * The signature of the callable should be `functions ($message)`.
      */
     public $prefix;
     /**

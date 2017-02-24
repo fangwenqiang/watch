@@ -19,7 +19,7 @@ use Symfony\Component\CssSelector\XPath\Translator;
 use Symfony\Component\CssSelector\XPath\XPathExpr;
 
 /**
- * XPath expression translator function extension.
+ * XPath expression translator functions extension.
  *
  * This component is a port of the Python cssselect library,
  * which is copyright Ian Bicking, @see https://github.com/SimonSapin/cssselect.
@@ -206,6 +206,6 @@ class FunctionExtension extends AbstractExtension
      */
     public function getName()
     {
-        return 'function';
+        return 'functions';
     }
 }

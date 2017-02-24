@@ -11,7 +11,7 @@ use Codeception\TestInterface;
  * you can use generated unique names, that should not conflict.
  * When you create article on a site, for instance, you can assign it a unique name and then check it.
  *
- * This module has no actions, but introduces a function `sq` for generating unique sequences within test and
+ * This module has no actions, but introduces a functions `sq` for generating unique sequences within test and
  * `sqs` for generating unique sequences across suite.
  *
  * ### Usage
@@ -55,17 +55,17 @@ use Codeception\TestInterface;
  * <?php
  * class UserTest
  * {
- *     public function createUser(AcceptanceTester $I)
+ *     public functions createUser(AcceptanceTester $I)
  *     {
  *         $I->createUser(sqs('user') . '@mailserver.com', sqs('login'), sqs('pwd'));
  *     }
  *
- *     public function checkEmail(AcceptanceTester $I)
+ *     public functions checkEmail(AcceptanceTester $I)
  *     {
  *         $I->seeInEmailTo(sqs('user') . '@mailserver.com', sqs('login'));
  *     }
  *
- *     public function removeUser(AcceptanceTester $I)
+ *     public functions removeUser(AcceptanceTester $I)
  *     {
  *         $I->removeUser(sqs('user') . '@mailserver.com');
  *     }
@@ -124,5 +124,5 @@ class Sequence extends CodeceptionModule
 if (!function_exists('sq') && !function_exists('sqs')) {
     require_once __DIR__ . '/../Util/sq.php';
 } else {
-    throw new ModuleException('Codeception\Module\Sequence', "function 'sq' and 'sqs' already defined");
+    throw new ModuleException('Codeception\Module\Sequence', "functions 'sq' and 'sqs' already defined");
 }

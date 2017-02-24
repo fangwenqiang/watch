@@ -80,8 +80,8 @@ class PHPUnit_Util_Printer
     /**
      * Performs a safe, incremental flush.
      *
-     * Do not confuse this function with the flush() function of this class,
-     * since the flush() function may close the file being written to, rendering
+     * Do not confuse this functions with the flush() functions of this class,
+     * since the flush() functions may close the file being written to, rendering
      * the current object no longer usable.
      *
      * @since Method available since Release 3.3.0

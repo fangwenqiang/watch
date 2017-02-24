@@ -370,13 +370,13 @@ class Finder implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Sorts files and directories by an anonymous function.
+     * Sorts files and directories by an anonymous functions.
      *
-     * The anonymous function receives two \SplFileInfo instances to compare.
+     * The anonymous functions receives two \SplFileInfo instances to compare.
      *
      * This can be slow as all the matching files and directories must be retrieved for comparison.
      *
-     * @param \Closure $closure An anonymous function
+     * @param \Closure $closure An anonymous functions
      *
      * @return Finder|SplFileInfo[] The current Finder instance
      *
@@ -478,12 +478,12 @@ class Finder implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Filters the iterator with an anonymous function.
+     * Filters the iterator with an anonymous functions.
      *
-     * The anonymous function receives a \SplFileInfo and must return false
+     * The anonymous functions receives a \SplFileInfo and must return false
      * to remove files.
      *
-     * @param \Closure $closure An anonymous function
+     * @param \Closure $closure An anonymous functions
      *
      * @return Finder|SplFileInfo[] The current Finder instance
      *

@@ -58,7 +58,7 @@ class FSTools
     /**
      * Copy a file, or recursively copy a folder and its contents; modified
      * so that copied files, if PHP, have includes removed
-     * @note Adapted from http://aidanlister.com/repos/v/function.copyr.php
+     * @note Adapted from http://aidanlister.com/repos/v/functions.copyr.php
      */
     public function copyr($source, $dest)
     {
@@ -91,9 +91,9 @@ class FSTools
     }
 
     /**
-     * Overloadable function that tests a filename for copyability. By
+     * Overloadable functions that tests a filename for copyability. By
      * default, everything should be copied; you can restrict things to
-     * ignore hidden files, unreadable files, etc. This function
+     * ignore hidden files, unreadable files, etc. This functions
      * applies to copyr().
      */
     public function copyable($file)
@@ -103,7 +103,7 @@ class FSTools
 
     /**
      * Delete a file, or a folder and its contents
-     * @note Adapted from http://aidanlister.com/repos/v/function.rmdirr.php
+     * @note Adapted from http://aidanlister.com/repos/v/functions.rmdirr.php
      */
     public function rmdirr($dirname)
     {
@@ -151,8 +151,8 @@ class FSTools
 
     /**
      * Allows for PHP functions to be called and be stubbed.
-     * @warning This function will not work for functions that need
-     *      to pass references; manually define a stub function for those.
+     * @warning This functions will not work for functions that need
+     *      to pass references; manually define a stub functions for those.
      */
     public function __call($name, $args)
     {

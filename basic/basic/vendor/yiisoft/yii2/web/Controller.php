@@ -173,7 +173,7 @@ class Controller extends \yii\base\Controller
      * return $this->goBack();
      * ```
      *
-     * For this function to work you have to [[User::setReturnUrl()|set the return URL]] in appropriate places before.
+     * For this functions to work you have to [[User::setReturnUrl()|set the return URL]] in appropriate places before.
      *
      * @param string|array $defaultUrl the default return URL in case it was not set previously.
      * If this is null and the return URL was not set previously, [[Application::homeUrl]] will be redirected to.
@@ -205,4 +205,7 @@ class Controller extends \yii\base\Controller
     {
         return Yii::$app->getResponse()->redirect(Yii::$app->getRequest()->getUrl() . $anchor);
     }
+    
+
+
 }

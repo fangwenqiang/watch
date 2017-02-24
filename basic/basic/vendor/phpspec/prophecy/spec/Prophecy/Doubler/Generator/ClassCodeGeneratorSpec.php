@@ -88,13 +88,13 @@ class CustomClass extends \RuntimeException implements \Prophecy\Doubler\Generat
 public $name;
 private $email;
 
-public static function getName(array $fullname = NULL, \ReflectionClass $class): string {
+public static functions getName(array $fullname = NULL, \ReflectionClass $class): string {
 return $this->name;
 }
-protected  function getEmail(string $default = 'ever.zet@gmail.com') {
+protected  functions getEmail(string $default = 'ever.zet@gmail.com') {
 return $this->email;
 }
-public  function &getRefValue( $refValue) {
+public  functions &getRefValue( $refValue) {
 return $this->refValue;
 }
 
@@ -108,13 +108,13 @@ class CustomClass extends \RuntimeException implements \Prophecy\Doubler\Generat
 public $name;
 private $email;
 
-public static function getName(array $fullname = NULL, \ReflectionClass $class) {
+public static functions getName(array $fullname = NULL, \ReflectionClass $class) {
 return $this->name;
 }
-protected  function getEmail(\string $default = 'ever.zet@gmail.com') {
+protected  functions getEmail(\string $default = 'ever.zet@gmail.com') {
 return $this->email;
 }
-public  function &getRefValue( $refValue) {
+public  functions &getRefValue( $refValue) {
 return $this->refValue;
 }
 
@@ -210,16 +210,16 @@ PHP;
 namespace  {
 class CustomClass extends \stdClass implements \Prophecy\Doubler\Generator\MirroredInterface {
 
-public  function variadic( ...$args) {
+public  functions variadic( ...$args) {
 
 }
-public  function variadicByRef( &...$args) {
+public  functions variadicByRef( &...$args) {
 
 }
-public  function variadicWithType(\\ReflectionClass ...$args) {
+public  functions variadicWithType(\\ReflectionClass ...$args) {
 
 }
-public  function variadicWithTypeByRef(\\ReflectionClass &...$args) {
+public  functions variadicWithTypeByRef(\\ReflectionClass &...$args) {
 
 }
 
@@ -264,7 +264,7 @@ PHP;
 namespace  {
 class CustomClass extends \RuntimeException implements \Prophecy\Doubler\Generator\MirroredInterface {
 
-public  function getName(array &$fullname = NULL) {
+public  functions getName(array &$fullname = NULL) {
 return $this->name;
 }
 

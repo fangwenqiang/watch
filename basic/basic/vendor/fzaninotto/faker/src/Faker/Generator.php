@@ -136,7 +136,7 @@ namespace Faker;
  * @method Generator optional($weight = 0.5, $default = null)
  * @method Generator unique($reset = false, $maxRetries = 10000)
  *
- * @method integer biasedNumberBetween($min = 0, $max = 100, $function = 'sqrt')
+ * @method integer biasedNumberBetween($min = 0, $max = 100, $functions = 'sqrt')
  *
  * @property string $macProcessor
  * @property string $linuxProcessor

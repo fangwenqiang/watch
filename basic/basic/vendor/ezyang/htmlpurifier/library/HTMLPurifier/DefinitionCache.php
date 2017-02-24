@@ -31,7 +31,7 @@ abstract class HTMLPurifier_DefinitionCache
      */
     public function generateKey($config)
     {
-        return $config->version . ',' . // possibly replace with function calls
+        return $config->version . ',' . // possibly replace with functions calls
                $config->getBatchSerial($this->type) . ',' .
                $config->get($this->type . '.DefinitionRev');
     }

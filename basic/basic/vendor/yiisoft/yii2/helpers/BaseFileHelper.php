@@ -118,11 +118,11 @@ class BaseFileHelper
     /**
      * Determines the MIME type of the specified file.
      * This method will first try to determine the MIME type based on
-     * [finfo_open](http://php.net/manual/en/function.finfo-open.php). If the `fileinfo` extension is not installed,
+     * [finfo_open](http://php.net/manual/en/functions.finfo-open.php). If the `fileinfo` extension is not installed,
      * it will fall back to [[getMimeTypeByExtension()]] when `$checkExtension` is true.
      * @param string $file the file name.
      * @param string $magicFile name of the optional magic database file (or alias), usually something like `/path/to/magic.mime`.
-     * This will be passed as the second parameter to [finfo_open()](http://php.net/manual/en/function.finfo-open.php)
+     * This will be passed as the second parameter to [finfo_open()](http://php.net/manual/en/functions.finfo-open.php)
      * when the `fileinfo` extension is installed. If the MIME type is being determined based via [[getMimeTypeByExtension()]]
      * and this is null, it will use the file specified by [[mimeMagicFile]].
      * @param boolean $checkExtension whether to use the file extension to determine the MIME type in case
@@ -222,7 +222,7 @@ class BaseFileHelper
      * - dirMode: integer, the permission to be set for newly copied directories. Defaults to 0775.
      * - fileMode:  integer, the permission to be set for newly copied files. Defaults to the current environment setting.
      * - filter: callback, a PHP callback that is called for each directory or file.
-     *   The signature of the callback should be: `function ($path)`, where `$path` refers the full path to be filtered.
+     *   The signature of the callback should be: `functions ($path)`, where `$path` refers the full path to be filtered.
      *   The callback can return one of the following values:
      *
      *   * true: the directory or file will be copied (the "only" and "except" options will be ignored)
@@ -244,10 +244,10 @@ class BaseFileHelper
      * - recursive: boolean, whether the files under the subdirectories should also be copied. Defaults to true.
      * - beforeCopy: callback, a PHP callback that is called before copying each sub-directory or file.
      *   If the callback returns false, the copy operation for the sub-directory or file will be cancelled.
-     *   The signature of the callback should be: `function ($from, $to)`, where `$from` is the sub-directory or
+     *   The signature of the callback should be: `functions ($from, $to)`, where `$from` is the sub-directory or
      *   file to be copied from, while `$to` is the copy target.
      * - afterCopy: callback, a PHP callback that is called after each sub-directory or file is successfully copied.
-     *   The signature of the callback should be: `function ($from, $to)`, where `$from` is the sub-directory or
+     *   The signature of the callback should be: `functions ($from, $to)`, where `$from` is the sub-directory or
      *   file copied from, while `$to` is the copy target.
      * @throws \yii\base\InvalidParamException if unable to open directory
      */
@@ -358,7 +358,7 @@ class BaseFileHelper
      * @param array $options options for file searching. Valid options are:
      *
      * - `filter`: callback, a PHP callback that is called for each directory or file.
-     *   The signature of the callback should be: `function ($path)`, where `$path` refers the full path to be filtered.
+     *   The signature of the callback should be: `functions ($path)`, where `$path` refers the full path to be filtered.
      *   The callback can return one of the following values:
      *
      *   * `true`: the directory or file will be returned (the `only` and `except` options will be ignored)
@@ -464,7 +464,7 @@ class BaseFileHelper
     /**
      * Creates a new directory.
      *
-     * This method is similar to the PHP `mkdir()` function except that
+     * This method is similar to the PHP `mkdir()` functions except that
      * it uses `chmod()` to set the permission of the created directory
      * in order to avoid the impact of the `umask` setting.
      *

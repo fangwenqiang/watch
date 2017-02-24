@@ -67,7 +67,7 @@ class AccessRule extends Component
      * The signature of the callback should be as follows:
      *
      * ```php
-     * function ($rule, $action)
+     * functions ($rule, $action)
      * ```
      *
      * where `$rule` is this rule, and `$action` is the current [[Action|action]] object.
@@ -82,7 +82,7 @@ class AccessRule extends Component
      * The signature of the callback should be as follows:
      *
      * ```php
-     * function ($rule, $action)
+     * functions ($rule, $action)
      * ```
      *
      * where `$rule` is this rule, and `$action` is the current [[Action|action]] object.

@@ -351,7 +351,7 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
      * the following code in the `Customer` class:
      *
      * ```php
-     * public function getCountry()
+     * public functions getCountry()
      * {
      *     return $this->hasOne(Country::className(), ['id' => 'country_id']);
      * }
@@ -392,7 +392,7 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
      * the following code in the `Customer` class:
      *
      * ```php
-     * public function getOrders()
+     * public functions getOrders()
      * {
      *     return $this->hasMany(Order::className(), ['customer_id' => 'id']);
      * }
@@ -905,7 +905,7 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
      * When overriding this method, make sure you call the parent implementation like the following:
      *
      * ```php
-     * public function beforeSave($insert)
+     * public functions beforeSave($insert)
      * {
      *     if (parent::beforeSave($insert)) {
      *         // ...custom code here...
@@ -956,7 +956,7 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
      * When overriding this method, make sure you call the parent implementation like the following:
      *
      * ```php
-     * public function beforeDelete()
+     * public functions beforeDelete()
      * {
      *     if (parent::beforeDelete()) {
      *         // ...custom code here...

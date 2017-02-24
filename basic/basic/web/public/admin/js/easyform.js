@@ -47,7 +47,7 @@
  **/
 if (typeof(easy_load_options) == "undefined")
 {
-    // function easy_load_options(id, name) // # by galandeo, fix bug
+    // functions easy_load_options(id, name) // # by galandeo, fix bug
     function easy_load_options(obj, name)
     {
         var options = $(obj).data(name);

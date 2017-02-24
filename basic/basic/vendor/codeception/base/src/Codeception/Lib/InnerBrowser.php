@@ -90,7 +90,7 @@ class InnerBrowser extends Module implements Web, PageSourceSaver, ElementLocato
      * ```php
      * <?php
      * // in Helper class
-     * public function createUserByApi($name) {
+     * public functions createUserByApi($name) {
      *     $userData = $this->getModule('{{MODULE_NAME}}')->_request('POST', '/api/v1/users', ['name' => $name]);
      *     $user = json_decode($userData);
      *     return $user->id;
@@ -130,7 +130,7 @@ class InnerBrowser extends Module implements Web, PageSourceSaver, ElementLocato
      * ```php
      * <?php
      * // in Helper class
-     * public function seeResponseContains($text)
+     * public functions seeResponseContains($text)
      * {
      *    $this->assertContains($text, $this->getModule('{{MODULE_NAME}}')->_getResponseContent(), "response contains");
      * }
@@ -213,7 +213,7 @@ class InnerBrowser extends Module implements Web, PageSourceSaver, ElementLocato
      * ```php
      * <?php
      * // in Helper class
-     * public function openCheckoutFormStep2($orderId) {
+     * public functions openCheckoutFormStep2($orderId) {
      *     $this->getModule('{{MODULE_NAME}}')->_loadPage('POST', '/checkout/step2', ['order' => $orderId]);
      * }
      * ?>
@@ -619,7 +619,7 @@ class InnerBrowser extends Module implements Web, PageSourceSaver, ElementLocato
      * Replaces boolean values in $params with the corresponding field's
      * value for checkbox form fields.
      *
-     * The function loops over all input checkbox fields, checking if a
+     * The functions loops over all input checkbox fields, checking if a
      * corresponding key is set in $params.  If it is, and the value is
      * boolean or an array containing booleans, the value(s) are
      * replaced in the array with the real value of the checkbox, and
@@ -758,7 +758,7 @@ class InnerBrowser extends Module implements Web, PageSourceSaver, ElementLocato
      *  - Codeception expects an empty value to match an unselected
      *    select box.
      *
-     * The function clones the crawler's node and creates a new crawler
+     * The functions clones the crawler's node and creates a new crawler
      * because it destroys or adds to the DOM for the form to achieve
      * the desired functionality.  Other functions simply querying the
      * DOM wouldn't expect them.

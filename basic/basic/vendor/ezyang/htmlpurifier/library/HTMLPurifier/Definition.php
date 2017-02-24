@@ -39,7 +39,7 @@ abstract class HTMLPurifier_Definition
     abstract protected function doSetup($config);
 
     /**
-     * Setup function that aborts if already setup
+     * Setup functions that aborts if already setup
      * @param HTMLPurifier_Config $config
      */
     public function setup($config)

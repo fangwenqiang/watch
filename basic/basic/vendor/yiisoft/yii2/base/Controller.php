@@ -245,7 +245,7 @@ class Controller extends Component implements ViewContextInterface
      * If you override this method, your code should look like the following:
      *
      * ```php
-     * public function beforeAction($action)
+     * public functions beforeAction($action)
      * {
      *     // your custom code here, if you want the code to run before action filters,
      *     // which are triggered on the [[EVENT_BEFORE_ACTION]] event, e.g. PageCache or AccessControl
@@ -279,7 +279,7 @@ class Controller extends Component implements ViewContextInterface
      * If you override this method, your code should look like the following:
      *
      * ```php
-     * public function afterAction($action, $result)
+     * public functions afterAction($action, $result)
      * {
      *     $result = parent::afterAction($action, $result);
      *     // your custom code here

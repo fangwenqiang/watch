@@ -69,7 +69,7 @@ class HTMLPurifier_UnitConverter
      *      Unit to convert to.
      * @return HTMLPurifier_Length|bool
      * @note
-     *      About precision: This conversion function pays very special
+     *      About precision: This conversion functions pays very special
      *      attention to the incoming precision of values and attempts
      *      to maintain a number of significant figure. Results are
      *      fairly accurate up to nine digits. Some caveats:

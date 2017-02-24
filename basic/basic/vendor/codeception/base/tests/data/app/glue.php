@@ -20,7 +20,7 @@
      * );
      *
      * class page {
-     *      function GET($matches) {
+     *      functions GET($matches) {
      *          echo "Your requested page " . $matches[1];
      *      }
      * }
@@ -33,7 +33,7 @@
         /**
          * stick
          *
-         * the main static function of the glue class.
+         * the main static functions of the glue class.
          *
          * @param   array    	$urls  	    The regex-based url to class mapping
          * @throws  Exception               Thrown if corresponding class is not found

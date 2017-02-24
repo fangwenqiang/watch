@@ -52,11 +52,11 @@ use Zend_Controller_Router_Route_Chain;
  * <?php
  * namespace Codeception\Module;
  * class TestHelper extends \Codeception\Module {
- *      function _before($test) {
+ *      functions _before($test) {
  *          $this->getModule('ZF1')->db->beginTransaction();
  *      }
  *
- *      function _after($test) {
+ *      functions _after($test) {
  *          $this->getModule('ZF1')->db->rollback();
  *      }
  * }

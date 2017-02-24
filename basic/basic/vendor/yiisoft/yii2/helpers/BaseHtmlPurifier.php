@@ -23,18 +23,18 @@ class BaseHtmlPurifier
      * @param string $content The HTML content to purify
      * @param array|\Closure|null $config The config to use for HtmlPurifier.
      * If not specified or `null` the default config will be used.
-     * You can use an array or an anonymous function to provide configuration options:
+     * You can use an array or an anonymous functions to provide configuration options:
      *
      * - An array will be passed to the `HTMLPurifier_Config::create()` method.
-     * - An anonymous function will be called after the config was created.
-     *   The signature should be: `function($config)` where `$config` will be an
+     * - An anonymous functions will be called after the config was created.
+     *   The signature should be: `functions($config)` where `$config` will be an
      *   instance of `HTMLPurifier_Config`.
      *
-     *   Here is a usage example of such a function:
+     *   Here is a usage example of such a functions:
      *
      *   ```php
      *   // Allow the HTML5 data attribute `data-type` on `img` elements.
-     *   $content = HtmlPurifier::process($content, function ($config) {
+     *   $content = HtmlPurifier::process($content, functions ($config) {
      *     $config->getHTMLDefinition(true)
      *            ->addAttribute('img', 'data-type', 'Text');
      *   });
