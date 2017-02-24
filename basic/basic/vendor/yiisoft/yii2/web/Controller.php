@@ -205,7 +205,7 @@ class Controller extends \yii\base\Controller
     {
         return Yii::$app->getResponse()->redirect(Yii::$app->getRequest()->getUrl() . $anchor);
     }
-    
+
 
 
 }
