@@ -1,16 +1,7 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>DouPHP 管理中心 - 首页幻灯广告 </title>
-<meta name="Copyright" content="Douco Design." />
 <link href="css/public.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/global.js"></script>
-</head>
-<body>
-<div id="dcWrap">
 
  <div id="dcMain">
    <!-- 当前位置 -->
@@ -91,8 +82,3 @@
     </table>
    </div>
  </div>
- <div class="clear"></div>
-
-<div class="clear"></div> </div>
-</body>
-</html>

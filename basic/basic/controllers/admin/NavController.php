@@ -55,9 +55,11 @@ class NavController extends Controller
             if($filename) {
                 $post = array_merge($FILES,$_POST);
                 $this->nav_model->add_Nav(Filtration::check_arr($post), 1);
-                return "修改成功";
+                return $this->success('admin/nav/index');
+
             }else {
-                return "图片上传失败";
+                return $this->error('图片上传失败');
+
             }
         }
         $id = Filtration::check_id($_GET['id']);
@@ -78,12 +80,12 @@ class NavController extends Controller
                 $FILES['nav_icon'] = "upload_files/".$filename;
                 $post = array_merge($FILES,$_POST);
                 if ($this->nav_model->add_Nav(Filtration::check_arr($post), 0)) {
-                    return "添加成功";
+                    return $this->success('admin/nav/index');
                 } else {
-                    return "添加失败";
+                    return $this->error('添加失败');
                 }
             }else{
-                return "图片上传失败";
+                return $this->error('图片上传失败');
             }
         }
         return $this->render('addnav');
