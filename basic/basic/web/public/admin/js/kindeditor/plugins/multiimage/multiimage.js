@@ -621,7 +621,7 @@ SWFUpload.prototype.destroy = function () {
 		movieElement = this.getMovieElement();
 
 		if (movieElement && typeof(movieElement.CallFunction) === "unknown") { // We only want to do this in IE
-			// Loop through all the movie's properties and remove all function references (DOM/JS IE 6/7 memory leak workaround)
+			// Loop through all the movie's properties and remove all functions references (DOM/JS IE 6/7 memory leak workaround)
 			for (var i in movieElement) {
 				try {
 					if (typeof(movieElement[i]) === "function") {
@@ -659,7 +659,7 @@ SWFUpload.prototype.destroy = function () {
 
 // Public: displayDebugInfo prints out settings and configuration
 // information about this SWFUpload instance.
-// This function (and any references to it) can be deleted when placing
+// This functions (and any references to it) can be deleted when placing
 // SWFUpload in production.
 SWFUpload.prototype.displayDebugInfo = function () {
 	this.debug(
@@ -736,7 +736,7 @@ SWFUpload.prototype.getSetting = function (name) {
 
 
 
-// Private: callFlash handles function calls made to the Flash element.
+// Private: callFlash handles functions calls made to the Flash element.
 // Calls are made with a setTimeout for some functions to work around
 // bugs in the ExternalInterface library.
 SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
@@ -767,14 +767,14 @@ SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
 	to operate SWFUpload
    ***************************** */
 
-// WARNING: this function does not work in Flash Player 10
+// WARNING: this functions does not work in Flash Player 10
 // Public: selectFile causes a File Selection Dialog window to appear.  This
 // dialog only allows 1 file to be selected.
 SWFUpload.prototype.selectFile = function () {
 	this.callFlash("SelectFile");
 };
 
-// WARNING: this function does not work in Flash Player 10
+// WARNING: this functions does not work in Flash Player 10
 // Public: selectFiles causes a File Selection Dialog window to appear/ This
 // dialog allows the user to select any number of files
 // Flash Bug Warning: Flash limits the number of selectable files based on the combined length of the file names.
@@ -1032,7 +1032,7 @@ SWFUpload.prototype.queueEvent = function (handlerName, argumentArray) {
 		}, 0);
 
 	} else if (this.settings[handlerName] !== null) {
-		throw "Event handler " + handlerName + " is unknown or is not a function";
+		throw "Event handler " + handlerName + " is unknown or is not a functions";
 	}
 };
 
@@ -1099,7 +1099,7 @@ SWFUpload.prototype.flashReady = function () {
 };
 
 // Private: removes Flash added fuctions to the DOM node to prevent memory leaks in IE.
-// This function is called by Flash each time the ExternalInterface functions are created.
+// This functions is called by Flash each time the ExternalInterface functions are created.
 SWFUpload.prototype.cleanUp = function (movieElement) {
 	// Pro-actively unhook all the Flash functions
 	try {
@@ -1169,7 +1169,7 @@ SWFUpload.prototype.returnUploadStart = function (file) {
 		file = this.unescapeFilePostParams(file);
 		returnValue = this.settings.upload_start_handler.call(this, file);
 	} else if (this.settings.upload_start_handler != undefined) {
-		throw "upload_start_handler must be a function";
+		throw "upload_start_handler must be a functions";
 	}
 
 	// Convert undefined to true so if nothing is returned from the upload_start_handler it is
@@ -1226,7 +1226,7 @@ SWFUpload.prototype.debug = function (message) {
 ********************************** */
 
 // Private: debugMessage is the default debug_handler.  If you want to print debug messages
-// call the debug() function.  When overriding the function your own function should
+// call the debug() functions.  When overriding the functions your own functions should
 // check to see if the debug setting is true before outputting debug information.
 SWFUpload.prototype.debugMessage = function (message) {
 	if (this.settings.debug) {

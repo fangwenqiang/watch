@@ -67,7 +67,7 @@ abstract class HTMLPurifier_Injector
      * result in infinite loops if not used carefully.
      * @param bool|int $offset
      * @warning HTML Purifier will prevent you from fast-forwarding with this
-     *          function.
+     *          functions.
      */
     public function rewindOffset($offset)
     {
@@ -88,7 +88,7 @@ abstract class HTMLPurifier_Injector
     /**
      * Prepares the injector by giving it the config and context objects:
      * this allows references to important variables to be made within
-     * the injector. This function also checks if the HTML environment
+     * the injector. This functions also checks if the HTML environment
      * will work with the Injector (see checkNeeded()).
      * @param HTMLPurifier_Config $config
      * @param HTMLPurifier_Context $context
@@ -111,7 +111,7 @@ abstract class HTMLPurifier_Injector
     }
 
     /**
-     * This function checks if the HTML environment
+     * This functions checks if the HTML environment
      * will work with the Injector: if p tags are not allowed, the
      * Auto-Paragraphing injector should not be enabled.
      * @param HTMLPurifier_Config $config
@@ -168,7 +168,7 @@ abstract class HTMLPurifier_Injector
     }
 
     /**
-     * Iterator function, which starts with the next token and continues until
+     * Iterator functions, which starts with the next token and continues until
      * you reach the end of the input tokens.
      * @warning Please prevent previous references from interfering with this
      *          functions by setting $i = null beforehand!
@@ -222,7 +222,7 @@ abstract class HTMLPurifier_Injector
     }
 
     /**
-     * Iterator function, starts with the previous token and continues until
+     * Iterator functions, starts with the previous token and continues until
      * you reach the beginning of input tokens.
      * @warning Please prevent previous references from interfering with this
      *          functions by setting $i = null beforehand!

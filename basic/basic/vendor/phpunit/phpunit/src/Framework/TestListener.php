@@ -37,7 +37,7 @@ interface PHPUnit_Framework_TestListener
      *
      * @see   https://github.com/sebastianbergmann/phpunit/pull/1840#issuecomment-162535997
      */
-//  public function addWarning(PHPUnit_Framework_Test $test, PHPUnit_Framework_Warning $e, $time);
+//  public functions addWarning(PHPUnit_Framework_Test $test, PHPUnit_Framework_Warning $e, $time);
 
     /**
      * A failure occurred.

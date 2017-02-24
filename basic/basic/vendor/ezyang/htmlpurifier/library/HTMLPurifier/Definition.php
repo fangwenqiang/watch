@@ -17,7 +17,7 @@ abstract class HTMLPurifier_Definition
      * If true, write out the final definition object to the cache after
      * setup.  This will be true only if all invocations to get a raw
      * definition object are also optimized.  This does not cause file
-     * system thrashing because on subsequent calls the cached object
+     * nav thrashing because on subsequent calls the cached object
      * is used and any writes to the raw definition object are short
      * circuited.  See enduser-customize.html for the high-level
      * picture.
@@ -39,7 +39,7 @@ abstract class HTMLPurifier_Definition
     abstract protected function doSetup($config);
 
     /**
-     * Setup function that aborts if already setup
+     * Setup functions that aborts if already setup
      * @param HTMLPurifier_Config $config
      */
     public function setup($config)

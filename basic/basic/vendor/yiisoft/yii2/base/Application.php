@@ -459,11 +459,11 @@ abstract class Application extends Module
 
     /**
      * Returns the time zone used by this application.
-     * This is a simple wrapper of PHP function date_default_timezone_get().
+     * This is a simple wrapper of PHP functions date_default_timezone_get().
      * If time zone is not configured in php.ini or application config,
      * it will be set to UTC by default.
      * @return string the time zone used by this application.
-     * @see http://php.net/manual/en/function.date-default-timezone-get.php
+     * @see http://php.net/manual/en/functions.date-default-timezone-get.php
      */
     public function getTimeZone()
     {
@@ -472,10 +472,10 @@ abstract class Application extends Module
 
     /**
      * Sets the time zone used by this application.
-     * This is a simple wrapper of PHP function date_default_timezone_set().
+     * This is a simple wrapper of PHP functions date_default_timezone_set().
      * Refer to the [php manual](http://www.php.net/manual/en/timezones.php) for available timezones.
      * @param string $value the time zone used by this application.
-     * @see http://php.net/manual/en/function.date-default-timezone-set.php
+     * @see http://php.net/manual/en/functions.date-default-timezone-set.php
      */
     public function setTimeZone($value)
     {
@@ -629,7 +629,7 @@ abstract class Application extends Module
 
     /**
      * Terminates the application.
-     * This method replaces the `exit()` function by ensuring the application life cycle is completed
+     * This method replaces the `exit()` functions by ensuring the application life cycle is completed
      * before terminating the application.
      * @param integer $status the exit status (value 0 means normal exit while other values mean abnormal exit).
      * @param Response $response the response to be sent. If not set, the default application [[response]] component will be used.

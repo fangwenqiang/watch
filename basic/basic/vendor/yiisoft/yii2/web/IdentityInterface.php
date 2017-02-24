@@ -16,27 +16,27 @@ namespace yii\web;
  * ```php
  * class User extends ActiveRecord implements IdentityInterface
  * {
- *     public static function findIdentity($id)
+ *     public static functions findIdentity($id)
  *     {
  *         return static::findOne($id);
  *     }
  *
- *     public static function findIdentityByAccessToken($token, $type = null)
+ *     public static functions findIdentityByAccessToken($token, $type = null)
  *     {
  *         return static::findOne(['access_token' => $token]);
  *     }
  *
- *     public function getId()
+ *     public functions getId()
  *     {
  *         return $this->id;
  *     }
  *
- *     public function getAuthKey()
+ *     public functions getAuthKey()
  *     {
  *         return $this->authKey;
  *     }
  *
- *     public function validateAuthKey($authKey)
+ *     public functions validateAuthKey($authKey)
  *     {
  *         return $this->authKey === $authKey;
  *     }

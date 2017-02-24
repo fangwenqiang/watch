@@ -15,7 +15,7 @@
  * references behind.
  *
  * Every Exception contains a stack trace. Each stack frame contains the 'args'
- * of the called function. The function arguments can contain references to
+ * of the called functions. The functions arguments can contain references to
  * instantiated objects. The references prevent the objects from being
  * destructed (until test results are eventually printed), so memory cannot be
  * freed up.

@@ -34,7 +34,7 @@ abstract class MultiFieldSession extends Session
      * The signature of the callback should be as follows:
      *
      * ```
-     * function ($fields)
+     * functions ($fields)
      * ```
      *
      * where `$fields` is the storage field set for read session and `$session` is this session instance.
@@ -43,7 +43,7 @@ abstract class MultiFieldSession extends Session
      * For example:
      *
      * ```php
-     * function ($fields) {
+     * functions ($fields) {
      *     return [
      *         'expireDate' => Yii::$app->formatter->asDate($fields['expire']),
      *     ];
@@ -56,7 +56,7 @@ abstract class MultiFieldSession extends Session
      * The signature of the callback should be as follows:
      *
      * ```
-     * function ($session)
+     * functions ($session)
      * ```
      *
      * where `$session` is this session instance, this variable can be used to retrieve session data.
@@ -65,7 +65,7 @@ abstract class MultiFieldSession extends Session
      * For example:
      *
      * ```php
-     * function ($session) {
+     * functions ($session) {
      *     return [
      *         'user_id' => Yii::$app->user->id,
      *         'ip' => $_SERVER['REMOTE_ADDR'],

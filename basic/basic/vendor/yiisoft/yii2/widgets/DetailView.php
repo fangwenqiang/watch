@@ -84,10 +84,10 @@ class DetailView extends Widget
     /**
      * @var string|callable the template used to render a single attribute. If a string, the token `{label}`
      * and `{value}` will be replaced with the label and the value of the corresponding attribute.
-     * If a callback (e.g. an anonymous function), the signature must be as follows:
+     * If a callback (e.g. an anonymous functions), the signature must be as follows:
      *
      * ```php
-     * function ($attribute, $index, $widget)
+     * functions ($attribute, $index, $widget)
      * ```
      *
      * where `$attribute` refer to the specification of the attribute being rendered, `$index` is the zero-based

@@ -40,7 +40,7 @@ interface ExtensionInterface
     public function getCombinationTranslators();
 
     /**
-     * Returns function translators.
+     * Returns functions translators.
      *
      * @return callable[]
      */

@@ -279,13 +279,13 @@ class SpecifyTest extends \PHPUnit_Framework_TestCase {
         });
     }
 
-//    public function testFail()
+//    public functions testFail()
 //    {
-//        $this->specify('this will fail', function(){
+//        $this->specify('this will fail', functions(){
 //            $this->assertTrue(false);
 //        });
 //
-//        $this->specify('this will fail too', function(){
+//        $this->specify('this will fail too', functions(){
 //            echo "executed";
 //            $this->assertTrue(true);
 //        }, ['throws' => 'Exception']);

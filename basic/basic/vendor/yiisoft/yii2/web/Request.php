@@ -370,7 +370,7 @@ class Request extends \yii\base\Request
      * Returns the request parameters given in the request body.
      *
      * Request parameters are determined using the parsers configured in [[parsers]] property.
-     * If no parsers are configured for the current [[contentType]] it uses the PHP function `mb_parse_str()`
+     * If no parsers are configured for the current [[contentType]] it uses the PHP functions `mb_parse_str()`
      * to parse the [[rawBody|request body]].
      * @return array the request parameters given in the request body.
      * @throws \yii\base\InvalidConfigException if a registered parser does not implement the [[RequestParserInterface]].

@@ -19,7 +19,7 @@ use yii\base\Model;
  * {
  *     public $categoryIDs = [];
  *
- *     public function rules()
+ *     public functions rules()
  *     {
  *         return [
  *             // checks if every category ID is an integer

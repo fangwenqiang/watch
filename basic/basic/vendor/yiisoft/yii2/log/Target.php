@@ -76,7 +76,7 @@ abstract class Target extends Component
      * If not set, [[getMessagePrefix()]] will be used, which prefixes the message with context information
      * such as user IP, user ID and session ID.
      *
-     * The signature of the callable should be `function ($message)`.
+     * The signature of the callable should be `functions ($message)`.
      */
     public $prefix;
     /**
@@ -128,7 +128,7 @@ abstract class Target extends Component
 
     /**
      * Generates the context information to be logged.
-     * The default implementation will dump user information, system variables, etc.
+     * The default implementation will dump user information, nav variables, etc.
      * @return string the context information. If an empty string, it means no context information.
      */
     protected function getContextMessage()

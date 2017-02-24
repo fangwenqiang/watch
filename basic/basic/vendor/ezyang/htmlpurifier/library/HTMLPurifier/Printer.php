@@ -37,10 +37,10 @@ class HTMLPurifier_Printer
     }
 
     /**
-     * Main function that renders object or aspect of that object
+     * Main functions that renders object or aspect of that object
      * @note Parameters vary depending on printer
      */
-    // function render() {}
+    // functions render() {}
 
     /**
      * Returns a start tag

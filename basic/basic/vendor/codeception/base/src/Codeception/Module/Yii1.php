@@ -173,7 +173,7 @@ class Yii1 extends Framework implements PartedModule
             throw new ModuleConfigException(
                 __CLASS__,
                 "Codeception-Yii Bridge is not launched. In order to run tests you need to install "
-                . "https://github.com/Codeception/YiiBridge Implement function 'launch_codeception_yii_bridge' to "
+                . "https://github.com/Codeception/YiiBridge Implement functions 'launch_codeception_yii_bridge' to "
                 . "load all Codeception overrides"
             );
         }

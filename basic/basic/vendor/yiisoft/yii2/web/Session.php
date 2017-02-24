@@ -82,9 +82,9 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
     public $handler;
 
     /**
-     * @var array parameter-value pairs to override default session cookie parameters that are used for session_set_cookie_params() function
+     * @var array parameter-value pairs to override default session cookie parameters that are used for session_set_cookie_params() functions
      * Array may have the following possible keys: 'lifetime', 'path', 'domain', 'secure', 'httponly'
-     * @see http://www.php.net/manual/en/function.session-set-cookie-params.php
+     * @see http://www.php.net/manual/en/functions.session-set-cookie-params.php
      */
     private $_cookieParams = ['httponly' => true];
 
@@ -250,7 +250,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
 
     /**
      * Gets the session ID.
-     * This is a wrapper for [PHP session_id()](http://php.net/manual/en/function.session-id.php).
+     * This is a wrapper for [PHP session_id()](http://php.net/manual/en/functions.session-id.php).
      * @return string the current session ID
      */
     public function getId()
@@ -260,7 +260,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
 
     /**
      * Sets the session ID.
-     * This is a wrapper for [PHP session_id()](http://php.net/manual/en/function.session-id.php).
+     * This is a wrapper for [PHP session_id()](http://php.net/manual/en/functions.session-id.php).
      * @param string $value the session ID for the current session
      */
     public function setId($value)
@@ -288,7 +288,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
 
     /**
      * Gets the name of the current session.
-     * This is a wrapper for [PHP session_name()](http://php.net/manual/en/function.session-name.php).
+     * This is a wrapper for [PHP session_name()](http://php.net/manual/en/functions.session-name.php).
      * @return string the current session name
      */
     public function getName()
@@ -298,7 +298,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
 
     /**
      * Sets the name for the current session.
-     * This is a wrapper for [PHP session_name()](http://php.net/manual/en/function.session-name.php).
+     * This is a wrapper for [PHP session_name()](http://php.net/manual/en/functions.session-name.php).
      * @param string $value the session name for the current session, must be an alphanumeric string.
      * It defaults to "PHPSESSID".
      */
@@ -309,7 +309,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
 
     /**
      * Gets the current session save path.
-     * This is a wrapper for [PHP session_save_path()](http://php.net/manual/en/function.session-save-path.php).
+     * This is a wrapper for [PHP session_save_path()](http://php.net/manual/en/functions.session-save-path.php).
      * @return string the current session save path, defaults to '/tmp'.
      */
     public function getSavePath()
@@ -319,7 +319,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
 
     /**
      * Sets the current session save path.
-     * This is a wrapper for [PHP session_save_path()](http://php.net/manual/en/function.session-save-path.php).
+     * This is a wrapper for [PHP session_save_path()](http://php.net/manual/en/functions.session-save-path.php).
      * @param string $value the current session save path. This can be either a directory name or a path alias.
      * @throws InvalidParamException if the path is not a valid directory
      */
@@ -335,7 +335,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
 
     /**
      * @return array the session cookie parameters.
-     * @see http://php.net/manual/en/function.session-get-cookie-params.php
+     * @see http://php.net/manual/en/functions.session-get-cookie-params.php
      */
     public function getCookieParams()
     {
@@ -348,7 +348,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
      * of `session_get_cookie_params()`.
      * @param array $value cookie parameters, valid keys include: `lifetime`, `path`, `domain`, `secure` and `httponly`.
      * @throws InvalidParamException if the parameters are incomplete.
-     * @see http://us2.php.net/manual/en/function.session-set-cookie-params.php
+     * @see http://us2.php.net/manual/en/functions.session-set-cookie-params.php
      */
     public function setCookieParams(array $value)
     {
@@ -359,7 +359,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
      * Sets the session cookie parameters.
      * This method is called by [[open()]] when it is about to open the session.
      * @throws InvalidParamException if the parameters are incomplete.
-     * @see http://us2.php.net/manual/en/function.session-set-cookie-params.php
+     * @see http://us2.php.net/manual/en/functions.session-set-cookie-params.php
      */
     private function setCookieParamsInternal()
     {

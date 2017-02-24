@@ -12,8 +12,8 @@ use yii\base\InvalidConfigException;
 use yii\helpers\FileHelper;
 
 /**
- * FileMutex implements mutex "lock" mechanism via local file system files.
- * This component relies on PHP `flock()` function.
+ * FileMutex implements mutex "lock" mechanism via local file nav files.
+ * This component relies on PHP `flock()` functions.
  *
  * Application configuration example:
  *
@@ -30,7 +30,7 @@ use yii\helpers\FileHelper;
  * Note: this component can maintain the locks only for the single web server,
  * it probably will not suffice to your in case you are using cloud server solution.
  *
- * Warning: due to `flock()` function nature this component is unreliable when
+ * Warning: due to `flock()` functions nature this component is unreliable when
  * using a multithreaded server API like ISAPI.
  *
  * @see Mutex
@@ -47,13 +47,13 @@ class FileMutex extends Mutex
     public $mutexPath = '@runtime/mutex';
     /**
      * @var integer the permission to be set for newly created mutex files.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * If not set, the permission will be determined by the current environment.
      */
     public $fileMode;
     /**
      * @var integer the permission to be set for newly created directories.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * Defaults to 0775, meaning the directory is read-writable by owner and group,
      * but read-only for other users.
      */
@@ -73,7 +73,7 @@ class FileMutex extends Mutex
     public function init()
     {
         if (DIRECTORY_SEPARATOR === '\\') {
-            throw new InvalidConfigException('FileMutex does not have MS Windows operating system support.');
+            throw new InvalidConfigException('FileMutex does not have MS Windows operating nav support.');
         }
         $this->mutexPath = Yii::getAlias($this->mutexPath);
         if (!is_dir($this->mutexPath)) {

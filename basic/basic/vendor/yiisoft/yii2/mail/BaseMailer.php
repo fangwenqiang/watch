@@ -92,7 +92,7 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
      * The signature of the callback is:
      *
      * ```php
-     * function ($mailer, $message)
+     * functions ($mailer, $message)
      * ```
      */
     public $fileTransportCallback;

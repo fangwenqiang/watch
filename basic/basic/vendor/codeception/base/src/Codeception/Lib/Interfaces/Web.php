@@ -111,12 +111,12 @@ interface Web
      * values.  Pass the form field's values as an array in the second
      * parameter.
      *
-     * Although this function can be used as a short-hand version of
+     * Although this functions can be used as a short-hand version of
      * `fillField()`, `selectOption()`, `click()` etc. it has some important
      * differences:
      *
      *  * Only field *names* may be used, not CSS/XPath selectors nor field labels
-     *  * If a field is sent to this function that does *not* exist on the page,
+     *  * If a field is sent to this functions that does *not* exist on the page,
      *    it will silently be added to the HTTP request.  This is helpful for testing
      *    some types of forms, but be aware that you will *not* get an exception
      *    like you would if you called `fillField()` or `selectOption()` with
@@ -203,7 +203,7 @@ interface Web
      * );
      * ```
      *
-     * This function works well when paired with `seeInFormFields()`
+     * This functions works well when paired with `seeInFormFields()`
      * for quickly testing CRUD interfaces and form validation logic.
      *
      * ``` php

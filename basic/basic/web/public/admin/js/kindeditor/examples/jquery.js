@@ -168,7 +168,7 @@ jQuery.fn = jQuery.prototype = {
 				return this.constructor( context ).find( selector );
 			}
 
-		// HANDLE: $(function)
+		// HANDLE: $(functions)
 		// Shortcut for document ready
 		} else if ( jQuery.isFunction( selector ) ) {
 			return rootjQuery.ready( selector );
@@ -285,7 +285,7 @@ jQuery.fn = jQuery.prototype = {
 	splice: [].splice
 };
 
-// Give the init function the jQuery prototype for later instantiation
+// Give the init functions the jQuery prototype for later instantiation
 jQuery.fn.init.prototype = jQuery.fn;
 
 jQuery.extend = jQuery.fn.extend = function() {
@@ -558,7 +558,7 @@ jQuery.extend({
 	globalEval: function( data ) {
 		if ( data && core_rnotwhite.test( data ) ) {
 			// We use execScript on Internet Explorer
-			// We use an anonymous function so that context is window
+			// We use an anonymous functions so that context is window
 			// rather than jQuery in Firefox
 			( window.execScript || function( data ) {
 				window[ "eval" ].call( window, data );
@@ -618,7 +618,7 @@ jQuery.extend({
 		return obj;
 	},
 
-	// Use native String.trim function wherever possible
+	// Use native String.trim functions wherever possible
 	trim: core_trim && !core_trim.call("\uFEFF\xA0") ?
 		function( text ) {
 			return text == null ?
@@ -704,7 +704,7 @@ jQuery.extend({
 		inv = !!inv;
 
 		// Go through the array, only saving the items
-		// that pass the validator function
+		// that pass the validator functions
 		for ( ; i < length; i++ ) {
 			retVal = !!callback( elems[ i ], i );
 			if ( inv !== retVal ) {
@@ -752,7 +752,7 @@ jQuery.extend({
 	// A global GUID counter for objects
 	guid: 1,
 
-	// Bind a function to a context, optionally partially applying any
+	// Bind a functions to a context, optionally partially applying any
 	// arguments.
 	proxy: function( fn, context ) {
 		var tmp, args, proxy;
@@ -782,7 +782,7 @@ jQuery.extend({
 	},
 
 	// Multifunctional method to get and set values of a collection
-	// The value/s can optionally be executed if it's a function
+	// The value/s can optionally be executed if it's a functions
 	access: function( elems, fn, key, value, chainable, emptyGet, pass ) {
 		var exec,
 			bulk = key == null,
@@ -798,11 +798,11 @@ jQuery.extend({
 
 		// Sets one value
 		} else if ( value !== undefined ) {
-			// Optionally, function values get executed if exec is true
+			// Optionally, functions values get executed if exec is true
 			exec = pass === undefined && jQuery.isFunction( value );
 
 			if ( bulk ) {
-				// Bulk operations only iterate when executing function values
+				// Bulk operations only iterate when executing functions values
 				if ( exec ) {
 					exec = fn;
 					fn = function( elem, key, value ) {
@@ -1200,7 +1200,7 @@ jQuery.extend({
 			// the master Deferred. If resolveValues consist of only a single Deferred, just use that.
 			deferred = remaining === 1 ? subordinate : jQuery.Deferred(),
 
-			// Update function for both resolve and progress values
+			// Update functions for both resolve and progress values
 			updateFunc = function( i, contexts, values ) {
 				return function( value ) {
 					contexts[ i ] = this;
@@ -1890,7 +1890,7 @@ jQuery.extend({
 				queue.unshift( "inprogress" );
 			}
 
-			// clear up the last queue stop function
+			// clear up the last queue stop functions
 			delete hooks.stop;
 			fn.call( elem, next, hooks );
 		}
@@ -2940,7 +2940,7 @@ jQuery.event = {
 			if ( handle ) {
 				handle.apply( cur, data );
 			}
-			// Note that this is a bare JS function and not a jQuery handler
+			// Note that this is a bare JS functions and not a jQuery handler
 			handle = ontype && cur[ ontype ];
 			if ( handle && jQuery.acceptData( cur ) && handle.apply && handle.apply( cur, data ) === false ) {
 				event.preventDefault();
@@ -3611,14 +3611,14 @@ jQuery.fn.extend({
 			guid = fn.guid || jQuery.guid++,
 			i = 0,
 			toggler = function( event ) {
-				// Figure out which function to execute
+				// Figure out which functions to execute
 				var lastToggle = ( jQuery._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
 				jQuery._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
 
 				// Make sure that clicks stop
 				event.preventDefault();
 
-				// and execute the function
+				// and execute the functions
 				return args[ lastToggle ].apply( this, arguments ) || false;
 			};
 
@@ -3704,7 +3704,7 @@ var cachedruns,
 		return -1;
 	},
 
-	// Augment a function for special use by Sizzle
+	// Augment a functions for special use by Sizzle
 	markFunction = function( fn, value ) {
 		fn[ expando ] = value == null || value;
 		return fn;
@@ -3945,7 +3945,7 @@ Sizzle.matchesSelector = function( elem, expr ) {
 	return Sizzle( expr, null, null, [ elem ] ).length > 0;
 };
 
-// Returns a function to use in pseudos for input types
+// Returns a functions to use in pseudos for input types
 function createInputPseudo( type ) {
 	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
@@ -3953,7 +3953,7 @@ function createInputPseudo( type ) {
 	};
 }
 
-// Returns a function to use in pseudos for buttons
+// Returns a functions to use in pseudos for buttons
 function createButtonPseudo( type ) {
 	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
@@ -3961,7 +3961,7 @@ function createButtonPseudo( type ) {
 	};
 }
 
-// Returns a function to use in pseudos for positionals
+// Returns a functions to use in pseudos for positionals
 function createPositionalPseudo( fn ) {
 	return markFunction(function( argument ) {
 		argument = +argument;
@@ -3981,7 +3981,7 @@ function createPositionalPseudo( fn ) {
 }
 
 /**
- * Utility function for retrieving the text value of an array of DOM nodes
+ * Utility functions for retrieving the text value of an array of DOM nodes
  * @param {Array|Element} elem
  */
 getText = Sizzle.getText = function( elem ) {
@@ -4358,7 +4358,7 @@ Expr = Sizzle.selectors = {
 					Sizzle.error( "unsupported pseudo: " + pseudo );
 
 			// The user may use createPseudo to indicate that
-			// arguments are needed to create the filter function
+			// arguments are needed to create the filter functions
 			// just as Sizzle does
 			if ( fn[ expando ] ) {
 				return fn( argument );
@@ -4648,7 +4648,7 @@ sortOrder = docElem.compareDocumentPosition ?
 	};
 
 // Always assume the presence of duplicates if sort doesn't
-// pass them to our comparison function (as in Google Chrome).
+// pass them to our comparison functions (as in Google Chrome).
 [0, 0].sort( sortOrder );
 baseHasDuplicate = !hasDuplicate;
 
@@ -5079,7 +5079,7 @@ compile = Sizzle.compile = function( selector, group /* Internal Use Only */ ) {
 		cached = compilerCache[ expando ][ selector + " " ];
 
 	if ( !cached ) {
-		// Generate a function of recursive functions that can be used to check each element
+		// Generate a functions of recursive functions that can be used to check each element
 		if ( !group ) {
 			group = tokenize( selector );
 		}
@@ -5093,7 +5093,7 @@ compile = Sizzle.compile = function( selector, group /* Internal Use Only */ ) {
 			}
 		}
 
-		// Cache the compiled function
+		// Cache the compiled functions
 		cached = compilerCache( selector, matcherFromGroupMatchers( elementMatchers, setMatchers ) );
 	}
 	return cached;
@@ -5162,7 +5162,7 @@ function select( selector, context, results, seed, xml ) {
 		}
 	}
 
-	// Compile and execute a filtering function
+	// Compile and execute a filtering functions
 	// Provide `match` to avoid retokenization if we modified the selector above
 	compile( selector, match )(
 		seed,
@@ -6453,7 +6453,7 @@ jQuery.extend({
 						delete cache[ id ];
 
 						// IE does not allow us to delete expando properties from nodes,
-						// nor does it have a removeAttribute function on Document nodes;
+						// nor does it have a removeAttribute functions on Document nodes;
 						// we must handle all of these cases
 						if ( deleteExpando ) {
 							delete elem[ internalKey ];
@@ -7214,7 +7214,7 @@ jQuery.param = function( a, traditional ) {
 	var prefix,
 		s = [],
 		add = function( key, value ) {
-			// If value is a function, invoke it and return its value
+			// If value is a functions, invoke it and return its value
 			value = jQuery.isFunction( value ) ? value() : ( value == null ? "" : value );
 			s[ s.length ] = encodeURIComponent( key ) + "=" + encodeURIComponent( value );
 		};
@@ -7365,7 +7365,7 @@ function addToPrefiltersOrTransports( structure ) {
 	};
 }
 
-// Base inspection function for prefilters and transports
+// Base inspection functions for prefilters and transports
 function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR,
 		dataType /* internal */, inspected /* internal */ ) {
 
@@ -7440,7 +7440,7 @@ jQuery.fn.load = function( url, params, callback ) {
 		url = url.slice( 0, off );
 	}
 
-	// If it's a function
+	// If it's a functions
 	if ( jQuery.isFunction( params ) ) {
 
 		// We assume that it's the callback
@@ -7718,7 +7718,7 @@ jQuery.extend({
 
 		// Callback for when everything is done
 		// It is defined here because jslint complains if it is declared
-		// at the end of the function (which would be more logical and readable)
+		// at the end of the functions (which would be more logical and readable)
 		function done( status, nativeStatusText, responses, headers ) {
 			var isSuccess, success, error, response, modified,
 				statusText = nativeStatusText;
@@ -8219,7 +8219,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 			responseContainer = arguments;
 		};
 
-		// Clean-up function (fires after converters)
+		// Clean-up functions (fires after converters)
 		jqXHR.always(function() {
 			// Restore preexisting value
 			window[ callbackName ] = overwritten;
@@ -8233,7 +8233,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 				oldCallbacks.push( callbackName );
 			}
 
-			// Call if it was a function and we have a response
+			// Call if it was a functions and we have a response
 			if ( responseContainer && jQuery.isFunction( overwritten ) ) {
 				overwritten( responseContainer[ 0 ] );
 			}

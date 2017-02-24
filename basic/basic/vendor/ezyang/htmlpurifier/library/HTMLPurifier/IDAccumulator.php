@@ -44,7 +44,7 @@ class HTMLPurifier_IDAccumulator
     /**
      * Load a list of IDs into the lookup table
      * @param $array_of_ids Array of IDs to load
-     * @note This function doesn't care about duplicates
+     * @note This functions doesn't care about duplicates
      */
     public function load($array_of_ids)
     {

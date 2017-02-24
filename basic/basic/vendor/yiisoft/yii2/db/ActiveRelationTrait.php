@@ -83,12 +83,12 @@ trait ActiveRelationTrait
      * Use this method to specify a pivot record/table when declaring a relation in the [[ActiveRecord]] class:
      *
      * ```php
-     * public function getOrders()
+     * public functions getOrders()
      * {
      *     return $this->hasOne(Order::className(), ['id' => 'order_id']);
      * }
      *
-     * public function getOrderItems()
+     * public functions getOrderItems()
      * {
      *     return $this->hasMany(Item::className(), ['id' => 'item_id'])
      *                 ->via('orders');
@@ -97,7 +97,7 @@ trait ActiveRelationTrait
      *
      * @param string $relationName the relation name. This refers to a relation declared in [[primaryModel]].
      * @param callable $callable a PHP callback for customizing the relation associated with the junction table.
-     * Its signature should be `function($query)`, where `$query` is the query to be customized.
+     * Its signature should be `functions($query)`, where `$query` is the query to be customized.
      * @return $this the relation object itself.
      */
     public function via($relationName, callable $callable = null)
@@ -121,7 +121,7 @@ trait ActiveRelationTrait
      * Use this method when declaring a relation in the [[ActiveRecord]] class:
      *
      * ```php
-     * public function getOrders()
+     * public functions getOrders()
      * {
      *     return $this->hasMany(Order::className(), ['customer_id' => 'id'])->inverseOf('customer');
      * }
@@ -397,7 +397,7 @@ trait ActiveRelationTrait
      *
      * @param array $buckets
      * @var string|callable $column the name of the column by which the query results should be indexed by.
-     * This can also be a callable (e.g. anonymous function) that returns the index value based on the given row data.
+     * This can also be a callable (e.g. anonymous functions) that returns the index value based on the given row data.
      * @return array
      */
     private function indexBuckets($buckets, $indexBy)

@@ -107,7 +107,7 @@ class HTMLPurifier_AttrValidator
                     $context
                 );
             } else {
-                // system never heard of the attribute? DELETE!
+                // nav never heard of the attribute? DELETE!
                 $result = false;
             }
 

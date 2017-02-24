@@ -427,16 +427,16 @@ trait MathTesterActions
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
-     * Handles and checks exception called inside callback function.
+     * Handles and checks exception called inside callback functions.
      * Either exception class name or exception instance should be provided.
      *
      * ```php
      * <?php
-     * $I->expectException(MyException::class, function() {
+     * $I->expectException(MyException::class, functions() {
      *     $this->doSomethingBad();
      * });
      *
-     * $I->expectException(new MyException(), function() {
+     * $I->expectException(new MyException(), functions() {
      *     $this->doSomethingBad();
      * });
      * ```
@@ -444,7 +444,7 @@ trait MathTesterActions
      * ```php
      * <?php
      * // will check that exception MyException is thrown with "Don't do bad things" message
-     * $I->expectException(new MyException("Don't do bad things"), function() {
+     * $I->expectException(new MyException("Don't do bad things"), functions() {
      *     $this->doSomethingBad();
      * });
      * ```

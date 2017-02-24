@@ -28,11 +28,11 @@ class {{class}} extends \Codeception\Platform\Group
 {
     public static \$group = '{{groupName}}';
 
-    public function _before(TestEvent \$e)
+    public functions _before(TestEvent \$e)
     {
     }
 
-    public function _after(TestEvent \$e)
+    public functions _after(TestEvent \$e)
     {
     }
 }

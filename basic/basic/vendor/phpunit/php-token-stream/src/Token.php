@@ -102,7 +102,7 @@ abstract class PHP_TokenWithScope extends PHP_Token
             if ($tokens[$i] instanceof PHP_Token_FUNCTION ||
                 $tokens[$i] instanceof PHP_Token_CLASS ||
                 $tokens[$i] instanceof PHP_Token_TRAIT) {
-                // Some other trait, class or function, no docblock can be
+                // Some other trait, class or functions, no docblock can be
                 // used for the current token
                 break;
             }
@@ -354,12 +354,12 @@ class PHP_Token_FUNCTION extends PHP_TokenWithScopeAndVisibility
                 $this->name = (string)$tokens[$i+1];
                 break;
             } elseif ($tokens[$i] instanceof PHP_Token_OPEN_BRACKET) {
-                $this->name = 'anonymous function';
+                $this->name = 'anonymous functions';
                 break;
             }
         }
 
-        if ($this->name != 'anonymous function') {
+        if ($this->name != 'anonymous functions') {
             for ($i = $this->id; $i; --$i) {
                 if ($tokens[$i] instanceof PHP_Token_NAMESPACE) {
                     $this->name = $tokens[$i]->getName() . '\\' . $this->name;
@@ -419,8 +419,8 @@ class PHP_Token_FUNCTION extends PHP_TokenWithScopeAndVisibility
             return $this->signature;
         }
 
-        if ($this->getName() == 'anonymous function') {
-            $this->signature = 'anonymous function';
+        if ($this->getName() == 'anonymous functions') {
+            $this->signature = 'anonymous functions';
             $i               = $this->id + 1;
         } else {
             $this->signature = '';

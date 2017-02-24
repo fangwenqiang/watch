@@ -35,7 +35,7 @@ class HTMLPurifier_HTMLModule_Tidy extends HTMLPurifier_HTMLModule
 
     /**
      * Lazy load constructs the module by determining the necessary
-     * fixes to create and then delegating to the populate() function.
+     * fixes to create and then delegating to the populate() functions.
      * @param HTMLPurifier_Config $config
      * @todo Wildcard matching and error reporting when an added or
      *       subtracted fix has no effect.

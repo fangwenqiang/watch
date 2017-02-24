@@ -197,7 +197,7 @@ class HTMLPurifier_ConfigSchema_InterchangeBuilder
     }
 
     /**
-     * Convenience function that creates an HTMLPurifier_ConfigSchema_Interchange_Id
+     * Convenience functions that creates an HTMLPurifier_ConfigSchema_Interchange_Id
      * object based on a string Id.
      * @param string $id
      * @return HTMLPurifier_ConfigSchema_Interchange_Id

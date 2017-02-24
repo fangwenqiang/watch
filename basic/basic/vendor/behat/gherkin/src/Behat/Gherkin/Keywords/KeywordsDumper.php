@@ -32,11 +32,11 @@ class KeywordsDumper
     }
 
     /**
-     * Sets keywords mapper function.
+     * Sets keywords mapper functions.
      *
      * Callable should accept 2 arguments (array $keywords and Boolean $isShort)
      *
-     * @param callable $mapper Mapper function
+     * @param callable $mapper Mapper functions
      */
     public function setKeywordsDumperFunction($mapper)
     {

@@ -56,7 +56,7 @@ class RequirementsTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @requires function testFunc
+     * @requires functions testFunc
      */
     public function testNine()
     {
@@ -80,8 +80,8 @@ class RequirementsTest extends PHPUnit_Framework_TestCase
      * @requires PHP 99-dev
      * @requires PHPUnit 9-dev
      * @requires OS DOESNOTEXIST
-     * @requires function testFuncOne
-     * @requires function testFuncTwo
+     * @requires functions testFuncOne
+     * @requires functions testFuncTwo
      * @requires extension testExtOne
      * @requires extension testExtTwo
      * @requires extension testExtThree 2.0
@@ -91,14 +91,14 @@ class RequirementsTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @requires function array_merge
+     * @requires functions array_merge
      */
     public function testExistingFunction()
     {
     }
 
     /**
-     * @requires function ReflectionMethod::setAccessible
+     * @requires functions ReflectionMethod::setAccessible
      */
     public function testExistingMethod()
     {

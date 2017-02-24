@@ -42,7 +42,7 @@ class Crap4jTest extends TestCase
         $crap4j = new Crap4j;
 
         $this->assertStringMatchesFormatFile(
-            TEST_FILES_PATH . 'class-with-anonymous-function-crap4j.xml',
+            TEST_FILES_PATH . 'class-with-anonymous-functions-crap4j.xml',
             $crap4j->process($this->getCoverageForClassWithAnonymousFunction(), null, 'CoverageForClassWithAnonymousFunction')
         );
     }

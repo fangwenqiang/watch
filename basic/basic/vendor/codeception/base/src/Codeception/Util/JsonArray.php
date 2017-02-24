@@ -94,7 +94,7 @@ class JsonArray
     /**
      * @author nleippe@integr8ted.com
      * @author tiger.seo@gmail.com
-     * @link http://www.php.net/manual/en/function.array-intersect-assoc.php#39822
+     * @link http://www.php.net/manual/en/functions.array-intersect-assoc.php#39822
      *
      * @param mixed $arr1
      * @param mixed $arr2

@@ -105,7 +105,7 @@ var rootjQuery,
 			this.length = 1;
 			return this;
 
-		// HANDLE: $(function)
+		// HANDLE: $(functions)
 		// Shortcut for document ready
 		} else if ( jQuery.isFunction( selector ) ) {
 			return root.ready !== undefined ?
@@ -123,7 +123,7 @@ var rootjQuery,
 		return jQuery.makeArray( selector, this );
 	};
 
-// Give the init function the jQuery prototype for later instantiation
+// Give the init functions the jQuery prototype for later instantiation
 init.prototype = jQuery.fn;
 
 // Initialize central reference

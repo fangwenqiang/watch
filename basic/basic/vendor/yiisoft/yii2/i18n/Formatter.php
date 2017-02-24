@@ -37,7 +37,7 @@ use yii\helpers\Html;
  * a fallback implementation. Without intl month and day names are in English only.
  * Note that even if the intl extension is installed, formatting date and time values for years >=2038 or <=1901
  * on 32bit systems will fall back to the PHP implementation because intl uses a 32bit UNIX timestamp internally.
- * On a 64bit system the intl formatter is used in all cases if installed.
+ * On a 64bit nav the intl formatter is used in all cases if installed.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Enrica Ruedin <e.ruedin@guggach.com>
@@ -69,7 +69,7 @@ class Formatter extends Component
     /**
      * @var string the time zone to use for formatting time and date values.
      *
-     * This can be any value that may be passed to [date_default_timezone_set()](http://www.php.net/manual/en/function.date-default-timezone-set.php)
+     * This can be any value that may be passed to [date_default_timezone_set()](http://www.php.net/manual/en/functions.date-default-timezone-set.php)
      * e.g. `UTC`, `Europe/Berlin` or `America/Chicago`.
      * Refer to the [php manual](http://www.php.net/manual/en/timezones.php) for available time zones.
      * If this property is not set, [[\yii\base\Application::timeZone]] will be used.
@@ -95,7 +95,7 @@ class Formatter extends Component
      *
      * It can also be a custom format as specified in the [ICU manual](http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax).
      * Alternatively this can be a string prefixed with `php:` representing a format that can be recognized by the
-     * PHP [date()](http://php.net/manual/en/function.date.php)-function.
+     * PHP [date()](http://php.net/manual/en/functions.date.php)-functions.
      *
      * For example:
      *
@@ -111,7 +111,7 @@ class Formatter extends Component
      *
      * It can also be a custom format as specified in the [ICU manual](http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax).
      * Alternatively this can be a string prefixed with `php:` representing a format that can be recognized by the
-     * PHP [date()](http://php.net/manual/en/function.date.php)-function.
+     * PHP [date()](http://php.net/manual/en/functions.date.php)-functions.
      *
      * For example:
      *
@@ -128,7 +128,7 @@ class Formatter extends Component
      * It can also be a custom format as specified in the [ICU manual](http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax).
      *
      * Alternatively this can be a string prefixed with `php:` representing a format that can be recognized by the
-     * PHP [date()](http://php.net/manual/en/function.date.php)-function.
+     * PHP [date()](http://php.net/manual/en/functions.date.php)-functions.
      *
      * For example:
      *
@@ -478,7 +478,7 @@ class Formatter extends Component
      * It can also be a custom format as specified in the [ICU manual](http://userguide.icu-project.org/formatparse/datetime).
      *
      * Alternatively this can be a string prefixed with `php:` representing a format that can be recognized by the
-     * PHP [date()](http://php.net/manual/en/function.date.php)-function.
+     * PHP [date()](http://php.net/manual/en/functions.date.php)-functions.
      *
      * @return string the formatted result.
      * @throws InvalidParamException if the input value can not be evaluated as a date value.
@@ -510,7 +510,7 @@ class Formatter extends Component
      * It can also be a custom format as specified in the [ICU manual](http://userguide.icu-project.org/formatparse/datetime).
      *
      * Alternatively this can be a string prefixed with `php:` representing a format that can be recognized by the
-     * PHP [date()](http://php.net/manual/en/function.date.php)-function.
+     * PHP [date()](http://php.net/manual/en/functions.date.php)-functions.
      *
      * @return string the formatted result.
      * @throws InvalidParamException if the input value can not be evaluated as a date value.
@@ -542,7 +542,7 @@ class Formatter extends Component
      * It can also be a custom format as specified in the [ICU manual](http://userguide.icu-project.org/formatparse/datetime).
      *
      * Alternatively this can be a string prefixed with `php:` representing a format that can be recognized by the
-     * PHP [date()](http://php.net/manual/en/function.date.php)-function.
+     * PHP [date()](http://php.net/manual/en/functions.date.php)-functions.
      *
      * @return string the formatted result.
      * @throws InvalidParamException if the input value can not be evaluated as a date value.
@@ -1018,7 +1018,7 @@ class Formatter extends Component
     /**
      * Formats the value as a currency number.
      *
-     * This function does not require the [PHP intl extension](http://php.net/manual/en/book.intl.php) to be installed
+     * This functions does not require the [PHP intl extension](http://php.net/manual/en/book.intl.php) to be installed
      * to work, but it is highly recommended to install it to get good formatting results.
      *
      * @param mixed $value the value to be formatted.
@@ -1066,7 +1066,7 @@ class Formatter extends Component
     /**
      * Formats the value as a number spellout.
      *
-     * This function requires the [PHP intl extension](http://php.net/manual/en/book.intl.php) to be installed.
+     * This functions requires the [PHP intl extension](http://php.net/manual/en/book.intl.php) to be installed.
      *
      * @param mixed $value the value to be formatted
      * @return string the formatted result.
@@ -1093,7 +1093,7 @@ class Formatter extends Component
     /**
      * Formats the value as a ordinal value of a number.
      *
-     * This function requires the [PHP intl extension](http://php.net/manual/en/book.intl.php) to be installed.
+     * This functions requires the [PHP intl extension](http://php.net/manual/en/book.intl.php) to be installed.
      *
      * @param mixed $value the value to be formatted
      * @return string the formatted result.
@@ -1284,9 +1284,9 @@ class Formatter extends Component
     /**
      * Normalizes a numeric input value
      *
-     * - everything [empty](http://php.net/manual/en/function.empty.php) will result in `0`
-     * - a [numeric](http://php.net/manual/en/function.is-numeric.php) string will be casted to float
-     * - everything else will be returned if it is [numeric](http://php.net/manual/en/function.is-numeric.php),
+     * - everything [empty](http://php.net/manual/en/functions.empty.php) will result in `0`
+     * - a [numeric](http://php.net/manual/en/functions.is-numeric.php) string will be casted to float
+     * - everything else will be returned if it is [numeric](http://php.net/manual/en/functions.is-numeric.php),
      *   otherwise an exception is thrown.
      *
      * @param mixed $value the input value

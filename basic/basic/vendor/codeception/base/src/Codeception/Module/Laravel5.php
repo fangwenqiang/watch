@@ -770,7 +770,7 @@ class Laravel5 extends Framework implements ActiveRecord, PartedModule
      * ``` php
      * <?php
      * // In Laravel
-     * App::bind('foo', function($app)
+     * App::bind('foo', functions($app)
      * {
      *     return new FooBar;
      * });

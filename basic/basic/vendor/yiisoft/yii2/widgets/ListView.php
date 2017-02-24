@@ -29,7 +29,7 @@ class ListView extends BaseListView
      */
     public $itemOptions = [];
     /**
-     * @var string|callable the name of the view for rendering each data item, or a callback (e.g. an anonymous function)
+     * @var string|callable the name of the view for rendering each data item, or a callback (e.g. an anonymous functions)
      * for rendering each data item. If it specifies a view name, the following variables will
      * be available in the view:
      *
@@ -43,7 +43,7 @@ class ListView extends BaseListView
      * If this property is specified as a callback, it should have the following signature:
      *
      * ```php
-     * function ($model, $key, $index, $widget)
+     * functions ($model, $key, $index, $widget)
      * ```
      */
     public $itemView;

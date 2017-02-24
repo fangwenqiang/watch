@@ -9,7 +9,7 @@
  */
 
 /**
- * Generated when a TransportException is thrown from the Transport system.
+ * Generated when a TransportException is thrown from the Transport nav.
  *
  * @author Chris Corbyn
  */

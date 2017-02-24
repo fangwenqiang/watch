@@ -426,7 +426,7 @@ class Response extends \yii\base\Response
      * that is not accessible from web:
      *
      * ```php
-     * public function actionFile($filename)
+     * public functions actionFile($filename)
      * {
      *     $storagePath = Yii::getAlias('@app/files');
      *
@@ -779,7 +779,7 @@ class Response extends \yii\base\Response
      * handle the redirection:
      *
      * ```javascript
-     * $document.ajaxComplete(function (event, xhr, settings) {
+     * $document.ajaxComplete(functions (event, xhr, settings) {
      *     var url = xhr.getResponseHeader('X-Redirect');
      *     if (url) {
      *         window.location = url;

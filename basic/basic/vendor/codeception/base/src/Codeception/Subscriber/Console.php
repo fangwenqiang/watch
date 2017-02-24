@@ -450,7 +450,7 @@ class Console implements EventSubscriberInterface
             $message = $this->message($i)->prepend('#')->width(4);
 
             if (!isset($step['file'])) {
-                foreach (['class', 'type', 'function'] as $info) {
+                foreach (['class', 'type', 'functions'] as $info) {
                     if (!isset($step[$info])) {
                         continue;
                     }

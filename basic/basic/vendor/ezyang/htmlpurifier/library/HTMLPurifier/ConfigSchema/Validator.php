@@ -210,7 +210,7 @@ class HTMLPurifier_ConfigSchema_Validator
     // protected helper functions
 
     /**
-     * Convenience function for generating HTMLPurifier_ConfigSchema_ValidatorAtom
+     * Convenience functions for generating HTMLPurifier_ConfigSchema_ValidatorAtom
      * for validating simple member variables of objects.
      * @param $obj
      * @param $member

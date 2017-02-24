@@ -56,7 +56,7 @@ class Cest extends Test implements
     public function getSourceCode()
     {
         $method = new \ReflectionMethod($this->testClassInstance, $this->testMethod);
-        $start_line = $method->getStartLine() - 1; // it's actually - 1, otherwise you wont get the function() block
+        $start_line = $method->getStartLine() - 1; // it's actually - 1, otherwise you wont get the functions() block
         $end_line = $method->getEndLine();
         $source = file($method->getFileName());
         return implode("", array_slice($source, $start_line, $end_line - $start_line));

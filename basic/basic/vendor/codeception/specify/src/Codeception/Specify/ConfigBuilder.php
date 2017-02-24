@@ -38,7 +38,7 @@ class ConfigBuilder
      * <?php
      * $this->user = new User;
      * $this->specifyConfig()->ignore('user');
-     * $this->specify('change user name', function() {
+     * $this->specify('change user name', functions() {
      *      $this->user->name = 'davert';
      * });
      * $this->user->name == 'davert'; // name changed

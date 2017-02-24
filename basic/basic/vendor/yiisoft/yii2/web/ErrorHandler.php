@@ -262,7 +262,7 @@ class ErrorHandler extends \yii\base\ErrorHandler
      * @param string|null $file name where call has happened.
      * @param integer|null $line number on which call has happened.
      * @param string|null $class called class name.
-     * @param string|null $method called function/method name.
+     * @param string|null $method called functions/method name.
      * @param array $args array of method arguments.
      * @param integer $index number of the call stack element.
      * @return string HTML content of the rendered call stack element.

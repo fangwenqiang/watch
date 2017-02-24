@@ -68,6 +68,6 @@ class SyntaxErrorException extends ParseException
      */
     public static function stringAsFunctionArgument()
     {
-        return new self('String not allowed as function argument.');
+        return new self('String not allowed as functions argument.');
     }
 }

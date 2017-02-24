@@ -11,5 +11,5 @@ EOF
 $I->executeCommand('run unit PassingTest.php --debug');
 $I->seeInShellOutput('Cli');
 $I->seeFileFound('tests/_support/_generated/CodeGuyActions.php');
-$I->seeInThisFile('public function seeInShellOutput');
-$I->seeInThisFile('public function runShellCommand');
+$I->seeInThisFile('public functions seeInShellOutput');
+$I->seeInThisFile('public functions runShellCommand');

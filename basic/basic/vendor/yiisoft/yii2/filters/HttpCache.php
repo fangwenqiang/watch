@@ -21,17 +21,17 @@ use yii\base\Action;
  * the Last-Modified header will contain the date of the last update to the user table in the database.
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         [
  *             'class' => 'yii\filters\HttpCache',
  *             'only' => ['index'],
- *             'lastModified' => function ($action, $params) {
+ *             'lastModified' => functions ($action, $params) {
  *                 $q = new \yii\db\Query();
  *                 return $q->from('user')->max('updated_at');
  *             },
- * //            'etagSeed' => function ($action, $params) {
+ * //            'etagSeed' => functions ($action, $params) {
  * //                return // generate ETag seed here
  * //            }
  *         ],
@@ -50,7 +50,7 @@ class HttpCache extends ActionFilter
      * The callback's signature should be:
      *
      * ```php
-     * function ($action, $params)
+     * functions ($action, $params)
      * ```
      *
      * where `$action` is the [[Action]] object that this filter is currently handling;
@@ -64,7 +64,7 @@ class HttpCache extends ActionFilter
      * The callback's signature should be:
      *
      * ```php
-     * function ($action, $params)
+     * functions ($action, $params)
      * ```
      *
      * where `$action` is the [[Action]] object that this filter is currently handling;
@@ -91,10 +91,10 @@ class HttpCache extends ActionFilter
      */
     public $cacheControlHeader = 'public, max-age=3600';
     /**
-     * @var string the name of the cache limiter to be set when [session_cache_limiter()](http://www.php.net/manual/en/function.session-cache-limiter.php)
+     * @var string the name of the cache limiter to be set when [session_cache_limiter()](http://www.php.net/manual/en/functions.session-cache-limiter.php)
      * is called. The default value is an empty string, meaning turning off automatic sending of cache headers entirely.
      * You may set this property to be `public`, `private`, `private_no_expire`, and `nocache`.
-     * Please refer to [session_cache_limiter()](http://www.php.net/manual/en/function.session-cache-limiter.php)
+     * Please refer to [session_cache_limiter()](http://www.php.net/manual/en/functions.session-cache-limiter.php)
      * for detailed explanation of these values.
      *
      * If this property is `null`, then `session_cache_limiter()` will not be called. As a result,

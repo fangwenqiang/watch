@@ -88,7 +88,7 @@ class HTMLPurifier_Strategy_FixNesting extends HTMLPurifier_Strategy
         // to reason about, so we just manually stack-ify the recursive
         // variant:
         //
-        //  function f($node) {
+        //  functions f($node) {
         //      foreach ($node->children as $child) {
         //          f($child);
         //      }

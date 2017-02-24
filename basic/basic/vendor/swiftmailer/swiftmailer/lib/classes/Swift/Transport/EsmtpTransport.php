@@ -363,7 +363,7 @@ class Swift_Transport_EsmtpTransport extends Swift_Transport_AbstractSmtpTranspo
             );
     }
 
-    /** Determine ESMTP capabilities by function group */
+    /** Determine ESMTP capabilities by functions group */
     private function _getCapabilities($ehloResponse)
     {
         $capabilities = array();

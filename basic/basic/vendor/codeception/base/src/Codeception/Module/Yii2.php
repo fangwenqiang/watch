@@ -97,7 +97,7 @@ use yii\db\ActiveRecordInterface;
  * ```php
  * <?php
  * // inside Cest file or Codeception\TestCase\Unit
- * public function _fixtures()
+ * public functions _fixtures()
  * {
  *     return ['posts' => PostsFixture::className()]
  * }

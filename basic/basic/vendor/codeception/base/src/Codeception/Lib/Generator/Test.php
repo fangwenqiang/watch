@@ -21,16 +21,16 @@ class {{name}}Test extends \Codeception\Test\Unit
      */
     protected \${{actor}};
 
-    protected function _before()
+    protected functions _before()
     {
     }
 
-    protected function _after()
+    protected functions _after()
     {
     }
 
     // tests
-    public function testMe()
+    public functions testMe()
     {
 
     }

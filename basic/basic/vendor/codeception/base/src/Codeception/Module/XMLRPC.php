@@ -123,7 +123,7 @@ class XMLRPC extends CodeceptionModule implements API
 
     /**
      * Checks weather last response was valid XMLRPC.
-     * This is done with xmlrpc_decode function.
+     * This is done with xmlrpc_decode functions.
      *
      */
     public function seeResponseIsXMLRPC()

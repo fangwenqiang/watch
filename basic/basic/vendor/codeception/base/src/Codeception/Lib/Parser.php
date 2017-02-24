@@ -128,7 +128,7 @@ class Parser
         }
         @exec("php -l " . escapeshellarg($file) . " 2>&1", $output, $code);
         if (!isset($code)) {
-            //probably exec function is disabled #3324
+            //probably exec functions is disabled #3324
             return;
         }
         if ($code !== 0) {

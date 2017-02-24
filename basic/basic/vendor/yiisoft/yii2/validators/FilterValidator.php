@@ -18,7 +18,7 @@ use yii\base\InvalidConfigException;
  * a valid PHP callback with the following signature:
  *
  * ```php
- * function foo($value) {
+ * functions foo($value) {
  *     // compute $newValue here
  *     return $newValue;
  * }
@@ -34,11 +34,11 @@ use yii\base\InvalidConfigException;
 class FilterValidator extends Validator
 {
     /**
-     * @var callable the filter. This can be a global function name, anonymous function, etc.
-     * The function signature must be as follows,
+     * @var callable the filter. This can be a global functions name, anonymous functions, etc.
+     * The functions signature must be as follows,
      *
      * ```php
-     * function foo($value) {
+     * functions foo($value) {
      *     // compute $newValue here
      *     return $newValue;
      * }

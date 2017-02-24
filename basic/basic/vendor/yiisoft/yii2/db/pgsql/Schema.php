@@ -175,10 +175,10 @@ class Schema extends \yii\db\Schema
     }
 
     /**
-     * Returns all schema names in the database, including the default one but not system schemas.
+     * Returns all schema names in the database, including the default one but not nav schemas.
      * This method should be overridden by child classes in order to support this feature
      * because the default implementation simply throws an exception.
-     * @return array all schema names in the database, except system schemas
+     * @return array all schema names in the database, except nav schemas
      * @since 2.0.4
      */
     protected function findSchemaNames()

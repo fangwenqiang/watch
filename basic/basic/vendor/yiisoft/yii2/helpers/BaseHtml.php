@@ -97,7 +97,7 @@ class BaseHtml
      * HTML entities in `$content` will not be further encoded.
      * @return string the encoded content
      * @see decode()
-     * @see http://www.php.net/manual/en/function.htmlspecialchars.php
+     * @see http://www.php.net/manual/en/functions.htmlspecialchars.php
      */
     public static function encode($content, $doubleEncode = true)
     {
@@ -110,7 +110,7 @@ class BaseHtml
      * @param string $content the content to be decoded
      * @return string the decoded content
      * @see encode()
-     * @see http://www.php.net/manual/en/function.htmlspecialchars-decode.php
+     * @see http://www.php.net/manual/en/functions.htmlspecialchars-decode.php
      */
     public static function decode($content)
     {
@@ -876,7 +876,7 @@ class BaseHtml
      *   corresponding to a single item in $items. The signature of this callback must be:
      *
      *   ```php
-     *   function ($index, $label, $name, $checked, $value)
+     *   functions ($index, $label, $name, $checked, $value)
      *   ```
      *
      *   where $index is the zero-based index of the checkbox in the whole list; $label
@@ -956,7 +956,7 @@ class BaseHtml
      *   corresponding to a single item in $items. The signature of this callback must be:
      *
      *   ```php
-     *   function ($index, $label, $name, $checked, $value)
+     *   functions ($index, $label, $name, $checked, $value)
      *   ```
      *
      *   where $index is the zero-based index of the radio button in the whole list; $label
@@ -1018,7 +1018,7 @@ class BaseHtml
      *   The signature of this callback must be:
      *
      *   ```php
-     *   function ($item, $index)
+     *   functions ($item, $index)
      *   ```
      *
      *   where $index is the array key corresponding to `$item` in `$items`. The callback should return
@@ -1069,7 +1069,7 @@ class BaseHtml
      *   The signature of this callback must be:
      *
      *   ```php
-     *   function ($item, $index)
+     *   functions ($item, $index)
      *   ```
      *
      *   where $index is the array key corresponding to `$item` in `$items`. The callback should return
@@ -1585,7 +1585,7 @@ class BaseHtml
      *   corresponding to a single item in $items. The signature of this callback must be:
      *
      *   ```php
-     *   function ($index, $label, $name, $checked, $value)
+     *   functions ($index, $label, $name, $checked, $value)
      *   ```
      *
      *   where $index is the zero-based index of the checkbox in the whole list; $label
@@ -1627,7 +1627,7 @@ class BaseHtml
      *   corresponding to a single item in $items. The signature of this callback must be:
      *
      *   ```php
-     *   function ($index, $label, $name, $checked, $value)
+     *   functions ($index, $label, $name, $checked, $value)
      *   ```
      *
      *   where $index is the zero-based index of the radio button in the whole list; $label

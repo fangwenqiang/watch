@@ -9,7 +9,7 @@
  */
 
 /**
- * Listens for Messages being sent from within the Transport system.
+ * Listens for Messages being sent from within the Transport nav.
  *
  * @author Chris Corbyn
  */

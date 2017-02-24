@@ -379,7 +379,7 @@ class ActiveQuery extends Query implements ActiveQueryInterface
      * Order::find()->joinWith('books', true, 'INNER JOIN')->all();
      * // find all orders, eager loading "books", and sort the orders and books by the book names.
      * Order::find()->joinWith([
-     *     'books' => function (\yii\db\ActiveQuery $query) {
+     *     'books' => functions (\yii\db\ActiveQuery $query) {
      *         $query->orderBy('item.name');
      *     }
      * ])->all();
@@ -663,7 +663,7 @@ class ActiveQuery extends Query implements ActiveQueryInterface
      * Use this method to specify additional conditions when declaring a relation in the [[ActiveRecord]] class:
      *
      * ```php
-     * public function getActiveUsers()
+     * public functions getActiveUsers()
      * {
      *     return $this->hasMany(User::className(), ['id' => 'user_id'])
      *                 ->onCondition(['active' => true]);
@@ -733,7 +733,7 @@ class ActiveQuery extends Query implements ActiveQueryInterface
      * Use this method to specify a junction table when declaring a relation in the [[ActiveRecord]] class:
      *
      * ```php
-     * public function getItems()
+     * public functions getItems()
      * {
      *     return $this->hasMany(Item::className(), ['id' => 'item_id'])
      *                 ->viaTable('order_item', ['order_id' => 'id']);
@@ -745,7 +745,7 @@ class ActiveQuery extends Query implements ActiveQueryInterface
      * The keys of the array represent the columns in the junction table, and the values represent the columns
      * in the [[primaryModel]] table.
      * @param callable $callable a PHP callback for customizing the relation associated with the junction table.
-     * Its signature should be `function($query)`, where `$query` is the query to be customized.
+     * Its signature should be `functions($query)`, where `$query` is the query to be customized.
      * @return $this the query object itself
      * @see via()
      */

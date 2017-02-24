@@ -102,7 +102,7 @@ class DebugClassLoaderTest extends \PHPUnit_Framework_TestCase
 
             eval('
                 namespace '.__NAMESPACE__.';
-                class ChildTestingStacking extends TestingStacking { function foo($bar) {} }
+                class ChildTestingStacking extends TestingStacking { functions foo($bar) {} }
             ');
             $this->fail('ContextErrorException expected');
         } catch (\ErrorException $exception) {
@@ -287,7 +287,7 @@ class ClassLoader
         if (__NAMESPACE__.'\TestingUnsilencing' === $class) {
             eval('-- parse error --');
         } elseif (__NAMESPACE__.'\TestingStacking' === $class) {
-            eval('namespace '.__NAMESPACE__.'; class TestingStacking { function foo() {} }');
+            eval('namespace '.__NAMESPACE__.'; class TestingStacking { functions foo() {} }');
         } elseif (__NAMESPACE__.'\TestingCaseMismatch' === $class) {
             eval('namespace '.__NAMESPACE__.'; class TestingCaseMisMatch {}');
         } elseif (__NAMESPACE__.'\Fixtures\CaseMismatch' === $class) {

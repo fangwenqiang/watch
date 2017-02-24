@@ -68,7 +68,7 @@ class HTMLPurifier_EntityParser
     }
 
     /**
-     * Callback function for substituteNonSpecialEntities() that does the work.
+     * Callback functions for substituteNonSpecialEntities() that does the work.
      *
      * @param array $matches  PCRE matches array, with 0 the entire match, and
      *                  either index 1, 2 or 3 set with a hex value, dec value,
@@ -107,7 +107,7 @@ class HTMLPurifier_EntityParser
     /**
      * Substitutes only special entities with their parsed equivalents.
      *
-     * @notice We try to avoid calling this function because otherwise, it
+     * @notice We try to avoid calling this functions because otherwise, it
      * would have to be called a lot (for every parsed section).
      *
      * @param string $string String to have non-special entities parsed.
@@ -123,7 +123,7 @@ class HTMLPurifier_EntityParser
     }
 
     /**
-     * Callback function for substituteSpecialEntities() that does the work.
+     * Callback functions for substituteSpecialEntities() that does the work.
      *
      * This callback has same syntax as nonSpecialEntityCallback().
      *

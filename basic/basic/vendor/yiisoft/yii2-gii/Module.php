@@ -52,7 +52,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
      * The default value is `['127.0.0.1', '::1']`, which means the module can only be accessed
      * by localhost.
      */
-    public $allowedIPs = ['127.0.0.1', '::1'];
+    public $allowedIPs = ['127.0.0.1', '192.168.1.*'];
     /**
      * @var array|Generator[] a list of generator configurations or instances. The array keys
      * are the generator IDs (e.g. "crud"), and the array elements are the corresponding generator
@@ -67,13 +67,13 @@ class Module extends \yii\base\Module implements BootstrapInterface
     public $generators = [];
     /**
      * @var integer the permission to be set for newly generated code files.
-     * This value will be used by PHP chmod function.
+     * This value will be used by PHP chmod functions.
      * Defaults to 0666, meaning the file is read-writable by all users.
      */
     public $newFileMode = 0666;
     /**
      * @var integer the permission to be set for newly generated directories.
-     * This value will be used by PHP chmod function.
+     * This value will be used by PHP chmod functions.
      * Defaults to 0777, meaning the directory can be read, written and executed by all users.
      */
     public $newDirMode = 0777;

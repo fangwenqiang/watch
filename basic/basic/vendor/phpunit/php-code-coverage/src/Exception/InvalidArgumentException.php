@@ -29,7 +29,7 @@ class InvalidArgumentException extends \InvalidArgumentException implements Exce
                 $argument,
                 $value !== null ? ' (' . gettype($value) . '#' . $value . ')' : ' (No Value) ',
                 $stack[1]['class'],
-                $stack[1]['function'],
+                $stack[1]['functions'],
                 $type
             )
         );

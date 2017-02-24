@@ -64,7 +64,7 @@ class ActionColumn extends Column
      * signature:
      *
      * ```php
-     * function ($url, $model, $key) {
+     * functions ($url, $model, $key) {
      *     // return the button HTML code
      * }
      * ```
@@ -77,7 +77,7 @@ class ActionColumn extends Column
      *
      * ```php
      * [
-     *     'update' => function ($url, $model, $key) {
+     *     'update' => functions ($url, $model, $key) {
      *         return $model->status === 'editable' ? Html::a('Update', $url) : '';
      *     },
      * ],
@@ -85,12 +85,12 @@ class ActionColumn extends Column
      */
     public $buttons = [];
     /** @var array visibility conditions for each button. The array keys are the button names (without curly brackets),
-     * and the values are the boolean true/false or the anonymous function. When the button name is not specified in
+     * and the values are the boolean true/false or the anonymous functions. When the button name is not specified in
      * this array it will be shown by default.
      * The callbacks must use the following signature:
      *
      * ```php
-     * function ($model, $key, $index) {
+     * functions ($model, $key, $index) {
      *     return $model->status === 'editable';
      * }
      * ```
@@ -111,7 +111,7 @@ class ActionColumn extends Column
      * Since 2.0.10 it can accept additional parameter, which refers to the column instance itself:
      *
      * ```php
-     * function (string $action, mixed $model, mixed $key, integer $index, ActionColumn $this) {
+     * functions (string $action, mixed $model, mixed $key, integer $index, ActionColumn $this) {
      *     //return string;
      * }
      * ```

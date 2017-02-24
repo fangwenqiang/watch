@@ -99,7 +99,7 @@ class ClassCallback
 }
 
 /**
- * Callback function used to test callbackpromise
+ * Callback functions used to test callbackpromise
  *
  * @param array
  * @return string

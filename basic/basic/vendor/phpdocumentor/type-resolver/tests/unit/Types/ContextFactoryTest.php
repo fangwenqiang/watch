@@ -126,7 +126,7 @@ namespace phpDocumentor\Reflection\Types {
                 class FooClass {
                     use FooTrait;
 
-                    public function bar()
+                    public functions bar()
                     {
                         echo "{$baz}";
                         echo "${baz}";
@@ -136,7 +136,7 @@ namespace phpDocumentor\Reflection\Types {
                 class BarClass {
                     use BarTrait;
 
-                    public function bar()
+                    public functions bar()
                     {
                         echo "{$baz}";
                         echo "${baz}";

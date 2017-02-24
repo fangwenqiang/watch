@@ -9,7 +9,7 @@
  */
 
 /**
- * Listens for changes within the Transport system.
+ * Listens for changes within the Transport nav.
  *
  * @author Chris Corbyn
  */
