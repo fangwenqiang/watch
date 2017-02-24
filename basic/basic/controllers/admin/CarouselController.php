@@ -11,7 +11,7 @@ use yii\filters\VerbFilter;
 use app\models\Admin\Test;  //模型层
 
 
-class CarouselController extends Controller
+class CarouselController extends CommonController
 {
     //后台公共视图
     public  $layout = '/background';

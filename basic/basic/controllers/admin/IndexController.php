@@ -10,7 +10,7 @@ use yii\web\Session;
 use app\models\Admin\Test;  //模型层
 
 
-class IndexController extends Controller
+class IndexController extends  CommonController
 {
     //后台公共视图
     public $layout = '/background';
@@ -18,18 +18,11 @@ class IndexController extends Controller
     /*
      * 导航-->首页
      */
+
+
     public function actionIndex()
     {
-
-        $session = \Yii::$app->session;
-        $user = $session->get('user');
-        if (empty($user)) {
-            $this->layout = false;
-            return $this->render('../login/login');
-        } else {
-            return $this->render('index');
-        }
-
+        return $this->render('index');
 
     }
 

@@ -8,7 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Log;  //模型层
 
-class LogController extends Controller
+class LogController extends CommonController
 {
     public $log_model;
     //后台公共视图
