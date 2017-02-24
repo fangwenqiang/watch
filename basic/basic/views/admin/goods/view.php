@@ -10,7 +10,7 @@ $this->title = $model->g_id;
 $this->params['breadcrumbs'][] = ['label' => 'Goods', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="goods-view">
+<div class="goods-view" style="float:left; width:500px; margin-left:200px;">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'g_id',
-            'category_id',
+            'type_id',
             'goods_sn',
             'goods_name',
             'click_count',

@@ -27,15 +27,17 @@ use yii\helpers\Url;
     $(function () {
         //删除权限
         $('.del').click(function () {
-            var node_id = $(this).attr('node_id');    //管理员ID
+            var node_id = $(this).attr('node_id');    //权限ID
             var csrf = $('._csrf').val();
             var _this = $(this);
-            if(confirm('确定删除此管理员，该操作不可恢复！')){
+            if(confirm('确定删除此权限，该操作不可恢复！')){
                 $.post("<?=url::to(['admin/rbac/delete'])?>",{node_id:node_id,_csrf:csrf}, function (msg) {
                     if(msg == 0){
                         _this.parent().parent().remove();
-                    }else{
+                    }else if(msg == 1){
                         alert('删除失败');
+                    }else if(msg == 3){
+                        alert('当前权限有角色正在使用，请解除管理后再进行删除操作')
                     }
                 });
             }else{

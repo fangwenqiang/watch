@@ -24,7 +24,7 @@ use yii\helpers\Url;
 </div>
 <script>
     $(function () {
-        //删除管理员
+        //删除角色
         $('.del').click(function () {
             var role_id = $(this).attr('role_id');    //管理员ID
             var csrf = $('._csrf').val();
@@ -33,8 +33,10 @@ use yii\helpers\Url;
                 $.post("<?=url::to(['admin/rbac/delete'])?>",{role_id:role_id,_csrf:csrf}, function (msg) {
                     if(msg == 0){
                         _this.parent().parent().remove();
-                    }else{
+                    }else if(msg == 1){
                         alert('删除失败');
+                    }else if(msg == 3){
+                        alert('当前角色有管理员正在使用，请解除后再进行删除操作');
                     }
                 });
             }else{

@@ -70,11 +70,13 @@ class RbacController extends Controller
         }elseif(!empty($role_id)){
             $model = new Role();
             $res = $model->del($role_id);
-            die($res);
+            echo $res;
+            exit;
         }elseif(!empty($node_id)){
             $model = new Node();
             $res = $model->del($node_id);
-            die($res);
+            echo $res;
+            exit;
         }
     }
 

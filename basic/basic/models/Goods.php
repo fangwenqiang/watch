@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "{{%goods}}".
  *
  * @property integer $g_id
- * @property integer $category_id
+ * @property integer $type_id
  * @property string $goods_sn
  * @property string $goods_name
  * @property integer $click_count
