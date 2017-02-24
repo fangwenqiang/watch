@@ -54,35 +54,31 @@ use yii\helpers\Url;
     <!-- dcHead 结束 -->
     <div id="dcLeft">
         <div id="menu">
-
             <ul class="top">
                 <li><a href="<?php echo Url::to(['admin/index/index']);?>"><i class="home"></i><em>管理首页</em></a></li>
             </ul>
             <ul>
-
-            <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="system"></i><em>系统设置</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/system/index']);?>"><i class="article"></i><em>设置</em></a></li>
-                </ul>                
+                </ul>
             </ul>
-             <ul>
+            <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="system"></i><em>导航管理</em></a></li>
-                 <ul style="display:none">
+                <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/nav/index']);?>"><i class="article"></i><em>导航列表</em></a></li>
-                </ul> 
-              </ul>
+                </ul>
+            </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="mobile"></i><em>首页设置</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?=\yii\helpers\Url::to(['admin/carousel/index'])?>"><i class="article"></i><em>轮播图</em></a></li>
-                    <li><a href="article.html"><i class="article"></i><em>导航栏</em></a></li>
                 </ul>
             </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>用户管理</em></a></li>
                 <ul style="display:none">
-                    <li><a href="nav.html"><i class="nav"></i><em>子栏</em></a></li>
+                    <li><a href="nav.html"><i class="nav"></i><em>用户列表</em></a></li>
                 </ul>
             </ul>
             <ul>
@@ -94,13 +90,10 @@ use yii\helpers\Url;
                 </ul>
             </ul>
             <ul>
-
                 <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>商品管理</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/goods/index'])?>"><i class="article"></i><em>商品展示</em></a></li>
-                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
                 </ul>
-
             </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>品牌管理</em></a></li>
@@ -115,25 +108,21 @@ use yii\helpers\Url;
                     <li><a href="<?php echo Url::to(['admin/category/list'])?>"><i class="article"></i><em>分类展示</em></a></li>
                     <li><a href="<?php echo Url::to(['admin/category/add'])?>"><i class="article"></i><em>分类添加</em></a></li>
                 </ul>
-                
             </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>商品类型管理</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/add']);?>"><i class="article"></i><em>添加</em></a></li>
-                <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/show']);?>"><i class="article"></i><em>展示</em></a></li>
+                    <li><a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/show']);?>"><i class="article"></i><em>展示</em></a></li>
                 </ul>
-                
             </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="backup"></i><em>订单管理</em></a></li>
                 <ul style="display:none">
-                    <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
+                    <li><a href="article.html"><i class="article"></i><em>订单列表</em></a></li>
                 </ul>
-
             </ul>
             <ul>
-
                 <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>操作记录</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/log/index']);?>"><i class="article"></i><em>记录</em></a></li>
@@ -155,9 +144,11 @@ use yii\helpers\Url;
 </div>
 </body>
 </html>
-<script type="text/javascript" src="public/admin/js/jquery.min.js"></script>
-<script src="jquery.js"></script>
-<script src="jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+
 <script>
     $('#out').click(function () {
         $.ajax({

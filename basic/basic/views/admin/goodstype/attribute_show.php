@@ -15,12 +15,12 @@
      </tr>
     <?php foreach ($data as $key => $value) {?>
       <tr>
-        <td align="left"><a href="product.php?cat_id=4"><?=$value['attr_id']?></a></td>
-        <td align="left"><a href="product.php?cat_id=4"><?=$value['type_id']?></a></td>
-        <td align="left"><a href="product.php?cat_id=4"><?=$value['attr_name']?></a></td>
-        <td align="left"><a href="product.php?cat_id=4"><?=$value['attr_index']?></a></td>
-        <td align="left"><a href="product.php?cat_id=4"><?=$value['attr_input_type']?></a></td>
-        <td align="left"><a href="product.php?cat_id=4"><?=$value['attr_values']?></a></td>
+        <td align="left"><a href="javascript:"><?=$value['attr_id']?></a></td>
+        <td align="left"><a href="javascript:"><?=$value['type_id']?></a></td>
+        <td align="left"><a href="javascript:"><?=$value['attr_name']?></a></td>
+        <td align="left"><a href="javascript:"><?=$value['attr_index']?></a></td>
+        <td align="left"><a href="javascript:"><?=$value['attr_input_type']?></a></td>
+        <td align="left"><a href="javascript:"><?=$value['attr_values']?></a></td>
         <td align="center">
           <a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/attribute_update']).'&attr_id='.$value['attr_id'];?>">编辑</a> | 
           <a href="<?= \yii\helpers\Url::toRoute(['admin/goodstype/attribute_delete']).'&attr_id='.$value['attr_id'];?>">删除</a>

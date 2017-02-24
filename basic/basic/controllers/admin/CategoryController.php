@@ -43,16 +43,17 @@ class CategoryController extends CommonController
         if(Yii::$app->request->isPost && $model->validate()) {
             $post = Yii::$app->request->post();
             if(empty($post['gt_name'])) {
-                return $this->redirect(['admin/category/msg', ['msg' => '分类名称不能为空','url'=>'/admin/category/update']]);
+                return $this->redirect(['admin/category/msg', ['msg' => '分类名称不能为空','url'=>'/admin/category/list']]);
             }
             if(empty($post['gt_outlink'])) {
-                return $this->redirect(['admin/category/msg', ['msg' => '链接地址不能为空','url'=>'/admin/category/update']]);
+                return $this->redirect(['admin/category/msg', ['msg' => '链接地址不能为空','url'=>'/admin/category/list']]);
             }
             if(empty($post['gt_sort'])) {
-                return $this->redirect(['admin/category/msg', ['msg' => '排序不能为空','url'=>'/admin/category/update']]);
+                return $this->redirect(['admin/category/msg', ['msg' => '排序不能为空','url'=>'/admin/category/list']]);
+
             }
-            if(!is_integer($post['gt_sort'])) {
-                return $this->redirect(['admin/category/msg', ['msg' => '排序必须为数字','url'=>'/admin/category/update']]);
+            if(!preg_match("/^\d*$/",$post['gt_sort'])) {
+                return $this->redirect(['admin/category/msg', ['msg' => '排序必须为数字','url'=>'/admin/category/list']]);
             }
             unset($post['_csrf']);
             $res = $model->cateUpdate($post);
@@ -104,8 +105,8 @@ class CategoryController extends CommonController
             if(empty($post['gt_sort'])) {
                 return $this->redirect(['admin/category/msg', ['msg' => '排序不能为空','url'=>'/admin/category/add']]);
             }
-            if(!is_integer($post['gt_sort'])) {
-                return $this->redirect(['admin/category/msg', ['msg' => '排序必须为数字','url'=>'/admin/category/update']]);
+            if(!preg_match("/^\d*$/",$post['gt_sort'])) {
+                return $this->redirect(['admin/category/msg', ['msg' => '排序必须为数字','url'=>'/admin/category/add']]);
             }
             unset($post['_csrf']);
             $res=$model->cateAdd($post);

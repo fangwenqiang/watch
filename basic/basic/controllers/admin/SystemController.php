@@ -7,7 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Nav;  //模型层
-use app\lib\Filtration;
+use app\lib\Functions\Filtration;
 
 
 class SystemController extends CommonController
@@ -38,12 +38,13 @@ class SystemController extends CommonController
            //判断文件是否上传成功
             if ($new_file){
                 if($cache->set('systemConfig',json_encode($data))){
-                    return "配置成功";
+                    return $this->success('admin/system/index');
                 } else {
-                    return "配置失败";
+                    return $this->error('配置失败');
+
                 }
             } else {
-                return "图片配置失败";
+                return $this->error('图片配置失败');
             }
         }
         $info = json_decode($cache->get("systemConfig"),true);

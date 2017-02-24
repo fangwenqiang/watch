@@ -18,11 +18,16 @@ class IndexController extends  CommonController
     /*
      * 导航-->首页
      */
-
-
     public function actionIndex()
     {
-        return $this->render('index');
+        $session = \Yii::$app->session;
+        $user = $session->get('user');
+        if (empty($user)) {
+            $this->layout = false;
+            return $this->render('../login/login');
+        } else {
+            return $this->render('index');
+        }
 
     }
 

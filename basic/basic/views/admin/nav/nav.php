@@ -23,7 +23,7 @@ use yii\helpers\Url;
             </ul>
             <div class="items">
                 <div id="main">
-                        <table width="100%" border="0" cellpadding="10" cellspacing="0" class="tableBasic">
+                        <table width="100%" border="0" cellpadding="10" cellspacing="10" class="tableBasic">
                             <tr>
                                 <th width="113" align="center">导航名称</th>
                                 <th width="113" align="center">导航类型</th>

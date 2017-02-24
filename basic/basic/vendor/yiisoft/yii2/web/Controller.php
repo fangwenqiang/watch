@@ -205,7 +205,26 @@ class Controller extends \yii\base\Controller
     {
         return Yii::$app->getResponse()->redirect(Yii::$app->getRequest()->getUrl() . $anchor);
     }
-    
+    /**
+     * 通用成功跳转
+     * @param unknown $url 成功后跳转的URL
+     * @param number $sec 自动跳转秒数
+     * @return Ambigous <string, string>
+     */
+    public function success($url= [] ,$sec = 3)
+    {
+
+        $str=strstr($url,'/');
+        if(empty($str)) { return $this->error('address error'); }
+        $url= \yii\helpers\Url::toRoute($url);
+        return $this->render('/error/message',['gotoUrl'=>$url,'sec'=>$sec]);
+    }
+    /** * 通用错误跳转 * @param string $msg 错误提示信息 * @param number $sec * @return Ambigous <string, string>
+     */
+    public function error($msg= '',$sec = 3)
+    {
+        return $this->render('/error/message',['errorMessage'=>$msg,'sec'=>$sec]);
+    }
 
 
 }

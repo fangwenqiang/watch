@@ -10,6 +10,7 @@ namespace app\models;
 
 
 use yii\db\ActiveRecord;
+use yii\db\Query;
 
 /*
  * 角色  管理员 关联
