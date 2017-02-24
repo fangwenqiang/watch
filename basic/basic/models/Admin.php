@@ -27,7 +27,6 @@ class Admin extends ActiveRecord
      * */
     public function show($id = null)
     {
-
         if (isset($id)) {
             return $this->find()->where(['admin_id' => $id])->asArray()->one();
         } else {
@@ -40,7 +39,6 @@ class Admin extends ActiveRecord
     public function select($where = null)
     {
         return $this->find()->where($where)->asArray()->all();
-
     }
 
     /*

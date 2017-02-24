@@ -7,6 +7,7 @@ use app\models\AdminForm;
 use app\models\Node;
 use app\models\NodeForm;
 use app\models\Role;
+use app\models\Role_admin;
 use app\models\RoleForm;
 use yii\web\Controller;
 
@@ -23,8 +24,8 @@ class RbacController extends Controller
      * */
 	public function actionAdmin()
 	{
-        $model = new Admin();
-        $data = $model->show();
+        $admin = new Admin();
+        $data = $admin->show();
 		return $this->render('manager',['data'=>$data]);
 	}
 	
@@ -178,8 +179,7 @@ class RbacController extends Controller
     {
         $node_id = \Yii::$app->request->get('node_id');
         $model = new Node();
-        $list = $model->show();;
-        $list = $this->tree($list,$parent_id = 0,$level = 0);
+        $list = $this->tree($model->show(),$parent_id = 0,$level = 0);
         $modelForm = new NodeForm();
         $data = $model->show($node_id);
         $data['list'] = $list;
@@ -210,7 +210,45 @@ class RbacController extends Controller
         }
         return $data;
     }
-
+    
+    /*
+     * 给用户赋角色
+     * */
+    public function actionAddroad()
+    {
+        $connection = \Yii::$app->db;
+        $request = \Yii::$app->request;
+        $admin_id = $request->get('admin_id');
+        $model = new Admin();   //管理员表对象
+        $adminOne = $model->show($admin_id);    //管理员
+        $roleList = Role::find()->asArray()->all(); //所有角色
+        $role_admin = new Role_admin(); //关联表对象
+        $role_id = $role_admin->show($admin_id);
+        if($request->isPost){
+            $data = \Yii::$app->request->post();
+            $resAdmin = Role_admin::find()->where(['admin_id'=>$admin_id])->all();
+            if(!empty($resAdmin)){
+                $command1 = $connection->createCommand("DELETE FROM mb_role_admin WHERE admin_id=$admin_id");
+                $res = $command1->execute();
+            }
+            if(isset($data['role_id'])){
+                 foreach($data['role_id'] as $v){
+                    $role_admin = new Role_admin(); //关联表对象
+                    $role_admin->role_id = $v;
+                    $role_admin->admin_id = $data['admin_id'];
+                    $res = $role_admin->save();
+                }
+            }else{
+                $res = 1;
+            }
+            if($res){
+                return $this->redirect(['admin/rbac/msg', ['msg' => '赋值成功','url'=>'/admin/rbac/admin']]);
+            }else{
+                return $this->redirect(['admin/rbac/msg', ['msg' => '赋值失败','url'=>'/admin/rbac/admin']]);
+            }
+        }
+        return $this->render('road',['adminOne'=>$adminOne,'roleList'=>$roleList,'role_id'=>$role_id]);
+    }
 
 
 }
