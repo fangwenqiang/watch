@@ -25,8 +25,8 @@ use yii\helpers\Url;
                 <div id="main">
                         <table width="100%" border="0" cellpadding="10" cellspacing="10" class="tableBasic">
                             <tr>
-                                <th width="113" align="center">导航名称</th>
-                                <th width="113" align="center">导航类型</th>
+                                <th width="113" height="20px;" align="center">导航名称</th>
+                                <th width="113" height="40px;" align="center">导航类型</th>
                                 <th align="left">链接地址</th>
                                 <th align="left">导航图标</th>
                                 <th width="80" align="center">排序</th>
