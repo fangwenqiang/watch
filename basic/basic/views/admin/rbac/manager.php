@@ -5,7 +5,7 @@ use yii\helpers\Url;
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>网站管理员</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
     <h3><a href="<?=url::to(['admin/rbac/addadmin'])?>" class="actionBtn">添加管理员</a>网站管理员</h3>
-        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
      <tr>
       <th width="30" align="center">编号</th>
       <th align="left">管理员名称</th>
@@ -46,7 +46,6 @@ use yii\helpers\Url;
                 return false;
             }
         });
-
     })
 
 </script>

@@ -46,11 +46,23 @@ class Admin extends ActiveRecord
      * */
     public function del($id)
     {
-        $request = $this->find()->where(['admin_id' => $id])->one();
-        if ($request->delete()) {
+        $transaction = \Yii::$app->db->beginTransaction();
+        try{
+            $request = $this->find()->where(['admin_id' => $id])->one();
+            $request->delete(); //删除管理员表
+            $role_admin = Role_admin::find()->where(['admin_id'=>$id])->all();
+            foreach($role_admin as $v){
+                $v->delete();
+            }
+            $transaction->commit();
             return 0;
-        } else {
+        }catch (\Exception $e){
+            $transaction->rollBack();
+            \Yii::$app->session->setFlash('waring',$e->getMessage());
             return 1;
         }
+
     }
+
+
 }
