@@ -10,7 +10,7 @@ use app\models\Nav;  //模型层
 use app\lib\Functions\Filtration;
 
 
-class SystemController extends Controller
+class SystemController extends CommonController
 {
     public $nav_model;
     //后台公共视图

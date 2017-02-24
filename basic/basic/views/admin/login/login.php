@@ -83,7 +83,7 @@ use yii\bootstrap\Html;
 </head>
 <body>
 <div id="login">
-    <h1>后台登录<?php echo "user" ?></h1>
+    <h1>后台登录</h1>
     <form id="form" method="post" action="javascript:void(0)">
         <span class="error" id="msg"></span>
         <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">

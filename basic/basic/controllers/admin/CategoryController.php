@@ -11,7 +11,7 @@ use app\models\Test;  //模型层
 use app\models\Category;  //模型层
 
 
-class CategoryController extends Controller
+class CategoryController extends CommonController
 {
     //后台公共视图
     public  $layout = '/background';

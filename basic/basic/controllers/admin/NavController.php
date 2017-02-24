@@ -9,7 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\Nav;  //模型层
 use app\lib\Functions\Filtration;
 
-class NavController extends Controller
+class NavController extends CommonController
 {
     public $nav_model;
     //后台公共视图

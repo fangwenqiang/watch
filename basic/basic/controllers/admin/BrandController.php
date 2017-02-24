@@ -11,7 +11,7 @@ use app\models\Test;  //模型层
 use app\models\Brand;  //模型层
 
 
-class BrandController extends Controller
+class BrandController extends CommonController
 {
     //后台公共视图
     public  $layout = '/background';

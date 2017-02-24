@@ -17,15 +17,14 @@ class LoginController extends Controller
 
     /*
      * 管理员
+     *
      * */
+
     public function actionLogin()
     {
 
         $this->layout = false;
-        $session = \Yii::$app->session;
-        $session->open();
-        $user = $session->get('user');
-        return $this->render('login', ['user', $user]);
+        return $this->render('login');
     }
 
     public function actionLogto()

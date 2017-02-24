@@ -11,7 +11,7 @@ use app\models\Carousel;
 use app\models\CarouselForm;
 
 
-class CarouselController extends Controller
+class CarouselController extends CommonController
 {
     //后台公共视图
     public  $layout = '/background';

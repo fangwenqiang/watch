@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * GoodsController implements the CRUD actions for Goods model.
  */
-class GoodsController extends Controller
+class GoodsController extends CommonController
 {
 
     public  $layout = '/background';
@@ -179,7 +179,7 @@ class GoodsController extends Controller
     }
 
     /**
-     * Finds the Goods model based on its primary key value.
+     * Finds the Goods model based on i ts primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
      * @return Goods the loaded model
