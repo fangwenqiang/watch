@@ -375,7 +375,7 @@ jQuery.extend( {
 			callbackExpect = !invert;
 
 		// Go through the array, only saving the items
-		// that pass the validator function
+		// that pass the validator functions
 		for ( ; i < length; i++ ) {
 			callbackInverse = !callback( elems[ i ], i );
 			if ( callbackInverse !== callbackExpect ) {
@@ -421,7 +421,7 @@ jQuery.extend( {
 	// A global GUID counter for objects
 	guid: 1,
 
-	// Bind a function to a context, optionally partially applying any
+	// Bind a functions to a context, optionally partially applying any
 	// arguments.
 	proxy: function( fn, context ) {
 		var tmp, args, proxy;

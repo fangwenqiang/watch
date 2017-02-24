@@ -59,7 +59,7 @@ echo "done!\n";
 /**
  * Returns a lookup array of dependencies for a file.
  *
- * @note This function expects that format $name extends $parent on one line
+ * @note This functions expects that format $name extends $parent on one line
  *
  * @param string $file
  *      File to check dependencies of.
@@ -100,7 +100,7 @@ function get_dependency_lookup($file)
 }
 
 /**
- * Sorts files based on dependencies. This function is lazy and will not
+ * Sorts files based on dependencies. This functions is lazy and will not
  * group files with dependencies together; it will merely ensure that a file
  * is never included before its dependencies are.
  *

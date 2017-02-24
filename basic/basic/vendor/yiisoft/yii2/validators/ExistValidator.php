@@ -57,8 +57,8 @@ class ExistValidator extends Validator
     /**
      * @var string|array|\Closure additional filter to be applied to the DB query used to check the existence of the attribute value.
      * This can be a string or an array representing the additional query condition (refer to [[\yii\db\Query::where()]]
-     * on the format of query condition), or an anonymous function with the signature `function ($query)`, where `$query`
-     * is the [[\yii\db\Query|Query]] object that you can modify in the function.
+     * on the format of query condition), or an anonymous functions with the signature `functions ($query)`, where `$query`
+     * is the [[\yii\db\Query|Query]] object that you can modify in the functions.
      */
     public $filter;
     /**

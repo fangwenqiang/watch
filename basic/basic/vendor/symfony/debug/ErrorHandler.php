@@ -395,11 +395,11 @@ class ErrorHandler
                 $backtrace = $backtrace ?: $throw->getTrace();
 
                 for ($i = 1; isset($backtrace[$i]); ++$i) {
-                    if (isset($backtrace[$i]['function'], $backtrace[$i]['type'], $backtrace[$i - 1]['function'])
-                        && '__toString' === $backtrace[$i]['function']
+                    if (isset($backtrace[$i]['functions'], $backtrace[$i]['type'], $backtrace[$i - 1]['functions'])
+                        && '__toString' === $backtrace[$i]['functions']
                         && '->' === $backtrace[$i]['type']
                         && !isset($backtrace[$i - 1]['class'])
-                        && ('trigger_error' === $backtrace[$i - 1]['function'] || 'user_error' === $backtrace[$i - 1]['function'])
+                        && ('trigger_error' === $backtrace[$i - 1]['functions'] || 'user_error' === $backtrace[$i - 1]['functions'])
                     ) {
                         // Here, we know trigger_error() has been called from __toString().
                         // HHVM is fine with throwing from __toString() but PHP triggers a fatal error instead.
@@ -550,7 +550,7 @@ class ErrorHandler
     }
 
     /**
-     * Shutdown registered function for handling PHP fatal errors.
+     * Shutdown registered functions for handling PHP fatal errors.
      *
      * @param array $error An array as returned by error_get_last()
      *

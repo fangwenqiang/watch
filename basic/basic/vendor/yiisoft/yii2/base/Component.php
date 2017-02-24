@@ -28,23 +28,23 @@ use Yii;
  * To attach an event handler to an event, call [[on()]]:
  *
  * ```php
- * $post->on('update', function ($event) {
+ * $post->on('update', functions ($event) {
  *     // send email notification
  * });
  * ```
  *
- * In the above, an anonymous function is attached to the "update" event of the post. You may attach
+ * In the above, an anonymous functions is attached to the "update" event of the post. You may attach
  * the following types of event handlers:
  *
- * - anonymous function: `function ($event) { ... }`
+ * - anonymous functions: `functions ($event) { ... }`
  * - object method: `[$object, 'handleAdd']`
  * - static class method: `['Page', 'handleAdd']`
- * - global function: `'handleAdd'`
+ * - global functions: `'handleAdd'`
  *
  * The signature of an event handler should be like the following:
  *
  * ```php
- * function foo($event)
+ * functions foo($event)
  * ```
  *
  * where `$event` is an [[Event]] object which includes parameters associated with the event.
@@ -54,7 +54,7 @@ use Yii;
  *
  * ```php
  * [
- *     'on add' => function ($event) { ... }
+ *     'on add' => functions ($event) { ... }
  * ]
  * ```
  *
@@ -64,7 +64,7 @@ use Yii;
  * and then access it when the handler is invoked. You may do so by
  *
  * ```php
- * $post->on('update', function ($event) {
+ * $post->on('update', functions ($event) {
  *     // the data can be accessed via $event->data
  * }, $data);
  * ```
@@ -210,7 +210,7 @@ class Component extends Object
      * will be implicitly called when executing `isset($component->property)`.
      * @param string $name the property name or the event name
      * @return boolean whether the named property is set
-     * @see http://php.net/manual/en/function.isset.php
+     * @see http://php.net/manual/en/functions.isset.php
      */
     public function __isset($name)
     {
@@ -240,7 +240,7 @@ class Component extends Object
      * will be implicitly called when executing `unset($component->property)`.
      * @param string $name the property name
      * @throws InvalidCallException if the property is read only.
-     * @see http://php.net/manual/en/function.unset.php
+     * @see http://php.net/manual/en/functions.unset.php
      */
     public function __unset($name)
     {
@@ -450,16 +450,16 @@ class Component extends Object
      * some examples:
      *
      * ```
-     * function ($event) { ... }         // anonymous function
+     * functions ($event) { ... }         // anonymous functions
      * [$object, 'handleClick']          // $object->handleClick()
      * ['Page', 'handleClick']           // Page::handleClick()
-     * 'handleClick'                     // global function handleClick()
+     * 'handleClick'                     // global functions handleClick()
      * ```
      *
      * The event handler must be defined with the following signature,
      *
      * ```
-     * function ($event)
+     * functions ($event)
      * ```
      *
      * where `$event` is an [[Event]] object which includes parameters associated with the event.

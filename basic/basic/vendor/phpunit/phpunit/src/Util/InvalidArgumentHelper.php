@@ -10,7 +10,7 @@
 
 /**
  * Factory for PHPUnit_Framework_Exception objects that are used to describe
- * invalid arguments passed to a function or method.
+ * invalid arguments passed to a functions or method.
  *
  * @since Class available since Release 3.4.0
  */
@@ -33,7 +33,7 @@ class PHPUnit_Util_InvalidArgumentHelper
                 $argument,
                 $value !== null ? ' (' . gettype($value) . '#' . $value . ')' : ' (No Value) ',
                 $stack[1]['class'],
-                $stack[1]['function'],
+                $stack[1]['functions'],
                 $type
             )
         );

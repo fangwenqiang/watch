@@ -26,11 +26,11 @@ class Stub
      * ```
      *
      * To replace method provide it's name as a key in second parameter
-     * and it's return value or callback function as parameter
+     * and it's return value or callback functions as parameter
      *
      * ``` php
      * <?php
-     * Stub::make('User', array('save' => function () { return true; }));
+     * Stub::make('User', array('save' => functions () { return true; }));
      * Stub::make('User', array('save' => true }));
      * ?>
      * ```
@@ -123,11 +123,11 @@ class Stub
      * ```
      *
      * To replace method provide it's name as a key in second parameter
-     * and it's return value or callback function as parameter
+     * and it's return value or callback functions as parameter
      *
      * ``` php
      * <?php
-     * Stub::makeEmptyExcept('User', 'save', array('isValid' => function () { return true; }));
+     * Stub::makeEmptyExcept('User', 'save', array('isValid' => functions () { return true; }));
      * Stub::makeEmptyExcept('User', 'save', array('isValid' => true }));
      * ?>
      * ```
@@ -196,11 +196,11 @@ class Stub
      * ```
      *
      * To replace method provide it's name as a key in second parameter
-     * and it's return value or callback function as parameter
+     * and it's return value or callback functions as parameter
      *
      * ``` php
      * <?php
-     * Stub::makeEmpty('User', array('save' => function () { return true; }));
+     * Stub::makeEmpty('User', array('save' => functions () { return true; }));
      * Stub::makeEmpty('User', array('save' => true }));
      * ?>
      * ```
@@ -267,11 +267,11 @@ class Stub
      * ```
      *
      * To replace method provide it's name as a key in third parameter
-     * and it's return value or callback function as parameter
+     * and it's return value or callback functions as parameter
      *
      * ``` php
      * <?php
-     * Stub::construct('User', array(), array('save' => function () { return true; }));
+     * Stub::construct('User', array(), array('save' => functions () { return true; }));
      * Stub::construct('User', array(), array('save' => true }));
      * ?>
      * ```
@@ -319,11 +319,11 @@ class Stub
      * ```
      *
      * To replace method provide it's name as a key in third parameter
-     * and it's return value or callback function as parameter
+     * and it's return value or callback functions as parameter
      *
      * ``` php
      * <?php
-     * Stub::constructEmpty('User', array(), array('save' => function () { return true; }));
+     * Stub::constructEmpty('User', array(), array('save' => functions () { return true; }));
      * Stub::constructEmpty('User', array(), array('save' => true }));
      * ?>
      * ```
@@ -375,11 +375,11 @@ class Stub
      * ```
      *
      * To replace method provide it's name as a key in third parameter
-     * and it's return value or callback function as parameter
+     * and it's return value or callback functions as parameter
      *
      * ``` php
      * <?php
-     * Stub::constructEmptyExcept('User', 'save', array(), array('save' => function () { return true; }));
+     * Stub::constructEmptyExcept('User', 'save', array(), array('save' => functions () { return true; }));
      * Stub::constructEmptyExcept('User', 'save', array(), array('save' => true }));
      * ?>
      * ```
@@ -618,7 +618,7 @@ class Stub
      *
      * ``` php
      * <?php
-     * $user = Stub::make('User', array('getName' => Stub::never(), 'someMethod' => function() {}));
+     * $user = Stub::make('User', array('getName' => Stub::never(), 'someMethod' => functions() {}));
      * $user->someMethod();
      * ?>
      * ```
@@ -647,8 +647,8 @@ class Stub
      * $user = Stub::make(
      *     'User',
      *     array(
-     *         'getName' => Stub::once(function() { return 'Davert';}),
-     *         'someMethod' => function() {}
+     *         'getName' => Stub::once(functions() { return 'Davert';}),
+     *         'someMethod' => functions() {}
      *     )
      * );
      * $userName = $user->getName();
@@ -679,8 +679,8 @@ class Stub
      * $user = Stub::make(
      *     'User',
      *     array(
-     *         'getName' => Stub::atLeastOnce(function() { return 'Davert';}),
-     *         'someMethod' => function() {}
+     *         'getName' => Stub::atLeastOnce(functions() { return 'Davert';}),
+     *         'someMethod' => functions() {}
      *     )
      * );
      * $user->getName();
@@ -713,8 +713,8 @@ class Stub
      * $user = Stub::make(
      *     'User',
      *     array(
-     *         'getName' => Stub::exactly(3, function() { return 'Davert';}),
-     *         'someMethod' => function() {}
+     *         'getName' => Stub::exactly(3, functions() { return 'Davert';}),
+     *         'someMethod' => functions() {}
      *     )
      * );
      * $user->getName();

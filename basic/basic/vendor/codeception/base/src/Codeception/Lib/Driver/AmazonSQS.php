@@ -114,7 +114,7 @@ class AmazonSQS implements Queue
     }
 
     /**
-     * Get the queue/tube URL from the queue name (AWS function only)
+     * Get the queue/tube URL from the queue name (AWS functions only)
      *
      * @param $queue Queue Name
      *

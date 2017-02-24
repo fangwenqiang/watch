@@ -377,7 +377,7 @@ abstract class Schema extends Object
      * @param string $sequenceName name of the sequence object (required by some DBMS)
      * @return string the row ID of the last row inserted, or the last value retrieved from the sequence object
      * @throws InvalidCallException if the DB connection is not active
-     * @see http://www.php.net/manual/en/function.PDO-lastInsertId.php
+     * @see http://www.php.net/manual/en/functions.PDO-lastInsertId.php
      */
     public function getLastInsertID($sequenceName = '')
     {
@@ -467,7 +467,7 @@ abstract class Schema extends Object
      * Note that if the parameter is not a string, it will be returned without change.
      * @param string $str string to be quoted
      * @return string the properly quoted string
-     * @see http://www.php.net/manual/en/function.PDO-quote.php
+     * @see http://www.php.net/manual/en/functions.PDO-quote.php
      */
     public function quoteValue($str)
     {

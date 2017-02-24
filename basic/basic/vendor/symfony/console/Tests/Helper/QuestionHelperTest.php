@@ -372,7 +372,7 @@ class QuestionHelperTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @requires function mb_strwidth
+     * @requires functions mb_strwidth
      */
     public function testChoiceOutputFormattingQuestionForUtf8Keys()
     {

@@ -154,7 +154,7 @@ class FilterTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($this->filter->isFile('vfs://root/a/path'));
         $this->assertFalse($this->filter->isFile('xdebug://debug-eval'));
         $this->assertFalse($this->filter->isFile('eval()\'d code'));
-        $this->assertFalse($this->filter->isFile('runtime-created function'));
+        $this->assertFalse($this->filter->isFile('runtime-created functions'));
         $this->assertFalse($this->filter->isFile('assert code'));
         $this->assertFalse($this->filter->isFile('regexp code'));
         $this->assertTrue($this->filter->isFile(__FILE__));
@@ -187,7 +187,7 @@ class FilterTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->filter->isFiltered('vfs://root/a/path'));
         $this->assertTrue($this->filter->isFiltered('xdebug://debug-eval'));
         $this->assertTrue($this->filter->isFiltered('eval()\'d code'));
-        $this->assertTrue($this->filter->isFiltered('runtime-created function'));
+        $this->assertTrue($this->filter->isFiltered('runtime-created functions'));
         $this->assertTrue($this->filter->isFiltered('assert code'));
         $this->assertTrue($this->filter->isFiltered('regexp code'));
     }

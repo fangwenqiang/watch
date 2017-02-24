@@ -32,7 +32,7 @@ class Action extends \yii\base\Action
      * The signature of the callable should be:
      *
      * ```php
-     * function ($id, $action) {
+     * functions ($id, $action) {
      *     // $id is the primary key value. If composite primary key, the key values
      *     // will be separated by comma.
      *     // $action is the action object currently running
@@ -48,7 +48,7 @@ class Action extends \yii\base\Action
      * check will not be performed. The signature of the callable should be as follows,
      *
      * ```php
-     * function ($action, $model = null) {
+     * functions ($action, $model = null) {
      *     // $model is the requested model instance.
      *     // If null, it means no specific model (e.g. IndexAction)
      * }

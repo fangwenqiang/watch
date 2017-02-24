@@ -142,13 +142,13 @@ class Validator extends Component
     /**
      * @var callable a PHP callable that replaces the default implementation of [[isEmpty()]].
      * If not set, [[isEmpty()]] will be used to check if a value is empty. The signature
-     * of the callable should be `function ($value)` which returns a boolean indicating
+     * of the callable should be `functions ($value)` which returns a boolean indicating
      * whether the value is empty.
      */
     public $isEmpty;
     /**
      * @var callable a PHP callable whose return value determines whether this validator should be applied.
-     * The signature of the callable should be `function ($model, $attribute)`, where `$model` and `$attribute`
+     * The signature of the callable should be `functions ($model, $attribute)`, where `$model` and `$attribute`
      * refer to the model and the attribute currently being validated. The callable should return a boolean value.
      *
      * This property is mainly provided to support conditional validation on the server-side.
@@ -157,7 +157,7 @@ class Validator extends Component
      * The following example will enable the validator only when the country currently selected is USA:
      *
      * ```php
-     * function ($model) {
+     * functions ($model) {
      *     return $model->country == Country::USA;
      * }
      * ```
@@ -166,8 +166,8 @@ class Validator extends Component
      */
     public $when;
     /**
-     * @var string a JavaScript function name whose return value determines whether this validator should be applied
-     * on the client-side. The signature of the function should be `function (attribute, value)`, where
+     * @var string a JavaScript functions name whose return value determines whether this validator should be applied
+     * on the client-side. The signature of the functions should be `functions (attribute, value)`, where
      * `attribute` is an object describing the attribute being validated (see [[clientValidateAttribute()]])
      * and `value` the current value of the attribute.
      *
@@ -177,7 +177,7 @@ class Validator extends Component
      * The following example will enable the validator only when the country currently selected is USA:
      *
      * ```javascript
-     * function (attribute, value) {
+     * functions (attribute, value) {
      *     return $('#country').val() === 'USA';
      * }
      * ```
@@ -192,7 +192,7 @@ class Validator extends Component
      * @param string|\Closure $type the validator type. This can be either:
      *  * a built-in validator name listed in [[builtInValidators]];
      *  * a method name of the model class;
-     *  * an anonymous function;
+     *  * an anonymous functions;
      *  * a validator class name.
      * @param \yii\base\Model $model the data model to be validated.
      * @param array|string $attributes list of attributes to be validated. This can be either an array of

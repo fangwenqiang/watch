@@ -41,7 +41,7 @@ class Behavior extends Object
      * - method in this behavior: `'handleClick'`, equivalent to `[$this, 'handleClick']`
      * - object method: `[$object, 'handleClick']`
      * - static method: `['Page', 'handleClick']`
-     * - anonymous function: `function ($event) { ... }`
+     * - anonymous functions: `functions ($event) { ... }`
      *
      * The following is an example:
      *

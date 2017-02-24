@@ -297,7 +297,7 @@ class BaseYii
      *
      * You may view this method as an enhanced version of the `new` operator.
      * The method supports creating an object based on a class name, a configuration array or
-     * an anonymous function.
+     * an anonymous functions.
      *
      * Below are some usage examples:
      *
@@ -326,7 +326,7 @@ class BaseYii
      * - a string: representing the class name of the object to be created
      * - a configuration array: the array must contain a `class` element which is treated as the object class,
      *   and the rest of the name-value pairs will be used to initialize the corresponding object properties
-     * - a PHP callable: either an anonymous function or an array representing a class method (`[$class or $object, $method]`).
+     * - a PHP callable: either an anonymous functions or an array representing a class method (`[$class or $object, $method]`).
      *   The callable should return a new instance of the object being created.
      *
      * @param array $params the constructor parameters

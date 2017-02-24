@@ -186,7 +186,7 @@ class HTMLPurifier_DefinitionCache_Serializer extends HTMLPurifier_DefinitionCac
     }
 
     /**
-     * Convenience wrapper function for file_put_contents
+     * Convenience wrapper functions for file_put_contents
      * @param string $file File name to write to
      * @param string $data Data to write into file
      * @param HTMLPurifier_Config $config

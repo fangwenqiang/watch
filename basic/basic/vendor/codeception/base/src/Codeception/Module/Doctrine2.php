@@ -25,7 +25,7 @@ use Codeception\Util\Stub;
  *             depends: Symfony
  * ```
  *
- * If you don't use any of frameworks above, you should specify a callback function to receive entity manager:
+ * If you don't use any of frameworks above, you should specify a callback functions to receive entity manager:
  *
  * ```
  * modules:
@@ -75,7 +75,7 @@ class Doctrine2 extends CodeceptionModule implements DependsOnModule, DataMapper
     ];
 
     protected $dependencyMessage = <<<EOF
-Provide connection_callback function to establish database connection and get Entity Manager:
+Provide connection_callback functions to establish database connection and get Entity Manager:
 
 modules:
     enabled:
@@ -237,7 +237,7 @@ EOF;
      * ``` php
      * <?php
      *
-     * $I->haveFakeRepository('Entity\User', array('findByUsername' => function($username) {  return null; }));
+     * $I->haveFakeRepository('Entity\User', array('findByUsername' => functions($username) {  return null; }));
      *
      * ```
      *

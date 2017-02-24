@@ -9,14 +9,14 @@
  */
 
 /**
- * This interface intercepts calls to the mail() function.
+ * This interface intercepts calls to the mail() functions.
  *
  * @author     Chris Corbyn
  */
 interface Swift_Transport_MailInvoker
 {
     /**
-     * Send mail via the mail() function.
+     * Send mail via the mail() functions.
      *
      * This method takes the same arguments as PHP mail().
      *

@@ -10,7 +10,7 @@ namespace yii\caching;
 /**
  * MemCacheServer represents the configuration data for a single memcache or memcached server.
  *
- * See [PHP manual](http://www.php.net/manual/en/function.Memcache-addServer.php) for detailed explanation
+ * See [PHP manual](http://www.php.net/manual/en/functions.Memcache-addServer.php) for detailed explanation
  * of each configuration property.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
@@ -49,8 +49,8 @@ class MemCacheServer extends \yii\base\Object
      */
     public $status = true;
     /**
-     * @var \Closure this callback function will run upon encountering an error.
-     * The callback is run before fail over is attempted. The function takes two parameters,
+     * @var \Closure this callback functions will run upon encountering an error.
+     * The callback is run before fail over is attempted. The functions takes two parameters,
      * the [[host]] and the [[port]] of the failed server.
      * This is used by memcache only.
      */

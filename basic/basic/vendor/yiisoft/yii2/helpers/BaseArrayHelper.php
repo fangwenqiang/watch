@@ -34,8 +34,8 @@ class BaseArrayHelper
      *         'title',
      *         // the key name in array result => property name
      *         'createTime' => 'created_at',
-     *         // the key name in array result => anonymous function
-     *         'length' => function ($post) {
+     *         // the key name in array result => anonymous functions
+     *         'length' => functions ($post) {
      *             return strlen($post->content);
      *         },
      *     ],
@@ -161,8 +161,8 @@ class BaseArrayHelper
      * $username = \yii\helpers\ArrayHelper::getValue($_POST, 'username');
      * // working with object
      * $username = \yii\helpers\ArrayHelper::getValue($user, 'username');
-     * // working with anonymous function
-     * $fullName = \yii\helpers\ArrayHelper::getValue($user, function ($user, $defaultValue) {
+     * // working with anonymous functions
+     * $fullName = \yii\helpers\ArrayHelper::getValue($user, functions ($user, $defaultValue) {
      *     return $user->firstName . ' ' . $user->lastName;
      * });
      * // using dot format to retrieve the property of embedded object
@@ -173,8 +173,8 @@ class BaseArrayHelper
      *
      * @param array|object $array array or object to extract value from
      * @param string|\Closure|array $key key name of the array element, an array of keys or property name of the object,
-     * or an anonymous function returning the value. The anonymous function signature should be:
-     * `function($array, $defaultValue)`.
+     * or an anonymous functions returning the value. The anonymous functions signature should be:
+     * `functions($array, $defaultValue)`.
      * The possibility to pass an array of keys is available since version 2.0.4.
      * @param mixed $default the default value to be returned if the specified array key does not exist. Not used when
      * getting value from an object.
@@ -251,7 +251,7 @@ class BaseArrayHelper
      * The input should be either multidimensional array or an array of objects.
      *
      * The $key can be either a key name of the sub-array, a property name of object, or an anonymous
-     * function that must return the value that will be used as a key.
+     * functions that must return the value that will be used as a key.
      *
      * $groups is an array of keys, that will be used to group the input array into one or more sub-arrays based
      * on keys specified.
@@ -280,10 +280,10 @@ class BaseArrayHelper
      * ]
      * ```
      *
-     * An anonymous function can be used in the grouping array as well.
+     * An anonymous functions can be used in the grouping array as well.
      *
      * ```php
-     * $result = ArrayHelper::index($array, function ($element) {
+     * $result = ArrayHelper::index($array, functions ($element) {
      *     return $element['id'];
      * });
      * ```
@@ -309,10 +309,10 @@ class BaseArrayHelper
      * ]
      * ```
      *
-     * The anonymous function can be used in the array of grouping keys as well:
+     * The anonymous functions can be used in the array of grouping keys as well:
      *
      * ```php
-     * $result = ArrayHelper::index($array, 'data', [function ($element) {
+     * $result = ArrayHelper::index($array, 'data', [functions ($element) {
      *     return $element['id'];
      * }, 'device']);
      * ```
@@ -339,7 +339,7 @@ class BaseArrayHelper
      * ```
      *
      * @param array $array the array that needs to be indexed or grouped
-     * @param string|\Closure|null $key the column name or anonymous function which result will be used to index the array
+     * @param string|\Closure|null $key the column name or anonymous functions which result will be used to index the array
      * @param string|string[]|\Closure[]|null $groups the array of keys, that will be used to group the input array
      * by one or more keys. If the $key attribute or its value for the particular element is null and $groups is not
      * defined, the array element will be discarded. Otherwise, if $groups is specified, array element will be added
@@ -395,8 +395,8 @@ class BaseArrayHelper
      * $result = ArrayHelper::getColumn($array, 'id');
      * // the result is: ['123', '345']
      *
-     * // using anonymous function
-     * $result = ArrayHelper::getColumn($array, function ($element) {
+     * // using anonymous functions
+     * $result = ArrayHelper::getColumn($array, functions ($element) {
      *     return $element['id'];
      * });
      * ```
@@ -482,7 +482,7 @@ class BaseArrayHelper
 
     /**
      * Checks if the given array contains the specified key.
-     * This method enhances the `array_key_exists()` function by supporting case-insensitive
+     * This method enhances the `array_key_exists()` functions by supporting case-insensitive
      * key comparison.
      * @param string $key the key to check
      * @param array $array the array with keys to check
@@ -493,7 +493,7 @@ class BaseArrayHelper
     {
         if ($caseSensitive) {
             // Function `isset` checks key faster but skips `null`, `array_key_exists` handles this case
-            // http://php.net/manual/en/function.array-key-exists.php#107786
+            // http://php.net/manual/en/functions.array-key-exists.php#107786
             return isset($array[$key]) || array_key_exists($key, $array);
         } else {
             foreach (array_keys($array) as $k) {
@@ -510,14 +510,14 @@ class BaseArrayHelper
      * Sorts an array of objects or arrays (with the same structure) by one or several keys.
      * @param array $array the array to be sorted. The array will be modified after calling this method.
      * @param string|\Closure|array $key the key(s) to be sorted by. This refers to a key name of the sub-array
-     * elements, a property name of the objects, or an anonymous function returning the values for comparison
-     * purpose. The anonymous function signature should be: `function($item)`.
+     * elements, a property name of the objects, or an anonymous functions returning the values for comparison
+     * purpose. The anonymous functions signature should be: `functions($item)`.
      * To sort by multiple keys, provide an array of keys here.
      * @param integer|array $direction the sorting direction. It can be either `SORT_ASC` or `SORT_DESC`.
      * When sorting by multiple keys with different sorting directions, use an array of sorting directions.
      * @param integer|array $sortFlag the PHP sort flag. Valid values include
      * `SORT_REGULAR`, `SORT_NUMERIC`, `SORT_STRING`, `SORT_LOCALE_STRING`, `SORT_NATURAL` and `SORT_FLAG_CASE`.
-     * Please refer to [PHP manual](http://php.net/manual/en/function.sort.php)
+     * Please refer to [PHP manual](http://php.net/manual/en/functions.sort.php)
      * for more details. When sorting by multiple keys with different sort flags, use an array of sort flags.
      * @throws InvalidParamException if the $direction or $sortFlag parameters do not have
      * correct number of elements as that of $key.
@@ -568,7 +568,7 @@ class BaseArrayHelper
      * @param string $charset the charset that the data is using. If not set,
      * [[\yii\base\Application::charset]] will be used.
      * @return array the encoded data
-     * @see http://www.php.net/manual/en/function.htmlspecialchars.php
+     * @see http://www.php.net/manual/en/functions.htmlspecialchars.php
      */
     public static function htmlEncode($data, $valuesOnly = true, $charset = null)
     {
@@ -601,7 +601,7 @@ class BaseArrayHelper
      * @param boolean $valuesOnly whether to decode array values only. If false,
      * both the array keys and array values will be decoded.
      * @return array the decoded data
-     * @see http://www.php.net/manual/en/function.htmlspecialchars-decode.php
+     * @see http://www.php.net/manual/en/functions.htmlspecialchars-decode.php
      */
     public static function htmlDecode($data, $valuesOnly = true)
     {
@@ -696,14 +696,14 @@ class BaseArrayHelper
     /**
      * Check whether an array or [[\Traversable]] contains an element.
      *
-     * This method does the same as the PHP function [in_array()](http://php.net/manual/en/function.in-array.php)
+     * This method does the same as the PHP functions [in_array()](http://php.net/manual/en/functions.in-array.php)
      * but additionally works for objects that implement the [[\Traversable]] interface.
      * @param mixed $needle The value to look for.
      * @param array|\Traversable $haystack The set of values to search.
      * @param boolean $strict Whether to enable strict (`===`) comparison.
      * @return boolean `true` if `$needle` was found in `$haystack`, `false` otherwise.
      * @throws InvalidParamException if `$haystack` is neither traversable nor an array.
-     * @see http://php.net/manual/en/function.in-array.php
+     * @see http://php.net/manual/en/functions.in-array.php
      * @since 2.0.7
      */
     public static function isIn($needle, $haystack, $strict = false)
@@ -726,11 +726,11 @@ class BaseArrayHelper
     /**
      * Checks whether a variable is an array or [[\Traversable]].
      *
-     * This method does the same as the PHP function [is_array()](http://php.net/manual/en/function.is-array.php)
+     * This method does the same as the PHP functions [is_array()](http://php.net/manual/en/functions.is-array.php)
      * but additionally works on objects that implement the [[\Traversable]] interface.
      * @param mixed $var The variable being evaluated.
      * @return boolean whether $var is array-like
-     * @see http://php.net/manual/en/function.is_array.php
+     * @see http://php.net/manual/en/functions.is_array.php
      * @since 2.0.8
      */
     public static function isTraversable($var)

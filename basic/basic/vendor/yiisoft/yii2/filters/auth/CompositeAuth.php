@@ -19,7 +19,7 @@ use yii\base\InvalidConfigException;
  * The following example shows how to support three authentication methods:
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         'compositeAuth' => [

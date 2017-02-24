@@ -89,12 +89,12 @@ class GridView extends BaseListView
     public $footerRowOptions = [];
     /**
      * @var array|Closure the HTML attributes for the table body rows. This can be either an array
-     * specifying the common HTML attributes for all body rows, or an anonymous function that
-     * returns an array of the HTML attributes. The anonymous function will be called once for every
+     * specifying the common HTML attributes for all body rows, or an anonymous functions that
+     * returns an array of the HTML attributes. The anonymous functions will be called once for every
      * data model returned by [[dataProvider]]. It should have the following signature:
      *
      * ```php
-     * function ($model, $key, $index, $grid)
+     * functions ($model, $key, $index, $grid)
      * ```
      *
      * - `$model`: the current data model being rendered
@@ -106,14 +106,14 @@ class GridView extends BaseListView
      */
     public $rowOptions = [];
     /**
-     * @var Closure an anonymous function that is called once BEFORE rendering each data model.
-     * It should have the similar signature as [[rowOptions]]. The return result of the function
+     * @var Closure an anonymous functions that is called once BEFORE rendering each data model.
+     * It should have the similar signature as [[rowOptions]]. The return result of the functions
      * will be rendered directly.
      */
     public $beforeRow;
     /**
-     * @var Closure an anonymous function that is called once AFTER rendering each data model.
-     * It should have the similar signature as [[rowOptions]]. The return result of the function
+     * @var Closure an anonymous functions that is called once AFTER rendering each data model.
+     * It should have the similar signature as [[rowOptions]]. The return result of the functions
      * will be rendered directly.
      */
     public $afterRow;
@@ -560,7 +560,7 @@ class GridView extends BaseListView
     }
 
     /**
-     * This function tries to guess the columns to show from the given data
+     * This functions tries to guess the columns to show from the given data
      * if [[columns]] are not explicitly specified.
      */
     protected function guessColumns()

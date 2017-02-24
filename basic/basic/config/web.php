@@ -1,5 +1,5 @@
 <?php
-Yii::$classMap['app\lib\Filtration'] =__DIR__ . '/../lib/Filtration.php';
+Yii::$classMap['app\lib\Functions\Filtration'] =__DIR__ . '/../lib/functions/Filtration.php';
 $params = require(__DIR__ . '/params.php');
 
 $config = [

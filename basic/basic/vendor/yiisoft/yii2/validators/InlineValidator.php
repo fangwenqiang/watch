@@ -13,7 +13,7 @@ namespace yii\validators;
  * The validation method must have the following signature:
  *
  * ```php
- * function foo($attribute, $params)
+ * functions foo($attribute, $params)
  * ```
  *
  * where `$attribute` refers to the name of the attribute being validated, while `$params`
@@ -25,13 +25,13 @@ namespace yii\validators;
 class InlineValidator extends Validator
 {
     /**
-     * @var string|\Closure an anonymous function or the name of a model class method that will be
+     * @var string|\Closure an anonymous functions or the name of a model class method that will be
      * called to perform the actual validation. The signature of the method should be like the following,
      * where `$attribute` is the name of the attribute to be validated, and `$params` contains the value
      * of [[params]] that you specify when declaring the inline validation rule:
      *
      * ```php
-     * function foo($attribute, $params)
+     * functions foo($attribute, $params)
      * ```
      */
     public $method;
@@ -40,11 +40,11 @@ class InlineValidator extends Validator
      */
     public $params;
     /**
-     * @var string|\Closure an anonymous function or the name of a model class method that returns the client validation code.
+     * @var string|\Closure an anonymous functions or the name of a model class method that returns the client validation code.
      * The signature of the method should be like the following:
      *
      * ```php
-     * function foo($attribute, $params)
+     * functions foo($attribute, $params)
      * {
      *     return "javascript";
      * }

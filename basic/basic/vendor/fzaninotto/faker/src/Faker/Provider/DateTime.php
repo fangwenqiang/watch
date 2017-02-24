@@ -40,7 +40,7 @@ class DateTime extends Base
      * @example DateTime('2005-08-16 20:39:21')
      * @return \DateTime
      * @see http://php.net/manual/en/timezones.php
-     * @see http://php.net/manual/en/function.date-default-timezone-get.php
+     * @see http://php.net/manual/en/functions.date-default-timezone-get.php
      */
     public static function dateTime($max = 'now', $timezone = null)
     {
@@ -58,7 +58,7 @@ class DateTime extends Base
      * @example DateTime('1265-03-22 21:15:52')
      * @return \DateTime
      * @see http://php.net/manual/en/timezones.php
-     * @see http://php.net/manual/en/function.date-default-timezone-get.php
+     * @see http://php.net/manual/en/functions.date-default-timezone-get.php
      */
     public static function dateTimeAD($max = 'now', $timezone = null)
     {
@@ -116,7 +116,7 @@ class DateTime extends Base
      * @example DateTime('1999-02-02 11:42:52')
      * @return \DateTime
      * @see http://php.net/manual/en/timezones.php
-     * @see http://php.net/manual/en/function.date-default-timezone-get.php
+     * @see http://php.net/manual/en/functions.date-default-timezone-get.php
      */
     public static function dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)
     {
@@ -146,7 +146,7 @@ class DateTime extends Base
      * @example dateTimeInInterval('1999-02-02 11:42:52', '+ 5 days')
      * @return \DateTime
      * @see http://php.net/manual/en/timezones.php
-     * @see http://php.net/manual/en/function.date-default-timezone-get.php
+     * @see http://php.net/manual/en/functions.date-default-timezone-get.php
      */
     public static function dateTimeInInterval($date = '-30 years', $interval = '+5 days', $timezone = null)
     {

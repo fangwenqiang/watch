@@ -81,17 +81,17 @@ class ErrorHandlerTest extends \PHPUnit_Framework_TestCase
             $trace = $exception->getTrace();
             $this->assertEquals(__FILE__, $trace[0]['file']);
             $this->assertEquals('Symfony\Component\Debug\ErrorHandler', $trace[0]['class']);
-            $this->assertEquals('handleError', $trace[0]['function']);
+            $this->assertEquals('handleError', $trace[0]['functions']);
             $this->assertEquals('->', $trace[0]['type']);
 
             $this->assertEquals(__FILE__, $trace[1]['file']);
             $this->assertEquals(__CLASS__, $trace[1]['class']);
-            $this->assertEquals('triggerNotice', $trace[1]['function']);
+            $this->assertEquals('triggerNotice', $trace[1]['functions']);
             $this->assertEquals('::', $trace[1]['type']);
 
             $this->assertEquals(__FILE__, $trace[1]['file']);
             $this->assertEquals(__CLASS__, $trace[2]['class']);
-            $this->assertEquals(__FUNCTION__, $trace[2]['function']);
+            $this->assertEquals(__FUNCTION__, $trace[2]['functions']);
             $this->assertEquals('->', $trace[2]['type']);
         } finally {
             restore_error_handler();
@@ -99,7 +99,7 @@ class ErrorHandlerTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    // dummy function to test trace in error handler.
+    // dummy functions to test trace in error handler.
     private static function triggerNotice($that)
     {
         // dummy variable to check for in error handler.

@@ -40,7 +40,7 @@ use DeepCopy\DeepCopy;
  *     public $value1;
  *     public $value2;
  *
- *     protected function setUp()
+ *     protected functions setUp()
  *     {
  *         $this->value1 = 2;
  *         $this->value2 = 3;
@@ -55,7 +55,7 @@ use DeepCopy\DeepCopy;
  *
  * <code>
  * <?php
- * public function testPass()
+ * public functions testPass()
  * {
  *     $this->assertTrue($this->value1 + $this->value2 == 5);
  * }
@@ -1432,7 +1432,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * This method is a wrapper for the ini_set() function that automatically
+     * This method is a wrapper for the ini_set() functions that automatically
      * resets the modified php.ini setting to its original value after the
      * test is run.
      *
@@ -1465,7 +1465,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * This method is a wrapper for the setlocale() function that automatically
+     * This method is a wrapper for the setlocale() functions that automatically
      * resets the locale to its original value after the test is run.
      *
      * @param int    $category

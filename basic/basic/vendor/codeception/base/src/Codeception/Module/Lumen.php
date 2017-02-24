@@ -295,7 +295,7 @@ class Lumen extends Framework implements ActiveRecord, PartedModule
      * ``` php
      * <?php
      * // In Lumen
-     * App::bind('foo', function($app)
+     * App::bind('foo', functions($app)
      * {
      *     return new FooBar;
      * });

@@ -42,20 +42,20 @@ use yii\helpers\ArrayHelper;
  *
  * interface UserFinderInterface
  * {
- *     function findUser();
+ *     functions findUser();
  * }
  *
  * class UserFinder extends Object implements UserFinderInterface
  * {
  *     public $db;
  *
- *     public function __construct(Connection $db, $config = [])
+ *     public functions __construct(Connection $db, $config = [])
  *     {
  *         $this->db = $db;
  *         parent::__construct($config);
  *     }
  *
- *     public function findUser()
+ *     public functions findUser()
  *     {
  *     }
  * }
@@ -64,7 +64,7 @@ use yii\helpers\ArrayHelper;
  * {
  *     public $finder;
  *
- *     public function __construct(UserFinderInterface $finder, $config = [])
+ *     public functions __construct(UserFinderInterface $finder, $config = [])
  *     {
  *         $this->finder = $finder;
  *         parent::__construct($config);
@@ -224,7 +224,7 @@ class Container extends Component
      *
      * // register a PHP callable
      * // The callable will be executed when $container->get('db') is called
-     * $container->set('db', function ($container, $params, $config) {
+     * $container->set('db', functions ($container, $params, $config) {
      *     return new \yii\db\Connection($config);
      * });
      * ```
@@ -236,7 +236,7 @@ class Container extends Component
      * @param mixed $definition the definition associated with `$class`. It can be one of the following:
      *
      * - a PHP callable: The callable will be executed when [[get()]] is invoked. The signature of the callable
-     *   should be `function ($container, $params, $config)`, where `$params` stands for the list of constructor
+     *   should be `functions ($container, $params, $config)`, where `$params` stands for the list of constructor
      *   parameters, `$config` the object configuration, and `$container` the container object. The return value
      *   of the callable will be returned by [[get()]] as the object instance requested.
      * - a configuration array: the array contains name-value pairs that will be used to initialize the property
@@ -466,12 +466,12 @@ class Container extends Component
      * Invoke a callback with resolving dependencies in parameters.
      *
      * This methods allows invoking a callback and let type hinted parameter names to be
-     * resolved as objects of the Container. It additionally allow calling function using named parameters.
+     * resolved as objects of the Container. It additionally allow calling functions using named parameters.
      *
      * For example, the following callback may be invoked using the Container to resolve the formatter dependency:
      *
      * ```php
-     * $formatString = function($string, \yii\i18n\Formatter $formatter) {
+     * $formatString = functions($string, \yii\i18n\Formatter $formatter) {
      *    // ...
      * }
      * Yii::$container->invoke($formatString, ['string' => 'Hello World!']);
@@ -481,8 +481,8 @@ class Container extends Component
      * by the DI container as the second param to the callable.
      *
      * @param callable $callback callable to be invoked.
-     * @param array $params The array of parameters for the function.
-     * This can be either a list of parameters, or an associative array representing named function parameters.
+     * @param array $params The array of parameters for the functions.
+     * This can be either a list of parameters, or an associative array representing named functions parameters.
      * @return mixed the callback return value.
      * @throws InvalidConfigException if a dependency cannot be resolved or if a dependency cannot be fulfilled.
      * @throws NotInstantiableException If resolved to an abstract class or an interface (since 2.0.9)
@@ -498,13 +498,13 @@ class Container extends Component
     }
 
     /**
-     * Resolve dependencies for a function.
+     * Resolve dependencies for a functions.
      *
      * This method can be used to implement similar functionality as provided by [[invoke()]] in other
      * components.
      *
      * @param callable $callback callable to be invoked.
-     * @param array $params The array of parameters for the function, can be either numeric or associative.
+     * @param array $params The array of parameters for the functions, can be either numeric or associative.
      * @return array The resolved dependencies.
      * @throws InvalidConfigException if a dependency cannot be resolved or if a dependency cannot be fulfilled.
      * @throws NotInstantiableException If resolved to an abstract class or an interface (since 2.0.9)

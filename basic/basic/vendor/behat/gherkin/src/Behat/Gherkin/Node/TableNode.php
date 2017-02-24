@@ -233,7 +233,7 @@ class TableNode implements ArgumentInterface, IteratorAggregate
      * Converts row into delimited string.
      *
      * @param integer  $rowNum  Row number
-     * @param callable $wrapper Wrapper function
+     * @param callable $wrapper Wrapper functions
      *
      * @return string
      */

@@ -204,7 +204,7 @@ class PhpBrowser extends InnerBrowser implements Remote, MultiSession, RequiresP
      *
      * ``` php
      * <?php
-     * $I->executeInGuzzle(function (\GuzzleHttp\Client $client) {
+     * $I->executeInGuzzle(functions (\GuzzleHttp\Client $client) {
      *      $client->get('/get', ['query' => ['foo' => 'bar']]);
      * });
      * ?>

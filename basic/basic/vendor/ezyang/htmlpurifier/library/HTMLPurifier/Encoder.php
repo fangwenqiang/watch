@@ -116,10 +116,10 @@ class HTMLPurifier_Encoder
      *       LGPL license.  Notes on what changed are inside, but in general,
      *       the original code transformed UTF-8 text into an array of integer
      *       Unicode codepoints. Understandably, transforming that back to
-     *       a string would be somewhat expensive, so the function was modded to
+     *       a string would be somewhat expensive, so the functions was modded to
      *       directly operate on the string.  However, this discourages code
      *       reuse, and the logic enumerated here would be useful for any
-     *       function that needs to be able to understand UTF-8 characters.
+     *       functions that needs to be able to understand UTF-8 characters.
      *       As of right now, only smart lossless character encoding converters
      *       would need that, and I'm probably not going to implement them.
      *       Once again, PHP 6 should solve all our problems.
@@ -282,13 +282,13 @@ class HTMLPurifier_Encoder
 
     /**
      * Translates a Unicode codepoint into its corresponding UTF-8 character.
-     * @note Based on Feyd's function at
+     * @note Based on Feyd's functions at
      *       <http://forums.devnetwork.net/viewtopic.php?p=191404#191404>,
      *       which is in public domain.
      * @note While we're going to do code point parsing anyway, a good
      *       optimization would be to refuse to translate code points that
      *       are non-SGML characters.  However, this could lead to duplication.
-     * @note This is very similar to the unichr function in
+     * @note This is very similar to the unichr functions in
      *       maintenance/generate-entity-file.php (although this is superior,
      *       due to its sanity checks).
      */
@@ -463,7 +463,7 @@ class HTMLPurifier_Encoder
      *       algorithm. If you disagree with this license fudgery,
      *       implement it yourself.
      * @note Uses decimal numeric entities since they are best supported.
-     * @note This is a DUMB function: it has no concept of keeping
+     * @note This is a DUMB functions: it has no concept of keeping
      *       character entities that the projected character encoding
      *       can allow. We could possibly implement a smart version
      *       but that would require it to also know which Unicode
@@ -552,7 +552,7 @@ class HTMLPurifier_Encoder
     }
 
     /**
-     * This expensive function tests whether or not a given character
+     * This expensive functions tests whether or not a given character
      * encoding supports ASCII. 7/8-bit encodings like Shift_JIS will
      * fail this test, and require special processing. Variable width
      * encodings shouldn't ever fail.

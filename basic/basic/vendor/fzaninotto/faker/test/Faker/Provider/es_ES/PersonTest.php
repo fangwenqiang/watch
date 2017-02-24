@@ -21,7 +21,7 @@ class PersonTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->isValidDNI($dni));
     }
 
-    // validation taken from http://kiwwito.com/php-function-for-spanish-dni-nie-validation/
+    // validation taken from http://kiwwito.com/php-functions-for-spanish-dni-nie-validation/
     public function isValidDNI($string)
     {
         if (strlen($string) != 9 ||

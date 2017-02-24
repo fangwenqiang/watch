@@ -36,7 +36,7 @@ use yii\helpers\StringHelper;
  *
  * class Customer extends \yii\db\ActiveRecord
  * {
- *     public static function tableName()
+ *     public static functions tableName()
  *     {
  *         return 'customer';
  *     }

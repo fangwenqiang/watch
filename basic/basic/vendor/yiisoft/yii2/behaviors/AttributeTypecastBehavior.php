@@ -32,7 +32,7 @@ use yii\validators\StringValidator;
  *
  * class Item extends \yii\db\ActiveRecord
  * {
- *     public function behaviors()
+ *     public functions behaviors()
  *     {
  *         return [
  *             'typecast' => [
@@ -63,7 +63,7 @@ use yii\validators\StringValidator;
  * class Item extends \yii\db\ActiveRecord
  * {
  *
- *     public function rules()
+ *     public functions rules()
  *     {
  *         return [
  *             ['amount', 'integer'],
@@ -72,7 +72,7 @@ use yii\validators\StringValidator;
  *         ];
  *     }
  *
- *     public function behaviors()
+ *     public functions behaviors()
  *     {
  *         return [
  *             'typecast' => [
@@ -130,7 +130,7 @@ class AttributeTypecastBehavior extends Behavior
      *     'amount' => 'integer',
      *     'price' => 'float',
      *     'is_active' => 'boolean',
-     *     'date' => function ($value) {
+     *     'date' => functions ($value) {
      *         return ($value instanceof \DateTime) ? $value->getTimestamp(): (int)$value;
      *     },
      * ]

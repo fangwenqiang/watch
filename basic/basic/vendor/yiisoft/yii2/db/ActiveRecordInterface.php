@@ -119,7 +119,7 @@ interface ActiveRecordInterface
      * ```php
      * class Customer extends ActiveRecord
      * {
-     *     public static function find()
+     *     public static functions find()
      *     {
      *         // use CustomerQuery instead of the default ActiveQuery
      *         return new CustomerQuery(get_called_class());
@@ -132,7 +132,7 @@ interface ActiveRecordInterface
      * ```php
      * class Customer extends ActiveRecord
      * {
-     *     public static function find()
+     *     public static functions find()
      *     {
      *         return parent::find()->where(['deleted' => false]);
      *     }

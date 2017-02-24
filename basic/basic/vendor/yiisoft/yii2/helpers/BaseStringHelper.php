@@ -39,7 +39,7 @@ class BaseStringHelper
      * @param integer $length the desired portion length. If not specified or `null`, there will be
      * no limit on length i.e. the output will be until the end of the string.
      * @return string the extracted part of string, or FALSE on failure or an empty string.
-     * @see http://www.php.net/manual/en/function.substr.php
+     * @see http://www.php.net/manual/en/functions.substr.php
      */
     public static function byteSubstr($string, $start, $length = null)
     {
@@ -48,7 +48,7 @@ class BaseStringHelper
 
     /**
      * Returns the trailing name component of a path.
-     * This method is similar to the php function `basename()` except that it will
+     * This method is similar to the php functions `basename()` except that it will
      * treat both \ and / as directory separators, independent of the operating nav.
      * This method was mainly created to work on php namespaces. When working with real
      * file paths, php's `basename()` should work fine for you.
@@ -57,7 +57,7 @@ class BaseStringHelper
      * @param string $path A path string.
      * @param string $suffix If the name component ends in suffix this will also be cut off.
      * @return string the trailing name component of the given path.
-     * @see http://www.php.net/manual/en/function.basename.php
+     * @see http://www.php.net/manual/en/functions.basename.php
      */
     public static function basename($path, $suffix = '')
     {
@@ -79,7 +79,7 @@ class BaseStringHelper
      *
      * @param string $path A path string.
      * @return string the parent directory's path.
-     * @see http://www.php.net/manual/en/function.basename.php
+     * @see http://www.php.net/manual/en/functions.basename.php
      */
     public static function dirname($path)
     {
@@ -224,7 +224,7 @@ class BaseStringHelper
             return true;
         }
         if ($caseSensitive) {
-            // Warning check, see http://php.net/manual/en/function.substr-compare.php#refsect1-function.substr-compare-returnvalues
+            // Warning check, see http://php.net/manual/en/functions.substr-compare.php#refsect1-functions.substr-compare-returnvalues
             if (static::byteLength($string) < $bytes) {
                 return false;
             }
@@ -241,7 +241,7 @@ class BaseStringHelper
      * @param string $delimiter Delimiter. Default is ','.
      * @param mixed $trim Whether to trim each element. Can be:
      *   - boolean - to trim normally;
-     *   - string - custom characters to trim. Will be passed as a second argument to `trim()` function.
+     *   - string - custom characters to trim. Will be passed as a second argument to `trim()` functions.
      *   - callable - will be called for each value instead of trim. Takes the only argument - value.
      * @param boolean $skipEmpty Whether to skip empty strings between delimiters. Default is false.
      * @return array

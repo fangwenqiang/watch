@@ -26,7 +26,7 @@
         /**
          * beforeValidate event is triggered before validating the whole form.
          * The signature of the event handler should be:
-         *     function (event, messages, deferreds)
+         *     functions (event, messages, deferreds)
          * where
          *  - event: an Event object.
          *  - messages: an associative array with keys being attribute IDs and values being error message arrays
@@ -40,7 +40,7 @@
         /**
          * afterValidate event is triggered after validating the whole form.
          * The signature of the event handler should be:
-         *     function (event, messages, errorAttributes)
+         *     functions (event, messages, errorAttributes)
          * where
          *  - event: an Event object.
          *  - messages: an associative array with keys being attribute IDs and values being error message arrays
@@ -51,7 +51,7 @@
         /**
          * beforeValidateAttribute event is triggered before validating an attribute.
          * The signature of the event handler should be:
-         *     function (event, attribute, messages, deferreds)
+         *     functions (event, attribute, messages, deferreds)
          * where
          *  - event: an Event object.
          *  - attribute: the attribute to be validated. Please refer to attributeDefaults for the structure of this parameter.
@@ -65,7 +65,7 @@
         /**
          * afterValidateAttribute event is triggered after validating the whole form and each attribute.
          * The signature of the event handler should be:
-         *     function (event, attribute, messages)
+         *     functions (event, attribute, messages)
          * where
          *  - event: an Event object.
          *  - attribute: the attribute being validated. Please refer to attributeDefaults for the structure of this parameter.
@@ -75,7 +75,7 @@
         /**
          * beforeSubmit event is triggered before submitting the form after all validations have passed.
          * The signature of the event handler should be:
-         *     function (event)
+         *     functions (event)
          * where event is an Event object.
          *
          * If the handler returns a boolean false, it will stop form submission.
@@ -84,7 +84,7 @@
         /**
          * ajaxBeforeSend event is triggered before sending an AJAX request for AJAX-based validation.
          * The signature of the event handler should be:
-         *     function (event, jqXHR, settings)
+         *     functions (event, jqXHR, settings)
          * where
          *  - event: an Event object.
          *  - jqXHR: a jqXHR object
@@ -94,7 +94,7 @@
         /**
          * ajaxComplete event is triggered after completing an AJAX request for AJAX-based validation.
          * The signature of the event handler should be:
-         *     function (event, jqXHR, textStatus)
+         *     functions (event, jqXHR, textStatus)
          * where
          *  - event: an Event object.
          *  - jqXHR: a jqXHR object
@@ -104,7 +104,7 @@
         /**
          * afterInit event is triggered after yii activeForm init.
          * The signature of the event handler should be:
-         *     function (event)
+         *     functions (event)
          * where
          *  - event: an Event object.
          */        
@@ -159,7 +159,7 @@
         validationDelay: 500,
         // whether to enable AJAX-based validation.
         enableAjaxValidation: false,
-        // function (attribute, value, messages, deferred, $form), the client-side validation function.
+        // functions (attribute, value, messages, deferred, $form), the client-side validation functions.
         validate: undefined,
         // status of the input field, 0: empty, not entered before, 1: validated, 2: pending validation, 3: validating
         status: 0,
@@ -429,7 +429,7 @@
             var $form = $(this);
             var data = $form.data('yiiActiveForm');
             // Because we bind directly to a form reset event instead of a reset button (that may not exist),
-            // when this function is executed form input values have not been reset yet.
+            // when this functions is executed form input values have not been reset yet.
             // Therefore we do the actual reset work through setTimeout.
             setTimeout(function () {
                 $.each(data.attributes, function () {

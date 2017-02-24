@@ -29,7 +29,7 @@ class HTMLPurifier_Filter
     public $name;
 
     /**
-     * Pre-processor function, handles HTML before HTML Purifier
+     * Pre-processor functions, handles HTML before HTML Purifier
      * @param string $html
      * @param HTMLPurifier_Config $config
      * @param HTMLPurifier_Context $context
@@ -41,7 +41,7 @@ class HTMLPurifier_Filter
     }
 
     /**
-     * Post-processor function, handles HTML after HTML Purifier
+     * Post-processor functions, handles HTML after HTML Purifier
      * @param string $html
      * @param HTMLPurifier_Config $config
      * @param HTMLPurifier_Context $context

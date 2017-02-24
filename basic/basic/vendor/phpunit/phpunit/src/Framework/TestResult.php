@@ -757,7 +757,7 @@ class PHPUnit_Framework_TestResult implements Countable
                         new PHPUnit_Framework_RiskyTestError(
                             sprintf(
                                 '%s() used in %s:%s',
-                                $function['function'],
+                                $function['functions'],
                                 $function['filename'],
                                 $function['lineno']
                             )

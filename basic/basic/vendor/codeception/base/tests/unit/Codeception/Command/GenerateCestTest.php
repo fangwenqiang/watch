@@ -22,9 +22,9 @@ class GenerateCestTest extends BaseCommandRunner
         $this->assertEquals('tests/shire/HallUnderTheHillCest.php', $this->filename);
 
         $this->assertContains('class HallUnderTheHillCest', $this->content);
-        $this->assertContains('public function _before(HobbitGuy $I)', $this->content);
-        $this->assertContains('public function _after(HobbitGuy $I)', $this->content);
-        $this->assertContains('public function tryToTest(HobbitGuy $I)', $this->content);
+        $this->assertContains('public functions _before(HobbitGuy $I)', $this->content);
+        $this->assertContains('public functions _after(HobbitGuy $I)', $this->content);
+        $this->assertContains('public functions tryToTest(HobbitGuy $I)', $this->content);
         $this->assertContains('Test was created in tests/shire/HallUnderTheHillCest.php', $this->output);
     }
 
@@ -66,7 +66,7 @@ class GenerateCestTest extends BaseCommandRunner
         $this->assertEquals($this->filename, 'tests/shire/HallUnderTheHillCest.php');
         $this->assertContains('namespace MiddleEarth;', $this->content);
         $this->assertContains('use MiddleEarth\\HobbitGuy;', $this->content);
-        $this->assertContains('public function tryToTest(HobbitGuy $I)', $this->content);
+        $this->assertContains('public functions tryToTest(HobbitGuy $I)', $this->content);
         $this->assertIsValidPhp($this->content);
     }
 

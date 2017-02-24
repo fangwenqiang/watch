@@ -29,7 +29,7 @@ class {{class}}
      * You can append any additional parameter to URL
      * and use it in tests like: Page\\Edit::route('/123-post');
      */
-    public static function route(\$param)
+    public static functions route(\$param)
     {
         return static::\$URL.\$param;
     }
@@ -45,7 +45,7 @@ EOF;
      */
     protected \${{actor}};
 
-    public function __construct(\\{{actorClass}} \$I)
+    public functions __construct(\\{{actorClass}} \$I)
     {
         \$this->{{actor}} = \$I;
     }

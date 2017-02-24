@@ -161,7 +161,7 @@
                 width: "horizontal" == a.settings.mode ? 215 * a.children.length + "%": "auto",
                 position: "relative"
             });
-            a.usingCSS && a.settings.easing ? c.css("-" + a.cssPrefix + "-transition-timing-function", a.settings.easing) : a.settings.easing || (a.settings.easing = "swing");
+            a.usingCSS && a.settings.easing ? c.css("-" + a.cssPrefix + "-transition-timing-functions", a.settings.easing) : a.settings.easing || (a.settings.easing = "swing");
             l();
             a.viewport.css({
                 width: "100%",
@@ -284,7 +284,7 @@
             function() {
                 c.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
                 z()
-            })) : "reset" == d ? c.css(a.animProp, b) : "ticker" == d && (c.css("-" + a.cssPrefix + "-transition-timing-function", "linear"), c.css(a.animProp, b), c.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
+            })) : "reset" == d ? c.css(a.animProp, b) : "ticker" == d && (c.css("-" + a.cssPrefix + "-transition-timing-functions", "linear"), c.css(a.animProp, b), c.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
             function() {
                 c.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd");
                 h(k.resetValue, "reset", 0);
@@ -725,22 +725,22 @@ function lazyload_lnks1() {
         lnks1.data("loaded", 1)
     }
 }
-/*function cg_nav_js() {
+/*functions cg_nav_js() {
     var a = $("#gMenu");
     if (a[0]) {
         var b = a.is(":visible"),
         d;
-        b || $("#pop_menu").hover(function() {
+        b || $("#pop_menu").hover(functions() {
             clearTimeout(d);
             0 < navigator.userAgent.indexOf("MSIE 6.0") ? a.attr("style", "display:inline;") : a.slideDown("fast")
         },
-        function() {
-            d = setTimeout(function() {
+        functions() {
+            d = setTimeout(functions() {
                 a.slideUp("fast")
             },
             300)
         });
-        a.find("dl").hover(function() {
+        a.find("dl").hover(functions() {
             $(this).addClass("curr");
             $(this).find("#subMenu").show();
             $(".hotBrd").find("img.lazy").lazyload({
@@ -755,10 +755,10 @@ function lazyload_lnks1() {
             });
             clearTimeout(d)
         },
-        function() {
+        functions() {
             $(this).removeClass("curr");
             $(this).find("#subMenu").hide();
-            b || (d = setTimeout(function() {
+            b || (d = setTimeout(functions() {
                 a.hide()
             },
             300))
@@ -1023,7 +1023,7 @@ function suggestData() {
 }
 function showme(a) {
     a = $(a);
-    "0" == a.attr("rel") && (a.append('<script>$("#suggest").Validform({btnSubmit:"#sbtSuggest",beforeSubmit:function(){suggestData();}});\x3c/script><ul><li><span>反馈标题：</span><input type="text"name="title"id="title"datatype="*"nullmsg="请填写标题！"/></li><li><span>反馈分类：</span><input type="radio"name="flag"id="fun"value="1"datatype="*"nullmsg="请选择分类！"><label for="fun">功能建议</label><input type="radio"name="flag"id="error"value="2"><label for="error">报告错误</label><input type="radio"name="flag"id="other"value="3"><label for="other">其他</label></li><li><span>反馈内容：</span><textarea name="fd_content"id="fd_content"datatype="*"nullmsg="请填写内容！"></textarea></li><li><span>&nbsp;</span><input type="button"id="sbtSuggest"/><a href="javascript:void(0)"onclick="javascript:showme(\'#suggest\')"id="cancel">取消</a></li></ul><div class="retract"onclick="javascript:showme(\'#suggest\')"><b>↑</b>收起</div><div class="ad"><a href="http://www.wbiao.cn/article-7210.html"target="_blank"rel="nofollow">会员提交建议赢大奖！</a></div>'), a.attr("rel", "1"));
+    "0" == a.attr("rel") && (a.append('<script>$("#suggest").Validform({btnSubmit:"#sbtSuggest",beforeSubmit:functions(){suggestData();}});\x3c/script><ul><li><span>反馈标题：</span><input type="text"name="title"id="title"datatype="*"nullmsg="请填写标题！"/></li><li><span>反馈分类：</span><input type="radio"name="flag"id="fun"value="1"datatype="*"nullmsg="请选择分类！"><label for="fun">功能建议</label><input type="radio"name="flag"id="error"value="2"><label for="error">报告错误</label><input type="radio"name="flag"id="other"value="3"><label for="other">其他</label></li><li><span>反馈内容：</span><textarea name="fd_content"id="fd_content"datatype="*"nullmsg="请填写内容！"></textarea></li><li><span>&nbsp;</span><input type="button"id="sbtSuggest"/><a href="javascript:void(0)"onclick="javascript:showme(\'#suggest\')"id="cancel">取消</a></li></ul><div class="retract"onclick="javascript:showme(\'#suggest\')"><b>↑</b>收起</div><div class="ad"><a href="http://www.wbiao.cn/article-7210.html"target="_blank"rel="nofollow">会员提交建议赢大奖！</a></div>'), a.attr("rel", "1"));
     "block" == a.css("display") ? (a.css("display", "none"), $("input[type='text'],textarea").val(""), $("input[type='radio']").removeAttr("checked")) : "none" == a.css("display") && a.css("display", "block")
 }
 function gotop() {

@@ -238,7 +238,7 @@ class BaseVarDumper
         $end = $reflection->getEndLine();
 
         if ($fileName === false || $start === false || $end === false) {
-            return 'function() {/* Error: unable to determine Closure source */}';
+            return 'functions() {/* Error: unable to determine Closure source */}';
         }
 
         --$start;

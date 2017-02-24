@@ -19,8 +19,8 @@
 
   methods = {
     // supported signatures:
-    // function(o, dataset, dataset, ...)
-    // function(o, [dataset, dataset, ...])
+    // functions(o, dataset, dataset, ...)
+    // functions(o, [dataset, dataset, ...])
     initialize: function initialize(o, datasets) {
       var www;
 

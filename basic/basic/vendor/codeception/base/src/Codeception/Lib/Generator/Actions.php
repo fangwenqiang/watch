@@ -25,7 +25,7 @@ trait {{name}}Actions
     /**
      * @return \Codeception\Scenario
      */
-    abstract protected function getScenario();
+    abstract protected functions getScenario();
 
     {{methods}}
 }
@@ -41,7 +41,7 @@ EOF;
      {{doc}}
      * @see \{{module}}::{{method}}()
      */
-    public function {{action}}({{params}}) {
+    public functions {{action}}({{params}}) {
         return \$this->getScenario()->runStep(new \Codeception\Step\{{step}}('{{method}}', func_get_args()));
     }
 EOF;

@@ -18,16 +18,16 @@ use ReflectionProperty;
 class Restorer
 {
     /**
-     * Deletes function definitions that are not defined in a snapshot.
+     * Deletes functions definitions that are not defined in a snapshot.
      *
      * @param  Snapshot         $snapshot
-     * @throws RuntimeException when the uopz_delete() function is not available
+     * @throws RuntimeException when the uopz_delete() functions is not available
      * @see    https://github.com/krakjoe/uopz
      */
     public function restoreFunctions(Snapshot $snapshot)
     {
         if (!function_exists('uopz_delete')) {
-            throw new RuntimeException('The uopz_delete() function is required for this operation');
+            throw new RuntimeException('The uopz_delete() functions is required for this operation');
         }
 
         $functions = get_defined_functions();

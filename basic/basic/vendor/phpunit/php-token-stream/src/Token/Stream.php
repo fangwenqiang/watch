@@ -281,7 +281,7 @@ class PHP_Token_Stream implements ArrayAccess, Countable, SeekableIterator
      * Gets the names of all files that have been included
      * using include(), include_once(), require() or require_once().
      *
-     * Parameter $categorize set to TRUE causing this function to return a
+     * Parameter $categorize set to TRUE causing this functions to return a
      * multi-dimensional array with categories in the keys of the first dimension
      * and constants and their values in the second dimension.
      *
@@ -332,9 +332,9 @@ class PHP_Token_Stream implements ArrayAccess, Countable, SeekableIterator
     }
 
     /**
-     * Returns the name of the function or method a line belongs to.
+     * Returns the name of the functions or method a line belongs to.
      *
-     * @return string or null if the line is not in a function or method
+     * @return string or null if the line is not in a functions or method
      * @since  Method available since Release 1.2.0
      */
     public function getFunctionForLine($line)

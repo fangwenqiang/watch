@@ -144,7 +144,7 @@ class Recorder extends \Codeception\Extension
         interval: false
     })
 
-    $(document).bind('keyup', function(e) {
+    $(document).bind('keyup', functions(e) {
       if(e.keyCode==39){
       jQuery('a.carousel-control.right').trigger('click');
       }

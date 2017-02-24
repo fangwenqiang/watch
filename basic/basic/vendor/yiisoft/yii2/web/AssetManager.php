@@ -122,13 +122,13 @@ class AssetManager extends Component
     public $linkAssets = false;
     /**
      * @var integer the permission to be set for newly published asset files.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * If not set, the permission will be determined by the current environment.
      */
     public $fileMode;
     /**
      * @var integer the permission to be set for newly generated asset directories.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * Defaults to 0775, meaning the directory is read-writable by owner and group,
      * but read-only for other users.
      */
@@ -138,7 +138,7 @@ class AssetManager extends Component
      * This option is used only when publishing a directory. If the callback returns false, the copy
      * operation for the sub-directory or file will be cancelled.
      *
-     * The signature of the callback should be: `function ($from, $to)`, where `$from` is the sub-directory or
+     * The signature of the callback should be: `functions ($from, $to)`, where `$from` is the sub-directory or
      * file to be copied from, while `$to` is the copy target.
      *
      * This is passed as a parameter `beforeCopy` to [[\yii\helpers\FileHelper::copyDirectory()]].
@@ -173,7 +173,7 @@ class AssetManager extends Component
      * The signature of the callback should be as follows:
      *
      * ```
-     * function ($path)
+     * functions ($path)
      * ```
      *
      * where `$path` is the asset path. Note that the `$path` can be either directory where the asset
@@ -187,7 +187,7 @@ class AssetManager extends Component
      * Example of an implementation using MD4 hash:
      *
      * ```php
-     * function ($path) {
+     * functions ($path) {
      *     return hash('md4', $path);
      * }
      * ```

@@ -19,8 +19,8 @@ class GenerateTestTest extends BaseCommandRunner
         $this->assertEquals('tests/shire/HallUnderTheHillTest.php', $this->filename);
         $this->assertContains('class HallUnderTheHillTest extends \Codeception\Test\Unit', $this->content);
         $this->assertContains('Test was created in tests/shire/HallUnderTheHillTest.php', $this->output);
-        $this->assertContains('protected function _before()', $this->content);
-        $this->assertContains('protected function _after()', $this->content);
+        $this->assertContains('protected functions _before()', $this->content);
+        $this->assertContains('protected functions _after()', $this->content);
     }
 
     public function testCreateWithSuffix()

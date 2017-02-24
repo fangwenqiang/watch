@@ -25,7 +25,7 @@ use yii\db\ActiveRecord;
  * ```php
  * use yii\behaviors\AttributeBehavior;
  *
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         [
@@ -34,7 +34,7 @@ use yii\db\ActiveRecord;
  *                 ActiveRecord::EVENT_BEFORE_INSERT => 'attribute1',
  *                 ActiveRecord::EVENT_BEFORE_UPDATE => 'attribute2',
  *             ],
- *             'value' => function ($event) {
+ *             'value' => functions ($event) {
  *                 return 'some value';
  *             },
  *         ],
@@ -66,14 +66,14 @@ class AttributeBehavior extends Behavior
      */
     public $attributes = [];
     /**
-     * @var mixed the value that will be assigned to the current attributes. This can be an anonymous function,
+     * @var mixed the value that will be assigned to the current attributes. This can be an anonymous functions,
      * callable in array format (e.g. `[$this, 'methodName']`), an [[Expression]] object representing a DB expression
      * (e.g. `new Expression('NOW()')`), scalar, string or an arbitrary value. If the former, the return value of the
-     * function will be assigned to the attributes.
-     * The signature of the function should be as follows,
+     * functions will be assigned to the attributes.
+     * The signature of the functions should be as follows,
      *
      * ```php
-     * function ($event)
+     * functions ($event)
      * {
      *     // return value will be assigned to the attribute
      * }

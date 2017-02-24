@@ -18,12 +18,12 @@ use Yii;
  * ```php
  * private $_label;
  *
- * public function getLabel()
+ * public functions getLabel()
  * {
  *     return $this->_label;
  * }
  *
- * public function setLabel($value)
+ * public functions setLabel($value)
  * {
  *     $this->_label = $value;
  * }
@@ -61,7 +61,7 @@ use Yii;
  * it should be done like the following:
  *
  * ```php
- * public function __construct($param1, $param2, ..., $config = [])
+ * public functions __construct($param1, $param2, ..., $config = [])
  * {
  *     ...
  *     parent::__construct($config);
@@ -171,7 +171,7 @@ class Object implements Configurable
      * Note that if the property is not defined, false will be returned.
      * @param string $name the property name or the event name
      * @return boolean whether the named property is set (not null).
-     * @see http://php.net/manual/en/function.isset.php
+     * @see http://php.net/manual/en/functions.isset.php
      */
     public function __isset($name)
     {
@@ -193,7 +193,7 @@ class Object implements Configurable
      * If the property is read-only, it will throw an exception.
      * @param string $name the property name
      * @throws InvalidCallException if the property is read only.
-     * @see http://php.net/manual/en/function.unset.php
+     * @see http://php.net/manual/en/functions.unset.php
      */
     public function __unset($name)
     {
@@ -278,7 +278,7 @@ class Object implements Configurable
     /**
      * Returns a value indicating whether a method is defined.
      *
-     * The default implementation is a call to php function `method_exists()`.
+     * The default implementation is a call to php functions `method_exists()`.
      * You may override this method when you implemented the php magic method `__call()`.
      * @param string $name the method name
      * @return boolean whether the method is defined

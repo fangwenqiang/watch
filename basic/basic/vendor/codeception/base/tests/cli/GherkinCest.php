@@ -22,22 +22,22 @@ class GherkinCest
     {
         $I->executeCommand('gherkin:snippets scenario');
         $I->seeInShellOutput('@Given I have only idea of what\'s going on here');
-        $I->seeInShellOutput('public function iHaveOnlyIdeaOfWhatsGoingOnHere');
+        $I->seeInShellOutput('public functions iHaveOnlyIdeaOfWhatsGoingOnHere');
     }
 
     public function snippetsScenarioFile(CliGuy $I)
     {
         $I->executeCommand('gherkin:snippets scenario FileExamples.feature');
         $I->dontSeeInShellOutput('@Given I have only idea of what\'s going on here');
-        $I->dontSeeInShellOutput('public function iHaveOnlyIdeaOfWhatsGoingOnHere');
+        $I->dontSeeInShellOutput('public functions iHaveOnlyIdeaOfWhatsGoingOnHere');
     }
 
     public function snippetsScenarioFolder(CliGuy $I)
     {
         $I->executeCommand('gherkin:snippets scenario subfolder');
         $I->seeInShellOutput('Given I have a feature in a subfolder');
-        $I->seeInShellOutput('public function iHaveAFeatureInASubfolder');
+        $I->seeInShellOutput('public functions iHaveAFeatureInASubfolder');
         $I->dontSeeInShellOutput('@Given I have only idea of what\'s going on here');
-        $I->dontSeeInShellOutput('public function iHaveOnlyIdeaOfWhatsGoingOnHere');
+        $I->dontSeeInShellOutput('public functions iHaveOnlyIdeaOfWhatsGoingOnHere');
     }
 }

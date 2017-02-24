@@ -596,7 +596,7 @@ EOF;
 
     /**
      * Checks whether last response was valid JSON.
-     * This is done with json_last_error function.
+     * This is done with json_last_error functions.
      *
      * @part json
      */
@@ -1023,7 +1023,7 @@ EOF;
 
     /**
      * Checks whether last response was valid XML.
-     * This is done with libxml_get_last_error function.
+     * This is done with libxml_get_last_error functions.
      *
      * @part xml
      */

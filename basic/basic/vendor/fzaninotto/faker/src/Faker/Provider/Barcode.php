@@ -16,7 +16,7 @@ class Barcode extends Base
     }
 
     /**
-     * Utility function for computing EAN checksums
+     * Utility functions for computing EAN checksums
      */
     protected static function eanChecksum($input)
     {

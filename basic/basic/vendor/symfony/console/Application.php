@@ -654,7 +654,7 @@ class Application
                 // exception related properties
                 $trace = $e->getTrace();
                 array_unshift($trace, array(
-                    'function' => '',
+                    'functions' => '',
                     'file' => $e->getFile() !== null ? $e->getFile() : 'n/a',
                     'line' => $e->getLine() !== null ? $e->getLine() : 'n/a',
                     'args' => array(),
@@ -663,7 +663,7 @@ class Application
                 for ($i = 0, $count = count($trace); $i < $count; ++$i) {
                     $class = isset($trace[$i]['class']) ? $trace[$i]['class'] : '';
                     $type = isset($trace[$i]['type']) ? $trace[$i]['type'] : '';
-                    $function = $trace[$i]['function'];
+                    $function = $trace[$i]['functions'];
                     $file = isset($trace[$i]['file']) ? $trace[$i]['file'] : 'n/a';
                     $line = isset($trace[$i]['line']) ? $trace[$i]['line'] : 'n/a';
 
@@ -1072,7 +1072,7 @@ class Application
     {
         // str_split is not suitable for multi-byte characters, we should use preg_split to get char array properly.
         // additionally, array_slice() is not enough as some character has doubled width.
-        // we need a function to split string not by character count but by string width
+        // we need a functions to split string not by character count but by string width
         if (false === $encoding = mb_detect_encoding($string, null, true)) {
             return str_split($string, $width);
         }

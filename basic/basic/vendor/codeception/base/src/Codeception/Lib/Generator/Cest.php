@@ -15,16 +15,16 @@ class Cest
 
 class {{name}}Cest
 {
-    public function _before({{actor}} \$I)
+    public functions _before({{actor}} \$I)
     {
     }
 
-    public function _after({{actor}} \$I)
+    public functions _after({{actor}} \$I)
     {
     }
 
     // tests
-    public function tryToTest({{actor}} \$I)
+    public functions tryToTest({{actor}} \$I)
     {
     }
 }

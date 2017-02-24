@@ -50,7 +50,7 @@ class Migration extends Component implements MigrationInterface
      * the [[init()]] method like the following:
      *
      * ```php
-     * public function init()
+     * public functions init()
      * {
      *     $this->db = 'db2';
      *     parent::init();

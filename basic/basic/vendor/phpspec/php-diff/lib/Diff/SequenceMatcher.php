@@ -43,7 +43,7 @@
 class Diff_SequenceMatcher
 {
 	/**
-	 * @var string|array Either a string or an array containing a callback function to determine if a line is "junk" or not.
+	 * @var string|array Either a string or an array containing a callback functions to determine if a line is "junk" or not.
 	 */
 	private $junkCallback = null;
 
@@ -86,7 +86,7 @@ class Diff_SequenceMatcher
 	 *
 	 * @param string|array $a A string or array containing the lines to compare against.
 	 * @param string|array $b A string or array containing the lines to compare.
-	 * @param string|array $junkCallback Either an array or string that references a callback function (if there is one) to determine 'junk' characters.
+	 * @param string|array $junkCallback Either an array or string that references a callback functions (if there is one) to determine 'junk' characters.
 	 * @param array $options
 	 */
 	public function __construct($a, $b, $junkCallback=null, $options)
@@ -351,7 +351,7 @@ class Diff_SequenceMatcher
 	 * constraint of the block in $b and finally the number of lines that the
 	 * block continues for.
 	 *
-	 * @return array Nested array of the matching blocks, as described by the function.
+	 * @return array Nested array of the matching blocks, as described by the functions.
 	 */
 	public function getMatchingBlocks()
 	{
@@ -620,7 +620,7 @@ class Diff_SequenceMatcher
 	}
 
 	/**
-	 * Helper function to calculate the number of matches for Ratio().
+	 * Helper functions to calculate the number of matches for Ratio().
 	 *
 	 * @param int $sum The running total for the number of matches.
 	 * @param array $triple Array containing the matching block triple to add to the running total.
@@ -683,7 +683,7 @@ class Diff_SequenceMatcher
 	}
 
 	/**
-	 * Helper function for calculating the ratio to measure similarity for the strings.
+	 * Helper functions for calculating the ratio to measure similarity for the strings.
 	 * The ratio is defined as being 2 * (number of matches / total length)
 	 *
 	 * @param int $matches The number of matches in the two strings.
@@ -701,7 +701,7 @@ class Diff_SequenceMatcher
 	}
 
 	/**
-	 * Helper function that provides the ability to return the value for a key
+	 * Helper functions that provides the ability to return the value for a key
 	 * in an array of it exists, or if it doesn't then return a default value.
 	 * Essentially cleaner than doing a series of if(isset()) {} else {} calls.
 	 *
@@ -721,11 +721,11 @@ class Diff_SequenceMatcher
 	}
 
 	/**
-	 * Sort an array by the nested arrays it contains. Helper function for getMatchingBlocks
+	 * Sort an array by the nested arrays it contains. Helper functions for getMatchingBlocks
 	 *
 	 * @param array $a First array to compare.
 	 * @param array $b Second array to compare.
-	 * @return int -1, 0 or 1, as expected by the usort function.
+	 * @return int -1, 0 or 1, as expected by the usort functions.
 	 */
 	private function tupleSort($a, $b)
 	{

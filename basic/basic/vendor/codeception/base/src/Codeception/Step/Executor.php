@@ -11,7 +11,7 @@ class Executor extends CodeceptionStep
 
     public function __construct(\Closure $callable, $arguments = [])
     {
-        parent::__construct('execute callable function', []);
+        parent::__construct('execute callable functions', []);
 
         $this->callable = $callable;
     }

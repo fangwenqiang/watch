@@ -39,7 +39,7 @@ class ErrorHandler implements EventSubscriberInterface
             $this->errorLevel = eval("return {$settings['error_level']};");
         }
         error_reporting($this->errorLevel);
-        // We must register shutdown function before deprecation error handler to restore previous error handler
+        // We must register shutdown functions before deprecation error handler to restore previous error handler
         // and silence DeprecationErrorHandler yelling about 'THE ERROR HANDLER HAS CHANGED!'
         register_shutdown_function([$this, 'shutdownHandler']);
         $this->registerDeprecationErrorHandler();

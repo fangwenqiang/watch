@@ -18,7 +18,7 @@ use yii\db\BaseActiveRecord;
  * ```php
  * use yii\behaviors\TimestampBehavior;
  *
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         TimestampBehavior::className(),
@@ -41,7 +41,7 @@ use yii\db\BaseActiveRecord;
  * ```php
  * use yii\db\Expression;
  *
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         [
@@ -84,7 +84,7 @@ class TimestampBehavior extends AttributeBehavior
     /**
      * @inheritdoc
      *
-     * In case, when the value is `null`, the result of the PHP function [time()](http://php.net/manual/en/function.time.php)
+     * In case, when the value is `null`, the result of the PHP functions [time()](http://php.net/manual/en/functions.time.php)
      * will be used as value.
      */
     public $value;
@@ -108,7 +108,7 @@ class TimestampBehavior extends AttributeBehavior
     /**
      * @inheritdoc
      *
-     * In case, when the [[value]] is `null`, the result of the PHP function [time()](http://php.net/manual/en/function.time.php)
+     * In case, when the [[value]] is `null`, the result of the PHP functions [time()](http://php.net/manual/en/functions.time.php)
      * will be used as value.
      */
     protected function getValue($event)

@@ -23,7 +23,7 @@ class Foo{function foo(){}
     }
 
     /**
-     * This docblock does not belong to the baz function
+     * This docblock does not belong to the baz functions
      */
 
     public function baz()

@@ -113,7 +113,7 @@ final class Example extends BaseTag
     /**
      * Sets the file path as an URI.
      *
-     * This function is equivalent to {@link setFilePath()}, except that it
+     * This functions is equivalent to {@link setFilePath()}, except that it
      * converts an URI to a file path before that.
      *
      * There is no getFileURI(), as {@link getFilePath()} is compatible.

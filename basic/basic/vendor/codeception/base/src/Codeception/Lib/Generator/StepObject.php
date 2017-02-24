@@ -21,7 +21,7 @@ EOF;
 
     protected $actionTemplate = <<<EOF
 
-    public function {{action}}()
+    public functions {{action}}()
     {
         \$I = \$this;
     }

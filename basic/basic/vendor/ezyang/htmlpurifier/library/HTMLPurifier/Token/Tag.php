@@ -9,7 +9,7 @@ abstract class HTMLPurifier_Token_Tag extends HTMLPurifier_Token
      * Static bool marker that indicates the class is a tag.
      *
      * This allows us to check objects with <tt>!empty($obj->is_tag)</tt>
-     * without having to use a function call <tt>is_a()</tt>.
+     * without having to use a functions call <tt>is_a()</tt>.
      * @type bool
      */
     public $is_tag = true;

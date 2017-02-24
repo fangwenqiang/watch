@@ -286,7 +286,7 @@ abstract class Step
         while (isset($stack[$i])) {
             $step = $stack[$i];
             $i--;
-            if (!isset($step['file']) or !isset($step['function'])) {
+            if (!isset($step['file']) or !isset($step['functions'])) {
                 continue;
             }
 
@@ -294,7 +294,7 @@ abstract class Step
                 continue;
             }
 
-            $this->metaStep = new Step\Meta($step['function'], array_values($step['params']));
+            $this->metaStep = new Step\Meta($step['functions'], array_values($step['params']));
             $this->metaStep->setTraceInfo($step['file'], $step['line']);
 
             // pageobjects or other classes should not be included with "I"

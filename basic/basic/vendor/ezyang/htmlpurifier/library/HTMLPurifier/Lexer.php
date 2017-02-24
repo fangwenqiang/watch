@@ -176,7 +176,7 @@ class HTMLPurifier_Lexer
      * into the correct ones.
      *
      * @warning
-     * You should be able to treat the output of this function as
+     * You should be able to treat the output of this functions as
      * completely parsed, but that's only because all other entities should
      * have been handled previously in substituteNonSpecialEntities()
      *
@@ -268,7 +268,7 @@ class HTMLPurifier_Lexer
     }
 
     /**
-     * Callback function for escapeCDATA() that does the work.
+     * Callback functions for escapeCDATA() that does the work.
      *
      * @warning Though this is public in order to let the callback happen,
      *          calling it directly is not recommended.
