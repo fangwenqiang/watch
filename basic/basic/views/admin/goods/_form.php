@@ -8,11 +8,11 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="goods-form">
+<div class="goods-form" style="float:left; width:500px; margin-left:200px;">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'category_id')->textInput() ?>
+    <?= $form->field($model, 'type_id')->textInput() ?>
 
     <?= $form->field($model, 'goods_sn')->textInput(['maxlength' => true]) ?>
 

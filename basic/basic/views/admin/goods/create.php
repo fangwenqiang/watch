@@ -107,13 +107,13 @@ $this->params['breadcrumbs'][] = $this->title;
 </label>
 
 <br>
-<input class="form-control " type="text" name="goods[promote_price]" placeholder="促销价格">
+<input class="form-control" type="text" name="goods[promote_price]" placeholder="促销价格">
 <br>
-<input class="form-control " type="text" name="goods[promote_start_date]" placeholder="促销开始时间">
+<input class="form-control" type="text" name="goods[promote_start_date]" placeholder="促销开始时间">
 <br>
-<input class="form-control " type="text" name="goods[promote_end_date]" placeholder="促销结束时间">
+<input class="form-control" type="text" name="goods[promote_end_date]" placeholder="促销结束时间">
 <br>
-<input class="form-control " type="text" name="goods[author]" placeholder="作者">
+<input class="form-control" type="text" name="goods[author]" placeholder="作者">
 <br>
 </div>
 
@@ -158,10 +158,10 @@ $(function(){
 				for (var i = data.length - 1; i >= 0; i--) {
 					if (data[i]['attr_input_type'] == 0){
 				
-		stre = '请选择'+data[i]['attr_name']+':<input class="form-control" type="text" name="attr_value[]" placeholder="请填入具体值">';
+		//stre = '请选择'+data[i]['attr_name']+':<input class="form-control" type="text" name="attr_value[]" placeholder="请填入具体值">';
 
 						// 类型1 可选参数
-
+						alert('暂时不支持自动输入');
 
 					}else if(data[i]['attr_input_type'] == 1){
 					//可选属性值
@@ -175,7 +175,16 @@ $(function(){
 					stre +='</select><br/>';
 					str += stre;
 					}else{	
-
+						// 多选框
+				 stre = data[i]['attr_name']+':';
+				 strs = data[i]['attr_values'].split("\r\n"); 
+						for (var y=0;  y <= strs.length - 1;y++) {
+						stre+='<label class="radio-inline">'+
+  						'<input type="radio" name="attr_value[]" id="inlineRadio2" value='+data[i]["attr_id"]+','+strs[y]
+  						+'>'+strs[y]+'</label>'
+						}
+					stre +='</select><br/>';
+					str += stre;
 
 						// 类型3
 

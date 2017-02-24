@@ -97,6 +97,7 @@ use yii\helpers\Url;
 
                 <li class="gao"><a href="javascript:void(0)"><i class="articleCat"></i><em>商品管理</em></a></li>
                 <ul style="display:none">
+                    <li><a href="<?php echo Url::to(['admin/goods/index'])?>"><i class="article"></i><em>商品展示</em></a></li>
                     <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
                 </ul>
 

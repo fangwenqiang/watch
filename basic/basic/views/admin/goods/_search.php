@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="goods-search">
+<div class="goods-search" style="float:left; width:500px; margin-left:200px;">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'g_id') ?>
 
-    <?= $form->field($model, 'category_id') ?>
+    <?= $form->field($model, 'type_id') ?>
 
     <?= $form->field($model, 'goods_sn') ?>
 
