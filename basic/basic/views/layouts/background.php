@@ -12,6 +12,8 @@ use yii\helpers\Url;
     <link href="css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="dcWrap"> <div id="dcHead">
@@ -61,7 +63,7 @@ use yii\helpers\Url;
                 <li><a href="product.html"><i class="product"></i><em>子栏</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>商品管理</em></a></li>
+                <li><a href=""><i class="articleCat"></i><em>商品管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>子栏</em></a></li>
             </ul>
             <ul>
