@@ -12,7 +12,7 @@ use yii\helpers\Url;
 </style>
 <div id="dcMain">
     <!-- 当前位置 -->
-    <div id="urHere">DouPHP 管理中心<b>></b><strong>网站管理员</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <div id="urHere">DouPHP 管理中心<b>></b><strong>角色列表</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="<?=url::to(['admin/rbac/admin'])?>" class="actionBtn">查看管理员</a>赋角色</h3>
         <form method="post" name="<?=url::to(['admin/rbac/addroad'])?>">
             <div class="tableBasic">

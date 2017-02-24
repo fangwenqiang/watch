@@ -8,6 +8,7 @@ use app\models\Node;
 use app\models\NodeForm;
 use app\models\Role;
 use app\models\Role_admin;
+use app\models\Role_node;
 use app\models\RoleForm;
 use yii\web\Controller;
 
@@ -210,7 +211,7 @@ class RbacController extends Controller
         }
         return $data;
     }
-    
+
     /*
      * 给用户赋角色
      * */
@@ -250,5 +251,44 @@ class RbacController extends Controller
         return $this->render('road',['adminOne'=>$adminOne,'roleList'=>$roleList,'role_id'=>$role_id]);
     }
 
+    /*
+     * 给角色赋权限
+     * */
+    public function actionAddrono()
+    {
+        $role_node = new Role_node(); //关联表对象
+        $connection = \Yii::$app->db;
+        $request = \Yii::$app->request;
+        $role_id = $request->get('role_id');    //角色ID
+        $role = new Role();
+        $node = new Node();
+        $roleOne = $role->show($role_id);    //角色信息
+        $nodeList = $this->tree($node->show(),$parent_id = 0,$level = 0);   //权限信息
+        $node_id = $role_node->show($role_id);
+        if($request->isPost){
+            $data = $request->post();
+            $resRole = Role_node::find()->where(['role_id'=>$role_id])->all();  //角色 权限表
+            if(!empty($resRole)){
+                $command1 = $connection->createCommand("DELETE FROM mb_role_node WHERE role_id=$role_id");
+                $command1->execute();
+            }
+            if(isset($data['node_id'])){
+                foreach($data['node_id'] as $v){
+                    $role_node = new Role_node(); //关联表对象
+                    $role_node->node_id = $v;
+                    $role_node->role_id = $data['role_id'];
+                    $res = $role_node->save();
+                }
+            }else{
+                $res = 1;
+            }
+            if($res){
+                return $this->redirect(['admin/rbac/msg', ['msg' => '赋权成功','url'=>'/admin/rbac/role']]);
+            }else{
+                return $this->redirect(['admin/rbac/msg', ['msg' => '赋权失败','url'=>'/admin/rbac/role']]);
+            }
+        }
+        return $this->render('rono',['roleOne'=>$roleOne,'nodeList'=>$nodeList,'node_id'=>$node_id]);
+    }
 
 }

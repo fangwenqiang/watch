@@ -7,7 +7,7 @@ use yii\bootstrap\Html;
 <div id="dcMain">
     <!-- 当前位置 -->
     <div id="urHere">DouPHP 管理中心<b>></b><strong>网站管理员</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="<?=url::to(['admin/rbac/admin']) ?>" class="actionBtn">返回列表</a>网站管理员</h3>
+        <h3><a href="<?=url::to(['admin/rbac/admin']) ?>" class="actionBtn">返回列表</a>添加角色</h3>
         <?php $form = ActiveForm::begin([
             'method'=>'post'
         ]); ?>
