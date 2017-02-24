@@ -1,5 +1,5 @@
 <?php
-namespace app\models\Home;
+namespace app\models;
 use Yii;
 
 class Test extends \yii\db\ActiveRecord
@@ -11,6 +11,6 @@ class Test extends \yii\db\ActiveRecord
 
     public function test()
     {
-        return "欢迎使用前台模型";
+        return "欢迎使用后台模型";
     }
 }

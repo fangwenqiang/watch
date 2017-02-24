@@ -8,3 +8,5 @@ return [
     'charset' => 'utf8',
     'tablePrefix' => 'mb_',
 ];
+
+
