@@ -61,13 +61,13 @@ use yii\helpers\Url;
                 <li class="gao"><a href="javascript:void(0)"><i class="system"></i><em>系统设置</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/system/index']);?>"><i class="article"></i><em>设置</em></a></li>
-                </ul>                
+                </ul>
             </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="system"></i><em>导航管理</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/nav/index']);?>"><i class="article"></i><em>导航列表</em></a></li>
-                </ul> 
+                </ul>
             </ul>
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="mobile"></i><em>首页设置</em></a></li>

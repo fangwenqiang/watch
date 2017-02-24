@@ -7,7 +7,7 @@ use yii\web\Controller;
 use  yii\web\Session;
 
 /*
- * RBAC 权限管理
+ * 管理员登录退出
  * */
 
 class LoginController extends Controller
