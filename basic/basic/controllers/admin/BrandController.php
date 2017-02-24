@@ -47,16 +47,16 @@ class BrandController extends Controller
             $post['brand_logo']=$model->brandUpload($_FILES['brand_logo']);
             //判断前台接收的数据
             if(empty($post['brand_name'])) {
-                return $this->redirect(['admin/brand/msg', ['msg' => '品牌名称不能为空','url'=>'/admin/brand/update']]);
+                return $this->redirect(['admin/brand/msg', ['msg' => '品牌名称不能为空','url'=>'/admin/brand/list']]);
             }
             if(empty($post['brand_desc'])) {
-                return $this->redirect(['admin/brand/msg', ['msg' => '品牌介绍不能为空','url'=>'/admin/brand/update']]);
+                return $this->redirect(['admin/brand/msg', ['msg' => '品牌介绍不能为空','url'=>'/admin/brand/list']]);
             }
             if(empty($post['sort'])) {
-                return $this->redirect(['admin/brand/msg', ['msg' => '排序不能为空','url'=>'/admin/brand/update']]);
+                return $this->redirect(['admin/brand/msg', ['msg' => '排序不能为空','url'=>'/admin/brand/list']]);
             }
-            if(!is_integer($post['sort'])) {
-                return $this->redirect(['admin/brand/msg', ['msg' => '排序必须为数字','url'=>'/admin/brand/update']]);
+            if(!preg_match("/^\d*$/",$post['sort'])) {
+                return $this->redirect(['admin/brand/msg', ['msg' => '排序必须为数字','url'=>'/admin/brand/list']]);
             }
             //删除csrf 因为yii框架的方法不过率
             unset($post['_csrf']);
@@ -110,8 +110,8 @@ class BrandController extends Controller
             if(empty($post['sort'])) {
                 return $this->redirect(['admin/brand/msg', ['msg' => '排序不能为空','url'=>'/admin/brand/add']]);
             }
-            if(!is_integer($post['sort'])) {
-                return $this->redirect(['admin/brand/msg', ['msg' => '排序必须为数字','url'=>'/admin/brand/update']]);
+            if(!preg_match("/^\d*$/",$post['sort'])) {
+                return $this->redirect(['admin/brand/msg', ['msg' => '排序必须为数字','url'=>'/admin/brand/add']]);
             }
             unset($post['_csrf']);
             //调用添加方法
