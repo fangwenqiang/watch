@@ -136,7 +136,6 @@ class Brand extends \yii\db\ActiveRecord
         
         //告诉浏览器以图片形式解析
         // header('content-type:image/png');
-        // imagepng($image);
         imagepng($image,"./public/admin/images/sanbai/". $file['name']);
         //销毁资源
         imagedestroy($image);
