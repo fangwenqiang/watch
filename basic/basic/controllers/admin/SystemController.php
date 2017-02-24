@@ -7,7 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Nav;  //模型层
-use app\lib\Filtration;
+use app\lib\Functions\Filtration;
 
 
 class SystemController extends Controller
