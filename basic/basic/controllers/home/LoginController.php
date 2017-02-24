@@ -1,7 +1,6 @@
 <?php
 
-namespace app\controllers\admin;
-
+namespace app\controllers\home;
 use app\models\Admin;
 use yii\web\Controller;
 use  yii\web\Session;
