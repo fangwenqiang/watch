@@ -146,9 +146,11 @@ use yii\helpers\Url;
 </div>
 </body>
 </html>
+
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
+
 <script>
     $('#out').click(function () {
         $.ajax({
