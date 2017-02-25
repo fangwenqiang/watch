@@ -78,7 +78,7 @@ use yii\helpers\Url;
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>用户管理</em></a></li>
                 <ul style="display:none">
-                    <li><a href="nav.html"><i class="nav"></i><em>用户列表</em></a></li>
+                    <li><a href="<?=url::to(['admin/user/user'])?>"><i class="nav"></i><em>用户列表</em></a></li>
                 </ul>
             </ul>
             <ul>

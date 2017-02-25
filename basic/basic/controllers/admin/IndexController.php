@@ -20,15 +20,7 @@ class IndexController extends  CommonController
      */
     public function actionIndex()
     {
-        $session = \Yii::$app->session;
-        $user = $session->get('user');
-        if (empty($user)) {
-            $this->layout = false;
-            return $this->render('../login/login');
-        } else {
             return $this->render('index');
-        }
-
     }
 
     /*
