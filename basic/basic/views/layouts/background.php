@@ -9,9 +9,12 @@ use yii\helpers\Url;
     <title>DouPHP 管理中心</title>
     <meta name="Copyright" content="Douco Design."/>
     <base href="<?php echo Url::to('@web/public/admin/') ?>">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
     <link href="css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
+
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
@@ -145,9 +148,6 @@ use yii\helpers\Url;
 </body>
 </html>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
 
 <script>
     $('#out').click(function () {
