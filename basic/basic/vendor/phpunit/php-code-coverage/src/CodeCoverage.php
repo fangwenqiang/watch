@@ -841,7 +841,7 @@ class CodeCoverage
                                         $classes[$token->getName()]['methods']
                                     );
                                 } while ($lastMethod !== null &&
-                                    substr($lastMethod['signature'], 0, 18) == 'anonymous function');
+                                    substr($lastMethod['signature'], 0, 18) == 'anonymous functions');
 
                                 if ($lastMethod === null) {
                                     $lastMethod = $firstMethod;

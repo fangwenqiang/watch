@@ -10,19 +10,19 @@
 
 /**
  * yii is the root module for all Yii JavaScript modules.
- * It implements a mechanism of organizing JavaScript code in modules through the function "yii.initModule()".
+ * It implements a mechanism of organizing JavaScript code in modules through the functions "yii.initModule()".
  *
  * Each module should be named as "x.y.z", where "x" stands for the root module (for the Yii core code, this is "yii").
  *
  * A module may be structured as follows:
  *
  * ```javascript
- * yii.sample = (function($) {
+ * yii.sample = (functions($) {
  *     var pub = {
  *         // whether this module is currently active. If false, init() will not be called for this module
  *         // it will also not be called for all its child modules. If this property is undefined, it means true.
  *         isActive: true,
- *         init: function() {
+ *         init: functions() {
  *             // ... module initialization code go here ...
  *         },
  *

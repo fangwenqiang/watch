@@ -20,7 +20,7 @@ class HTMLPurifier_DefinitionCache_Decorator extends HTMLPurifier_DefinitionCach
     }
 
     /**
-     * Lazy decorator function
+     * Lazy decorator functions
      * @param HTMLPurifier_DefinitionCache $cache Reference to cache object to decorate
      * @return HTMLPurifier_DefinitionCache_Decorator
      */

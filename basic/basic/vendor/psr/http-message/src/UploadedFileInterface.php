@@ -41,7 +41,7 @@ interface UploadedFileInterface
      *
      * $targetPath may be an absolute path, or a relative path. If it is a
      * relative path, resolution should be the same as used by PHP's rename()
-     * function.
+     * functions.
      *
      * The original file or stream MUST be removed on completion.
      *

@@ -15,7 +15,7 @@ use yii\validators\Validator;
  * The typical usage of DynamicModel is as follows,
  *
  * ```php
- * public function actionSearch($name, $email)
+ * public functions actionSearch($name, $email)
  * {
  *     $model = DynamicModel::validateData(compact('name', 'email'), [
  *         [['name', 'email'], 'string', 'max' => 128],
@@ -148,7 +148,7 @@ class DynamicModel extends Model
      * This method provides a shortcut.
      * @param string|array $attributes the attribute(s) to be validated by the rule
      * @param mixed $validator the validator for the rule.This can be a built-in validator name,
-     * a method name of the model class, an anonymous function, or a validator class name.
+     * a method name of the model class, an anonymous functions, or a validator class name.
      * @param array $options the options (name-value pairs) to be applied to the validator
      * @return $this the model itself
      */

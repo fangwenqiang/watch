@@ -40,7 +40,7 @@ class DeepCopy
     private $useCloneMethod;
 
     /**
-     * @param bool $useCloneMethod   If set to true, when an object implements the __clone() function, it will be used
+     * @param bool $useCloneMethod   If set to true, when an object implements the __clone() functions, it will be used
      *                               instead of the regular deep cloning.
      */
     public function __construct($useCloneMethod = false)

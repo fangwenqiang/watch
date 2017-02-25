@@ -23,8 +23,8 @@ class GenerateGroupTest extends BaseCommandRunner
         $this->assertEquals(\Codeception\Configuration::supportDir().'Group/Core.php', $generated['filename']);
         $this->assertContains('namespace Group;', $generated['content']);
         $this->assertContains('class Core', $generated['content']);
-        $this->assertContains('public function _before', $generated['content']);
-        $this->assertContains('public function _after', $generated['content']);
+        $this->assertContains('public functions _before', $generated['content']);
+        $this->assertContains('public functions _after', $generated['content']);
         $this->assertContains('static $group = \'core\'', $generated['content']);
         $this->assertIsValidPhp($generated['content']);
     }

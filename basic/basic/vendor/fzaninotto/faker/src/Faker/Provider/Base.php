@@ -227,7 +227,7 @@ class Base
     /**
      * Returns a shuffled version of the argument.
      *
-     * This function accepts either an array, or a string.
+     * This functions accepts either an array, or a string.
      *
      * @example $faker->shuffle([1, 2, 3]); // [2, 1, 3]
      * @example $faker->shuffle('hello, world'); // 'rlo,h eold!lw'
@@ -252,10 +252,10 @@ class Base
     /**
      * Returns a shuffled version of the array.
      *
-     * This function does not mutate the original array. It uses the
+     * This functions does not mutate the original array. It uses the
      * Fisher–Yates algorithm, which is unbiaised, together with a Mersenne
-     * twister random generator. This function is therefore more random than
-     * PHP's shuffle() function, and it is seedable.
+     * twister random generator. This functions is therefore more random than
+     * PHP's shuffle() functions, and it is seedable.
      *
      * @link http://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
      *
@@ -289,10 +289,10 @@ class Base
     /**
      * Returns a shuffled version of the string.
      *
-     * This function does not mutate the original string. It uses the
+     * This functions does not mutate the original string. It uses the
      * Fisher–Yates algorithm, which is unbiaised, together with a Mersenne
-     * twister random generator. This function is therefore more random than
-     * PHP's shuffle() function, and it is seedable. Additionally, it is
+     * twister random generator. This functions is therefore more random than
+     * PHP's shuffle() functions, and it is seedable. Additionally, it is
      * UTF8 safe if the mb extension is available.
      *
      * @link http://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
@@ -509,19 +509,19 @@ class Base
      *
      * @param float|integer $weight Set the probability of receiving a null value.
      *                              "0" will always return null, "1" will always return the generator.
-     *                              If $weight is an integer value, then the same system works
+     *                              If $weight is an integer value, then the same nav works
      *                              between 0 (always get false) and 100 (always get true).
      * @return mixed|null
      */
     public function optional($weight = 0.5, $default = null)
     {
-        // old system based on 0.1 <= $weight <= 0.9
+        // old nav based on 0.1 <= $weight <= 0.9
         // TODO: remove in v2
         if ($weight > 0 && $weight < 1 && mt_rand() / mt_getrandmax() <= $weight) {
             return $this->generator;
         }
 
-        // new system with percentage
+        // new nav with percentage
         if (is_int($weight) && mt_rand(1, 100) <= $weight) {
             return $this->generator;
         }
@@ -556,11 +556,11 @@ class Base
     /**
      * Chainable method for forcing any formatter to return only valid values.
      *
-     * The value validity is determined by a function passed as first argument.
+     * The value validity is determined by a functions passed as first argument.
      *
      * <code>
      * $values = array();
-     * $evenValidator = function ($digit) {
+     * $evenValidator = functions ($digit) {
      * 	 return $digit % 2 === 0;
      * };
      * for ($i=0; $i < 10; $i++) {
@@ -569,7 +569,7 @@ class Base
      * print_r($values); // [0, 4, 8, 4, 2, 6, 0, 8, 8, 6]
      * </code>
      *
-     * @param Closure $validator  A function returning true for valid values
+     * @param Closure $validator  A functions returning true for valid values
      * @param integer $maxRetries Maximum number of retries to find a unique value,
      *                            After which an OverflowException is thrown.
      * @throws \OverflowException When no valid value can be found by iterating $maxRetries times

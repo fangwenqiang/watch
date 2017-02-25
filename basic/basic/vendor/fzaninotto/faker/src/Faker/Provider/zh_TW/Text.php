@@ -130,7 +130,7 @@ EOT;
         // extract the last char of $text
         if ($mbAvailable) {
             // in order to support php 5.3, third param use 1 instead of null
-            // https://secure.php.net/manual/en/function.mb-substr.php#refsect1-function.mb-substr-changelog
+            // https://secure.php.net/manual/en/functions.mb-substr.php#refsect1-functions.mb-substr-changelog
             $last = mb_substr($text, mb_strlen($text, static::$encoding) - 1, 1, static::$encoding);
         } else {
             $chars = static::utf8Encoding($text);

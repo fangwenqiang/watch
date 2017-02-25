@@ -19,8 +19,8 @@ class GeneratePhpunitTest extends BaseCommandRunner
         $this->assertEquals('tests/shire/PonyTest.php', $this->filename);
         $this->assertContains('class PonyTest extends \PHPUnit_Framework_TestCase', $this->content);
         $this->assertContains('Test was created in tests/shire/PonyTest.php', $this->output);
-        $this->assertContains('protected function setUp()', $this->content);
-        $this->assertContains('protected function tearDown()', $this->content);
+        $this->assertContains('protected functions setUp()', $this->content);
+        $this->assertContains('protected functions tearDown()', $this->content);
         $this->assertIsValidPhp($this->content);
     }
 

@@ -58,7 +58,7 @@
 	/*--------------------------------------------------------------------------*/
 
 	/**
-	 * A generic error utility function.
+	 * A generic error utility functions.
 	 * @private
 	 * @param {String} type The error type.
 	 * @returns {Error} Throws a `RangeError` with the applicable error message.
@@ -68,12 +68,12 @@
 	}
 
 	/**
-	 * A generic `Array#map` utility function.
+	 * A generic `Array#map` utility functions.
 	 * @private
 	 * @param {Array} array The array to iterate over.
-	 * @param {Function} callback The function that gets called for every array
+	 * @param {Function} callback The functions that gets called for every array
 	 * item.
-	 * @returns {Array} A new array of values returned by the callback function.
+	 * @returns {Array} A new array of values returned by the callback functions.
 	 */
 	function map(array, fn) {
 		var length = array.length;
@@ -89,10 +89,10 @@
 	 * addresses.
 	 * @private
 	 * @param {String} domain The domain name or email address.
-	 * @param {Function} callback The function that gets called for every
+	 * @param {Function} callback The functions that gets called for every
 	 * character.
 	 * @returns {Array} A new string of characters returned by the callback
-	 * function.
+	 * functions.
 	 */
 	function mapDomain(string, fn) {
 		var parts = string.split('@');
@@ -113,7 +113,7 @@
 	/**
 	 * Creates an array containing the numeric code points of each Unicode
 	 * character in the string. While JavaScript uses UCS-2 internally,
-	 * this function will convert a pair of surrogate halves (each of which
+	 * this functions will convert a pair of surrogate halves (each of which
 	 * UCS-2 exposes as separate characters) into a single code point,
 	 * matching UTF-16.
 	 * @see `punycode.ucs2.encode`
@@ -210,7 +210,7 @@
 	}
 
 	/**
-	 * Bias adaptation function as per section 3.4 of RFC 3492.
+	 * Bias adaptation functions as per section 3.4 of RFC 3492.
 	 * http://tools.ietf.org/html/rfc3492#section-3.4
 	 * @private
 	 */

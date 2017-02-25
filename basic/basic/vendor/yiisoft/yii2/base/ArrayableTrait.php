@@ -35,7 +35,7 @@ trait ArrayableTrait
      * returning the corresponding field value. The signature of the callable should be:
      *
      * ```php
-     * function ($model, $field) {
+     * functions ($model, $field) {
      *     // return field value
      * }
      * ```
@@ -53,7 +53,7 @@ trait ArrayableTrait
      *     'email',
      *     'firstName' => 'first_name',
      *     'lastName' => 'last_name',
-     *     'fullName' => function () {
+     *     'fullName' => functions () {
      *         return $this->first_name . ' ' . $this->last_name;
      *     },
      * ];

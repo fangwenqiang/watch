@@ -109,7 +109,7 @@ use yii\helpers\VarDumper;
  * class Book extends \Faker\Provider\Base
  * {
  *
- *     public function title($nbWords = 5)
+ *     public functions title($nbWords = 5)
  *     {
  *         $sentence = $this->generator->sentence($nbWords);
  *         return mb_substr($sentence, 0, mb_strlen($sentence) - 1);

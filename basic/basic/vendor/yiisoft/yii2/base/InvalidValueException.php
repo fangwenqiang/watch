@@ -8,7 +8,7 @@
 namespace yii\base;
 
 /**
- * InvalidValueException represents an exception caused by a function returning a value of unexpected type.
+ * InvalidValueException represents an exception caused by a functions returning a value of unexpected type.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0

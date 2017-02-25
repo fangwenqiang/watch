@@ -13,11 +13,14 @@
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="dist/sweetalert-dev.js"></script>
     <script type="text/javascript" src="js/jquery.carousel.js"></script>
+
 </head>
 <body>
 
 <div id="dcWrap">
     <div id="dcMain">
+
+
    <!-- 当前位置 -->
      <div id="urHere">DouPHP 管理中心<b>></b><strong>首页轮播图</strong> </div>
      <div class="mainBox imgModule">
@@ -90,6 +93,7 @@
                     <?=yii\widgets\LinkPager::widget(['pagination' => $page])?>
             </td>
         </tr>
+
         </table>
 
 
@@ -106,3 +110,4 @@
 </script>
 </body>
 </html>
+

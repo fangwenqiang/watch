@@ -42,7 +42,7 @@ class TextTest extends TestCase
         $text = new Text(50, 90, false, false);
 
         $this->assertStringMatchesFormatFile(
-            TEST_FILES_PATH . 'class-with-anonymous-function-text.txt',
+            TEST_FILES_PATH . 'class-with-anonymous-functions-text.txt',
             str_replace(PHP_EOL, "\n", $text->process($this->getCoverageForClassWithAnonymousFunction()))
         );
     }

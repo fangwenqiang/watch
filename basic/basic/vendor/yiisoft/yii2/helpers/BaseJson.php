@@ -45,7 +45,7 @@ class BaseJson
      * represented in terms of a [[JsExpression]] object.
      * @param mixed $value the data to be encoded.
      * @param integer $options the encoding options. For more details please refer to
-     * <http://www.php.net/manual/en/function.json-encode.php>. Default is `JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE`.
+     * <http://www.php.net/manual/en/functions.json-encode.php>. Default is `JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE`.
      * @return string the encoding result.
      * @throws InvalidParamException if there is any encoding error.
      */
@@ -102,7 +102,7 @@ class BaseJson
     /**
      * Handles [[encode()]] and [[decode()]] errors by throwing exceptions with the respective error message.
      *
-     * @param integer $lastError error code from [json_last_error()](http://php.net/manual/en/function.json-last-error.php).
+     * @param integer $lastError error code from [json_last_error()](http://php.net/manual/en/functions.json-last-error.php).
      * @throws \yii\base\InvalidParamException if there is any encoding/decoding error.
      * @since 2.0.6
      */

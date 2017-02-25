@@ -37,7 +37,7 @@ class UndefinedFunctionFatalErrorHandler implements FatalErrorHandlerInterface
             return;
         }
 
-        $prefix = 'Call to undefined function ';
+        $prefix = 'Call to undefined functions ';
         $prefixLen = strlen($prefix);
         if (0 !== strpos($error['message'], $prefix)) {
             return;
@@ -47,10 +47,10 @@ class UndefinedFunctionFatalErrorHandler implements FatalErrorHandlerInterface
         if (false !== $namespaceSeparatorIndex = strrpos($fullyQualifiedFunctionName, '\\')) {
             $functionName = substr($fullyQualifiedFunctionName, $namespaceSeparatorIndex + 1);
             $namespacePrefix = substr($fullyQualifiedFunctionName, 0, $namespaceSeparatorIndex);
-            $message = sprintf('Attempted to call function "%s" from namespace "%s".', $functionName, $namespacePrefix);
+            $message = sprintf('Attempted to call functions "%s" from namespace "%s".', $functionName, $namespacePrefix);
         } else {
             $functionName = $fullyQualifiedFunctionName;
-            $message = sprintf('Attempted to call function "%s" from the global namespace.', $functionName);
+            $message = sprintf('Attempted to call functions "%s" from the global namespace.', $functionName);
         }
 
         $candidates = array();

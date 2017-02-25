@@ -587,7 +587,7 @@ class Module extends ServiceLocator
      * If you override this method, your code should look like the following:
      *
      * ```php
-     * public function beforeAction($action)
+     * public functions beforeAction($action)
      * {
      *     if (!parent::beforeAction($action)) {
      *         return false;
@@ -618,7 +618,7 @@ class Module extends ServiceLocator
      * If you override this method, your code should look like the following:
      *
      * ```php
-     * public function afterAction($action, $result)
+     * public functions afterAction($action, $result)
      * {
      *     $result = parent::afterAction($action, $result);
      *     // your custom code here

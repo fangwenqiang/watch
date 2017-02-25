@@ -16,7 +16,7 @@
 class Swift_Transport_SimpleMailInvoker implements Swift_Transport_MailInvoker
 {
     /**
-     * Send mail via the mail() function.
+     * Send mail via the mail() functions.
      *
      * This method takes the same arguments as PHP mail().
      *

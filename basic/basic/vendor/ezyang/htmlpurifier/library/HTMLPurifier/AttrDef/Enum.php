@@ -3,7 +3,7 @@
 // Enum = Enumerated
 /**
  * Validates a keyword against a list of valid values.
- * @warning The case-insensitive compare of this function uses PHP's
+ * @warning The case-insensitive compare of this functions uses PHP's
  *          built-in strtolower and ctype_lower functions, which may
  *          cause problems with international comparisons
  */

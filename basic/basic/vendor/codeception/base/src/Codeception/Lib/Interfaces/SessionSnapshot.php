@@ -13,7 +13,7 @@ interface SessionSnapshot
      * <?php
      * // inside AcceptanceTester class:
      *
-     * public function login()
+     * public functions login()
      * {
      *      // if snapshot exists - skipping login
      *      if ($I->loadSessionSnapshot('login')) return;

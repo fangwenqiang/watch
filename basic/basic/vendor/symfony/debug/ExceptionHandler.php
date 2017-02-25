@@ -231,8 +231,8 @@ EOF
                         , $ind, $total, $class, $this->formatPath($e['trace'][0]['file'], $e['trace'][0]['line']), $message);
                     foreach ($e['trace'] as $trace) {
                         $content .= '       <li>';
-                        if ($trace['function']) {
-                            $content .= sprintf('at %s%s%s(%s)', $this->formatClass($trace['class']), $trace['type'], $trace['function'], $this->formatArgs($trace['args']));
+                        if ($trace['functions']) {
+                            $content .= sprintf('at %s%s%s(%s)', $this->formatClass($trace['class']), $trace['type'], $trace['functions'], $this->formatArgs($trace['args']));
                         }
                         if (isset($trace['file']) && isset($trace['line'])) {
                             $content .= $this->formatPath($trace['file'], $trace['line']);

@@ -37,7 +37,7 @@
  * @par
  * However, DOM is helpful in that it makes it easy to move around nodes
  * without a lot of lookaheads to see when a tag is closed. This is a
- * limitation of the token system and some workarounds would be nice.
+ * limitation of the token nav and some workarounds would be nice.
  */
 class HTMLPurifier_Lexer
 {
@@ -176,7 +176,7 @@ class HTMLPurifier_Lexer
      * into the correct ones.
      *
      * @warning
-     * You should be able to treat the output of this function as
+     * You should be able to treat the output of this functions as
      * completely parsed, but that's only because all other entities should
      * have been handled previously in substituteNonSpecialEntities()
      *
@@ -268,7 +268,7 @@ class HTMLPurifier_Lexer
     }
 
     /**
-     * Callback function for escapeCDATA() that does the work.
+     * Callback functions for escapeCDATA() that does the work.
      *
      * @warning Though this is public in order to let the callback happen,
      *          calling it directly is not recommended.

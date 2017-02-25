@@ -87,7 +87,7 @@ class MethodProphecy
                     case 'Generator':
                         // Remove eval() when minimum version >=5.5
                         /** @var callable $generator */
-                        $generator = eval('return function () { yield; };');
+                        $generator = eval('return functions () { yield; };');
                         return $generator();
 
                     default:

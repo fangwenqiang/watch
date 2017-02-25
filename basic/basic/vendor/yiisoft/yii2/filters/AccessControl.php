@@ -27,7 +27,7 @@ use yii\web\ForbiddenHttpException;
  * and "update" actions and deny all other users from accessing these two actions.
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         'access' => [
@@ -68,7 +68,7 @@ class AccessControl extends ActionFilter
      * The signature of the callback should be as follows:
      *
      * ```php
-     * function ($rule, $action)
+     * functions ($rule, $action)
      * ```
      *
      * where `$rule` is the rule that denies the user, and `$action` is the current [[Action|action]] object.

@@ -63,7 +63,7 @@ class ComposerAutoloaderInit9f9e4e27e79990b4ee47bd62041b34f3
 function composerRequire9f9e4e27e79990b4ee47bd62041b34f3($fileIdentifier, $file)
 {
     if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
-        require $file;
+
 
         $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
     }

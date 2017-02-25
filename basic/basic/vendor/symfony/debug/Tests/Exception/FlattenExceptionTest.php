@@ -176,7 +176,7 @@ class FlattenExceptionTest extends \PHPUnit_Framework_TestCase
                 'message' => 'test',
                 'class' => 'Exception',
                 'trace' => array(array(
-                    'namespace' => '', 'short_class' => '', 'class' => '', 'type' => '', 'function' => '', 'file' => 'foo.php', 'line' => 123,
+                    'namespace' => '', 'short_class' => '', 'class' => '', 'type' => '', 'functions' => '', 'file' => 'foo.php', 'line' => 123,
                     'args' => array(),
                 )),
             ),
@@ -235,7 +235,7 @@ class FlattenExceptionTest extends \PHPUnit_Framework_TestCase
                 array(
                     'file' => __FILE__,
                     'line' => 123,
-                    'function' => 'test',
+                    'functions' => 'test',
                     'args' => array(
                         unserialize('O:14:"BogusTestClass":0:{}'),
                     ),
@@ -250,12 +250,12 @@ class FlattenExceptionTest extends \PHPUnit_Framework_TestCase
                 'class' => 'Exception',
                 'trace' => array(
                     array(
-                        'namespace' => '', 'short_class' => '', 'class' => '', 'type' => '', 'function' => '',
+                        'namespace' => '', 'short_class' => '', 'class' => '', 'type' => '', 'functions' => '',
                         'file' => 'foo.php', 'line' => 123,
                         'args' => array(),
                     ),
                     array(
-                        'namespace' => '', 'short_class' => '', 'class' => '', 'type' => '', 'function' => 'test',
+                        'namespace' => '', 'short_class' => '', 'class' => '', 'type' => '', 'functions' => 'test',
                         'file' => __FILE__, 'line' => 123,
                         'args' => array(
                             array(

@@ -60,7 +60,7 @@ class PHPUnit_Util_GlobalState
                 continue;
             }
 
-            // Skip virtual file system protocols
+            // Skip virtual file nav protocols
             if (preg_match('/^(vfs|phpvfs[a-z0-9]+):/', $file)) {
                 continue;
             }

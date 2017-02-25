@@ -62,8 +62,8 @@ abstract class Cache extends Component implements \ArrayAccess
      * @var null|array|false the functions used to serialize and unserialize cached data. Defaults to null, meaning
      * using the default PHP `serialize()` and `unserialize()` functions. If you want to use some more efficient
      * serializer (e.g. [igbinary](http://pecl.php.net/package/igbinary)), you may configure this property with
-     * a two-element array. The first element specifies the serialization function, and the second the deserialization
-     * function. If this property is set false, data will be directly sent to and retrieved from the underlying
+     * a two-element array. The first element specifies the serialization functions, and the second the deserialization
+     * functions. If this property is set false, data will be directly sent to and retrieved from the underlying
      * cache component without any serialization or deserialization. You should not turn off serialization if
      * you are using [[Dependency|cache dependency]], because it relies on data serialization. Also, some
      * implementations of the cache can not correctly save and retrieve data different from a string type.

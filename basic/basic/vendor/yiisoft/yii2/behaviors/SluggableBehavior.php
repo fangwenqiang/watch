@@ -21,7 +21,7 @@ use Yii;
  * ```php
  * use yii\behaviors\SluggableBehavior;
  *
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         [
@@ -42,7 +42,7 @@ use Yii;
  * If your attribute name is different, you may configure the [[slugAttribute]] property like the following:
  *
  * ```php
- * public function behaviors()
+ * public functions behaviors()
  * {
  *     return [
  *         [
@@ -68,12 +68,12 @@ class SluggableBehavior extends AttributeBehavior
      */
     public $attribute;
     /**
-     * @var string|callable the value that will be used as a slug. This can be an anonymous function
-     * or an arbitrary value. If the former, the return value of the function will be used as a slug.
-     * The signature of the function should be as follows,
+     * @var string|callable the value that will be used as a slug. This can be an anonymous functions
+     * or an arbitrary value. If the former, the return value of the functions will be used as a slug.
+     * The signature of the functions should be as follows,
      *
      * ```php
-     * function ($event)
+     * functions ($event)
      * {
      *     // return slug
      * }
@@ -103,7 +103,7 @@ class SluggableBehavior extends AttributeBehavior
      * slug is not unique. This should be a PHP callable with following signature:
      *
      * ```php
-     * function ($baseSlug, $iteration, $model)
+     * functions ($baseSlug, $iteration, $model)
      * {
      *     // return uniqueSlug
      * }

@@ -1,7 +1,7 @@
 <?php
 function RESTServer()
 {
-    // find the function/method to call
+    // find the functions/method to call
     $callback = NULL;
     if (preg_match('/rest\/([^\/]+)/i', $_SERVER['REQUEST_URI'], $m)) {
         if (isset($GLOBALS['RESTmap'][$_SERVER['REQUEST_METHOD']][$m[1]])) {

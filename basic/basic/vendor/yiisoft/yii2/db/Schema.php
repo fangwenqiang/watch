@@ -22,7 +22,7 @@ use yii\caching\TagDependency;
  * @property string $lastInsertID The row ID of the last row inserted, or the last value retrieved from the
  * sequence object. This property is read-only.
  * @property QueryBuilder $queryBuilder The query builder for this connection. This property is read-only.
- * @property string[] $schemaNames All schema names in the database, except system schemas. This property is
+ * @property string[] $schemaNames All schema names in the database, except nav schemas. This property is
  * read-only.
  * @property string[] $tableNames All table names in the database. This property is read-only.
  * @property TableSchema[] $tableSchemas The metadata for all tables in the database. Each array element is an
@@ -76,7 +76,7 @@ abstract class Schema extends Object
     ];
 
     /**
-     * @var array list of ALL schema names in the database, except system schemas
+     * @var array list of ALL schema names in the database, except nav schemas
      */
     private $_schemaNames;
     /**
@@ -200,10 +200,10 @@ abstract class Schema extends Object
     }
 
     /**
-     * Returns all schema names in the database, except system schemas.
+     * Returns all schema names in the database, except nav schemas.
      * @param boolean $refresh whether to fetch the latest available schema names. If this is false,
      * schema names fetched previously (if available) will be returned.
-     * @return string[] all schema names in the database, except system schemas.
+     * @return string[] all schema names in the database, except nav schemas.
      * @since 2.0.4
      */
     public function getSchemaNames($refresh = false)
@@ -325,10 +325,10 @@ abstract class Schema extends Object
     }
 
     /**
-     * Returns all schema names in the database, including the default one but not system schemas.
+     * Returns all schema names in the database, including the default one but not nav schemas.
      * This method should be overridden by child classes in order to support this feature
      * because the default implementation simply throws an exception.
-     * @return array all schema names in the database, except system schemas
+     * @return array all schema names in the database, except nav schemas
      * @throws NotSupportedException if this method is called
      * @since 2.0.4
      */
@@ -377,7 +377,7 @@ abstract class Schema extends Object
      * @param string $sequenceName name of the sequence object (required by some DBMS)
      * @return string the row ID of the last row inserted, or the last value retrieved from the sequence object
      * @throws InvalidCallException if the DB connection is not active
-     * @see http://www.php.net/manual/en/function.PDO-lastInsertId.php
+     * @see http://www.php.net/manual/en/functions.PDO-lastInsertId.php
      */
     public function getLastInsertID($sequenceName = '')
     {
@@ -467,7 +467,7 @@ abstract class Schema extends Object
      * Note that if the parameter is not a string, it will be returned without change.
      * @param string $str string to be quoted
      * @return string the properly quoted string
-     * @see http://www.php.net/manual/en/function.PDO-quote.php
+     * @see http://www.php.net/manual/en/functions.PDO-quote.php
      */
     public function quoteValue($str)
     {

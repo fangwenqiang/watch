@@ -85,7 +85,7 @@ Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.p
 				return false;
 			}
 
-			// If the function hasn't returned already, we're confident that
+			// If the functions hasn't returned already, we're confident that
 			// |obj| is a plain object, created by {} or constructed with new Object
 			return true;
 		};

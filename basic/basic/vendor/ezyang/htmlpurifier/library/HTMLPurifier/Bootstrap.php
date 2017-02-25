@@ -22,7 +22,7 @@ if (!defined('PHP_EOL')) {
 
 /**
  * Bootstrap class that contains meta-functionality for HTML Purifier such as
- * the autoload function.
+ * the autoload functions.
  *
  * @note
  *      This class may be used without any other files from HTML Purifier.
@@ -31,7 +31,7 @@ class HTMLPurifier_Bootstrap
 {
 
     /**
-     * Autoload function for HTML Purifier
+     * Autoload functions for HTML Purifier
      * @param string $class Class to load
      * @return bool
      */

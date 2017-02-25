@@ -70,7 +70,7 @@ class DbManager extends BaseManager
      *
      * Note that by enabling RBAC cache, all auth items, rules and auth item parent-child relationships will
      * be cached and loaded into memory. This will improve the performance of RBAC permission check. However,
-     * it does require extra memory and as a result may not be appropriate if your RBAC system contains too many
+     * it does require extra memory and as a result may not be appropriate if your RBAC nav contains too many
      * auth items. You should seek other RBAC implementations (e.g. RBAC based on Redis storage) in this case.
      *
      * Also note that if you modify RBAC items, rules or parent-child relationships from outside of this component,

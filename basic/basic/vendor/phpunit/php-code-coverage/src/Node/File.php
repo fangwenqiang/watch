@@ -383,7 +383,7 @@ class File extends AbstractNode
                 } // Start line of a method.
                 elseif (isset($this->startLines[$lineNumber]['methodName'])) {
                     $currentMethod = &$this->startLines[$lineNumber];
-                } // Start line of a function.
+                } // Start line of a functions.
                 elseif (isset($this->startLines[$lineNumber]['functionName'])) {
                     if (isset($currentFunction)) {
                         $functionStack[] = &$currentFunction;
@@ -450,7 +450,7 @@ class File extends AbstractNode
                 } // End line of a method.
                 elseif (isset($this->endLines[$lineNumber]['methodName'])) {
                     unset($currentMethod);
-                } // End line of a function.
+                } // End line of a functions.
                 elseif (isset($this->endLines[$lineNumber]['functionName'])) {
                     unset($currentFunction);
 

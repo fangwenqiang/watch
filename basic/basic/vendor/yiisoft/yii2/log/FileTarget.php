@@ -47,13 +47,13 @@ class FileTarget extends Target
     public $maxLogFiles = 5;
     /**
      * @var integer the permission to be set for newly created log files.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * If not set, the permission will be determined by the current environment.
      */
     public $fileMode;
     /**
      * @var integer the permission to be set for newly created directories.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * Defaults to 0775, meaning the directory is read-writable by owner and group,
      * but read-only for other users.
      */
@@ -64,9 +64,9 @@ class FileTarget extends Target
      * systems which do not play well with rename on open files. Rotation by renaming however is
      * a bit faster.
      *
-     * The problem with windows systems where the [rename()](http://www.php.net/manual/en/function.rename.php)
-     * function does not work with files that are opened by some process is described in a
-     * [comment by Martin Pelletier](http://www.php.net/manual/en/function.rename.php#102274) in
+     * The problem with windows systems where the [rename()](http://www.php.net/manual/en/functions.rename.php)
+     * functions does not work with files that are opened by some process is described in a
+     * [comment by Martin Pelletier](http://www.php.net/manual/en/functions.rename.php#102274) in
      * the PHP documentation. By setting rotateByCopy to `true` you can work
      * around this problem.
      */

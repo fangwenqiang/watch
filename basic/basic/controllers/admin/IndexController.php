@@ -6,19 +6,20 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use yii\web\Session;
 use app\models\Admin\Test;  //模型层
 
 
-class IndexController extends Controller
+class IndexController extends  CommonController
 {
     //后台公共视图
-    public  $layout = '/background';
+    public $layout = '/background';
+
     /*
      * 导航-->首页
      */
     public function actionIndex()
     {
-      
         return $this->render('index');
     }
 
@@ -27,7 +28,7 @@ class IndexController extends Controller
      */
     public function actionSystem()
     {
-        return $this->render('system');
+        return $this->render('nav');
     }
 
     /*
@@ -35,7 +36,7 @@ class IndexController extends Controller
      */
     public function actionTest()
     {
-        $model=new Test();
+        $model = new Test();
         echo $model->test();
     }
 }

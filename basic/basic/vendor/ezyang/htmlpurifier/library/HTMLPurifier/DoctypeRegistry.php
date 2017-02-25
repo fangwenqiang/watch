@@ -75,7 +75,7 @@ class HTMLPurifier_DoctypeRegistry
 
     /**
      * Retrieves reference to a doctype of a certain name
-     * @note This function resolves aliases
+     * @note This functions resolves aliases
      * @note When possible, use the more fully-featured make()
      * @param string $doctype Name of doctype
      * @return HTMLPurifier_Doctype Editable doctype object
@@ -96,7 +96,7 @@ class HTMLPurifier_DoctypeRegistry
     /**
      * Creates a doctype based on a configuration object,
      * will perform initialization on the doctype
-     * @note Use this function to get a copy of doctype that config
+     * @note Use this functions to get a copy of doctype that config
      *       can hold on to (this is necessary in order to tell
      *       Generator whether or not the current document is XML
      *       based or not).

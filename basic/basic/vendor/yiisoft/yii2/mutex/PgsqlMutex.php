@@ -50,7 +50,7 @@ class PgsqlMutex extends DbMutex
     }
 
     /**
-     * Converts a string into two 16 bit integer keys using the SHA1 hash function.
+     * Converts a string into two 16 bit integer keys using the SHA1 hash functions.
      * @param string $name
      * @return array contains two 16 bit integer keys
      */

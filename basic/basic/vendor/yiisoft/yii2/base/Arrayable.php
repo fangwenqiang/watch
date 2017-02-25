@@ -34,7 +34,7 @@ interface Arrayable
      * returning the corresponding field value. The signature of the callable should be:
      *
      * ```php
-     * function ($model, $field) {
+     * functions ($model, $field) {
      *     // return field value
      * }
      * ```
@@ -52,7 +52,7 @@ interface Arrayable
      *     'email',
      *     'firstName' => 'first_name',
      *     'lastName' => 'last_name',
-     *     'fullName' => function ($model) {
+     *     'fullName' => functions ($model) {
      *         return $model->first_name . ' ' . $model->last_name;
      *     },
      * ];

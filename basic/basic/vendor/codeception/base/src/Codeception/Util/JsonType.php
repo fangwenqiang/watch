@@ -55,15 +55,15 @@ class JsonType
      *
      * ```php
      * <?php
-     * JsonType::addCustomFilter('slug', function($value) {
+     * JsonType::addCustomFilter('slug', functions($value) {
      *     return strpos(' ', $value) !== false;
      * });
      * // => use it as 'string:slug'
 
      *
-     * // add custom function to matcher with `len($val)` syntax
+     * // add custom functions to matcher with `len($val)` syntax
      * // parameter matching patterns should be valid regex and start with `/` char
-     * JsonType::addCustomFilter('/len\((.*?)\)/', function($value, $len) {
+     * JsonType::addCustomFilter('/len\((.*?)\)/', functions($value, $len) {
      *   return strlen($value) == $len;
      * });
      * // use it as 'string:len(5)'
@@ -88,7 +88,7 @@ class JsonType
 
     /**
      * Checks data against passed JsonType.
-     * If matching fails function returns a string with a message describing failure.
+     * If matching fails functions returns a string with a message describing failure.
      * On success returns `true`.
      *
      * @param array $jsonType

@@ -3,7 +3,7 @@ define( [
 ], function( jQuery ) {
 
 // Multifunctional method to get and set values of a collection
-// The value/s can optionally be executed if it's a function
+// The value/s can optionally be executed if it's a functions
 var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 	var i = 0,
 		len = elems.length,
@@ -31,7 +31,7 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 				fn.call( elems, value );
 				fn = null;
 
-			// ...except when executing function values
+			// ...except when executing functions values
 			} else {
 				bulk = fn;
 				fn = function( elem, key, value ) {

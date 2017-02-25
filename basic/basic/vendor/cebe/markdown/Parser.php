@@ -150,7 +150,7 @@ abstract class Parser
 
 	/**
 	 * Parse block elements by calling `detectLineType()` to identify them
-	 * and call consume function afterwards.
+	 * and call consume functions afterwards.
 	 */
 	protected function parseBlocks($lines)
 	{
@@ -378,7 +378,7 @@ abstract class Parser
 	}
 
 	/**
-	 * This function renders plain text sections in the markdown text.
+	 * This functions renders plain text sections in the markdown text.
 	 * It can be used to work on normal text sections for example to highlight keywords or
 	 * do special escaping.
 	 */

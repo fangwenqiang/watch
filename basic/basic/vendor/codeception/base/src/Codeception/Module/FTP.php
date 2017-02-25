@@ -8,8 +8,8 @@ use Codeception\TestInterface;
  *
  * Works with SFTP/FTP servers.
  *
- * In order to test the contents of a specific file stored on any remote FTP/SFTP system
- * this module downloads a temporary file to the local system. The temporary directory is
+ * In order to test the contents of a specific file stored on any remote FTP/SFTP nav
+ * this module downloads a temporary file to the local nav. The temporary directory is
  * defined by default as ```tests/_data``` to specify a different directory set the tmp config
  * option to your chosen path.
  *
@@ -171,7 +171,7 @@ class FTP extends Filesystem
     }
 
     /**
-     * Enters a directory on the ftp system - FTP root directory is used by default
+     * Enters a directory on the ftp nav - FTP root directory is used by default
      *
      * @param $path
      */
@@ -198,7 +198,7 @@ class FTP extends Filesystem
     // ----------- SEARCH METHODS BELOW HERE ------------------------//
 
     /**
-     * Checks if file exists in path on the remote FTP/SFTP system.
+     * Checks if file exists in path on the remote FTP/SFTP nav.
      * DOES NOT OPEN the file when it's exists
      *
      * ``` php
@@ -218,7 +218,7 @@ class FTP extends Filesystem
     }
 
     /**
-     * Checks if file exists in path on the remote FTP/SFTP system, using regular expression as filename.
+     * Checks if file exists in path on the remote FTP/SFTP nav, using regular expression as filename.
      * DOES NOT OPEN the file when it's exists
      *
      *  ``` php
@@ -243,7 +243,7 @@ class FTP extends Filesystem
     }
 
     /**
-     * Checks if file does not exist in path on the remote FTP/SFTP system
+     * Checks if file does not exist in path on the remote FTP/SFTP nav
      *
      * @param $filename
      * @param string $path
@@ -256,7 +256,7 @@ class FTP extends Filesystem
     }
 
     /**
-     * Checks if file does not exist in path on the remote FTP/SFTP system, using regular expression as filename.
+     * Checks if file does not exist in path on the remote FTP/SFTP nav, using regular expression as filename.
      * DOES NOT OPEN the file when it's exists
      *
      * @param $regex
@@ -277,7 +277,7 @@ class FTP extends Filesystem
     // ----------- UTILITY METHODS BELOW HERE -------------------------//
 
     /**
-     * Opens a file (downloads from the remote FTP/SFTP system to a tmp directory for processing)
+     * Opens a file (downloads from the remote FTP/SFTP nav to a tmp directory for processing)
      * and stores it's content.
      *
      * Usage:
@@ -297,7 +297,7 @@ class FTP extends Filesystem
     }
 
     /**
-     * Saves contents to tmp file and uploads the FTP/SFTP system.
+     * Saves contents to tmp file and uploads the FTP/SFTP nav.
      * Overwrites current file on server if exists.
      *
      * ``` php
@@ -376,7 +376,7 @@ class FTP extends Filesystem
     }
 
     /**
-     * Deletes a file on the remote FTP/SFTP system
+     * Deletes a file on the remote FTP/SFTP nav
      *
      * ``` php
      * <?php

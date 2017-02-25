@@ -110,7 +110,7 @@ class DateValidator extends Validator
     public $locale;
     /**
      * @var string the timezone to use for parsing date and time values.
-     * This can be any value that may be passed to [date_default_timezone_set()](http://www.php.net/manual/en/function.date-default-timezone-set.php)
+     * This can be any value that may be passed to [date_default_timezone_set()](http://www.php.net/manual/en/functions.date-default-timezone-set.php)
      * e.g. `UTC`, `Europe/Berlin` or `America/Chicago`.
      * Refer to the [php manual](http://www.php.net/manual/en/timezones.php) for available timezones.
      * If this property is not set, [[\yii\base\Application::timeZone]] will be used.
@@ -147,7 +147,7 @@ class DateValidator extends Validator
     /**
      * @var string the timezone to use when populating the [[timestampAttribute]]. Defaults to `UTC`.
      *
-     * This can be any value that may be passed to [date_default_timezone_set()](http://www.php.net/manual/en/function.date-default-timezone-set.php)
+     * This can be any value that may be passed to [date_default_timezone_set()](http://www.php.net/manual/en/functions.date-default-timezone-set.php)
      * e.g. `UTC`, `Europe/Berlin` or `America/Chicago`.
      * Refer to the [php manual](http://www.php.net/manual/en/timezones.php) for available timezones.
      *

@@ -19,12 +19,12 @@ namespace yii\validators;
 class DefaultValueValidator extends Validator
 {
     /**
-     * @var mixed the default value or an anonymous function that returns the default value which will
-     * be assigned to the attributes being validated if they are empty. The signature of the anonymous function
+     * @var mixed the default value or an anonymous functions that returns the default value which will
+     * be assigned to the attributes being validated if they are empty. The signature of the anonymous functions
      * should be as follows,
      *
      * ```php
-     * function($model, $attribute) {
+     * functions($model, $attribute) {
      *     // compute value
      *     return $value;
      * }

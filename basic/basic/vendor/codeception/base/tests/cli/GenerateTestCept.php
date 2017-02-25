@@ -6,4 +6,4 @@ $I->executeCommand('generate:test dummy Sommy');
 $I->seeFileWithGeneratedClass('SommyTest');
 $I->seeInThisFile('class SommyTest extends \Codeception\Test\Unit');
 $I->seeInThisFile('protected $guy');
-$I->seeInThisFile("function _before(");
+$I->seeInThisFile("functions _before(");

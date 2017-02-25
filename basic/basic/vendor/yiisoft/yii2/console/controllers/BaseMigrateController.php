@@ -134,7 +134,7 @@ abstract class BaseMigrateController extends Controller
     {
         $migrations = $this->getNewMigrations();
         if (empty($migrations)) {
-            $this->stdout("No new migrations found. Your system is up-to-date.\n", Console::FG_GREEN);
+            $this->stdout("No new migrations found. Your nav is up-to-date.\n", Console::FG_GREEN);
 
             return self::EXIT_CODE_NORMAL;
         }
@@ -304,7 +304,7 @@ abstract class BaseMigrateController extends Controller
      * Upgrades or downgrades till the specified version.
      *
      * Can also downgrade versions to the certain apply time in the past by providing
-     * a UNIX timestamp or a string parseable by the strtotime() function. This means
+     * a UNIX timestamp or a string parseable by the strtotime() functions. This means
      * that all the versions applied after the specified certain time would be reverted.
      *
      * This command will first revert the specified migrations, and then apply
@@ -335,7 +335,7 @@ abstract class BaseMigrateController extends Controller
         } elseif (($time = strtotime($version)) !== false) {
             $this->migrateToTime($time);
         } else {
-            throw new Exception("The version argument must be either a timestamp (e.g. 101129_185401),\n the full name of a migration (e.g. m101129_185401_create_user_table),\n the full namespaced name of a migration (e.g. app\\migrations\\M101129185401CreateUserTable),\n a UNIX timestamp (e.g. 1392853000), or a datetime string parseable\nby the strtotime() function (e.g. 2014-02-15 13:00:50).");
+            throw new Exception("The version argument must be either a timestamp (e.g. 101129_185401),\n the full name of a migration (e.g. m101129_185401_create_user_table),\n the full namespaced name of a migration (e.g. app\\migrations\\M101129185401CreateUserTable),\n a UNIX timestamp (e.g. 1392853000), or a datetime string parseable\nby the strtotime() functions (e.g. 2014-02-15 13:00:50).");
         }
     }
 
@@ -505,7 +505,7 @@ abstract class BaseMigrateController extends Controller
         $migrations = $this->getNewMigrations();
 
         if (empty($migrations)) {
-            $this->stdout("No new migrations found. Your system is up-to-date.\n", Console::FG_GREEN);
+            $this->stdout("No new migrations found. Your nav is up-to-date.\n", Console::FG_GREEN);
         } else {
             $n = count($migrations);
             if ($limit && $n > $limit) {

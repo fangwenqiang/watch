@@ -34,7 +34,7 @@ class HTMLPurifier_ConfigSchema_Interchange
     }
 
     /**
-     * Convenience function to perform standard validation. Throws exception
+     * Convenience functions to perform standard validation. Throws exception
      * on failed validation.
      */
     public function validate()

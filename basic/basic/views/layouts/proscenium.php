@@ -7,9 +7,9 @@ use yii\helpers\Url;
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Cache-Control" content="no-transform" />
-    <title>喜悦手表网【官网】：中国最大的正品名表商城！买手表，上喜悦手表！</title>
-    <meta name="keywords" content="手表,买手表,喜悦手表网,喜悦手表网官网,名表商城,正品手表，瑞士手表" />
-    <meta name="description" content="【喜悦手表网官网】：买原装正品世界名表：浪琴、天梭、欧米茄、劳力士等瑞士手表品牌，信用卡分期付款，正品保证，全国联保，终身售后保障！" />
+    <title><?php echo $this->params['system']['site_title']?></title>
+    <meta name="keywords" content="<?php echo $this->params['system']['site_keywords']?>" />
+    <meta name="description" content="<?php echo $this->params['system']['site_description']?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
     <base href="<?php echo Url::to('@web/public/home/')?>">
     <!--[if lte IE 6]>
@@ -49,8 +49,10 @@ use yii\helpers\Url;
 <div class="head">
     <div class="r1 w1225">
         <div class="ri">
-            <span class="tLnk2"><a href=""  >购物车</a></span>
-            <span class="tLnk1"><a href="" class="f12">登录</a> <a href="" class="f12">注册</a></span>
+            <?php  foreach($this->params['nav'] as $key=>$val){
+                if($val['nav_place'] == 2){ ?>
+                    <span ><a href="<?php echo $val['nav_link']?>"  ><?php echo $val['nav_name']?></a></span>
+                <?php } } ?>
         </div>
     </div>
     <div class="r2 w1225">
@@ -62,7 +64,7 @@ use yii\helpers\Url;
             </form>
         </div>
         <div class="wbPt">
-            <span class="tTel" style="font-size:16px;">服务热线：400-888-8888</span>
+            <span class="tTel" style="font-size:16px;">服务热线：<?php echo $this->params['system']['tel']?></span>
         </div>
     </div>
 
@@ -136,14 +138,10 @@ use yii\helpers\Url;
         <!--end gMune 修改2014-5-19 15:15:00 修改员——huang-->
 
         <ul class="gNav">
-
-            <li><a  title="首页" class="cur"  href="index.html">首页</a></li>
-            <li><a    href="tejia.html" title="本期特价">本期特价</a></li>
-            <li><a    href="time.html" title="限时抢购">限时抢购</a></li>
-            <li><a    href="boys.html" title="男士腕表">男士腕表</a></li>
-            <li><a    href="girl.html" title="女士腕表">女士腕表</a></li>
-            <li><a    href="jimai.html" title="免费寄卖">免费寄卖</a></li>
-            <li><a href="huiyuan.html"    style="font-size:15px; color:#ce1739;" title="寻表专区/采购清单"><strong>寻表专区/采购清单</strong></a></li>
+            <?php  foreach($this->params['nav'] as $key=>$val){
+                  if($val['nav_place'] == 1){ ?>
+                      <li><a  title="<?php echo $val['nav_name']?>" class="cur"  href="<?php echo $val['nav_link']?>"><?php echo $val['nav_name']?></a></li>
+            <?php } } ?>
         </ul>
     </div>
 </div>
@@ -165,46 +163,17 @@ use yii\helpers\Url;
                 <a href="/help-706.html"   rel="nofollow"><img src="css/images/logoxia.png"/></a>
             </dd>
         </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>新手</i></dt>
-            <dd class=" w110">
-                <a href=""   rel="nofollow">&bull;&nbsp;用户注册</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;找回密码</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;订购流程</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>支付</i></dt>
-            <dd class=" w110">
-                <a href=""   rel="nofollow">&bull;&nbsp;支付方式</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;发票说明</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;支付问题</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>配送</i></dt>
-            <dd class=" w110">
-                <a href=""   rel="nofollow">&bull;&nbsp;配送方式</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;配送说明</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;包裹签收</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>保障</i></dt>
-            <dd class=" w110">
-                <a href=""   rel="nofollow">&bull;&nbsp;退换货政策说明</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;如何办理退货</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;常见问题</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>寄卖</i></dt>
-            <dd class=" w110">
-                <a href=""   rel="nofollow">&bull;&nbsp;寄卖流程</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;寄卖说明</a>
-                <a href=""   rel="nofollow">&bull;&nbsp;调价与撤卖</a>
-            </dd>
-        </dl>
+        <?php  foreach($this->params['nav'] as $key=>$val){
+                if($val['nav_place'] == 3){ ?>
+                    <dl class=" w188">
+                        <dt class=" w70"><i><?php echo $val['nav_name']?></i></dt>
+                        <dd class=" w110">
+                            <?php foreach($val['child'] as $k=>$v){ ?>
+                                <a href="<?php echo $val['nav_link']?>"   rel="nofollow">&bull;&nbsp;<?php echo $v['nav_name']?></a>
+                            <?php } ?>
+                        </dd>
+                    </dl>
+         <?php   } }  ?>
     </div>
     <div class="r2 w1225 wide">
         <div class="f333 tmallLinks">
@@ -215,7 +184,7 @@ use yii\helpers\Url;
             <a href=""   rel="nofollow">投诉建议</a>
         </div>
         <div>
-            喜悦名表 版权所有  Copyright 2014-2015 www.xxxxxxx.cn . LTD ALL RIGHT RESERVED.
+            <?php echo $this->params['system']['site_name']?> 版权所有  Copyright 2014-2015 <?php echo $this->params['system']['email']?> . <?php echo $this->params['system']['icp']?>.
             <br/>
         </div>
     </div>

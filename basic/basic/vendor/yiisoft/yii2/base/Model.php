@@ -105,7 +105,7 @@ class Model extends Component implements IteratorAggregate, ArrayAccess, Arrayab
      *
      *  - attribute list: required, specifies the attributes array to be validated, for single attribute you can pass a string;
      *  - validator type: required, specifies the validator to be used. It can be a built-in validator name,
-     *    a method name of the model class, an anonymous function, or a validator class name.
+     *    a method name of the model class, an anonymous functions, or a validator class name.
      *  - on: optional, specifies the [[scenario|scenarios]] array in which the validation
      *    rule can be applied. If this option is not set, the rule will apply to all scenarios.
      *  - additional name-value pairs can be specified to initialize the corresponding validator properties.
@@ -116,7 +116,7 @@ class Model extends Component implements IteratorAggregate, ArrayAccess, Arrayab
      *
      * ```php
      * // $params refers to validation parameters given in the rule
-     * function validatorName($attribute, $params)
+     * functions validatorName($attribute, $params)
      * ```
      *
      * In the above `$attribute` refers to the attribute currently being validated while `$params` contains an array of
@@ -909,7 +909,7 @@ class Model extends Component implements IteratorAggregate, ArrayAccess, Arrayab
      * returning the corresponding field value. The signature of the callable should be:
      *
      * ```php
-     * function ($model, $field) {
+     * functions ($model, $field) {
      *     // return field value
      * }
      * ```
@@ -927,7 +927,7 @@ class Model extends Component implements IteratorAggregate, ArrayAccess, Arrayab
      *     'email',
      *     'firstName' => 'first_name',
      *     'lastName' => 'last_name',
-     *     'fullName' => function ($model) {
+     *     'fullName' => functions ($model) {
      *         return $model->first_name . ' ' . $model->last_name;
      *     },
      * ];

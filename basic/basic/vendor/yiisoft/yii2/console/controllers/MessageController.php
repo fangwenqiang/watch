@@ -55,10 +55,10 @@ class MessageController extends Controller
      */
     public $languages = [];
     /**
-     * @var string the name of the function for translating messages.
+     * @var string the name of the functions for translating messages.
      * Defaults to 'Yii::t'. This is used as a mark to find the messages to be
-     * translated. You may use a string for single function name or an array for
-     * multiple function names.
+     * translated. You may use a string for single functions name or an array for
+     * multiple functions names.
      */
     public $translator = 'Yii::t';
     /**
@@ -437,7 +437,7 @@ EOD;
      * Extracts messages from a file
      *
      * @param string $fileName name of the file to extract messages from
-     * @param string $translator name of the function used to translate messages
+     * @param string $translator name of the functions used to translate messages
      * @param array $ignoreCategories message categories to ignore.
      * This parameter is available since version 2.0.4.
      * @return array
@@ -487,7 +487,7 @@ EOD;
             } elseif ($matchedTokensCount === $translatorTokensCount) {
                 // translator found
 
-                // end of function call
+                // end of functions call
                 if ($this->tokensEqual(')', $token)) {
                     $pendingParenthesisCount--;
 
@@ -525,7 +525,7 @@ EOD;
                         $buffer[] = $token;
                     }
                 } elseif ($this->tokensEqual('(', $token)) {
-                    // count beginning of function call, skipping translator beginning
+                    // count beginning of functions call, skipping translator beginning
                     if ($pendingParenthesisCount > 0) {
                         $buffer[] = $token;
                     }

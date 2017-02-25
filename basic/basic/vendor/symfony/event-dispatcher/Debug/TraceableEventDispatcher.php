@@ -318,7 +318,7 @@ class TraceableEventDispatcher implements TraceableEventDispatcherInterface
             }
             $info += array(
                 'type' => 'Function',
-                'function' => $listener,
+                'functions' => $listener,
                 'file' => $file,
                 'line' => $line,
                 'pretty' => $listener,

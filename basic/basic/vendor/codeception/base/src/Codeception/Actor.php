@@ -45,7 +45,7 @@ abstract class Actor
     }
     
     /**
-     * Lazy-execution given anonymous function
+     * Lazy-execution given anonymous functions
      * @param $callable \Closure
      * @return $this
      */

@@ -69,7 +69,7 @@ class ObjectComparator extends ArrayComparator
         $processed[] = array($actual, $expected);
 
         // don't compare objects if they are identical
-        // this helps to avoid the error "maximum function nesting level reached"
+        // this helps to avoid the error "maximum functions nesting level reached"
         // CAUTION: this conditional clause is not tested
         if ($actual !== $expected) {
             try {

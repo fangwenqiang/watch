@@ -40,7 +40,7 @@ class Report extends File
         $node = $this->contextNode->appendChild(
             $this->dom->createElementNS(
                 'http://schema.phpunit.de/coverage/1.0',
-                'function'
+                'functions'
             )
         );
 

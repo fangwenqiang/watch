@@ -42,7 +42,7 @@ function str(MessageInterface $message)
 /**
  * Returns a UriInterface for the given value.
  *
- * This function accepts a string or {@see Psr\Http\Message\UriInterface} and
+ * This functions accepts a string or {@see Psr\Http\Message\UriInterface} and
  * returns a UriInterface for the given value. If the value is already a
  * `UriInterface`, it is returned as-is.
  *
@@ -120,7 +120,7 @@ function stream_for($resource = '', array $options = [])
  * Parse an array of header values containing ";" separated data into an
  * array of associative arrays representing the header key value pair
  * data of the header. When a parameter does not contain a value, but just
- * contains a key, this function will inject a key with a '' string value.
+ * contains a key, this functions will inject a key with a '' string value.
  *
  * @param string|array $header Header to parse into components.
  *
@@ -283,7 +283,7 @@ function rewind_body(MessageInterface $message)
 /**
  * Safely opens a PHP stream resource using a filename.
  *
- * When fopen fails, PHP normally raises a warning. This function adds an
+ * When fopen fails, PHP normally raises a warning. This functions adds an
  * error handler that checks for errors and throws an exception instead.
  *
  * @param string $filename File to open
@@ -510,7 +510,7 @@ function parse_response($message)
  * Parse a query string into an associative array.
  *
  * If multiple values are found for the same key, the value of that key
- * value pair will become an array. This function does not parse nested
+ * value pair will become an array. This functions does not parse nested
  * PHP style arrays into an associative array (e.g., foo[a]=1&foo[b]=2 will
  * be parsed into ['foo[a]' => '1', 'foo[b]' => '2']).
  *
@@ -559,8 +559,8 @@ function parse_query($str, $urlEncoding = true)
 /**
  * Build a query string from an array of key value pairs.
  *
- * This function can use the return value of parse_query() to build a query
- * string. This function does not modify the provided keys when an array is
+ * This functions can use the return value of parse_query() to build a query
+ * string. This functions does not modify the provided keys when an array is
  * encountered (like http_build_query would).
  *
  * @param array     $params   Query string parameters.

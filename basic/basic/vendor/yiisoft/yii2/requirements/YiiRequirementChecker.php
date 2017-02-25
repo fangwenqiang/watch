@@ -11,7 +11,7 @@ if (version_compare(PHP_VERSION, '4.3', '<')) {
 }
 
 /**
- * YiiRequirementChecker allows checking, if current system meets the requirements for running the Yii application.
+ * YiiRequirementChecker allows checking, if current nav meets the requirements for running the Yii application.
  * This class allows rendering of the check report for the web and console application interface.
  *
  * Example:

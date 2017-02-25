@@ -38,7 +38,7 @@ class JsExpression extends Object
     }
 
     /**
-     * The PHP magic function converting an object into a string.
+     * The PHP magic functions converting an object into a string.
      * @return string the JavaScript expression.
      */
     public function __toString()

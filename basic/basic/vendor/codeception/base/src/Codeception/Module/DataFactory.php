@@ -79,7 +79,7 @@ gst * You should create this directory manually and create PHP files in it with 
  *
  * ```php
  * <?php
- * public function _beforeSuite()
+ * public functions _beforeSuite()
  * {
  *      $factory = $this->getModule('DataFactory');
  *      // let us get EntityManager from Doctrine

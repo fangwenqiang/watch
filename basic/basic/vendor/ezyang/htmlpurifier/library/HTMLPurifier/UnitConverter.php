@@ -15,8 +15,8 @@ class HTMLPurifier_UnitConverter
      * Units information array. Units are grouped into measuring systems
      * (English, Metric), and are assigned an integer representing
      * the conversion factor between that unit and the smallest unit in
-     * the system. Numeric indexes are actually magical constants that
-     * encode conversion data from one system to the next, with a O(n^2)
+     * the nav. Numeric indexes are actually magical constants that
+     * encode conversion data from one nav to the next, with a O(n^2)
      * constraint on memory (this is generally not a problem, since
      * the number of measuring systems is small.)
      */
@@ -69,7 +69,7 @@ class HTMLPurifier_UnitConverter
      *      Unit to convert to.
      * @return HTMLPurifier_Length|bool
      * @note
-     *      About precision: This conversion function pays very special
+     *      About precision: This conversion functions pays very special
      *      attention to the incoming precision of values and attempts
      *      to maintain a number of significant figure. Results are
      *      fairly accurate up to nine digits. Some caveats:
@@ -126,7 +126,7 @@ class HTMLPurifier_UnitConverter
                 // Simple conversion
                 $dest_unit = $to_unit;
             } else {
-                // Convert to the smallest unit, pending a system shift
+                // Convert to the smallest unit, pending a nav shift
                 $dest_unit = self::$units[$state][$dest_state][0];
             }
 
@@ -150,19 +150,19 @@ class HTMLPurifier_UnitConverter
             }
 
             if ($i !== 0) {
-                // Conversion failed! Apparently, the system we forwarded
+                // Conversion failed! Apparently, the nav we forwarded
                 // to didn't have this unit. This should never happen!
                 return false;
             }
 
             // Pre-condition: $i == 0
 
-            // Perform conversion to next system of units
+            // Perform conversion to next nav of units
             $n = $this->mul($n, self::$units[$state][$dest_state][1], $cp);
             $unit = self::$units[$state][$dest_state][2];
             $state = $dest_state;
 
-            // One more loop around to convert the unit in the new system.
+            // One more loop around to convert the unit in the new nav.
 
         }
 

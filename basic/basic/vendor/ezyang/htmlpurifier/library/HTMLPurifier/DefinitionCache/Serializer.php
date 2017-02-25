@@ -186,7 +186,7 @@ class HTMLPurifier_DefinitionCache_Serializer extends HTMLPurifier_DefinitionCac
     }
 
     /**
-     * Convenience wrapper function for file_put_contents
+     * Convenience wrapper functions for file_put_contents
      * @param string $file File name to write to
      * @param string $data Data to write into file
      * @param HTMLPurifier_Config $config
@@ -279,7 +279,7 @@ class HTMLPurifier_DefinitionCache_Serializer extends HTMLPurifier_DefinitionCac
             return false;
         }
         if (function_exists('posix_getuid') && $chmod !== null) {
-            // POSIX system, we can give more specific advice
+            // POSIX nav, we can give more specific advice
             if (fileowner($dir) === posix_getuid()) {
                 // we can chmod it ourselves
                 $chmod = $chmod | 0700;

@@ -9,7 +9,7 @@
  */
 
 /**
- * Logs events in the Transport system.
+ * Logs events in the Transport nav.
  *
  * @author Chris Corbyn
  */

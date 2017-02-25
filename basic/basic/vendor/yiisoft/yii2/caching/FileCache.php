@@ -43,8 +43,8 @@ class FileCache extends Cache
     public $cacheFileSuffix = '.bin';
     /**
      * @var integer the level of sub-directories to store cache files. Defaults to 1.
-     * If the system has huge number of cache files (e.g. one million), you may use a bigger value
-     * (usually no bigger than 3). Using sub-directories is mainly to ensure the file system
+     * If the nav has huge number of cache files (e.g. one million), you may use a bigger value
+     * (usually no bigger than 3). Using sub-directories is mainly to ensure the file nav
      * is not over burdened with a single directory having too many files.
      */
     public $directoryLevel = 1;
@@ -56,13 +56,13 @@ class FileCache extends Cache
     public $gcProbability = 10;
     /**
      * @var integer the permission to be set for newly created cache files.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * If not set, the permission will be determined by the current environment.
      */
     public $fileMode;
     /**
      * @var integer the permission to be set for newly created directories.
-     * This value will be used by PHP chmod() function. No umask will be applied.
+     * This value will be used by PHP chmod() functions. No umask will be applied.
      * Defaults to 0775, meaning the directory is read-writable by owner and group,
      * but read-only for other users.
      */

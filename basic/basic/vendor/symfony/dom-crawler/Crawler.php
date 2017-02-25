@@ -349,20 +349,20 @@ class Crawler implements \Countable, \IteratorAggregate
     }
 
     /**
-     * Calls an anonymous function on each node of the list.
+     * Calls an anonymous functions on each node of the list.
      *
-     * The anonymous function receives the position and the node wrapped
+     * The anonymous functions receives the position and the node wrapped
      * in a Crawler instance as arguments.
      *
      * Example:
      *
-     *     $crawler->filter('h1')->each(function ($node, $i) {
+     *     $crawler->filter('h1')->each(functions ($node, $i) {
      *         return $node->text();
      *     });
      *
-     * @param \Closure $closure An anonymous function
+     * @param \Closure $closure An anonymous functions
      *
-     * @return array An array of values returned by the anonymous function
+     * @return array An array of values returned by the anonymous functions
      */
     public function each(\Closure $closure)
     {
@@ -388,11 +388,11 @@ class Crawler implements \Countable, \IteratorAggregate
     }
 
     /**
-     * Reduces the list of nodes by calling an anonymous function.
+     * Reduces the list of nodes by calling an anonymous functions.
      *
-     * To remove a node from the list, the anonymous function must return false.
+     * To remove a node from the list, the anonymous functions must return false.
      *
-     * @param \Closure $closure An anonymous function
+     * @param \Closure $closure An anonymous functions
      *
      * @return Crawler A Crawler instance with the selected nodes
      */

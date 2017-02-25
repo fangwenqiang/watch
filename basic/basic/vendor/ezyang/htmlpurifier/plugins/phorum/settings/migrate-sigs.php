@@ -44,7 +44,7 @@ function phorum_htmlpurifier_migrate_sigs($offset)
         // perform standard Phorum processing on the sig
         $sig = str_replace(array("&","<",">"), array("&amp;","&lt;","&gt;"), $sig);
         $sig = preg_replace("/<((http|https|ftp):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+!*'\(\),~%]+?)>/i", "$1", $sig);
-        // prepare fake data to pass to migration function
+        // prepare fake data to pass to migration functions
         $fake_data = array(array("author"=>"", "email"=>"", "subject"=>"", 'body' => $sig));
         list($fake_message) = phorum_htmlpurifier_migrate($fake_data);
         $user['signature'] = $fake_message['body'];
