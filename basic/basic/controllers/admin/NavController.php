@@ -80,6 +80,7 @@ class NavController extends CommonController
                 $FILES['nav_icon'] = "upload_files/".$filename;
                 $post = array_merge($FILES,$_POST);
                 if ($this->nav_model->add_Nav(Filtration::check_arr($post), 0)) {
+
                     return $this->success('admin/nav/index');
                 } else {
                     return $this->error('添加失败');
