@@ -21,7 +21,7 @@ class Nav extends \yii\db\ActiveRecord
         }
         $info =  Nav::find()->where(['nav_id' => $data['nav_type']])->asArray()->one();
         //导航
-        $data['nav_link'] = $_SERVER['SERVER_NAME'].'/'.$_SERVER['SCRIPT_NAME'].'?r='.$data['nav_link'];
+        $data['nav_link'] = '../../index.php?r='.$data['nav_link'];
         //拼接 nav_pid
         $data['nav_pid'] = $info['nav_pid']."-".$info['nav_id'];
         if($data['nav_type'] == 0){ $data['nav_pid'] =0;}
@@ -51,14 +51,18 @@ class Nav extends \yii\db\ActiveRecord
     public function recursion($nav_pid=0)
     {
         $info =  Nav::find()->where(['nav_pid' => $nav_pid])->asArray()->all();
-        if(count($info) >0){
+        if(count($info) != 0){
             foreach($info as $key=>$val){
-                $val['chind'][] = $this->recursion($val['nav_pid'].'-'.$val['nav_id']);
-                $info[$key]= $val;
+                $info[$key]['child'] = Nav::find()->where(['nav_pid' => $val['nav_pid'].'-'.$val['nav_id']])->asArray()->all();
+                $info[$key]['child'] = $this->recursion($val['nav_pid'].'-'.$val['nav_id']);
             }
+            return $info;
+        } else {
+            return $info;
         }
-        return $info;
     }
+
+
     /*
      * 查询单条
      */
