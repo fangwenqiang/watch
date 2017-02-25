@@ -26,7 +26,7 @@ class CarouselForm extends ActiveRecord
     public function rules()
     {
         return [
-            [['sort',], 'required'],
+       
         ];
     }
 
@@ -36,6 +36,8 @@ class CarouselForm extends ActiveRecord
     public function attributeLabels()
     {
         return [
+            'carousel_id'=>'carousel id',
+            'path'=>'Path',
             'is_show' => 'isShow',
             'sort' =>'Sort',
         ];

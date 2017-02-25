@@ -1,10 +1,22 @@
 
-<link href="css/public.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/global.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DouPHP 管理中心 - 首页幻灯广告 </title>
+<meta name="Copyright" content="Douco Design." />
+    <link href="css/public.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="dist/sweetalert.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="dist/sweetalert-dev.js"></script>
+    <script type="text/javascript" src="js/jquery.carousel.js"></script>
 
 </head>
 <body>
+
 <div id="dcWrap">
     <div id="dcMain">
 
@@ -48,28 +60,54 @@
             <td valign="top">
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
                     <tr>
-                        <td width="100">幻灯名称</td>
-                        <td></td>
-                        <td width="50" align="center">排序</td>
+                        <td width="10" align="center">#</td>
+                        <td width="100" align="center">轮播图</td>
+                        <td width="50" align="center">路径</td>
+                        <td width="80" align="center">是否显示</td>
+                        <td width="80" align="center"><?= \yii\helpers\Html::a('排序', ['admin/carousel/index', 'sortStatus' => 1], ['title' => '点击排序','style'=>'color:blue;']) ?></td>
                         <td width="80" align="center">操作</td>
                     </tr>
-                    <tr>
-                        <td><a href="#" target="_blank"><img src="" width="100" /></a></td>
-                        <td>广告图片04</td>
-                        <td align="center">4</td>
-                        <td align="center"><a href="editshow.html?id=4">编辑</a> | <a href="delshow.htmlid=4">删除</a></td>
+                    <?php foreach ($data as $k => $v): ?>
+                    <tr id="<?=$v['carousel_id']?>">
+                        <td align="center"><?= $v['carousel_id'] ?></td>
+                        <td align="center"><img src="<?= 'http://'.$_SERVER['SERVER_NAME'].'/'.$v['path'] ?>" alt="轮播图" width="80" height="60"></td>
+                        <td align="center"><?= $v['path'] ?></td>
+                        <td align="center">
+                            <span class="sve" hid="<?=$v['carousel_id']?>" field="is_show" title="点击编辑">
+                                <?php if($v['is_show']==1) echo '是';else echo '否'; ?>
+                            </span>
+                        </td>
+                        <td align="center">
+                            <span class="sve" hid="<?=$v['carousel_id']?>" field="sort" title="点击编辑">
+                                <?= $v['sort'] ?>
+                            </span>
+                        </td>
+                        <td align="center">
+                            <span style="cursor: pointer;" title="删除" class="new_type_del" did="<?=$v['carousel_id']?>">
+                                <a href="javascript:void(0)">删除</a>
+                            </span>
+                        </td>
                     </tr>
+                    <?php endforeach ?>
                 </table>
+                    <?=yii\widgets\LinkPager::widget(['pagination' => $page])?>
             </td>
         </tr>
 
         </table>
+
+
      </div>
     </div>
     <div class="clear"></div>
     <div class="clear"></div>
 </div>
-<script type="text/javascript" src="js/jquery.carousel.js"></script>
+<script>
+    $(function () {
+        url = "<?=\yii\helpers\Url::toRoute(['admin/carousel'])?>";
+        csrf = $('input[name=_csrf]').val();
+    });
+</script>
 </body>
 </html>
 
