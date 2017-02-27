@@ -162,7 +162,7 @@
             <li><a class="curr" href="#">奢华</a></li><li><a href="#">高档</a></li><li><a href="">中档</a></li><li><a href="#">更多</a></li>        </ul>
 
     </div>
-    <p align="center"><img src="images/ban1.jpg" /></p>
+    <p align="center"><img src="Images/ban1.jpg" /></p>
 
     <div class="tBdy w1225" id="hotCon">
         <div class="tPdtLst">
@@ -282,7 +282,7 @@
             <li><a  class="curr" href="#">奢华</a></li><li><a href="#">高档</a></li><li><a href="#">中档</a></li><li><a href="#">更多</a></li>        </ul>
 
     </div>
-    <p align="center"><img src="images/ban1.jpg" /></p>
+    <p align="center"><img src="Images/ban1.jpg" /></p>
     <div class="tBdy w1225" id="hotCon">
         <div class="tPdtLst">
             <div class="tLnk">
