@@ -42,7 +42,7 @@ use yii\helpers\Url;
             });
         });
     </script>
-    <!-- end 修改完毕---------------------------------------------------------------------------------------------->
+    <!-- end 修改完毕-->
 </head>
 <body>
 <!-- Begin header -->
@@ -79,64 +79,25 @@ use yii\helpers\Url;
         <div class="gSort" id="pop_menu">
 
 
-            <!-- 修改后导航开始---------------------------------------------------------------------------------------------->
+            <!-- 修改后导航开始-->
             <ul id="dropdown_nav">
                 <li>
                     <a class="sub_link" href="#">腕表分类<img src="css/images/x_icon.png"/></a>
-
                     <div class="sub_nav">
+                        <?php foreach ($this->params['categoryData'] as $key => $value) {?>
                         <dl>
-                            <dt class="sub_ie">手表品牌</dt>
+                            <dt <?php if($key==0){echo 'style="position:absolute;"';}?>><?=$value['gt_name']?></dt>
                             <dd>
-                                <a href="">劳力士</a>
-                                <a href="">欧米茄</a>
-                                <a href="">欧古诗丹</a>
-                                <a href="">天梭</a>
+                                <?php foreach ($value['son'] as $k => $v) {?>
+                                <a href="<?=$v['gt_outlink']?>" title="<?=$v['gt_name']?>"><?=$v['gt_name']?></a>
+                                <?php } ?>
                             </dd>
                         </dl>
-                        <dl>
-                            <dt>男士手表</dt>
-                            <dd>
-                                <a href="">送父亲</a>
-                                <a href="">送老公</a>
-                                <a href="">送男友</a>
-                                <a href="">送亲人</a>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>女士手表</dt>
-                            <dd>
-                                <a href="">送母亲</a>
-                                <a href="">送老婆</a>
-                                <a href="">送女友</a>
-                                <a href="">送亲人</a>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>特价推荐</dt>
-                            <dd>
-                                <a href="" title="雅克利曼手表 Jacques Lemans">雅克利曼</a>
-                                <a href="" title="玛莎拉蒂手表 Maserati">玛莎拉蒂</a>
-                                <a href="" title="CK手表 Calvin Klein">CK</a>
-                                <a href="" title="Guess手表 Guess">Guess</a>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>款式场合</dt>
-                            <dd>
-                                <a href="" title="商务手表">商务休闲</a>
-                                <a href="" title="正装手表">正装</a>
-                                <a href="" title="时尚手表">时尚</a>
-                                <a href="" title="运动手表">运动</a>
-                                <a href="" title="运动手表">收藏</a>
-                            </dd>
-                        </dl>
+                        <?php } ?>
                     </div>
                 </li>
             </ul>
-            <!-- 修改后导航结束---------------------------------------------------------------------------------------------->
-
-
+            <!-- 修改后导航结束-->
         </div>
         <!-- end pop_menu-->
         <!--end gMune 修改2014-5-19 15:15:00 修改员——huang-->
