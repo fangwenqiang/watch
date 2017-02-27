@@ -10,9 +10,10 @@ use yii\web\UploadedFile;
 use app\models\Carousel;
 use app\models\CarouselForm;
 use yii\data\Pagination;
+use app\lib\getThumb;
 
 
-class CarouselController extends CommonController
+class CarouselController extends Controller
 {
     //后台公共视图
     public  $layout = '/background';
@@ -38,10 +39,25 @@ class CarouselController extends CommonController
                     unlink($path);
                     return '请输入1-10位排序数字<br>程序2秒后返回'.'<meta http-equiv="Refresh" content="2;url='.$thisUrl.'"/>';
                 }
+                //编辑缩略图名称
+                $imgName = substr($path,strrpos($path,'/')+1);
+                $imgPath = substr($path,0,strrpos($path,'/'));
+                $arr = explode( '.',$imgName);
+                $thumbName = $imgPath.'/'.$arr[0].'_thumb.'.$arr[1];
+                //缩略图
+                $getThumb = new getThumb();
+                $getThumb->set_config(['width' => 80,'height' => 60, ]);
+                $flag=$getThumb->create_thumb($path, $thumbName);
+                if(!$flag) {
+                    unlink($path);
+                    return '创建缩略图失败！<br>程序2秒后返回'.'<meta http-equiv="Refresh" content="2;url='.$thisUrl.'"/>';
+                }
+                //数据添加
                 $carousel = new CarouselForm();
                 $carousel->path = $path;
                 $carousel->is_show = $isShow;
                 $carousel->sort = $sort;
+                $carousel->thumb = $thumbName;
                 $carousel->save();
                 $id = $carousel->carousel_id;
 //                $id = $this->add(['sort'=>$sort,'is_show'=>$isShow,'path'=>$path]);
@@ -63,7 +79,7 @@ class CarouselController extends CommonController
     }
 
     /**
-     * 查询
+     * 添加
      * @param $data array 添加的数据
      * @return mixed
      */
@@ -72,7 +88,8 @@ class CarouselController extends CommonController
         $carousel = new CarouselForm();
         $carousel->isNewRecord = true;
         $carousel->setAttributes($data);
-        return $carousel->save()->createCommand()->getRawSql();
+        return $carousel->save();
+//        ->createCommand()->getRawSql()
 
      return $carousel->carousel_id;
 
@@ -108,11 +125,18 @@ class CarouselController extends CommonController
         $val   = $request->post('val');
         $id    = $request->post('id');
         $field = $request->post('field');
-        if($field == 'sort'){
-            if($val == '是') $val = 1;
-            if($val == '否') $val = 0;
+        if ($field == 'is_show'){
+            if($val == '是') {
+                $val = 1;
+            }elseif($val == '否'){
+                $val = 0;
+            } else{
+                return 0;
+            }
+        } elseif ($field == 'sort') {
+            if(!preg_match("/^\d{1,10}$/",$val)) return 0;
         }
-        $res=$carousel->updateAll(["$field"=>$val],'carousel_id=:id',[':id'=>$id]);
+        $res=$carousel->updateAll([$field=>$val],'carousel_id=:id',[':id'=>$id]);
         return $res;
     }
 
