@@ -104,7 +104,7 @@ use yii\bootstrap\Html;
         var pwd = $('#pwd').val();
         $.ajax({
             type: 'GET',
-            timeout: '5000',
+            timeout: '0',
             url: "<?=Url::to(['admin/login/logto']) ?>",
             data: "user=" + user + "&pwd=" + pwd + "&_csrf=" + csrfToken,
             async: true,
