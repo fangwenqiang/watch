@@ -1,4 +1,8 @@
-<!--index banner start  ---------------------------------------------------------------------------------------------->
+<?php
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+?>
 <div class="banner" id="banner" >
     <a href="#" class="d1" style="background:url(Images/banner2.jpg) center no-repeat;"></a>
     <a href="#" class="d1" style="background:url(Images/banner1.jpg) center no-repeat;"></a>
@@ -31,12 +35,11 @@
     <div class="tTit w1225">
         <span class="tNm">[特价推荐]</span>
         <ul id="hotTit" class="tGud">
-            <li><a  class="curr" href="#">男士</a></li>
-            <li><a href="#">女士</a></li>
-            <li><a href="#">情侣</a></li>
-            <li><a href="#">特惠</a></li><li onclick="";><a href="">更多</a></li>
+            <?php foreach ($erRank as $key => $value) {?>
+            <li><a  href="javascript:" class='whereCate' rank='特价' keyword='<?=$value["gt_name"]?>'><?=$value['gt_name']?></a></li>
+            <?php } ?>
+            <li><a href="<?= Url::toRoute(['home/bargain/price'])?>">更多</a></li> 
         </ul>
-
     </div>
     <div class="tBdy w1225" id="hotCon">
         <div class="tPdtLst">
@@ -44,15 +47,17 @@
 
             </div>
             <ul>
+               <?php foreach ($goodsData as $key => $value) {?>
                 <li>
                     <a href=""   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
                         <!-- <i class="c__tMsk"></i> -->
-                        <img src="Images/7718_63938.jpg"  width="250" height="250" />
+                        <img src="Images/<?=$value['g_img']?>"  width="250" height="250" />
 
-                        <div class="tNm">百达翡丽 复杂功能计时系列 收藏家挚爱</div >
-                        <div class="tPrc">￥352500&nbsp;<i class="del">371100</i></div>
+                        <div class="tNm"><?=$value['goods_name']?></div >
+                        <div class="tPrc">￥<?=$value['shop_price']?>&nbsp;<i class="del"><?=$value['market_price']?></i></div>
                         <div class="tInfo">已售出<b>&nbsp;13</b></div >                        </a>
                 </li>
+                <?php }?>
     
             </ul>
             <div class="mLnk">
@@ -79,8 +84,11 @@
     <div class="tTit w1225">
         <span class="tNm">[男士手表]</span>
         <ul id="rankTit" class="tGud">
-            <li><a class="curr" href="#">奢华</a></li><li><a href="#">高档</a></li><li><a href="">中档</a></li><li><a href="#">更多</a></li>        </ul>
-
+            <?php foreach ($threeRank as $key => $value) {?>
+            <li><a href="javascript:"  class='whereCate' rank='男士' keyword='<?=$value["gt_name"]?>'><?=$value['gt_name']?></a></li>       
+            <?php }?>
+            <li><a href="<?= Url::toRoute(['home/watch/boylist'])?>">更多</a></li> 
+        </ul>
     </div>
     <p align="center"><img src="Images/ban1.jpg" /></p>
 
@@ -89,17 +97,18 @@
             <div class="tLnk">
 
             </div>
-            <ul>
+            <ul id='rankTwo'>
+                 <?php foreach ($goodsData as $key => $value) {?>
                 <li>
                     <a href=""   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
                         <!-- <i class="c__tMsk"></i> -->
-                        <img src="Images/7718_63938.jpg"  width="250" height="250" />
+                        <img src="Images/<?=$value['g_img']?>"  width="250" height="250" />
 
-                        <div class="tNm">百达翡丽 复杂功能计时系列 收藏家挚爱</div >
-                        <div class="tPrc">￥352500&nbsp;<i class="del">371100</i></div>
+                        <div class="tNm"><?=$value['goods_name']?></div >
+                        <div class="tPrc">￥<?=$value['shop_price']?>&nbsp;<i class="del"><?=$value['market_price']?></i></div>
                         <div class="tInfo">已售出<b>&nbsp;13</b></div >                        </a>
                 </li>
-   
+                <?php }?>
             </ul>
             <div class="mLnk">
 
@@ -118,9 +127,12 @@
 
     <div class="tTit w1225">
         <span class="tNm">[女士手表]</span>
-        <ul id="rankTit" class="tGud">
-            <li><a  class="curr" href="#">奢华</a></li><li><a href="#">高档</a></li><li><a href="#">中档</a></li><li><a href="#">更多</a></li>        </ul>
-
+         <ul id="rankTit" class="tGud">
+            <?php foreach ($threeRank as $key => $value) {?>
+            <li><a href="javascript:" class='whereCate' rank='女士' keyword='<?=$value["gt_name"]?>'><?=$value['gt_name']?></a></li>       
+            <?php }?>
+            <li><a href="<?= Url::toRoute(['home/index/girllist'])?>">更多</a></li> 
+        </ul>
     </div>
     <p align="center"><img src="Images/ban1.jpg" /></p>
     <div class="tBdy w1225" id="hotCon">
@@ -129,15 +141,17 @@
 
             </div>
             <ul>
+                <?php foreach ($goodsData as $key => $value) {?>
                 <li>
                     <a href=""   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
                         <!-- <i class="c__tMsk"></i> -->
-                        <img src="Images/7718_63938.jpg"  width="250" height="250" />
+                        <img src="Images/<?=$value['g_img']?>"  width="250" height="250" />
 
-                        <div class="tNm">百达翡丽 复杂功能计时系列 收藏家挚爱</div >
-                        <div class="tPrc">￥352500&nbsp;<i class="del">371100</i></div>
+                        <div class="tNm"><?=$value['goods_name']?></div >
+                        <div class="tPrc">￥<?=$value['shop_price']?>&nbsp;<i class="del"><?=$value['market_price']?></i></div>
                         <div class="tInfo">已售出<b>&nbsp;13</b></div >                        </a>
                 </li>
+                <?php }?>
 
             </ul>
             <div class="mLnk">
@@ -150,5 +164,33 @@
     </div>
 </div>
 </div>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
 
+    //根据条件获取商品
+    $('.whereCate').hover(function(){
+        var where = $(this).attr('keyword');
+        var rank = $(this).attr('rank');
+        $.ajax({
+           url: "<?= Url::toRoute(['home/index/catedata'])?>",
+           data: "where="+where+'&rank='+rank,
+           dataType:'json',
+           success: function(re_val){
+             str=''
+             $(re_val).each(function(i,v){
+                str+='<li>\
+                        <a href="">\
+                        <img src="Images/'+this['g_img']+'"  width="250" height="250" />\
+                        <div class="tNm">'+this["goods_name"]+'</div >\
+                        <div class="tPrc">￥'+this["shop_price"]+'&nbsp;<i class="del">'+this['market_price']+'</i></div>\
+                        <div class="tInfo">已售出<b>&nbsp;13</b></div ></a>\
+                </li>'
+             })
+             $("#rankTwo").html(str);
+           }
+        });
+    },function(){
+    })
+
+</script>
 

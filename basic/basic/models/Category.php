@@ -152,4 +152,16 @@ class Category extends \yii\db\ActiveRecord
 
         return $data;
     }
+
+
+     /**
+    * 分级查询分类
+    * 
+    * @param  $where 查询条件
+    * @author pjp
+    */
+     public function selectData($where)
+     {
+        return  $this->find()->where($where)->asArray()->all();
+     }
 }

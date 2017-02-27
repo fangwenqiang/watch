@@ -31,12 +31,16 @@ class IndexController extends  Controller
         return $this->render('nav');
     }
 
-    /*
-     * 使用模型层
-     */
-    public function actionTest()
+
+    /**
+    * 生成首页
+    * 
+    * @param
+    * @author pjp
+    */
+    public function actionCreate_index()
     {
-        $model = new Test();
-        echo $model->test();
+        // $index = $this->renderPartial('/home/index/index');
+        // var_dump($index);
     }
 }

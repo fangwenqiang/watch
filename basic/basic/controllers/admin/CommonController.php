@@ -25,11 +25,11 @@ class CommonController extends Controller
                  $res = '1';
              }
          }
-         if (!isset($user_session)) {
-             $this->redirect(array('/admin/login/login'));
-         }else  if($res != 1 ){
-             die('没权限访问');
-         }
+         // if (!isset($user_session)) {
+         //     $this->redirect(array('/admin/login/login'));
+         // }else  if($res != 1 ){
+         //     die('没权限访问');
+         // }
     }
 
     /**
