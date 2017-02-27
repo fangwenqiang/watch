@@ -55,10 +55,9 @@ use yii\helpers\Url;
             $session = \Yii::$app->session;
             $user = $session->get('user_name');
             if (!isset($user)) {
-                foreach ($this->params['nav'] as $key => $val) {
-                    if ($val['nav_place'] == 2) { ?>
-                        <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
-                    <?php }
+                foreach ($this->params['nav']['top'] as $key => $val) {?>
+                    <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
+                    <?php 
                 }
             } else {
                 ?>
@@ -68,12 +67,6 @@ use yii\helpers\Url;
                 <?php
             }
             ?>
-
-            <?php foreach ($this->params['nav']['top'] as $key => $val) {
-               ?>
-                    <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
-                <?php
-            } ?>
 
         </div>
     </div>
