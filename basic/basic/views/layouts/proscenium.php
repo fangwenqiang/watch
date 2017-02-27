@@ -24,8 +24,12 @@ use yii\helpers\Url;
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
     <script src="js/jquery.js"></script>
-    <!--<script src="Script/global.js"></script>
-
+    <script src="js/saved_resource"></script>
+    <link rel="stylesheet" href="css/user.css" type="text/css" media="screen, projection">
+    <script type="text/javascript" src="js/user.js"></script>
+    <link rel="stylesheet" href="css/user.css">
+    <!--<script src="js/global.js"></script>
+    
     <!--修订功能js错误 重置模块功能：下拉菜单隐藏、头部幻灯片， 修改时间2014年5月20日11:11:17 修改员：huang-->
     <script type="text/javascript">
         $(function() {

@@ -9,24 +9,16 @@ use yii\filters\VerbFilter;
 use app\models\Home\Test;  //模型层
 
 
-class IndexController extends Controller
+class CollectController extends Controller
 {
     //前台公共视图
     public  $layout = '/proscenium';
-    /*
-     * 导航-->首页
-     */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
 
     /*
      * 使用模型层
      */
-    public function actionTest()
+    public function actionCollect()
     {
-        $model=new Test();
-        echo $model->test();
+    	return 1;
     }
 }
