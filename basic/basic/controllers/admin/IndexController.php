@@ -10,7 +10,7 @@ use yii\web\Session;
 use app\models\Admin\Test;  //模型层
 
 
-class IndexController extends  CommonController
+class IndexController extends  Controller
 {
     //后台公共视图
     public $layout = '/background';

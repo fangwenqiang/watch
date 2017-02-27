@@ -1,0 +1,2920 @@
+2017-02-21 19:28:46 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php:1254
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php(1236): yii\web\Request->loadCookies()
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php(1321): yii\web\Request->getCookies()
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php(1300): yii\web\Request->loadCsrfToken()
+#3 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\helpers\BaseHtml.php(295): yii\web\Request->getCsrfToken()
+#4 D:\dummy\Web\www.v.com\basic\views\layouts\main.php(20): yii\helpers\BaseHtml::csrfMetaTags()
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\SiteController))
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#9 D:\dummy\Web\www.v.com\basic\controllers\SiteController.php(63): yii\base\Controller->render('index')
+#10 [internal function]: app\controllers\SiteController->actionIndex()
+#11 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#14 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('', Array)
+#15 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2017-02-21 19:28:46 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/basic/'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '49693'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676526.416
+    'REQUEST_TIME' => 1487676526
+]
+2017-02-21 19:28:51 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php:1254
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php(1236): yii\web\Request->loadCookies()
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php(1321): yii\web\Request->getCookies()
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Request.php(1300): yii\web\Request->loadCsrfToken()
+#3 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\helpers\BaseHtml.php(295): yii\web\Request->getCsrfToken()
+#4 D:\dummy\Web\www.v.com\basic\views\layouts\main.php(20): yii\helpers\BaseHtml::csrfMetaTags()
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\SiteController))
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#9 D:\dummy\Web\www.v.com\basic\controllers\SiteController.php(63): yii\base\Controller->render('index')
+#10 [internal function]: app\controllers\SiteController->actionIndex()
+#11 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#14 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('', Array)
+#15 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2017-02-21 19:28:50 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '49776'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676530.982
+    'REQUEST_TIME' => 1487676530
+]
+2017-02-21 19:31:07 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "hoem/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('hoem/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:31:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'hoem/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '51644'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=hoem/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=hoem/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676667.155
+    'REQUEST_TIME' => 1487676667
+]
+2017-02-21 19:32:44 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "hoem/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('hoem/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:32:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'hoem/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '53083'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=hoem/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=hoem/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676764.213
+    'REQUEST_TIME' => 1487676764
+]
+2017-02-21 19:32:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "hoem/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('hoem/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:32:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'hoem/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '53083'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=hoem/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=hoem/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676766.815
+    'REQUEST_TIME' => 1487676766
+]
+2017-02-21 19:32:58 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "hoem/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('hoem/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:32:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'hoem/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '53265'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=hoem/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=hoem/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676778.07
+    'REQUEST_TIME' => 1487676778
+]
+2017-02-21 19:33:01 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "hoem/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('hoem/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:33:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'hoem/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '53265'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=hoem/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=hoem/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676781.524
+    'REQUEST_TIME' => 1487676781
+]
+2017-02-21 19:33:23 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "hoome/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('hoome/index/ind...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:33:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'hoome/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '53594'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=hoome/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=hoome/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676803.069
+    'REQUEST_TIME' => 1487676803
+]
+2017-02-21 19:33:25 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\controllers\home\IndexController' in file: D:\dummy\Web\www.v.com\basic/controllers/home/IndexController.php. Namespace missing?' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(564): class_exists('app\\controllers...')
+#3 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createControllerByID('home/index')
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('home/index/inde...')
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-02-21 19:33:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '53594'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676805.529
+    'REQUEST_TIME' => 1487676805
+]
+2017-02-21 19:33:31 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\controllers\home\IndexController' in file: D:\dummy\Web\www.v.com\basic/controllers/home/IndexController.php. Namespace missing?' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(564): class_exists('app\\controllers...')
+#3 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createControllerByID('home/index')
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('home/index/inde...')
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-02-21 19:33:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '53627'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676811.349
+    'REQUEST_TIME' => 1487676811
+]
+2017-02-21 19:34:31 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:34:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '54557'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676871.233
+    'REQUEST_TIME' => 1487676871
+]
+2017-02-21 19:34:33 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:34:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '54557'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676873.701
+    'REQUEST_TIME' => 1487676873
+]
+2017-02-21 19:34:36 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:34:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '54557'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676876.27
+    'REQUEST_TIME' => 1487676876
+]
+2017-02-21 19:36:28 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/gii' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('gii', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('site/gii', Array)
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:36:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '56381'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/gii'
+    'REQUEST_URI' => '/basic/web/index.php?r=site/gii'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487676988.927
+    'REQUEST_TIME' => 1487676988
+]
+2017-02-21 19:41:06 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:41:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '60277'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677266.428
+    'REQUEST_TIME' => 1487677266
+]
+2017-02-21 19:41:08 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:41:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '60277'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677268.527
+    'REQUEST_TIME' => 1487677268
+]
+2017-02-21 19:41:45 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:41:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '60795'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677305.725
+    'REQUEST_TIME' => 1487677305
+]
+2017-02-21 19:42:10 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:42:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61121'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677329.95
+    'REQUEST_TIME' => 1487677329
+]
+2017-02-21 19:42:11 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:42:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61121'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677331.613
+    'REQUEST_TIME' => 1487677331
+]
+2017-02-21 19:42:13 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:42:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61121'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677333.05
+    'REQUEST_TIME' => 1487677333
+]
+2017-02-21 19:42:15 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:42:15 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61121'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677335.344
+    'REQUEST_TIME' => 1487677335
+]
+2017-02-21 19:42:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:42:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61604'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677367.14
+    'REQUEST_TIME' => 1487677367
+]
+2017-02-21 19:42:48 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:42:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61604'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677368.68
+    'REQUEST_TIME' => 1487677368
+]
+2017-02-21 19:43:07 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:43:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61920'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677387.466
+    'REQUEST_TIME' => 1487677387
+]
+2017-02-21 19:43:09 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "inde/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('inde/index', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:43:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'inde/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61920'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=inde/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=inde/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677389.524
+    'REQUEST_TIME' => 1487677389
+]
+2017-02-21 19:43:13 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\index\index.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\IndexController.php(16): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('index/index', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-21 19:43:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '61920'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677392.954
+    'REQUEST_TIME' => 1487677392
+]
+2017-02-21 19:43:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:43:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '62512'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677425.927
+    'REQUEST_TIME' => 1487677425
+]
+2017-02-21 19:43:56 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:43:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '62610'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677436.003
+    'REQUEST_TIME' => 1487677436
+]
+2017-02-21 19:43:58 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:43:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '62610'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677438.636
+    'REQUEST_TIME' => 1487677438
+]
+2017-02-21 19:44:06 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/index/index".' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:44:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '62759'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677446.244
+    'REQUEST_TIME' => 1487677446
+]
+2017-02-21 19:44:11 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\controllers\home\IndexController' in file: D:\dummy\Web\www.v.com\basic/controllers/home/IndexController.php. Namespace missing?' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(564): class_exists('app\\controllers...')
+#3 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createControllerByID('home/index')
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('home/index/inde...')
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-02-21 19:44:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '62759'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677451.405
+    'REQUEST_TIME' => 1487677451
+]
+2017-02-21 19:44:18 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\controllers\home\IndexController' in file: D:\dummy\Web\www.v.com\basic/controllers/home/IndexController.php. Namespace missing?' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(564): class_exists('app\\controllers...')
+#3 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createControllerByID('home/index')
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('home/index/inde...')
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-02-21 19:44:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '62880'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677458.827
+    'REQUEST_TIME' => 1487677458
+]
+2017-02-21 19:44:48 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\index\index.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\IndexController.php(16): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('index/index', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-21 19:44:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '63399'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677488.144
+    'REQUEST_TIME' => 1487677488
+]
+2017-02-21 19:44:50 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\index\index.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\IndexController.php(16): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('index/index', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-21 19:44:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '63418'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677490.329
+    'REQUEST_TIME' => 1487677490
+]
+2017-02-21 19:45:05 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\index\home/index.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('home/index', Array, Object(app\controllers\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\IndexController.php(16): yii\base\Controller->render('home/index')
+#3 [internal function]: app\controllers\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('index/index', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-21 19:45:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '64031'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677505.875
+    'REQUEST_TIME' => 1487677505
+]
+2017-02-21 19:45:32 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\index\home/index/index.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('home/index/inde...', Array, Object(app\controllers\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\IndexController.php(16): yii\base\Controller->render('home/index/inde...')
+#3 [internal function]: app\controllers\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('index/index', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-21 19:45:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '64996'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677532.404
+    'REQUEST_TIME' => 1487677532
+]
+2017-02-21 19:46:58 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\controllers\home\IndexController' in file: D:\dummy\Web\www.v.com\basic/controllers/home/IndexController.php. Namespace missing?' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(564): class_exists('app\\controllers...')
+#3 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createControllerByID('home/index')
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('home/index/inde...')
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-02-21 19:46:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '50274'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677618.317
+    'REQUEST_TIME' => 1487677618
+]
+2017-02-21 19:47:10 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\home/index\index.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('index', Array, Object(app\controllers\home\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\Home\IndexController.php(16): yii\base\Controller->renderPartial('index')
+#3 [internal function]: app\controllers\home\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-21 19:47:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '50501'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487677630.707
+    'REQUEST_TIME' => 1487677630
+]
+2017-02-21 19:53:21 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/index/SpecialOffer' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('SpecialOffer', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/Spec...', Array)
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:53:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/SpecialOffer'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '56656'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/SpecialOffer'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/SpecialOffer'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678000.915
+    'REQUEST_TIME' => 1487678000
+]
+2017-02-21 19:53:28 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/index/specialoffer' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('specialoffer', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/spec...', Array)
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:53:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/specialoffer'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '56831'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/specialoffer'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/specialoffer'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678008.719
+    'REQUEST_TIME' => 1487678008
+]
+2017-02-21 19:53:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/index/SpecialOffer' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('SpecialOffer', Array)
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/Spec...', Array)
+#2 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-21 19:53:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/SpecialOffer'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '57094'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/SpecialOffer'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/SpecialOffer'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678026.198
+    'REQUEST_TIME' => 1487678026
+]
+2017-02-21 19:55:01 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Url' not found' in D:\dummy\Web\www.v.com\basic\views\Home\Index\Special.php:10
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-21 19:55:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/special'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '58354'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/special'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/special'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678101.339
+    'REQUEST_TIME' => 1487678101
+]
+2017-02-21 20:08:10 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\Test' not found' in D:\dummy\Web\www.v.com\basic\controllers\Home\IndexController.php:35
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-21 20:08:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '55072'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/test'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/test'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678890.482
+    'REQUEST_TIME' => 1487678890
+]
+2017-02-21 20:08:45 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Test' not found' in D:\dummy\Web\www.v.com\basic\controllers\Home\IndexController.php:36
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-21 20:08:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '55477'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/test'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/test'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678925.047
+    'REQUEST_TIME' => 1487678925
+]
+2017-02-21 20:08:47 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Test' not found' in D:\dummy\Web\www.v.com\basic\controllers\Home\IndexController.php:36
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-21 20:08:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '55529'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/test'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/test'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678927.083
+    'REQUEST_TIME' => 1487678927
+]
+2017-02-21 20:08:57 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Test' not found' in D:\dummy\Web\www.v.com\basic\controllers\Home\IndexController.php:36
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-21 20:08:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '55661'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/test'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/test'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678937.709
+    'REQUEST_TIME' => 1487678937
+]
+2017-02-21 20:09:00 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Test' not found' in D:\dummy\Web\www.v.com\basic\controllers\Home\IndexController.php:36
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-21 20:09:00 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/test'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '55687'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/test'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/test'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487678940.295
+    'REQUEST_TIME' => 1487678940
+]
+2017-02-21 20:14:01 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\admin/index\Special.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\admin\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('Special', Array, Object(app\controllers\admin\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\Admin\IndexController.php(19): yii\base\Controller->render('Special')
+#3 [internal function]: app\controllers\admin\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('admin/index/ind...', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-21 20:14:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '63512'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=admin/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487679241.15
+    'REQUEST_TIME' => 1487679241
+]
+2017-02-21 20:14:18 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Url' not found' in D:\dummy\Web\www.v.com\basic\views\Admin\Index\index.php:8
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-21 20:14:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/index/index'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '99nl8l2gj7ta1iaol3ju84jil5'
+    '_csrf-frontend' => 'd959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642\";}'
+    '_csrf' => '721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=99nl8l2gj7ta1iaol3ju84jil5; _csrf-frontend=d959dbedfc9232024996f1a60d3d122b792b9d3f570a2abfc0be618c1d6db0a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TNS_ZNu5-xbJk4LVeB6iFZKcgWhqY642%22%3B%7D; _csrf=721abacbf5d9ec33a0944d0b13ce8487ac638f1c6c95efa2326e3d3954adf7e4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CxlVlxNJZQp6jgsRZPWrsMpO3sCU1DE0%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '63835'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=admin/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487679258.839
+    'REQUEST_TIME' => 1487679258
+]
+2017-02-22 07:55:19 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: D:\dummy\Web\www.v.com\basic\views\home/index\index.php' in D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\IndexController))
+#1 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\IndexController))
+#2 D:\dummy\Web\www.v.com\basic\controllers\home\IndexController.php(21): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\home\IndexController->actionIndex()
+#4 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/inde...', Array)
+#8 D:\dummy\Web\www.v.com\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\dummy\Web\www.v.com\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-02-22 07:55:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '8a1e2d83996c1bd78d5d43d17c5ed829f32825438b85ad4203019684e5c60089a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nH-MY285uFR9_Moc0pe5DjGw_gR2b20j\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=8a1e2d83996c1bd78d5d43d17c5ed829f32825438b85ad4203019684e5c60089a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nH-MY285uFR9_Moc0pe5DjGw_gR2b20j%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/basic/web/index.php'
+    'REMOTE_PORT' => '51950'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/index'
+    'REQUEST_URI' => '/basic/web/index.php?r=home/index/index'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487721319.267
+    'REQUEST_TIME' => 1487721319
+]
