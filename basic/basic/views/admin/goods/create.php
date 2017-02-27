@@ -2,13 +2,15 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+use app\models\gongyang\Abroad;
 /* @var $this yii\web\View */
 /* @var $model app\models\Goods */
 
 $this->title = '添加商品';
 $this->params['breadcrumbs'][] = ['label' => 'Goods', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+//载入bootstr文件
+echo Abroad::IncludeBootstrap(); 
 ?>
 
 <div class="goods-create " style="float:left; width:500px; margin-left:200px;">
@@ -21,17 +23,17 @@ $this->params['breadcrumbs'][] = $this->title;
 <br>
 
 
-<form class="form-horizontal" action="" method="post">
+<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 
 <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">
 
 	<!-- 设置描述 -->
 <div id="describe">
-<select class="form-control" name="goods[type_id]">
+<select class="form-control" name="goods[gt_id]">
 	<option value="0">请选择类型</option>
 <?php foreach ($goodsType as $key => $value) {?>
-	<option value="<?php echo $value['type_id'] ?>">
-		<?php echo  $value['type_name']?>
+	<option value="<?php echo $value['gt_id'] ?>">
+		<?php echo  $value['gt_name']?>
 	</option>
 <?php } ?>
 </select>
@@ -77,7 +79,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <br>
 <input class="form-control " type="text" name="goods[keywords]" placeholder="关键词">
 <br>
-<input class="form-control " type="file" name="goods[g_img]" placeholder="添加图片">
+<input class="form-control " type="file" name="g_img" placeholder="添加图片">
 <br>
  是否展示：
 <label class="radio-inline">
@@ -145,23 +147,25 @@ $(function(){
 
 
 	//类型更改
-	$('select[name="goods[type_id]"]').on('change',function(){
+	$('select[name="goods[brand_id]"]').on('change',function(){
 			
-		var type_id = $('select[name="goods[type_id]"]').val();
+		var type_id = $('select[name="goods[brand_id]"]').val();
 
-		$.get('http://www.xiyue.com/index.php?r=admin/goods/get-type',{'type_id':type_id},function(data)
+
+		$.get('http://www.xiyue.com/index.php?r=admin/goods/get-type',{'brand_id':type_id},function(data)
 			{
 
 			var str = " " ; 
 			var strs = " ";
 			var stre = " "
 				for (var i = data.length - 1; i >= 0; i--) {
+					
 					if (data[i]['attr_input_type'] == 0){
 				
 		//stre = '请选择'+data[i]['attr_name']+':<input class="form-control" type="text" name="attr_value[]" placeholder="请填入具体值">';
 
 						// 类型1 可选参数
-						alert('暂时不支持自动输入');
+						// alert('暂时不支持自动输入');
 
 					}else if(data[i]['attr_input_type'] == 1){
 					//可选属性值
