@@ -141,4 +141,22 @@ class Brand extends \yii\db\ActiveRecord
         //销毁资源
         imagedestroy($image);
     }
+
+    /*
+     * 根据条件查找品牌数据
+     * */
+    public function brandWhere($field,$val)
+    {
+        $data = Brand::find(array(
+            'select'=>array('brand_id','brand_name','sort')
+        ))->where([$field=>$val])->asArray()->all();
+        if($data)
+        {
+            return $data;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
