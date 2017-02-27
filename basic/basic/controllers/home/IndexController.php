@@ -13,9 +13,14 @@ class IndexController extends Controller
 {
     //前台公共视图
     public  $layout = '/proscenium';
-    /*
-     * 导航-->首页
-     */
+
+
+    /**
+    * 首页
+    * 
+    * @param 
+    * @author pjp
+    */
     public function actionIndex()
     {
         $nav_model = new Nav();
@@ -25,24 +30,10 @@ class IndexController extends Controller
         $view = YII::$app->view;
         $view->params['system'] = $info;
         $view->params['nav'] =    array_slice($nav_data,0,14);
-;
+
         return $this->render('index');
     }
 
-    /*
-     * 导航-->本期特价
-     */
-    public function actionSpecial()
-    {
-        return $this->render('special');
-    }
 
-    /*
-     * 使用模型层
-     */
-    public function actionTest()
-    {
-        $model=new Test();
-        echo $model->test();
-    }
+
 }
