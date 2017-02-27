@@ -89,7 +89,8 @@ class Goods extends \yii\db\ActiveRecord
 
     /*
      * 根据类型查询商品
-     * */
+     * 
+     */
     public function showType($type)
     {
         return Goods::find()->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))->where(['gt_id'=>$type])->andWhere(['is_show'=>1])->asArray()->all();
@@ -97,9 +98,22 @@ class Goods extends \yii\db\ActiveRecord
 
     /*
      * 根据条件查询商品
-     * */
+     * 
+     */
     public function showBrand($field,$val)
     {
         return Goods::find()->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))->where([$field=>$val])->asArray()->all();
+    }
+
+
+    /**
+    * 条件选择商品
+    * 
+    * @param  $where 查询条件
+    * @author pjp
+    */
+    public function whereData($where)
+    {
+       return $this->find()->where($where)->limit(10)->asArray()->all();
     }
 }
