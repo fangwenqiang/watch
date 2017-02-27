@@ -37,6 +37,7 @@ class IndexController extends CommonController
     }
 
 
+
     /**
     * 根据条件查询商品
     * 
@@ -60,6 +61,7 @@ class IndexController extends CommonController
 
             return json_encode($goodsData);
         }
+
 
     }
 
