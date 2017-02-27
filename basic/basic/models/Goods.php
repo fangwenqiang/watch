@@ -86,4 +86,20 @@ class Goods extends \yii\db\ActiveRecord
             'add_time' => '添加时间',
         ];
     }
+
+    /*
+     * 根据类型查询商品
+     * */
+    public function showType($type)
+    {
+        return Goods::find()->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))->where(['gt_id'=>$type])->andWhere(['is_show'=>1])->asArray()->all();
+    }
+
+    /*
+     * 根据条件查询商品
+     * */
+    public function showBrand($field,$val)
+    {
+        return Goods::find()->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))->where([$field=>$val])->asArray()->all();
+    }
 }
