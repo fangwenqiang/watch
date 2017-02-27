@@ -25,7 +25,6 @@ class IndexController extends Controller
         $view = YII::$app->view;
         $view->params['system'] = $info;
         $view->params['nav'] =    array_slice($nav_data,0,14);
-;
         return $this->render('index');
     }
 
