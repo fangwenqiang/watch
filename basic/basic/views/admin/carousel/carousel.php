@@ -19,23 +19,21 @@
 
 <div id="dcWrap">
     <div id="dcMain">
-
-
    <!-- 当前位置 -->
      <div id="urHere">DouPHP 管理中心<b>></b><strong>首页轮播图</strong> </div>
      <div class="mainBox imgModule">
          <h3>首页轮播图</h3>
         <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
             <tr>
-                <th>添加幻灯</th>
-                <th>幻灯列表</th>
+                <th align="center">添加轮播图</th>
+                <th align="center">轮播图列表</th>
             </tr>
             <tr>
                 <?php $form = yii\widgets\ActiveForm::begin(['method'=>'post','options' => ['enctype' => 'multipart/form-data'],'id'=>'carousel']) ?>
                 <td width="350" valign="top">
-                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+                    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
                     <tr>
-                        <td><b>轮播图</b>
+                        <td>
                             <?= $form->field($carousel, 'image',['labelOptions' => ['label' => '']])->fileInput(['class'=>'inpFlie']) ?><font color="#ff4b33" id="imgError"></font>
                         </td>
                     </tr>
@@ -55,10 +53,10 @@
                         </td>
                     </tr>
                 </table>
-            </td>
+                </td>
                 <?php  yii\widgets\ActiveForm::end() ?>
-            <td valign="top">
-                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+                <td valign="top">
+                    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
                     <tr>
                         <td width="10" align="center">#</td>
                         <td width="100" align="center">轮播图</td>
@@ -70,8 +68,8 @@
                     <?php foreach ($data as $k => $v): ?>
                     <tr id="<?=$v['carousel_id']?>">
                         <td align="center"><?= $v['carousel_id'] ?></td>
-                        <td align="center"><img src="<?= 'http://'.$_SERVER['SERVER_NAME'].'/'.$v['path'] ?>" alt="轮播图" width="80" height="60"></td>
-                        <td align="center"><?= $v['path'] ?></td>
+                        <td align="center"><img src="<?= 'http://'.$_SERVER['SERVER_NAME'].'/'.$v['thumb'] ?>" alt="轮播图"></td>
+                        <td align="center"><?= $v['thumb'] ?></td>
                         <td align="center">
                             <span class="sve" hid="<?=$v['carousel_id']?>" field="is_show" title="点击编辑">
                                 <?php if($v['is_show']==1) echo '是';else echo '否'; ?>
@@ -91,12 +89,9 @@
                     <?php endforeach ?>
                 </table>
                     <?=yii\widgets\LinkPager::widget(['pagination' => $page])?>
-            </td>
-        </tr>
-
+                </td>
+            </tr>
         </table>
-
-
      </div>
     </div>
     <div class="clear"></div>

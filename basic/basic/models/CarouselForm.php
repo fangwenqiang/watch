@@ -40,6 +40,7 @@ class CarouselForm extends ActiveRecord
             'path'=>'Path',
             'is_show' => 'isShow',
             'sort' =>'Sort',
+            'thumb' =>'Thumb',
         ];
     }
 
