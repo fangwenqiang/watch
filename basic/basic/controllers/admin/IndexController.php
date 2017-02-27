@@ -23,7 +23,7 @@ class IndexController extends  Controller
         return $this->render('index');
     }
 
-    /*
+    /*  
      * 导航-->系统设置
      */
     public function actionSystem()

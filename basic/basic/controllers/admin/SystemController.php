@@ -21,12 +21,11 @@ class SystemController extends CommonController
     public function actionIndex()
     {
         $data = Filtration::check_arr(array_slice($_POST,0,12));
-        $cache = \Yii::$app->cache;
         if(!empty($_POST)){
             //判断是否上传文件,是的话读取原文件内容
             if($_FILES['site_logo']['tmp_name'] == ''){
                 $new_file = true;
-                $info = json_decode($cache->get("systemConfig"),true);
+                $info = json_decode(file_get_contents('systemConfig.txt'),true);
                 $data ['site_logo'] = $info['site_logo'];
                 $data ['site_logo_cdk'] = $info['site_logo_cdk'];
             } else {
@@ -37,7 +36,7 @@ class SystemController extends CommonController
             }
            //判断文件是否上传成功
             if ($new_file){
-                if($cache->set('systemConfig',json_encode($data))){
+                if(file_put_contents('systemConfig.txt',json_encode($data))){
                     return $this->success('admin/system/index');
                 } else {
                     return $this->error('配置失败');
@@ -47,7 +46,7 @@ class SystemController extends CommonController
                 return $this->error('图片配置失败');
             }
         }
-        $info = json_decode($cache->get("systemConfig"),true);
+        $info = json_decode(file_get_contents('systemConfig.txt'),true);
         if(!empty($info)){
             $data['code'] = 1;
             $data['msg'] = $info;
