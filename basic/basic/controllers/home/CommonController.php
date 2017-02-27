@@ -15,8 +15,7 @@ class CommonController extends Controller
     {
 
         $nav_model = new Nav();
-        $cache = \Yii::$app->cache;
-        $info = json_decode($cache->get("systemConfig"),true);
+        $info = json_decode(file_get_contents('systemConfig.txt'),true);
         $nav_data = $nav_model->recursion();
         $view = YII::$app->view;
         $view->params['system'] = $info;

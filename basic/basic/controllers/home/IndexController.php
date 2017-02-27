@@ -24,6 +24,7 @@ class IndexController extends CommonController
     */
     public function actionIndex()
     {
+
         // $nav_model = new Nav();
         // $info = json_decode(file_get_contents('systemConfig.txt'),true);
         // $nav_data = $nav_model->recursion();
@@ -35,6 +36,9 @@ class IndexController extends CommonController
         $categoryData = $Category->rank_select();
 
         return $this->render('index',['categoryData'=>$categoryData]);
+
+
+
     }
 
 

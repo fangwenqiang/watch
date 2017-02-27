@@ -50,7 +50,7 @@ class Nav extends \yii\db\ActiveRecord
 
     public function recursion($nav_pid=0)
     {
-        $info =  Nav::find()->where(['nav_pid' => $nav_pid])->asArray()->all();
+        $info =  Nav::find()->where(['nav_pid' =>$nav_pid])->asArray()->all();
         if(count($info) != 0){
             foreach($info as $key=>$val){
                 $info[$key]['child'] = Nav::find()->where(['nav_pid' => $val['nav_pid'].'-'.$val['nav_id']])->asArray()->all();
