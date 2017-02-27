@@ -1,18 +1,19 @@
 <?php
 
 namespace app\controllers\home;
-use app\models\Admin;
+use Yii;
+use yii\filters\AccessControl;
 use yii\web\Controller;
-use  yii\web\Session;
-
+use yii\filters\VerbFilter;
+use app\models\Nav;  //模型层
 /*
  * RBAC 权限管理
  * */
 
-class LoginController extends Controller
+class LoginController extends CommonController
 {
     // 后台公共视图
-    public $layout;
+    public  $layout = '/proscenium';
 
     /*
      * 管理员
@@ -20,11 +21,7 @@ class LoginController extends Controller
     public function actionLogin()
     {
 
-        $this->layout = false;
-        $session = \Yii::$app->session;
-        $session->open();
-        $user = $session->get('user');
-        return $this->render('login', ['user', $user]);
+        return $this->render('login');
     }
 
     public function actionLogto()

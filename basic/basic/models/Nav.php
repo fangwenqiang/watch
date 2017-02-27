@@ -71,6 +71,8 @@ class Nav extends \yii\db\ActiveRecord
         return   Nav::find()->where(['nav_id' => $id])->asArray()->one();
 
     }
+
+
     /*
      * 删除导航
      */
