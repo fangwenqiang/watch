@@ -131,6 +131,25 @@ class Category extends \yii\db\ActiveRecord
     */
     public function rank_select()
     {
-        
+        $arr = $this->find()->asArray()->all();
+        foreach ($arr as $key => $value) 
+        {
+            if($value['gt_pid']==0)
+            {
+                $data[$key] = $value;
+            }
+            else
+            {
+                foreach ($data as $k => $v) 
+                {
+                    if($value['gt_pid']==$v['gt_id'])
+                    {
+                        $data[$k]['son'][] = $value; 
+                    }
+                }
+            }
+        }
+
+        return $data;
     }
 }
