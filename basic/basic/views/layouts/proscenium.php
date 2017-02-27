@@ -1,17 +1,18 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+
 ?>
 <!DOCTYPE>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <title><?php echo $this->params['system']['site_title']?></title>
-    <meta name="keywords" content="<?php echo $this->params['system']['site_keywords']?>" />
-    <meta name="description" content="<?php echo $this->params['system']['site_description']?>" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
-    <base href="<?php echo Url::to('@web/public/home/')?>">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <title><?php echo $this->params['system']['site_title'] ?></title>
+    <meta name="keywords" content="<?php echo $this->params['system']['site_keywords'] ?>"/>
+    <meta name="description" content="<?php echo $this->params['system']['site_description'] ?>"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+    <base href="<?php echo Url::to('@web/public/home/') ?>">
     <!--[if lte IE 6]>
 
     <script src="home/js/DD_belatedPNG.js"></script>
@@ -28,14 +29,14 @@ use yii\helpers\Url;
 
     <!--修订功能js错误 重置模块功能：下拉菜单隐藏、头部幻灯片， 修改时间2014年5月20日11:11:17 修改员：huang-->
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             //我们一开始就隐藏所有的下拉菜单
             $('#dropdown_nav li').find('.sub_nav').hide();
             //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
-            $('#dropdown_nav li').hover(function() {
+            $('#dropdown_nav li').hover(function () {
                 $(this).find('.sub_nav').fadeIn(100);
                 $(this).find(".sub_link").addClass("cur");
-            }, function() {
+            }, function () {
                 $(this).find('.sub_nav').fadeOut(50);
                 $(this).find(".sub_link").removeClass("cur");
             });
@@ -49,25 +50,28 @@ use yii\helpers\Url;
 <div class="head">
     <div class="r1 w1225">
         <div class="ri">
-            <?php  foreach($this->params['nav'] as $key=>$val){
-                if($val['nav_place'] == 2){ ?>
-                    <span ><a href="<?php echo $val['nav_link']?>"  ><?php echo $val['nav_name']?></a></span>
-                <?php } } ?>
+            <?php foreach ($this->params['nav'] as $key => $val) {
+                if ($val['nav_place'] == 2) { ?>
+                    <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
+                <?php }
+            } ?>
         </div>
     </div>
     <div class="r2 w1225">
-        <h1 class="logo w440"><img src="css/images/LOGO.png" /></h1>
+        <h1 class="logo w440"><img src="css/images/LOGO.png"/></h1>
         <div class="srh">
-            <form id="searchForm" name="searchForm" method="get" action="/shoubiao.html" onsubmit="return checkSearchForm()"><input type="hidden" value="1" name="dow" id="dow">
-                <input name="w" id="w" type="text" class="tIptTxt c999 f14" value="搜索 品牌/系列/型号" title="搜索 品牌/系列/型号" onfocus="javascript:var t=$(this); if(t.val()==t.attr('title')) t.val('');" onblur="javascript:var t=$(this); if(t.val()=='') t.val(t.attr('title'));" />
+            <form id="searchForm" name="searchForm" method="get" action="/shoubiao.html"
+                  onsubmit="return checkSearchForm()"><input type="hidden" value="1" name="dow" id="dow">
+                <input name="w" id="w" type="text" class="tIptTxt c999 f14" value="搜索 品牌/系列/型号" title="搜索 品牌/系列/型号"
+                       onfocus="javascript:var t=$(this); if(t.val()==t.attr('title')) t.val('');"
+                       onblur="javascript:var t=$(this); if(t.val()=='') t.val(t.attr('title'));"/>
                 <a class="c__search">搜索</b></a>
             </form>
         </div>
         <div class="wbPt">
-            <span class="tTel" style="font-size:16px;">服务热线：<?php echo $this->params['system']['tel']?></span>
+            <span class="tTel" style="font-size:16px;">服务热线：<?php echo $this->params['system']['tel'] ?></span>
         </div>
     </div>
-
 
 
     <!-- 模块修改：腕表弹出层，修改内容：从展开修改为收起。修改2014-5-19 15:17:34 修改员：huang-->
@@ -78,34 +82,34 @@ use yii\helpers\Url;
             <!-- 修改后导航开始---------------------------------------------------------------------------------------------->
             <ul id="dropdown_nav">
                 <li>
-                    <a class="sub_link" href="#">腕表分类<img src="css/images/x_icon.png" /></a>
+                    <a class="sub_link" href="#">腕表分类<img src="css/images/x_icon.png"/></a>
 
                     <div class="sub_nav">
                         <dl>
                             <dt class="sub_ie">手表品牌</dt>
                             <dd>
-                                <a   href="">劳力士</a>
-                                <a   href="">欧米茄</a>
-                                <a   href="">欧古诗丹</a>
-                                <a   href="">天梭</a>
+                                <a href="">劳力士</a>
+                                <a href="">欧米茄</a>
+                                <a href="">欧古诗丹</a>
+                                <a href="">天梭</a>
                             </dd>
                         </dl>
                         <dl>
                             <dt>男士手表</dt>
                             <dd>
-                                <a   href="">送父亲</a>
-                                <a   href="">送老公</a>
-                                <a   href="">送男友</a>
-                                <a   href="">送亲人</a>
+                                <a href="">送父亲</a>
+                                <a href="">送老公</a>
+                                <a href="">送男友</a>
+                                <a href="">送亲人</a>
                             </dd>
                         </dl>
                         <dl>
                             <dt>女士手表</dt>
                             <dd>
-                                <a   href="">送母亲</a>
-                                <a   href="">送老婆</a>
-                                <a   href="">送女友</a>
-                                <a   href="">送亲人</a>
+                                <a href="">送母亲</a>
+                                <a href="">送老婆</a>
+                                <a href="">送女友</a>
+                                <a href="">送亲人</a>
                             </dd>
                         </dl>
                         <dl>
@@ -129,8 +133,8 @@ use yii\helpers\Url;
                         </dl>
                     </div>
                 </li>
-            </ul><!-- 修改后导航结束---------------------------------------------------------------------------------------------->
-
+            </ul>
+            <!-- 修改后导航结束---------------------------------------------------------------------------------------------->
 
 
         </div>
@@ -138,21 +142,31 @@ use yii\helpers\Url;
         <!--end gMune 修改2014-5-19 15:15:00 修改员——huang-->
 
         <ul class="gNav">
-            <?php  foreach($this->params['nav'] as $key=>$val){
-                  if($val['nav_place'] == 1){ ?>
-                      <li><a  title="<?php echo $val['nav_name']?>" class="cur"  href="<?php echo $val['nav_link']?>"><?php echo $val['nav_name']?></a></li>
-            <?php } } ?>
+
+            <?php
+            $session = \Yii::$app->session;
+            $user = $session->get('user');
+            if (!isset($user)) {
+
+                foreach ($this->params['nav'] as $key => $val) {
+                    if ($val['nav_place'] == 1) { ?>
+                        <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
+                               href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
+                    <?php }
+                }
+            } else {
+                echo "欢迎$user";
+            } ?>
+
         </ul>
     </div>
 </div>
 
 <!-- End header -->
-<link rel="stylesheet" href="css/index.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/index.css" type="text/css" media="screen, projection"/>
 <!--index banner start  ---------------------------------------------------------------------------------------------->
-<?=$content?>
+<?= $content ?>
 <!--index banner end----------------------------------------------------------------------------------------------------->
-
-
 
 
 <!--底部 -->
@@ -160,31 +174,34 @@ use yii\helpers\Url;
     <div class="r1 w1225">
         <dl class=" w188">
             <dd class=" w110">
-                <a href="/help-706.html"   rel="nofollow"><img src="css/images/logoxia.png"/></a>
+                <a href="/help-706.html" rel="nofollow"><img src="css/images/logoxia.png"/></a>
             </dd>
         </dl>
-        <?php  foreach($this->params['nav'] as $key=>$val){
-                if($val['nav_place'] == 3){ ?>
-                    <dl class=" w188">
-                        <dt class=" w70"><i><?php echo $val['nav_name']?></i></dt>
-                        <dd class=" w110">
-                            <?php foreach($val['child'] as $k=>$v){ ?>
-                                <a href="<?php echo $val['nav_link']?>"   rel="nofollow">&bull;&nbsp;<?php echo $v['nav_name']?></a>
-                            <?php } ?>
-                        </dd>
-                    </dl>
-         <?php   } }  ?>
+        <?php foreach ($this->params['nav'] as $key => $val) {
+            if ($val['nav_place'] == 3) { ?>
+                <dl class=" w188">
+                    <dt class=" w70"><i><?php echo $val['nav_name'] ?></i></dt>
+                    <dd class=" w110">
+                        <?php foreach ($val['child'] as $k => $v) { ?>
+                            <a href="<?php echo $val['nav_link'] ?>"
+                               rel="nofollow">&bull;&nbsp;<?php echo $v['nav_name'] ?></a>
+                        <?php } ?>
+                    </dd>
+                </dl>
+            <?php }
+        } ?>
     </div>
     <div class="r2 w1225 wide">
         <div class="f333 tmallLinks">
-            <a href=""   rel="nofollow">正品保证</a>&nbsp;|&nbsp;
-            <a href=""   rel="nofollow">7天退货</a>&nbsp;|&nbsp;
-            <a href=""  >售后维修 </a>&nbsp;|&nbsp;
-            <a href=""  >全场包邮</a>&nbsp;|&nbsp;
-            <a href=""   rel="nofollow">投诉建议</a>
+            <a href="" rel="nofollow">正品保证</a>&nbsp;|&nbsp;
+            <a href="" rel="nofollow">7天退货</a>&nbsp;|&nbsp;
+            <a href="">售后维修 </a>&nbsp;|&nbsp;
+            <a href="">全场包邮</a>&nbsp;|&nbsp;
+            <a href="" rel="nofollow">投诉建议</a>
         </div>
         <div>
-            <?php echo $this->params['system']['site_name']?> 版权所有  Copyright 2014-2015 <?php echo $this->params['system']['email']?> . <?php echo $this->params['system']['icp']?>.
+            <?php echo $this->params['system']['site_name'] ?> 版权所有 Copyright
+            2014-2015 <?php echo $this->params['system']['email'] ?> . <?php echo $this->params['system']['icp'] ?>.
             <br/>
         </div>
     </div>
@@ -195,16 +212,16 @@ use yii\helpers\Url;
     <a id="back_top" onclick="return false;" title="回到顶部"></a>
 </div>
 <script type="text/javascript">
-    $(function() {
-        $(window).scroll(function(){
-            var scrolltop=$(this).scrollTop();
-            if(scrolltop>=200){
+    $(function () {
+        $(window).scroll(function () {
+            var scrolltop = $(this).scrollTop();
+            if (scrolltop >= 200) {
                 $("#top_item").show();
-            }else{
+            } else {
                 $("#top_item").hide();
             }
         });
-        $("#back_top").click(function(){
+        $("#back_top").click(function () {
             $("html,body").animate({scrollTop: 0}, 500);
         });
     });
