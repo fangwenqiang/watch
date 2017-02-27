@@ -18,7 +18,7 @@ class GoodsSearch extends Goods
     public function rules()
     {
         return [
-            [['g_id', 'type_id', 'click_count', 'brand_id', 'g_number', 'market_price', 'shop_price', 'is_show', 'is_recommend', 'is_promote', 'promote_price'], 'integer'],
+            [['g_id', 'gt_id', 'click_count', 'brand_id', 'g_number', 'market_price', 'shop_price', 'is_show', 'is_recommend', 'is_promote', 'promote_price'], 'integer'],
             [['goods_sn', 'goods_name', 'g_weight', 'keywords', 'describe', 'g_img', 'g_thumb', 'promote_start_date', 'promote_end_date', 'author', 'add_time'], 'safe'],
         ];
     }
@@ -60,7 +60,7 @@ class GoodsSearch extends Goods
         // grid filtering conditions
         $query->andFilterWhere([
             'g_id' => $this->g_id,
-            'type_id' => $this->type_id,
+            'gt_id' => $this->gt_id,
             'click_count' => $this->click_count,
             'brand_id' => $this->brand_id,
             'g_number' => $this->g_number,

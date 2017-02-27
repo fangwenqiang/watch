@@ -131,7 +131,7 @@ class Category extends \yii\db\ActiveRecord
     */
     public function rank_select()
     {
-        $arr = $this->find()->asArray()->all();
+        $arr = $this->find()->where(['rank'=>1])->asArray()->all();
         foreach ($arr as $key => $value) 
         {
             if($value['gt_pid']==0)

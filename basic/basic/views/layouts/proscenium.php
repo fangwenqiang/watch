@@ -50,11 +50,24 @@ use yii\helpers\Url;
 <div class="head">
     <div class="r1 w1225">
         <div class="ri">
-            <?php foreach ($this->params['nav'] as $key => $val) {
-                if ($val['nav_place'] == 2) { ?>
+
+            <?php
+            $session = \Yii::$app->session;
+            $user = $session->get('user_name');
+            if (!isset($user)) {
+                foreach ($this->params['nav']['top'] as $key => $val) {?>
                     <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
-                <?php }
-            } ?>
+                    <?php 
+                }
+            } else {
+                ?>
+                <span><a href="#">欢迎:<?= $user ?></a></span>
+                <span><a href="#">退出</a></span>
+                <span><a href="#">购物车</a></span>
+                <?php
+            }
+            ?>
+
         </div>
     </div>
     <div class="r2 w1225">
@@ -103,22 +116,19 @@ use yii\helpers\Url;
         <!--end gMune 修改2014-5-19 15:15:00 修改员——huang-->
 
         <ul class="gNav">
-
             <?php
             $session = \Yii::$app->session;
             $user = $session->get('user');
             if (!isset($user)) {
-
-                foreach ($this->params['nav'] as $key => $val) {
-                    if ($val['nav_place'] == 1) { ?>
+                foreach ($this->params['nav']['zhu'] as $key => $val) {
+                 ?>
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
-                    <?php }
+                    <?php
                 }
             } else {
                 echo "欢迎$user";
             } ?>
-
         </ul>
     </div>
 </div>
@@ -138,8 +148,8 @@ use yii\helpers\Url;
                 <a href="/help-706.html" rel="nofollow"><img src="css/images/logoxia.png"/></a>
             </dd>
         </dl>
-        <?php foreach ($this->params['nav'] as $key => $val) {
-            if ($val['nav_place'] == 3) { ?>
+        <?php foreach ($this->params['nav']['bottom'] as $key => $val) {
+            ?>
                 <dl class=" w188">
                     <dt class=" w70"><i><?php echo $val['nav_name'] ?></i></dt>
                     <dd class=" w110">
@@ -149,7 +159,7 @@ use yii\helpers\Url;
                         <?php } ?>
                     </dd>
                 </dl>
-            <?php }
+            <?php
         } ?>
     </div>
     <div class="r2 w1225 wide">
