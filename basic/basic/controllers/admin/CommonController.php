@@ -16,6 +16,7 @@ class CommonController extends Controller
 
     public function init()
     {
+
 //         $session = \Yii::$app->session;
 //         $user_session = $session->get('user');
 //         $admin_id = $session->get('admin_id');
@@ -32,6 +33,7 @@ class CommonController extends Controller
 //                 die('没权限访问');
 // //                return $this->redirect([$this->actionMsg(), ['msg' => '没有权限访问','url'=>'/admin/index']]);
 //             }
+
     }
 
     /**
