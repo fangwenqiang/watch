@@ -1,4 +1,7 @@
+<?php
+use yii\helpers\Url;
 
+?>
 
 <!-- End header -->
 <link rel="stylesheet" href="css/list.css">
@@ -28,8 +31,7 @@
         </div>
 
         <div class="sift_results">
-            <a href="javascript:location.href='/shoubiao.html';" rel="nofollow" title="取消选择“男表”">男表<i>×</i></a>        </div>
-
+            <a href="javascript:location.href='/shoubiao.html';" rel="nofollow" title="取消选择“男表”">男表<i>×</i></a></div>
 <!--        根据品牌搜索查询框-->
         <div class="sift_area">
             <div class="sa_mid">
@@ -38,15 +40,15 @@
                         <div class="f_tit">品牌</div>
                     </div>
                     <div class="f_right w920">
-                        <dl class="s1 rel mb10">
-                            <dt class="on"><a href="javascript:;" rel="nofollow">不限</a></dt>
-                            <input type="text" id="brand_search" class="sa_search" value="输入品牌名" title="输入品牌名" onfocus="javascript:var t=$(this); if(t.val()==t.attr('title')) t.val('');" onblur="javascript:var t=$(this); if(t.val()=='') t.val(t.attr('title'));" />
-                            <a href="javascript:void(0);" id="showAll" class="all_brands">显示全部品牌</a>
-                        </dl>
+<!--                        <dl class="s1 rel mb10">-->
+<!--                            <dt class="on"><a href="javascript:;" rel="nofollow">不限</a></dt>-->
+<!--                            <input type="text" id="brand_search" class="sa_search" value="输入品牌名" title="输入品牌名" onfocus="javascript:var t=$(this); if(t.val()==t.attr('title')) t.val('');" onblur="javascript:var t=$(this); if(t.val()=='') t.val(t.attr('title'));" />-->
+<!--                            <a href="javascript:void(0);" id="showAll" class="all_brands">显示全部品牌</a>-->
+<!--                        </dl>-->
 
                         <?php foreach($data['brandList']as $val){ ?>
                         <dl id="level1" num="1" class="s2"><dt><a href="javascript:;" rel="nofollow"><?=$val['sort']?></a></dt>
-                            <dd><a href="" title="百达翡丽手表 Patek Philippe"><?=$val['brand_name']?></a></dd>
+                            <dd><a href="<?=url::to(['home/watch/boylist','brand_id'=>$val['brand_id']]) ?>" title="百达翡丽手表 Patek Philippe"><?=$val['brand_name']?></a></dd>
                         </dl>
                         <?php } ?>
                     </div>
@@ -71,14 +73,18 @@
                 <div id="goods_list" class="goods_list w930">
 <!--                    商品展示-->
                     <ul>
+                        <?php if($data['goodsList'] == '1'){ ?>
+                        <span><h2>该品牌下暂时没有商品</h2></span>
+                        <?php }else{ ?>
+                        <?php foreach($data['goodsList'] as $val){ ?>
                         <li>
                             <a href="michel-herbelin-g5561.html" title="赫柏林Classic Gents系列12443/S01"  >
                                 <!-- <i class="c__tMsk"></i> -->
                                 <i class="c__pTag"><span style="">招行特惠 立减200元</span></i>
-                                <div class="tImg"><img src="Images/12443_S01_97254.jpg"></div>
-                                <div class="tNm">法国赫柏林 大三针日期功能 销量冠军 </div>
+                                <div class="tImg"><img src="Images/<?=$val['g_img']?>"></div>
+                                <div class="tNm"><?=$val['goods_name'].'&nbsp;&nbsp;'.$val['keywords']?></div>
                                 <div class="tPrc">
-                                    ￥<span>2950</span>
+                                    ￥<span><?=$val['shop_price']?></span>
                                     <i>欧洲同步价</i>
                                 </div>
                                 <div class="tInfo">
@@ -89,6 +95,8 @@
                             </label>
                             <input type="hidden" id="goods_id" value="5561">
                         </li>
+                        <?php } ?>
+                        <?php } ?>
                     </ul>
 <!--                    end 商品展示-->
                 </div>
