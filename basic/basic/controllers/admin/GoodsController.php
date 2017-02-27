@@ -8,7 +8,8 @@ use app\models\GoodsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
+use app\lib\Functions\Filtration;
 /**
  * GoodsController implements the CRUD actions for Goods model.
  */
@@ -16,6 +17,7 @@ class GoodsController extends Controller
 {
 
     public  $layout = '/background';
+   
     /**
      * @inheritdoc
      */
@@ -39,7 +41,6 @@ class GoodsController extends Controller
     {
         $searchModel = new GoodsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -66,15 +67,26 @@ class GoodsController extends Controller
      */
     public function actionCreate()
     {
+        // echo phpinfo();die;
         $model = new Goods();
 
         if (Yii::$app->request->post()) {
-           
+            //上传文件
+            $image = UploadedFile::getInstanceByName('g_img');
+            $imageType = explode('/', $image->type);
+            $name = $_SERVER['DOCUMENT_ROOT'].'/public/admin/upload_files/goods/'.time().'.'.$imageType[1];
+            $imageName = $_SERVER['HTTP_HOST'].'/public/admin/upload_files/goods/'.time().'.'.$imageType[1];
+            $res = $image->saveAs($name);
+            if ($res!=1) {
+                echo '<script>alert("文件上传失败");history.go(-1)</script>';
+            }
+
+
             $post = Yii::$app->request->post();
             //加入goods表
-            $post['goods']['add_time'] = time();
+            $post['goods']['add_time'] = date('Y-m-d H:i:s');
             $post['goods']['goods_sn'] = $post['goods']['brand_id'].$post['goods']['brand_id'].'aaaaa';
-            
+            $post['goods']['g_img'] = $imageName;
             try { 
                 Yii::$app->db->createCommand()->insert('mb_goods',$post['goods'])->execute();
                 $insertId = Yii::$app->db->getLastInsertID(); 
@@ -82,6 +94,7 @@ class GoodsController extends Controller
                 echo '添加失败';
                 exit();
             }
+
 
 
             //组合添加的数组
@@ -116,14 +129,12 @@ class GoodsController extends Controller
                 echo '添加类型失败';
                  exit();
             }
-
             echo "<script>alert('添加成功');history.go(-1)</script>"; 
-            
 
         } else {
             //传入其他参数
             $connection = \Yii::$app->db;
-            $command = $connection->createCommand('SELECT * FROM mb_goodstype');
+            $command = $connection->createCommand('SELECT * FROM mb_category');
             $goodsType = $command->queryAll();
             $command = $connection->createCommand('SELECT brand_id,brand_name FROM mb_brand');
             $goodsBrand = $command->queryAll();
@@ -136,10 +147,11 @@ class GoodsController extends Controller
     public function actionGetType()
     {
         $get = Yii::$app->request->get();
+        $brand_id = Filtration::check_id($get['brand_id']);
         if($get)
         {
             $connection = \Yii::$app->db;
-            $sql = 'SELECT * FROM mb_attribute where type_id = '.$get['type_id'];
+            $sql = 'SELECT * FROM mb_attribute where type_id = '.$brand_id;
             $command = $connection->createCommand($sql);
             $attribute = $command->queryAll();
             return json_encode($attribute);

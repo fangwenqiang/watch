@@ -8,6 +8,8 @@ class Category extends \yii\db\ActiveRecord
     {
         return 'mb_category';
     }
+
+
     /*
      * 测试的方法
      */
@@ -15,6 +17,9 @@ class Category extends \yii\db\ActiveRecord
     {
         return "欢迎使用后台模型";
     }
+
+
+
     /*
      * 分类-->查看单挑数据
      */
@@ -30,6 +35,8 @@ class Category extends \yii\db\ActiveRecord
     		return false;
     	}
     }
+
+
     /*
      * 分类-->修改操作
      */
@@ -46,6 +53,8 @@ class Category extends \yii\db\ActiveRecord
     		return false;
     	}
     }
+
+
     /*
      * 分类-->查看全部数据
      */
@@ -61,6 +70,8 @@ class Category extends \yii\db\ActiveRecord
     		return false;
     	}
     }
+
+
     /*
      * 分类-->删除单条数据
      */
@@ -76,6 +87,8 @@ class Category extends \yii\db\ActiveRecord
             return false;
         }
     }
+
+
     /*
      * 分类-->添加数据
      */
@@ -91,6 +104,7 @@ class Category extends \yii\db\ActiveRecord
             return false;
         }
     }
+
     public function getall($arr,$gt_pid=0,$level=0)
     {
         static $temp=array();
@@ -106,5 +120,36 @@ class Category extends \yii\db\ActiveRecord
             
         }
         return $temp;
+    }
+
+
+    /**
+    * 分级查询分类
+    * 
+    * @param
+    * @author pjp
+    */
+    public function rank_select()
+    {
+        $arr = $this->find()->where(['rank'=>1])->asArray()->all();
+        foreach ($arr as $key => $value) 
+        {
+            if($value['gt_pid']==0)
+            {
+                $data[$key] = $value;
+            }
+            else
+            {
+                foreach ($data as $k => $v) 
+                {
+                    if($value['gt_pid']==$v['gt_id'])
+                    {
+                        $data[$k]['son'][] = $value; 
+                    }
+                }
+            }
+        }
+
+        return $data;
     }
 }

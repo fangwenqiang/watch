@@ -15,7 +15,7 @@ use yii\helpers\Url;
                 <tr>
                     <td align="center"><?=$val['role_id']?></td>
                     <td align="center"><?=$val['role_name']?></td>
-                    <td align="center"><a href="<?=url::to(['admin/rbac/addrono','role_id'=>$val['role_id']])?>">赋权</a> | <a href="<?=url::to(['admin/rbac/updaterole','role_id'=>$val['role_id']])?>">编辑</a> | <a href="javascript:void(0)" class="del" role_id="<?=$val['role_id']?>">删除</a></td>
+                    <td align="center"><a href="<?=url::to(['admin/rbac/addrono','role_id'=>$val['role_id']])?>">赋权</a> | <a href="<?=url::to(['admin/rbac/updaterole','role_id'=>$val['role_id']])?>">编辑</a> | <a href="javascript:void(0)" class="del" role_id="<?=$val['role_id']?>">删除</td>
                 </tr>
             <?php } ?>
         </table>

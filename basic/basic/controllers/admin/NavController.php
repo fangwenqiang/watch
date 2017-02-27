@@ -9,7 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\Nav;  //模型层
 use app\lib\Functions\Filtration;
 
-class NavController extends Controller
+class NavController extends CommonController
 {
     public $nav_model;
     //后台公共视图
@@ -80,6 +80,7 @@ class NavController extends Controller
                 $FILES['nav_icon'] = "upload_files/".$filename;
                 $post = array_merge($FILES,$_POST);
                 if ($this->nav_model->add_Nav(Filtration::check_arr($post), 0)) {
+
                     return $this->success('admin/nav/index');
                 } else {
                     return $this->error('添加失败');

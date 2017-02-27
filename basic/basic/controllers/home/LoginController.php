@@ -1,18 +1,21 @@
 <?php
 
 namespace app\controllers\home;
+use app\models\User;
 use app\models\Admin;
+use Yii;
+use yii\filters\AccessControl;
 use yii\web\Controller;
-use  yii\web\Session;
-
+use yii\filters\VerbFilter;
+use app\models\Nav;  //模型层
 /*
  * RBAC 权限管理
  * */
 
-class LoginController extends Controller
+class LoginController extends CommonController
 {
     // 后台公共视图
-    public $layout;
+    public  $layout = '/proscenium';
 
     /*
      * 管理员
@@ -20,20 +23,15 @@ class LoginController extends Controller
     public function actionLogin()
     {
 
-        $this->layout = false;
-        $session = \Yii::$app->session;
-        $session->open();
-        $user = $session->get('user');
-        return $this->render('login', ['user', $user]);
+        return $this->render('login');
     }
 
     public function actionLogto()
     {
-        $this->layout = false;
         $request = \Yii::$app->request->get();
         $user = $request['user'];
         $pwd = substr(md5($request['pwd']), 0, 20);
-        $model = new Admin();
+        $model = new User();
         $where['username'] = $user;
         $data = $model->select($where);
         if (empty($data)) {
@@ -43,8 +41,8 @@ class LoginController extends Controller
                 return 2;
             } else {
                 $session = \Yii::$app->session;
-                $session->set('user', $user);
-                $session->set('admin_id', $data[0]['admin_id']);
+                $session->set('user_name', $user);
+                $session->set('user_id', $data[0]['user_id']);
                 return 0;
             }
         }
@@ -53,8 +51,8 @@ class LoginController extends Controller
     public function actionLogout()
     {
         $session = \Yii::$app->session;
-        $a = $session->remove('user');
-        $b = $session->remove('admin_id');
+        $a = $session->remove('user_name');
+        $b = $session->remove('user_id');
         if ($a & $b) {
             return 1;
         } else {

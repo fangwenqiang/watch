@@ -83,7 +83,7 @@ use yii\bootstrap\Html;
 </head>
 <body>
 <div id="login">
-    <h1>后台登录<?php echo "user" ?></h1>
+    <h1>后台登录</h1>
     <form id="form" method="post" action="javascript:void(0)">
         <span class="error" id="msg"></span>
         <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">
@@ -104,7 +104,7 @@ use yii\bootstrap\Html;
         var pwd = $('#pwd').val();
         $.ajax({
             type: 'GET',
-            timeout: '5000',
+            timeout: '0',
             url: "<?=Url::to(['admin/login/logto']) ?>",
             data: "user=" + user + "&pwd=" + pwd + "&_csrf=" + csrfToken,
             async: true,

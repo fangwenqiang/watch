@@ -41,7 +41,8 @@ use yii\bootstrap\Html;
             <tr>
                 <td></td>
                 <td>
-                    <input type="hidden" name="token" value="5a58b748"/>
+                    <input type="hidden" class="_csrf" value="<?=Yii::$app->request->getCsrfToken() ?>">
+
                     <?= Html::submitButton('提交', ['class' => 'btn', 'name' => 'submit']) ?>
                 </td>
             </tr>

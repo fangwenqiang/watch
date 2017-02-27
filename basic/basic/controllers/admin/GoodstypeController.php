@@ -10,7 +10,7 @@ use app\models\Goodstype;  //模型层
 use app\models\Attribute;  //模型层
 
 
-class GoodstypeController extends Controller
+class GoodstypeController extends CommonController
 {
 
 	//后台公共视图

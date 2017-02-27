@@ -7,7 +7,7 @@ use yii\web\Controller;
 use  yii\web\Session;
 
 /*
- * RBAC 权限管理
+ * 管理员登录退出
  * */
 
 class LoginController extends Controller
@@ -17,15 +17,14 @@ class LoginController extends Controller
 
     /*
      * 管理员
+     *
      * */
+
     public function actionLogin()
     {
 
         $this->layout = false;
-        $session = \Yii::$app->session;
-        $session->open();
-        $user = $session->get('user');
-        return $this->render('login', ['user', $user]);
+        return $this->render('login');
     }
 
     public function actionLogto()

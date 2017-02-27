@@ -15,7 +15,7 @@ use yii\web\Controller;
 /*
  * RBAC 权限管理
  * */
-class RbacController extends Controller
+class RbacController extends CommonController
 {
 	// 后台公共视图
 
