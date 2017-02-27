@@ -28,5 +28,13 @@ class IndexController extends CommonController
     }
 
 
+    /*
+     * 使用模型层
+     */
+    public function actionTest()
+    {
+        $model=new Test();
+        echo $model->test();
+    }
 
 }
