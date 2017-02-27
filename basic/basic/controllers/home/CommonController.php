@@ -25,6 +25,7 @@ class CommonController extends Controller
         $categoryData = $Category->rank_select();
         $view->params['categoryData'] = $categoryData;
 
+
 //
 //        $session = \Yii::$app->session;
 //        $user_session = $session->get('user');
