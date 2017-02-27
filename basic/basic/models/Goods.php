@@ -92,14 +92,24 @@ class Goods extends \yii\db\ActiveRecord
      * */
     public function showType($type)
     {
-        return Goods::find()->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))->where(['gt_id'=>$type])->andWhere(['is_show'=>1])->asArray()->all();
+        return Goods::find()
+            ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
+            ->where(['gt_id'=>$type])
+            ->andWhere(['is_show'=>1])
+            ->orderBy('shop_price')
+            ->asArray()
+            ->all();
     }
 
     /*
      * 根据条件查询商品
      * */
-    public function showBrand($field,$val)
+    public function showBrand($field,$val,$gt_id)
     {
-        return Goods::find()->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))->where([$field=>$val])->asArray()->all();
+        return Goods::find()
+            ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
+            ->where([$field=>$val])
+            ->andWhere(['gt_id'=>$gt_id])
+            ->asArray()->all();
     }
 }

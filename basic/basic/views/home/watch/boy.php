@@ -1,11 +1,10 @@
 <?php
 use yii\helpers\Url;
-
 ?>
 
 <!-- End header -->
 <link rel="stylesheet" href="css/list.css">
-<script src="Script/list.js"></script>
+<!--<script src="Script/list.js"></script>-->
 
 <!-- Main Begin -->
 <div id="main2">
@@ -40,12 +39,14 @@ use yii\helpers\Url;
                         <div class="f_tit">品牌</div>
                     </div>
                     <div class="f_right w920">
-<!--                        <dl class="s1 rel mb10">-->
-<!--                            <dt class="on"><a href="javascript:;" rel="nofollow">不限</a></dt>-->
-<!--                            <input type="text" id="brand_search" class="sa_search" value="输入品牌名" title="输入品牌名" onfocus="javascript:var t=$(this); if(t.val()==t.attr('title')) t.val('');" onblur="javascript:var t=$(this); if(t.val()=='') t.val(t.attr('title'));" />-->
-<!--                            <a href="javascript:void(0);" id="showAll" class="all_brands">显示全部品牌</a>-->
-<!--                        </dl>-->
-
+                        <dl class="s1 rel mb10">
+                            <dt class="on"><a href="javascript:;" rel="nofollow">不限</a></dt>
+                            <form action="<?=url::to(['home/watch/boylist'])?>" method="post" id="search">
+                                <input type="text" id="brand_search" name="brand_name" class="sa_search" value="输入品牌名" title="输入品牌名" />
+                                <input type="hidden" name="_csrf" class="_csrf" value="<?=Yii::$app->request->getCsrfToken() ?>">
+                            </form>
+                            <a href="<?=url::to(['home/watch/boylist']) ?>" id="showAll" class="all_brands">显示全部品牌</a>
+                        </dl>
                         <?php foreach($data['brandList']as $val){ ?>
                         <dl id="level1" num="1" class="s2"><dt><a href="javascript:;" rel="nofollow"><?=$val['sort']?></a></dt>
                             <dd><a href="<?=url::to(['home/watch/boylist','brand_id'=>$val['brand_id']]) ?>" title="百达翡丽手表 Patek Philippe"><?=$val['brand_name']?></a></dd>
@@ -63,8 +64,8 @@ use yii\helpers\Url;
             <div class="sa_top">
                 <dl class="order_by">
                     <dt>排序：</dt>
-                    <dd><a href="" rel="nofollow" title="点击排序">价格<i class="p_all"></i></a></dd>
-                    <dd class="on"><a href="javascript:void(0);" class="down" rel="nofollow" style="cursor:default">热销</a></dd>
+                    <dd class="on"><a href="" rel="nofollow" title="点击排序">价格<i class="p_all"></i></a></dd>
+                    <dd ><a href="javascript:void(0);" class="down">热销</a></dd>
                     <dd><a href="" rel="nofollow" title="点击排序">最新<i class=""></i></a></dd>
                 </dl>
             </div>
@@ -169,7 +170,14 @@ use yii\helpers\Url;
 
     </div>
 
-    <script type="text/javascript" src="Script/"></script>
-    <script type="text/javascript" src="Script/compare.js"></script>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.sa_search').blur(function () {
+                $('#search').submit();
+            })
+        })
+
+    </script>
 </div>
 
