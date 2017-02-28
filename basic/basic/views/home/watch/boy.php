@@ -216,6 +216,7 @@ use yii\helpers\Url;
                                 str +='<input autocomplete="off" type="checkbox" id="product_5561" title="勾选加入表款对比"></label></li>';
                             })
                         }
+//                        水电费
                         $('.ul_goods').html(str);
                     }
                 });
