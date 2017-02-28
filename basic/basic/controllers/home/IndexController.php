@@ -14,7 +14,7 @@ use app\models\Goods;  //模型层
 
 class IndexController extends CommonController
 {
-    //前台公共视图
+    //公共视图
     public  $layout = '/proscenium';
 
 
