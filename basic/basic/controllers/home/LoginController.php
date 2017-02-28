@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers\home;
+
 use app\models\User;
 use app\models\Admin;
 use Yii;
@@ -15,7 +16,7 @@ use app\models\Nav;  //模型层
 class LoginController extends CommonController
 {
     // 后台公共视图
-    public  $layout = '/proscenium';
+    public $layout = '/proscenium';
 
     /*
      * 管理员
@@ -40,15 +41,20 @@ class LoginController extends CommonController
             if ($data[0]['password'] != $pwd) {
                 return 2;
             } else {
-                $session = \Yii::$app->session;
-                $session->set('user_name', $user);
-                $session->set('user_id', $data[0]['user_id']);
-                return 0;
+                if ($data[0]['is_login'] == 0) {
+                    return 3;
+                } else {
+                    $session = \Yii::$app->session;
+                    $session->set('user_name', $user);
+                    $session->set('user_id', $data[0]['user_id']);
+                    return 0;
+                }
             }
         }
     }
 
-    public function actionLogout()
+    public
+    function actionLogout()
     {
         $session = \Yii::$app->session;
         $a = $session->remove('user_name');
@@ -64,7 +70,8 @@ class LoginController extends CommonController
     /**
      * 页面跳转提示
      */
-    public function actionMsg()
+    public
+    function actionMsg()
     {
         $layout = '/background';
         $request = \Yii::$app->request;
@@ -72,16 +79,15 @@ class LoginController extends CommonController
     }
 
 
-
     /**
      * 判断是否登录(ajax)
      */
-    public function actionLogin_status()
+    public
+    function actionLogin_status()
     {
         $session = \Yii::$app->session;
         $user = $session->get('user_name');
-
-        return $user?1:0;
+        return $user ? $user : 0;
     }
 
 
