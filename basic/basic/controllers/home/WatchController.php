@@ -107,13 +107,16 @@ class WatchController extends CommonController{
         }else{
             $limit = ($p-1)*$this->onePage; //偏移量
         }
-
-        $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->count();    //数据总条数
-
         $data['goodsList']= $goods->showBrand('brand_id',$brand_id,'2',$order,$orderField,$limit);
 
         if(empty($data['goodsList'])){
             die(json_encode(array('res'=>'1','msg'=>'该品牌下暂时没有商品')));
+        }
+        // 判断是否有条件
+        if(is_numeric($brand_id)){
+            $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->andWhere(['brand_id'=>$brand_id])->count();    //数据总条数
+        }else{
+            $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->count();    //数据总条数
         }
 
         $data['pageStr'] = $this->pageStr($count,$this->onePage,$p);
@@ -136,32 +139,10 @@ class WatchController extends CommonController{
         //下一页
         $nextPage = $p + 1 > $sunPage ? $sunPage : $p + 1;
 
-//                <div id="page_nav">
-//                    <span class="pre">上一页</span>&nbsp;<span class="cur">1</span><a  href="html" class="next">下一页</a>&nbsp;
-//                </div>
-//
-//                <div id="record">
-//        共有&nbsp;774&nbsp;页，跳到第&nbsp;<input id="jtp" type="text" class="txt" maxlength="4" maxpage="774" value="" />&nbsp;页&nbsp;<a id="btnJtp" href="javascript:void(0);" class="btn">确定</a>
-//                </div>
-
-
         $pageStr = '';
-        $pageStr .='<div id="page_nav"><span class="pre"><a href="javascript:page('.$upPage.')">上一页</a></span>&nbsp;';
+        $pageStr .='<div id="page_nav"><a href="javascript:page('.$upPage.')">上一页</a>&nbsp;';
         $pageStr .='<a href="javascript:page('.$nextPage.')">下一页</a>&nbsp;</div>';
 
-
-
-//        $pageStr .='共 '.$sunPage.' 页';
-//        $pageStr .='当前页第 '.$p.' 页';
-//        $pageStr .='每页 <input type="text" value="'.$onePage.'" class="onePage" alt="'.$p.'">';
-//        $pageStr .='<a href="javascript:page('.$fistPage.')">第一页</a> ';
-//        $pageStr .='<a href="javascript:page('.$upPage.')">上一页</a> ';
-//        $pageStr .='<a href="javascript:page('.$nextPage.')">下一页</a> ';
-//        $pageStr .='<a href="javascript:page('.$sunPage.')">末一页</a>';
-
-//        sdfasfs
-
-//        return $pageStr;
         return $pageStr;
     }
 
