@@ -29,49 +29,22 @@ use yii\helpers\Url;
     <link rel="stylesheet" href="css/user.css" type="text/css" media="screen, projection">
     <script type="text/javascript" src="js/user.js"></script>
     <link rel="stylesheet" href="css/user.css">
-    <!--<script src="js/global.js"></script>
-    
-    <!--修订功能js错误 重置模块功能：下拉菜单隐藏、头部幻灯片， 修改时间2014年5月20日11:11:17 修改员：huang-->
-    <script type="text/javascript">
-        $(function () {
-            //我们一开始就隐藏所有的下拉菜单
-            $('#dropdown_nav li').find('.sub_nav').hide();
-            //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
-            $('#dropdown_nav li').hover(function () {
-                $(this).find('.sub_nav').fadeIn(100);
-                $(this).find(".sub_link").addClass("cur");
-            }, function () {
-                $(this).find('.sub_nav').fadeOut(50);
-                $(this).find(".sub_link").removeClass("cur");
-            });
-        });
-    </script>
-    <!-- end 修改完毕-->
 </head>
 <body>
 <!-- Begin header -->
 <div id="member_info2"></div>
 <div class="head">
     <div class="r1 w1225">
-        <div class="ri">
+        <div class="ri" id='noLogin' style='display:none'>
 
-            <?php
-            $session = \Yii::$app->session;
-            $user = $session->get('user_name');
-            if (!isset($user)) {
-                foreach ($this->params['nav']['top'] as $key => $val) {?>
+            <?php foreach ($this->params['nav']['top'] as $key => $val) {?>
                     <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
-                    <?php 
-                }
-            } else {
-                ?>
-                <span><a href="#">欢迎:<?= $user ?></a></span>
+            <?php } ?>
+        </div>
+        <div class="ri" id='login' style='display:none'>
+                <span><a href="#">欢迎:<font color='red' id='username'></font>  </a></span>
                 <span><a href="javascript:void(0)" id="out">退出</a></span>
                 <span><a href="#">购物车</a></span>
-                <?php
-            }
-            ?>
-
         </div>
     </div>
     <div class="r2 w1225">
@@ -194,8 +167,43 @@ use yii\helpers\Url;
         $("#back_top").click(function () {
             $("html,body").animate({scrollTop: 0}, 500);
         });
+
+        //判断是否登录
+        $.ajax({
+           url: "<?=Url::to(['home/login/login_status']) ?>",
+           dataType:'json',
+           success: function(re_val){
+               if(re_val==0)   
+               {
+                  $("#noLogin").show();
+                  $("#login").hide();
+                              
+               }
+               else
+               {
+                  $("#noLogin").hide();
+                  $("#login").show();
+                  $("#username").html(re_val);
+               }
+           }
+        });
+
+
+        $(function () {
+            //我们一开始就隐藏所有的下拉菜单
+            $('#dropdown_nav li').find('.sub_nav').hide();
+            //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
+            $('#dropdown_nav li').hover(function () {
+                $(this).find('.sub_nav').fadeIn(100);
+                $(this).find(".sub_link").addClass("cur");
+            }, function () {
+                $(this).find('.sub_nav').fadeOut(50);
+                $(this).find(".sub_link").removeClass("cur");
+            });
+        });
+
     });
-</script><!--back top ---------------------------------------------------------------------------------->
+</script>
 </body>
 </html>
 
@@ -215,3 +223,4 @@ use yii\helpers\Url;
     })
 
 </script>
+

@@ -20,8 +20,12 @@
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
     <script src="js/jquery.js"></script>
-    <!--<script src="Script/global.js"></script>
-
+    <script src="js/saved_resource"></script>
+    <link rel="stylesheet" href="css/user.css" type="text/css" media="screen, projection">
+    <script type="text/javascript" src="js/user.js"></script>
+    <link rel="stylesheet" href="css/user.css">
+    <!--<script src="js/global.js"></script>
+    
     <!--修订功能js错误 重置模块功能：下拉菜单隐藏、头部幻灯片， 修改时间2014年5月20日11:11:17 修改员：huang-->
     <script type="text/javascript">
         $(function () {
@@ -44,12 +48,16 @@
 <div id="member_info2"></div>
 <div class="head">
     <div class="r1 w1225">
-        <div class="ri">
+        <div class="ri" id='noLogin' style='display:none'>
 
                                 <span><a href="../../index.php?r=home/login/login">登录</a></span>
-                                        <span><a href="../../index.php?r=home/login/index">注册</a></span>
-                                        <span><a href="../../index.php?r=home/login/index">购物车</a></span>
-                    
+                                <span><a href="../../index.php?r=home/login/reg">注册</a></span>
+                                <span><a href="../../index.php?r=home/login/index">购物车</a></span>
+                    </div>
+        <div class="ri" id='login' style='display:none'>
+                <span><a href="#">欢迎:<font color='red' id='username'></font>  </a></span>
+                <span><a href="javascript:void(0)" id="out">退出</a></span>
+                <span><a href="#">购物车</a></span>
         </div>
     </div>
     <div class="r2 w1225">
@@ -688,7 +696,46 @@
         $("#back_top").click(function () {
             $("html,body").animate({scrollTop: 0}, 500);
         });
+
+        //判断是否登录
+        $.ajax({
+           url: "/index.php?r=home%2Flogin%2Flogin_status",
+           dataType:'json',
+           success: function(re_val){
+               if(re_val==0)   
+               {
+                  $("#noLogin").show();
+                  $("#login").hide();
+                              
+               }
+               else
+               {
+                  $("#noLogin").hide();
+                  $("#login").show();
+                  $("#username").html(re_val);
+               }
+           }
+        });
+
     });
-</script><!--back top ---------------------------------------------------------------------------------->
+</script>
 </body>
 </html>
+
+<script>
+    $('#out').click(function () {
+        $.ajax({
+            url: "/index.php?r=home%2Flogin%2Flogout",
+            success: function (msg) {
+                if (msg == 0) {
+                    alert("退出登录失败");
+                } else {
+                    alert("退出登录成功");
+                    location.href = "/index.php?r=home%2Findex";
+                }
+            }
+        });
+    })
+
+</script>
+
