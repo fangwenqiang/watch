@@ -20,18 +20,6 @@ class CommonController extends Controller
         $view = YII::$app->view;
         $view->params['system'] = $info;
         $view->params['nav'] =    array_slice($nav_data,0,14);
-       // print_r($view->params['nav']);
-
-//
-//        $session = \Yii::$app->session;
-//        $user_session = $session->get('user');
-//        $admin_id = $session->get('admin_id');
-//        if (!isset($user_session)) {
-//            $this->redirect(array('/admin/login/login'));
-//        }
-
-
-
     }
 
 }

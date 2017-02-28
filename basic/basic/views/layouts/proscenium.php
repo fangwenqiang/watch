@@ -62,7 +62,7 @@ use yii\helpers\Url;
             } else {
                 ?>
                 <span><a href="#">欢迎:<?= $user ?></a></span>
-                <span><a href="#">退出</a></span>
+                <span><a href="javascript:void(0)" id="out">退出</a></span>
                 <span><a href="#">购物车</a></span>
                 <?php
             }
@@ -230,3 +230,20 @@ use yii\helpers\Url;
 </script><!--back top ---------------------------------------------------------------------------------->
 </body>
 </html>
+
+<script>
+    $('#out').click(function () {
+        $.ajax({
+            url: "<?=Url::to(['home/login/logout']) ?>",
+            success: function (msg) {
+                if (msg == 0) {
+                    alert("退出登录失败");
+                } else {
+                    alert("退出登录成功");
+                    location.href = "<?=Url::to(['home/index']) ?>";
+                }
+            }
+        });
+    })
+
+</script>
