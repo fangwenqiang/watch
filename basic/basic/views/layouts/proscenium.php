@@ -35,16 +35,10 @@ use yii\helpers\Url;
 <div id="member_info2"></div>
 <div class="head">
     <div class="r1 w1225">
-        <div class="ri" id='noLogin' style='display:none'>
-
+        <div class="ri" id='Login'>
             <?php foreach ($this->params['nav']['top'] as $key => $val) {?>
                     <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
             <?php } ?>
-        </div>
-        <div class="ri" id='login' style='display:none'>
-                <span><a href="#">欢迎:<font color='red' id='username'></font>  </a></span>
-                <span><a href="javascript:void(0)" id="out">退出</a></span>
-                <span><a href="#">购物车</a></span>
         </div>
     </div>
     <div class="r2 w1225">
@@ -150,12 +144,24 @@ use yii\helpers\Url;
     </div>
 </div><!-- End footer -->
 
-<!--back top ---------------------------------------------------------------------------------------------->
+<!--back top -->
 <div id="top_item">
     <a id="back_top" onclick="return false;" title="回到顶部"></a>
 </div>
 <script type="text/javascript">
     $(function () {
+        //判断是否登录
+        $.get("<?=Url::to(['home/login/login_status']) ?>", function(re_val){
+            if(re_val!=0)   
+            {
+                  str='<span><a href="#">欢迎:<font color="red">'+re_val+'</font></a></span>\
+                    <span><a href="javascript:void(0)" id="out">退出</a></span>\
+                    <span><a href="#">购物车</a></span>'
+                  $("#login").html(str);
+            }
+        });
+
+
         $(window).scroll(function () {
             var scrolltop = $(this).scrollTop();
             if (scrolltop >= 200) {
@@ -166,26 +172,6 @@ use yii\helpers\Url;
         });
         $("#back_top").click(function () {
             $("html,body").animate({scrollTop: 0}, 500);
-        });
-
-        //判断是否登录
-        $.ajax({
-           url: "<?=Url::to(['home/login/login_status']) ?>",
-           dataType:'json',
-           success: function(re_val){
-               if(re_val==0)   
-               {
-                  $("#noLogin").show();
-                  $("#login").hide();
-                              
-               }
-               else
-               {
-                  $("#noLogin").hide();
-                  $("#login").show();
-                  $("#username").html(re_val);
-               }
-           }
         });
 
 
