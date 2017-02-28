@@ -147,24 +147,15 @@ class Brand extends \yii\db\ActiveRecord
      * */
     public function brandWhere($field,$val)
     {
-        $data = Brand::find()
+        return Brand::find()
             ->select(array('brand_id','brand_name','sort'))
             ->where([$field=>$val])
             ->asArray()
             ->all();
-        if($data)
-        {
-            return $data;
-        }
-        else
-        {
-            return false;
-        }
     }
 
-
     /**
-     * 根据品牌名称查询商品
+     * 根据品牌名称获取品牌ID
      */
     public function brandId($brand_name)
     {
