@@ -10,7 +10,7 @@ use yii\web\Session;
 use app\models\Admin\Test;  //模型层
 
 
-class IndexController extends  CommonController
+class IndexController extends  Controller
 {
     //后台公共视图
     public $layout = '/background';
@@ -31,12 +31,16 @@ class IndexController extends  CommonController
         return $this->render('nav');
     }
 
-    /*
-     * 使用模型层
-     */
-    public function actionTest()
+
+    /**
+    * 生成首页
+    * 
+    * @param
+    * @author pjp
+    */
+    public function actionCreate_index()
     {
-        $model = new Test();
-        echo $model->test();
+        // $index = $this->renderPartial('/home/index/index');
+        // var_dump($index);
     }
 }

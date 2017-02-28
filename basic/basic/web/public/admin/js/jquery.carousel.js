@@ -56,23 +56,31 @@ $(function () {
             if (lastValue == firstValue || lastValue == '') {
                 _this.parent('td').html('<span class="sve" hid="' + id + '" field="' + field + '">' + firstValue + '</span>');
             } else {
+                swal({
+                    title: "正在处理",
+                    text: "请耐心等待",
+                    imageUrl: "http://www.xiyue.com/public/admin/images/jiazai.gif",
+                    animation: "slide-from-top",
+                    showConfirmButton: false
+                });
                 $.post(url + '%2fedit', {_csrf: csrf, val: lastValue, id: id, field: field}, function (msg) {
-                    if (msg) {
-                        _this.parent('td').html('<span class="sve" hid="' + id + '" field="' + field + '">' + lastValue + '</span>');
-                        swal({
-                            title: "太帅了",
-                            text: "轻轻一点就修改成功了",
-                            type: "success"
-                        });
-                    } else {
-                        _this.parent('td').html('<span class="sve" hid="' + id + '" field="' + field + '">' + firstValue + '</span>');
+                    if (msg == 0) {
+                        _this.parent('td').html('<span class="sve" hid ="'+id+'"field = "'+field+'">'+firstValue+'</span >');
                         swal({
                             title: "哎呀，出错了",
                             text: "换个姿势再试一次",
                             type: "error"
                         });
+                    } else {
+                        _this.parent('td').html('<span class= "sve" hid = "' + id + '"field = "' + field + '" title = "点击编辑" > ' + lastValue + '</span >');
+                        swal({
+                            title: "太帅了",
+                            text: "轻轻一点就修改成功了",
+                            type: "success"
+                        });
                     }
                 });
+
             }
 
         });
@@ -89,29 +97,27 @@ $(function () {
         swal({
             title: "您确定要删除这条信息吗",
             text: "删除后将无法恢复，请谨慎操作！",
-            type: "warning",
+            type: "info",
             showCancelButton: true,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true,
             confirmButtonColor: "#DD6B55",
             confirmButtonText: "是的，我要删除！",
             cancelButtonText: "让我再考虑一下…",
-            closeOnConfirm: false,
-            closeOnCancel: false
-        }, function (isConfirm) {
-            if (isConfirm) {
-                $.post(url + '%2fdelete', {_csrf: csrf, id: did}, function (msg) {
-                    if (msg == 0) {
-                        swal("还整不了你了", "下次一定弄死你", "error");
-                    } else {
-                        swal("都叫你不要和我作对了", "你看，作茧自缚吧！", "success");
-                        $('#' + did).remove();
-                    }
-                });
+        }, function () {
+            $.post(url + '%2fdelete', {_csrf: csrf,
+                id: did}, function (msg) {
+                if (msg == 0) {
+                    swal("还整不了你了", "下次一定弄死你", "error");
+                } else {
+                    swal("都叫你不要和我作对了", "你看，作茧自缚吧！", "success");
+                    $('#' + did).remove();
 
-            } else {
-                swal("算了吧", "还是让他再潇洒一阵子吧", "error");
-            }
+                }
+            });
         });
 
     });
+
 
 });
