@@ -25,8 +25,12 @@ use yii\helpers\Url;
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
     <script src="js/jquery.js"></script>
-    <!--<script src="Script/global.js"></script>
-
+    <script src="js/saved_resource"></script>
+    <link rel="stylesheet" href="css/user.css" type="text/css" media="screen, projection">
+    <script type="text/javascript" src="js/user.js"></script>
+    <link rel="stylesheet" href="css/user.css">
+    <!--<script src="js/global.js"></script>
+    
     <!--修订功能js错误 重置模块功能：下拉菜单隐藏、头部幻灯片， 修改时间2014年5月20日11:11:17 修改员：huang-->
     <script type="text/javascript">
         $(function () {
@@ -62,7 +66,7 @@ use yii\helpers\Url;
             } else {
                 ?>
                 <span><a href="#">欢迎:<?= $user ?></a></span>
-                <span><a href="#">退出</a></span>
+                <span><a href="javascript:void(0)" id="out">退出</a></span>
                 <span><a href="#">购物车</a></span>
                 <?php
             }
@@ -117,18 +121,13 @@ use yii\helpers\Url;
 
         <ul class="gNav">
             <?php
-            $session = \Yii::$app->session;
-            $user = $session->get('user');
-            if (!isset($user)) {
-                foreach ($this->params['nav']['zhu'] as $key => $val) {
-                 ?>
+
+
+                foreach ($this->params['nav']['zhu'] as $key => $val) {       ?>
+           
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
-                    <?php
-                }
-            } else {
-                echo "欢迎$user";
-            } ?>
+                    <?php   }    ?>
         </ul>
     </div>
 </div>
@@ -199,3 +198,20 @@ use yii\helpers\Url;
 </script><!--back top ---------------------------------------------------------------------------------->
 </body>
 </html>
+
+<script>
+    $('#out').click(function () {
+        $.ajax({
+            url: "<?=Url::to(['home/login/logout']) ?>",
+            success: function (msg) {
+                if (msg == 0) {
+                    alert("退出登录失败");
+                } else {
+                    alert("退出登录成功");
+                    location.href = "<?=Url::to(['home/index']) ?>";
+                }
+            }
+        });
+    })
+
+</script>

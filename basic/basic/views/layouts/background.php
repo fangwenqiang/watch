@@ -14,9 +14,8 @@ use yii\helpers\Url;
     <link href="css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
-
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script> -->
 </head>
 <body>
 <div id="dcWrap">
@@ -129,6 +128,12 @@ use yii\helpers\Url;
                 <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>操作记录</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/log/index']);?>"><i class="article"></i><em>记录</em></a></li>
+                </ul>
+            </ul>
+             <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>生成首页</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?php echo Url::to(['admin/index/create_index']);?>"><i class="article"></i><em>生成</em></a></li>
                 </ul>
             </ul>
         </div>

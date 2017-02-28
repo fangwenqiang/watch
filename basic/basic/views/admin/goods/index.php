@@ -10,7 +10,8 @@ use yii\grid\GridView;
 $this->title = 'Goods';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 <div class="goods-index " style="float:left;">
 
     <h1><?= Html::encode($this->title) ?></h1>

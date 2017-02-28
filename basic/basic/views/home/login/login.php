@@ -85,7 +85,6 @@ use yii\helpers\Url;
         </div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><span class="error" id="msg"></span></div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><a href="javascript:void(0)" id="but"><img src="images/denglu.png">
-                <!--                <button class="but" type="submit">登录</button>-->
             </a><a href="#"><strong> 忘记密码</strong></a></div>
         </form>
 
