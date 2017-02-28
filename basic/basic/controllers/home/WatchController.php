@@ -15,7 +15,7 @@ use yii\data\Pagination;
 class WatchController extends CommonController{
 
     public $layout = '/proscenium';
-    public $onePage = '6';  //每页显示条数
+    public $onePage = '8';  //每页显示条数
 
     /*
      * 男士手表展示
@@ -28,6 +28,7 @@ class WatchController extends CommonController{
         $data['brandList'] = $this->BrandAll(); //查询品牌
 
         $count = Goods::find()->count();    //数据总条数
+
 
         $data['pageStr'] = $this->pageStr($count,$this->onePage);
 
@@ -65,11 +66,9 @@ class WatchController extends CommonController{
         $brand = new Brand();   //品牌
         $request = \Yii::$app->request;
         $data = $request->get();
-
         $p = $data['p'];    //当前页
 
-        $order = 'DESC';
-
+        // 根据商品名称获取商品ID
         if(!empty($data['brand_name'])){
             $dataBrand = $brand->brandId($data['brand_name']);
             if(empty($dataBrand)){
@@ -79,32 +78,40 @@ class WatchController extends CommonController{
             }
         }
 
+        $order = 'DESC';    //默认排序方式
         if(!empty($data['sort'])){
             if($data['sort'] == 0){
                 $orderField = 'shop_price';
-                $order = 'DESC';
             }else if($data['sort'] == 1){
                 $orderField = 'shop_price';
                 $order = 'ASC';
             }else if($data['sort'] == 2){
                 $orderField = 'click_count';
-                $order = 'DESC';
             }else if($data['sort'] == 3){
                 $orderField = 'add_time';
-                $order = 'DESC';
             }
+        }else{
+            $orderField = 'shop_price'; //默认排序字段
         }
 
+        // 获取商品ID
         if(empty($data['brand_id'])){
-            $brand_id = null;
+            $brand_id = 'all';
         }else{
             $brand_id = $data['brand_id'];
         }
 
-        $limit = ($p-1)*$this->onePage; //偏移量
-        $count = Goods::find()->count();    //数据总条数
+        // 获取当前页 计算偏移量
+        if(empty($p)){
+            $limit = '0';
+        }else{
+            $limit = ($p-1)*$this->onePage; //偏移量
+        }
 
-        $data['goodsList']= $goods->showBrand('brand_id',$brand_id,'2',$order,$orderField = '',$limit = '');
+        $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->count();    //数据总条数
+
+        $data['goodsList']= $goods->showBrand('brand_id',$brand_id,'2',$order,$orderField,$limit);
+
         if(empty($data['goodsList'])){
             die(json_encode(array('res'=>'1','msg'=>'该品牌下暂时没有商品')));
         }
