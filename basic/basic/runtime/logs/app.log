@@ -3986,6 +3986,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1488185339.743
     'REQUEST_TIME' => 1488185339
 ]
+
 2017-02-28 06:06:04 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
 Stack trace:
 #0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
@@ -4374,4 +4375,5 @@ $_SERVER = [
     'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
     'REQUEST_TIME_FLOAT' => 1488262028.826
     'REQUEST_TIME' => 1488262028
+
 ]
