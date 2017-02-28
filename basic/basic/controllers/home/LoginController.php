@@ -72,4 +72,17 @@ class LoginController extends CommonController
     }
 
 
+
+    /**
+     * 判断是否登录(ajax)
+     */
+    public function actionLogin_status()
+    {
+        $session = \Yii::$app->session;
+        $user = $session->get('user_name');
+
+        return $user?json_encode($user):0;
+    }
+
+
 }

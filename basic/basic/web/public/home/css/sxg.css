@@ -813,7 +813,7 @@ tGud li:hover{
 .foot {
 	margin-top: 20px;
 	padding-top: 45px;
-	background-image: url(/img/common/4.0/footer_bg.png);
+	/*background-image: url(/img/common/4.0/footer_bg.png);*/
 	background-repeat: repeat-x;
 	background-color: #1c1c1c
 }
