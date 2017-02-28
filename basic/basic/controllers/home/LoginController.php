@@ -53,7 +53,7 @@ class LoginController extends CommonController
         $session = \Yii::$app->session;
         $a = $session->remove('user_name');
         $b = $session->remove('user_id');
-        if ($a & $b) {
+        if ($a and $b) {
             return 1;
         } else {
             return 0;
