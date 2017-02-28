@@ -100,6 +100,7 @@ class Goods extends \yii\db\ActiveRecord
             ->where(['gt_id'=>$type])
             ->andWhere(['is_show'=>1])
             ->orderBy('shop_price '.$order)
+            ->limit(8,0)
             ->asArray()
             ->all();
     }
@@ -113,7 +114,7 @@ class Goods extends \yii\db\ActiveRecord
      * @param $orderField string　排序字段
      * @return array|\yii\db\ActiveRecord[]
      */
-    public function showBrand($field,$val,$gt_id,$order,$orderField = '')
+    public function showBrand($field,$val,$gt_id,$order,$orderField = '' ,$limit)
     {
         if(is_numeric($val)){
             return Goods::find()
@@ -122,6 +123,7 @@ class Goods extends \yii\db\ActiveRecord
                 ->andWhere(['is_show'=>'1'])
                 ->andWhere(['gt_id'=>$gt_id])
                 ->orderBy('shop_price '.$order)
+                ->limit(0,$limit)
                 ->asArray()->all();
         }else{
             return Goods::find()
@@ -129,6 +131,7 @@ class Goods extends \yii\db\ActiveRecord
                 ->Where(['gt_id'=>$gt_id])
                 ->andWhere(['is_show'=>'1'])
                 ->orderBy('shop_price '.$order)
+                ->limit($limit,8)
                 ->asArray()->all();
         }
     }

@@ -10,8 +10,7 @@ namespace app\controllers\home;
 
 use app\models\Brand;
 use app\models\Goods;
-use app\models\Nav;
-use yii\web\Controller;
+use yii\data\Pagination;
 
 class WatchController extends CommonController{
 
@@ -28,7 +27,8 @@ class WatchController extends CommonController{
         $data['goodsList'] = $goods->showType('2',$order);
         $data['brandList'] = $this->BrandAll(); //查询品牌
 
-        $count = count($data['goodsList']);
+        $count = Goods::find()->count();    //数据总条数
+
         $data['pageStr'] = $this->pageStr($count,$this->onePage);
 
         return $this->render('boy',['data'=>$data]);
@@ -56,7 +56,6 @@ class WatchController extends CommonController{
         return $brandList;
     }
 
-
     /*
      * 搜索 排序
      * */
@@ -66,6 +65,9 @@ class WatchController extends CommonController{
         $brand = new Brand();   //品牌
         $request = \Yii::$app->request;
         $data = $request->get();
+
+        $p = $data['p'];    //当前页
+
         $order = 'DESC';
 
         if(!empty($data['brand_name'])){
@@ -73,42 +75,43 @@ class WatchController extends CommonController{
             if(empty($dataBrand)){
                 die(json_encode(array('res'=>'1','msg'=>'暂时没有该相似品牌')));
             }else{
-                $data['brand_id'] = $dataBrand['brand_id'];
+                $brand_id = $dataBrand['brand_id'];
             }
         }
 
-        // 价格排序
-        if (!empty($data['price_or']) && $data['price_or'] == 0) {
-            $orderField = 'shop_price';
-            $order = 'DESC';
-        }elseif(!empty($data['price_or']) && $data['price_or'] == 1){
-            $orderField = 'shop_price';
-            $order = 'ASC';
+        if(!empty($data['sort'])){
+            if($data['sort'] == 0){
+                $orderField = 'shop_price';
+                $order = 'DESC';
+            }else if($data['sort'] == 1){
+                $orderField = 'shop_price';
+                $order = 'ASC';
+            }else if($data['sort'] == 2){
+                $orderField = 'click_count';
+                $order = 'DESC';
+            }else if($data['sort'] == 3){
+                $orderField = 'add_time';
+                $order = 'DESC';
+            }
         }
 
-        //销量
-        if (!empty($data['hot_or']) && $data['hot_or'] == 0) {
-            $orderField = 'click_count';
-            $order = 'DESC';
-        }elseif(!empty($data['hot_or']) && $data['hot_or'] == 1){
-            $orderField = 'click_count';
-            $order = 'ASC';
+        if(empty($data['brand_id'])){
+            $brand_id = null;
+        }else{
+            $brand_id = $data['brand_id'];
         }
 
-        // 新品
-        if (!empty($data['new_or']) && $data['new_or'] == 0) {
-            $orderField = 'add_time';
-            $order = 'DESC';
-        }elseif(!empty($data['new_or']) && $data['new_or'] == 1){
-            $orderField = 'add_time';
-            $order = 'ASC';
+        $limit = ($p-1)*$this->onePage; //偏移量
+        $count = Goods::find()->count();    //数据总条数
+
+        $data['goodsList']= $goods->showBrand('brand_id',$brand_id,'2',$order,$orderField = '',$limit = '');
+        if(empty($data['goodsList'])){
+            die(json_encode(array('res'=>'1','msg'=>'该品牌下暂时没有商品')));
         }
 
-        $goodsList = $goods->showBrand('brand_id',$data['brand_id'],'2',$order,$orderField = '');
-        if(empty($goodsList)){
-            $goodsList = array('res'=>'1','msg'=>'该品牌下暂时没有商品');
-        }
-        die(json_encode($goodsList));
+        $data['pageStr'] = $this->pageStr($count,$this->onePage,$p);
+
+        die(json_encode($data));
     }
 
 
@@ -138,6 +141,8 @@ class WatchController extends CommonController{
         $pageStr = '';
         $pageStr .='<div id="page_nav"><span class="pre"><a href="javascript:page('.$upPage.')">上一页</a></span>&nbsp;';
         $pageStr .='<a href="javascript:page('.$nextPage.')">下一页</a>&nbsp;</div>';
+
+
 
 //        $pageStr .='共 '.$sunPage.' 页';
 //        $pageStr .='当前页第 '.$p.' 页';
