@@ -87,29 +87,49 @@ class Goods extends \yii\db\ActiveRecord
         ];
     }
 
-    /*
+    /**
      * 根据类型查询商品
-     * */
-    public function showType($type)
+     * @param $type     int 分类ID
+     * @param $order    string  排序方式
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function showType($type,$order)
     {
         return Goods::find()
             ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
             ->where(['gt_id'=>$type])
             ->andWhere(['is_show'=>1])
-            ->orderBy('shop_price')
+            ->orderBy('shop_price '.$order)
             ->asArray()
             ->all();
     }
 
-    /*
+    /**
      * 根据条件查询商品
-     * */
-    public function showBrand($field,$val,$gt_id)
+     * @param $field  string 字段
+     * @param $val  string 值
+     * @param $gt_id string 分类ID
+     * @param $order string　排序方式
+     * @param $orderField string　排序字段
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function showBrand($field,$val,$gt_id,$order,$orderField = '')
     {
-        return Goods::find()
-            ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
-            ->where([$field=>$val])
-            ->andWhere(['gt_id'=>$gt_id])
-            ->asArray()->all();
+        if(is_numeric($val)){
+            return Goods::find()
+                ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
+                ->where([$field=>$val])
+                ->andWhere(['is_show'=>'1'])
+                ->andWhere(['gt_id'=>$gt_id])
+                ->orderBy('shop_price '.$order)
+                ->asArray()->all();
+        }else{
+            return Goods::find()
+                ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
+                ->Where(['gt_id'=>$gt_id])
+                ->andWhere(['is_show'=>'1'])
+                ->orderBy('shop_price '.$order)
+                ->asArray()->all();
+        }
     }
 }

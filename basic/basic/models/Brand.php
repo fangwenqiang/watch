@@ -162,19 +162,13 @@ class Brand extends \yii\db\ActiveRecord
         }
     }
 
-    /*
+
+    /**
      * 根据品牌名称查询商品
-     * */
-    public function brandGoods($brand_name,$gt_id)
+     */
+    public function brandId($brand_name)
     {
         //品牌ID
-        $brand_id = Brand::find()->select('brand_id')->where(['like','brand_name',$brand_name])->asArray()->one()['brand_id'];
-        return Goods::find()
-            ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
-            ->where(['brand_id'=>$brand_id])
-            ->andWhere(['gt_id'=>$gt_id])
-            ->andWhere(['is_show'=>'1'])
-            ->asArray()
-            ->all();
+         return Brand::find()->select('brand_id')->where(['like','brand_name',$brand_name])->asArray()->one();
     }
 }
