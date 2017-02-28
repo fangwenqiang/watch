@@ -159,6 +159,9 @@ class WatchController extends CommonController{
 //        $pageStr .='<a href="javascript:page('.$nextPage.')">下一页</a> ';
 //        $pageStr .='<a href="javascript:page('.$sunPage.')">末一页</a>';
 
+//        sdfasfs
+
+//        return $pageStr;
         return $pageStr;
     }
 
