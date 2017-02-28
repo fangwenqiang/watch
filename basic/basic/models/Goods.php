@@ -87,49 +87,43 @@ class Goods extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
+    /*
      * 根据类型查询商品
-     * @param $type     int 分类ID
-     * @param $order    string  排序方式
-     * @return array|\yii\db\ActiveRecord[]
+     * 
      */
-    public function showType($type,$order)
+    public function showType($type)
     {
         return Goods::find()
             ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
             ->where(['gt_id'=>$type])
             ->andWhere(['is_show'=>1])
-            ->orderBy('shop_price '.$order)
+            ->orderBy('shop_price')
             ->asArray()
             ->all();
     }
 
-    /**
+    /*
      * 根据条件查询商品
-     * @param $field  string 字段
-     * @param $val  string 值
-     * @param $gt_id string 分类ID
-     * @param $order string　排序方式
-     * @param $orderField string　排序字段
-     * @return array|\yii\db\ActiveRecord[]
-     */
-    public function showBrand($field,$val,$gt_id,$order,$orderField = '')
+     * */
+    public function showBrand($field,$val,$gt_id)
+
     {
-        if(is_numeric($val)){
-            return Goods::find()
-                ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
-                ->where([$field=>$val])
-                ->andWhere(['is_show'=>'1'])
-                ->andWhere(['gt_id'=>$gt_id])
-                ->orderBy('shop_price '.$order)
-                ->asArray()->all();
-        }else{
-            return Goods::find()
-                ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
-                ->Where(['gt_id'=>$gt_id])
-                ->andWhere(['is_show'=>'1'])
-                ->orderBy('shop_price '.$order)
-                ->asArray()->all();
-        }
+        return Goods::find()
+            ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
+            ->where([$field=>$val])
+            ->andWhere(['gt_id'=>$gt_id])
+            ->asArray()->all();
+    }
+
+
+    /**
+    * 条件选择商品
+    * 
+    * @param  $where 查询条件
+    * @author pjp
+    */
+    public function whereData($where)
+    {
+       return $this->find()->where($where)->limit(10)->asArray()->all();
     }
 }
