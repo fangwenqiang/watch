@@ -117,17 +117,12 @@ use yii\helpers\Url;
 
         <ul class="gNav">
             <?php
-            $session = \Yii::$app->session;
-            $user = $session->get('user');
-            if (!isset($user)) {
                 foreach ($this->params['nav']['zhu'] as $key => $val) {
                  ?>
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
                     <?php
-                }
-            } else {
-                echo "欢迎$user";
+
             } ?>
         </ul>
     </div>
