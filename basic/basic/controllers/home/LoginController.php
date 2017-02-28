@@ -8,9 +8,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Nav;  //模型层
-/*
- * RBAC 权限管理
- * */
+
 
 class LoginController extends CommonController
 {

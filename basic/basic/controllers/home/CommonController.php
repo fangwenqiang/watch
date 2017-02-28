@@ -19,7 +19,6 @@ class CommonController extends Controller
         $nav_data = $nav_model->recursion();
         $view = YII::$app->view;
         $view->params['system'] = $info;
-
         $view->params['nav'] =    $nav_data;
         //获取分类数据
         $Category = new Category();
