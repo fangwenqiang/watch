@@ -81,7 +81,7 @@ class LoginController extends CommonController
         $session = \Yii::$app->session;
         $user = $session->get('user_name');
 
-        return $user?json_encode($user):0;
+        return $user?1:0;
     }
 
 

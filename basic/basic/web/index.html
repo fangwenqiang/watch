@@ -24,24 +24,6 @@
     <link rel="stylesheet" href="css/user.css" type="text/css" media="screen, projection">
     <script type="text/javascript" src="js/user.js"></script>
     <link rel="stylesheet" href="css/user.css">
-    <!--<script src="js/global.js"></script>
-    
-    <!--修订功能js错误 重置模块功能：下拉菜单隐藏、头部幻灯片， 修改时间2014年5月20日11:11:17 修改员：huang-->
-    <script type="text/javascript">
-        $(function () {
-            //我们一开始就隐藏所有的下拉菜单
-            $('#dropdown_nav li').find('.sub_nav').hide();
-            //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
-            $('#dropdown_nav li').hover(function () {
-                $(this).find('.sub_nav').fadeIn(100);
-                $(this).find(".sub_link").addClass("cur");
-            }, function () {
-                $(this).find('.sub_nav').fadeOut(50);
-                $(this).find(".sub_link").removeClass("cur");
-            });
-        });
-    </script>
-    <!-- end 修改完毕-->
 </head>
 <body>
 <!-- Begin header -->
@@ -144,7 +126,7 @@
         <ul class="gNav">
                        
                         <li><a title="首页" class="cur"
-                               href="../../index.php?r=home/index/index">首页</a></li>
+                               href="../../index.html">首页</a></li>
                                
                         <li><a title="本期特价" class="cur"
                                href="../../index.php?r=home/login/index">本期特价</a></li>
@@ -679,12 +661,29 @@
     </div>
 </div><!-- End footer -->
 
-<!--back top ---------------------------------------------------------------------------------------------->
+<!--back top -->
 <div id="top_item">
     <a id="back_top" onclick="return false;" title="回到顶部"></a>
 </div>
 <script type="text/javascript">
     $(function () {
+        //判断是否登录
+        $.get("/index.php?r=home%2Flogin%2Flogin_status", function(re_val){
+            if(re_val==0)   
+               {
+                  $("#noLogin").show();
+                  $("#login").hide();
+                              
+               }
+               else
+               {
+                  $("#noLogin").hide();
+                  $("#login").show();
+                  $("#username").html(re_val);
+               }
+        });
+
+
         $(window).scroll(function () {
             var scrolltop = $(this).scrollTop();
             if (scrolltop >= 200) {
@@ -697,24 +696,18 @@
             $("html,body").animate({scrollTop: 0}, 500);
         });
 
-        //判断是否登录
-        $.ajax({
-           url: "/index.php?r=home%2Flogin%2Flogin_status",
-           dataType:'json',
-           success: function(re_val){
-               if(re_val==0)   
-               {
-                  $("#noLogin").show();
-                  $("#login").hide();
-                              
-               }
-               else
-               {
-                  $("#noLogin").hide();
-                  $("#login").show();
-                  $("#username").html(re_val);
-               }
-           }
+
+        $(function () {
+            //我们一开始就隐藏所有的下拉菜单
+            $('#dropdown_nav li').find('.sub_nav').hide();
+            //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
+            $('#dropdown_nav li').hover(function () {
+                $(this).find('.sub_nav').fadeIn(100);
+                $(this).find(".sub_link").addClass("cur");
+            }, function () {
+                $(this).find('.sub_nav').fadeOut(50);
+                $(this).find(".sub_link").removeClass("cur");
+            });
         });
 
     });
