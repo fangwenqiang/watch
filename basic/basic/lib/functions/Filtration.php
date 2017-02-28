@@ -107,4 +107,39 @@ class Filtration
         imagedestroy($src_image );  //释放和暂存图片的内存
         return $newfile;
     }
+    public function formatTime($date) {
+        $str = '';
+        $diff = ($_SERVER['REQUEST_TIME']-($date)/1);
+        $day = floor($diff / 86400);
+        $free = $diff % 86400;
+        if($day > 0) {
+            return date('Y-m-d H:i:s',$date);
+        }else{
+            if($free>0){
+                $hour = floor($free / 3600);
+                $free = $free % 3600;
+                if($hour>0){
+                    return $hour."小时前";
+                }else{
+                    if($free>0){
+                        $min = floor($free / 60);
+                        $free = $free % 60;
+                        if($min>0){
+                            return $min."分钟前";
+                        }else{
+                            if($free>0){
+                                return $free."秒前";
+                            }else{
+                                return '刚刚';
+                            }
+                        }
+                    }else{
+                        return '刚刚';
+                    }
+                }
+            }else{
+                return '刚刚';
+            }
+        }
+    }
 }
