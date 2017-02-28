@@ -58,9 +58,9 @@ use yii\helpers\Url;
             <div class="sa_top">
                 <dl class="order_by">
                     <dt>排序：</dt>
-                    <dd class="on"><a href="javascript:void (0)" name="price_or" brand_id="all" rel="nofollow" title="点击排序">价格<i class="p_all"></i></a></dd>
-                    <dd ><a href="javascript:void(0);" name="hot_or"  brand_id="all" class="down">热销</a></dd>
-                    <dd><a href="javascript:void(0);" rel="nofollow"  brand_id="all" name="new_or" title="点击排序">最新<i class=""></i></a></dd>
+                    <dd class="on"><a href="javascript:void (0)" name="price_desc" brand_id="all" rel="nofollow" title="点击排序">价格<i class="p_all"></i></a></dd>
+                    <dd ><a href="javascript:void(0);" name="hot_desc" brand_id="all" >热销</a></dd>
+                    <dd><a href="javascript:void(0);"  name="new_desc" brand_id="all" title="点击排序">最新<i class=""></i></a></dd>
                 </dl>
             </div>
             <!--            end 排序-->
@@ -94,15 +94,8 @@ use yii\helpers\Url;
             </div>
             <!--            分页按钮-->
             <div class="sa_bot w930">
-                <!-- 翻页 Begin -->
-                <div id="page_nav">
-                    <span class="pre">上一页</span>&nbsp;<span class="cur">1</span>&nbsp;<a href="">2</a>&nbsp;<a href="">3</a>&nbsp;<a href="">4</a>&nbsp;<span>&hellip;</span>&nbsp;<a href="">389</a>&nbsp;<span>&hellip;</span>&nbsp;<a  href="">774</a>&nbsp;<a  href="html" class="next">下一页</a>&nbsp;
-                </div>
-                <!-- 翻页 End -->
 
-                <div id="record">
-                    共有&nbsp;774&nbsp;页，跳到第&nbsp;<input id="jtp" type="text" class="txt" maxlength="4" maxpage="774" value="" />&nbsp;页&nbsp;<a id="btnJtp" href="javascript:void(0);" class="btn">确定</a>
-                </div>
+                <?=$data['pageStr']?>
             </div>
             <!--            end 分页按钮-->
             <div class="sa_share w930">
@@ -154,10 +147,10 @@ use yii\helpers\Url;
     <script src="js/jquery.js"></script>
     <script type="text/javascript">
         $(function () {
-            _csrf = $('._csrf').val();
+            var obj = new Object();
             //提交搜索框
+            _csrf = $('._csrf').val();
             $('.sa_search').blur(function () {
-                var obj = new Object();
                 obj['brand_name'] = $(this).val();
                 where(obj);
             });
@@ -167,20 +160,29 @@ use yii\helpers\Url;
 
             //搜索 品牌
             $('.s2 dd a').click(function () {
-                var obj = new Object();
                 var brand_id = $(this).attr('brand_id');
                 $('.order_by dd a').attr('brand_id',brand_id);  //把品牌ID存放到排序按钮中
                 obj['brand_id'] = brand_id;
                 where(obj)
             });
+            var res = '1';
+            //排序查找
             $('.order_by dd a').click(function () {
-                var  objOrder = new Object();
+                var obj = new Object();
                 var or_name = $(this).attr('name');
-                objOrder[or_name] = rel%2;
-                rel++;
-                objOrder['brand_id'] = $(this).attr('brand_id');
+                if(or_name == 'price_desc'){
+                    var sort = res%2;
+                        res++
+                }else if(or_name == 'hot_desc'){
+                    var sort = '2';
+                }else if(or_name == 'new_desc'){
+                    var sort = '3';
+                }
+
+                obj['sort'] = sort;
+                obj['brand_id'] = $(this).attr('brand_id');
                 $(this).parent().addClass('on').siblings().removeClass();    //选中样式
-                where(objOrder);
+                where(obj);
             });
 
             //拼接值
@@ -190,38 +192,41 @@ use yii\helpers\Url;
                 $.each(obj, function (k, v) {
                     alt +=k+'='+v+'&';
                 });
-                search(alt);
+                page(1,alt);
             }
 
-            /*
-             * 拼接条件 替换页面
-             * */
-            function search(alt){
-                $.ajax({
-                    type:'GET',
-                    url:'<?=url::to(['home/watch/search'])?>',
-                    data:alt,
-                    dataType:'json',
-                    success: function (msg) {
-                        var str = '';
-                        if(msg['res'] == '1'){
-                            str +='<span><h2>'+msg['msg']+'</h2></span>'
-                        }else{
-                            $.each(msg, function (k,v) {
-                                str += '<li><div class="tImg"><img src="Images/'+v.g_img+'"></div>';
-                                str += '<div class="tNm">'+ v.goods_name+'&nbsp;&nbsp;'+v.keywords+'</div><div class="tPrc">';
-                                str += '￥<span>'+v.shop_price+'</span><i>欧洲同步价</i></div>';
-                                str += '<div class="tInfo">销量<b>240</b></div></a>';
-                                str += '<label class="compare-off" id="compare_5561">对比';
-                                str +='<input autocomplete="off" type="checkbox" id="product_5561" title="勾选加入表款对比"></label></li>';
-                            })
-                        }
-//                        水电费
-                        $('.ul_goods').html(str);
+
+        });
+
+        /*
+         * 拼接条件 替换页面
+         * */
+        function page(p,alt=''){
+            $.ajax({
+                type:'GET',
+                url:'<?=url::to(['home/watch/search'])?>',
+                data:alt+'&p='+p,
+                dataType:'json',
+                success: function (msg) {
+
+                    $('.sa_bot').html(msg.pageStr);
+                    var str = '';
+                    if(msg['res'] == '1'){
+                        str +='<span><h2>'+msg['msg']+'</h2></span>'
+                    }else{
+                        $.each(msg.goodsList, function (k,v) {
+                            str += '<li><div class="tImg"><img src="Images/'+v.g_img+'"></div>';
+                            str += '<div class="tNm">'+ v.goods_name+'&nbsp;&nbsp;'+v.keywords+'</div><div class="tPrc">';
+                            str += '￥<span>'+v.shop_price+'</span><i>欧洲同步价</i></div>';
+                            str += '<div class="tInfo">销量<b>240</b></div></a>';
+                            str += '<label class="compare-off" id="compare_5561">对比';
+                            str +='<input autocomplete="off" type="checkbox" id="product_5561" title="勾选加入表款对比"></label></li>';
+                        })
                     }
-                });
-            }
-        })
+                    $('.ul_goods').html(str);
+                }
+            });
+        }
 
     </script>
 </div>

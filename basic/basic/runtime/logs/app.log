@@ -3986,66 +3986,1721 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1488185339.743
     'REQUEST_TIME' => 1488185339
 ]
-2017-02-28 15:32:53 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: app\models\Goods::whereData()' in E:\xiaoer\watch\basic\basic\vendor\yiisoft\yii2\base\Component.php:285
+<<<<<<< HEAD
+2017-02-28 06:14:03 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\WWW\xiyue\basic\basic\models\Goods.php:104
 Stack trace:
-#0 E:\xiaoer\watch\basic\basic\controllers\home\IndexController.php(59): yii\base\Component->__call('whereData', Array)
-#1 E:\xiaoer\watch\basic\basic\controllers\home\IndexController.php(59): app\models\Goods->whereData(Array)
-#2 [internal function]: app\controllers\home\IndexController->actionCatedata()
-#3 E:\xiaoer\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
-#4 E:\xiaoer\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
-#5 E:\xiaoer\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('catedata', Array)
-#6 E:\xiaoer\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/index/cate...', Array)
-#7 E:\xiaoer\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#8 E:\xiaoer\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#0 [internal function]: yii\BaseYii::autoload('app\\models\\Good...')
+#1 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(24): spl_autoload_call('app\\models\\Good...')
+#2 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
 #9 {main}
-2017-02-28 15:32:50 [127.0.0.1][-][-][info][application] $_GET = [
-    'r' => 'home/index/catedata'
-    'where' => '女士'
-    'rank' => '特价'
+2017-02-28 06:14:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
 ]
 
 $_COOKIE = [
-    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
-    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
 ]
 
 $_SERVER = [
-    'HTTP_HOST' => 'www.bendixiyue.com'
-    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
-    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
-    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
-    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
-    'HTTP_CONNECTION' => 'keep-alive'
-    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
-    'SystemRoot' => 'C:\\Windows'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/?r=home/watch/boylist'
+    'QUERY_STRING' => 'r=home/watch/boylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63828'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
     'SERVER_SIGNATURE' => ''
-    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
-    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488262443.1154
+    'REQUEST_TIME' => 1488262443
+]
+2017-02-28 06:14:03 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php:57
+
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(57): serialize(Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(ParseError))
+#6 {main}
+2017-02-28 06:14:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/?r=home/watch/boylist'
+    'QUERY_STRING' => 'r=home/watch/boylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '63828'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488262443.1154
+    'REQUEST_TIME' => 1488262443
+]
+2017-02-28 06:55:26 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\data\Pagination::0 in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php:161
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Object->__set('0', 8)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\data\Pagination), Array)
+#2 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(26): yii\base\Object->__construct(Array)
+#3 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#10 {main}
+2017-02-28 06:55:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '504'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50251'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/?r=home/watch/boylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488264919.392
+    'REQUEST_TIME' => 1488264919
+]
+2017-02-28 06:56:09 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\data\Pagination::0 in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php:161
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Object->__set('0', 8)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\data\Pagination), Array)
+#2 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(26): yii\base\Object->__construct(Array)
+#3 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#10 {main}
+2017-02-28 06:56:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50279'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/?r=home/watch/boylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488264967.8328
+    'REQUEST_TIME' => 1488264967
+]
+2017-02-28 06:57:27 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\data\Pagination::0 in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php:161
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Object->__set('0', 8)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\data\Pagination), Array)
+#2 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(26): yii\base\Object->__construct(Array)
+#3 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#10 {main}
+2017-02-28 06:57:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50308'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/?r=home/watch/boylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265047.5964
+    'REQUEST_TIME' => 1488265047
+]
+2017-02-28 06:57:29 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\data\Pagination::0 in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php:161
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Object->__set('0', 8)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\data\Pagination), Array)
+#2 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(26): yii\base\Object->__construct(Array)
+#3 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#10 {main}
+2017-02-28 06:57:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50310'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/?r=home/watch/boylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265048.6904
+    'REQUEST_TIME' => 1488265048
+]
+2017-02-28 06:57:42 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: pages in C:\WWW\xiyue\basic\basic\views\home\watch\boy.php:99
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\views\home\watch\boy.php(99): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\WWW\\xiyue\\ba...', 99, Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('C:\\WWW\\xiyue\\ba...')
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('C:\\WWW\\xiyue\\ba...', Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\WWW\\xiyue\\ba...', Array, Object(app\controllers\home\WatchController))
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('boy', Array, Object(app\controllers\home\WatchController))
+#5 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(39): yii\base\Controller->render('boy', Array)
+#6 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#10 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#11 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2017-02-28 06:57:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50321'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/?r=home/watch/boylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265061.8922
+    'REQUEST_TIME' => 1488265061
+]
+2017-02-28 06:58:11 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: pages in C:\WWW\xiyue\basic\basic\views\home\watch\boy.php:99
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\views\home\watch\boy.php(99): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\WWW\\xiyue\\ba...', 99, Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('C:\\WWW\\xiyue\\ba...')
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('C:\\WWW\\xiyue\\ba...', Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\WWW\\xiyue\\ba...', Array, Object(app\controllers\home\WatchController))
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('boy', Array, Object(app\controllers\home\WatchController))
+#5 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(39): yii\base\Controller->render('boy', Array)
+#6 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#10 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#11 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2017-02-28 06:58:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50333'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/?r=home/watch/boylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265091.3239
+    'REQUEST_TIME' => 1488265091
+]
+2017-02-28 06:59:06 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: pages in C:\WWW\xiyue\basic\basic\views\home\watch\boy.php:99
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\views\home\watch\boy.php(99): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\WWW\\xiyue\\ba...', 99, Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('C:\\WWW\\xiyue\\ba...')
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('C:\\WWW\\xiyue\\ba...', Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\WWW\\xiyue\\ba...', Array, Object(app\controllers\home\WatchController))
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('boy', Array, Object(app\controllers\home\WatchController))
+#5 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(41): yii\base\Controller->render('boy', Array)
+#6 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#10 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#11 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2017-02-28 06:59:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50463'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/?r=home/watch/boylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265144.9519
+    'REQUEST_TIME' => 1488265144
+]
+2017-02-28 07:03:10 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\data\Pagination::pagination in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php:161
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Object->__set('pagination', Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\data\Pagination), Array)
+#2 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(26): yii\base\Object->__construct(Array)
+#3 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#10 {main}
+2017-02-28 07:03:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+    'page' => '2'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist&page=2'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist&page=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '50990'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265390.513
+    'REQUEST_TIME' => 1488265390
+]
+2017-02-28 07:07:55 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: goodslist in C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php:35
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(35): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\WWW\\xiyue\\ba...', 35, Array)
+#1 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2017-02-28 07:07:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+    'page' => '2'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1972'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist&page=2'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist&page=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51231'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265674.5002
+    'REQUEST_TIME' => 1488265674
+]
+2017-02-28 07:12:35 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: pages in C:\WWW\xiyue\basic\basic\views\home\watch\boy.php:99
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\views\home\watch\boy.php(99): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\WWW\\xiyue\\ba...', 99, Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('C:\\WWW\\xiyue\\ba...')
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('C:\\WWW\\xiyue\\ba...', Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\WWW\\xiyue\\ba...', Array, Object(app\controllers\home\WatchController))
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('boy', Array, Object(app\controllers\home\WatchController))
+#5 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(33): yii\base\Controller->render('boy', Array)
+#6 [internal function]: app\controllers\home\WatchController->actionBoylist()
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('boylist', Array)
+#10 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/boyl...', Array)
+#11 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2017-02-28 07:12:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+    'page' => '2'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1848'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist&page=2'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist&page=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51362'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist&page=2'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265954.9883
+    'REQUEST_TIME' => 1488265954
+]
+2017-02-28 07:51:08 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: brand_id in C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php:100
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(100): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\WWW\\xiyue\\ba...', 100, Array)
+#1 [internal function]: app\controllers\home\WatchController->actionSearch()
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('search', Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/sear...', Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2017-02-28 07:51:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/search'
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '7nnsu6ru83vqegda90sl3nhma7'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1976'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fsearch&&p=2'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fsearch&&p=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '52197'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=7nnsu6ru83vqegda90sl3nhma7'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488268268.2826
+    'REQUEST_TIME' => 1488268268
+]
+2017-02-28 08:43:06 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_priceDESC' in 'order clause' in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#4 C:\WWW\xiyue\basic\basic\models\Goods.php(137): yii\db\ActiveQuery->all()
+#5 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(112): app\models\Goods->showBrand('brand_id', 'all', '2', 'DESC', 'shop_price', 0)
+#6 [internal function]: app\controllers\home\WatchController->actionSearch()
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('search', Array)
+#10 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/sear...', Array)
+#11 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_priceDESC' in 'order clause'
+The SQL being executed was: SELECT `g_id`, `gt_id`, `goods_name`, `brand_id`, `shop_price`, `keywords`, `g_img` FROM `mb_goods` WHERE (`gt_id`='2') AND (`is_show`='1') ORDER BY `shop_priceDESC` LIMIT 0 in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT `g_id`, ...')
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#4 C:\WWW\xiyue\basic\basic\models\Goods.php(137): yii\db\ActiveQuery->all()
+#5 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(112): app\models\Goods->showBrand('brand_id', 'all', '2', 'DESC', 'shop_price', 0)
+#6 [internal function]: app\controllers\home\WatchController->actionSearch()
+#7 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('search', Array)
+#10 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/sear...', Array)
+#11 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'shop_priceDESC' in 'order clause'
+)
+
+2017-02-28 08:43:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/search'
+    'p' => '1'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '7nnsu6ru83vqegda90sl3nhma7'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1848'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fsearch&&p=1'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fsearch&&p=1'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53526'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=7nnsu6ru83vqegda90sl3nhma7'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488271385.4249
+    'REQUEST_TIME' => 1488271385
+]
+2017-02-28 08:56:08 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: goodLimit in C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php:116
+Stack trace:
+#0 C:\WWW\xiyue\basic\basic\controllers\home\WatchController.php(116): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\WWW\\xiyue\\ba...', 116, Array)
+#1 [internal function]: app\controllers\home\WatchController->actionSearch()
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('search', Array)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/watch/sear...', Array)
+#6 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\WWW\xiyue\basic\basic\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2017-02-28 08:56:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/search'
+    'p' => '2'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '7nnsu6ru83vqegda90sl3nhma7'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1880'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fsearch&&p=2'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fsearch&&p=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53941'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=7nnsu6ru83vqegda90sl3nhma7'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488272167.9316
+    'REQUEST_TIME' => 1488272167
+=======
+
+2017-02-28 06:06:04 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-02-28 06:06:01 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home%2Findex'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
-    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'DOCUMENT_ROOT' => 'D:/chen'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
-    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
     'SERVER_ADMIN' => 'admin@phpStudy.net'
-    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
-    'REMOTE_PORT' => '60422'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60577'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
-    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
-    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488261961.977
+    'REQUEST_TIME' => 1488261961
+]
+2017-02-28 06:06:54 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-02-28 06:06:52 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home%2Fwatch%2Fboylist&brand_id=4'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60619'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488262012.19
+    'REQUEST_TIME' => 1488262012
+]
+2017-02-28 06:06:59 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-02-28 06:06:56 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home%2Fwatch%2Fboylist&brand_id=4'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60635'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488262016.968
+    'REQUEST_TIME' => 1488262016
+]
+2017-02-28 06:07:02 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/consignment/index".' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#1 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-02-28 06:07:02 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home%2Fwatch%2Fboylist&brand_id=4'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60651'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/consignment/index'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/consignment/index'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488262022.306
+    'REQUEST_TIME' => 1488262022
+]
+2017-02-28 06:07:10 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/reg' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('reg', Array)
+#1 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/reg', Array)
+#2 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\chen\mingbiao\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\chen\mingbiao\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-02-28 06:07:08 [127.0.0.1][-][bmduv968jn89b0rr7uflhnbm53][info][application] $_GET = [
+    'r' => 'home/login/reg'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home%2Fwatch%2Fboylist&brand_id=4'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60651'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/reg'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/login/reg'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488262028.826
+    'REQUEST_TIME' => 1488262028
+
+>>>>>>> e93b898ad26f699f2f3eb492ca171c592ce82a5b
+]
+2017-02-28 10:43:44 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 33174 bytes' 
+
+in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\WWW\\xiyue\\ba...', 88, Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\WWW\\xiyue\\ba...', Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-02-28 10:43:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/boylist'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1916'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fboylist'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fboylist'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56900'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488278623.1708
+    'REQUEST_TIME' => 1488278623
+]
+2017-02-28 10:43:46 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 33174 bytes' 
+
+in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\WWW\\xiyue\\ba...', 88, Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\WWW\\xiyue\\ba...', Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-02-28 10:43:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1916'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56900'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488278624.7669
+    'REQUEST_TIME' => 1488278624
+]
+2017-02-28 10:43:47 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 33174 bytes' 
+
+in C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\WWW\\xiyue\\ba...', 88, Array)
+#1 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\WWW\\xiyue\\ba...', Array)
+#3 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\WWW\xiyue\basic\basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-02-28 10:43:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/watch/search'
+    'brand_id' => '8'
+    'p' => '1'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5qo5iejp6ifiu9j7865a4iqr57'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\phpStudy\\php\\php-5.5.38;C:\\ruanjian\\Git\\Git\\cmd;C:\\Program Files\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;C:\\python;C:\\Python27;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/php/php-7.0.12-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1916'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=home%2Fwatch%2Fsearch&brand_id=8&&p=1'
+    'QUERY_STRING' => 'r=home%2Fwatch%2Fsearch&brand_id=8&&p=1'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56900'
+    'SCRIPT_FILENAME' => 'C:/WWW/xiyue/basic/basic/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/WWW/xiyue/basic/basic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.xymb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=5qo5iejp6ifiu9j7865a4iqr57'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://www.xymb.com/index.php?r=home%2Fwatch%2Fboylist'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.xymb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488278627.5001
+    'REQUEST_TIME' => 1488278627
+]
+2017-02-28 18:56:51 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/consignment/index".' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-28 18:56:51 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'root'
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.html'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '55638'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/consignment/index'
+    'REQUEST_URI' => '/index.php?r=home/consignment/index'
     'SCRIPT_NAME' => '/index.php'
     'PHP_SELF' => '/index.php'
-    'REQUEST_TIME_FLOAT' => 1488267170.794
-    'REQUEST_TIME' => 1488267170
+    'REQUEST_TIME_FLOAT' => 1488279411.477
+    'REQUEST_TIME' => 1488279411
+]
+2017-02-28 18:59:31 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined method app\Lib\Functions\Filtration::formatTime()' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:73
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 18:59:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.html'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '55706'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/consignment/index'
+    'REQUEST_URI' => '/index.php?r=home/consignment/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488279569.925
+    'REQUEST_TIME' => 1488279569
 ]
 2017-02-28 16:24:20 [127.0.0.1][-][p0lult2qqvfj32n473lv7icpc4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/index/i' in E:\xiaoer\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
 Stack trace:
