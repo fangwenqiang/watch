@@ -16,7 +16,7 @@ use yii\helpers\Url;
             <div class="pr_top">
                 <b class="tit">积分规则</b>
                 <div id="contact_kf_div" class="u__kf"
-                     onclick="javascript:NTKF.im_openInPageChat(&#39;kf_9988_1341905703263&#39;);_gaq.push([&#39;_trackEvent&#39;,&#39;kefuxiaochuang&#39;, &#39;tousu&#39;, location.href]);"></div>
+                     onclick="javascript:NTKF.im_openInPageChat('kf_9988_1341905703263');_gaq.push(['_trackEvent','kefuxiaochuang', 'tousu', location.href]);"></div>
             </div>
 
         </div>
@@ -50,7 +50,7 @@ use yii\helpers\Url;
                     <div class="right">
                         &lt;订单编号：&gt;<!--订单编号：-->
                         <input type="text" class="txt" name="order_id" value=""
-                               onfocus="javascript:$(this).val(&#39;&#39;);">
+                               onfocus="javascript:$(this).val(');">
                         <input type="submit" class="lookup" value="查询">
                     </div>
                 </form>
@@ -89,27 +89,27 @@ use yii\helpers\Url;
     <div class="leftArea">
         <div class="leftArea">
             <div class="u__mine"><a
-                    onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_index&#39;,&#39;http://user.wbiao.cn/&#39;]);"
+                    onclick="_gaq.push(['_trackEvent','user','user_index','http://user.wbiao.cn/']);"
                     href="http://user.wbiao.cn/" style="display: block; height: 100%;"></a></div>
             <div class="floor">
                 <div class="t"><i class="u__trade"></i><font class="f_fixed">交易管理</font></div>
                 <div class="c">
                     <ul>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_order&#39;,&#39;/order&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_order','/order']);"
                                 href="Script/yonghu.htm" title="我的订单" rel="nofollow">我的订单 (<span
                                     class="cb01">1</span>)</a></li>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_orderbooking&#39;,&#39;/orderbooking&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_orderbooking','/orderbooking']);"
                                 href="#" title="我的预售" rel="nofollow">我的预售 (<span class="cb01">0</span>)</a></li>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_address&#39;,&#39;/address&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_address','/address']);"
                                 href="#" title="收货地址" rel="nofollow">收货地址</a></li>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_giftcard','/giftcard']);"
                                 href="#" title="礼品卡" rel="nofollow">礼品卡</a></li>
                         <li style="border:0;"><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_bonus&#39;,&#39;/bonus&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_bonus','/bonus']);"
                                 href="#" title="代金券/优惠券" rel="nofollow">代金券/优惠券</a></li>
                     </ul>
                 </div>
@@ -119,19 +119,19 @@ use yii\helpers\Url;
                 <div class="c">
                     <ul>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_profile&#39;,&#39;/profile&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_profile','/profile']);"
                                 href="#" title="个人资料" rel="nofollow">个人资料</a></li>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_password&#39;,&#39;/password&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_password','/password']);"
                                 href="#" title="修改密码" rel="nofollow">修改密码</a></li>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_collection&#39;,&#39;/collection&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_collection','/collection']);"
                                 href="#" title="我的收藏" rel="nofollow">我的收藏</a></li>
                         <li><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_history_record&#39;,&#39;/history/record&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_history_record','/history/record']);"
                                 href="#" title="浏览历史" rel="nofollow">浏览历史</a></li>
                         <li style="border:0;"><i></i><a
-                                onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_recommend&#39;,&#39;/recommend&#39;]);"
+                                onclick="_gaq.push(['_trackEvent','user','user_recommend','/recommend']);"
                                 href="http://user.wbiao.cn/recommend" title="为我推荐" rel="nofollow">为我推荐</a></li>
                     </ul>
                 </div>
@@ -140,9 +140,9 @@ use yii\helpers\Url;
                 <div class="t"><i class="u__integral"></i><font class="f_fixed">积分管理</font></div>
                 <div class="c">
                     <ul>
-                        <li><i  class="u__point"></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_points&#39;,&#39;/points&#39;]);" href="<?php echo Url::to(['home/personal/my_integral'])?>" title="我的积分"  class="ccf0" rel="nofollow">我的积分</a></li>
-                        <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_points_detail&#39;,&#39;/points/detail&#39;]);" href="<?php echo Url::to(['home/personal/integral_rule'])?>" title="积分细则" rel="nofollow">积分细则</a></li>
-                        <li style="border:0;"><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_recommend_gift&#39;,&#39;/recommend/gift&#39;]);" href="#" title="推荐有礼" rel="nofollow">推荐有礼</a></li>
+                        <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_points','/points']);" href="<?php echo Url::to(['home/personal/my_integral'])?>" title="我的积分"  class="ccf0" rel="nofollow">我的积分</a></li>
+                        <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_points_detail','/points/detail']);" href="<?php echo Url::to(['home/personal/integral_rule'])?>" title="积分细则" rel="nofollow">积分细则</a></li>
+                        <li style="border:0;"><i></i><a onclick="_gaq.push(['_trackEvent','user','user_recommend_gift','/recommend/gift']);" href="#" title="推荐有礼" rel="nofollow">推荐有礼</a></li>
                     </ul>
                 </div>
             </div>

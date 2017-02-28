@@ -8,13 +8,13 @@ use yii\helpers\Url;
         <i>&gt;</i>
         <a href="<?php echo Url::to(['home/personal/index'])?>" target="_blank" class="c0e7">我的喜悦手表</a>
         <i>&gt;</i>
-        <span>我的收藏</span>
+        <span>最近访问</span>
     </div>
     <div class="rightArea">
         <!-- 便利提醒 Begin -->
         <div class="prompt">
             <div class="pr_top">
-                <b class="tit">我的收藏</b>
+                <b class="tit">最近访问</b>
                 <div id="contact_kf_div" class="u__kf"
                      onclick="javascript:NTKF.im_openInPageChat('kf_9988_1341905703263');_gaq.push(['_trackEvent','kefuxiaochuang', 'tousu', location.href]);"></div>
             </div>
@@ -49,8 +49,7 @@ use yii\helpers\Url;
                     </div>
                     <div class="right">
                         &lt;订单编号：&gt;<!--订单编号：-->
-                        <input type="text" class="txt" name="order_id" value=""
-                               onfocus="javascript:$(this).val('');">
+                        <input type="text" class="txt" name="order_id" value="" onfocus="javascript:$(this).val('');">
                         <input type="submit" class="lookup" value="查询">
                     </div>
                 </form>
@@ -58,14 +57,14 @@ use yii\helpers\Url;
         </div>
         <table border="1">
         <tr>
-	        <?php foreach ($collect_list as $key => $value): ?>
+	        <?php foreach ($history_list as $key => $value): ?>
 	        	<?php if($key%5==0){?></tr><tr>
 	        	<?php }?>
 	        	<td>
-	        		<a href=""><img src="<?php echo $value['goods_img'];?>" height="160px" width="160px"></a><br>
-	        		<a href=""><span style="text-align:center;width:150px;"><?php echo $value['goods_name'];?></span></a><br>
-	        		<span style="color:orange">促￥<?php echo $value['market_price'];?></span>
-	        		<span style="color:gray;">￥<s><?php echo $value['shop_price'];?></s></span>
+	        		<a href=""><img src="images/<?php echo $value['goods_img'];?>" height="160px" width="160px"></a><br>
+	        		
+	        		<span style="color:orange;">促￥<?php echo $value['shop_price'];?></span>&nbsp;&nbsp;&nbsp; <span style="color:gray;">￥<s><?php echo $value['market_price'];?></s><br></span>
+                    <a href=""><span style="text-align:center;width:150px;"><?php echo $value['goods_name'];?></span></a>
 	        	</td>
 	        <?php endforeach; ?>
         </tr>
@@ -80,9 +79,7 @@ use yii\helpers\Url;
     <!-- 左边菜单 Begin -->
     <div class="leftArea">
         <div class="leftArea">
-            <div class="u__mine"><a
-                    onclick="_gaq.push(['_trackEvent','user','user_index','http://user.wbiao.cn/']);"
-                    href="http://user.wbiao.cn/" style="display: block; height: 100%;"></a></div>
+            <div class="u__mine"><a onclick="_gaq.push(['_trackEvent','user','user_index','http://user.wbiao.cn/']);" href="http://user.wbiao.cn/" style="display: block; height: 100%;"></a></div>
             <div class="floor">
                 <div class="t"><i class="u__trade"></i><font class="f_fixed">交易管理</font></div>
                 <div class="c">
@@ -101,8 +98,8 @@ use yii\helpers\Url;
                     <ul>
                         <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_profile','/profile']);" href="#" title="个人资料" rel="nofollow">个人资料</a></li>
                         <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_password','/password']);" href="#" title="修改密码" rel="nofollow">修改密码</a></li>
-                        <li><i class="u__point"></i><a onclick="_gaq.push(['_trackEvent','user','user_collection','/collection']);" href="<?php echo Url::to(['home/personal/my_collect'])?>" title="我的收藏" class="ccf0" rel="nofollow">我的收藏</a></li>
-                        <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_history_record','/history/record']);" href="<?php echo Url::to(['home/personal/my_history'])?>" title="浏览历史" rel="nofollow">浏览历史</a></li>
+                        <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_collection','/collection']);" href="<?php echo Url::to(['home/personal/my_collect'])?>" title="我的收藏" rel="nofollow">我的收藏</a></li>
+                        <li><i class="u__point"></i><a onclick="_gaq.push(['_trackEvent','user','user_history_record','/history/record']);" href="<?php echo Url::to(['home/personal/my_history'])?>" title="浏览历史" class="ccf0" rel="nofollow">最近访问</a></li>
                         <li style="border:0;"><i></i><a onclick="_gaq.push(['_trackEvent','user','user_recommend','/recommend']);" href="http://user.wbiao.cn/recommend" title="为我推荐" rel="nofollow">为我推荐</a></li>
                     </ul>
                 </div>

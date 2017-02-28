@@ -7,9 +7,11 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Collect;  //模型层
+use app\models\Integral_rule;  //模型层
+use app\models\History;  //模型层
 
 
-class PersonalController extends Controller
+class PersonalController extends CommonController
 {
     //前台公共视图
     public  $layout = '/proscenium';
@@ -58,4 +60,13 @@ class PersonalController extends Controller
         $collect_list=$model->show($user_id);
     	return $this->render('my_collect',['collect_list'=>$collect_list]);
     }
+    
+    public function actionMy_history()
+    {
+        $model=new History();
+        $user_id=2;
+        $history_list=$model->history_all($user_id);
+        //var_dump($history_list);die;
+        return $this->render('my_history',['history_list'=>$history_list]);
+    } 
 }
