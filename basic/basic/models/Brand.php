@@ -20,46 +20,46 @@ class Brand extends \yii\db\ActiveRecord
      */
     public function brandOne($id)
     {
-    	$data = Brand::find()->where(['brand_id'=>$id])->one(); 
-    	if($data)
-    	{
-    		return $data;
-    	}
-    	else
-    	{
-    		return false;
-    	}
+        $data = Brand::find()->where(['brand_id'=>$id])->one();
+        if($data)
+        {
+            return $data;
+        }
+        else
+        {
+            return false;
+        }
     }
     /*
      * 品牌-->修改操作
      */
     public function brandUpdate($post)
     {
-    	
-    	$res = Yii::$app->db->createCommand()->update('mb_brand',$post, 'brand_id=:id', array(':id' => $post['brand_id']))->execute();
-    	if($res)
-    	{
-    		return true;
-    	}
-    	else
-    	{
-    		return false;
-    	}
+
+        $res = Yii::$app->db->createCommand()->update('mb_brand',$post, 'brand_id=:id', array(':id' => $post['brand_id']))->execute();
+        if($res)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     /*
      * 品牌-->查看全部数据
      */
     public function brandAll()
     {
-    	$data = Brand::find()->asArray()->all(); 
-    	if($data)
-    	{
-    		return $data;
-    	}
-    	else
-    	{
-    		return false;
-    	}
+        $data = Brand::find()->asArray()->all();
+        if($data)
+        {
+            return $data;
+        }
+        else
+        {
+            return false;
+        }
     }
     /*
      * 品牌-->删除单条数据
@@ -82,11 +82,11 @@ class Brand extends \yii\db\ActiveRecord
     public function brandAdd($post)
     {
         $res = Yii::$app->db->createCommand()->insert('mb_brand', $post)->execute();
-        if($res) 
+        if($res)
         {
             return true;
-        } 
-        else 
+        }
+        else
         {
             return false;
         }
@@ -133,7 +133,7 @@ class Brand extends \yii\db\ActiveRecord
 
         //关键函数，参数（目标资源，源，目标资源的开始坐标x,y,源资源的开始坐标x,y,目标资源的宽高w,h,源资源的宽高w,h）
         imagecopyresampled($image, $src, 0, 0, 0, 0, $w, $h, $size_src['0'], $size_src['1']);
-        
+
         //告诉浏览器以图片形式解析
         // header('content-type:image/png');
         // imagepng($image);
@@ -162,19 +162,13 @@ class Brand extends \yii\db\ActiveRecord
         }
     }
 
-    /*
+
+    /**
      * 根据品牌名称查询商品
-     * */
-    public function brandGoods($brand_name,$gt_id)
+     */
+    public function brandId($brand_name)
     {
         //品牌ID
-        $brand_id = Brand::find()->select('brand_id')->where(['like','brand_name',$brand_name])->asArray()->one()['brand_id'];
-        return Goods::find()
-            ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
-            ->where(['brand_id'=>$brand_id])
-            ->andWhere(['gt_id'=>$gt_id])
-            ->andWhere(['is_show'=>'1'])
-            ->asArray()
-            ->all();
+        return Brand::find()->select('brand_id')->where(['like','brand_name',$brand_name])->asArray()->one();
     }
 }
