@@ -1,0 +1,2792 @@
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:10:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59977'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265838.77
+    'REQUEST_TIME' => 1488265838
+]
+2017-02-28 15:10:41 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:41 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:41 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:41 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:41 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:42 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:42 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:42 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:42 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:42 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:10:42 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:10:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59977'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265840.986
+    'REQUEST_TIME' => 1488265840
+]
+2017-02-28 15:10:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:44 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:45 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:45 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:45 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:45 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:45 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:45 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:10:46 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:10:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59974'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265844.558
+    'REQUEST_TIME' => 1488265844
+]
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:10:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59977'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265848.213
+    'REQUEST_TIME' => 1488265848
+]
+2017-02-28 15:10:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:51 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:10:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:10:52 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:10:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59974'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265851.212
+    'REQUEST_TIME' => 1488265851
+]
+2017-02-28 15:11:15 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:15 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:16 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:16 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:16 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:16 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:16 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:16 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:16 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:17 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:11:17 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:11:15 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59991'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265875.414
+    'REQUEST_TIME' => 1488265875
+]
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:11:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60011'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265916.523
+    'REQUEST_TIME' => 1488265916
+]
+2017-02-28 15:11:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:11:59 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:12:03 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:11:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60011'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265919.096
+    'REQUEST_TIME' => 1488265919
+]
+2017-02-28 15:12:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:22 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:12:23 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:12:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60018'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265942.837
+    'REQUEST_TIME' => 1488265942
+]
+2017-02-28 15:13:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:23 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:24 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:13:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60041'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266003.304
+    'REQUEST_TIME' => 1488266003
+]
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_show`=1 LIMIT 10
+    in E:\xiaoer\watch\basic\basic\models\Goods.php:127
+    in E:\xiaoer\watch\basic\basic\controllers\home\IndexController.php:59
+2017-02-28 15:13:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '女士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266023.393
+    'REQUEST_TIME' => 1488266023
+]
+2017-02-28 15:13:45 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:45 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:46 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_show`=1 LIMIT 10
+    in E:\xiaoer\watch\basic\basic\models\Goods.php:127
+    in E:\xiaoer\watch\basic\basic\controllers\home\IndexController.php:59
+2017-02-28 15:13:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266025.868
+    'REQUEST_TIME' => 1488266025
+]
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_show`=1 LIMIT 10
+    in E:\xiaoer\watch\basic\basic\models\Goods.php:127
+    in E:\xiaoer\watch\basic\basic\controllers\home\IndexController.php:59
+2017-02-28 15:13:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266028.7
+    'REQUEST_TIME' => 1488266028
+]
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_show`=1 LIMIT 10
+    in E:\xiaoer\watch\basic\basic\models\Goods.php:127
+    in E:\xiaoer\watch\basic\basic\controllers\home\IndexController.php:59
+2017-02-28 15:13:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '男士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%94%B7%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%94%B7%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266030.629
+    'REQUEST_TIME' => 1488266030
+]
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '女士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266031.952
+    'REQUEST_TIME' => 1488266031
+]
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '女士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60054'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266032.343
+    'REQUEST_TIME' => 1488266032
+]
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266035.414
+    'REQUEST_TIME' => 1488266035
+]
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60054'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266037.065
+    'REQUEST_TIME' => 1488266037
+]
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266037.591
+    'REQUEST_TIME' => 1488266037
+]
+2017-02-28 15:13:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:59 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '女士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60062'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266039.249
+    'REQUEST_TIME' => 1488266039
+]
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:13:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60054'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266038.774
+    'REQUEST_TIME' => 1488266038
+]
+2017-02-28 15:14:27 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:27 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:29 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:29 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:29 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:29 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:14:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60069'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266067.657
+    'REQUEST_TIME' => 1488266067
+]
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60069'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266070.252
+    'REQUEST_TIME' => 1488266070
+]
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60076'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266076.615
+    'REQUEST_TIME' => 1488266076
+]
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266084.247
+    'REQUEST_TIME' => 1488266084
+]
+2017-02-28 15:14:48 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:48 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:49 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266088.682
+    'REQUEST_TIME' => 1488266088
+]
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266091.074
+    'REQUEST_TIME' => 1488266091
+]
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '女士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266093.751
+    'REQUEST_TIME' => 1488266093
+]
+2017-02-28 15:14:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:55 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:55 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '男士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%94%B7%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%94%B7%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266095.447
+    'REQUEST_TIME' => 1488266095
+]
+2017-02-28 15:14:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:57 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:14:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:14:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '女士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E5%A5%B3%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266097.619
+    'REQUEST_TIME' => 1488266097
+]
+2017-02-28 15:15:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:00 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:15:00 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266099.994
+    'REQUEST_TIME' => 1488266099
+]
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:15:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266101.772
+    'REQUEST_TIME' => 1488266101
+]
+2017-02-28 15:15:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:22 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:15:23 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in E:\xiaoer\watch\basic\basic\controllers\home\LoginController.php:82
+2017-02-28 15:15:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60094'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266122.089
+    'REQUEST_TIME' => 1488266122
+]
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:53
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:54
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:44
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:55
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in E:\xiaoer\watch\basic\basic\models\Nav.php:57
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in E:\xiaoer\watch\basic\basic\models\Category.php:134
+    in E:\xiaoer\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 15:18:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '男士'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p0lult2qqvfj32n473lv7icpc4'
+    '_csrf' => '755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.bendixiyue.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.bendixiyue.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=p0lult2qqvfj32n473lv7icpc4; _csrf=755d01faadd747d31ca4f761328e1c8461f37ced197b04c41e4ee83a96f743c7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pyagC1V67Wd4n7Q3Y0Clsb-yxDSZfEGg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\TortoiseSVN_x64\\bin;D:\\phpstudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;F:\\GIT\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.bendixiyue.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xiaoer/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'E:/xiaoer/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60123'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%94%B7%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/index.php?r=home%2Findex%2Fcatedata&where=%E7%94%B7%E5%A3%AB&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266302.803
+    'REQUEST_TIME' => 1488266302
+]
