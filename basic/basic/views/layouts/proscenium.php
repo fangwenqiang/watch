@@ -35,7 +35,7 @@ use yii\helpers\Url;
 <div id="member_info2"></div>
 <div class="head">
     <div class="r1 w1225">
-        <div class="ri" id='Login'>
+        <div class="ri" id='login'>
             <?php foreach ($this->params['nav']['top'] as $key => $val) {?>
                     <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
             <?php } ?>
