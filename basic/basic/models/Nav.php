@@ -48,16 +48,31 @@ class Nav extends \yii\db\ActiveRecord
      * 递归查询所有
      */
 
-    public function recursion($nav_pid=0)
+    public function recursion()
     {
-        $info['zhu'] =  Nav::find()->where(['nav_place' =>1])->asArray()->all();
-        $info['top'] =  Nav::find()->where(['nav_place' =>2])->asArray()->all();
-        $arr =  $this->nav_List('where nav_place = 3 and nav_type = 1');
-        foreach($arr as $key=>$val){
-            $arr[$key]['child'] = Nav::find()->where(['nav_pid' =>$val['nav_pid'].'-'.$val['nav_id']])->asArray()->all();
+        $arr =array();
+        $arr1 = array();
+        $info =  Nav::find()->asArray()->all();
+        foreach($info as $key=>$val){
+            if($val['nav_place'] == 1){
+                $data['zhu'][] = $info[$key];
+            } elseif($val['nav_place'] == 2) {
+                $data['top'][] = $info[$key];
+            } elseif($val['nav_place'] == 3 && $val['nav_type'] == 1){
+                $arr[] = $info[$key];
+            }else{
+                $arr1[] = $info[$key];
+            }
         }
-        $info['bottom'] = $arr;
-        return $info;
+        foreach($arr as $key=>$val){
+            foreach($arr1 as $k=>$v){
+                if($val['nav_pid'].'-'.$val['nav_id'] == $v['nav_pid']){
+                    $arr[$key]['child'][] = $arr1[$k];
+                }
+            }
+        }
+        $data['bottom'] = $arr;
+        return $data;
     }
 
 
