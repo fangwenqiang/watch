@@ -27,10 +27,8 @@ use yii\helpers\Url;
     <script src="js/jquery.js"></script>
     <script src="js/saved_resource"></script>
     <link rel="stylesheet" href="css/user.css" type="text/css" media="screen, projection">
-    <script type="text/javascript" src="js/user.js"></script>
-    <link rel="stylesheet" href="css/user.css">
-    <!--<script src="js/global.js"></script>
-    
+    <!--<script src="Script/global.js"></script>
+
     <!--修订功能js错误 重置模块功能：下拉菜单隐藏、头部幻灯片， 修改时间2014年5月20日11:11:17 修改员：huang-->
     <script type="text/javascript">
         $(function () {
@@ -121,13 +119,18 @@ use yii\helpers\Url;
 
         <ul class="gNav">
             <?php
-
-
-                foreach ($this->params['nav']['zhu'] as $key => $val) {       ?>
-           
+            $session = \Yii::$app->session;
+            $user = $session->get('user');
+            if (!isset($user)) {
+                foreach ($this->params['nav']['zhu'] as $key => $val) {
+                 ?>
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
-                    <?php   }    ?>
+                    <?php
+                }
+            } else {
+                echo "欢迎$user";
+            } ?>
         </ul>
     </div>
 </div>

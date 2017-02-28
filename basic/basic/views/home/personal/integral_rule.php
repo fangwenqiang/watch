@@ -8,13 +8,13 @@ use yii\helpers\Url;
         <i>&gt;</i>
         <a href="<?php echo Url::to(['home/personal/index'])?>" target="_blank" class="c0e7">我的喜悦手表</a>
         <i>&gt;</i>
-        <span>我的积分</span>
+        <span>积分细则</span>
     </div>
     <div class="rightArea">
         <!-- 便利提醒 Begin -->
         <div class="prompt">
             <div class="pr_top">
-                <b class="tit">我的积分</b>
+                <b class="tit">积分细则</b>
                 <div id="contact_kf_div" class="u__kf"
                      onclick="javascript:NTKF.im_openInPageChat(&#39;kf_9988_1341905703263&#39;);_gaq.push([&#39;_trackEvent&#39;,&#39;kefuxiaochuang&#39;, &#39;tousu&#39;, location.href]);"></div>
             </div>

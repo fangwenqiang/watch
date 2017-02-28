@@ -3986,3 +3986,1580 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1488185339.743
     'REQUEST_TIME' => 1488185339
 ]
+2017-02-28 08:45:39 [127.0.0.1][-][69b7ramm6j9njgvf35i25d98i5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-02-28 08:45:38 [127.0.0.1][-][69b7ramm6j9njgvf35i25d98i5][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.mb.com/'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '55350'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488242738.097
+    'REQUEST_TIME' => 1488242738
+]
+2017-02-28 08:46:40 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare app\controllers\home\GoodsShowController::actionShow()' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:49
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:46:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '55499'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488242800.377
+    'REQUEST_TIME' => 1488242800
+]
+2017-02-28 08:49:10 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\Filtration' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:45
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:49:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '55848'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488242950.598
+    'REQUEST_TIME' => 1488242950
+]
+2017-02-28 08:52:01 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'function' (T_FUNCTION), expecting identifier (T_STRING)' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:10
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:52:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56183'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243121.326
+    'REQUEST_TIME' => 1488243121
+]
+2017-02-28 08:52:12 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'Function' (T_FUNCTION), expecting identifier (T_STRING)' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:10
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:52:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56229'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243132.285
+    'REQUEST_TIME' => 1488243132
+]
+2017-02-28 08:55:37 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\Yii' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:55:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'eWFyM3JpV2I/JRZRKi96NwskFWMcGBY9FBVFUjZcITMSLjpJAgYjLg=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '180'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56671'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243334.474
+    'REQUEST_TIME' => 1488243334
+]
+2017-02-28 08:56:58 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot use yii\web\Controller as Controller because the name is already in use' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:7
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:56:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56791'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243417.965
+    'REQUEST_TIME' => 1488243417
+]
+2017-02-28 08:57:35 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:23
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:57:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'Mk9SbzRpcHN0CzYNbC9dJkAKNT9aGDEsXztlDnBcBiJZABoVRAYEPw=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56824'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243453.753
+    'REQUEST_TIME' => 1488243453
+]
+2017-02-28 08:58:19 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'yii\filters\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:58:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'TVRJbk9YMWcLEC0MFx4cMj8RLj4hKXA4ICB.DwttRzYmGwEUPzdFKw=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56912'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243499.306
+    'REQUEST_TIME' => 1488243499
+]
+2017-02-28 08:58:20 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'yii\filters\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:58:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'TVRJbk9YMWcLEC0MFx4cMj8RLj4hKXA4ICB.DwttRzYmGwEUPzdFKw=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56917'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243498.159
+    'REQUEST_TIME' => 1488243498
+]
+2017-02-28 08:59:32 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Home\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:59:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'cUhlYmcuR0w3DAEAP2hqGQMNAjIJXwYTHDxSAyMbMR0aBy0YF0EzAA=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57083'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243571.737
+    'REQUEST_TIME' => 1488243571
+]
+2017-02-28 08:59:33 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Home\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:59:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'cUhlYmcuR0w3DAEAP2hqGQMNAjIJXwYTHDxSAyMbMR0aBy0YF0EzAA=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57086'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243573.035
+    'REQUEST_TIME' => 1488243573
+]
+2017-02-28 08:59:35 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Home\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:59:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'cUhlYmcuR0w3DAEAP2hqGQMNAjIJXwYTHDxSAyMbMR0aBy0YF0EzAA=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57088'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243573.654
+    'REQUEST_TIME' => 1488243573
+]
+2017-02-28 08:59:35 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Home\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 08:59:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'cUhlYmcuR0w3DAEAP2hqGQMNAjIJXwYTHDxSAyMbMR0aBy0YF0EzAA=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57089'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243573.813
+    'REQUEST_TIME' => 1488243573
+]
+2017-02-28 09:02:18 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Home\Collect' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:22
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 09:02:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/collect'
+]
+
+$_POST = [
+    'goods_id' => '1'
+    'goods_name' => '商品'
+    'shop_price' => '1111'
+    'market_price' => '2222'
+    'goods_img' => 'Images/1-1447F_55779.jpg'
+    '_csrf' => 'ak12NE4xQTYsCRJWFndsYxgIEWQgQABpBzlBVQoEN2cBAj5OPl41eg=='
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/goods-show/show'
+    'CONTENT_LENGTH' => '178'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57384'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=home/goods-show/collect'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/collect'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488243736.721
+    'REQUEST_TIME' => 1488243736
+]
+2017-02-28 10:07:49 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: goods_id' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:47
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php(47): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\phpStudy\\WWW...', 47, Array)
+#1 [internal function]: app\controllers\home\GoodsShowController->actionShow()
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/goods-show...', Array)
+#6 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2017-02-28 10:07:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64289'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488247667.058
+    'REQUEST_TIME' => 1488247667
+]
+2017-02-28 10:08:03 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\db\ActiveQuery::find()' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Component.php:285
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\models\History.php(27): yii\base\Component->__call('find', Array)
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\models\History.php(27): yii\db\ActiveQuery->find()
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php(47): app\models\History->history_find(2, 2)
+#3 [internal function]: app\controllers\home\GoodsShowController->actionShow()
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/goods-show...', Array)
+#8 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#10 {main}
+2017-02-28 10:08:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64328'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488247682.825
+    'REQUEST_TIME' => 1488247682
+]
+2017-02-28 10:08:32 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xiyue.mb_hsitory' doesn't exist' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\models\History.php(27): yii\db\ActiveQuery->all()
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php(47): app\models\History->history_find('<span class="nu...', '<span class="nu...')
+#6 [internal function]: app\controllers\home\GoodsShowController->actionShow()
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xiyue.mb_hsitory' doesn't exist
+The SQL being executed was: SELECT * FROM `mb_hsitory` WHERE (`user_id`=2) AND (`goods_id`=2)' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\models\History.php(27): yii\db\ActiveQuery->all()
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php(47): app\models\History->history_find('<span class="nu...', '<span class="nu...')
+#6 [internal function]: app\controllers\home\GoodsShowController->actionShow()
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'xiyue.mb_hsitory' doesn't exist
+)
+
+2017-02-28 10:08:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64389'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488247712.204
+    'REQUEST_TIME' => 1488247712
+]
+2017-02-28 10:44:21 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: browse_num' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php:57
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php(57): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 57, Array)
+#1 [internal function]: app\controllers\home\GoodsShowController->actionShow()
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/goods-show...', Array)
+#6 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2017-02-28 10:44:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49478'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488249860.948
+    'REQUEST_TIME' => 1488249860
+]
+2017-02-28 10:46:26 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: post' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\models\History.php:35
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\models\History.php(35): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\phpStudy\\WWW...', 35, Array)
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\GoodsShowController.php(58): app\models\History->history_update(Array)
+#2 [internal function]: app\controllers\home\GoodsShowController->actionShow()
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#6 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/goods-show...', Array)
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#9 {main}
+2017-02-28 10:46:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/goods-show/show'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49523'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/goods-show/show'
+    'REQUEST_URI' => '/index.php?r=home/goods-show/show'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488249985.86
+    'REQUEST_TIME' => 1488249985
+]
+2017-02-28 10:54:45 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: system' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\views\layouts\proscenium.php:11
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\views\layouts\proscenium.php(11): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 11, Array)
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\phpStudy\\WWW...')
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\phpStudy\\WWW...', Array)
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\phpStudy\\WWW...', Array, Object(app\controllers\home\PersonalController))
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('index.php')
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\PersonalController.php(21): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\home\PersonalController->actionIndex()
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#10 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/personal', Array)
+#11 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2017-02-28 10:54:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/personal'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49822'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/personal'
+    'REQUEST_URI' => '/index.php?r=home/personal'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488250485.774
+    'REQUEST_TIME' => 1488250485
+]
+2017-02-28 10:55:24 [127.0.0.1][-][69b7ramm6j9njgvf35i25d98i5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/personal/actionMy_integral' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('actionMy_integr...', Array)
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/personal/a...', Array)
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-02-28 10:55:24 [127.0.0.1][-][69b7ramm6j9njgvf35i25d98i5][info][application] $_GET = [
+    'r' => 'home/personal/actionMy_integral'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49846'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/personal/actionMy_integral'
+    'REQUEST_URI' => '/index.php?r=home/personal/actionMy_integral'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488250524.526
+    'REQUEST_TIME' => 1488250524
+]
+2017-02-28 10:55:34 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\Integral' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\PersonalController.php:43
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 10:55:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/personal/my_integral'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49855'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/personal/my_integral'
+    'REQUEST_URI' => '/index.php?r=home/personal/my_integral'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488250534.565
+    'REQUEST_TIME' => 1488250534
+]
+2017-02-28 10:56:05 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: system' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\views\layouts\proscenium.php:11
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\views\layouts\proscenium.php(11): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 11, Array)
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\phpStudy\\WWW...')
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\phpStudy\\WWW...', Array)
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\phpStudy\\WWW...', Array, Object(app\controllers\home\PersonalController))
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div id="main">...')
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\PersonalController.php(47): yii\base\Controller->render('my_integral', Array)
+#6 [internal function]: app\controllers\home\PersonalController->actionMy_integral()
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_integral', Array)
+#10 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/personal/m...', Array)
+#11 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2017-02-28 10:56:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/personal/my_integral'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49863'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/personal/my_integral'
+    'REQUEST_URI' => '/index.php?r=home/personal/my_integral'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488250564.521
+    'REQUEST_TIME' => 1488250564
+]
+2017-02-28 10:57:58 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: system' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\views\layouts\proscenium.php:11
+Stack trace:
+#0 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\views\layouts\proscenium.php(11): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 11, Array)
+#1 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\phpStudy\\WWW...')
+#2 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\phpStudy\\WWW...', Array)
+#3 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\phpStudy\\WWW...', Array, Object(app\controllers\home\PersonalController))
+#4 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div id="main">...')
+#5 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\PersonalController.php(46): yii\base\Controller->render('my_integral', Array)
+#6 [internal function]: app\controllers\home\PersonalController->actionMy_integral()
+#7 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_integral', Array)
+#10 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/personal/m...', Array)
+#11 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2017-02-28 10:57:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/personal/my_integral'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49892'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/personal/my_integral'
+    'REQUEST_URI' => '/index.php?r=home/personal/my_integral'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488250678.016
+    'REQUEST_TIME' => 1488250678
+]
+2017-02-28 11:22:37 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\Integral_rule' not found' in D:\phpStudy\WWW\www.wangxiwen.com\month11\xiyue\watch\basic\basic\controllers\home\PersonalController.php:50
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 11:22:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/personal/integral_rule'
+]
+
+$_COOKIE = [
+    'history_goods_ids' => '25521,25521'
+    'PHPSESSID' => '69b7ramm6j9njgvf35i25d98i5'
+    '_csrf' => '7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.mb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.mb.com/index.php?r=home/personal/my_integral'
+    'HTTP_COOKIE' => 'history_goods_ids=25521%2C25521; PHPSESSID=69b7ramm6j9njgvf35i25d98i5; _csrf=7c216233d48ac1af57acd740055821601d4e15b30019baec1f9cb21bcb98cdfca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22FDdbXF-UrEgPnqA_mt7aD5vQkOHzpotL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;E:\\Program Files (x86)\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.mb.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/www.wangxiwen.com/month11/xiyue/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '50425'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fpersonal%2Fintegral_rule'
+    'REQUEST_URI' => '/index.php?r=home%2Fpersonal%2Fintegral_rule'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488252157.639
+    'REQUEST_TIME' => 1488252157
+]

@@ -1,18 +1,19 @@
 <?php
 
 namespace app\controllers\home;
-
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Collect;  //模型层
+use app\models\Integral;  //模型层
+use app\models\Integral_rule;  //模型层
 
 
-class PersonalController extends Controller
+class PersonalController extends CommonController
 {
     //前台公共视图
-    public  $layout = '/proscenium';
+    public  $layout = '/proscenium';    
     /*
      * 导航-->首页
      */
