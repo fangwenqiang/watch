@@ -30,17 +30,11 @@
 <div id="member_info2"></div>
 <div class="head">
     <div class="r1 w1225">
-        <div class="ri" id='noLogin' style='display:none'>
-
+        <div class="ri" id='Login'>
                                 <span><a href="../../index.php?r=home/login/login">登录</a></span>
                                 <span><a href="../../index.php?r=home/login/reg">注册</a></span>
                                 <span><a href="../../index.php?r=home/login/index">购物车</a></span>
                     </div>
-        <div class="ri" id='login' style='display:none'>
-                <span><a href="#">欢迎:<font color='red' id='username'></font>  </a></span>
-                <span><a href="javascript:void(0)" id="out">退出</a></span>
-                <span><a href="#">购物车</a></span>
-        </div>
     </div>
     <div class="r2 w1225">
         <h1 class="logo w440"><img src="css/images/LOGO.png"/></h1>
@@ -669,18 +663,13 @@
     $(function () {
         //判断是否登录
         $.get("/index.php?r=home%2Flogin%2Flogin_status", function(re_val){
-            if(re_val==0)   
-               {
-                  $("#noLogin").show();
-                  $("#login").hide();
-                              
-               }
-               else
-               {
-                  $("#noLogin").hide();
-                  $("#login").show();
-                  $("#username").html(re_val);
-               }
+            if(re_val!=0)   
+            {
+                  str='<span><a href="#">欢迎:<font color="red">'+re_val+'</font></a></span>\
+                    <span><a href="javascript:void(0)" id="out">退出</a></span>\
+                    <span><a href="#">购物车</a></span>'
+                  $("#login").html(str);
+            }
         });
 
 
