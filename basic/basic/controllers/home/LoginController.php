@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers\home;
+
 use app\models\User;
 use app\models\Admin;
 use Yii;
@@ -15,7 +16,7 @@ use app\models\Nav;  //模型层
 class LoginController extends CommonController
 {
     // 后台公共视图
-    public  $layout = '/proscenium';
+    public $layout = '/proscenium';
 
     /*
      * 管理员
@@ -25,6 +26,13 @@ class LoginController extends CommonController
 
         return $this->render('login');
     }
+
+    public function actionReg()
+    {
+
+        return $this->render('reg');
+    }
+
 
     public function actionLogto()
     {
@@ -40,10 +48,14 @@ class LoginController extends CommonController
             if ($data[0]['password'] != $pwd) {
                 return 2;
             } else {
-                $session = \Yii::$app->session;
-                $session->set('user_name', $user);
-                $session->set('user_id', $data[0]['user_id']);
-                return 0;
+                if ($data[0]['is_login'] == 0) {
+                    return 3;
+                } else {
+                    $session = \Yii::$app->session;
+                    $session->set('user_name', $user);
+                    $session->set('user_id', $data[0]['user_id']);
+                    return 0;
+                }
             }
         }
     }
