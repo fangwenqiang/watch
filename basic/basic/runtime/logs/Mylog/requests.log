@@ -32402,3 +32402,1263 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1488263755.978
     'REQUEST_TIME' => 1488263755
 ]
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:32
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=3
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:33
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_promote`=1 LIMIT 10
+    in D:\chen\mingbiao\watch\basic\basic\models\Goods.php:127
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:34
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62834'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265831.252
+    'REQUEST_TIME' => 1488265831
+]
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:33 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:33 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:10:33 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:10:33 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\LoginController.php:89
+2017-02-28 07:10:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62834'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265831.723
+    'REQUEST_TIME' => 1488265831
+]
+2017-02-28 07:11:38 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:38 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:39 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:39 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:40 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:40 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:40 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:40 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:40 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:11:40 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:11:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62860'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488265898.496
+    'REQUEST_TIME' => 1488265898
+]
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:32
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=3
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:33
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_promote`=1 LIMIT 10
+    in D:\chen\mingbiao\watch\basic\basic\models\Goods.php:127
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:34
+2017-02-28 07:15:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62893'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266156.409
+    'REQUEST_TIME' => 1488266156
+]
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\LoginController.php:89
+2017-02-28 07:15:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62893'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266157.201
+    'REQUEST_TIME' => 1488266157
+]
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:32
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=3
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:33
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_promote`=1 LIMIT 10
+    in D:\chen\mingbiao\watch\basic\basic\models\Goods.php:127
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:34
+2017-02-28 07:18:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62993'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266332.434
+    'REQUEST_TIME' => 1488266332
+]
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\LoginController.php:89
+2017-02-28 07:18:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62993'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266333.382
+    'REQUEST_TIME' => 1488266333
+]
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\LoginController.php:89
+2017-02-28 07:18:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62993'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488266338.217
+    'REQUEST_TIME' => 1488266338
+]
+2017-02-28 07:39:15 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:15 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:18 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:18 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:18 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:19 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:19 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:19 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:19 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:19 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:39:15 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '情侣'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '63884'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Findex%2Fcatedata&where=%E6%83%85%E4%BE%A3&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488267555.015
+    'REQUEST_TIME' => 1488267555
+]
+2017-02-28 07:39:27 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:27 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:27 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:28 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:29 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:29 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:29 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:39:29 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:39:29 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\LoginController.php:89
+2017-02-28 07:39:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '63893'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488267567.255
+    'REQUEST_TIME' => 1488267567
+]
+2017-02-28 07:40:30 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:30 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:31 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:40:32 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:40:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/catedata'
+    'where' => '特惠'
+    'rank' => '特价'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '63906'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Findex%2Fcatedata&where=%E7%89%B9%E6%83%A0&rank=%E7%89%B9%E4%BB%B7'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488267630.584
+    'REQUEST_TIME' => 1488267630
+]
+2017-02-28 07:43:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:57 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:58 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:43:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:43:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:32
+2017-02-28 07:43:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=3
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:165
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:33
+2017-02-28 07:43:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_goods` WHERE `is_promote`=1 LIMIT 10
+    in D:\chen\mingbiao\watch\basic\basic\models\Goods.php:127
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\IndexController.php:34
+2017-02-28 07:43:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/index/'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '63968'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/index/'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488267837.225
+    'REQUEST_TIME' => 1488267837
+]
+2017-02-28 07:44:00 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:00 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=123.56.218.2;dbname=xiyue
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:53
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_place`=2
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:54
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT `nav_id`, `nav_name`, `nav_place`, `nav_type`, `nav_link`, `nav_icon`, `nav_sort`, concat(nav_pid, '-', nav_id) AS `depath`, `nav_pid` FROM `mb_nav` where nav_place = 3 and nav_type = 1  ORDER BY `depath`
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:44
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:55
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-10'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-11'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-12'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-13'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_nav` WHERE `nav_pid`='0-14'
+    in D:\chen\mingbiao\watch\basic\basic\models\Nav.php:57
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:19
+2017-02-28 07:44:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `mb_category` WHERE `rank`=1
+    in D:\chen\mingbiao\watch\basic\basic\models\Category.php:134
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\CommonController.php:26
+2017-02-28 07:44:02 [127.0.0.1][-][-][info][yii\web\Session::open] Session started
+    in D:\chen\mingbiao\watch\basic\basic\controllers\home\LoginController.php:89
+2017-02-28 07:44:00 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/login/login_status'
+]
+
+$_COOKIE = [
+    'ECS' => [
+        'visit_times' => '13'
+    ]
+    'CNZZDATA1000319649' => '360337756-1478306303-|1478306303'
+    'pgv_pvid' => '2136319363'
+    'ts_uid' => '9054042835'
+    'sso_c' => '0'
+    'CNZZDATA1261005964' => '1981888508-1486169277-http%3A%2F%2Fwww.chen.com%2F|1486169277'
+    'pgv_pvi' => '4411499520'
+    'CNZZDATA1702264' => 'cnzz_eid=36555114-1486731348-&ntime=1486897330'
+    'CNZZDATA1254932726' => '1568846560-1486732211-http%3A%2F%2Fwww.chen.com%2F|1487810711'
+    'TS4_TSV4_LOGGED_USER' => 'XC7MTfXiRAloIzLCm2glxOYysvOp1O9X'
+    'PHPSESSID' => 'bmduv968jn89b0rr7uflhnbm53'
+    '_csrf' => '91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'test'
+    'user_id' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.chen.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.chen.com/mingbiao/watch/basic/basic/web/index.php?r=home/index/'
+    'HTTP_COOKIE' => 'ECS[visit_times]=13; CNZZDATA1000319649=360337756-1478306303-%7C1478306303; pgv_pvid=2136319363; ts_uid=9054042835; sso_c=0; CNZZDATA1261005964=1981888508-1486169277-http%253A%252F%252Fwww.chen.com%252F%7C1486169277; pgv_pvi=4411499520; CNZZDATA1702264=cnzz_eid%3D36555114-1486731348-%26ntime%3D1486897330; CNZZDATA1254932726=1568846560-1486732211-http%253A%252F%252Fwww.chen.com%252F%7C1487810711; TS4_TSV4_LOGGED_USER=XC7MTfXiRAloIzLCm2glxOYysvOp1O9X; PHPSESSID=bmduv968jn89b0rr7uflhnbm53; _csrf=91b48ac2e78f9ade870e813255aec86b75d68a9c7ff7cb8be6082306cc25cbb8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228eYGFVdYjzZHKd5Q4aBxU6IgIE0LZ2gc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\java\\jdk1.8.0_51\\bin;D:\\java\\jdk1.8.0_51\\jre\\bin;D:\\TortoiseSVN\\bin;D:\\phpStudy\\php55;C:\\ProgramData\\ComposerSetup\\bin;D:\\phpStudy\\php55;D:\\phpStudy\\php55\\ext;;D:\\phpStudy\\php70n;D:\\phpStudy\\php70n\\ext;D:\\TortoiseGit\\bin;D:\\MSDev98\\Bin;D:\\Tools;D:\\VC98\\bin;C:\\Users\\gesangdianzi\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.5.38'
+    'SERVER_NAME' => 'www.chen.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/chen'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/chen'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/chen/mingbiao/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '63970'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Flogin%2Flogin_status'
+    'REQUEST_URI' => '/mingbiao/watch/basic/basic/web/index.php?r=home%2Flogin%2Flogin_status'
+    'SCRIPT_NAME' => '/mingbiao/watch/basic/basic/web/index.php'
+    'PHP_SELF' => '/mingbiao/watch/basic/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1488267840.432
+    'REQUEST_TIME' => 1488267840
+]
