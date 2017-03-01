@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
-?><style>
+?>
+<style>
     div.page a{
         border:#aaaadd solid 1px;
         text-decoration:none;
@@ -23,6 +24,7 @@ use yii\helpers\Url;
     }
 
 </style>
+
 <!-- End header -->
 <link rel="stylesheet" href="css/list.css">
 <!--<script src="Script/list.js"></script>-->
