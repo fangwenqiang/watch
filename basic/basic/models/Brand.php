@@ -20,46 +20,46 @@ class Brand extends \yii\db\ActiveRecord
      */
     public function brandOne($id)
     {
-    	$data = Brand::find()->where(['brand_id'=>$id])->one(); 
-    	if($data)
-    	{
-    		return $data;
-    	}
-    	else
-    	{
-    		return false;
-    	}
+        $data = Brand::find()->where(['brand_id'=>$id])->one();
+        if($data)
+        {
+            return $data;
+        }
+        else
+        {
+            return false;
+        }
     }
     /*
      * 品牌-->修改操作
      */
     public function brandUpdate($post)
     {
-    	
-    	$res = Yii::$app->db->createCommand()->update('mb_brand',$post, 'brand_id=:id', array(':id' => $post['brand_id']))->execute();
-    	if($res)
-    	{
-    		return true;
-    	}
-    	else
-    	{
-    		return false;
-    	}
+
+        $res = Yii::$app->db->createCommand()->update('mb_brand',$post, 'brand_id=:id', array(':id' => $post['brand_id']))->execute();
+        if($res)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     /*
      * 品牌-->查看全部数据
      */
     public function brandAll()
     {
-    	$data = Brand::find()->asArray()->all(); 
-    	if($data)
-    	{
-    		return $data;
-    	}
-    	else
-    	{
-    		return false;
-    	}
+        $data = Brand::find()->asArray()->all();
+        if($data)
+        {
+            return $data;
+        }
+        else
+        {
+            return false;
+        }
     }
     /*
      * 品牌-->删除单条数据
@@ -82,11 +82,11 @@ class Brand extends \yii\db\ActiveRecord
     public function brandAdd($post)
     {
         $res = Yii::$app->db->createCommand()->insert('mb_brand', $post)->execute();
-        if($res) 
+        if($res)
         {
             return true;
-        } 
-        else 
+        }
+        else
         {
             return false;
         }
@@ -133,12 +133,33 @@ class Brand extends \yii\db\ActiveRecord
 
         //关键函数，参数（目标资源，源，目标资源的开始坐标x,y,源资源的开始坐标x,y,目标资源的宽高w,h,源资源的宽高w,h）
         imagecopyresampled($image, $src, 0, 0, 0, 0, $w, $h, $size_src['0'], $size_src['1']);
-        
+
         //告诉浏览器以图片形式解析
         // header('content-type:image/png');
         // imagepng($image);
         imagepng($image,"./public/admin/images/sanbai/". $file['name']);
         //销毁资源
         imagedestroy($image);
+    }
+
+    /*
+     * 根据条件查找品牌数据
+     * */
+    public function brandWhere($field,$val)
+    {
+        return Brand::find()
+            ->select(array('brand_id','brand_name','sort'))
+            ->where([$field=>$val])
+            ->asArray()
+            ->all();
+    }
+
+    /**
+     * 根据品牌名称获取品牌ID
+     */
+    public function brandId($brand_name)
+    {
+        //品牌ID
+        return Brand::find()->select('brand_id')->where(['like','brand_name',$brand_name])->asArray()->one();
     }
 }

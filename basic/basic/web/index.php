@@ -1,4 +1,3 @@
-
 <?php
 header('content-type:text/html;charset=utf-8');
 // comment out the following two lines when deployed to production

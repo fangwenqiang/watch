@@ -6,31 +6,21 @@ namespace app\controllers\home;
 use Yii;
 use yii\web\Controller;
 use app\models\Nav;
-
+use app\models\Category;  //模型层
 
 class CommonController extends Controller
 {
 
     public function init()
     {
-
-        $nav_model = new Nav();
-        $cache = \Yii::$app->cache;
-        $info = json_decode($cache->get("systemConfig"),true);
-        $nav_data = $nav_model->recursion();
         $view = YII::$app->view;
-        $view->params['system'] = $info;
-        $view->params['nav'] =    array_slice($nav_data,0,14);
+        $nav_model = new Nav();
+        $view->params['system'] = json_decode(file_get_contents('systemConfig.txt'),true);
+        $view->params['nav'] = $nav_model->recursion();
 
-//
-//        $session = \Yii::$app->session;
-//        $user_session = $session->get('user');
-//        $admin_id = $session->get('admin_id');
-//        if (!isset($user_session)) {
-//            $this->redirect(array('/admin/login/login'));
-//        }
-
-
+        //获取分类数据
+        $Category = new Category();
+        $view->params['categoryData'] = $Category->rank_select();
 
     }
 

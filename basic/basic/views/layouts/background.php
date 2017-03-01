@@ -21,6 +21,7 @@ use yii\helpers\Url;
     <link href="dist/sweetalert.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="dist/sweetalert-dev.js"></script>
     <!--    ENDz弹窗效果-->
+
 </head>
 <body>
 <div id="dcWrap">
@@ -133,6 +134,12 @@ use yii\helpers\Url;
                 <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>操作记录</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?php echo Url::to(['admin/log/index']);?>"><i class="article"></i><em>记录</em></a></li>
+                </ul>
+            </ul>
+             <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>生成首页</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?php echo Url::to(['admin/index/create_index']);?>"><i class="article"></i><em>生成</em></a></li>
                 </ul>
             </ul>
         </div>
