@@ -6,6 +6,7 @@ use yii\helpers\Url;
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <link rel="stylesheet" href="css/index.css" type="text/css" media="screen, projection" />
 <link href="css/jimai.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.validate.js"></script>
 
 <style>
     .errorInfo{font-weight: bold;color: red}
@@ -57,14 +58,14 @@ use yii\helpers\Url;
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>手表名称：</div>
                                     <div class="jclistDown fl">
-                                        <input id="author" name="author"  type="text" title="手表名称" class="jclistDownCon" />
+                                        <input id="author" name="author" required  type="text" title="手表名称" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>手表品牌：</div>
                                     <div class="jclistDown fl">
-                                        <input id="g_brand" name="g_brand"  type="text" title="手表型号" class="jclistDownCon" />
+                                        <input id="g_brand" name="g_brand" required  type="text" title="手表型号" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
@@ -73,14 +74,22 @@ use yii\helpers\Url;
                                     <div class="jclistDown fl">
                                         <div id="uf" style="width: 40%; display: none"></div>
                                         <img id="img" style="width: 100px; height: 100px; display: none" />
-                                        <input runat="server" id="g_img" name="g_img"  data-rule-image="true" type="file" class="jclistDownCon" />
+                                        <input runat="server" id="g_img" name="g_img" required  data-rule-image="true" type="file" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>销售价：</div>
                                     <div class="jclistDown fl">
-                                        <input id="shop_price" name="shop_price"   type="text" title="销售价" class="jclistDownCon" onblur="checkmoney(this)" />
+                                        <input id="shop_price" name="shop_price" required   type="text" title="销售价" class="jclistDownCon" onblur="checkmoney(this)" />
+                                        <span class="errorInfo"></span>
+                                    </div>
+                                </li>
+                                <li class="clearfixwatch">
+                                    <div class="jclistleft fl"><span>*</span>是否议价：</div>
+                                    <div class="jclistDown fl">
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"   />&nbsp;是&nbsp;&nbsp;
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"   />&nbsp;否
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
@@ -114,5 +123,34 @@ use yii\helpers\Url;
         </div>
     </div>
 </div>
+<script>
+    $(function(){
+        $.validator.setDefaults({
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+                error.appendTo(element.parent().find(".errorInfo"));
+            }
+        });
+        $.validator.addMethod("image", function (value, element) {
+            var chinese = /.(gif|jpg|jpeg|png|gif|jpg|png)$/i;
+            return this.optional(element) || (chinese.test(value));
+        }, "请正确选择图片");
+
+        $("#form").validate({
+            submitHandler: function (form) {
+                form.submit();
+            },
+            rules: {
+            },
+            messages: {
+                author: {required: '请输入名称'},
+                g_brand: {required: '请输入品牌'},
+                g_img: {required: '请选择图片'},
+                shop_price: {required: '请输入价格'}
+
+            }
+        });
+    });
+</script>
 
 

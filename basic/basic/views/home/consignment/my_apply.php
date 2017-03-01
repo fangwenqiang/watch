@@ -9,15 +9,29 @@ use \yii\widgets\LinkPager;
 <style>
     #div1 ul li{float: left;}
     #div1 span{
-        width: 45px;
+        width: 50px;
         height: 16px;
         border: 1px solid #e6e6e6;
         color: #b01330;
         display: inline-block;
         font-size: 14px;
-        padding: 10px 30px;
-        padding-top: 15px;
+
         text-decoration: none;
+    }
+    #div1 a{
+        width: 50px;
+        height: 16px;
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        color: #b01330;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: none;
+    }
+    #div1 a:hover {
+        background-color: #b01330;
+        color: #FFF
     }
 </style>
 <div class="jimai_box">
@@ -118,14 +132,15 @@ use \yii\widgets\LinkPager;
                                 <td class="w75">商品品牌</td>
                                 <td class="w111">商品金额</td>
                                 <td class="w87">上架时间</td>
+                                <td>是否议价</td>
                                 <td class="w87">订单状态</td>
+
                                 <td class="w130">操作</td>
                             </tr>
                             <?php  foreach($data as $key=>$val){  ?>
                                 <tr class="c">
                                     <td class="w120 h70"><a class="c0e7" target="_blank" href="#"><?php echo $val['author']?></a></td>
                                     <td class="w186 adjust02" style="text-align:left;">
-                                        <a target="_blank" title="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" href="#"><img alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" src="images/3412_183_24_30_27_27885.jpg"></a>
                                         <a target="_blank" title="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" href="#"><img alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" src="images/3412_183_24_30_27_27885.jpg"></a>
                                         <a target="_blank" title="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" href="#"><img alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" src="images/3412_183_24_30_27_27885.jpg"></a>
                                     </td>
@@ -135,6 +150,15 @@ use \yii\widgets\LinkPager;
                                     </td>
                                     <td class="w87 adjust01">
                                         <div><?php echo date('Y-m-d H:i:s',$val['add_time'])?></div>
+                                    </td>
+                                    <td class="w87 adjust01">
+                                        <div><?php
+                                               if($val['is_bargain'] == 1){
+                                                   echo "是";
+                                               } else {
+                                                   echo "否";
+                                               }
+                                            ?></div>
                                     </td>
                                     <td class="w87 h70"><font class="c888">
                                             <?php
@@ -146,7 +170,8 @@ use \yii\widgets\LinkPager;
                                                 echo "审核中";
                                             }
                                             ?>
-                                        </font></td>
+                                        </font>
+                                    </td>
                                     <td class="w130 adjust03">
                                         <a class="c0e7" target="_blank" href="#">修改</a>
                                         <span>|</span>
@@ -164,6 +189,18 @@ use \yii\widgets\LinkPager;
                             <?php    } ?>
                             </tbody>
                         </table>
+
+                        <div id="div1" style="margin-left: 450px;margin-top: 20px;">
+                            <?= LinkPager::widget([   'pagination' => $page,
+                                'firstPageLabel' => '首页',
+                                'lastPageLabel' => '尾页',
+                                'nextPageLabel' => '下一页',
+                                'prevPageLabel' => '上一页',
+                                'maxButtonCount' => 2,
+                                'options' => ['class' => 'mLnk'],
+
+                            ]); ?>
+                        </div>
                     </div>
                 </div>
                 <!-- order表单 End -->
