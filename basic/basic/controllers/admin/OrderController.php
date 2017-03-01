@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 /**
- * 轮播图
+ * 订单管理
  */
 namespace app\controllers\admin;
 
