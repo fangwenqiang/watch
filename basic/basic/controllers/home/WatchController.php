@@ -56,7 +56,7 @@ class WatchController extends CommonController{
         $goods = new Goods();   //商品
         $order = 'ASC';
         $data['goodsList'] = $goods->speciallistShow($this->onePage); //查询处理展示商品
-        $count = Goods::find()->count();    //数据总条数
+        $count = Goods::find()->where(['is_promote'=>'1'])->count();    //数据总条数
         $data['pageStr'] = $this->pageStr($count,$this->onePage);
         return $this->render('tejia',['data'=>$data]);
     }
