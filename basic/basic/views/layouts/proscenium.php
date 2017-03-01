@@ -90,7 +90,7 @@ use yii\helpers\Url;
 
 
                 foreach ($this->params['nav']['zhu'] as $key => $val) {       ?>
-           
+
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
                     <?php   }    ?>
@@ -149,7 +149,7 @@ use yii\helpers\Url;
 </div>
 <script type="text/javascript">
     $(function () {
-        
+
         //判断是否登录
         $.get("<?=Url::to(['home/login/login_status']) ?>", function(re_val){
             if(re_val!=0)
