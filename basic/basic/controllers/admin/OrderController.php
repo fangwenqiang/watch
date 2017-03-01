@@ -1,8 +1,9 @@
-﻿<?php
+<?php
 /**
- * 订单管理
+ * 轮播图
  */
 namespace app\controllers\admin;
+
 use Yii;
 use yii\web\Controller;
 use app\models\Order;
