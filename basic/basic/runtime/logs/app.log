@@ -5702,3 +5702,2414 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1488279569.925
     'REQUEST_TIME' => 1488279569
 ]
+2017-02-28 19:14:19 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-28 19:14:19 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'root'
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.html'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56138'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488280459.113
+    'REQUEST_TIME' => 1488280459
+]
+2017-02-28 19:14:23 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-28 19:14:23 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'root'
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.html'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56138'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488280463.45
+    'REQUEST_TIME' => 1488280463
+]
+2017-02-28 19:15:04 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-28 19:15:03 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'root'
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.html'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56172'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488280503.822
+    'REQUEST_TIME' => 1488280503
+]
+2017-02-28 19:15:05 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/login/index' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/login/inde...', Array)
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-02-28 19:15:04 [127.0.0.1][-][4tt30psifksqvcuovh2i0mnqd0][info][application] $_GET = [
+    'r' => 'home/login/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_name' => 'root'
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.html'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56178'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/login/index'
+    'REQUEST_URI' => '/index.php?r=home/login/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488280504.659
+    'REQUEST_TIME' => 1488280504
+]
+2017-02-28 19:25:55 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function count() on a non-object' in D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 19:25:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56335'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/consignment/index'
+    'REQUEST_URI' => '/index.php?r=home/consignment/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488281154.912
+    'REQUEST_TIME' => 1488281154
+]
+2017-02-28 19:44:03 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: pages' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:78
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(78): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 78, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(26): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-02-28 19:44:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '56697'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home/consignment/index'
+    'REQUEST_URI' => '/index.php?r=home/consignment/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488282241.904
+    'REQUEST_TIME' => 1488282241
+]
+2017-02-28 19:57:45 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'frontend\components\MLinkPager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 19:57:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57090'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283063.969
+    'REQUEST_TIME' => 1488283063
+]
+2017-02-28 19:58:00 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'frontend\components\MLinkPager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 19:58:00 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283080.069
+    'REQUEST_TIME' => 1488283080
+]
+2017-02-28 19:58:29 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'frontend\components\MLinkpager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 19:58:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57109'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283108.848
+    'REQUEST_TIME' => 1488283108
+]
+2017-02-28 19:59:14 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'frontend\components\MLinkpager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 19:59:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57117'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283152.463
+    'REQUEST_TIME' => 1488283152
+]
+2017-02-28 19:59:55 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'frontend\components\MLink' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 19:59:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57188'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283194.509
+    'REQUEST_TIME' => 1488283194
+]
+2017-02-28 20:01:44 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\MLink' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 20:01:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57251'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283303.669
+    'REQUEST_TIME' => 1488283303
+]
+2017-02-28 20:01:47 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\home\MLink' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 20:01:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57256'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283306.182
+    'REQUEST_TIME' => 1488283306
+]
+2017-02-28 20:11:59 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\widgets\LinkPager::options li' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('options li', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\widgets\LinkPager), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\widgets\\Lin...', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Lin...', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(82): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:11:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Findex&page=2&per-page=10'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57594'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488283909.69
+    'REQUEST_TIME' => 1488283909
+]
+2017-02-28 20:16:31 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'GridView' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 20:16:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57879'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284191.741
+    'REQUEST_TIME' => 1488284191
+]
+2017-02-28 20:17:03 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\component\GoPager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 20:17:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57898'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284223.272
+    'REQUEST_TIME' => 1488284223
+]
+2017-02-28 20:17:07 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\component\GoPager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 20:17:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57904'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284227.454
+    'REQUEST_TIME' => 1488284227
+]
+2017-02-28 20:17:35 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(49): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(86): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:17:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57914'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284254.171
+    'REQUEST_TIME' => 1488284254
+]
+2017-02-28 20:18:03 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(49): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(86): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:18:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57921'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284282.362
+    'REQUEST_TIME' => 1488284282
+]
+2017-02-28 20:18:28 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(49): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(86): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:18:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57928'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284308.381
+    'REQUEST_TIME' => 1488284308
+]
+2017-02-28 20:18:31 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(49): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(86): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:18:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57930'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284311.302
+    'REQUEST_TIME' => 1488284311
+]
+2017-02-28 20:19:31 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(47): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(86): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:19:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '57953'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284371.349
+    'REQUEST_TIME' => 1488284371
+]
+2017-02-28 20:20:42 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\lib\GoPager' in file: D:\dummy\Web\www.v.com\watch\basic\basic\config/../lib/GoPager.php. Namespace missing?' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\lib\\GoPager')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(77): spl_autoload_call('app\\lib\\GoPager')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#7 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2017-02-28 20:20:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '58115'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284440.448
+    'REQUEST_TIME' => 1488284440
+]
+2017-02-28 20:20:53 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(47): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(86): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:20:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '58123'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284452.702
+    'REQUEST_TIME' => 1488284452
+]
+2017-02-28 20:21:37 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getPageCount() on a non-object' in D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 20:21:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '58132'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284497.031
+    'REQUEST_TIME' => 1488284497
+]
+2017-02-28 20:21:46 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(47): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(86): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:21:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '58140'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284506.24
+    'REQUEST_TIME' => 1488284506
+]
+2017-02-28 20:24:34 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: pages' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(77): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 77, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-02-28 20:24:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '58191'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488284674.002
+    'REQUEST_TIME' => 1488284674
+]
+2017-02-28 20:41:43 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(47): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(92): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:41:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '2'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59078'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=2&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=2&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488285703.331
+    'REQUEST_TIME' => 1488285703
+]
+2017-02-28 20:42:06 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\GoPager.php(47): yii\widgets\LinkPager->init()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Object.php(107): app\lib\GoPager->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('app\\lib\\GoPager', Array, Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\\lib\\GoPager', Array, Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(101): yii\BaseYii::createObject(Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(90): yii\base\Widget::widget(Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#13 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#18 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2017-02-28 20:42:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '2'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59095'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=2&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=2&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488285726.113
+    'REQUEST_TIME' => 1488285726
+]
+2017-02-28 21:05:53 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\lib\Page::currentCountPageLabel' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\lib\Page.php(24): yii\base\Component->__get('currentCountPag...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Widget.php(102): app\lib\Page->run()
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(90): yii\base\Widget::widget(Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(22): yii\base\Controller->render('index', Array)
+#8 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#13 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2017-02-28 21:05:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'page' => '2'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59935'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&page=2&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&page=2&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488287153.27
+    'REQUEST_TIME' => 1488287153
+]
+2017-02-28 21:19:53 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';'' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\apply.php:4
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-02-28 21:19:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/apply'
+]
+
+$_COOKIE = [
+    '_csrf' => '1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ\";}'
+    'PHPSESSID' => '4tt30psifksqvcuovh2i0mnqd0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=1e2a8b1f26ba778c86414639050ddf9073da86989a179afcff7ec1ff6f116deba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BAxd6KHaLe1bKNUjvgL5bJJbhLxy9aTZ%22%3B%7D; PHPSESSID=4tt30psifksqvcuovh2i0mnqd0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '60383'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fapply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fapply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488287993.75
+    'REQUEST_TIME' => 1488287993
+]
+2017-03-01 09:08:33 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:83
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php(83): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 83, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('my_apply', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(44): yii\base\Controller->render('my_apply')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionMy_apply()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 09:08:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '59892'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488330513.697
+    'REQUEST_TIME' => 1488330513
+]
+2017-03-01 09:59:20 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: g_img' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:58
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 58, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('my_apply', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(46): yii\base\Controller->render('my_apply', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionMy_apply()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 09:59:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '61249'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488333560.115
+    'REQUEST_TIME' => 1488333560
+]
+2017-03-01 09:59:43 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: g_img' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:58
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 58, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('my_apply', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(47): yii\base\Controller->render('my_apply', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionMy_apply()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 09:59:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '61264'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488333582.32
+    'REQUEST_TIME' => 1488333582
+]
+2017-03-01 10:00:10 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: author' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:58
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 58, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('my_apply', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(47): yii\base\Controller->render('my_apply', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionMy_apply()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 10:00:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '61271'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488333610.117
+    'REQUEST_TIME' => 1488333610
+]
+2017-03-01 10:00:16 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: g_img' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:58
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 58, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('my_apply', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(47): yii\base\Controller->render('my_apply', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionMy_apply()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 10:00:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '61275'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488333616.626
+    'REQUEST_TIME' => 1488333616
+]
+2017-03-01 10:29:42 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Url' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:23
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-01 10:29:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+    'page' => '1'
+    'per-page' => '3'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62282'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488335381.839
+    'REQUEST_TIME' => 1488335381
+]
+2017-03-01 10:29:56 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'LinkPager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:74
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-01 10:29:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+    'page' => '1'
+    'per-page' => '3'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62287'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488335395.644
+    'REQUEST_TIME' => 1488335395
+]
+2017-03-01 10:30:09 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'LinkPager' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:73
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-01 10:30:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+    'page' => '1'
+    'per-page' => '3'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62296'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488335409.095
+    'REQUEST_TIME' => 1488335409
+]
+2017-03-01 10:30:39 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Url' not found' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:14
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-01 10:30:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+    'page' => '1'
+    'per-page' => '3'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '62306'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply&page=1&per-page=3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488335438.292
+    'REQUEST_TIME' => 1488335438
+]

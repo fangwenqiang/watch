@@ -9,7 +9,7 @@
 namespace app\models;
 
 use yii\db\ActiveRecord;
-
+use \yii\data\Pagination;
 /*
  *管理员表model层
  * */
@@ -32,10 +32,13 @@ class Consignment extends ActiveRecord
     /*
      * 查询数据
      */
-    public function selectAll()
+    public function selectAll($p)
     {
-        $command=\Yii::$app->db->createCommand("SELECT author,shop_price,g_img,add_time,credit FROM `mb_consignment` inner join mb_user on mb_consignment.user_id=mb_user.user_id where mb_consignment.user_id=1");
-        return $command->queryAll();
+        $arr = (new \yii\db\Query())->from('mb_consignment')->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")->where(['mb_consignment.user_id'=>1]);
+        $pages = new Pagination(['totalCount' =>$arr->count(), 'pageSize' =>$p]);
+        $data['data'] = $arr->offset($pages->offset)->limit($pages->limit)->all();
+        $data['page'] = $pages;
+        return $data;
     }
 
 
