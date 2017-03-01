@@ -1,10 +1,12 @@
 /**
  * Created by 她说他叫强哥 on 2017/2/24.
- * 轮播图
+ * 轮播图||订单管理
  */
-
-
 $(function () {
+    /**
+     * 轮播图
+     */
+    
     // 添加验证
     $('#carousel').submit(function () {
         var img = $('#carousel-image').val();
@@ -80,7 +82,6 @@ $(function () {
                         });
                     }
                 });
-
             }
 
         });
@@ -112,11 +113,61 @@ $(function () {
                 } else {
                     swal("都叫你不要和我作对了", "你看，作茧自缚吧！", "success");
                     $('#' + did).remove();
+                    if($('#list tr').length ==1 ) history.go(0);
 
                 }
             });
         });
+    });
+    
+    //--------------------------------------------------------------------------------------------
 
+    $('#changeColor td').mouseover(function () {
+            $(this).parents('tr').css('background-color','#abcdef');
+    });
+    $('#changeColor td').mouseout(function () {
+        $(this).parents('tr').removeAttr('style');
+    });
+    /**
+     * 订单管理
+     */
+    $(document).on('click', '.orderStatus', function () {
+        var orderId = $(this).attr('orderId');
+        var status = $(this).attr('type');
+        var _this = $(this);
+//         _this.replaceWith('<button type="un" class="orderStatus" orderid="'+orderId+'">取消确认</button>');
+// return false;
+        swal({
+            title: "正在处理",
+            text: "请耐心等待",
+            imageUrl: "http://www.xiyue.com/public/admin/images/jiazai.gif",
+            animation: "slide-from-top",
+            showConfirmButton: false
+        });
+        $.post(url + '%2fedit', {_csrf: csrf,  id: orderId, status:status}, function (msg) {
+            if (msg == 0) {
+                swal({
+                    title: "哎呀，出错了",
+                    text: "换个姿势再试一次",
+                    type: "error"
+                });
+            } else {
+                swal({
+                    title: "太帅了",
+                    text: "轻轻一点就修改成功了",
+                    type: "success"
+                });
+                if(status == 'up'){
+                    _this.replaceWith('<button type="un" class="orderStatus" orderid="'+orderId+'" style="background-color:#20ff0e">取消确认</button>');
+                    $('#'+orderId).html('<font color="#20ff0e">已确定</font>');
+                } else {
+                    _this.replaceWith('<button type="up" class="orderStatus" orderid="'+orderId+'" style="background-color:#ff0707">确认订单</button>');
+                    $('#'+orderId).html('<font color="#ff0707">待确定</font>');
+                }
+
+            }
+        });
+        
     });
 
 
