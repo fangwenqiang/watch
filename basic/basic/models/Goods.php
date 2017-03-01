@@ -113,7 +113,7 @@ class Goods extends \yii\db\ActiveRecord
      * @param $orderField string　排序字段
      * @return array|\yii\db\ActiveRecord[]
      */
-    public function showBrand($field,$val,$gt_id,$order,$orderField,$limit)
+    public function showBrand($order,$orderField,$field,$val,$limit,$gt_id,$onePage)
     {
         if (is_numeric($val)) {
             return Goods::find()
@@ -124,17 +124,26 @@ class Goods extends \yii\db\ActiveRecord
                 ->andWhere([$field => $val])
                 ->orderBy($orderField . ' ' . $order)
                 ->offset($limit)
-                ->limit(8)
+                ->limit($onePage)
                 ->asArray()
                 ->all();
-        } else {
+        } else if(empty($gt_id)){
             return Goods::find()
                 ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))
-                ->where(['gt_id' => $gt_id])
                 ->andWhere(['is_show' => '1'])
                 ->orderBy($orderField . ' ' . $order)
                 ->offset($limit)
-                ->limit(8)
+                ->limit($onePage)
+                ->asArray()
+                ->all();
+        } else{
+            return Goods::find()
+                ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))
+                ->andWhere(['is_show' => '1'])
+                ->andWhere(['gt_id'=>$gt_id])
+                ->orderBy($orderField . ' ' . $order)
+                ->offset($limit)
+                ->limit($onePage)
                 ->asArray()
                 ->all();
         }
@@ -148,5 +157,24 @@ class Goods extends \yii\db\ActiveRecord
     public function whereData($where)
     {
        return $this->find()->where($where)->limit(10)->asArray()->all();
+    }
+
+    /**
+     * 处理特价商品信息
+     */
+    public function speciallistShow($onePage)
+    {
+        $data = Goods::find()
+            ->select(array('g_id','goods_name','brand_name','market_price','shop_price','g_img'))
+            ->leftJoin('mb_brand','mb_brand.brand_id = mb_goods.brand_id')
+            ->where(['mb_goods.is_show'=>'1'])
+            ->limit($onePage)
+            ->asArray()
+            ->all();
+
+        foreach($data as $key=>$val){
+            $data[$key]['comment'] = Comment::find()->where(['goods_id'=>$val['g_id']])->count('goods_id');
+        }
+        return $data;
     }
 }
