@@ -111,26 +111,19 @@ class Goods extends \yii\db\ActiveRecord
      * @param $gt_id string 分类ID
      * @param $order string　排序方式
      * @param $orderField string　排序字段
+     * @param $g_name string　条件字段
      * @return array|\yii\db\ActiveRecord[]
      */
-    public function showBrand($order,$orderField,$field,$val,$limit,$gt_id,$onePage)
+    public function showBrand($order,$orderField,$field,$val,$limit,$g_name,$gt_id,$onePage)
     {
+        // 有品牌条件
         if (is_numeric($val)) {
             return Goods::find()
                 ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))
                 ->where([$field => $val])
                 ->andWhere(['is_show' => '1'])
-                ->andWhere(['gt_id' => $gt_id])
+                ->andWhere([$g_name => $gt_id])
                 ->andWhere([$field => $val])
-                ->orderBy($orderField . ' ' . $order)
-                ->offset($limit)
-                ->limit($onePage)
-                ->asArray()
-                ->all();
-        } else if(empty($gt_id)){
-            return Goods::find()
-                ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))
-                ->andWhere(['is_show' => '1'])
                 ->orderBy($orderField . ' ' . $order)
                 ->offset($limit)
                 ->limit($onePage)
@@ -140,7 +133,7 @@ class Goods extends \yii\db\ActiveRecord
             return Goods::find()
                 ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))
                 ->andWhere(['is_show' => '1'])
-                ->andWhere(['gt_id'=>$gt_id])
+                ->andWhere([$g_name=>$gt_id])
                 ->orderBy($orderField . ' ' . $order)
                 ->offset($limit)
                 ->limit($onePage)
@@ -177,4 +170,6 @@ class Goods extends \yii\db\ActiveRecord
         }
         return $data;
     }
+
+
 }
