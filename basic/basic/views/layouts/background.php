@@ -14,8 +14,14 @@ use yii\helpers\Url;
     <link href="css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
-    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.min.js"></script> -->
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--    BEGIN弹窗效果-->
+    <link href="dist/sweetalert.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="dist/sweetalert-dev.js"></script>
+    <!--    ENDz弹窗效果-->
+
 </head>
 <body>
 <div id="dcWrap">
@@ -121,7 +127,7 @@ use yii\helpers\Url;
             <ul>
                 <li class="gao"><a href="javascript:void(0)"><i class="backup"></i><em>订单管理</em></a></li>
                 <ul style="display:none">
-                    <li><a href="article.html"><i class="article"></i><em>订单列表</em></a></li>
+                    <li><a href="<?=\yii\helpers\Url::to(['admin/order/list'])?>"><i class="article"></i><em>订单列表</em></a></li>
                 </ul>
             </ul>
             <ul>
