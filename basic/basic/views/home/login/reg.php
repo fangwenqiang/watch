@@ -128,7 +128,7 @@ use yii\bootstrap\Html;
             <?= $form->field($model, 'tel')->input('tel', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:30px', 'placeholder' => '请输入11位手机号码 '])->label('') ?>
             <span class="mb25">
 </span></div>
-        
+
         <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;><span class="STYLE1">*验证码:
         </div>
         <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left" ;>
