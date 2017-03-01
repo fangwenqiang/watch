@@ -1,7 +1,28 @@
 <?php
 use yii\helpers\Url;
-?>
+?><style>
+    div.page a{
+        border:#aaaadd solid 1px;
+        text-decoration:none;
+        padding:2px 5px 2px 5px;
+        margin:2px;
+    }
+    div.page span.current{
+        border:#000099 1px solid;
+        background-color:#000099;
+        padding:4px 5px 4px 5px;
+        margin:2px;
+        color:#fff;
+        font-weight:bold;
+    }
+    div.page span.disable{
+        border:#eee 1px solid;
+        padding:2px 5px 2px 5px;
+        margin:2px;
+        color:#ddd;
+    }
 
+</style>
 <!-- End header -->
 <link rel="stylesheet" href="css/list.css">
 <!--<script src="Script/list.js"></script>-->
