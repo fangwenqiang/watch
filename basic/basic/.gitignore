@@ -26,8 +26,8 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
-/config
+/config/*
 
 tests/_output/*
 tests/_support/_generated
-/runtime
+/runtime/*
