@@ -75,7 +75,7 @@ class LoginController extends CommonController
         }
     }
 
-    //退出
+    //退出登录
     public
     function actionLogout()
     {
