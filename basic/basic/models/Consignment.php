@@ -30,15 +30,34 @@ class Consignment extends ActiveRecord
        return \Yii::$app->db ->createCommand() ->insert('mb_consignment',$arr) ->execute();
     }
     /*
-     * 查询数据
+     * 自带分页查询数据
      */
-    public function selectAll($p)
+    public function selectAll2($p)
     {
-        $arr = (new \yii\db\Query())->from('mb_consignment')->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")->where(['mb_consignment.user_id'=>1]);
+        $arr = (new \yii\db\Query())->from('mb_consignment')
+            ->select(array('consignment_id','author','shop_price','g_brand','describe','g_img','add_time','mb_user.user_id','shop_status','credit','is_bargain'))
+            ->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")->where(['mb_consignment.user_id'=>1]);
         $pages = new Pagination(['totalCount' =>$arr->count(), 'pageSize' =>$p]);
         $data['data'] = $arr->offset($pages->offset)->limit($pages->limit)->all();
         $data['page'] = $pages;
         return $data;
+    }
+    /*
+     * 自己写的分页查询
+     */
+    public function selectAll($limit,$order,$offset,$where='')
+    {
+        $arr = (new \yii\db\Query())
+            ->from('mb_consignment')
+            ->select(array('consignment_id','author','shop_price','g_brand','describe','g_img','add_time','mb_user.user_id','shop_status','credit'))
+            ->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")
+            ->where($where)
+            ->offset($offset)
+            ->limit($limit)
+            ->orderBy($order)
+            ->all();
+
+        return $arr;
     }
 
 

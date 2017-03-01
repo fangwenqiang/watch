@@ -32,9 +32,54 @@ class ConsignmentController extends CommonController
     {
        //查询寄卖品
         $consignment_model = new Consignment();
-        $data = $consignment_model->selectAll(10);
+        if(empty($_GET['search'])){
+            $data['data'] = $consignment_model->selectAll(10,'','');
+            $data['type'] = 0;
+        } elseif($_GET['search'] == 'new'){
+            $data['data'] = $consignment_model->selectAll(10,array('add_time'=>SORT_DESC),'');
+            $data['type'] = 1;
+        } elseif($_GET['search'] == 'credit'){
+            $data['data'] = $consignment_model->selectAll(10,array('credit'=>SORT_DESC),'');
+            $data['type'] = 2;
+        } elseif($_GET['search'] == 'price'){
+            $data['data'] = $consignment_model->selectAll(10,array('shop_price'=>SORT_DESC),'');
+            $data['type'] = 3;
+        }
+        $data['page'] = $this->page(Consignment::find()->count(),10);
+
         return $this->render('index',$data);
     }
+    /*
+     * 搜索
+     */
+    public function actionSearch()
+    {
+        $consignment_model = new Consignment();
+        $request = \Yii::$app->request;
+        $data = $request->get();
+        $where = $data['type'];
+        $p = $data['p'];    //当前页
+        //偏移量
+        if(empty($p)){
+            $offset = '';
+        } else {
+            $offset = ($p-1)*10;
+        }
+        if($where == 0){
+            $data['data'] = $consignment_model->selectAll(10,'',$offset);
+        } elseif($where == 1){
+            $data['data'] = $consignment_model->selectAll(10,array('add_time'=>SORT_DESC),$offset);
+        } elseif($where == 2){
+            $data['data'] = $consignment_model->selectAll(10,array('credit'=>SORT_DESC),$offset);
+        } elseif($where == 3){
+            $data['data'] = $consignment_model->selectAll(10,array('shop_price'=>SORT_DESC),$offset);
+        }
+        $data['page'] = $this->page(Consignment::find()->count(),10,$p);
+        die(json_encode($data));
+
+    }
+
+
     /*
      * 我的寄卖
      */
@@ -42,7 +87,7 @@ class ConsignmentController extends CommonController
     {
         //查询寄卖品
         $consignment_model = new Consignment();
-        $data = $consignment_model->selectAll(3);
+        $data = $consignment_model->selectAll2(3);
         return $this->render('my_apply',$data);
     }
 
@@ -56,11 +101,9 @@ class ConsignmentController extends CommonController
 
    public function sort($a,$filed)
     {
+        return $a['data'];
       $score=array();
-      foreach($a as $k => $v){
-          $score[$k]=$v[$filed];
-      }
-      array_multisort($score,$a);
+
     }
     /*
      * 立即寄卖
@@ -96,6 +139,20 @@ class ConsignmentController extends CommonController
         }
     }
 
+
+    public function page($count,$limit,$p=1)
+    {
+        //总页数
+        $pages = ceil($count/$limit);
+        //上一页
+        $pre = $p -1 <= 1 ? 1:$p-1;
+        //下一页
+        $nex = $p +1 >= $pages ? $pages:$p+1;
+
+        $str ='<div id="page_nav"><a href="javascript:page('.$pre.')">上一页</a>&nbsp;<a href="javascript:page('.$nex.')">下一页</a>&nbsp;</div>';
+
+        return $str;
+    }
 
 
 }

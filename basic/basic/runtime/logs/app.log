@@ -13121,3 +13121,2514 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1488335438.292
     'REQUEST_TIME' => 1488335438
 ]
+2017-03-01 11:46:30 [127.0.0.1][-][970uqf4spbr2sq3p58j9ge73b7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/consignment/index/index".' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-01 11:46:30 [127.0.0.1][-][970uqf4spbr2sq3p58j9ge73b7][info][application] $_GET = [
+    'r' => 'home/consignment/index/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '63995'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex/index'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488339990.542
+    'REQUEST_TIME' => 1488339990
+]
+2017-03-01 11:57:40 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: add_time' in D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php:75
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(75): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 75, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(43): app\controllers\home\ConsignmentController->sort(Array, 'add_time')
+#2 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-01 11:57:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Findex'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64136'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340660.761
+    'REQUEST_TIME' => 1488340660
+]
+2017-03-01 11:59:04 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: add_time' in D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php:75
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(75): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 75, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(43): app\controllers\home\ConsignmentController->sort(Array, 'add_time')
+#2 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-01 11:59:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Findex'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64155'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340743.606
+    'REQUEST_TIME' => 1488340743
+]
+2017-03-01 12:00:09 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: add_time' in D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php:75
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(75): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 75, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(43): app\controllers\home\ConsignmentController->sort(Array, 'add_time')
+#2 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-01 12:00:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64190'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340808.368
+    'REQUEST_TIME' => 1488340808
+]
+2017-03-01 12:00:22 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: add_time' in D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php:75
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(75): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 75, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(43): app\controllers\home\ConsignmentController->sort(Array, 'add_time')
+#2 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-01 12:00:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64199'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340821.931
+    'REQUEST_TIME' => 1488340821
+]
+2017-03-01 12:00:32 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(77): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 77, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(50): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 12:00:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64204'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340831.543
+    'REQUEST_TIME' => 1488340831
+]
+2017-03-01 12:01:05 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(77): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 77, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(50): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 12:01:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64213'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340864.32
+    'REQUEST_TIME' => 1488340864
+]
+2017-03-01 12:01:44 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(77): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 77, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(50): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 12:01:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64231'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340904.107
+    'REQUEST_TIME' => 1488340904
+]
+2017-03-01 12:02:03 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:77
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(77): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 77, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(50): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 12:02:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '64240'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488340922.942
+    'REQUEST_TIME' => 1488340922
+]
+2017-03-01 13:42:30 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php:40
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(40): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 40, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(42): app\models\Consignment->selectAll(10)
+#2 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-01 13:42:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'price'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49235'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=price'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=price'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488346949.967
+    'REQUEST_TIME' => 1488346949
+]
+2017-03-01 13:42:48 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php:40
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(40): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 40, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(42): app\models\Consignment->selectAll(10)
+#2 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-01 13:42:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'price'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49242'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=price'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=price'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488346961.76
+    'REQUEST_TIME' => 1488346961
+]
+2017-03-01 13:45:06 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'
+The SQL being executed was: SELECT COUNT(*) FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time ` DESC' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'add_time ' in 'order clause'
+)
+
+2017-03-01 13:45:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Findex&search=price'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49310'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347106.155
+    'REQUEST_TIME' => 1488347106
+]
+2017-03-01 13:45:36 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mb_consignment.add_time ' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mb_consignment.add_time ' in 'order clause'
+The SQL being executed was: SELECT COUNT(*) FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `mb_consignment`.`add_time ` DESC' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'mb_consignment.add_time ' in 'order clause'
+)
+
+2017-03-01 13:45:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Findex&search=price'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49327'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347136.511
+    'REQUEST_TIME' => 1488347136
+]
+2017-03-01 13:45:44 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'
+The SQL being executed was: SELECT COUNT(*) FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time ` DESC' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'add_time ' in 'order clause'
+)
+
+2017-03-01 13:45:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Findex&search=price'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49335'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347143.708
+    'REQUEST_TIME' => 1488347143
+]
+2017-03-01 13:46:28 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'
+The SQL being executed was: SELECT COUNT(*) FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time ` DESC' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(396): yii\db\Command->queryScalar()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(303): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->count()
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'add_time ' in 'order clause'
+)
+
+2017-03-01 13:46:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49348'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347187.775
+    'REQUEST_TIME' => 1488347187
+]
+2017-03-01 13:47:39 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'
+The SQL being executed was: SELECT * FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time ` DESC LIMIT 10' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'add_time ' in 'order clause'
+)
+
+2017-03-01 13:47:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49367'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347258.591
+    'REQUEST_TIME' => 1488347258
+]
+2017-03-01 13:47:42 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'
+The SQL being executed was: SELECT * FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time ` DESC LIMIT 10' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'add_time ' in 'order clause'
+)
+
+2017-03-01 13:47:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49369'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347262.703
+    'REQUEST_TIME' => 1488347262
+]
+2017-03-01 13:49:06 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'add_time ' in 'order clause'
+The SQL being executed was: SELECT * FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time ` DESC LIMIT 10' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'add_time ' in 'order clause'
+)
+
+2017-03-01 13:49:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49394'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347345.586
+    'REQUEST_TIME' => 1488347345
+]
+2017-03-01 13:51:11 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'show_price' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(42): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'show_price' in 'order clause'
+The SQL being executed was: SELECT * FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `show_price` DESC LIMIT 10' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(42): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(42): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'show_price' in 'order clause'
+)
+
+2017-03-01 13:51:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'price'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Findex&search=credit'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49435'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=price'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=price'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347470.484
+    'REQUEST_TIME' => 1488347470
+]
+2017-03-01 13:54:23 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: type' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:63
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(63): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 63, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(44): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 13:54:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'price'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49513'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=price&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=price&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347662.634
+    'REQUEST_TIME' => 1488347662
+]
+2017-03-01 13:54:44 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: type' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:63
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(63): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 63, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(45): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 13:54:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'price'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49521'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=price&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=price&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347684.301
+    'REQUEST_TIME' => 1488347684
+]
+2017-03-01 13:55:22 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: type' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:63
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(63): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 63, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(46): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 13:55:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'price'
+    'page' => '1'
+    'per-page' => '10'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49529'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=price&page=1&per-page=10'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=price&page=1&per-page=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347722.12
+    'REQUEST_TIME' => 1488347722
+]
+2017-03-01 13:59:11 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'author,shop_price' in 'field list'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(43): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(39): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'author,shop_price' in 'field list'
+The SQL being executed was: SELECT `consignment_id`, `author,shop_price`, `g_brand`, `describe`, `g_img`, `add_time`, `user_id`, `shop_status`, `credit` FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time` DESC LIMIT 10' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT `consign...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(43): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(39): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'author,shop_price' in 'field list'
+)
+
+2017-03-01 13:59:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49626'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347951.167
+    'REQUEST_TIME' => 1488347951
+]
+2017-03-01 13:59:32 [127.0.0.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'user_id' in field list is ambiguous' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(43): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(39): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'user_id' in field list is ambiguous
+The SQL being executed was: SELECT `consignment_id`, `author`, `shop_price`, `g_brand`, `describe`, `g_img`, `add_time`, `user_id`, `shop_status`, `credit` FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id WHERE `mb_consignment`.`user_id`=1 ORDER BY `add_time` DESC LIMIT 10' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT `consign...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(43): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(39): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1052
+    [2] => Column 'user_id' in field list is ambiguous
+)
+
+2017-03-01 13:59:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'new'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49648'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=new'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=new'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488347971.888
+    'REQUEST_TIME' => 1488347971
+]
+2017-03-01 14:07:04 [127.0.0.1][-][970uqf4spbr2sq3p58j9ge73b7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "home/bargain/price".' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/bargain/pr...', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-01 14:07:04 [127.0.0.1][-][970uqf4spbr2sq3p58j9ge73b7][info][application] $_GET = [
+    'r' => 'home/bargain/price'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.html'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '49792'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fbargain%2Fprice'
+    'REQUEST_URI' => '/index.php?r=home%2Fbargain%2Fprice'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488348424.427
+    'REQUEST_TIME' => 1488348424
+]
+2017-03-01 14:19:30 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php:35
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(35): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 35, Array)
+#1 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-03-01 14:19:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home/consignment/consign_1'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '50090'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488349170.573
+    'REQUEST_TIME' => 1488349170
+]
+2017-03-01 14:30:55 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'extract() expects parameter 1 to be array, null given' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php:325
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'D:\\dummy\\Web\\ww...', 325, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(325): extract('<span class="ke...', 0)
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', NULL)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', NULL, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', NULL, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(37): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 14:30:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '50442'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488349854.552
+    'REQUEST_TIME' => 1488349854
+]
+2017-03-01 14:45:49 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: type' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:63
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(63): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 63, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 14:45:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '50657'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488350749.094
+    'REQUEST_TIME' => 1488350749
+]
+2017-03-01 14:46:07 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getPageCount() on a non-object' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\widgets\LinkPager.php:155
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-03-01 14:46:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '50667'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488350766.532
+    'REQUEST_TIME' => 1488350766
+]
+2017-03-01 14:50:13 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Missing argument 4 for app\models\Consignment::selectAll(), called in D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php on line 35 and defined' in D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php:35
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(35): yii\base\ErrorHandler->handleError(2, 'Missing argumen...', 'D:\\dummy\\Web\\ww...', 35, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(35): app\models\Consignment->selectAll(10, '', '')
+#2 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-01 14:50:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '50750'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488351013.552
+    'REQUEST_TIME' => 1488351013
+]
+2017-03-01 14:53:12 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: type' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php:107
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(107): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 107, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 14:53:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '50801'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488351192.025
+    'REQUEST_TIME' => 1488351192
+]
+2017-03-01 15:26:06 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'date() expects parameter 2 to be long, string given' in D:\dummy\Web\www.v.com\watch\basic\basic\lib\functions\Filtration.php:116
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'date() expects ...', 'D:\\dummy\\Web\\ww...', 116, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\lib\functions\Filtration.php(116): date('Y-m-d H:i:s', '+ v.add_time+')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\index.php(127): app\Lib\Functions\Filtration->formatTime('+ v.add_time+')
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\home\ConsignmentController))
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(38): yii\base\Controller->render('index', Array)
+#8 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#13 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2017-03-01 15:26:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '51339'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488353165.382
+    'REQUEST_TIME' => 1488353165
+]
+2017-03-01 15:42:06 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_price1' in 'order clause'' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(45): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(45): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...', '<span class="st...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_price1' in 'order clause'
+The SQL being executed was: SELECT `consignment_id`, `author`, `shop_price`, `g_brand`, `describe`, `g_img`, `add_time`, `mb_user`.`user_id`, `shop_status`, `credit` FROM `mb_consignment` INNER JOIN `mb_user` ON mb_consignment.user_id=mb_user.user_id ORDER BY `shop_price1` DESC LIMIT 10' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT `consign...')
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\models\Consignment.php(45): yii\db\Query->all()
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(45): app\models\Consignment->selectAll('<span class="nu...', '[<span class="s...', '<span class="st...')
+#5 [internal function]: app\controllers\home\ConsignmentController->actionIndex()
+#6 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'shop_price1' in 'order clause'
+)
+
+2017-03-01 15:42:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/index'
+    'search' => 'price'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '52158'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Findex&search=price'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Findex&search=price'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488354125.747
+    'REQUEST_TIME' => 1488354125
+]
+2017-03-01 15:51:00 [127.0.0.1][-][970uqf4spbr2sq3p58j9ge73b7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: home/consignment/my_apply' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-01 15:51:00 [127.0.0.1][-][970uqf4spbr2sq3p58j9ge73b7][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.v.com/index.php?r=home%2Fconsignment%2Fapply'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '52460'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488354660.679
+    'REQUEST_TIME' => 1488354660
+]
+2017-03-01 15:51:45 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: data' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:138
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php(138): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\dummy\\Web\\ww...', 138, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('my_apply', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(91): yii\base\Controller->render('my_apply', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionMy_apply()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 15:51:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '52487'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488354704.687
+    'REQUEST_TIME' => 1488354704
+]
+2017-03-01 16:00:59 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: is_bargain' in D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php:157
+Stack trace:
+#0 D:\dummy\Web\www.v.com\watch\basic\basic\views\home\consignment\my_apply.php(157): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\dummy\\Web\\ww...', 157, Array)
+#1 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(326): require('D:\\dummy\\Web\\ww...')
+#2 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('D:\\dummy\\Web\\ww...', Array)
+#3 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('D:\\dummy\\Web\\ww...', Array, Object(app\controllers\home\ConsignmentController))
+#4 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('my_apply', Array, Object(app\controllers\home\ConsignmentController))
+#5 D:\dummy\Web\www.v.com\watch\basic\basic\controllers\home\ConsignmentController.php(91): yii\base\Controller->render('my_apply', Array)
+#6 [internal function]: app\controllers\home\ConsignmentController->actionMy_apply()
+#7 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('my_apply', Array)
+#10 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('home/consignmen...', Array)
+#11 D:\dummy\Web\www.v.com\watch\basic\basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\dummy\Web\www.v.com\watch\basic\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-01 16:00:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'home/consignment/my_apply'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '970uqf4spbr2sq3p58j9ge73b7'
+    '_csrf' => '06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.v.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=970uqf4spbr2sq3p58j9ge73b7; _csrf=06d02d8ebcb88386e0c4609361f11701a0a89d41450decc7acad6c239d9e43f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tXW8KhiSRYFyU_J-CGtG2ypKSRm6GHXT%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\SVN\\bin;E:\\phpStudy\\MySQL\\bin;E:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => 'www.v.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/dummy/Web/www.v.com/watch/basic/basic/web/index.php'
+    'REMOTE_PORT' => '52633'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=home%2Fconsignment%2Fmy_apply'
+    'REQUEST_URI' => '/index.php?r=home%2Fconsignment%2Fmy_apply'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1488355258.406
+    'REQUEST_TIME' => 1488355258
+]
