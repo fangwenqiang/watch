@@ -45,10 +45,7 @@ class LoginController extends CommonController
     }
 
 
-
-//登录判断
-
-
+//登录
     public function actionLogto()
     {
         $request = \Yii::$app->request->get();

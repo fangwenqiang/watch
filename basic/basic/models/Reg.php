@@ -35,10 +35,12 @@ class Reg extends Model{
     /*
      * 添加数据入库
      * */
+
     public function create()
     {
         return true();
     }
+
 
     /*
      * 指定名称
