@@ -142,7 +142,7 @@ class WatchController extends CommonController{
         $sunPage = ceil($count/$onePage) ;//总页数
         $limitPage = 5; //想要显示的页码数
         $offsetPage = ($limitPage-1)/2; //显示页码数偏移量
-        $start = '0';   //初始化起始位置
+        $start = '1';   //初始化起始位置
         $end = $sunPage;    //结束位置
         //上一页
         $upPage = $p - 1 < 1 ? 1 : $p - 1;
