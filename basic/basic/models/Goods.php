@@ -115,7 +115,6 @@ class Goods extends \yii\db\ActiveRecord
      */
     public function showBrand($field,$val,$gt_id,$order,$orderField,$limit)
     {
-
         if (is_numeric($val)) {
             return Goods::find()
                 ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))

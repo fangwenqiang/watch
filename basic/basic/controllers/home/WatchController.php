@@ -95,6 +95,7 @@ class WatchController extends CommonController{
                 $brand_id = $dataBrand['brand_id'];
             }
         }
+        //判断排序方式
         $order = 'DESC';    //默认排序方式
         if(!empty($data['sort'])){
             if($data['sort'] == 0){
@@ -138,18 +139,62 @@ class WatchController extends CommonController{
      * */
     function pageStr($count,$onePage,$p= 1)
     {
-        //总页数
-        $sunPage = ceil($count/$onePage) ;
-        //第一个
-        $fistPage = '1';
+        $sunPage = ceil($count/$onePage) ;//总页数
+        $limitPage = 5; //想要显示的页码数
+        $offsetPage = ($limitPage-1)/2; //显示页码数偏移量
+        $start = '0';   //初始化起始位置
+        $end = $sunPage;    //结束位置
         //上一页
         $upPage = $p - 1 < 1 ? 1 : $p - 1;
         //下一页
         $nextPage = $p + 1 > $sunPage ? $sunPage : $p + 1;
+        $pageStr = '<div class="page">';
+        if($p > 1){
+            $pageStr .='<a href="javascript:page(1)">首页</a>&nbsp;';
+            $pageStr .='<a href="javascript:page('.$upPage.')">上一页</a>&nbsp;';
+        }else{
+            $pageStr .='<span class="disable">首页</span>';
+            $pageStr .='<span class="disable">上一页</span>';
+        }
+        //总页数大于想要显示的页码数
+        if($sunPage > $limitPage){
+            //当前页大于显示页码偏移量前面加省略号
+            if($p > $offsetPage+1){
+                $pageStr .= '...';
+            }
+            //如果当前页大于 显示页码偏移量 开始位置为当前页-显示页码偏移量
+            if($p > $offsetPage){
+                $start = $p-$offsetPage;
+                $end = $sunPage > $p+$offsetPage ? $p+$offsetPage : $sunPage;
+            }else{
+                $start = 1;
+                $end = $sunPage > $limitPage ? $limitPage : $sunPage;
+            }
+            if($p + $offsetPage > $sunPage){
+                $start = $start - ($p + $offsetPage - $end);
+            }
+        }
+        //显示页码
+        for($i = $start; $i<=$end; $i++){
+            if($p == $i){
+                $pageStr .= '<span class="current">'.$i.'</span>';
+            }else{
+                $pageStr .= '<a href="javascript:page('.$i.')">'.$i.'</a>';
+            }
+        }
+        if($sunPage > $limitPage && $sunPage > $p + $offsetPage){
+            $pageStr .= '...';
+        }
+        if($p < $sunPage){
+            $pageStr .='<a href="javascript:page('.$nextPage.')">下一页</a>&nbsp;';
+            $pageStr .='<a href="javascript:page('.$sunPage.')">尾页</a>&nbsp;';
+        }else{
+            $pageStr .='<span class="disable">下一页</span>';
+            $pageStr .='<span class="disable">尾页</span>';
+        }
+        $pageStr .='第'.$p.'页/共'.$sunPage.'页';
 
-        $pageStr = '';
-        $pageStr .='<div id="page_nav"><a href="javascript:page('.$upPage.')">上一页</a>&nbsp;';
-        $pageStr .='<a href="javascript:page('.$nextPage.')">下一页</a>&nbsp;</div>';
+        $pageStr .='</div>';
 
         return $pageStr;
     }
