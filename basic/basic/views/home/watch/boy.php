@@ -117,7 +117,7 @@ use yii\helpers\Url;
                 </div>
             </div>
             <!--            分页按钮-->
-            <div class="sa_bot w930">
+            <div class="sa_bot w930"  style="font-size: 20px">
                 <?=$data['pageStr']?>
             </div>
             <!--            end 分页按钮-->

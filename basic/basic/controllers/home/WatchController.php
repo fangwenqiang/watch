@@ -49,6 +49,19 @@ class WatchController extends CommonController{
         return $this->render('girl',['data'=>$data,'gt_id'=>$this->gt_id]);
     }
 
+    /*
+     * 特价手表展示
+     * */
+    public function actionSpeciallist()
+    {
+        $this->onePage = '12';
+        $goods = new Goods();   //商品
+        $order = 'ASC';
+        $data['goodsList'] = $goods->speciallistShow($this->onePage); //查询处理展示商品
+        $count = Goods::find()->count();    //数据总条数
+        $data['pageStr'] = $this->pageStr($count,$this->onePage);
+        return $this->render('tejia',['data'=>$data]);
+    }
 
     /*
      * 展示品牌等级  名称
@@ -81,10 +94,15 @@ class WatchController extends CommonController{
         $brand = new Brand();   //品牌
         $request = \Yii::$app->request;
         $data = $request->get();
-        $this->gt_id = $data['gt_id'];
+        if(!empty($data['gt_id'])){
+            $this->gt_id = $data['gt_id'];
+        }
+        if(!empty($data['limit'])){
+            $this->onePage = $data['limit'];
+        }
         $p = $data['p'];    //当前页
 
-        $brand_id = isset($data['brand_id']) ? $data['brand_id'] : 'null';  //品牌ID
+        $brand_id = isset($data['brand_id']) ? $data['brand_id'] : null;  //品牌ID
 
         // 根据商品名称获取商品ID
         if(!empty($data['brand_name'])){
@@ -119,7 +137,7 @@ class WatchController extends CommonController{
             $limit = ($p-1)*$this->onePage; //偏移量
         }
 
-        $data['goodsList']= $goods->showBrand('brand_id',$brand_id,$this->gt_id,$order,$orderField,$limit);
+        $data['goodsList']= $goods->showBrand($order,$orderField,'brand_id',$brand_id,$limit,$this->gt_id,$this->onePage);
 
         if(empty($data['goodsList'])){
             die(json_encode(array('res'=>'1','msg'=>'该品牌下暂时没有商品')));
@@ -127,9 +145,12 @@ class WatchController extends CommonController{
         // 判断是否有条件 获取相应的商品数量
         if(is_numeric($brand_id)){
             $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->andWhere(['brand_id'=>$brand_id])->count();    //数据总条数
-        }else{
+        }else if(!empty($this->gt_id)){
             $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->count();    //数据总条数
+        }else{
+            $count = Goods::find()->where(['is_show'=>'1'])->count();    //数据总条数
         }
+
         $data['pageStr'] = $this->pageStr($count,$this->onePage,$p);
         die(json_encode($data));
     }
