@@ -3,9 +3,10 @@ use yii\helpers\Url;
 ?>
 <meta name="csrf-token" content="<?= Yii::$app->request->csrfToken ?>">
 <!-- End header -->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <link rel="stylesheet" href="css/index.css" type="text/css" media="screen, projection" />
 <link href="css/jimai.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery.validate.js"></script>
+
 <style>
     .errorInfo{font-weight: bold;color: red}
 </style>
@@ -21,13 +22,13 @@ use yii\helpers\Url;
     <div class="nav_box">
         <div class="jnav" id="fixed">
             <ul class="clearfix">
-                <li><a class="aStyle navBtn01" href="#">什么是寄卖</a></li>
-                <li><a class="aStyle navBtn02" href="#">寄卖的方式与流程</a></li>
+                <li><a class="aStyle navBtn01" href="<?php echo Url::to(['home/consignment/consign_1'])?>">寄卖说明</a></li>
+                <li><a class="aStyle navBtn02" href="<?php echo Url::to(['home/consignment/consign_2'])?>">寄卖的方式与流程</a></li>
                 <li>
                     <a class="aStyle navBtn02" href="<?php echo URL::to(['home/consignment/index'])?>">寄卖铺</a>
 
                 </li>
-                <li><a class="aStyle navBtn03" href="#">我的寄卖</a></li>
+                <li><a class="aStyle navBtn03" href="<?php echo Url::to(['home/consignment/my_apply'])?>">我的寄卖</a></li>
                 <li class="anotherBtn">
                     <a style="display:block; width:163px; height:44px;" href="<?php echo Url::to(['home/consignment/apply'])?> target="_blank"><div class="nav_btn01">
                         <p class="clearfix">
@@ -38,7 +39,7 @@ use yii\helpers\Url;
 
                 </li>
                 <li class="anotherBtn">
-                    <a class="aStyle navBtn02" href="#">寄卖咨询</a>
+                    <a class="aStyle navBtn02" href="<?php echo Url::to(['home/consignment/consult'])?>">寄卖咨询</a>
                 </li>
             </ul>
         </div>
@@ -56,14 +57,14 @@ use yii\helpers\Url;
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>手表名称：</div>
                                     <div class="jclistDown fl">
-                                        <input id="author" name="author" required type="text" title="手表名称" class="jclistDownCon" />
+                                        <input id="author" name="author"  type="text" title="手表名称" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>手表品牌：</div>
                                     <div class="jclistDown fl">
-                                        <input id="g_brand" name="g_brand" required type="text" title="手表型号" class="jclistDownCon" />
+                                        <input id="g_brand" name="g_brand"  type="text" title="手表型号" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
@@ -72,14 +73,14 @@ use yii\helpers\Url;
                                     <div class="jclistDown fl">
                                         <div id="uf" style="width: 40%; display: none"></div>
                                         <img id="img" style="width: 100px; height: 100px; display: none" />
-                                        <input runat="server" id="g_img" name="g_img" required data-rule-image="true" type="file" class="jclistDownCon" />
+                                        <input runat="server" id="g_img" name="g_img"  data-rule-image="true" type="file" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>销售价：</div>
                                     <div class="jclistDown fl">
-                                        <input id="shop_price" name="shop_price" required  type="text" title="销售价" class="jclistDownCon" onblur="checkmoney(this)" />
+                                        <input id="shop_price" name="shop_price"   type="text" title="销售价" class="jclistDownCon" onblur="checkmoney(this)" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
@@ -113,36 +114,5 @@ use yii\helpers\Url;
         </div>
     </div>
 </div>
-<script>
-    $(function() {
-        //表单验证  -----   start
-        $.validator.setDefaults({
-            errorElement: 'span',
-            errorPlacement: function (error, element) {
-                error.appendTo(element.parent().find(".errorInfo"));
-            }
-        });
-        jQuery.validator.addMethod("image", function (value, element) {
-            var chinese = /.(gif|jpg|jpeg|png|gif|jpg|png)$/i;
-            return this.optional(element) || (chinese.test(value));
-        }, "请正确选择图片");
 
-
-
-        $("#form").validate({
-            submitHandler: function (form) {
-                form.submit();
-            },
-            rules: {
-            },
-            messages: {
-                author: {required: '不能为空'},
-                g_brand: {required: '不能为空'},
-                g_img: {required: '请选择图片'},
-                shop_price: {required: '不能为空'}
-            }
-        });
-
-    });
-</script>
 

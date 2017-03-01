@@ -164,7 +164,6 @@ use yii\helpers\Url;
     </div>
 </div>
 </div>
-<script src="js/jquery.js"></script>
 <script type="text/javascript">
 
     //根据条件获取商品

@@ -1,15 +1,25 @@
 <?php
 use yii\helpers\Url;
 use app\Lib\Functions\Filtration;
+use \yii\widgets\LinkPager;
 ?>
+<script src="js/jquery.js"></script>
 <link href="css/jimai.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/index.css" type="text/css" media="screen, projection" />
-<script src="js/global.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-
-
-<!--index banner start-->
-
+<style>
+    #div1 ul li{float: left;}
+    #div1 span{
+        width: 45px;
+        height: 16px;
+        border: 1px solid #e6e6e6;
+        color: #b01330;
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px 30px;
+        padding-top: 15px;
+        text-decoration: none;
+    }
+</style>
 <div class="jimai_box">
     <div class="jimai_slider">
         <div class="mtsBanner" id="mtsBanner">
@@ -22,23 +32,25 @@ use app\Lib\Functions\Filtration;
     <div class="nav_box">
         <div class="jnav" id="fixed">
             <ul class="clearfix">
-                <li><a class="aStyle navBtn01" href="#">什么是寄卖</a></li>
-                <li><a class="aStyle navBtn02" href="#">寄卖的方式与流程</a></li>
                 <li>
-                    <a style="display:block; width:163px; height:44px;" href="<?php echo Url::to(['home/consignment/index'])?> target="_blank"><div class="nav_btn01">
-                            <p class="clearfix">
-                                <span class="t1 pngfix"></span>&nbsp;寄卖铺
-                            </p>
-                        </div>
-                    </a>
+                    <a class="aStyle navBtn01" href="<?php echo Url::to(['home/consignment/consign_1'])?>">寄卖说明</a></li>
+
+                <li><a class="aStyle navBtn02" href="<?php echo Url::to(['home/consignment/consign_2'])?>">寄卖的方式与流程</a></li>
+                <li>
+                <a style="display:block; width:163px; height:44px;" href="<?php echo Url::to(['home/consignment/index'])?>" target="_blank"><div class="nav_btn01">
+                        <p class="clearfix">
+                            <span class="t1 pngfix"></span>寄卖铺
+                        </p>
+                    </div>
+                </a>
                 </li>
-                <li><a class="aStyle navBtn03" href="#">我的寄卖</a></li>
+                <li><a class="aStyle navBtn03" href="<?php echo Url::to(['home/consignment/my_apply'])?>">我的寄卖</a></li>
                 <li class="anotherBtn">
                     <a class="aStyle navBtn02" href="<?php echo Url::to(['home/consignment/apply'])?>">立即寄卖</a>
 
                 </li>
                 <li class="anotherBtn">
-                    <a class="aStyle navBtn02" href="#">寄卖咨询</a>
+                    <a class="aStyle navBtn02" href="<?php echo Url::to(['home/consignment/consult'])?>">寄卖咨询</a>
                 </li>
             </ul>
         </div>
@@ -77,12 +89,20 @@ use app\Lib\Functions\Filtration;
                         }
                         ?>
                     </ul>
-                    <div class="mLnk">
-                         <a>首页</a>
-                         <a>下一页</a>
-                         <a>上一页</a>
-                         <a>尾页</a>
-                    </div>
+                </div>
+                <div class="mLnk">
+
+                </div>
+                <div id="div1" style="float: right">
+                    <?= LinkPager::widget([   'pagination' => $page,
+                        'firstPageLabel' => '首页',
+                        'lastPageLabel' => '尾页',
+                        'nextPageLabel' => '下一页',
+                        'prevPageLabel' => '上一页',
+                        'maxButtonCount' => 5,
+                        'options' => ['class' => 'mLnk'],
+
+                    ]); ?>
                 </div>
                 <div class="mLnk">
 
