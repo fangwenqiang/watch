@@ -1,7 +1,6 @@
 <?php
 use yii\helpers\Url;
 ?>
-
 <style>
     div.page a{
         border:#aaaadd solid 1px;
