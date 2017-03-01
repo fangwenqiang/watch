@@ -13,12 +13,13 @@ use yii\helpers\Url;
         <span>当前位置：</span>
         <a href="" rel="nofollow">首页</a>
         <i>&gt;</i>
-        <h1><a href="">男士手表</a></h1>    </div>
+        <h1><a href="">男士手表</a></h1></div>
     <div class="clearfix"></div>
     <div style="margin-top:25px;"></div>
     <div class="list_banner">
         <a href="http://data.wbiao.cn/ad.php?ad_id=1138"   rel="nofollow" onclick="_gaq.push(['_trackEvent','quan-zhan','heng-fu__1','http://data.wbiao.cn/ad.php?ad_id=1138']);"><img   src="Images/blank.gif" class="lazy" data-original="http://img2.wbiao.cn/ad/201403/21/139536510192630.jpg" alt="招行特惠" /></a>
     </div>
+    <input type="hidden" value="<?=$gt_id?>" class="gt_id">
     <div style="clear:both">&nbsp;</div>    <!--banner结束-->
     <div class="rightArea w995">
         <div class="sift_tips">
@@ -58,9 +59,9 @@ use yii\helpers\Url;
             <div class="sa_top">
                 <dl class="order_by">
                     <dt>排序：</dt>
-                    <dd class="on"><a href="javascript:void (0)" name="price_desc" brand_id="all" rel="nofollow" title="点击排序">价格<i class="p_all"></i></a></dd>
-                    <dd ><a href="javascript:void(0);" name="hot_desc" brand_id="all" >热销</a></dd>
-                    <dd><a href="javascript:void(0);"  name="new_desc" brand_id="all" title="点击排序">最新<i class=""></i></a></dd>
+                    <dd class="on"><a href="javascript:void (0)" name="price_desc" brand_id="" rel="nofollow" title="点击排序">价格<i class="p_all"></i></a></dd>
+                    <dd ><a href="javascript:void(0);" name="hot_desc" brand_id="" >热销</a></dd>
+                    <dd><a href="javascript:void(0);"  name="new_desc" brand_id="" title="点击排序">最新<i class=""></i></a></dd>
                 </dl>
             </div>
             <!--            end 排序-->
@@ -94,7 +95,6 @@ use yii\helpers\Url;
             </div>
             <!--            分页按钮-->
             <div class="sa_bot w930">
-
                 <?=$data['pageStr']?>
             </div>
             <!--            end 分页按钮-->
@@ -178,7 +178,6 @@ use yii\helpers\Url;
                 }else if(or_name == 'new_desc'){
                     var sort = '3';
                 }
-
                 obj['sort'] = sort;
                 obj['brand_id'] = $(this).attr('brand_id');
                 $(this).parent().addClass('on').siblings().removeClass();    //选中样式
@@ -194,21 +193,19 @@ use yii\helpers\Url;
                 });
                 page(1,alt);
             }
-
-
         });
 
         /*
          * 拼接条件 替换页面
          * */
         function page(p,alt=''){
+            var gt_id = $('.gt_id').val();
             $.ajax({
                 type:'GET',
                 url:'<?=url::to(['home/watch/search'])?>',
-                data:alt+'&p='+p,
+                data:alt+'&p='+p+'&gt_id='+gt_id,
                 dataType:'json',
                 success: function (msg) {
-
                     $('.sa_bot').html(msg.pageStr);
                     var str = '';
                     if(msg['res'] == '1'){

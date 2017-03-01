@@ -15,7 +15,6 @@ class CommonController extends Controller
     {
         $view = YII::$app->view;
         $nav_model = new Nav();
-
         $view->params['system'] = json_decode(file_get_contents('systemConfig.txt'),true);
         $view->params['nav'] = $nav_model->recursion();
 
