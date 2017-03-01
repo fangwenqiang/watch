@@ -3,28 +3,49 @@
 namespace app\controllers\home;
 
 use app\models\User;
+use app\models\Reg;
 use app\models\Admin;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+//use yii\widgets\ActiveForm;
+use yii\bootstrap\ActiveForm;
 use app\models\Nav;  //模型层
-
+/*
+ * 前台登录注册
+ * */
 
 class LoginController extends CommonController
 {
-    // 后台公共视图
+    // 前台公共视图
     public $layout = '/proscenium';
 
-    /*
-     * 管理员
-     * */
+//登录
     public function actionLogin()
     {
 
         return $this->render('login');
     }
 
+//注册
+
+    public function actionReg()
+    {
+        $model = new Reg();
+        if (Yii::$app->request->isAjax) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return ActiveForm::validate($model);
+        }
+        if($model->load(\Yii::$app->request->post()) && $model->validate()) {
+             echo"1";
+            return $this->render('login');
+        }
+        return $this->render('reg',['model'=>$model]);
+    }
+
+
+//登录
     public function actionLogto()
     {
         $request = \Yii::$app->request->get();
@@ -51,6 +72,7 @@ class LoginController extends CommonController
         }
     }
 
+    //退出登录
     public
     function actionLogout()
     {
