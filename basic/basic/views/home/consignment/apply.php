@@ -146,7 +146,8 @@ use yii\helpers\Url;
                 author: {required: '请输入名称'},
                 g_brand: {required: '请输入品牌'},
                 g_img: {required: '请选择图片'},
-                shop_price: {required: '请输入价格'}
+                shop_price: {required: '请输入价格'},
+                is_bargain:{required:"请选择"}
 
             }
         });
