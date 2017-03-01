@@ -81,7 +81,8 @@ class GoodsController extends Controller
                 echo '<script>alert("文件上传失败");history.go(-1)</script>';
             }
 
-
+            $goods['g_thumb'] = Filtration::breviary($name,150);
+            
             $post = Yii::$app->request->post();
             //加入goods表
             $post['goods']['add_time'] = date('Y-m-d H:i:s');
