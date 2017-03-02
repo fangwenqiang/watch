@@ -16,22 +16,20 @@ class WatchController extends CommonController{
 
     public $layout = '/proscenium';
     public $onePage = '8';  //每页显示条数
-    public $gt_id = '';  //手表分类ID
 
     /*
      * 男士手表展示
      * */
     public function actionBoylist()
     {
-        $this->gt_id = '2';
+        $gt_id = 2; //男士手表分类ID
         $goods = new Goods();   //商品
         $order = 'ASC';
-        $data['goodsList'] = $goods->showType($this->gt_id,$order);
+        $data['goodsList'] = $goods->showType(2,$order);
         $data['brandList'] = $this->BrandAll(); //查询品牌
-        $count = Goods::find()->count();    //数据总条数
+        $count = Goods::find()->where(['is_show'=>'1','gt_id'=>$gt_id])->count();    //数据总条数
         $data['pageStr'] = $this->pageStr($count,$this->onePage);
-
-        return $this->render('boy',['data'=>$data,'gt_id'=>$this->gt_id]);
+        return $this->render('boy',['data'=>$data,'gt_id'=>$gt_id]);
     }
 
     /*
@@ -39,14 +37,14 @@ class WatchController extends CommonController{
      * */
     public function actionGirllist()
     {
-        $this->gt_id = '1';
+        $gt_id = 3; //女士手表分类ID
         $goods = new Goods();   //商品
         $order = 'ASC';
-        $data['goodsList'] = $goods->showType($this->gt_id,$order);
+        $data['goodsList'] = $goods->showType(3,$order);
         $data['brandList'] = $this->BrandAll(); //查询品牌
-        $count = Goods::find()->count();    //数据总条数
+        $count = Goods::find()->where(['is_show'=>'1','gt_id'=>$gt_id])->count();    //数据总条数
         $data['pageStr'] = $this->pageStr($count,$this->onePage);
-        return $this->render('girl',['data'=>$data,'gt_id'=>$this->gt_id]);
+        return $this->render('girl',['data'=>$data,'gt_id'=>$gt_id]);
     }
 
     /*
@@ -58,7 +56,7 @@ class WatchController extends CommonController{
         $goods = new Goods();   //商品
         $order = 'ASC';
         $data['goodsList'] = $goods->speciallistShow($this->onePage); //查询处理展示商品
-        $count = Goods::find()->count();    //数据总条数
+        $count = Goods::find()->where(['is_promote'=>'1'])->count();    //数据总条数
         $data['pageStr'] = $this->pageStr($count,$this->onePage);
         return $this->render('tejia',['data'=>$data]);
     }
@@ -70,7 +68,6 @@ class WatchController extends CommonController{
     {
         $brand = new Brand();
         $brandList = $brand->brandWhere('is_show','1');
-
         foreach($brandList as $key=>$val){
             if($val['sort'] == 1){
                 $brandList[$key]['sort'] = '[顶级]';
@@ -94,11 +91,16 @@ class WatchController extends CommonController{
         $brand = new Brand();   //品牌
         $request = \Yii::$app->request;
         $data = $request->get();
+        //如果是男士或者女士手表展示界面 则分类查询商品
         if(!empty($data['gt_id'])){
-            $this->gt_id = $data['gt_id'];
+            $gt_id = $data['gt_id'];
+            $gt_name = 'gt_id';
         }
+        // 如果是促销界面  则查询促销产品
         if(!empty($data['limit'])){
             $this->onePage = $data['limit'];
+            $gt_name = 'is_promote';
+            $gt_id = '1';
         }
         $p = $data['p'];    //当前页
 
@@ -136,19 +138,16 @@ class WatchController extends CommonController{
         }else{
             $limit = ($p-1)*$this->onePage; //偏移量
         }
-
-        $data['goodsList']= $goods->showBrand($order,$orderField,'brand_id',$brand_id,$limit,$this->gt_id,$this->onePage);
+        $data['goodsList']= $goods->showBrand($order,$orderField,'brand_id',$brand_id,$limit,$gt_name,$gt_id,$this->onePage);
 
         if(empty($data['goodsList'])){
             die(json_encode(array('res'=>'1','msg'=>'该品牌下暂时没有商品')));
         }
         // 判断是否有条件 获取相应的商品数量
         if(is_numeric($brand_id)){
-            $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->andWhere(['brand_id'=>$brand_id])->count();    //数据总条数
-        }else if(!empty($this->gt_id)){
-            $count = Goods::find()->where(['is_show'=>'1'])->andWhere(['gt_id'=>'2'])->count();    //数据总条数
+            $count = Goods::find()->where(['is_show'=>'1','gt_id'=>$gt_id,'brand_id'=>$brand_id])->count();    //数据总条数
         }else{
-            $count = Goods::find()->where(['is_show'=>'1'])->count();    //数据总条数
+            $count = Goods::find()->where(['is_show'=>'1',$gt_name=>$gt_id])->count();    //数据总条数
         }
 
         $data['pageStr'] = $this->pageStr($count,$this->onePage,$p);
@@ -214,9 +213,7 @@ class WatchController extends CommonController{
             $pageStr .='<span class="disable">尾页</span>';
         }
         $pageStr .='第'.$p.'页/共'.$sunPage.'页';
-
         $pageStr .='</div>';
-
         return $pageStr;
     }
 

@@ -4,6 +4,20 @@ use yii\helpers\Url;
 
 ?>
 <script src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/sxg.css">
+<style type="text/css">
+    <!--
+    .STYLE1 {
+        font-size: large
+    }
+
+    .STYLE3 {
+        font-size: medium;
+        color: #CC0000;
+    }
+
+    -->
+</style>
 
 <div class="banner" id="banner" >
     <a href="#" class="d1" style="background:url(Images/banner2.jpg) center no-repeat;"></a>
@@ -19,6 +33,7 @@ use yii\helpers\Url;
         </ul>
     </div>
 </div>
+
 <script type="text/javascript">banner()</script>
 <!--index banner end----------------------------------------------------------------------------------------------------->
 

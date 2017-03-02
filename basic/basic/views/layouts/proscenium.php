@@ -25,8 +25,10 @@ use yii\helpers\Url;
     <script src="js/banner.js"></script>
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
+
+    <script src="js/jquery.js"></script>
+
     <script src="js/saved_resource"></script>
-    <link rel="stylesheet" href="css/user.css" type="text/css" media="screen, projection">
     <script type="text/javascript" src="js/user.js"></script>
     <link rel="stylesheet" href="css/user.css">
 </head>
@@ -64,7 +66,7 @@ use yii\helpers\Url;
 
 
             <!-- 修改后导航开始-->
-            <ul id="dropdown_nav">
+            <ul id="dropdown_nav" >
                 <li>
                     <a class="sub_link" href="#">腕表分类<img src="css/images/x_icon.png"/></a>
                     <div class="sub_nav">
@@ -88,10 +90,8 @@ use yii\helpers\Url;
 
         <ul class="gNav">
             <?php
-
-
                 foreach ($this->params['nav']['zhu'] as $key => $val) {       ?>
-           
+
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
                     <?php   }    ?>
@@ -150,7 +150,7 @@ use yii\helpers\Url;
 </div>
 <script type="text/javascript">
     $(function () {
-        
+
         //判断是否登录
         $.get("<?=Url::to(['home/login/login_status']) ?>", function(re_val){
             if(re_val!=0)

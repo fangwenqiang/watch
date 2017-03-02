@@ -1,12 +1,11 @@
-﻿
-<?php
+
+﻿<?php
 use yii\helpers\Url;
+use app\Lib\Functions\Filtration;
+use \yii\widgets\LinkPager;
 ?>
-
-
-
+   <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/sxg.css">
-    <script src="js/jquery.js"></script>
     <style type="text/css">
         <!--
         .STYLE1 {
@@ -20,6 +19,7 @@ use yii\helpers\Url;
 
         -->
     </style>
+
 <!-- Begin header -->
 <div id="member_info2"></div>
 
