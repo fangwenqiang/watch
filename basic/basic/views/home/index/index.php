@@ -3,6 +3,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 ?>
+<script src="js/jquery.js"></script>
+
 <div class="banner" id="banner" >
     <a href="#" class="d1" style="background:url(Images/banner2.jpg) center no-repeat;"></a>
     <a href="#" class="d1" style="background:url(Images/banner1.jpg) center no-repeat;"></a>

@@ -35,7 +35,7 @@ class Consignment extends ActiveRecord
     public function selectAll2($p)
     {
         $arr = (new \yii\db\Query())->from('mb_consignment')
-            ->select(array('consignment_id','author','shop_price','g_brand','describe','g_img','add_time','mb_user.user_id','shop_status','credit','is_bargain'))
+            ->select(array('consignment_id','author','shop_price','g_brand','is_bargain','describe','g_img','add_time','mb_user.user_id','shop_status','credit','is_bargain'))
             ->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")->where(['mb_consignment.user_id'=>1]);
         $pages = new Pagination(['totalCount' =>$arr->count(), 'pageSize' =>$p]);
         $data['data'] = $arr->offset($pages->offset)->limit($pages->limit)->all();
@@ -49,7 +49,7 @@ class Consignment extends ActiveRecord
     {
         $arr = (new \yii\db\Query())
             ->from('mb_consignment')
-            ->select(array('consignment_id','author','shop_price','g_brand','describe','g_img','add_time','mb_user.user_id','shop_status','credit'))
+            ->select(array('consignment_id','author','shop_price','g_brand','describe','is_bargain','g_img','add_time','mb_user.user_id','shop_status','credit'))
             ->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")
             ->where($where)
             ->offset($offset)
@@ -59,6 +59,17 @@ class Consignment extends ActiveRecord
 
         return $arr;
     }
+
+    public function one($id)
+    {
+        return (new \yii\db\Query())
+            ->from('mb_consignment')
+            ->select(array('consignment_id','author','shop_price','g_brand','describe','g_img','is_bargain','add_time','mb_user.user_id','shop_status','credit'))
+            ->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")
+            ->where(array('consignment_id'=>$id))
+            ->one();
+    }
+
 
 
 }

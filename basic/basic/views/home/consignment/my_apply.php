@@ -70,7 +70,7 @@ use \yii\widgets\LinkPager;
             </ul>
         </div>
     </div>
-    <div class="content_box" id="floor" style="height: 460px;width:980px;margin-left:200px;">
+    <div class="content_box" id="floor" style="height: 520px;width:980px;margin-left:200px;">
         <div id="main">
             <div class="position">
                 <a href="#"><strong>首页</strong></a>
@@ -215,22 +215,35 @@ use \yii\widgets\LinkPager;
                 <div class="leftArea">
                     <div class="u__mine"><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_index&#39;,&#39;http://user.wbiao.cn/&#39;]);" href="http://user.wbiao.cn/" style="display: block; height: 100%;"></a></div>
                     <div class="floor">
-                        <div class="t"><i class="u__trade"></i><font class="f_fixed">交易管理</font></div>
+                        <div class="t"><i class="u__trade"></i><font class="f_fixed">卖家中心</font></div>
                         <div class="c">
                             <ul>
                                 <li><i class="u__point"></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_order&#39;,&#39;/order&#39;]);" href="Script/yonghu.htm" class="ccf0" title="我的订单" rel="nofollow">已上架商品 (<span class="cb01">1</span>)</a></li>
                                 <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_address&#39;,&#39;/address&#39;]);" href="#" title="收货地址" rel="nofollow">审核中商品(<span class="cb01">0</span>)</a></li>
                                 <li style="border:0;"><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_bonus&#39;,&#39;/bonus&#39;]);" href="#" title="代金券/优惠券" rel="nofollow">收到出价(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_orderbooking&#39;,&#39;/orderbooking&#39;]);" href="#" title="我的预售" rel="nofollow">交易中 (<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_orderbooking&#39;,&#39;/orderbooking&#39;]);" href="#" title="我的预售" rel="nofollow">已发货 (<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">交易成功(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">交易失败(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">退货中(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">售后服务(<span class="cb01">0</span>)</a></li>
+                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_orderbooking&#39;,&#39;/orderbooking&#39;]);" href="#" title="我的预售" rel="nofollow">发货中 (<span class="cb01">0</span>)</a></li>
+                              </ul>
+                        </div>
+                    </div>
+                    <div class="floor">
+                        <div class="t"><i class="u__trade"></i><font class="f_fixed">买家中心</font></div>
+                        <div class="c">
+                            <ul>
+                                <li><i class="u__point"></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_order&#39;,&#39;/order&#39;]);" href="Script/yonghu.htm" class="ccf0" title="我的订单" rel="nofollow">待收货 (<span class="cb01">1</span>)</a></li>
+                                <li style="border:0;"><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_bonus&#39;,&#39;/bonus&#39;]);" href="#" title="代金券/优惠券" rel="nofollow">退货中(<span class="cb01">0</span>)</a></li>
                             </ul>
                         </div>
                     </div>
-
+                       <div class="floor">
+                        <div class="t"><i class="u__trade"></i><font class="f_fixed">商户中心</font></div>
+                        <div class="c">
+                            <ul>
+                                <li><i class="u__point"></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_order&#39;,&#39;/order&#39;]);" href="Script/yonghu.htm" class="ccf0" title="我的订单" rel="nofollow">交易成功 (<span class="cb01">1</span>)</a></li>
+                                <li style="border:0;"><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_bonus&#39;,&#39;/bonus&#39;]);" href="#" title="代金券/优惠券" rel="nofollow">交易成功(<span class="cb01">0</span>)</a></li>
+                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_address&#39;,&#39;/address&#39;]);" href="#" title="收货地址" rel="nofollow">售后服务(<span class="cb01">0</span>)</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div></div>
             <!-- 左边菜单 End -->
 

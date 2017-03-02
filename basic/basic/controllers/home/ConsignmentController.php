@@ -4,6 +4,7 @@ namespace app\controllers\home;
 
 use Yii;
 use app\models\Consignment;  //模型层
+use app\models\Bargain;  //模型层
 use app\Lib\Functions\Filtration;
 class ConsignmentController extends CommonController
 {
@@ -99,12 +100,7 @@ class ConsignmentController extends CommonController
         return $this->render('consult');
     }
 
-   public function sort($a,$filed)
-    {
-        return $a['data'];
-      $score=array();
 
-    }
     /*
      * 立即寄卖
      */
@@ -130,16 +126,18 @@ class ConsignmentController extends CommonController
 //            $request['user_id'] = $session->get('user_id');
             $request['user_id'] = 1;
             if($consignment_model->dataInsert($request)){
-                 echo "添加成功";
+                 return $this->qt_success('home/consignment/index','寄卖成功，请等待审核');
             } else {
-                echo '添加失败';
+                return $this->qt_error('寄卖失败');
             }
         } else {
-            echo '添加失败';
+            return $this->qt_error('寄卖失败');
         }
     }
 
-
+   /*
+    * 分页连接
+    */
     public function page($count,$limit,$p=1)
     {
         //总页数
@@ -155,4 +153,34 @@ class ConsignmentController extends CommonController
     }
 
 
+    /*
+     * 商品详情
+     */
+    public function actionGoods()
+    {
+        $request = \Yii::$app->request;
+        $id = $request->get('id');
+        $consignment_model = new Consignment();
+        $data = $consignment_model->one($id);
+        return $this->render('goods',array('data'=>$data));
+    }
+
+    //议价
+    public function actionBargain()
+    {
+        $bargain_model = new Bargain();
+        $request = \Yii::$app->request;
+        $id = $request->post('id');
+        $price = $request->post('price');
+        //判断是否议价
+        if($bargain_model->one($id) != ''){
+            echo -1;
+        } else {
+            if($bargain_model->add($id,$price)){
+                echo 1;
+            } else {
+                echo 0;
+            }
+        }
+    }
 }

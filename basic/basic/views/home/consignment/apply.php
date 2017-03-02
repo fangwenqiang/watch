@@ -88,8 +88,8 @@ use yii\helpers\Url;
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>是否议价：</div>
                                     <div class="jclistDown fl">
-                                        <input id="is_bargain" name="is_bargain" required  type="radio"   />&nbsp;是&nbsp;&nbsp;
-                                        <input id="is_bargain" name="is_bargain" required  type="radio"   />&nbsp;否
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"  value="1" />&nbsp;是&nbsp;&nbsp;
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"   value="0"/>&nbsp;否
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>

@@ -21,6 +21,7 @@ use yii\helpers\Url;
     </script>
     <![endif]-->
     <!-- banner js -->
+
     <script src="js/banner.js"></script>
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
@@ -195,6 +196,7 @@ use yii\helpers\Url;
 
 <script>
     $('#out').click(function () {
+    
         $.ajax({
             url: "<?=Url::to(['home/login/logout']) ?>",
             success: function (msg) {

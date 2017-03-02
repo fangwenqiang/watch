@@ -227,4 +227,20 @@ class Controller extends \yii\base\Controller
     }
 
 
+    //前台
+    public function qt_success($url= [] ,$msg = '',$sec = 3)
+    {
+
+        $str=strstr($url,'/');
+        if(empty($str)) { return $this->error('address error'); }
+        $url= \yii\helpers\Url::toRoute($url);
+        return $this->render('/error/qt_msg',['gotoUrl'=>$url,'sec'=>$sec,'errorMessage'=>$msg]);
+    }
+    /** * 通用错误跳转 * @param string $msg 错误提示信息 * @param number $sec * @return Ambigous <string, string>
+     */
+    public function qt_error($msg= '',$sec = 3)
+    {
+        return $this->render('/error/qt_msg',['errorMessage'=>$msg,'sec'=>$sec]);
+    }
+
 }
