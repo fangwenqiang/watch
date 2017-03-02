@@ -15,6 +15,7 @@
         }
     </style>
     <script type="text/javascript" src="js/jquery.carousel.js"></script>
+    <script typr="text/javascript" src="js/laydate/laydate.js"></script>
 </head>
 <body>
 <div id="dcWrap">
@@ -23,28 +24,56 @@
         <div id="urHere">DouPHP 管理中心<b>></b><strong>订单列表</strong> </div>
         <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
             <div class="filter">
-                <?php $form = yii\widgets\ActiveForm::begin(['method'=>'post','id'=>'carousel']) ?>
-                订单号：<input name="orderSn" type="text" class="inpMain" value="" size="20" placeholder="订单号" />
-                订单时间：<input name="firstTime" type="text" class="inpMain" value="" size="20" placeholder="开始时间" />-<input name="lastTime" type="text" class="inpMain" value="" size="20" placeholder="结束时间" />
-                <select name="payStatus">
-                    <option value="-1">选择支付状态</option>
-                    <option value="1">已支付</option>
-                    <option value="0">待支付</option>
-                </select>
-                <select name="orderStatus">
-                        <option value="-1">选择订单状态</option>
-                        <option value="1">已确认</option>
-                        <option value="0">待确定</option>
-                </select>
-                    <input class="btnGray" type="submit" value="筛选" title="点击筛选" style="background-color: #93ebff;" />
-                <?php  yii\widgets\ActiveForm::end() ?>
+                <?php $form = yii\widgets\ActiveForm::begin(['method'=>'post'])?>
+                <table>
+                    <tr>
+                        <td style="height: 30px;">订单号：</td>
+                        <td>
+                            <input name="orderSn" type="text" class="form-control" placeholder="订单号" style="width: 150px;" />
+                        </td>
+                        <td>&nbsp;创建时间：</td>
+                        <td>
+                            <input name="firstTime" id="start" type="text" class="form-control layer-date" placeholder="起始(Y-M-D h:i:s)" style="background:url('js/laydate/skins/default/icon.png') no-repeat right"/>
+                        </td>
+                        <td>——</td>
+                        <td><input name="lastTime" id="end" type="text" class="form-control layer-date"  placeholder="结束(Y-M-D h:i:s)" style="background:url('js/laydate/skins/default/icon.png') no-repeat right"/></td>
+                        <td>
+                            <select name="orderStatus" class="form-control" style="margin-left: 5px;">
+                                <option value="-1">选择订单状态</option>
+                                <option value="1">已确认</option>
+                                <option value="0">待确定</option>
+                            </select>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <select name="payStatus" class="form-control" style="margin-left: 5px;">
+                                <option value="-1">选择支付状态</option>
+                                <option value="1">已支付</option>
+                                <option value="0">待支付</option>
+                            </select>
+                        </td>
+                        <style>
+                            .btn48 {
+                                background: rgba(0, 0, 0, 0) url("./images/bg48.jpg") repeat-x scroll left top;
+                                color: #8bf8ff;
+                                height: 40px;
+                                width: 233px;
+                            }
+                        </style>
+                        <td>&nbsp;
+                            <input type="submit" class="btn48" value="筛选 " onmouseover="this.style.backgroundPosition='left -67px';this.style.color='#d7bff2';" onmouseout="this.style.backgroundPosition='left top';this.style.color='#8bf8ff';" style="background-position: left top; color: rgb(139, 248, 255);">
+                        </td>
+                    </tr>
+                </table>
+
+
+                <?php yii\widgets\ActiveForm::end(); ?>
             </div>
             <div id="list">
                 <style>
                     .box{
                         background-color: #979593;
                         font-weight: bolder;
-
                     }
                 </style>
                 <?php if(count($data)!=0): ?>
@@ -56,7 +85,7 @@
                                 <td width="80" align="center" class="box">订单状态(0/1)</td>
                                 <td width="80" align="center" class="box">支付状态(0/1)</td>
                                 <td width="80" align="center" class="box">订单总额(元)</td>
-                                <td width="80" align="center" class="box">订单时间</td>
+                                <td width="80" align="center" class="box">创建时间</td>
                                 <td width="80" align="center" class="box">操作</td>
                             </tr>
                         </thead>
@@ -95,6 +124,34 @@
     $(function () {
         url = "<?=\yii\helpers\Url::toRoute(['admin/order'])?>";
         csrf = $('input[name=_csrf]').val();
+        //日期范围限制
+        var start = {
+            elem: '#start',
+            format: 'YYYY-MM-DD hh:mm:ss',
+            min: '1900-01-01 00:00:00', //设定最小日期为当前日期
+            max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: true,
+            festival: true, //显示节日
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#end',
+            format: 'YYYY-MM-DD hh:mm:ss',
+            min: '1900-01-01 00:00:00',
+            max: '2099-06-16 23:59:59',
+            istime: true,
+            istoday: true,
+            festival: true, //显示节日
+            choose: function (datas) {
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start);
+        laydate(end);
     });
 </script>
 </body>
