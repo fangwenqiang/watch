@@ -1,4 +1,4 @@
-
+﻿
 ﻿<?php
 use yii\helpers\Url;
 use app\Lib\Functions\Filtration;
@@ -35,7 +35,7 @@ use \yii\widgets\LinkPager;
 
 
 <div style="width:1100px;height:500px; margin:0 auto;">
-    <div style="width:600px;height:450px; float:left; margin-top:30px;border:1px solid;"><img src="images/gg.jpg"/>
+    <div style="width:600px;height:450px; float:left; margin-top:30px;border:1px solid;"><img src="Images/gg.jpg"/>
     </div>
     <div style="width:495px;height:450px; float:right;margin-top:30px;border:1px solid;">
         <div style="width:495px;height:20px; float:right;margin-top:20px;" align="right" ;>
@@ -54,7 +54,7 @@ use \yii\widgets\LinkPager;
         </div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><span class="error" id="msg"></span></div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><a href="javascript:void(0)" id="but"><img
-                    src="images/denglu.png">
+                    src="Images/denglu.png">
             </a><a href="#"><strong> 忘记密码</strong></a></div>
         </form>
 
