@@ -31,10 +31,6 @@ class ConsignmentController extends CommonController
      */
     public function actionIndex()
     {
-        $session = Yii::$app->session;
-        if($session->get('user_id') == ''){
-            return $this->qt_success('home/login/login','请先登录');
-        }
        //查询寄卖品
         $consignment_model = new Consignment();
         if(empty($_GET['search'])){
@@ -90,6 +86,10 @@ class ConsignmentController extends CommonController
      */
     public function actionMy_apply()
     {
+        $session = Yii::$app->session;
+        if($session->get('user_id') == ''){
+            return $this->qt_success('home/login/login','请先登录');
+        }
         $request = \Yii::$app->request;
         $type = $request->get('type');
         $session = Yii::$app->session;
