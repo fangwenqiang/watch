@@ -22,7 +22,6 @@ use yii\helpers\Url;
         margin:2px;
         color:#ddd;
     }
-
 </style>
 <script src="js/jquery.js"></script>
 
