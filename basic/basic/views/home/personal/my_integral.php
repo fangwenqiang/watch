@@ -95,22 +95,11 @@ use yii\helpers\Url;
                 <div class="t"><i class="u__trade"></i><font class="f_fixed">交易管理</font></div>
                 <div class="c">
                     <ul>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_order','/order']);"
-                                href="Script/yonghu.htm" title="我的订单" rel="nofollow">我的订单 (<span
-                                    class="cb01">1</span>)</a></li>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_orderbooking','/orderbooking']);"
-                                href="#" title="我的预售" rel="nofollow">我的预售 (<span class="cb01">0</span>)</a></li>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_address','/address']);"
-                                href="#" title="收货地址" rel="nofollow">收货地址</a></li>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_giftcard','/giftcard']);"
-                                href="#" title="礼品卡" rel="nofollow">礼品卡</a></li>
-                        <li style="border:0;"><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_bonus','/bonus']);"
-                                href="#" title="代金券/优惠券" rel="nofollow">代金券/优惠券</a></li>
+                        <li><i></i><a href="Script/yonghu.htm" title="我的订单" rel="nofollow">我的订单 (<span class="cb01">1</span>)</a></li>
+                        <li><i></i><a href="#" title="我的预售" rel="nofollow">我的预售 (<span class="cb01">0</span>)</a></li>
+                        <li><i></i><a href="#" title="收货地址" rel="nofollow">收货地址</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/gift_card'])?>" title="礼品卡" rel="nofollow">礼品卡</a></li>
+                        <li style="border:0;"><i></i><a href="#" title="代金券/优惠券" rel="nofollow">代金券/优惠券</a></li>
                     </ul>
                 </div>
             </div>
@@ -118,21 +107,11 @@ use yii\helpers\Url;
                 <div class="t"><i class="u__datum"></i><font class="f_fixed">账户管理</font></div>
                 <div class="c">
                     <ul>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_profile','/profile']);"
-                                href="#" title="个人资料" rel="nofollow">个人资料</a></li>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_password','/password']);"
-                                href="#" title="修改密码" rel="nofollow">修改密码</a></li>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_collection','/collection']);"
-                                href="#" title="我的收藏" rel="nofollow">我的收藏</a></li>
-                        <li><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_history_record','/history/record']);"
-                                href="#" title="浏览历史" rel="nofollow">浏览历史</a></li>
-                        <li style="border:0;"><i></i><a
-                                onclick="_gaq.push(['_trackEvent','user','user_recommend','/recommend']);"
-                                href="http://user.wbiao.cn/recommend" title="为我推荐" rel="nofollow">为我推荐</a></li>
+                        <li><i></i><a href="#" title="个人资料" rel="nofollow">个人资料</a></li>
+                        <li><i></i><a href="#" title="修改密码" rel="nofollow">修改密码</a></li>
+                        <li><i></i><a href="#" title="我的收藏" rel="nofollow">我的收藏</a></li>
+                        <li><i></i><a href="#" title="浏览历史" rel="nofollow">浏览历史</a></li>
+                        <li style="border:0;"><i></i><a href="http://user.wbiao.cn/recommend" title="为我推荐" rel="nofollow">为我推荐</a></li>
                     </ul>
                 </div>
             </div>
@@ -140,9 +119,9 @@ use yii\helpers\Url;
                 <div class="t"><i class="u__integral"></i><font class="f_fixed">积分管理</font></div>
                 <div class="c">
                     <ul>
-                        <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_points','/points']);" href="<?php echo Url::to(['home/personal/my_integral'])?>" title="我的积分"  class="ccf0" rel="nofollow">我的积分</a></li>
-                        <li><i></i><a onclick="_gaq.push(['_trackEvent','user','user_points_detail','/points/detail']);" href="<?php echo Url::to(['home/personal/integral_rule'])?>" title="积分细则" rel="nofollow">积分细则</a></li>
-                        <li style="border:0;"><i></i><a onclick="_gaq.push(['_trackEvent','user','user_recommend_gift','/recommend/gift']);" href="#" title="推荐有礼" rel="nofollow">推荐有礼</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_integral'])?>" title="我的积分"  class="ccf0" rel="nofollow">我的积分</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/integral_rule'])?>" title="积分细则" rel="nofollow">积分细则</a></li>
+                        <li style="border:0;"><i></i><a href="#" title="推荐有礼" rel="nofollow">推荐有礼</a></li>
                     </ul>
                 </div>
             </div>
@@ -161,7 +140,7 @@ use yii\helpers\Url;
                 <div class="t"><i class="u__star"></i><font class="f_fixed">喜悦手表会员</font></div>
                 <div class="c">
                     <ul>
-                        <li><i></i><a href="#" title="会员简介" rel="nofollow">会员简介</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/member_profile'])?>" title="会员简介" rel="nofollow">会员简介</a></li>
                     </ul>
                 </div>
             </div>

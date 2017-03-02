@@ -5,6 +5,7 @@ use yii\web\Controller;
 use app\lib\Functions\Filtration;
 use app\models\Collect;
 use app\models\History; 
+use app\models\Comment; 
 /*
 * 前台商品展示控制器
   0227  龚洋
@@ -66,7 +67,8 @@ class GoodsShowController extends CommonController
             $history['goods_img']=$goods['g_img'];
             $model->history_add($history);
         }
-
+        $comment = new Comment();
+        $comment_list=$comment->show($goodsId);
         //判断是否有商品的详细描述信息
         if (explode(',', $goods['describe']) && (!empty($goods['describe'])) ) {
             $goods['describe'] =  explode(',', $goods['describe']);
@@ -74,42 +76,8 @@ class GoodsShowController extends CommonController
             $goods['describe'] = ['1'=> '暂时没有详细的商品信息'];
         }
 
-
-
         // print_r($attrArr);die;       
-        return $this->render('show',compact('attrArr','goods'));
+        return $this->render('show',compact('attrArr','goods','comment_list'));
 
     }       
-
-    //获取组合的价格
-    public function actionGetGroupPrice()
-    {   
-        
-
-    }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
