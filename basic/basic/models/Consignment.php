@@ -72,5 +72,21 @@ class Consignment extends ActiveRecord
     }
 
 
+    public function del($id)
+    {
+        $session = \Yii::$app->session;
+        $user_id = $session->get('user_id');
+        return \Yii::$app->db ->createCommand() ->delete('mb_consignment',array("user_id"=>$user_id ,"consignment_id"=>$id)) ->execute();
+    }
+
+
+    public function updates($arr,$id)
+    {
+        $session = \Yii::$app->session;
+        $user_id = $session->get('user_id');
+        return \Yii::$app->db ->createCommand()->update('mb_consignment',$arr,array("user_id"=>$user_id ,"consignment_id"=>$id)) ->execute();
+    }
+
+
 
 }

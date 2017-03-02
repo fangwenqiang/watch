@@ -58,14 +58,14 @@ use yii\helpers\Url;
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>手表名称：</div>
                                     <div class="jclistDown fl">
-                                        <input id="author" name="author" required  type="text" title="手表名称" class="jclistDownCon" />
+                                        <input id="author" name="author" required value="<?php if(isset($data['author'])){ echo $data['author'];}?>"  type="text" title="手表名称" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>手表品牌：</div>
                                     <div class="jclistDown fl">
-                                        <input id="g_brand" name="g_brand" required  type="text" title="手表型号" class="jclistDownCon" />
+                                        <input id="g_brand" name="g_brand" required value="<?php if(isset($data['g_brand'])){ echo $data['g_brand'];}?>"  type="text" title="手表型号" class="jclistDownCon" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
@@ -81,23 +81,26 @@ use yii\helpers\Url;
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>销售价：</div>
                                     <div class="jclistDown fl">
-                                        <input id="shop_price" name="shop_price" required   type="text" title="销售价" class="jclistDownCon" onblur="checkmoney(this)" />
+                                        <input id="shop_price" name="shop_price" required value="<?php if(isset($data['shop_price'])){ echo $data['shop_price'];}?>"   type="text" title="销售价" class="jclistDownCon" onblur="checkmoney(this)" />
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>是否议价：</div>
                                     <div class="jclistDown fl">
-                                        <input id="is_bargain" name="is_bargain" required  type="radio"  value="1" />&nbsp;是&nbsp;&nbsp;
-                                        <input id="is_bargain" name="is_bargain" required  type="radio"   value="0"/>&nbsp;否
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"  value="1" <?php if(isset($data['is_bargain'])){ if($data['is_bargain'] ==1){echo "checked";}}?> />&nbsp;是&nbsp;&nbsp;
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"   value="0" <?php if(isset($data['is_bargain'])){ if($data['is_bargain'] ==0){echo "checked";}}?>/>&nbsp;否
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>其他要求：</div>
                                     <div class="jclistDown fl">
-                                        <textarea id="describe" name="describe" cols="20" rows="2"  class="jclistDownCon" style=" height:100px;"></textarea>
+                                        <textarea id="describe" name="describe" cols="20" rows="2"   class="jclistDownCon" style=" height:100px;">
+                                            <?php if(isset($data['describe'])){ echo $data['describe'];}?>
+                                        </textarea>
                                         <span class="errorInfo"></span>
+                                        <input name="id" type="hidden" id="id" value="<?php if(isset($data['consignment_id'])){ echo $data['consignment_id'];}?>">
 
                                     </div>
                                 </li>

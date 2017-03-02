@@ -31,10 +31,6 @@ class ConsignmentController extends CommonController
      */
     public function actionIndex()
     {
-        $session = Yii::$app->session;
-        if($session->get('user_id') == ''){
-            return $this->qt_success('home/login/login','请先登录');
-        }
        //查询寄卖品
         $consignment_model = new Consignment();
         if(empty($_GET['search'])){
@@ -90,6 +86,10 @@ class ConsignmentController extends CommonController
      */
     public function actionMy_apply()
     {
+        $session = Yii::$app->session;
+        if($session->get('user_id') == ''){
+            return $this->qt_success('home/login/login','请先登录');
+        }
         $request = \Yii::$app->request;
         $type = $request->get('type');
         $session = Yii::$app->session;
@@ -100,11 +100,11 @@ class ConsignmentController extends CommonController
         $bargain_model = new Bargain();
         $data['yijia'] = $bargain_model->all();
         $data['yijia_count'] = count($bargain_model->all());
-        $data['type'] = 0;
+
+        $data['oneself_yijia'] = $bargain_model->oneselfAll();
+        $data['oneself_yijia_count'] = count($data['oneself_yijia']);
         //查询议价表
-        if($type == 1){
-            $data['type'] = 1;
-        }
+        $data['type'] = $type;
         return $this->render('my_apply',$data);
     }
 
@@ -126,7 +126,18 @@ class ConsignmentController extends CommonController
         if($session->get('user_id') == ''){
             return $this->qt_success('home/login/login','请先登录');
         }
-        return $this->render('apply');
+        $request = \Yii::$app->request;
+        $id = $request->get('id');
+        if(empty($id)){
+            return $this->render('apply');
+        } else {
+            $consignment_model = new Consignment();
+            $data = $consignment_model->one($id);
+            $data['type'] = 1;
+            return $this->render('apply',array('data'=>$data));
+        }
+
+
     }
 
     /*
@@ -134,23 +145,38 @@ class ConsignmentController extends CommonController
      */
     public function actionAdd()
     {
+
         $consignment_model = new Consignment();
         $request =  \Yii::$app->request->post();
-        $session = Yii::$app->session;
-        $path = Filtration::image_upload('./uploads/',time().'.jpg',$_FILES['g_img']);
-        if($path){
-            array_pop($request);
-            $request['g_img'] = '../.'.$path;
-            $request['add_time'] = time();
-            $request['user_id'] = $session->get('user_id');
-            if($consignment_model->dataInsert($request)){
-                 return $this->qt_success('home/consignment/index','寄卖成功，请等待审核');
+
+        if($request['id'] == ''){
+            $session = Yii::$app->session;
+            $path = Filtration::image_upload('./uploads/',time().'.jpg',$_FILES['g_img']);
+            if($path){
+                array_pop($request);
+                $request['g_img'] = '../.'.$path;
+                $request['add_time'] = time();
+                $request['user_id'] = $session->get('user_id');
+                if($consignment_model->dataInsert($request)){
+                    return $this->qt_success('home/consignment/index','寄卖成功，请等待审核');
+                } else {
+                    return $this->qt_error('寄卖失败');
+                }
             } else {
                 return $this->qt_error('寄卖失败');
             }
         } else {
-            return $this->qt_error('寄卖失败');
+            $request['describe'] = trim($request['describe']);
+            $arr = array_slice($request,0,5);
+            $arr['shop_status'] = 0;
+           if($consignment_model->updates($arr,$request['id'])){
+               return $this->qt_success('home/consignment/my_apply','修改成功，请等待审核');
+           } else {
+               return $this->qt_error('修改失败');
+           }
+
         }
+
     }
 
    /*
@@ -204,6 +230,56 @@ class ConsignmentController extends CommonController
             } else {
                 echo 0;
             }
+        }
+    }
+
+    /*
+     * 删除寄卖商品
+     */
+    public function actionDel()
+    {
+        $consignment_model = new Consignment();
+        $request = \Yii::$app->request;
+        $id = $request->post('id');
+        if($consignment_model->del($id)){
+            echo 1;
+        } else {
+            echo 0;
+        }
+    }
+
+
+    //同意议价
+    public function actionConsent_bargain()
+    {
+        $request = \Yii::$app->request;
+        $id = $request->post('id');
+        $type = $request->post('type');
+        $bargain_model = new Bargain();
+        if($type == 0){
+            $type = -1;
+        }
+        if($bargain_model->consent_bargain($id,$type)){
+            echo $type;
+        } else {
+            echo 0;
+        }
+    }
+
+
+    /*
+     * 二次议价
+     */
+    public function actionTwo_bargain()
+    {
+        $request = \Yii::$app->request;
+        $id = $request->post('id');
+        $price = $request->post('price');
+        $bargain_model = new Bargain();
+        if($bargain_model->two_bargain($id,$price)){
+            echo 1;
+        } else {
+            echo 0;
         }
     }
 }

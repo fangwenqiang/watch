@@ -26,7 +26,6 @@ use yii\helpers\Url;
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
 
-    <script src="js/jquery.js"></script>
 
     <script src="js/saved_resource"></script>
     <script type="text/javascript" src="js/user.js"></script>
