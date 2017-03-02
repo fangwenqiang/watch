@@ -38,7 +38,21 @@ class LoginController extends CommonController
             return ActiveForm::validate($model);
         }
         if($model->load(\Yii::$app->request->post()) && $model->validate()) {
-             echo"1";
+
+
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->render('login');
+
+            }
+//            $request = \Yii::$app->request->post('Reg');
+//            $user = $request['username'];
+//            $pwd = substr(md5($request['password']), 0, 20);
+//            $email = $request['email'];
+//            $tel = $request['tel'];
+
+
+
+
             return $this->render('login');
         }
         return $this->render('reg',['model'=>$model]);

@@ -2,7 +2,9 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
-
+$session = \Yii::$app->session;
+$a = $session->get('mobile_code');
+echo"$a";
 ?>
 <style>
     .su {
@@ -77,11 +79,9 @@ use yii\bootstrap\Html;
         <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span
                 class="STYLE1">*用户名:</span></div>
         <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
-            <?= $form->field($model, 'username')->input('test', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:38px', 'placeholder' => '4-10位字符，可由中文、英文、数字及组成'])->label('') ?>
+            <?= $form->field($model, 'username')->input('text', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:38px', 'placeholder' => '4-10位字符，可由中文、英文、数字及组成'])->label('') ?>
             <span class="mb25">
 </span></div>
-
-
         <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span
                 class="STYLE1">*设置密码:</span></div>
         <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
