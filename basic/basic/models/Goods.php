@@ -91,12 +91,14 @@ class Goods extends \yii\db\ActiveRecord
      * 根据类型查询商品
      * 
      */
-    public function showType($type)
+    public function showType($type,$order)
     {
         return Goods::find()
             ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
             ->where(['gt_id'=>$type])
             ->andWhere(['is_show'=>1])
+            ->orderBy('shop_price '.$order)
+            ->limit(8,0)
             ->orderBy('shop_price')
             ->asArray()
             ->all();
@@ -104,21 +106,44 @@ class Goods extends \yii\db\ActiveRecord
 
     /*
      * 根据条件查询商品
-     * */
-    public function showBrand($field,$val,$gt_id)
-
+     * @param $field  string 字段
+     * @param $val  string 值
+     * @param $gt_id string 分类ID
+     * @param $order string　排序方式
+     * @param $orderField string　排序字段
+     * @param $g_name string　条件字段
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function showBrand($order,$orderField,$field,$val,$limit,$g_name,$gt_id,$onePage)
     {
-        return Goods::find()
-            ->select(array('g_id','gt_id','goods_name','brand_id','shop_price','keywords','g_img'))
-            ->where([$field=>$val])
-            ->andWhere(['gt_id'=>$gt_id])
-            ->asArray()->all();
+        // 有品牌条件
+        if (is_numeric($val)) {
+            return Goods::find()
+                ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))
+                ->where([$field => $val])
+                ->andWhere(['is_show' => '1'])
+                ->andWhere([$g_name => $gt_id])
+                ->andWhere([$field => $val])
+                ->orderBy($orderField . ' ' . $order)
+                ->offset($limit)
+                ->limit($onePage)
+                ->asArray()
+                ->all();
+        } else{
+            return Goods::find()
+                ->select(array('g_id', 'gt_id', 'goods_name', 'brand_id', 'shop_price', 'keywords', 'g_img'))
+                ->andWhere(['is_show' => '1'])
+                ->andWhere([$g_name=>$gt_id])
+                ->orderBy($orderField . ' ' . $order)
+                ->offset($limit)
+                ->limit($onePage)
+                ->asArray()
+                ->all();
+        }
     }
-
 
     /**
     * 条件选择商品
-    * 
     * @param  $where 查询条件
     * @author pjp
     */
@@ -126,4 +151,25 @@ class Goods extends \yii\db\ActiveRecord
     {
        return $this->find()->where($where)->limit(10)->asArray()->all();
     }
+
+    /**
+     * 处理特价商品信息
+     */
+    public function speciallistShow($onePage)
+    {
+        $data = Goods::find()
+            ->select(array('g_id','goods_name','brand_name','market_price','shop_price','g_img'))
+            ->leftJoin('mb_brand','mb_brand.brand_id = mb_goods.brand_id')
+            ->where(['mb_goods.is_show'=>'1'])
+            ->limit($onePage)
+            ->asArray()
+            ->all();
+
+        foreach($data as $key=>$val){
+            $data[$key]['comment'] = Comment::find()->where(['goods_id'=>$val['g_id']])->count('goods_id');
+        }
+        return $data;
+    }
+
+
 }

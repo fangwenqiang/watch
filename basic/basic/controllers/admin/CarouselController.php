@@ -24,10 +24,10 @@ class CarouselController extends Controller
      */
     public function actionIndex()
     {
-        $thisUrl = \yii\helpers\Url::toRoute(['admin/carousel/index']);
         $carousel = new Carousel();
         $request = Yii::$app->request;
-        $sortStatus = $request->get('sortStatus',0);
+        $sortStatus = $request->get('sortStatus',0);  //是否排序
+
         if (Yii::$app->request->isPost) {
             $carousel->image = UploadedFile::getInstance($carousel, 'image');
 
@@ -37,7 +37,7 @@ class CarouselController extends Controller
                 //判断排序数据类型
                 if(!preg_match("/^\d{1,10}$/",$sort)) {
                     unlink($path);
-                    return '请输入1-10位排序数字<br>程序2秒后返回'.'<meta http-equiv="Refresh" content="2;url='.$thisUrl.'"/>';
+                    return $this->error('请输入1-10位排序数字');
                 }
                 //编辑缩略图名称
                 $imgName = substr($path,strrpos($path,'/')+1);
@@ -50,25 +50,15 @@ class CarouselController extends Controller
                 $flag=$getThumb->create_thumb($path, $thumbName);
                 if(!$flag) {
                     unlink($path);
-                    return '创建缩略图失败！<br>程序2秒后返回'.'<meta http-equiv="Refresh" content="2;url='.$thisUrl.'"/>';
+                    return $this->error('创建缩略图失败');
                 }
                 //数据添加
-                $carousel = new CarouselForm();
-                $carousel->path = $path;
-                $carousel->is_show = $isShow;
-                $carousel->sort = $sort;
-                $carousel->thumb = $thumbName;
-                $carousel->save();
-                $id = $carousel->carousel_id;
-//                $id = $this->add(['sort'=>$sort,'is_show'=>$isShow,'path'=>$path]);
-//                var_dump($id);
-//                exit;
+                $id = $this->add(['sort'=>$sort,'isShow'=>$isShow,'path'=>$path,'thumbName'=>$thumbName]);
                 if(!$id) {
                     unlink($path);
-                    return '添加失败<br>程序2秒后返回'.'<meta http-equiv="Refresh" content="2;url='.$thisUrl.'"/>';
+                    return $this->error('出错了');
                 } else {
-                    return '添加成功<br>程序2秒后返回'.'<meta http-equiv="Refresh" content="2;url='.$thisUrl.'"/>';
-
+                    return $this->success('admin/carousel/index');
                 }
             }
         }
@@ -86,12 +76,16 @@ class CarouselController extends Controller
     protected function add($data)
     {
         $carousel = new CarouselForm();
-        $carousel->isNewRecord = true;
-        $carousel->setAttributes($data);
-        return $carousel->save();
+//        $carousel->isNewRecord = true;
+//        $carousel->setAttributes($data);
+//        return $carousel->save();
 //        ->createCommand()->getRawSql()
-
-     return $carousel->carousel_id;
+        $carousel->path = $data['path'];
+        $carousel->is_show = $data['isShow'];
+        $carousel->sort = $data['sort'];
+        $carousel->thumb = $data['thumbName'];
+        $carousel->save();
+        return $carousel->carousel_id;
 
     }
 
@@ -102,9 +96,9 @@ class CarouselController extends Controller
      */
       protected function select($sortStatus)
      {
-         $order = 'carousel_id';
-         if($sortStatus) $order = 'sort';
-         $query = CarouselForm::find()->orderBy($order,'DESC');
+         $order = 'sort';
+         if($sortStatus) $order = 'sort desc';
+         $query = CarouselForm::find()->orderBy($order);
          $pages = new Pagination(['totalCount' => $query->count(),'defaultPageSize' => 5]);
          $data = $query->offset($pages->offset)
              ->limit($pages->limit)

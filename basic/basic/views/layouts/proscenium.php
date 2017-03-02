@@ -24,8 +24,9 @@ use yii\helpers\Url;
     <script src="js/banner.js"></script>
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
+
     <script src="js/jquery.js"></script>
-    <script src="js/global.js"></script>
+
     <script src="js/saved_resource"></script>
     <script type="text/javascript" src="js/user.js"></script>
     <link rel="stylesheet" href="css/user.css">
@@ -35,7 +36,7 @@ use yii\helpers\Url;
 <div id="member_info2"></div>
 <div class="head">
     <div class="r1 w1225">
-        <div class="ri" id='Login'>
+        <div class="ri" id='login'>
             <?php foreach ($this->params['nav']['top'] as $key => $val) {?>
                     <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
             <?php } ?>
@@ -89,7 +90,7 @@ use yii\helpers\Url;
         <ul class="gNav">
             <?php
                 foreach ($this->params['nav']['zhu'] as $key => $val) {       ?>
-           
+
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
                     <?php   }    ?>
@@ -148,9 +149,10 @@ use yii\helpers\Url;
 </div>
 <script type="text/javascript">
     $(function () {
+
         //判断是否登录
         $.get("<?=Url::to(['home/login/login_status']) ?>", function(re_val){
-            if(re_val!=0)   
+            if(re_val!=0)
             {
                   str='<span><a href="#">欢迎:<font color="red">'+re_val+'</font></a></span>\
                     <span><a href="javascript:void(0)" id="out">退出</a></span>\

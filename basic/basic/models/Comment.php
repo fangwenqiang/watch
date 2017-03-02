@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Created by PhpStorm.
@@ -39,7 +40,6 @@ class Comment extends ActiveRecord{
         ->asArray()
         ->All();
     }
-
 
 
 }
