@@ -76,7 +76,7 @@ use app\Lib\Functions\Filtration;
                         foreach($data as $key=>$val){
                             ?>
                             <li>
-                                <a href="">
+                                <a href="<?php echo Url::to(['home/consignment/goods']).'&id='.$val['consignment_id'];?>">
                                     <!-- <i class="c__tMsk"></i> -->
                                     <img src="<?php echo $val['g_img']?>"  width="250" height="250" />
                                     <div class="tNm"><?php echo $val['author']?></div >

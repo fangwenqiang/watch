@@ -42,7 +42,7 @@ if (PHP_MAJOR_VERSION < 7) {
 
 if (!function_exists('json_last_error_msg')) {
     /**
-     * Copied from http://php.net/manual/en/functions.json-last-error-msg.php#117393
+     * Copied from http://php.net/manual/en/functions.json-last-error-qt_msg.php#117393
      * @return string
      */
     function json_last_error_msg()

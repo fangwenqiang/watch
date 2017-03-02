@@ -70,7 +70,7 @@ use \yii\widgets\LinkPager;
             </ul>
         </div>
     </div>
-    <div class="content_box" id="floor" style="height: 460px;width:980px;margin-left:200px;">
+    <div class="content_box" id="floor" style="height: 520px;width:980px;margin-left:200px;">
         <div id="main">
             <div class="position">
                 <a href="#"><strong>首页</strong></a>
@@ -125,6 +125,9 @@ use \yii\widgets\LinkPager;
                 </div>
                 <div class="account">
                     <div class="hisOrd">
+
+                <?php if($type == 0){ ?>
+
                         <table class="ho_middle" cellpadding="0" cellspacing="0">
                             <tbody><tr class="t">
                                 <td class="w120">手表名称</td>
@@ -189,18 +192,58 @@ use \yii\widgets\LinkPager;
                             <?php    } ?>
                             </tbody>
                         </table>
+                    <div id="div1" style="margin-left: 450px;margin-top: 20px;">
+                        <?= LinkPager::widget([   'pagination' => $page,
+                            'firstPageLabel' => '首页',
+                            'lastPageLabel' => '尾页',
+                            'nextPageLabel' => '下一页',
+                            'prevPageLabel' => '上一页',
+                            'maxButtonCount' => 2,
+                            'options' => ['class' => 'mLnk'],
 
-                        <div id="div1" style="margin-left: 450px;margin-top: 20px;">
-                            <?= LinkPager::widget([   'pagination' => $page,
-                                'firstPageLabel' => '首页',
-                                'lastPageLabel' => '尾页',
-                                'nextPageLabel' => '下一页',
-                                'prevPageLabel' => '上一页',
-                                'maxButtonCount' => 2,
-                                'options' => ['class' => 'mLnk'],
+                        ]); ?>
+                    </div>
+                       <?php } elseif($type == 1) { ?>
+                        <table class="ho_middle" cellpadding="0" cellspacing="0">
+                            <tbody><tr class="t">
+                                <td class="w120">手表名称</td>
+                                <td class="w186">商品图片</td>
+                                <td class="w75">商品品牌</td>
+                                <td>原价金额</td>
+                                <td class="w111">议价金额</td>
+                                <td class="w87">议价时间</td>
+                                <td class="w130">操作</td>
+                            </tr>
+                            <?php  foreach($yijia as $key=>$val){  ?>
+                                <tr class="c">
+                                    <td class="w120 h70"><a class="c0e7" target="_blank" href="#"><?php echo $val['author']?></a></td>
+                                    <td class="w186 adjust02" style="text-align:left;">
+                                        <a target="_blank" title="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" href="#"><img alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" src="images/3412_183_24_30_27_27885.jpg"></a>
+                                        <a target="_blank" title="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" href="#"><img alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表" src="images/3412_183_24_30_27_27885.jpg"></a>
+                                    </td>
+                                    <td class="w75 h70"><font class="c333"><?php echo $val['g_brand']?></font></td>
+                                    <td class="w87 adjust01">
+                                        <font class="cb01">￥<?php echo $val['shop_price']?>.00</font><br>
 
-                            ]); ?>
-                        </div>
+                                    </td>
+                                    <td class="w111 adjust01">
+                                        <font class="cb01">￥<?php echo $val['bargain_price']?>.00</font><br>
+                                    </td>
+                                    <td class="w87 adjust01">
+                                        <div><?php echo date('Y-m-d H:i:s',$val['bargain_time'])?></div>
+                                    </td>
+
+                                    <td class="w87 h70"><font class="c888">
+                                            <a class="c0e7" target="_blank" href="#">同意</a>
+                                            <span>|</span>
+                                            <a class="c0e7" target="_blank" href="#">不同意</a>
+                                    </td>
+                                </tr>
+                            <?php    } ?>
+                            </tbody>
+                        </table>
+                        <?php  } ?>
+
                     </div>
                 </div>
                 <!-- order表单 End -->
@@ -215,22 +258,34 @@ use \yii\widgets\LinkPager;
                 <div class="leftArea">
                     <div class="u__mine"><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_index&#39;,&#39;http://user.wbiao.cn/&#39;]);" href="http://user.wbiao.cn/" style="display: block; height: 100%;"></a></div>
                     <div class="floor">
-                        <div class="t"><i class="u__trade"></i><font class="f_fixed">交易管理</font></div>
+                        <div class="t"><i class="u__trade"></i><font class="f_fixed">卖家中心</font></div>
                         <div class="c">
                             <ul>
-                                <li><i class="u__point"></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_order&#39;,&#39;/order&#39;]);" href="Script/yonghu.htm" class="ccf0" title="我的订单" rel="nofollow">已上架商品 (<span class="cb01">1</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_address&#39;,&#39;/address&#39;]);" href="#" title="收货地址" rel="nofollow">审核中商品(<span class="cb01">0</span>)</a></li>
-                                <li style="border:0;"><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_bonus&#39;,&#39;/bonus&#39;]);" href="#" title="代金券/优惠券" rel="nofollow">收到出价(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_orderbooking&#39;,&#39;/orderbooking&#39;]);" href="#" title="我的预售" rel="nofollow">交易中 (<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_orderbooking&#39;,&#39;/orderbooking&#39;]);" href="#" title="我的预售" rel="nofollow">已发货 (<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">交易成功(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">交易失败(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">退货中(<span class="cb01">0</span>)</a></li>
-                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_giftcard&#39;,&#39;/giftcard&#39;]);" href="#" title="礼品卡" rel="nofollow">售后服务(<span class="cb01">0</span>)</a></li>
+                                <li><i class="u__point"></i><a  href="<?php echo Url::to(['home/consignment/my_apply'])?>" class="ccf0" title="我的订单" rel="nofollow">我的商品 (<span class="cb01"><?php echo $all_count?></span>)</a></li>
+                                <li style="border:0;"><i></i><a  href="<?php echo Url::to(['home/consignment/my_apply'])."&type=1"?>" title="代金券/优惠券" rel="nofollow">收到出价(<span class="cb01"><?php echo $yijia_count?></span></span>)</a></li>
+                                <li><i></i><a  href="javascript:void(0);" title="我的预售" rel="nofollow">发货中 (<span class="cb01">0</span>)</a></li>
+                              </ul>
+                        </div>
+                    </div>
+                    <div class="floor">
+                        <div class="t"><i class="u__trade"></i><font class="f_fixed">买家中心</font></div>
+                        <div class="c">
+                            <ul>
+                                <li><i class="u__point"></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_order&#39;,&#39;/order&#39;]);" href="Script/yonghu.htm" class="ccf0" title="我的订单" rel="nofollow">待收货 (<span class="cb01">0</span>)</a></li>
+                                <li style="border:0;"><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_bonus&#39;,&#39;/bonus&#39;]);" href="#" title="代金券/优惠券" rel="nofollow">退货中(<span class="cb01">0</span>)</a></li>
                             </ul>
                         </div>
                     </div>
-
+                       <div class="floor">
+                        <div class="t"><i class="u__trade"></i><font class="f_fixed">商户中心</font></div>
+                        <div class="c">
+                            <ul>
+                                <li><i class="u__point"></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_order&#39;,&#39;/order&#39;]);" href="Script/yonghu.htm" class="ccf0" title="我的订单" rel="nofollow">交易成功 (<span class="cb01">0</span>)</a></li>
+                                <li style="border:0;"><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_bonus&#39;,&#39;/bonus&#39;]);" href="#" title="代金券/优惠券" rel="nofollow">交易失败(<span class="cb01">0</span>)</a></li>
+                                <li><i></i><a onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;user&#39;,&#39;user_address&#39;,&#39;/address&#39;]);" href="#" title="收货地址" rel="nofollow">售后服务(<span class="cb01">0</span>)</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div></div>
             <!-- 左边菜单 End -->
 

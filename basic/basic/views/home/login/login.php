@@ -1,3 +1,4 @@
+
 ﻿<?php
 use yii\helpers\Url;
 use app\Lib\Functions\Filtration;
@@ -18,7 +19,6 @@ use \yii\widgets\LinkPager;
 
         -->
     </style>
-
 
 <!-- Begin header -->
 <div id="member_info2"></div>
