@@ -18,6 +18,19 @@ use yii\bootstrap\Html;
         border-radius: 5px;
         margin: 0;
     }
+    .fa {
+        width: 110px;
+        min-height: 20px;
+        display: block;
+        background-color: #00A000;
+        border: 1px solid #3762bc;
+        color: #fff;
+        padding: 9px 10px;
+        font-size: 12px;
+        line-height: normal;
+        border-radius: 5px;
+        margin: 0;
+    }
 </style>
 <script src="js/jquery.js"></script>
 <link rel="stylesheet" href="css/sxg.css">
@@ -61,53 +74,50 @@ use yii\bootstrap\Html;
                 'enableClientValidation' => false //关闭客户端验证
             ]); ?>
             <span class="STYLE3"><a href="#">帮助中心</a></span></div>
-        <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;><span
+        <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span
                 class="STYLE1">*用户名:</span></div>
-        <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left" ;>
-            <?= $form->field($model, 'username')->input('test', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:30px', 'placeholder' => '4-10位字符，可由中文、英文、数字及组成'])->label('') ?>
+        <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
+            <?= $form->field($model, 'username')->input('test', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:38px', 'placeholder' => '4-10位字符，可由中文、英文、数字及组成'])->label('') ?>
             <span class="mb25">
 </span></div>
 
 
-        <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;><span
+        <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span
                 class="STYLE1">*设置密码:</span></div>
-        <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left" ;>
-            <?= $form->field($model, 'password')->input('password', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:30px', 'placeholder' => '6-15位字符，可使用字母、数字组合'])->label('') ?>
+        <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
+            <?= $form->field($model, 'password')->input('password', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:38px', 'placeholder' => '6-15位字符，可使用字母、数字组合'])->label('') ?>
             <span class="mb25">
 </span></div>
 
-        <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;><span
+        <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span
                 class="STYLE1">*确认密码:</span></div>
-        <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left" ;>
-            <?= $form->field($model, 'espassword')->input('password', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:30px', 'placeholder' => '请再次输入密码'])->label('') ?>
+        <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
+            <?= $form->field($model, 'espassword')->input('password', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:38px', 'placeholder' => '请再次输入密码'])->label('') ?>
             <span class="mb25">
 </span></div>
 
-        <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;><span
+        <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span
                 class="STYLE1">*电子邮箱:</span></div>
-        <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left" ;>
-            <?= $form->field($model, 'email')->input('email', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:30px', 'placeholder' => '请输入常用的邮箱，将用来找回密码、接收订单通知等'])->label('') ?>
+        <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
+            <?= $form->field($model, 'email')->input('email', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:38px', 'placeholder' => '请输入常用的邮箱，将用来找回密码、接收订单通知等'])->label('') ?>
             <span class="mb25">
 </span></div>
 
-        <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;><span
+        <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span
                 class="STYLE1">*手机号码:</span></div>
-        <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left" ;>
-            <?= $form->field($model, 'tel')->input('tel', ['class' => 'inpMain', 'size' => '50', 'style' => 'height:30px', 'placeholder' => '请输入11位手机号码 '])->label('') ?>
+        <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
+            <?= $form->field($model, 'tel')->input('tel', ['class' => 'inpMain', 'size' => '50', 'id' => 'tel', 'style' => 'height:38px', 'placeholder' => '请输入11位手机号码 '])->label('') ?>
             <span class="mb25">
 </span></div>
 
-        <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;><span class="STYLE1">*验证码:
+        <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;><span class="STYLE1">*验证码:
         </div>
-        <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left" ;>
-            <input type="text" value="" size="15" style="height:20px"/><input type="text" value="" size="7"
-                                                                              style="height:20px"/>
-            <span class="mb25"><span class="gray pl10" id="vercodespan">看不清？<a href="#"
-                                                                               class="redLink">换一张</a> </span><span
-                    class="warn2 vercode2">请输入图片中的字符，不区分大小写</span></span></div>
+        <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left" ;>
+            <div style="float: left"><?= $form->field($model, 'yan')->input('text', ['class' => 'inpMain', 'size' => '30',  'style' =>  'height:38px', 'placeholder' => '请输入收到的短信验证码 '])->label('') ?></div><div style="float: left;margin-left: 10px;"><a href="javascript:void(0);" onclick="fun()" ><input type="button" value="发送验证码" class="fa"></a></div></div>
+        <input type="hidden" value="<?= Yii::$app->request->csrfToken ?>" id="csrf" />
 
-        <div style="width:200px;height:40px; float:left;margin-top:10px;" align="right" ;></div>
-        <div style="width:880px;height:40px; float:right;margin-top:10px;" align="left"
+        <div style="width:200px;height:40px; float:left;margin-top:15px;" align="right" ;></div>
+        <div style="width:880px;height:40px; float:right;margin-top:15px;" align="left"
              ;> <?= Html::submitButton('注册', ['class' => 'su', 'name' => 'submit']) ?></div>
 
         <?php ActiveForm::end() ?>
@@ -138,3 +148,18 @@ use yii\bootstrap\Html;
 </div>
 </body>
 </html>
+<script>
+    function fun() {
+        var phone = $("#tel").val();
+        var csrf = $("#csrf").val();
+        $.ajax({
+            type: 'GET',
+            url: "<?=Url::to(['home/login/send']) ?>",
+            data: "phone="+phone+"&id="+csrf,
+            async: true,
+            success: function(msg){
+                alert(msg);
+            }
+        });
+    }
+</script>
