@@ -156,7 +156,7 @@ use yii\helpers\Url;
             if(re_val!=0)
             {
                   str='<span><a href="#">欢迎:<font color="red">'+re_val+'</font></a></span>\
-                    <span><a href="javascript:void(0)" id="out">退出</a></span>\
+                    <span><a href="<?=Url::to(['home/login/logout']) ?>">退出</a></span>\
                     <span><a href="#">购物车</a></span>'
                   $("#login").html(str);
             }
