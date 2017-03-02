@@ -172,4 +172,22 @@ class Goods extends \yii\db\ActiveRecord
     }
 
 
+    /**
+     * 查询处理限时抢购商品
+     */
+    public function timeShow()
+    {
+        $data = Goods::find()
+            ->select(array('g_id','mb_goods.gt_id','gt_name','goods_name','click_count','market_price','g_img','promote_price','keywords','promote_start_date','promote_end_date'))
+            ->leftJoin('mb_category','mb_goods.gt_id = mb_category.gt_id')
+            ->where(['mb_goods.is_show'=>'1','is_promote'=>'1'])
+            ->asArray()
+            ->all();
+        $result= array();
+        foreach ($data as $key => $val) {
+            $result[$val['gt_name']][] = $val;
+        }
+        return $result;
+    }
+
 }

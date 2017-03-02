@@ -62,6 +62,17 @@ class WatchController extends CommonController{
     }
 
     /*
+     * 限时抢购
+     * */
+    public function actionTimelist()
+    {
+        $goods = new Goods();
+        $data = $goods->timeShow();
+
+        return $this->render('timelist',['data'=>$data]);
+    }
+
+    /*
      * 展示品牌等级  名称
      * */
     public function BrandAll()
