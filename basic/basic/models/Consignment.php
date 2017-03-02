@@ -30,20 +30,21 @@ class Consignment extends ActiveRecord
        return \Yii::$app->db ->createCommand() ->insert('mb_consignment',$arr) ->execute();
     }
     /*
-     * 自带分页查询数据
+     * 自带分页查询数据 用户查看我的寄卖
      */
     public function selectAll2($p)
     {
+        $session = \Yii::$app->session;
         $arr = (new \yii\db\Query())->from('mb_consignment')
             ->select(array('consignment_id','author','shop_price','g_brand','is_bargain','describe','g_img','add_time','mb_user.user_id','shop_status','credit','is_bargain'))
-            ->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")->where(['mb_consignment.user_id'=>1]);
+            ->innerJoin('mb_user',"mb_consignment.user_id=mb_user.user_id")->where(['mb_consignment.user_id'=>$session->get('user_id')]);
         $pages = new Pagination(['totalCount' =>$arr->count(), 'pageSize' =>$p]);
         $data['data'] = $arr->offset($pages->offset)->limit($pages->limit)->all();
         $data['page'] = $pages;
         return $data;
     }
     /*
-     * 自己写的分页查询
+     * 自己写的分页查询   寄卖铺
      */
     public function selectAll($limit,$order,$offset,$where='')
     {

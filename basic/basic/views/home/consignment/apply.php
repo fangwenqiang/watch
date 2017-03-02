@@ -31,7 +31,7 @@ use yii\helpers\Url;
                 </li>
                 <li><a class="aStyle navBtn03" href="<?php echo Url::to(['home/consignment/my_apply'])?>">我的寄卖</a></li>
                 <li class="anotherBtn">
-                    <a style="display:block; width:163px; height:44px;" href="<?php echo Url::to(['home/consignment/apply'])?> target="_blank"><div class="nav_btn01">
+                    <a style="display:block; width:163px; height:44px;" href="<?php echo Url::to(['home/consignment/apply'])?>" target="_blank"><div class="nav_btn01">
                         <p class="clearfix">
                             <span class="t1 pngfix"></span>&nbsp;立即寄卖
                         </p>

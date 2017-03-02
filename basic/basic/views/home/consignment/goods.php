@@ -127,6 +127,12 @@ use yii\helpers\Url;
                var price = $('#prices').val();
                var id = "<?php echo $data['consignment_id'];?>";
                var prices = "<?php echo $data['shop_price'];?>";
+               var user_id = "<?php $session = Yii::$app->session; echo $session->get('user_id')?>";
+               if(user_id.length == 0){
+                   alert('请先登录');
+                   location.href="<?php echo Url::to(['home/login/login'])?>";
+                   return;
+               }
                if((price/1) >= (prices/1)){
                    $('#span_msg').html("<font color='red'>非法出价</font>")
                    return false;
@@ -146,6 +152,8 @@ use yii\helpers\Url;
                    success:function(msg){
                       if(msg == -1){
                           $('#span_msg').html("<font color='red'>不能重复议价</font>")
+                      }else if(msg == -2){
+                          $('#span_msg').html("<font color='red'>不能议价自己的商品</font>");
                       } else if(msg == 0){
                            $('#span_msg').html("<font color='red'>议价失败</font>");
                        } else {
