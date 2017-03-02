@@ -13,6 +13,12 @@ class CommonController extends Controller
 
     public function init()
     {
+
+        session_start();
+        $nav_model = new Nav();
+        $info = json_decode(file_get_contents('systemConfig.txt'),true);
+        $nav_data = $nav_model->recursion();
+
         $view = YII::$app->view;
         $nav_model = new Nav();
         $view->params['system'] = json_decode(file_get_contents('systemConfig.txt'),true);

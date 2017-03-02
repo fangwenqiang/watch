@@ -4,6 +4,7 @@ namespace app\controllers\home;
 
 use Yii;
 use app\models\Consignment;  //模型层
+use app\models\Bargain;  //模型层
 use app\Lib\Functions\Filtration;
 class ConsignmentController extends CommonController
 {
@@ -30,6 +31,10 @@ class ConsignmentController extends CommonController
      */
     public function actionIndex()
     {
+        $session = Yii::$app->session;
+        if($session->get('user_id') == ''){
+            return $this->qt_success('home/login/login','请先登录');
+        }
        //查询寄卖品
         $consignment_model = new Consignment();
         if(empty($_GET['search'])){
@@ -85,9 +90,21 @@ class ConsignmentController extends CommonController
      */
     public function actionMy_apply()
     {
+        $request = \Yii::$app->request;
+        $type = $request->get('type');
+        $session = Yii::$app->session;
         //查询寄卖品
         $consignment_model = new Consignment();
         $data = $consignment_model->selectAll2(3);
+        $data['all_count'] = Consignment::find()->where(array('user_id'=>$session->get('user_id')))->count();
+        $bargain_model = new Bargain();
+        $data['yijia'] = $bargain_model->all();
+        $data['yijia_count'] = count($bargain_model->all());
+        $data['type'] = 0;
+        //查询议价表
+        if($type == 1){
+            $data['type'] = 1;
+        }
         return $this->render('my_apply',$data);
     }
 
@@ -99,18 +116,16 @@ class ConsignmentController extends CommonController
         return $this->render('consult');
     }
 
-   public function sort($a,$filed)
-    {
-        return $a['data'];
-      $score=array();
 
-    }
     /*
      * 立即寄卖
      */
     public function actionApply()
     {
-
+        $session = Yii::$app->session;
+        if($session->get('user_id') == ''){
+            return $this->qt_success('home/login/login','请先登录');
+        }
         return $this->render('apply');
     }
 
@@ -120,26 +135,27 @@ class ConsignmentController extends CommonController
     public function actionAdd()
     {
         $consignment_model = new Consignment();
-        $session = Yii::$app->session;
         $request =  \Yii::$app->request->post();
+        $session = Yii::$app->session;
         $path = Filtration::image_upload('./uploads/',time().'.jpg',$_FILES['g_img']);
         if($path){
             array_pop($request);
             $request['g_img'] = '../.'.$path;
             $request['add_time'] = time();
-//            $request['user_id'] = $session->get('user_id');
-            $request['user_id'] = 1;
+            $request['user_id'] = $session->get('user_id');
             if($consignment_model->dataInsert($request)){
-                 echo "添加成功";
+                 return $this->qt_success('home/consignment/index','寄卖成功，请等待审核');
             } else {
-                echo '添加失败';
+                return $this->qt_error('寄卖失败');
             }
         } else {
-            echo '添加失败';
+            return $this->qt_error('寄卖失败');
         }
     }
 
-
+   /*
+    * 分页连接
+    */
     public function page($count,$limit,$p=1)
     {
         //总页数
@@ -155,4 +171,39 @@ class ConsignmentController extends CommonController
     }
 
 
+    /*
+     * 商品详情
+     */
+    public function actionGoods()
+    {
+        $request = \Yii::$app->request;
+        $id = $request->get('id');
+        $consignment_model = new Consignment();
+        $data = $consignment_model->one($id);
+        return $this->render('goods',array('data'=>$data));
+    }
+
+    //议价
+    public function actionBargain()
+    {
+        $bargain_model = new Bargain();
+        $request = \Yii::$app->request;
+        $session = Yii::$app->session;
+        $id = $request->post('id');
+        $price = $request->post('price');
+        //判断是否议价
+        $consignment_model = new Consignment();
+        $arr = $consignment_model->one($id);
+        if($session->get('user_id') == $arr['user_id']){
+             echo -2;
+        } elseif($bargain_model->one($id) != ''){
+            echo -1;
+        } else {
+            if($bargain_model->add($id,$arr['user_id'],$price)){
+                echo 1;
+            } else {
+                echo 0;
+            }
+        }
+    }
 }

@@ -31,7 +31,7 @@ use yii\helpers\Url;
                 </li>
                 <li><a class="aStyle navBtn03" href="<?php echo Url::to(['home/consignment/my_apply'])?>">我的寄卖</a></li>
                 <li class="anotherBtn">
-                    <a style="display:block; width:163px; height:44px;" href="<?php echo Url::to(['home/consignment/apply'])?> target="_blank"><div class="nav_btn01">
+                    <a style="display:block; width:163px; height:44px;" href="<?php echo Url::to(['home/consignment/apply'])?>" target="_blank"><div class="nav_btn01">
                         <p class="clearfix">
                             <span class="t1 pngfix"></span>&nbsp;立即寄卖
                         </p>
@@ -88,8 +88,8 @@ use yii\helpers\Url;
                                 <li class="clearfixwatch">
                                     <div class="jclistleft fl"><span>*</span>是否议价：</div>
                                     <div class="jclistDown fl">
-                                        <input id="is_bargain" name="is_bargain" required  type="radio"   />&nbsp;是&nbsp;&nbsp;
-                                        <input id="is_bargain" name="is_bargain" required  type="radio"   />&nbsp;否
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"  value="1" />&nbsp;是&nbsp;&nbsp;
+                                        <input id="is_bargain" name="is_bargain" required  type="radio"   value="0"/>&nbsp;否
                                         <span class="errorInfo"></span>
                                     </div>
                                 </li>
