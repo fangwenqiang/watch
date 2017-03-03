@@ -41,7 +41,7 @@ use \yii\widgets\LinkPager;
         <div style="width:495px;height:20px; float:right;margin-top:20px;" align="right" ;>
 
 
-            <span class="STYLE3"><a href="#">注册新用户</a></span></div>
+            <span class="STYLE3"><a href="<?=Url::to(['home/login/reg']) ?>">注册新用户</a></span></div>
         <div style="width:495px;height:80px; float:right;margin-top:100px;" align="center" ;>
             <form id="form" method="post" action="javascript:void(0)">
                 <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">

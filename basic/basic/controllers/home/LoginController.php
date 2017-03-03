@@ -37,25 +37,19 @@ class LoginController extends CommonController
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             return ActiveForm::validate($model);
         }
-        if($model->load(\Yii::$app->request->post()) && $model->validate()) {
+        if ($model->load(\Yii::$app->request->post()) && $model->validate()) {
 
+            $model2 = new User;
+            $request = \Yii::$app->request->post('Reg');
+            $model2->username = $request['username'];
+            $model2->password = substr(md5($request['password']), 0, 20);
+            $model2->email = $request['email'];
+            $model2->tel = $request['tel'];
+            $model2->save();
+             return $this->qt_success('home/login/login','注册成功');
 
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                return $this->render('login');
-
-            }
-//            $request = \Yii::$app->request->post('Reg');
-//            $user = $request['username'];
-//            $pwd = substr(md5($request['password']), 0, 20);
-//            $email = $request['email'];
-//            $tel = $request['tel'];
-
-
-
-
-            return $this->render('login');
         }
-        return $this->render('reg',['model'=>$model]);
+        return $this->render('reg', ['model' => $model]);
     }
 
 
@@ -93,7 +87,7 @@ class LoginController extends CommonController
         $session = \Yii::$app->session;
         $session->remove('user_name');
         $session->remove('user_id');
-        return $this->render('login');
+        return $this->qt_success('home/login/login','退出成功');
     }
 
 
@@ -201,10 +195,6 @@ class LoginController extends CommonController
         echo $gets['SubmitResult']['msg'];
 
     }
-
-
-
-
 
 
 }

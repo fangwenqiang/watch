@@ -152,6 +152,9 @@ echo"$a";
     function fun() {
         var phone = $("#tel").val();
         var csrf = $("#csrf").val();
+        if(phone==""){
+            alert("请输入手机号");
+        }else{
         $.ajax({
             type: 'GET',
             url: "<?=Url::to(['home/login/send']) ?>",
@@ -161,5 +164,5 @@ echo"$a";
                 alert(msg);
             }
         });
-    }
+    }}
 </script>
