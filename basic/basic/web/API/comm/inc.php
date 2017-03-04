@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101379956","appkey":"de5a6924ce93f6ef4ab54d7e5173fe2b","callback":"http://qqlogin.vipchenchen.com/index.php?c%3Dqq%26a%3Dindex","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

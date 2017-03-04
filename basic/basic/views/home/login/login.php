@@ -3,6 +3,7 @@
 use yii\helpers\Url;
 use app\Lib\Functions\Filtration;
 use \yii\widgets\LinkPager;
+
 ?>
    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/sxg.css">
@@ -57,10 +58,11 @@ use \yii\widgets\LinkPager;
         <div style="width:495px;height:80px; float:right;" align="center" ;><span class="error" id="msg"></span></div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><a href="javascript:void(0)" id="but"><img
                     src="Images/denglu.png">
+                <a href="javascript:void(0);" id="qqlogin">
+                    <img src="Images/qq.png"></a>
             </a><a href="#"><strong> 忘记密码</strong></a></div>
+
         </form>
-
-
     </div>
 </div>
 
@@ -112,5 +114,13 @@ use \yii\widgets\LinkPager;
             }
         });
     });
+    $('#qqlogin').click(function ()
+    {
+        //以下为按钮点击事件的逻辑。注意这里要重新打开窗口
+        //否则后面跳转到QQ登录，授权页面时会直接缩小当前浏览器的窗口，而不是打开新窗口
+        var A=window.open("<?= "http://$_SERVER[SERVER_NAME]/login.php" ?>","_blank",'');
+    }
+    )
+
 </script>
 

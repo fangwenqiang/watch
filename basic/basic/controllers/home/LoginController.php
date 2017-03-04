@@ -28,6 +28,19 @@ class LoginController extends CommonController
         return $this->render('login');
     }
 
+    public function actionQqlogin()
+    {
+
+        require_once(__DIR__."/../../web/API/qqConnectAPI.php");
+        $qc = new \QC();
+        $asc=$qc->qq_callback();
+        $oid=$qc->get_openid();
+
+//        $qc = new \QC($asc,$oid);
+//        $ret = $qc->get_user_info();
+        print_r($oid);
+    }
+
 //注册
 
     public function actionReg()
