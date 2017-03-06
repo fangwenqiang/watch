@@ -44,39 +44,24 @@
         </div>
         <div class="vip-list vip-list2">
             <?php foreach($val as $v){ ?>
-            <a href="/seagull-g48423.html?act=MTQxMzAwMQ==" target="_blank">
-                <img class="lazy" src="Images/<?=$v['g_img']?>"
-                     alt="" />
-                <p id="CountDown" class="count-down" data-config="{'minDigit':0,'timeStamp':true,'interval':1000,'startTime':'2017-02-27 16:31:58','endTime':'2017-03-06 10:00:00','startTips':'<span class=stop-tips>离活动开始还有</span>','stopTips':'<span class=stop-tips>活动结束，欢迎关注</span>','endTips':'<span class=start-tips>仅剩：</span>'}">
+            <a href="javascript:void (0)" target="_blank">
+                <img class="lazy" src="Images/<?=$v['g_img']?>"alt="" />
+                <p id="CountDown" class="count-down" endTime="<?=$v['promote_end_date']?>">
                 </p>
                 <p class="p1">
-                    <i>
-                        ¥
-                    </i>
-                            <span>
-                                <?=$v['promote_price']?>
-                            </span>
-                    <code>
-                        <b>
-                            3.5
-                        </b>
-                        折
-                    </code>
-                    <del>
-                        <?=$v['market_price']?>
-                    </del>
+                    <i>¥</i>
+                    <span><?=$v['promote_price']?></span>
+                    <code><b>3.5</b>折</code>
+                    <del><?=$v['market_price']?></del>
                 </p>
                 <p class="p2">
                     <?=$v['goods_name'].' '.$v['keywords'] ?>
                 </p>
-                <p class="p3">
-                    中国
-                </p>
-                <p class="p4">
-                    销量
-                            <span>
-                                <?=$v['click_count']?>
-                            </span>
+                <p class="p3">中国</p>
+                <p class="p4">销量
+                    <span>
+                        <?=$v['click_count']?>
+                    </span>
                 </p>
                 <p class="sale-out">
                     已抢光
@@ -119,58 +104,32 @@
         </dl>
     </div>
 </div>
-<script src="Scripts/1ce8c5397e5f46a8999a4e14d720bf55.js">
-</script>
-<script type="text/javascript">
-    function get_bonus(bonus_type_id) {
-        $.ajax({
-            type: "POST",
-            cache: false,
-            url: "/activity_index/get_activity_bonus?activity_id=141&bonus_type_id=" + bonus_type_id,
-            success: function(msg) {
-                if ($.trim(msg) != "") {
-                    alert(msg);
-                    if (msg.indexOf('登录') > 0) {
-                        location.href = user_wbiao_cn + 'index/login';
-                    }
-                }
+
+<script src="js/jquery.js"></script>
+<script>
+    $(function(){
+        xianshi();
+    });
+    function xianshi()
+    {
+        var newTime = Date.parse(new Date())/1000;  //当前时间戳
+        $.each($('.count-down'), function (k,v) {
+            endTime = $(this).attr('endTime'); //结束时间
+            a = endTime-newTime;
+            if(a > 0){
+                intDiff = parseInt(a);//倒计时总秒数量
+                day = Math.floor(intDiff / (60 * 60 * 24));
+                hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+                minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+                if (minute <= 9) minute = '0' + minute;
+                if (second <= 9) second = '0' + second;
+
+                $(this).html('<span class=stop-tips>离活动开始还有'+day+'天'+hour+'时'+minute+'分'+second+'秒</span>');
+            }else{
+                $(this).html('<span class=stop-tips>活动已经结束</span>');
             }
         });
+        setInterval("xianshi()",1000);
     }
 </script>
-<script type="text/javascript">
-</script>
-<div class="clear">
-</div>
-<div style="display:none;">
-</div>
-<script>
-</script>
-<script src="Scripts/c4b60ddc9fab4ef1aaf95cf7b8a766e6.js">
-</script>
-<script>
-    var is_sy = 0
-</script>
-<script src="Scripts/e41ab836913142e5a0512b40234fb3bd.js">
-</script>
-<script language="javascript" type="text/javascript">
-    if (typeof(getCookie) == "undefined") {
-        function getCookie(objName) {
-            var arrStr = document.cookie.split(";");
-            for (var i = 0; i < arrStr.length; i++) {
-                var temp = arrStr[i].split("=");
-                if (temp[0].replace(/(^\s*)|(\s*$)/g, "") == objName) return unescape(temp[1]);
-            }
-        }
-    } (function() {
-        var ntnode = document.createElement('script');
-        ntnode.type = 'text/javascript';
-        ntnode.async = true;
-        ntnode.src = 'https://dl.wbiao.com/js/xn6/ntkfstat.js?siteid=kf_9516';
-        var snode = document.getElementsByTagName('script')[0];
-        snode.parentNode.insertBefore(ntnode, snode);
-    })();
-</script>
-<script language="javascript" type="text/javascript" src="Scripts/ntkfparam.js">
-</script>
-

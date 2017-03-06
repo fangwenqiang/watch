@@ -3,6 +3,7 @@
 use yii\helpers\Url;
 use app\Lib\Functions\Filtration;
 use \yii\widgets\LinkPager;
+
 ?>
    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/sxg.css">
@@ -39,7 +40,9 @@ use \yii\widgets\LinkPager;
     </div>
     <div style="width:495px;height:450px; float:right;margin-top:30px;border:1px solid;">
         <div style="width:495px;height:20px; float:right;margin-top:20px;" align="right" ;>
-            <span class="STYLE3"><a href="#">注册新用户</a></span></div>
+
+
+            <span class="STYLE3"><a href="<?=Url::to(['home/login/reg']) ?>">注册新用户</a></span></div>
         <div style="width:495px;height:80px; float:right;margin-top:100px;" align="center" ;>
             <form id="form" method="post" action="javascript:void(0)">
                 <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">
@@ -54,11 +57,11 @@ use \yii\widgets\LinkPager;
         </div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><span class="error" id="msg"></span></div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><a href="javascript:void(0)" id="but"><img
-                    src="Images/denglu.png">
-            </a><a href="<?=Url::to(['home/personal/back_password']) ?>"><strong> 忘记密码</strong></a></div>
+                    src="Images/denglu.png"></a>
+                <a href="javascript:void(0);" id="qqlogin">
+                    <img src="Images/qq.png"></a>
+            <a href="<?=Url::to(['home/personal/back_password']) ?>"><strong> 忘记密码</strong></a></div>
         </form>
-
-
     </div>
 </div>
 
@@ -110,5 +113,13 @@ use \yii\widgets\LinkPager;
             }
         });
     });
+    $('#qqlogin').click(function ()
+    {
+        //以下为按钮点击事件的逻辑。注意这里要重新打开窗口
+        //否则后面跳转到QQ登录，授权页面时会直接缩小当前浏览器的窗口，而不是打开新窗口
+        var A=window.open("<?= "http://$_SERVER[SERVER_NAME]/login.php" ?>","_blank",'');
+    }
+    )
+
 </script>
 
