@@ -27,7 +27,7 @@ use \yii\widgets\LinkPager;
 
 <!-- End header -->
 <link rel="stylesheet" href="css/index.css" type="text/css" media="screen, projection"/>
-<script type="text/javascript" src="Script/index.js"></script>
+
 
 <!--index banner start-->
 
@@ -57,11 +57,10 @@ use \yii\widgets\LinkPager;
         </div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><span class="error" id="msg"></span></div>
         <div style="width:495px;height:80px; float:right;" align="center" ;><a href="javascript:void(0)" id="but"><img
-                    src="Images/denglu.png">
+                    src="Images/denglu.png"></a>
                 <a href="javascript:void(0);" id="qqlogin">
                     <img src="Images/qq.png"></a>
-            </a><a href="#"><strong> 忘记密码</strong></a></div>
-
+            <a href="<?=Url::to(['home/personal/back_password']) ?>"><strong> 忘记密码</strong></a></div>
         </form>
     </div>
 </div>
@@ -88,7 +87,7 @@ use \yii\widgets\LinkPager;
         <a href="javascript:void(0);" class="c__gotop" title="返回顶部" style="display:none;" rel="nofollow"></a>
     </div>
 </div>
-<script type="text/javascript" src="public/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script>
     $('#but').click(function () {
         var csrfToken = $('#_csrf').val();
