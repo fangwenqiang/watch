@@ -41,10 +41,13 @@ use yii\helpers\Url;
             </dl>
         </div>
         <div class="vip-list vip-list2">
+
             <?php foreach($val as $v){ ?>
             <a href="<?=url::to(['home/goods-show/show','id'=>$v['g_id']])?>" target="_blank">
+            <?php foreach($val as $k=>$v){ ?>
+            <a href="javascript:void (0)" target="_blank">
                 <img class="lazy" src="Images/<?=$v['g_img']?>"alt="" />
-                <p id="CountDown" class="count-down" endTime="<?=$v['promote_end_date']?>">
+                <p id="<?=$k?>" class="count-down" endTime="<?=$v['promote_end_date']?>" >
                 </p>
                 <p class="p1">
                     <i>¥</i>
@@ -121,6 +124,9 @@ use yii\helpers\Url;
                 hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
                 minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
                 second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+
+                if (minute <= 9) minute = '0' + minute;
+                if (second <= 9) second = '0' + second;
                 $(this).html('<span class=stop-tips>离活动开始还有'+day+'天'+hour+'时'+minute+'分'+second+'秒</span>');
             }else{
                 $(this).removeClass('.count-down');
