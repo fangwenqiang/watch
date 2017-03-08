@@ -1,9 +1,7 @@
-<!--<link rel="stylesheet" href="Content/a52171a7950f4e708694bcc84acd48a9.css">-->
-<link rel="stylesheet" href="Content/d14ccfaff1ec468a9892026939bea808.css">
-
+<?php
+use yii\helpers\Url;
+?>
 <link rel="stylesheet" href="Content/4c9039ca0c6c470d997c11ac48f3d914.css">
-
-
 <div id="main">
     <?php foreach($data as $key=>$val){ ?>
     <div class="vip-f vip-f2">
@@ -44,7 +42,7 @@
         </div>
         <div class="vip-list vip-list2">
             <?php foreach($val as $v){ ?>
-            <a href="javascript:void (0)" target="_blank">
+            <a href="<?=url::to(['home/goods-show/show','id'=>$v['g_id']])?>" target="_blank">
                 <img class="lazy" src="Images/<?=$v['g_img']?>"alt="" />
                 <p id="CountDown" class="count-down" endTime="<?=$v['promote_end_date']?>">
                 </p>
@@ -108,12 +106,13 @@
 <script src="js/jquery.js"></script>
 <script>
     $(function(){
-        xianshi();
+        count_dowd = $('.count-down');
+        setTimeout("xianshi()",1000);
     });
     function xianshi()
     {
         var newTime = Date.parse(new Date())/1000;  //当前时间戳
-        $.each($('.count-down'), function (k,v) {
+        $.each(count_dowd, function (k,v) {
             endTime = $(this).attr('endTime'); //结束时间
             a = endTime-newTime;
             if(a > 0){
@@ -122,14 +121,12 @@
                 hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
                 minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
                 second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
-                if (minute <= 9) minute = '0' + minute;
-                if (second <= 9) second = '0' + second;
-
                 $(this).html('<span class=stop-tips>离活动开始还有'+day+'天'+hour+'时'+minute+'分'+second+'秒</span>');
             }else{
+                $(this).removeClass('.count-down');
                 $(this).html('<span class=stop-tips>活动已经结束</span>');
             }
         });
-        setInterval("xianshi()",1000);
+        setTimeout("xianshi()",1000);
     }
 </script>
