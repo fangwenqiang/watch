@@ -1,25 +1,24 @@
-﻿
-﻿<?php
+﻿﻿<?php
 use yii\helpers\Url;
 use app\Lib\Functions\Filtration;
 use \yii\widgets\LinkPager;
 
 ?>
-   <script src="js/jquery.js"></script>
-    <link rel="stylesheet" href="css/sxg.css">
-    <style type="text/css">
-        <!--
-        .STYLE1 {
-            font-size: large
-        }
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/sxg.css">
+<style type="text/css">
+    <!--
+    .STYLE1 {
+        font-size: large
+    }
 
-        .STYLE3 {
-            font-size: medium;
-            color: #CC0000;
-        }
+    .STYLE3 {
+        font-size: medium;
+        color: #CC0000;
+    }
 
-        -->
-    </style>
+    -->
+</style>
 
 <!-- Begin header -->
 <div id="member_info2"></div>
@@ -42,7 +41,7 @@ use \yii\widgets\LinkPager;
         <div style="width:495px;height:20px; float:right;margin-top:20px;" align="right" ;>
 
 
-            <span class="STYLE3"><a href="<?=Url::to(['home/login/reg']) ?>">注册新用户</a></span></div>
+            <span class="STYLE3"><a href="<?= Url::to(['home/login/reg']) ?>">注册新用户</a></span></div>
         <div style="width:495px;height:80px; float:right;margin-top:100px;" align="center" ;>
             <form id="form" method="post" action="javascript:void(0)">
                 <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">
@@ -114,13 +113,11 @@ use \yii\widgets\LinkPager;
             }
         });
     });
-    $('#qqlogin').click(function ()
-    {
-        //以下为按钮点击事件的逻辑。注意这里要重新打开窗口
-        //否则后面跳转到QQ登录，授权页面时会直接缩小当前浏览器的窗口，而不是打开新窗口
-        var A=window.open("<?= "http://$_SERVER[SERVER_NAME]/login.php" ?>","_blank",'');
-    }
+    $('#qqlogin').click(function () {
+            var A = window.open("<?= "http://$_SERVER[SERVER_NAME]/login.php" ?>", "_blank", '');
+        }
     )
 
 </script>
+
 

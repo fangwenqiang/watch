@@ -28,17 +28,40 @@ class LoginController extends CommonController
         return $this->render('login');
     }
 
+//QQ登录
     public function actionQqlogin()
     {
+        //接收qq登录成功后返回的账号信息
+        $request = \Yii::$app->request->get();
+        $user = $request['a'];
+        $sex = $request['b'];
+        if ($sex == "男") {
+            $sex = 1;
+        } else {
+            $sex = 0;
+        }
+        $model = new User();
+        //判断之前是否登录过
+        $where['username'] = $user;
+        $data = $model->select($where);
+        if (empty($data)) {
+            //未登录则将账户写进数据库
+            $model->username = $user;
+            $model->sex = $sex;
+            $model->save();
+            $where['username'] = $user;
+            $data2 = $model->select($where);
+            $session = \Yii::$app->session;
+            $session->set('user_name', $user);
+            $session->set('user_id', $data2[0]['user_id']);
+        } else {
+            //登录过则跳过存库
+            $session = \Yii::$app->session;
+            $session->set('user_name', $user);
+            $session->set('user_id', $data[0]['user_id']);
+        }
+        return $this->qt_success('home/index', '登录成功');
 
-        require_once(__DIR__."/../../web/API/qqConnectAPI.php");
-        $qc = new \QC();
-        $asc=$qc->qq_callback();
-        $oid=$qc->get_openid();
-
-//        $qc = new \QC($asc,$oid);
-//        $ret = $qc->get_user_info();
-        print_r($oid);
     }
 
 //注册
@@ -46,12 +69,13 @@ class LoginController extends CommonController
     public function actionReg()
     {
         $model = new Reg();
+        //验证表单
         if (Yii::$app->request->isAjax) {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             return ActiveForm::validate($model);
         }
         if ($model->load(\Yii::$app->request->post()) && $model->validate()) {
-
+            //验证通过后存库
             $model2 = new User;
             $request = \Yii::$app->request->post('Reg');
             $model2->username = $request['username'];
@@ -59,7 +83,7 @@ class LoginController extends CommonController
             $model2->email = $request['email'];
             $model2->tel = $request['tel'];
             $model2->save();
-             return $this->qt_success('home/login/login','注册成功');
+            return $this->qt_success('home/login/login', '注册成功');
 
         }
         return $this->render('reg', ['model' => $model]);
@@ -76,14 +100,18 @@ class LoginController extends CommonController
         $where['username'] = $user;
         $data = $model->select($where);
         if (empty($data)) {
+            //判断账号是否存在
             return 1;
         } else {
+            //判断密码是否正确
             if ($data[0]['password'] != $pwd) {
                 return 2;
             } else {
+                //判断该账户是否允许登录
                 if ($data[0]['is_login'] == 0) {
                     return 3;
                 } else {
+                    //登录成功
                     $session = \Yii::$app->session;
                     $session->set('user_name', $user);
                     $session->set('user_id', $data[0]['user_id']);
@@ -100,7 +128,7 @@ class LoginController extends CommonController
         $session = \Yii::$app->session;
         $session->remove('user_name');
         $session->remove('user_id');
-        return $this->qt_success('home/login/login','退出成功');
+        return $this->qt_success('home/login/login', '退出成功');
     }
 
 
