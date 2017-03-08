@@ -9,8 +9,10 @@ $(function () {
             $('#email').focus();
             swal({
                 title: "哎呀，出错了",
-                text: "请填写正确邮箱地址!",
-                type: "error"
+                text: "请填写正确邮箱地址!2秒后关闭",
+                type: "error",
+                timer: 2000,
+                showConfirmButton: false
             });
             return false;
         }
