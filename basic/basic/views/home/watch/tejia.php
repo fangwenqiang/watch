@@ -36,7 +36,7 @@ use yii\helpers\Url;
                     <p> <b><?=$val['goods_name']?>品牌：<?=$val['brand_name']?></b><br>
                         <u></u><ins>￥<?=$val['shop_price']?></ins><del>原价：￥<?=$val['market_price']?></del><br>
                         <span class="cmt">已被评论<i><?=$val['comment']?></i>次</span> </p>
-                    <a href="javascript:addToCartT(5561, 1, 1);" class="btn">立即抢购</a> </li>
+                    <a href="<?=url::to(['home/goods-show/show','id'=>$val['g_id']])?>" class="btn">立即抢购</a> </li>
             </ul>
             <?php } ?>
         </div>
