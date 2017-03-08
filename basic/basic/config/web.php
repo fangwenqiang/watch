@@ -1,6 +1,7 @@
 <?php
 Yii::$classMap['app\lib\Functions\Filtration'] =__DIR__ . '/../lib/functions/Filtration.php';
 Yii::$classMap['app\lib\getThumb'] =__DIR__ . '/../lib/getThumb.php';
+Yii::$classMap['app\lib\Pay'] =__DIR__ . '/../lib/Pay.class.php';
 
 $params = require(__DIR__ . '/params.php');
 
