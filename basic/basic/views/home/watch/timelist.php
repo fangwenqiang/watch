@@ -41,39 +41,36 @@ use yii\helpers\Url;
             </dl>
         </div>
         <div class="vip-list vip-list2">
-
-            <?php foreach($val as $v){ ?>
-            <a href="<?=url::to(['home/goods-show/show','id'=>$v['g_id']])?>" target="_blank">
-            <?php foreach($val as $k=>$v){ ?>
-            <a href="javascript:void (0)" target="_blank">
-                <img class="lazy" src="Images/<?=$v['g_img']?>"alt="" />
-                <p id="<?=$k?>" class="count-down" endTime="<?=$v['promote_end_date']?>" >
-                </p>
-                <p class="p1">
-                    <i>¥</i>
-                    <span><?=$v['promote_price']?></span>
-                    <code><b>3.5</b>折</code>
-                    <del><?=$v['market_price']?></del>
-                </p>
-                <p class="p2">
-                    <?=$v['goods_name'].' '.$v['keywords'] ?>
-                </p>
-                <p class="p3">中国</p>
-                <p class="p4">销量
+                <?php foreach($val as $k=>$v){ ?>
+                    <a href="<?=url::to(['home/goods-show/show','id'=>$v['g_id']])?>" target="_blank">
+                        <img class="lazy" src="Images/<?=$v['g_img']?>"alt="" />
+                        <p id="<?=$k?>" class="count-down" endTime="<?=$v['promote_end_date']?>" >
+                        </p>
+                        <p class="p1">
+                            <i>¥</i>
+                            <span><?=$v['promote_price']?></span>
+                            <code><b>3.5</b>折</code>
+                            <del><?=$v['market_price']?></del>
+                        </p>
+                        <p class="p2">
+                            <?=$v['goods_name'].' '.$v['keywords'] ?>
+                        </p>
+                        <p class="p3">中国</p>
+                        <p class="p4">销量
                     <span>
                         <?=$v['click_count']?>
                     </span>
-                </p>
-                <p class="sale-out">
-                    已抢光
-                </p>
-            </a>
-            <?php } ?>
+                        </p>
+                        <p class="sale-out">
+                            已抢光
+                        </p>
+                    </a>
+                <?php } ?>
         </div>
     </div>
-    <?php } ?>
+<?php } ?>
 
-<!--    活动规则-->
+    <!--    活动规则-->
     <div class="vip-gz">
         <dl>
             <dt>
