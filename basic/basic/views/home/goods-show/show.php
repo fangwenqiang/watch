@@ -155,6 +155,7 @@ use yii\helpers\Url;
                     var num = Math.round(data['msg']/12);
                     str='￥<font id="average">'+num+'</font>×12期';
                     $('#fen_qi_jia').html(str);
+                    $('#cart').css('display','block')
                 }},'json');                  
             });
 
@@ -169,10 +170,62 @@ use yii\helpers\Url;
 
     <div class="sa s13 w100 h21">
     <span class="sl">数量</span>
+
     <span class="sr bn">
-    <span class="btn minus" onclick="addorminus('minus','25521')"></span><input id="goods_number_25521" class="quantity" maxlength="4" size="2" value="1" name="goods_number" type="text">
+    <span class="btn minus" onclick="addorminus('minus','25521')"></span>
+    <input id="goods_number_25521" class="quantity" maxlength="4" size="2" value="1" 
+    name="goods_number" type="text">
     <span class="btn add" onclick="addorminus('add','25521')"></span></span></div>
-    <script type="text/javascript">var is_test=1;</script><div class="buy"><div id="clt_msg"></div>
+    <script type="text/javascript">var is_test=1;</script>
+    <br>
+    
+    <button id="cart"  style="display:none">加入购物车</button>
+    <input type="hidden" id="goods_id" value=<?=$goods['g_id'] ?>>
+    <script>
+            // 判断是否登陆，如果登陆了就添加，没有就提示登陆
+
+            function getNum(){
+                return $('input[name="goods_number"]').val();
+            };
+            function setNum(num){
+                $('input[name="goods_number"]').val(num);
+            }
+
+            $('.minus').on('click',function(){
+                var nowNum  = getNum(); 
+                if (nowNum>1) {
+                    nowNum--;
+                    setNum(nowNum);
+                }
+            });
+
+            $('.add').on('click',function(){
+                var nowNum  = getNum(); 
+                if (nowNum>=1) {
+                    nowNum++;
+                    setNum(nowNum);
+                }
+            });
+
+
+            $('#cart').on('click',function(){
+                var  user_id = "<?= \Yii::$app->session->get('user_id') ?>";
+                var  goods_num = getNum();
+                if (!user_id) {
+                    alert('请登录后继续操作');
+                }else{
+                    $.get("<?= Url::toRoute('home/goods-show/cart') ?>",
+                    {
+                        'goods_num' :goods_num
+                    },function(data){
+                        alert(data)
+                    });
+                }
+
+            });
+
+    </script>
+    <div class="buy"><div id="clt_msg"></div>
     <input name="goods_id" id="goods_id" value="25521" type="hidden"><input name="ssid" id="ssid" value="" type="hidden"><a rel="nofollow" id="buy_now" class="g__btn g__buy_now" title="立即购买" style="display:none;">&nbsp;</a>
     <a rel="nofollow" id="real_buy_now" class="fancybox.iframe iframe" href="" style="display:none;">检查登录</a>
     <a rel="nofollow" id="add_to_cart" href="javascript:void(0);" class="g__btn g__add_to_cart" onclick="javascript:var gn=$('#goods_number_25521').val();addToCartT(25521,gn,2);" title="加入购物车" style="display:none;">&nbsp;</a>

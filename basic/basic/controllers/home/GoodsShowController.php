@@ -40,17 +40,44 @@ class GoodsShowController extends CommonController
         }
 
     }
+    public function actionCarShow()
+    {
+    	$user_id = Filtration::check_id(\Yii::$app->session->get('user_id'));
+    	$sql = 'select * from mb_cart where user_id ='.$user_id;
+		$cartShow = \Yii::$app->db->createCommand($sql)->queryAll();
+		$sql = 'SELECT sum(num*price) FROM `mb_cart` where user_id=1';
+		$priceSum = \Yii::$app->db->createCommand($sql)->queryAll();
+		$priceSum = $priceSum[0]['sum(num*price)'];
+    	return 	$this->render('car',compact('cartShow','priceSum'));
+    }
+
+
 	//商品展示
 	public function actionShow()
 	{
 		self::$chainMysql?self::$chainMysql:\Yii::$app->db->createCommand();
-		$id = $_GET['g_id'];
-		$user_id = Filtration::check_id($_GET['user_id']);
+
+		$id = $_GET['id'];
+		$session = \Yii::$app->session;
+		if (empty($session->get('user_id'))) {
+			$user_id = 2;
+		}else{
+			$user_id =  $session->get('user_id');
+		}
+		
+
+
 		$goodsId = Filtration::check_id($id);
 		$typeId = Filtration::check_id(4);
+
+				//查询这个商品的详细属性
+		$sql = 'select * from mb_goods where g_id ='.$goodsId;
+		$goods = \Yii::$app->db->createCommand($sql)->queryAll();
+		$goods = $goods[0];
 		
 		$model = new History();
         $res = $model->history_find($user_id,$goodsId);
+
         if($res)
         {
             $res['browse_num']=$res['browse_num']+1;
@@ -78,10 +105,7 @@ class GoodsShowController extends CommonController
 			 $showAttr[$value['attr_name']] = $abc;
 		}
 
-		//查询这个商品的详细属性
-		$sql = 'select * from mb_goods where g_id ='.$goodsId;
-		$goods = \Yii::$app->db->createCommand($sql)->queryAll();
-		$goods = $goods[0];
+
 
 		//判断是否有商品的详细描述信息
 		if (empty($goods['describe'])) {
@@ -123,7 +147,7 @@ class GoodsShowController extends CommonController
 
 
 		//根据列表查出该有的值	
-		$returnValue = $query->select(['group_price'])
+		$returnValue = $query->select(['group_price','goods_sn'])
 		    			->from('mb_group')
 		    			->where(['attr_list'=> $attr_list,'goods_id'=>$id])
 		    			->one();
@@ -131,11 +155,32 @@ class GoodsShowController extends CommonController
 	    	return json_encode(['res'=>0,'msg'=>'该商品售罄']);			
 	    }			
 
+		\Yii::$app->session->set('goods_sn',$returnValue['goods_sn']);
+		\Yii::$app->session->set('group_price',$returnValue['group_price']);
 		echo json_encode(['res'=>1,'msg'=>$returnValue['group_price']]);			
 		
 	}
 
 
+	public function actionCart()
+	{
+		if (empty(\Yii::$app->session->get('user_id'))) {
+			echo  "请先登陆";
+		}
+
+
+		$cartInsert['goods_sn'] = \Yii::$app->session->get('goods_sn');
+		$cartInsert['price'] = \Yii::$app->session->get('group_price');
+		$cartInsert['user_id'] = \Yii::$app->session->get('user_id');
+		$cartInsert['num']	= Filtration::check_id($_GET['goods_num']);
+		$res = \Yii::$app->db->createCommand()->insert('mb_cart',$cartInsert)->execute();
+	
+		if ($res) {
+			echo '加入购物车成功';
+		}else{
+			echo '请登陆后试试';
+		}
+	}
 
 
 }
