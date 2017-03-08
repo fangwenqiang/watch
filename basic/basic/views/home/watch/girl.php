@@ -96,7 +96,7 @@ use yii\helpers\Url;
                         <?php }else{ ?>
                             <?php foreach($data['goodsList'] as $val){ ?>
                                 <li>
-                                    <div class="tImg"><img src="Images/<?=$val['g_img']?>"></div>
+                                    <div class="tImg"><a href="<?=url::to(['home/goods-show/show','id'=>$val['g_id']])?>"><img src="Images/<?=$val['g_img']?>"></a></div>
                                     <div class="tNm"><?=$val['goods_name'].'&nbsp;&nbsp;'.$val['keywords']?></div>
                                     <div class="tPrc">
                                         ￥<span><?=$val['shop_price']?></span>

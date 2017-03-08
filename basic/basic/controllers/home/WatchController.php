@@ -68,7 +68,6 @@ class WatchController extends CommonController{
     {
         $goods = new Goods();
         $data = $goods->timeShow();
-
         return $this->render('timelist',['data'=>$data]);
     }
 

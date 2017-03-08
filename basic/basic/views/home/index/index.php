@@ -51,7 +51,7 @@ use yii\helpers\Url;
 
     <div class="tTit w1225">
         <span class="tNm">[特价推荐]</span>
-        <ul id="hotTit" class="tGud">
+        <ul id="hotTit" class="tGud" nav='One'>
             <?php foreach ($erRank as $key => $value) {?>
             <li><a  href="javascript:" class='whereCate' rank='特价' keyword='<?=$value["gt_name"]?>'><?=$value['gt_name']?></a></li>
             <?php } ?>
@@ -63,10 +63,10 @@ use yii\helpers\Url;
             <div class="tLnk">
 
             </div>
-            <ul>
+            <ul id='rankOne'>
                <?php foreach ($goodsData as $key => $value) {?>
                 <li>
-                    <a href=""   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
+                    <a href="<?= Url::toRoute(['home/goods-show/show']).'&id='.$value['g_id']?>">
                         <!-- <i class="c__tMsk"></i> -->
                         <img src="Images/<?=$value['g_img']?>"  width="250" height="250" />
 
@@ -100,7 +100,7 @@ use yii\helpers\Url;
 
     <div class="tTit w1225">
         <span class="tNm">[男士手表]</span>
-        <ul id="rankTit" class="tGud">
+        <ul id="rankTit" class="tGud" nav='Two'>
             <?php foreach ($threeRank as $key => $value) {?>
             <li><a href="javascript:"  class='whereCate' rank='男士' keyword='<?=$value["gt_name"]?>'><?=$value['gt_name']?></a></li>       
             <?php }?>
@@ -117,7 +117,7 @@ use yii\helpers\Url;
             <ul id='rankTwo'>
                  <?php foreach ($goodsData as $key => $value) {?>
                 <li>
-                    <a href=""   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
+                    <a href="<?= Url::toRoute(['home/goods-show/show']).'&id='.$value['g_id']?>"   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
                         <!-- <i class="c__tMsk"></i> -->
                         <img src="Images/<?=$value['g_img']?>"  width="250" height="250" />
 
@@ -144,7 +144,7 @@ use yii\helpers\Url;
 
     <div class="tTit w1225">
         <span class="tNm">[女士手表]</span>
-         <ul id="rankTit" class="tGud">
+         <ul id="rankTit" class="tGud" nav='Three'>
             <?php foreach ($threeRank as $key => $value) {?>
             <li><a href="javascript:" class='whereCate' rank='女士' keyword='<?=$value["gt_name"]?>'><?=$value['gt_name']?></a></li>       
             <?php }?>
@@ -157,10 +157,10 @@ use yii\helpers\Url;
             <div class="tLnk">
 
             </div>
-            <ul>
+            <ul id='rankThree'>
                 <?php foreach ($goodsData as $key => $value) {?>
                 <li>
-                    <a href=""   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
+                    <a href="<?= Url::toRoute(['home/goods-show/show']).'&id='.$value['g_id']?>"   onclick="_gaq.push(['_trackEvent','首页商品','热销-男士-1','百达翡丽5146R-001@热销-男士-1']);">
                         <!-- <i class="c__tMsk"></i> -->
                         <img src="Images/<?=$value['g_img']?>"  width="250" height="250" />
 
@@ -187,6 +187,7 @@ use yii\helpers\Url;
     $('.whereCate').hover(function(){
         var where = $(this).attr('keyword');
         var rank = $(this).attr('rank');
+        __this = $(this);
         $.ajax({
            url: "<?= Url::toRoute(['home/index/catedata'])?>",
            data: "where="+where+'&rank='+rank,
@@ -195,14 +196,15 @@ use yii\helpers\Url;
              str=''
              $(re_val).each(function(i,v){
                 str+='<li>\
-                        <a href="">\
+                        <a href="<?= Url::toRoute(['home/goods-show/show']).'&id='.$value['g_id']?>">\
                         <img src="Images/'+this['g_img']+'"  width="250" height="250" />\
                         <div class="tNm">'+this["goods_name"]+'</div >\
                         <div class="tPrc">￥'+this["shop_price"]+'&nbsp;<i class="del">'+this['market_price']+'</i></div>\
                         <div class="tInfo">已售出<b>&nbsp;13</b></div ></a>\
                 </li>'
              })
-             $("#rankTwo").html(str);
+             var nav = __this.parent().parent().attr('nav');
+             $("#rank"+nav).html(str);
            }
         });
     },function(){
