@@ -63,138 +63,147 @@ use yii\helpers\Url;
     <h1><br /><img src="css/images/LOGO.png" /></h1>
 </div>
 <div id="main">
-    <div class="w930 m0a mt30">
-        <div class="ml20" style="margin-top: 50px;">
-            <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
-                <div style="float: left">选择收货地址</div>
-                <div style="float: right"><a href="javascript:void(0);" >管理收货地址</a></div>
-            </div>
-        </div>
-        <div class="bgf6f br10" style="margin-top: 10px;" id="address_div">
-            <div class="address_div1">
-                <div style="float: left" class="class_div1"> 寄送至：</div>
-                <div style="float: left">
-                    <input type="radio" checked name="address" class="address">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（刘杰 收）13576993529  默认地址
-                </div>
-                <div style="float: right" class="class_div2">修改本地址</div>
-            </div>
-
-            <div class="address_div2">
-                <div style="float: left" class="class_div1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                <div style="float: left">
-                    <input type="radio" name="address" class="address">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（刘 收）13576993529  默认地址
-                </div>
-                <div style="float: right;" class="class_div2">修改本地址</div>
-            </div>
-            <div class="address_div2">
-                <div style="float: left" class="class_div1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                <div style="float: left">
-                    <input type="radio" name="address" class="address">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（杰 收）13576993529  默认地址
-                </div>
-                <div style="float: right" class="class_div2"></div>
-            </div>
-
-            <div style="height: 40px;line-height: 40px;">
-                <div style="float: left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                <div style="float: left">
-                    +添加新地址
+    <form action="<?php echo Url::to(['home/order/index_2'])?>" method="post">
+        <div class="w930 m0a mt30">
+            <div class="ml20" style="margin-top: 50px;">
+                <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
+                    <div style="float: left">选择收货地址</div>
+                    <div style="float: right"><a href="javascript:void(0);" >管理收货地址</a></div>
                 </div>
             </div>
-
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="w930 m0a mt30">
-        <div class="ml20" style="margin-top: 50px;">
-            <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
-                <div style="float: left">确认订单信息</div>
-            </div>
-        </div>
-        <div class="bgf6f br10">
-            <ul class="c999 f13 h40 mt10 li_left">
-                <li class="w510 tl pl20">商品</li>
-                <li class="w120 tc">单价</li>
-                <li class="w120 tc">数量</li>
-                <li class="w120 tc">小计</li>
-            </ul>
-
-            <ul class="bt_1_eae bb_1_fff" id="goods_line_548546"></ul>
-            <ul class="999 f13 h120 li_left" id="goods_list_548546">
-                <li class="w510 tl pl20">
-                    <a href="#" target="_blank" class="fl">
-                        <img src="images/3412_183_24_30_27_27885.jpg" width="100px" height="100px" class="m_10_20_10_0" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <span class="w390 bold c333 fl h20 mt35">瑞士爱宝时（EPOS）-Passion系列 3412.183.24.30.27 机械男表</span>
-                    </a>
-                </li>
-                <li class="w120 tc">
-                    <span class="bold ccf0 f16">￥120</span>
-                </li>
-                <li class="w120 tc">
-                    <span class="btne3d w18 h22 inbl re_t0-l5 ie-t1_m50 ie_mi" oprtype="add" oprid="548546">1</span>
-                </li>
-                <li class="w120 tc">
-                    <span class="btne3d" oprtype="add" oprid="548546">￥240</span>
-                </li>
-            </ul>
-
-
-            <ul class="bt_1_eae bb_1_fff"></ul>
-
-
-            <!-- Cale 2014-03-13-->
-            <div class="c999">
-                  <div style="width: 50%;height: 150px;;border-top:  1px solid white;border-left:  1px solid white;border-right:  1px solid white;float: left;">
-                      <div style="margin:5px;">
-                          <div style="float: left">
-                              给卖家留言：
-                          </div>
-                          <div style="float: left;width: 75%" >
-                              <textarea rows="5" cols="40" placeholder="选填:对本次交易的说明(建议填写已和卖家协商一致的内容)" class="textarea"></textarea>
-                              <p style="margin-left: 245px;" class="str">0/200</p>
-                          </div>
-                      </div>
-                  </div>
-                    <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
-                        <div style="margin:5px;float: left">运送方式:普通配送快递 免邮</div>
-                        <div style="margin:5px;float: right"><span style="font-size: 14px;font-weight: bold;color: red;">0.00</span></div>
+            <div class="bgf6f br10" style="margin-top: 10px;" id="address_div">
+                <div class="address_div1">
+                    <div style="float: left" class="class_div1"> 寄送至：</div>
+                    <div style="float: left">
+                        <input type="radio" checked name="address" class="address" value="1">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（刘杰 收）13576993529  默认地址
                     </div>
-                    <div style="width: 49%;height: 50px;border-top:  1px solid white;float: left;line-height: 50px;">
-                        <div style="margin:5px;">发货时间: 卖家承诺订单在买家付款后, 72小时内发货</div>
+                    <div style="float: right" class="class_div2">修改本地址</div>
+                </div>
+
+                <div class="address_div2">
+                    <div style="float: left" class="class_div1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div style="float: left">
+                        <input type="radio" name="address" class="address" value="2">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（刘 收）13576993529  默认地址
                     </div>
-                    <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
-                        <div style="margin:5px;float: left">运费险:运费险卖家赠送，若确认收货前退货，可获保险赔付</div>
-                        <div style="margin:5px;float: right">
-                            <span style="font-size: 14px;font-weight: bold;color: red;">0.80</span>
-                        </div>
+                    <div style="float: right;" class="class_div2">修改本地址</div>
+                </div>
+                <div class="address_div2">
+                    <div style="float: left" class="class_div1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div style="float: left">
+                        <input type="radio" name="address" class="address" value="3">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（杰 收）13576993529  默认地址
                     </div>
-            </div>
-
-
-            <div class="clear"></div>
-        </div>
-        <div class="w930 m0a">
-            <div class="fl">
-                <div class="mt50">
-                    <a href="javascript:void(0);" class="f14 bold c999 b_1_efe btnf7f w146 h40 fl tc">返回修改</a>
-                </div>
-            </div>
-            <div class="fr">
-                <div class="tc cd00 mt20">
-                    <span class="f13 bold">商品总额：￥</span>
-                    <span class="f20" id="goods_amount">9500</span>
+                    <div style="float: right" class="class_div2"></div>
                 </div>
 
-                <div class="mt20 tr">
-                    <input type="hidden" id="all_has_stock" value="1">
-                    <a rel="nofollow" id="real_checkout_now" href="http://cart.wbiao.cn/user/index/pop_login" class="iframe" style="display:none;">检查登录</a>
-                    <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="提交订单" />
+                <div style="height: 40px;line-height: 40px;">
+                    <div style="float: left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div style="float: left">
+                        +添加新地址
+                    </div>
                 </div>
 
+                <div class="clear"></div>
             </div>
         </div>
-    </div>
+        <div class="w930 m0a mt30">
+            <div class="ml20" style="margin-top: 50px;">
+                <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
+                    <div style="float: left">确认订单信息</div>
+                </div>
+            </div>
+            <?php
+             foreach($data as $key=>$val){  ?>
+                 <div class="bgf6f br10">
+                     <ul class="c999 f13 h40 mt10 li_left">
+                         <li class="w510 tl pl20">商品</li>
+                         <li class="w120 tc">单价</li>
+                         <li class="w120 tc">数量</li>
+                         <li class="w120 tc">小计</li>
+                     </ul>
+
+                     <ul class="bt_1_eae bb_1_fff" id="goods_line_548546"></ul>
+                     <ul class="999 f13 h120 li_left" id="goods_list_548546">
+                         <li class="w510 tl pl20">
+                             <a href="#" target="_blank" class="fl">
+                                 <img src="images/3412_183_24_30_27_27885.jpg" width="100px" height="100px" class="m_10_20_10_0" alt="">
+                             </a>
+                             <a href="#" target="_blank">
+                                 <span class="w390 bold c333 fl h20 mt35"><?php echo $val['goods_name']?></span>
+                             </a>
+                         </li>
+                         <li class="w120 tc">
+                             <span class="bold ccf0 f16">￥<?php echo $val['price']?></span>
+                         </li>
+                         <li class="w120 tc">
+                             <span class="btne3d w18 h22 inbl re_t0-l5 ie-t1_m50 ie_mi" oprtype="add" oprid="548546"><?php echo $val['num']?></span>
+                         </li>
+                         <li class="w120 tc">
+                             <span class="btne3d" oprtype="add" oprid="548546">￥<?php echo $val['price']*$val['num']?></span>
+                         </li>
+                     </ul>
+
+
+                     <ul class="bt_1_eae bb_1_fff"></ul>
+
+
+                     <!-- Cale 2014-03-13-->
+                     <div class="c999">
+                         <div style="width: 50%;height: 150px;;border-top:  1px solid white;border-left:  1px solid white;border-right:  1px solid white;float: left;">
+                             <div style="margin:5px;">
+                                 <div style="float: left">
+                                     给卖家留言：
+                                 </div>
+                                 <div style="float: left;width: 75%" >
+                                     <textarea rows="5" cols="40" name="intro[]" placeholder="选填:对本次交易的说明(建议填写已和卖家协商一致的内容)" class="textarea"></textarea>
+                                     <p style="margin-left: 245px;" class="str">0/200</p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
+                             <div style="margin:5px;float: left">运送方式:普通配送快递 免邮</div>
+                             <div style="margin:5px;float: right"><span style="font-size: 14px;font-weight: bold;color: red;">0.00</span></div>
+                         </div>
+                         <div style="width: 49%;height: 50px;border-top:  1px solid white;float: left;line-height: 50px;">
+                             <div style="margin:5px;">发货时间: 卖家承诺订单在买家付款后, 72小时内发货</div>
+                         </div>
+                         <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
+                             <div style="margin:5px;float: left">运费险:运费险卖家赠送，若确认收货前退货，可获保险赔付</div>
+                             <div style="margin:5px;float: right">
+                                 <span style="font-size: 14px;font-weight: bold;color: red;">0.80</span>
+                             </div>
+                         </div>
+                     </div>
+
+
+                     <div class="clear"></div>
+                 </div>
+             <?php   } ?>
+
+            <div class="w930 m0a">
+                <div class="fl">
+                    <div class="mt50">
+                        <a href="javascript:void(0);" class="f14 bold c999 b_1_efe btnf7f w146 h40 fl tc">返回修改</a>
+                    </div>
+                </div>
+                <div class="fr">
+                    <div class="tc cd00 mt20">
+                        <span class="f13 bold">商品总额：￥</span>
+                        <span class="f20" id="goods_amount"><?php echo $prices?></span>
+                    </div>
+
+                    <div class="mt20 tr">
+
+                            <div class="mt20 tr">
+                                <input type="hidden" id="car" value="<?php echo $car?>" name="car">
+                                <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
+                                <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="提交订单" />
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     </form>
 </div>
 
 <link rel="stylesheet" href="css/fancybox.css" type="text/css">

@@ -15,7 +15,8 @@ use yii\helpers\Url;
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <link rel="stylesheet" href="css/2.css">
     <style>
-        .order2{float: left;margin-top: 30px;margin-left: 75px;}
+        .address_div1{border: 1px solid red;height: 40px;line-height: 40px;background-color: #ffd7e0}
+        .address_div2{height: 40px;line-height: 40px;}
     </style>
     <!--[if lte IE 6]>
     <![endif]-->
@@ -27,6 +28,8 @@ use yii\helpers\Url;
     <div class="top">
         <ul>
             <li id="member_info"><a href="#" title="登录" rel="nofollow">登录</a><span>&nbsp;|&nbsp;</span><a href="#" title="注册" rel="nofollow">注册</a></li>
+
+
             <li>&nbsp;|&nbsp;</li>
             <li><a href="#" rel="nofollow" title="我的订单">我的订单</a></li>
             <li>&nbsp;|&nbsp;</li>
@@ -50,11 +53,11 @@ use yii\helpers\Url;
             <li class="w14 h14 circle bp_0-19"></li>
         </ul>
         <ul class="w510 mt10 fr li_left li">
-            <li class="w60 bold f14 c666">选购商品</li>
+            <li class="w60 bold f14 cd00">选购商品</li>
             <li class="w90">&nbsp;</li>
             <li class="w60 bold f14 c666">提交订单</li>
             <li class="w90">&nbsp;</li>
-            <li class="w60 bold f14 cd00">支付订单</li>
+            <li class="w60 bold f14 c666">支付订单</li>
             <li class="w90">&nbsp;</li>
             <li class="w60 bold f14 c666">等待签收</li>
         </ul>
@@ -63,36 +66,21 @@ use yii\helpers\Url;
 </div>
 <div id="main">
     <div class="w930 m0a mt30">
-        <div class="ml20" style="margin-top: 50px;">
-            <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
-                <div style="float: left">请选择付款方式</div>
+        <div class="w930 m0a">
+            <div class="fr">
+                <input type="checkbox" class="car_goods" value="1">
+                <input type="checkbox" class="car_goods"  value="2">
+                <form action="<?php echo Url::to(['home/order/index'])?>" method="post">
+                    <div class="mt20 tr">
+                        <input type="hidden" id="car" value="" name="car" >
+                        <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
+                        <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="确认购物车" />
+                    </div>
+                </form>
+
             </div>
-            <br/>
-            <p>订单号：<?php echo $order_sn;?>   <span style="margin-left: 40px;font-weight: bold">支付时间：<span id="time"><?php echo date('i',$time)?>:<?php echo date('s',$time)?></span></span></p>
-            <p style="height: 42px;font-weight: bold;font-size: 16px;color: red;line-height: 42px;">
-                <span style="float: left">总金额：￥<?php echo $prices;?></span>
-
-            </p>
         </div>
-        <div class="bgf6f br10" style="margin-top: 10px;" id="address_div">
-       <div style="height: 150px;">
-           <a href="javascript:void(0)"><img src="Images/order-1.jpg" style="margin-top: 30px;margin-left:75px;float: left"></a>
-           <a href="javascript:void(0)"><img src="Images/order-2.jpg" class="order2"></a>
-           <a href="javascript:void(0)"><img src="Images/order-3.jpg" class="order2"></a>
-           <a href="javascript:void(0)"><img src="Images/order-4.jpg" class="order2"></a>
-           <a href="<?php echo $link;?>"><img src="Images/order-5.jpg" class="order2"></a>
-           <a href="javascript:void(0)"><img src="Images/order-6.jpg" class="order2"></a>
-           <a href="javascript:void(0)"><img src="Images/order-7.jpg" class="order2"></a>
-           <a href="javascript:void(0)"><img src="Images/order-8.jpg" class="order2"></a>
-
-
-       </div>
-            <div class="clear"></div>
-            <img src="Images/order-10.jpg" style="margin-top: 20px;">
-        </div>
-
     </div>
-
 </div>
 
 <link rel="stylesheet" href="css/fancybox.css" type="text/css">
@@ -120,28 +108,29 @@ use yii\helpers\Url;
            $(this).parent().parent().addClass('address_div1');
           $(this).parent().prev().html('寄送至：');
           $(this).parent().next().html('修改本地址');
-
        });
 
+        $(".textarea").keyup(function(){
+            var len = $(this).val().length;
+            if(len > 199){
+                $(this).val($(this).val().substring(0,200));
+                len = 200;
+            }
+            if(len != 200){
+                $(this).next().html(len+"/"+200);
+            } else {
+                $(this).next().html("<font color='red'>"+len+"/"+200+"</font>");
+            }
+        });
 
-       //倒计时
-        var m="<?php echo date('i',$time)?>";
-        var s="<?php echo date('s',$time)?>";
-        s =s-1;
-        setInterval(function(){
-            if(s<10){
-                $('#time').html(m+':0'+s);
-            }else{
-                $('#time').html(m+':'+s);
-            }
-            s--;
-            if(s<0){
-                s=59;
-                m--;
-            }
-            if(m==0 && s==0){
-                location.href="<?php echo Url::to(['home/order/over_time'])."&order=$order_sn"?>"
-            }
-        },1000)
+
+        $('.car_goods').click(function(){
+            var str = $(this).val()
+            var car = $('#car').val();
+            car +=','+str;
+            $('#car').val(car);
+        });
     });
+
+
 </script>
