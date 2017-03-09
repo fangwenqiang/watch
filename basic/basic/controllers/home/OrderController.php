@@ -10,9 +10,11 @@ use app\lib\Pay;
 class OrderController extends CommonController
 {
 
+    public  $layout = '/proscenium';
+
     public function actionIndexs()
     {
-        return $this->renderPartial('indexs');
+        return $this->render('indexs');
     }
     /*
      *
@@ -21,13 +23,11 @@ class OrderController extends CommonController
     {
         $request = \Yii::$app->request;
         $car = $request->post('car');
-        if(empty($car)){
-            return  $this->redirect('/');
-        }
+
         $order_model = new Order();
         //查询购物车
         $data =  (new \yii\db\Query())->from('mb_cart')->where("cart_id in(".substr($car,1).")")->all();
-        return $this->renderPartial('index',array('data'=>$data,'car'=>substr($car,1),'prices'=>$order_model->prices1($data)));
+        return $this->render('index',array('data'=>$data,'car'=>substr($car,1),'prices'=>$order_model->prices1($data)));
     }
 
 
