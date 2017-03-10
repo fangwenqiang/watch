@@ -57,7 +57,7 @@ class OrderController extends CommonController
         $arr = $order_model->SelectOrder($order_id);
         $pay_class=new Pay();
         $prices = $order_model->prices($order_id);
-        $pay_link=$pay_class->pay_url($arr['order_sn'],$prices);
+        $pay_link=$pay_class->pay_url($arr['order_sn'],0.01);
         if(($arr['over_time']-time()) < 0){
            return $this->qt_success('/','该订单已失效');
        }
@@ -66,6 +66,7 @@ class OrderController extends CommonController
             'order_sn'=>$arr['order_sn'],
             'time'=>($arr['over_time']-time())));
     }
+
 
 
 
@@ -86,5 +87,24 @@ class OrderController extends CommonController
         \Yii::$app->db ->createCommand()->update('mb_order_info',['order_status'=>-1],array('order_sn'=>$order))->execute();
         return $this->qt_success('/','该订单已失效');
     }
+
+
+    public function actionCheck_order()
+    {
+        //查找订单
+        file_put_contents('zhifu.txt',json_encode($_GET));
+        $arr =  (new \yii\db\Query())->from('mb_order_info')->where(array('order_sn'=>$_GET['out_trade_no']))->one();
+        if($arr['order_status'] == 1){
+            $data['out_trade_no'] = $_GET['out_trade_no'];
+            $data['total_fee'] = $_GET['total_fee'];
+            $data['type'] = 1;
+            return $this->render('index_4',array('data'=>$data));
+        } else {
+            $data['type'] = 0;
+            return $this->render('index_4',array('data'=>$data));
+        }
+
+    }
+
 
 }

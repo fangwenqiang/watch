@@ -31,6 +31,9 @@ class ConsignmentController extends CommonController
      */
     public function actionIndex()
     {
+        print_r($_POST);
+        print_r($_GET);
+        die;
        //查询寄卖品
         $consignment_model = new Consignment();
         if(empty($_GET['search'])){
