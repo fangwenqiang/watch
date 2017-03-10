@@ -9,6 +9,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Collect;  //模型层
+use app\models\Integral;  //模型层
 use app\models\Integral_rule;  //模型层
 use app\models\History;  //模型层
 use app\models\Comment;  //模型层
@@ -46,6 +47,30 @@ class PersonalController extends CommonController
         echo $model->test();
     }
 
+	/*
+     * 我的订单
+     */
+    public function actionMy_order()
+    {
+        return $this->render('my_order');
+    }
+	
+	/*
+     * 我的预售
+     */
+    public function actionMy_presell()
+    {
+        return $this->render('my_presell');
+    }
+	
+	/*
+     * 我的收货地址
+     */
+    public function actionMy_address()
+    {
+        return $this->render('my_address');
+    }
+	
     /*
      * 我的积分
      */

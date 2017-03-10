@@ -10,7 +10,7 @@ use yii\helpers\Url;
     }
     div.page span.current{
         border:#000099 1px solid;
-        background-color:#000099;
+        background-color:black;
         padding:4px 5px 4px 5px;
         margin:2px;
         color:#fff;
@@ -235,8 +235,10 @@ use yii\helpers\Url;
                         str +='<span><h2>'+msg['msg']+'</h2></span>'
                     }else{
                         $.each(msg.goodsList, function (k,v) {
-                            str += '<li><div class="tImg"><img src="Images/'+v.g_img+'"></div>';
-                            str += '<div class="tNm">'+ v.goods_name+'&nbsp;&nbsp;'+v.keywords+'</div><div class="tPrc">';
+                            url = "<?=url::to(['home/goods-show/show'])?>&id="+v.g_id;
+                            str += '<li><div class="tImg">';
+                            str +='<a href="'+url+'"><img src="Images/'+v.g_img+'"></a>';
+                            str += '<div class="tNm">'+v.goods_name+'&nbsp;&nbsp;'+v.keywords+'</div><div class="tPrc">';
                             str += '￥<span>'+v.shop_price+'</span><i>欧洲同步价</i></div>';
                             str += '<div class="tInfo">销量<b>240</b></div></a>';
                             str += '<label class="compare-off" id="compare_5561">对比';

@@ -24,7 +24,7 @@ use yii\helpers\Url;
 
 
 
-    <div class="w750 mt30 fr">
+    <div class="w750 mt30 fr" style="margin-right: 200px;">
         <ul class="m_0_23 inline w464 fr li_left li">
             <li class="w14 h14 circle bp_0-36"></li>
             <li class="w136 h8 mt6 bt_2_f1f">&nbsp;</li>
@@ -37,186 +37,31 @@ use yii\helpers\Url;
         <ul class="w510 mt10 fr li_left li">
             <li class="w60 bold f14 c666">选购商品</li>
             <li class="w90">&nbsp;</li>
-            <li class="w60 bold f14 cd00">提交订单</li>
+            <li class="w60 bold f14 c666">提交订单</li>
             <li class="w90">&nbsp;</li>
             <li class="w60 bold f14 c666">支付订单</li>
             <li class="w90">&nbsp;</li>
-            <li class="w60 bold f14 c666">等待签收</li>
+            <li class="w60 bold f14 cd00">等待签收</li>
         </ul>
     </div>
 
-<div id="main">
-    <form action="<?php echo Url::to(['home/order/index_2'])?>" method="post">
-        <div class="w930 m0a mt30">
-            <div class="ml20" style="margin-top: 50px;">
-                <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
-                    <div style="float: left">选择收货地址</div>
-                    <div style="float: right"><a href="javascript:void(0);" >管理收货地址</a></div>
-                </div>
-            </div>
-            <div class="bgf6f br10"  id="address_div">
-                <div class="address_div1">
-                    <div style="float: left" class="class_div1"> 寄送至：</div>
-                    <div style="float: left">
-                        <input type="radio" checked name="address" class="address" value="1" style="width: 20px;">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（刘杰 收）13576993529  默认地址
-                    </div>
-                    <div style="float: right" class="class_div2">修改本地址</div>
-                </div>
-
-                <div class="address_div2" >
-                    <div style="float: left" class="class_div1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                    <div style="float: left">
-                        <input type="radio" name="address" class="address" value="2" style="width: 20px;">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（刘 收）13576993529  默认地址
-                    </div>
-                    <div style="float: right;" class="class_div2"></div>
-                </div>
-                <div class="address_div2" >
-                    <div style="float: left" class="class_div1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                    <div style="float: left">
-                        <input type="radio" name="address" class="address" value="3" style="width: 20px;">北京 北京市 海淀区 上地街道 北京市海淀区上地七街软件园南路57号（杰 收）13576993529  默认地址
-                    </div>
-                    <div style="float: right" class="class_div2"></div>
-                </div>
-
-                <div style="height: 40px;line-height: 40px;">
-                    <div style="float: left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                    <div style="float: left">
-                        +添加新地址
-                    </div>
-                </div>
-
-                <div class="clear"></div>
-            </div>
+<?php if($data['type'] == 1) {  ?>
+    <div id="main">
+        <img src="Images/zhifu1.jpg" style="margin-top: 30px;margin-left: 200px;">
+        <div style="font-size: 14px;height: 100px;margin-top: 20px;">
+            <p style="background-color: #dcdcdc;height: 30px;line-height: 30px;">以下一个订单已经支付成功：共付金额：<font color="red" style="font-weight: bold">￥<?php echo $data['total_fee']?></font></p>
+            <p style="margin-top: 10px;">订单编号：<font color="red"><?php echo $data['out_trade_no']?></font>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支付方式：支付宝支付    &nbsp;&nbsp;&nbsp;&nbsp;由 喜悦手表官网 发货</p>
         </div>
-        <div class="w930 m0a mt30">
-            <div class="ml20" style="margin-top: 50px;">
-                <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
-                    <div style="float: left">确认订单信息</div>
-                </div>
-            </div>
-            <?php
-             foreach($data as $key=>$val){  ?>
-                 <div class="bgf6f br10">
-                     <ul class="c999 f13 h40 mt10 li_left">
-                         <li class="w510 tl pl20">商品</li>
-                         <li class="w120 tc">单价</li>
-                         <li class="w120 tc">数量</li>
-                         <li class="w120 tc">小计</li>
-                     </ul>
-
-                     <ul class="bt_1_eae bb_1_fff" id="goods_line_548546"></ul>
-                     <ul class="999 f13 h120 li_left" id="goods_list_548546">
-                         <li class="w510 tl pl20">
-                             <a href="#" target="_blank" class="fl">
-                                 <img src="images/3412_183_24_30_27_27885.jpg" width="100px" height="100px" class="m_10_20_10_0" alt="">
-                             </a>
-                             <a href="#" target="_blank">
-                                 <span class="w390 bold c333 fl h20 mt35"><?php echo $val['goods_name']?></span>
-                             </a>
-                         </li>
-                         <li class="w120 tc">
-                             <span class="bold ccf0 f16">￥<?php echo $val['price']?></span>
-                         </li>
-                         <li class="w120 tc">
-                             <span class="btne3d w18 h22 inbl re_t0-l5 ie-t1_m50 ie_mi" oprtype="add" oprid="548546"><?php echo $val['num']?></span>
-                         </li>
-                         <li class="w120 tc">
-                             <span class="btne3d" oprtype="add" oprid="548546">￥<?php echo $val['price']*$val['num']?></span>
-                         </li>
-                     </ul>
-
-
-                     <ul class="bt_1_eae bb_1_fff"></ul>
-
-
-                     <!-- Cale 2014-03-13-->
-                     <div class="c999">
-                         <div style="width: 50%;height: 150px;;border-top:  1px solid white;border-left:  1px solid white;border-right:  1px solid white;float: left;">
-                             <div style="margin:5px;">
-                                 <div style="float: left">
-                                     给卖家留言：
-                                 </div>
-                                 <div style="float: left;width: 75%" >
-                                     <textarea rows="5" cols="40" name="intro[]" placeholder="选填:对本次交易的说明(建议填写已和卖家协商一致的内容)" class="textarea"></textarea>
-                                     <p style="margin-left: 245px;" class="str">0/200</p>
-                                 </div>
-                             </div>
-                         </div>
-                         <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
-                             <div style="margin:5px;float: left">运送方式:普通配送快递 免邮</div>
-                             <div style="margin:5px;float: right"><span style="font-size: 14px;font-weight: bold;color: red;">0.00</span></div>
-                         </div>
-                         <div style="width: 49%;height: 50px;border-top:  1px solid white;float: left;line-height: 50px;">
-                             <div style="margin:5px;">发货时间: 卖家承诺订单在买家付款后, 72小时内发货</div>
-                         </div>
-                         <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
-                             <div style="margin:5px;float: left">运费险:运费险卖家赠送，若确认收货前退货，可获保险赔付</div>
-                             <div style="margin:5px;float: right">
-                                 <span style="font-size: 14px;font-weight: bold;color: red;">0.80</span>
-                             </div>
-                         </div>
-                     </div>
-
-
-                     <div class="clear"></div>
-                 </div>
-             <?php   } ?>
-
-            <div class="w930 m0a">
-                <div class="fl">
-                    <div class="mt50">
-                        <a href="javascript:void(0);" class="f14 bold c999 b_1_efe btnf7f w146 h40 fl tc">返回修改</a>
-                    </div>
-                </div>
-                <div class="fr">
-                    <div class="tc cd00 mt20">
-                        <span class="f13 bold">商品总额：￥</span>
-                        <span class="f20" id="goods_amount"><?php echo $prices?></span>
-                    </div>
-
-                    <div class="mt20 tr">
-
-                            <div class="mt20 tr">
-                                <input type="hidden" id="car" value="<?php echo $car?>" name="car">
-                                <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
-                                <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="提交订单" />
-                            </div>
-                    </div>
-
-                </div>
-            </div>
+        <div style="margin-left: 400px;margin-top: 20px;margin-bottom: 50px;">
+            <a  href="/"><img src="Images/zhifu2.jpg"></a>
+            <a href="javascript:void(0);" style="color: #0033FF">查看订单详情>></a>
         </div>
-     </form>
-</div>
+    </div>
+<?php } else { ?>
+    <img src="Images/zhifu3.jpg" style="margin-top: 30px;margin-left: 500px;">
+    <br/>
+    <br/>
+    <a href="javascript:void(0);" style="color: #0033FF;margin-left: 600px;">联系在线客服>></a>
+<?php  } ?>
 
 
-<script>
-    $(function(){
-       $('.address').click(function(){
-           $("#address_div div").removeClass('address_div1');
-           $("#address_div div").addClass('address_div2');
-
-
-           $(".class_div1").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-           $(".class_div2").html("");
-
-
-           $(this).parent().parent().addClass('address_div1');
-          $(this).parent().prev().html('寄送至：');
-          $(this).parent().next().html('修改本地址');
-       });
-
-        $(".textarea").keyup(function(){
-            var len = $(this).val().length;
-            if(len > 199){
-                $(this).val($(this).val().substring(0,200));
-                len = 200;
-            }
-            if(len != 200){
-                $(this).next().html(len+"/"+200);
-            } else {
-                $(this).next().html("<font color='red'>"+len+"/"+200+"</font>");
-            }
-        });
-    });
-</script>
