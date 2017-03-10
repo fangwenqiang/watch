@@ -227,4 +227,11 @@ class WatchController extends CommonController{
         return $pageStr;
     }
 
+    public function actionCount()
+    {
+        $g_id= \Yii::$app->request->post('id');
+        $goods = new Goods();
+        $count = $goods->count($g_id);
+        die($count);
+    }
 }

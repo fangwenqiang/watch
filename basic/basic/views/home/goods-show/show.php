@@ -1,11 +1,24 @@
 <!-- 
-    名表的出厂信息 $factory
-    
+    名表的出厂信息 $factory  
  -->
  <?php
 	use yii\helpers\Url;
   ?>
- <script src="js/jquery.js"></script>
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/goods.css">
+
+
+
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css">
+
+
+
 <style type="text/css">
 
     div.all div.column{
@@ -30,13 +43,8 @@
 </style>
 
 
-<div id="main2">
-  <div id="bread_crumb">
-    <div class="position">当前位置: <a href="http://www.sxgoing.com" rel="nofollow">首页</a> <code>&gt;</code> <a href="http://www.sxgoing.comepos-watches/">爱宝时EPOS</a> <code>&gt;</code> <a href="http://www.sxgoing.comepos-watches/list-s257616.html">爱宝时Passion系列</a> <code>&gt;</code> 爱宝时3412.183.24.30.27 手动机械男士表 </div>
-
-
-    <span class="others"> <a href="http://www.sxgoing.comepos-watches/" title="更多EPOS手表" target="_blank" class="more_goods"></a> </span> </div>
-  <div class="clearfix"></div>
+<div id="main2" class="container-fluid">
+   <div class="clearfix"></div>
   <div style="margin-top:25px;"></div>
   <div class="list_banner"> <a href="http://data.wbiao.cn/ad.php?ad_id=1138" target="_blank" rel="nofollow" onclick="_gaq.push(['_trackEvent','quan-zhan','heng-fu__1','http://data.wbiao.cn/ad.php?ad_id=1138']);"><img src="http://img2.wbiao.cn/ad/201403/21/139536510192630.jpg" class="lazy" data-original="http://img2.wbiao.cn/ad/201403/21/139536510192630.jpg" alt="招行特惠" style="display: inline;"></a> </div>
   <div style="clear:both">&nbsp;</div>
@@ -88,7 +96,8 @@
     <?php foreach ($showAttr as $key => $value): ?>
      <?php empty($i)?$i=1:$i++ ?>
        <?php foreach ($value as $values): ?>
-    <input type="button"  class="changered" value=<?=$values?> dif="<?=$i?>" >
+    <input type="button"  class="changered btn btn-default btn-sm" value=<?=$values?> dif="<?=$i?>" >
+
        <?php endforeach ?>
         <br>
         <!-- 获取这类属性被选定的值 -->
@@ -99,11 +108,69 @@
         
 
     <!-- 本人初始载入js -->
-    <script>//生成平均值
-$(function() {
-	var shop_price = $('#shop_price').html();
-	$('#average').html(Math.round(shop_price / 12));
-});
+
+    <script>
+            $.ajax({ async: false });
+            //生成平均值
+            $(function(){
+                var shop_price = $('#shop_price').html();
+               $('#average').html(Math.round(shop_price/12)); 
+            });
+
+
+            //属性赋值，都有值就进行获取
+            $('.changered').on('click',function() {
+                var num = $('#attrNum').val();
+
+                //获取当前这种类别
+                var dif = $(this).attr("dif");
+                $('input[dif='+dif+']').css('color','black');
+                $(this).css('color','red');
+
+                //获取值，设置值
+                var value = $(this).val();
+                $('#thisValue'+dif).val(value);
+
+                    res = 0; postVal = new Array();
+                $(".attrNum").each(function(){
+                    if (!($(this).val())) {
+                       res = 'fa';
+                       return false;
+                    }
+                    postVal[res] = $(this).val();
+                    res++;
+                })
+                        
+                if (res == 'fa') {
+                    return false;
+                }
+
+               
+                var csrfToken = $('input[name="_csrf"]').val();
+                //传属性值进行给商品价格赋值
+                $.post("<?= Url::toRoute(['home/goods-show/get-val'])?> ",
+                    {
+                    'postVal':postVal,
+                    '_csrf': csrfToken
+                    },
+                function(data) {
+
+                if (data['res'] == 0) {
+                    $('#shop_price').html(data['msg']);
+                    $('#fen_qi_jia').html(' ');
+                    $('#cart').attr('disabled','disabled');
+                }else{
+                    $('#shop_price').html(data['msg']);
+                    var num = Math.round(data['msg']/12);
+                    str='￥<font id="average">'+num+'</font>×12期';
+                    $('#fen_qi_jia').html(str);
+                    $('#cart').css('display','block');
+                    $('#cart').removeAttr('disabled');
+                }},'json');                  
+            });
+
+
+
 
 //属性赋值，都有值就进行获取
 $('.changered').on('click', function() {
@@ -168,7 +235,7 @@ $('.changered').on('click', function() {
     <script type="text/javascript">var is_test = 1;</script>
     <br>
     
-    <button id="cart"  style="display:none">加入购物车</button>
+    <button id="cart" class="btn btn-success"  disabled="disabled">加入购物车</button>
     <input type="hidden" id="goods_id" value=<?=$goods['g_id'] ?>>
     <script>// 判断是否登陆，如果登陆了就添加，没有就提示登陆
 
