@@ -1,16 +1,8 @@
-
+<script type="text/javascript" src="js/jquery.js"></script>
 <link rel="stylesheet" href="css/2.css">
 <div id="main" style="margin-left:200px;">
     <div class="w930 m0a mt30">
-        <div class="ml20">
-            <b class="f16">购物车：</b>
-                        <a id="login_now" href="#" class="cd00 ul fancybox.iframe">现在登录</a>
-                        
-            <span class="c999">购物车信息将一直为您保存</span>
-        </div>
-        <div class="bgf6f br10">
-            
-
+        <div class="bgf6f br10"> 
             <ul class="c999 f13 h40 mt10 li_left">
                 <li class="w510 tl pl20">商品</li>
                 <li class="w120 tc">售价</li>

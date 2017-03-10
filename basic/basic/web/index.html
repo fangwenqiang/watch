@@ -685,9 +685,9 @@
         $.get("/index.php?r=home%2Flogin%2Flogin_status", function(re_val){
             if(re_val!=0)
             {
-                  str='<span><a href="#">欢迎:<font color="red">'+re_val+'</font></a></span>\
+                  str='<span><a href="/index.php?r=home%2Fpersonal%2Findex">欢迎:<font color="red">'+re_val+'</font></a></span>\
                     <span><a href="/index.php?r=home%2Flogin%2Flogout">退出</a></span>\
-                    <span><a href="#">购物车</a></span>'
+                    <span><a href="/index.php?r=home%2Fgoods-show%2Fcar-show">购物车</a></span>'
                   $("#login").html(str);
             }
         });
