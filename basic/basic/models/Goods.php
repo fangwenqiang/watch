@@ -190,4 +190,9 @@ class Goods extends \yii\db\ActiveRecord
         return $result;
     }
 
+    //查看数量
+    public function count($g_id)
+    {
+        return Goods::find()->where(['g_id'=>$g_id])->asArray()->one()['g_number'];
+    }
 }

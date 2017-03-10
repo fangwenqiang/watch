@@ -1,7 +1,25 @@
 <?php
 use yii\helpers\Url;
 ?>
+<style type="text/css">
+    .cd-buttons{
+        margin-top: 60px;
+        font-size: 26px;
+    }
+</style>
+<!-- 遮罩层样式 -->
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="Content/4c9039ca0c6c470d997c11ac48f3d914.css">
+<!-- 遮罩层 -->
+<div class="cd-popup" display="none">
+    <div class="cd-popup-container">
+        <br>
+        <br>
+        <div class="cd-buttons">
+        </div>
+        <a href="#0" class="cd-popup-close">关闭</a></div>
+</div>
+<!-- end遮罩层 -->
 <div id="main">
     <?php foreach($data as $key=>$val){ ?>
     <div class="vip-f vip-f2">
@@ -14,37 +32,12 @@ use yii\helpers\Url;
                         </i>
                     </span>
         </h2>
-        <div class="vip-order">
-            <dl>
-                <dt>
-                    排序：
-                </dt>
-                <dd class="cur" mode="0">
-                    <a href="javascript:;">
-                        默认
-                    </a>
-                </dd>
-                <dd mode="0">
-                    <a href="javascript:;">
-                        折扣
-                    </a>
-                    <b>
-                    </b>
-                </dd>
-                <dd mode="0">
-                    <a href="javascript:;">
-                        价格
-                    </a>
-                    <b>
-                    </b>
-                </dd>
-            </dl>
-        </div>
         <div class="vip-list vip-list2">
+            <div class="display">
                 <?php foreach($val as $k=>$v){ ?>
-                    <a href="<?=url::to(['home/goods-show/show','id'=>$v['g_id']])?>" target="_blank">
+                    <a href="javascript:void(0)" add="<?=url::to(['home/goods-show/show','id'=>$v['g_id']])?>" target="_blank">
                         <img class="lazy" src="Images/<?=$v['g_img']?>"alt="" />
-                        <p id="<?=$k?>" class="count-down" endTime="<?=$v['promote_end_date']?>" >
+                        <p id="<?=$k?>" class="count-down" g_id='<?=$v['g_id'] ?>' endTime="<?=$v['promote_end_date']?>" >
                         </p>
                         <p class="p1">
                             <i>¥</i>
@@ -61,15 +54,12 @@ use yii\helpers\Url;
                         <?=$v['click_count']?>
                     </span>
                         </p>
-                        <p class="sale-out">
-                            已抢光
-                        </p>
                     </a>
                 <?php } ?>
+            </div>
         </div>
     </div>
 <?php } ?>
-
     <!--    活动规则-->
     <div class="vip-gz">
         <dl>
@@ -104,11 +94,13 @@ use yii\helpers\Url;
 </div>
 
 <script src="js/jquery.js"></script>
+
 <script>
     $(function(){
         count_dowd = $('.count-down');
         setTimeout("xianshi()",1000);
     });
+    
     function xianshi()
     {
         var newTime = Date.parse(new Date())/1000;  //当前时间戳
@@ -116,20 +108,64 @@ use yii\helpers\Url;
             endTime = $(this).attr('endTime'); //结束时间
             a = endTime-newTime;
             if(a > 0){
+                $(this).parent().attr('href','javascript:shield("抢购还没开始")');
+                $(this).parent().addClass('g__add_to_fav');
                 intDiff = parseInt(a);//倒计时总秒数量
                 day = Math.floor(intDiff / (60 * 60 * 24));
                 hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
                 minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
                 second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
-
                 if (minute <= 9) minute = '0' + minute;
                 if (second <= 9) second = '0' + second;
                 $(this).html('<span class=stop-tips>离活动开始还有'+day+'天'+hour+'时'+minute+'分'+second+'秒</span>');
+            }else if(a < 0){
+                g_id = $(this).attr('g_id');    //商品id
+                $.post('<?=url::to(['home/watch/count'])?>',{id:g_id},function(msg){
+                        //库存不足
+                        if(msg <= 0){
+                            $(this).parent().attr('href','javascript:shield("宝贝已经被抢购完了")');
+                            $(this).parent().addClass('g__add_to_fav');
+                        }else{
+                            add = $(this).parent().attr('add');
+                            $(this).parent().attr('href',add);
+                        }
+                })
             }else{
                 $(this).removeClass('.count-down');
+                $(this).parent().attr('href','javascript:shield("活动已经结束")');
+                $(this).parent().addClass('g__add_to_fav');
                 $(this).html('<span class=stop-tips>活动已经结束</span>');
             }
         });
         setTimeout("xianshi()",1000);
     }
+
+// 遮罩层
+    function shield(msg){
+        //打开窗口
+        $(document).delegate('.g__add_to_fav','click',function(event) {
+            event.preventDefault();
+            $('.cd-popup').addClass('is-visible');
+            $('.cd-buttons').html(msg)
+            //$(".dialog-addquxiao").hide()
+        });
+
+        //关闭窗口
+        $('.cd-popup').on('click',
+        function(event) {
+            if ($(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup')) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+            }
+        });
+        //ESC关闭
+        $(document).keyup(function(event) {
+            if (event.which == '27') {
+                $('.cd-popup').removeClass('is-visible');
+            }
+        });
+    };
+
 </script>
+
+
