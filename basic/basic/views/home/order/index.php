@@ -165,7 +165,7 @@ use yii\helpers\Url;
             <div class="w930 m0a">
                 <div class="fl">
                     <div class="mt50">
-                        <a href="javascript:void(0);" class="f14 bold c999 b_1_efe btnf7f w146 h40 fl tc">返回修改</a>
+                        <a href="http://www.v.com/index.php?r=home%2Forder%2Findexs" class="f14 bold c999 b_1_efe btnf7f w146 h40 fl tc">返回修改</a>
                     </div>
                 </div>
                 <div class="fr">

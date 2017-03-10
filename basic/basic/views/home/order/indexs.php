@@ -2,7 +2,7 @@
 
 use yii\helpers\Url;
 ?>
->
+
     <base href="<?php echo Url::to('@web/public/home/') ?>">
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
    <style>
@@ -48,8 +48,51 @@ use yii\helpers\Url;
     <div class="w930 m0a mt30">
         <div class="w930 m0a">
             <div class="fr">
-                <input type="checkbox" class="car_goods" value="1">
-                <input type="checkbox" class="car_goods"  value="2">
+                <?php
+                foreach($data as $key=>$val){  ?>
+                    <div class="bgf6f br10">
+                        <ul class="c999 f13 h40 mt10 li_left">
+                            <li>选择</li>
+                            <li class="w510 tl pl20">商品</li>
+                            <li class="w120 tc">单价</li>
+                            <li class="w120 tc">数量</li>
+                            <li class="w120 tc">小计</li>
+                        </ul>
+
+                        <ul class="bt_1_eae bb_1_fff" id="goods_line_548546"></ul>
+                        <ul class="999 f13 h120 li_left" id="goods_list_548546">
+                            <li><input type="checkbox" class="car_goods" value="<?php echo $val['cart_id']?>"></li>
+                            <li class="w510 tl pl20">
+                                <a href="#" target="_blank" class="fl">
+                                    <img src="images/3412_183_24_30_27_27885.jpg" width="100px" height="100px" class="m_10_20_10_0" alt="">
+                                </a>
+                                <a href="#" target="_blank">
+                                    <span class="w390 bold c333 fl h20 mt35"><?php echo $val['goods_name']?></span>
+                                </a>
+                            </li>
+                            <li class="w120 tc">
+                                <span class="bold ccf0 f16">￥<?php echo $val['price']?></span>
+                            </li>
+                            <li class="w120 tc">
+                                <span class="btne3d w18 h22 inbl re-t0-l5 ie-t1_m50 ie_mi" oprtype="minus" oprid="548546">—</span>
+                                <input id="goods_number_548546" name="goods_number" maxlength="4" size="2"
+                                       value="<?=$val['num'] ?>" class="b_1_e5e p_0_5 tc w28 h20 ie-t1_m50 ie_mi goods_number c000 bold" oprid="548546" oprnum="1" type="text">
+                                <span class="btne3d w18 h22 inbl re_t0-l5 ie-t1_m50 ie_mi" oprtype="add" oprid="548546">+</span>
+                            </li>
+                            <li class="w120 tc">
+                                <span class="btne3d" oprtype="add" oprid="548546">￥<?php echo $val['price']*$val['num']?></span>
+                            </li>
+                        </ul>
+
+
+                        <ul class="bt_1_eae bb_1_fff"></ul>
+
+
+
+
+                        <div class="clear"></div>
+                    </div>
+                <?php   } ?>
                 <form action="<?php echo Url::to(['home/order/index'])?>" method="post">
                     <div class="mt20 tr">
                         <input type="hidden" id="car" value="" name="car" >
