@@ -14,7 +14,10 @@ class OrderController extends CommonController
 
     public function actionIndexs()
     {
-        return $this->render('indexs');
+        $session = Yii::$app->session;
+        $id = $session->get('user_id');
+        $data =   (new \yii\db\Query())->from('mb_cart')->where(array("user_id"=>$id))->all();
+        return $this->render('indexs',array('data'=>$data));
     }
     /*
      *
@@ -22,11 +25,14 @@ class OrderController extends CommonController
     public function actionIndex()
     {
         $request = \Yii::$app->request;
+        if($request->post('car') == ''){
+            return $this->redirect(['home/order/indexs']);
+        }
         $car = $request->post('car');
-
         $order_model = new Order();
         //查询购物车
         $data =  (new \yii\db\Query())->from('mb_cart')->where("cart_id in(".substr($car,1).")")->all();
+
         return $this->render('index',array('data'=>$data,'car'=>substr($car,1),'prices'=>$order_model->prices1($data)));
     }
 
@@ -70,6 +76,7 @@ class OrderController extends CommonController
 
 
 
+
      public function selectCar($id)
      {
          $car_model = new Car();
@@ -86,5 +93,24 @@ class OrderController extends CommonController
         \Yii::$app->db ->createCommand()->update('mb_order_info',['order_status'=>-1],array('order_sn'=>$order))->execute();
         return $this->qt_success('/','该订单已失效');
     }
+
+
+    public function actionCheck_order()
+    {
+        //查找订单
+        file_put_contents('zhifu.txt',json_encode($_GET));
+        $arr =  (new \yii\db\Query())->from('mb_order_info')->where(array('order_sn'=>$_GET['out_trade_no']))->one();
+        if($arr['order_status'] == 1){
+            $data['out_trade_no'] = $_GET['out_trade_no'];
+            $data['total_fee'] = $_GET['total_fee'];
+            $data['type'] = 1;
+            return $this->render('index_4',array('data'=>$data));
+        } else {
+            $data['type'] = 0;
+            return $this->render('index_4',array('data'=>$data));
+        }
+
+    }
+
 
 }

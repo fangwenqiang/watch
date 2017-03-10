@@ -31,6 +31,7 @@ class ConsignmentController extends CommonController
      */
     public function actionIndex()
     {
+
        //查询寄卖品
         $consignment_model = new Consignment();
         if(empty($_GET['search'])){
@@ -281,5 +282,29 @@ class ConsignmentController extends CommonController
         } else {
             echo 0;
         }
+    }
+
+
+    //加入购物车
+    public function actionAdd_car()
+    {
+        $session = Yii::$app->session;
+        if($session->get('user_id') == ''){
+            return $this->qt_success('home/login/login','请先登录');
+        }
+        $request = \Yii::$app->request;
+        $id = $request->get('id');
+        //查询寄卖铺商品
+        return $this->qt_success('home/consignment/index','添加成功');
+        print_r($this->add_car($id));
+
+    }
+
+    public function add_car($id)
+    {
+        //查询寄卖信息
+        $consignment_model = new Consignment();
+        $arr = $consignment_model->one($id);
+
     }
 }
