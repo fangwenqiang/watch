@@ -72,9 +72,13 @@ use yii\helpers\Url;
                         <?php } ?>
                             <?php if($data['is_bargain'] == 1){ ?>
                                     <img src="images/yijia.jpg" style="margin-top: 40px;margin-left: 40px;" id="yijia">
-                                    <img src="images/gwc.jpg" style="margin-left: 40px;" id="gwc">
+                                    <a href="<?php echo Url::to(['home/consignment/add_car'])."&id=$data[consignment_id]"?>">
+                                        <img src="images/gwc.jpg" style="margin-left: 40px;" id="gwc">
+                                    </a>
                                 <?php } else {  ?>
-                                    <img src="images/gwc.jpg" style="margin-top: 40px;margin-left: 150px;" id="gwc">
+                        <a href="<?php echo Url::to(['home/consignment/add_car'])."&id=$data[consignment_id]"?>">
+                            <img src="images/gwc.jpg" style="margin-top: 40px;margin-left: 150px;" id="gwc">
+                        </a>
                             <?php } ?>
 
                     </div>
@@ -164,6 +168,7 @@ use yii\helpers\Url;
 
 
            });
+
         });
     </script>
 
