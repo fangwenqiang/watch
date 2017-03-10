@@ -154,7 +154,7 @@ use yii\helpers\Url;
         $.get("<?=Url::to(['home/login/login_status']) ?>", function(re_val){
             if(re_val!=0)
             {
-                  str='<span><a href="#">欢迎:<font color="red">'+re_val+'</font></a></span>\
+                  str='<span><a href="<?=Url::to(['home/personal/index']) ?>">欢迎:<font color="red">'+re_val+'</font></a></span>\
                     <span><a href="<?=Url::to(['home/login/logout']) ?>">退出</a></span>\
                     <span><a href="<?=Url::to(['home/goods-show/car-show']) ?>">购物车</a></span>'
                   $("#login").html(str);

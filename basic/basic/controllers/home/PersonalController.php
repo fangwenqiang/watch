@@ -14,7 +14,6 @@ use app\models\History;  //模型层
 use app\models\Comment;  //模型层
 use app\lib\PHPMailer;
 
-
 class PersonalController extends CommonController
 {
     //前台公共视图
@@ -104,6 +103,15 @@ class PersonalController extends CommonController
         $model = new Comment();
         $comment_list = $model->people_comment($_SESSION['user_name']);
         return $this->render('member_profile');
+    }
+    /*
+     * 我的订单
+     */
+    public function actionMy_order()
+    {
+        $model = new Comment();
+        $comment_list = $model->people_comment($_SESSION['user_name']);
+        return $this->render('my_order');
     }
 
     /*
