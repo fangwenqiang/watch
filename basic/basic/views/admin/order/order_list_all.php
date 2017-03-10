@@ -94,7 +94,7 @@
                             <tr>
                                 <td align="center" height="30"><?= $v['order_id'] ?></td>
                                 <td align="center" height="30"><?= \yii\helpers\Html::a($v['order_sn'], ['admin/order/info', 'orderId' => $v['order_id']], ['title' => '查看详情','style'=>'color:blue;']) ?></td>
-                                <td align="center" height="30" id="<?= $v['order_id'] ?>"><?php if($v['order_status'] == 1) echo '<font color="#20ff0e">已确认</font>';elseif($v['order_status'] == 0) echo '<font color="#ff0707">待确定</font>';else echo '<font color="#8ec52b;">交易完成</font>'; ?></td>
+                                <td align="center" height="30" id="<?= $v['order_id'] ?>"><?php switch ($v['order_status']){ case '0':echo '<font color="#20ff0e">待确认</font>';break;case '1':echo '<font color="#ff0707">已确认</font>';break;case '2':echo '<font color="#ff0707">已发货</font>';break;case '3':echo '<font color="#ff0707">交易完成</font>';break;case '-1':echo '<font color="#20ff0e">已取消</font>';break;case '-2':echo '<font color="#20ff0e">已退货</font>';break;}?></td>
                                 <td align="center" height="30"><?php if($v['pay_status'] == 1) echo '<font color="#20ff0e">已支付</font>';else echo '<font color="#ff0707">待支付</font>'; ?></td>
                                 <td align="center" height="30"><?= $v['goods_total_prices'] ?></td>
                                 <td align="center" height="30"><?=date('Y-m-d H:i:s',$v['add_time'])?></td>

@@ -24,8 +24,8 @@ use yii\helpers\Url;
     <script src="js/banner.js"></script>
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/global.js"></script>
+
+
     <script src="js/saved_resource"></script>
     <script type="text/javascript" src="js/user.js"></script>
     <link rel="stylesheet" href="css/user.css">
@@ -35,7 +35,7 @@ use yii\helpers\Url;
 <div id="member_info2"></div>
 <div class="head">
     <div class="r1 w1225">
-        <div class="ri" id='Login'>
+        <div class="ri" id='login'>
             <?php foreach ($this->params['nav']['top'] as $key => $val) {?>
                     <span><a href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></span>
             <?php } ?>
@@ -67,7 +67,7 @@ use yii\helpers\Url;
             <ul id="dropdown_nav" >
                 <li>
                     <a class="sub_link" href="#">腕表分类<img src="css/images/x_icon.png"/></a>
-                    <div class="sub_nav" style="display: none;">
+                    <div class="sub_nav">
                         <?php foreach ($this->params['categoryData'] as $key => $value) {?>
                         <dl>
                             <dt <?php if($key==0){echo 'style="position:absolute;"';}?>><?=$value['gt_name']?></dt>
@@ -89,7 +89,7 @@ use yii\helpers\Url;
         <ul class="gNav">
             <?php
                 foreach ($this->params['nav']['zhu'] as $key => $val) {       ?>
-           
+
                         <li><a title="<?php echo $val['nav_name'] ?>" class="cur"
                                href="<?php echo $val['nav_link'] ?>"><?php echo $val['nav_name'] ?></a></li>
                     <?php   }    ?>
@@ -99,77 +99,177 @@ use yii\helpers\Url;
 
 <!-- End header -->
 <link rel="stylesheet" href="css/index.css" type="text/css" media="screen, projection"/>
-
+<!--index banner start  ---------------------------------------------------------------------------------------------->
 <?= $content ?>
+<!--index banner end----------------------------------------------------------------------------------------------------->
 
+	<div class="leftArea">
+        <div class="leftArea">
+            <div class="u__mine"><a onclick="_gaq.push(['_trackEvent','user','user_index','http://user.wbiao.cn/']);" href="http://user.wbiao.cn/" style="display: block; height: 100%;"></a></div>
+            <div class="floor">
+                <div class="t"><i class="u__trade"></i><font class="f_fixed">交易管理</font></div>
+                <div class="c">
+                    <ul>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_order'])?>" title="我的订单" rel="nofollow">我的订单 (<span class="cb01">1</span>)</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_presell'])?>" title="我的预售" rel="nofollow">我的预售 (<span class="cb01">0</span>)</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_address'])?>" title="收货地址" rel="nofollow">收货地址</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/gift_card'])?>" title="礼品卡" rel="nofollow">礼品卡</a></li>
+                        <li style="border:0;"><i></i><a href="#" title="代金券/优惠券" rel="nofollow">代金券/优惠券</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="t"><i class="u__datum"></i><font class="f_fixed">账户管理</font></div>
+                <div class="c">
+                    <ul>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/index'])?>" title="个人资料" rel="nofollow">个人资料</a></li>
+                        <li><i></i><a href="#" title="修改密码" rel="nofollow">修改密码</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_collect'])?>" title="我的收藏" rel="nofollow">我的收藏</a></li>
+                        <li><i class="u__point"></i><a href="<?php echo Url::to(['home/personal/my_history'])?>" title="浏览历史" class="ccf0" rel="nofollow">最近访问</a></li>
+                        <li style="border:0;"><i></i><a href="<?php echo Url::to(['home/personal/my_address'])?>" title="为我推荐" rel="nofollow">为我推荐</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="t"><i class="u__integral"></i><font class="f_fixed">积分管理</font></div>
+                <div class="c">
+                    <ul>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_integral'])?>" title="我的积分" rel="nofollow">我的积分</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/integral_rule'])?>" title="积分细则" rel="nofollow">积分细则</a></li>
+                        <li style="border:0;"><i></i><a href="#" title="推荐有礼" rel="nofollow">推荐有礼</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="t"><i class="u__service"></i><font class="f_fixed">消息管理</font></div>
+                <div class="c">
+                    <ul>
+                        <li><i></i><a href="#" title="购买咨询" rel="nofollow">购买咨询</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_comment'])?>" title="我的评论" rel="nofollow">我的评论</a></li>
+                        <li style="border:0;"><i></i><a href="#" title="我的消息" rel="nofollow">我的消息</a></li>
+                        <li style="border:0;"><i></i><a href="#" title="促销通知" rel="nofollow">促销通知</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="t"><i class="u__star"></i><font class="f_fixed">喜悦手表会员</font></div>
+                <div class="c">
+                    <ul>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/member_profile'])?>" title="会员简介" rel="nofollow">会员简介</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logout">
+                <a href="<?=Url::to(['home/login/logout']) ?>" class="c999">退出登录</a>
+            </div>
+        </div>
+   </div>
+   </div>
+	<!-- 左边菜单 End -->
+	<div class="clear"></div>
 
+<!--底部 -->
 <div class="foot">
-      <div class="r1 w1225">
+    <div class="r1 w1225">
         <dl class=" w188">
             <dd class=" w110">
-                <a href="/help-706.html" target="_blank" rel="nofollow"><img src="css/images/logoxia.png"/></a>
+                <a href="/help-706.html" rel="nofollow"><img src="css/images/logoxia.png"/></a>
             </dd>
         </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>新手</i></dt>
-            <dd class=" w110">
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;用户注册</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;找回密码</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;订购流程</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>支付</i></dt>
-            <dd class=" w110">
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;支付方式</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;发票说明</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;支付问题</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>配送</i></dt>
-            <dd class=" w110">
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;配送方式</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;配送说明</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;包裹签收</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>保障</i></dt>
-            <dd class=" w110">
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;退换货政策说明</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;如何办理退货</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;常见问题</a>
-            </dd>
-        </dl>
-        <dl class=" w188">
-            <dt class=" w70"><i>寄卖</i></dt>
-            <dd class=" w110">
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;寄卖流程</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;寄卖说明</a>
-                <a href="" target="_blank" rel="nofollow">&bull;&nbsp;调价与撤卖</a>
-            </dd>
-        </dl>
+        <?php foreach ($this->params['nav']['bottom'] as $key => $val) {
+            ?>
+                <dl class=" w188">
+                    <dt class=" w70"><i><?php echo $val['nav_name'] ?></i></dt>
+                    <dd class=" w110">
+                        <?php foreach ($val['child'] as $k => $v) { ?>
+                            <a href="<?php echo $val['nav_link'] ?>"
+                               rel="nofollow">&bull;&nbsp;<?php echo $v['nav_name'] ?></a>
+                        <?php } ?>
+                    </dd>
+                </dl>
+            <?php
+        } ?>
     </div>
     <div class="r2 w1225 wide">
         <div class="f333 tmallLinks">
-        <a href="" target="_blank" rel="nofollow">正品保证</a>&nbsp;|&nbsp;
-        <a href="" target="_blank" rel="nofollow">7天退货</a>&nbsp;|&nbsp;
-        <a href="" target="_blank">售后维修 </a>&nbsp;|&nbsp;
-        <a href="" target="_blank">全场包邮</a>&nbsp;|&nbsp;
-        <a href="" target="_blank" rel="nofollow">投诉建议</a>
+            <a href="" rel="nofollow">正品保证</a>&nbsp;|&nbsp;
+            <a href="" rel="nofollow">7天退货</a>&nbsp;|&nbsp;
+            <a href="">售后维修 </a>&nbsp;|&nbsp;
+            <a href="">全场包邮</a>&nbsp;|&nbsp;
+            <a href="" rel="nofollow">投诉建议</a>
         </div>
         <div>
-                喜悦名表 版权所有  Copyright 2014-2015 www.xxxxxxx.cn . LTD ALL RIGHT RESERVED.
+            <?php echo $this->params['system']['site_name'] ?> 版权所有 Copyright
+            2014-2015 <?php echo $this->params['system']['email'] ?> . <?php echo $this->params['system']['icp'] ?>.
             <br/>
         </div>
     </div>
+</div><!-- End footer -->
+
+<!--back top -->
+<div id="top_item">
+    <a id="back_top" onclick="return false;" title="回到顶部"></a>
 </div>
-<!-- End footer -->
-<div id="floatBox">
-    <div id="return">
-        <a href="javascript:void(0);" class="c__gotop" title="返回顶部" style="display:none;" rel="nofollow"></a>
-    </div>
-</div>
+<script type="text/javascript">
+    $(function () {
+
+        //判断是否登录
+        $.get("<?=Url::to(['home/login/login_status']) ?>", function(re_val){
+            if(re_val!=0)
+            {
+                  str='<span><a href="<?=Url::to(['home/personal/index']) ?>">欢迎:<font color="red">'+re_val+'</font></a></span>\
+                    <span><a href="<?=Url::to(['home/login/logout']) ?>">退出</a></span>\
+                    <span><a href="<?=Url::to(['home/goods-show/car-show']) ?>">购物车</a></span>'
+                  $("#login").html(str);
+            }
+        });
+
+
+        $(window).scroll(function () {
+            var scrolltop = $(this).scrollTop();
+            if (scrolltop >= 200) {
+                $("#top_item").show();
+            } else {
+                $("#top_item").hide();
+            }
+        });
+        $("#back_top").click(function () {
+            $("html,body").animate({scrollTop: 0}, 500);
+        });
+
+
+        $(function () {
+            //我们一开始就隐藏所有的下拉菜单
+            $('#dropdown_nav li').find('.sub_nav').hide();
+            //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
+            $('#dropdown_nav li').hover(function () {
+                $(this).find('.sub_nav').fadeIn(100);
+                $(this).find(".sub_link").addClass("cur");
+            }, function () {
+                $(this).find('.sub_nav').fadeOut(50);
+                $(this).find(".sub_link").removeClass("cur");
+            });
+        });
+
+    });
+</script>
 </body>
 </html>
+
+<script>
+    $('#out').click(function () {
+    
+        $.ajax({
+            url: "<?=Url::to(['home/login/logout']) ?>",
+            success: function (msg) {
+                if (msg == 0) {
+                    alert("退出登录失败");
+                } else {
+                    alert("退出登录成功");
+                    location.href = "<?=Url::to(['home/index']) ?>";
+                }
+            }
+        });
+    })
+
+</script>

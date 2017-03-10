@@ -16,8 +16,8 @@
                 <tr>
                     <td align="center" width="400">订单信息</td>
                     <td align="center" width="150">订购商品</td>
-                    <td align="center" width="100">件数</td>
-                    <td align="center" width="130">单价</td>
+                    <td align="center" width="100">购买数量</td>
+                    <td align="center" width="130">商品单价</td>
                     <td align="center">订单状态</td>
                 </tr>
                 <tr style="font-size: 14px;">

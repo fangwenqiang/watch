@@ -67,8 +67,11 @@ use yii\helpers\Url;
             <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
                 <div style="float: left">请选择付款方式</div>
             </div>
+            <br/>
+            <p>订单号：<?php echo $order_sn;?>   <span style="margin-left: 40px;font-weight: bold">支付时间：<span id="time"><?php echo date('i',$time)?>:<?php echo date('s',$time)?></span></span></p>
             <p style="height: 42px;font-weight: bold;font-size: 16px;color: red;line-height: 42px;">
-                <span style="float: left">总金额：￥1200</span>
+                <span style="float: left">总金额：￥<?php echo $prices;?></span>
+
             </p>
         </div>
         <div class="bgf6f br10" style="margin-top: 10px;" id="address_div">
@@ -119,5 +122,26 @@ use yii\helpers\Url;
           $(this).parent().next().html('修改本地址');
 
        });
+
+
+       //倒计时
+        var m="<?php echo date('i',$time)?>";
+        var s="<?php echo date('s',$time)?>";
+        s =s-1;
+        setInterval(function(){
+            if(s<10){
+                $('#time').html(m+':0'+s);
+            }else{
+                $('#time').html(m+':'+s);
+            }
+            s--;
+            if(s<0){
+                s=59;
+                m--;
+            }
+            if(m==0 && s==0){
+                location.href="<?php echo Url::to(['home/order/over_time'])."&order=$order_sn"?>"
+            }
+        },1000)
     });
 </script>

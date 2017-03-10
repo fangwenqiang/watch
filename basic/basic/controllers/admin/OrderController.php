@@ -81,7 +81,7 @@ class OrderController extends Controller
      */
     public function actionInfo()
     {
-        $order = new Order();;
+        $order = new Order();
         $request = Yii::$app->request;
         $orderId = $request->get('orderId');
 
@@ -96,7 +96,9 @@ class OrderController extends Controller
                 ->where(['in','g_id',$goodsId])->all();
         //处理商品图片
         foreach ($orderGoods as $k=>$v){
-            if($v['goods_id'] == $goodsInfo[$k]['g_id']) $orderGoods[$k]['img'] = $goodsInfo[$k]['g_thumb'];
+            foreach ($goodsInfo as $m=>$n){
+                if($v['goods_id'] == $n['g_id']) $orderGoods[$k]['img'] = $n['g_thumb'];
+            }
         }
 
         return $this->render('order_info',[

@@ -9,9 +9,11 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Collect;  //模型层
+use app\models\Integral;  //模型层
 use app\models\Integral_rule;  //模型层
 use app\models\History;  //模型层
 use app\models\Comment;  //模型层
+use app\models\Order;
 use app\lib\PHPMailer;
 
 class PersonalController extends CommonController
@@ -45,6 +47,134 @@ class PersonalController extends CommonController
         echo $model->test();
     }
 
+	/*
+     * 我的订单
+     */
+    public function actionMy_order()
+    {
+        $session = Yii::$app->session;
+        $userId = $session->get('user_id');
+
+        $whereArray = ['and','user_id='.$userId];
+
+        //搜索条件
+        $request = Yii::$app->request;
+        if (Yii::$app->request->isPost) {
+            $addTime = $request->post('addTime');
+            $orderStatus = $request->post('orderStatus');
+            $orderSn = addslashes($request->post('orderSn'));
+            $whereArray = $this->getWhere($whereArray,['addTime'=>$addTime,'orderStatus'=>$orderStatus,'orderSn'=>$orderSn]);
+        }
+
+
+        //订单信息
+        $orderInfo = (new \yii\db\Query())
+            ->select(['order_id', 'order_sn', 'user_id', 'order_status', 'express_id', 'express_name', 'pay_id', 'pay_name', 'pay_status', 'goods_total_prices', 'add_time', 'country', 'province', 'city', 'district', 'address', 'mobile'])->from('{{%order_info}}')
+            ->where($whereArray)
+            ->all();
+
+        //订单商品信息
+        $orderId = array_column($orderInfo,'order_id');
+        $orderGoods = (new \yii\db\Query())
+            ->select([])->from('{{%order_goods}}')
+            ->where(['in','order_id',$orderId])->all();
+
+        $goodsId = array_column($orderGoods,'goods_id');
+        //商品信息
+        $goodsInfo = (new \yii\db\Query())
+            ->select(['g_id','g_thumb'])->from('{{%goods}}')
+            ->where(['in','g_id',$goodsId])->all();
+        //处理商品图片
+        foreach ($orderGoods as $k=>$v){
+            foreach ($goodsInfo as $m=>$n){
+                if($v['goods_id'] == $n['g_id']) $orderGoods[$k]['img'] = $n['g_thumb'];
+            }
+        }
+
+        //合并订单信息与订单商品信息
+        foreach ($orderInfo as $k=>$v){
+            foreach ($orderGoods as $m=>$n){
+                if( $n['order_id'] == $v['order_id']) $orderInfo[$k]['orderGoods'][] = $orderGoods[$m];
+            }
+        }
+
+        return $this->render('my_order',['orderInfo'=>$orderInfo]);
+    }
+
+    protected function getWhere($where,$arr)
+    {
+        //订单号
+        if(!empty($arr['orderSn'])) array_push($where,'order_sn="'.$arr['orderSn'].'"');
+        //订单状态
+        switch ($arr['orderStatus']){
+            case '1': //查未确认订单
+                array_push($where,'order_status=0');
+                break;
+            case '2'://已确认
+                array_push($where,'order_status=1');
+                break;
+            case '3'://待发货
+                array_push($where,'express_status=0');
+                break;
+            case '4'://已发货
+                array_push($where,'order_status=2');
+                break;
+            case '5'://待支付
+                array_push($where,'pay_status=0');
+                break;
+            case '6'://已支付
+                array_push($where,'pay_status=1');
+                break;
+            case '7'://已取消
+                array_push($where,'order_status=-1');
+                break;
+            case '8'://已退货
+                array_push($where,'order_status=-2');
+                break;
+            case '9'://成功交易
+                array_push($where,'order_status=3');
+                break;
+        }
+        //订单创建时间
+        switch ($arr['addTime']){
+            case '1'://一个月订单
+                array_push($where,['between', 'add_time',strtotime('-1 month'),time()]);
+                break;
+            case '2'://三个月
+                array_push($where,['between', 'add_time',strtotime('-3 month'),time()]);
+                break;
+            case '3'://一年
+                array_push($where,['between', 'add_time',strtotime('-1 year'),time()]);
+                break;
+        }
+        return $where;
+
+    }
+
+    /*
+     * 编辑资料
+     */
+    public function actionMessage()
+    {
+        return $this->render('message');
+    }
+
+	/*
+     * 我的预售
+     */
+    public function actionMy_presell()
+    {
+        return $this->render('my_presell');
+    }
+	
+	/*
+     * 我的收货地址
+     */
+    public function actionMy_address()
+    {
+        return $this->render('my_address');
+    }
+	
     /*
      * 我的积分
      */
@@ -103,15 +233,6 @@ class PersonalController extends CommonController
         $model = new Comment();
         $comment_list = $model->people_comment($_SESSION['user_name']);
         return $this->render('member_profile');
-    }
-    /*
-     * 我的订单
-     */
-    public function actionMy_order()
-    {
-        $model = new Comment();
-        $comment_list = $model->people_comment($_SESSION['user_name']);
-        return $this->render('my_order');
     }
 
     /*
