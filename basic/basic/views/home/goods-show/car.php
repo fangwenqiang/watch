@@ -1,13 +1,10 @@
-
+<?php 
+use yii\helpers\Url;
+ ?>
+<script src="js/jquery.js"></script>
 <link rel="stylesheet" href="css/2.css">
 <div id="main" style="margin-left:200px;">
-    <div class="w930 m0a mt30">
-        <div class="ml20">
-            <b class="f16">购物车：</b>
-                        <a id="login_now" href="#" class="cd00 ul fancybox.iframe">现在登录</a>
-                        
-            <span class="c999">购物车信息将一直为您保存</span>
-        </div>
+    <div class="w930 m0a mt30">     
         <div class="bgf6f br10">
             
 
@@ -23,7 +20,10 @@
                 
                
                 <ul class="999 f13 h120 li_left" id="goods_list_548546">
+                   <a>
+                            
                     <li class="w510 tl pl20">
+                       
                         <a href="#" target="_blank" class="fl">
                 <img src="images/3412_183_24_30_27_27885.jpg" class="m_10_20_10_0" alt="" height="100px" width="100px">
                         </a>
@@ -41,15 +41,33 @@
                         <span class="btne3d w18 h22 inbl re_t0-l5 ie-t1_m50 ie_mi" oprtype="add" oprid="548546">+</span>
                     </li>
                     <li class="w100 tr">
-                        <a href="javascript:void(0)" id="collection" oprid="25523" class="ul">收藏</a>
-                        <a href="javascript:void(0)" data="548546" class="ul delete">删除</a>
+                       <a href="javascript:void(0)" data="548546" 
+                       class="ul delete" cartId="<?=$value['cart_id'] ?>">删除</a>
                     </li>
                 </ul>
-                
-
+        
             <ul class="bt_1_eae bb_1_fff"></ul>
-
                     <?php endforeach ?>
+
+                <script>
+                $('.delete').on('click',function(){
+                     var id = $(this).attr('cartId');
+                     parentNode = $(this).parent().parent();
+                    $.get("<?=Url::toRoute('home/goods-show/del-cart') ?>"
+                        ,{
+                            'id':id,
+                        },function(data){
+                            if (data == 1) {
+                                alert('删除成功');
+                                parentNode.remove();
+                            }else{
+                                alert('删除失败');
+                            }
+                        });
+                });
+                </script>
+
+
             <!-- Cale 2014-03-13-->
             <div class="c999">
                 <div class="fl w500">
