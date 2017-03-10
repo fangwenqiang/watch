@@ -23,7 +23,24 @@ class Comment extends ActiveRecord{
         ->leftJoin('mb_reply','mb_reply.comment_id=mb_comment.comment_id')
         ->where(['goods_id'=>$goods_id])->asArray()->All();
     }
-
+	
+	/*
+     * 评论添加
+     */
+    public function commentAdd($post)
+    {
+    	unset($post['_csrf']);
+        $res = Yii::$app->db->createCommand()->insert('mb_comment', $post)->execute();
+        if($res)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+	
     public function people_comment($usere_name)
     {
         return $this->find()

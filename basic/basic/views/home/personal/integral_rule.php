@@ -86,5 +86,3 @@ use yii\helpers\Url;
         <!-- 翻页 End -->
 
     </div>
-
-</div>
