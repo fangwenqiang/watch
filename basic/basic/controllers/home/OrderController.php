@@ -22,8 +22,10 @@ class OrderController extends CommonController
     public function actionIndex()
     {
         $request = \Yii::$app->request;
+        if($request->post('car') == ''){
+            return $this->redirect(['home/order/indexs']);
+        }
         $car = $request->post('car');
-
         $order_model = new Order();
         //查询购物车
         $data =  (new \yii\db\Query())->from('mb_cart')->where("cart_id in(".substr($car,1).")")->all();

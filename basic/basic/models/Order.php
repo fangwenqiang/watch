@@ -98,6 +98,7 @@ class Order extends ActiveRecord
         $order['pay_status'] = 0;
         $order['goods_total_prices'] = 0;
         $order['over_time'] = ((time())+300);
+        $order['add_time'] = time();
         $order['country'] = $addressArr['country'];
         $order['province'] = $addressArr['province'];
         $order['city'] = $addressArr['city'];
