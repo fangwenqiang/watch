@@ -79,7 +79,7 @@ use yii\helpers\Url;
 								<a class="c0e7" target="_blank" href="/order/detail/645323">
 									查看
 								</a><span>|</span>
-								<a class="c0e7" href="https://www.wbiao.cn/davosa-g13823.html#comment">
+								<a class="c0e7" href="<?php echo Url::to(['home/goods-show/goods_comment','goods_id'=>2])?>">
 									评论
 								</a><span>|</span>
 								<a class="cb01" target="_blank" href="https://cart.wbiao.cn/pay/?order_sn=2017030912002&amp;token=3dc1e04eb2a1996a9328b861e916faae">
