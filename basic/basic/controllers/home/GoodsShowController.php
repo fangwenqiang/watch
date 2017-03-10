@@ -8,8 +8,7 @@ use app\models\History;
 use app\models\Comment; 
 use yii\web\NotFoundHttpException;
 use app\model\Goodstype;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
+use app\models\gongyang\Goods;
 
 /*
 * 前台商品展示控制器
@@ -19,6 +18,16 @@ class GoodsShowController extends CommonController
 {
 	static public $chainMysql;
 	public  $layout = './proscenium';
+	static public  $startSet;
+	static public $startModel; 
+
+	//开始设置的参数
+	public function start()
+	{
+		self::$startSet = Goods::set();
+		self::$startModel = new Goods();
+	}
+
     public function actionCollect()
     {
         $post = \Yii::$app->request->post();
@@ -38,16 +47,40 @@ class GoodsShowController extends CommonController
             $result['msg']="收藏失败";
             return json_encode($result);
         }
+    }
+
+    public function actionDelCart()
+    {
+    	$this->start();
+    	$cart_id = self::$startSet['request']->get('id');
+    	
+    	
+    	$res = \Yii::$app->db->createCommand()->delete('mb_cart', 'cart_id ='.$cart_id)->execute();
+
+    	if ($res) {
+    		echo 1;
+    	}else{
+    		echo 2;
+    	}
+
+    	
 
     }
+
+    //购物车
     public function actionCarShow()
     {
-    	$user_id = Filtration::check_id(\Yii::$app->session->get('user_id'));
+    	$this->start();
+
+    	$user_id = self::$startSet['session']->get('user_id'); 
     	$sql = 'select * from mb_cart where user_id ='.$user_id;
-		$cartShow = \Yii::$app->db->createCommand($sql)->queryAll();
+		$cartShow = self::$startModel->sql($sql);
+
 		$sql = 'SELECT sum(num*price) FROM `mb_cart` where user_id=1';
-		$priceSum = \Yii::$app->db->createCommand($sql)->queryAll();
+		$priceSum = self::$startModel->sql($sql);
+
 		$priceSum = $priceSum[0]['sum(num*price)'];
+
     	return 	$this->render('car',compact('cartShow','priceSum'));
     }
 
@@ -55,26 +88,22 @@ class GoodsShowController extends CommonController
 	//商品展示
 	public function actionShow()
 	{
-		self::$chainMysql?self::$chainMysql:\Yii::$app->db->createCommand();
-
-		$id = $_GET['id'];
-		$session = \Yii::$app->session;
-		if (empty($session->get('user_id'))) {
-			$user_id = 2;
-		}else{
-			$user_id =  $session->get('user_id');
-		}
-		
-
-
-		$goodsId = Filtration::check_id($id);
-		$typeId = Filtration::check_id(4);
-
-				//查询这个商品的详细属性
+		$this->start();
+		//goods 查找		
+		$goodsId = self::$startSet['request']->get('id');
 		$sql = 'select * from mb_goods where g_id ='.$goodsId;
-		$goods = \Yii::$app->db->createCommand($sql)->queryAll();
+		$goods = self::$startModel->sql($sql);
 		$goods = $goods[0];
+
+
+		//获取userid
+		$user_id = self::$startSet['session']->get('user_id');
+		if (!$user_id) {
+			$user_id = 2;
+		}
+
 		
+				
 		$model = new History();
         $res = $model->history_find($user_id,$goodsId);
 
@@ -96,16 +125,14 @@ class GoodsShowController extends CommonController
 		$comment_list=$comment->show($goodsId);
 
 
-
 		//查询该类商品所有属性
-		$sql = 'select attr_id,attr_name,attr_values from mb_attribute where type_id ='.$typeId;
-		$attrArr = \Yii::$app->db->createCommand($sql)->queryAll();
+		$sql = 'select attr_id,attr_name,attr_values from mb_attribute where type_id = 4';
+		$attrArr = self::$startModel->sql($sql);
+		
 		foreach ($attrArr as $key => $value) {
 			 $abc = explode("\r\n",$value['attr_values']);
 			 $showAttr[$value['attr_name']] = $abc;
 		}
-
-
 
 		//判断是否有商品的详细描述信息
 		if (empty($goods['describe'])) {
@@ -117,10 +144,18 @@ class GoodsShowController extends CommonController
 
 
 
+
+
+
+
+
+
 	//获取组合的价格，后期加入商品id 筛选
 	public function actionGetVal()
 	{	
-		$post = \Yii::$app->request->post();
+		$this->start();
+
+		$post = self::$startSet['request']->post();
 		$query = new Query();
 
 		$id = 2;
@@ -151,28 +186,31 @@ class GoodsShowController extends CommonController
 		    			->from('mb_group')
 		    			->where(['attr_list'=> $attr_list,'goods_id'=>$id])
 		    			->one();
+
 	    if (empty($returnValue['group_price'])) {
 	    	return json_encode(['res'=>0,'msg'=>'该商品售罄']);			
 	    }			
 
-		\Yii::$app->session->set('goods_sn',$returnValue['goods_sn']);
-		\Yii::$app->session->set('group_price',$returnValue['group_price']);
+		self::$startSet['session']->set('goods_sn',$returnValue['goods_sn']);
+		self::$startSet['session']->set('group_price',$returnValue['group_price']);
+
 		echo json_encode(['res'=>1,'msg'=>$returnValue['group_price']]);			
 		
 	}
 
 
+
 	public function actionCart()
 	{
-		if (empty(\Yii::$app->session->get('user_id'))) {
+		$this->start();
+		if (empty(self::$startSet['session']->get('user_id'))) {
 			echo  "请先登陆";
 		}
 
-
-		$cartInsert['goods_sn'] = \Yii::$app->session->get('goods_sn');
-		$cartInsert['price'] = \Yii::$app->session->get('group_price');
-		$cartInsert['user_id'] = \Yii::$app->session->get('user_id');
-		$cartInsert['num']	= Filtration::check_id($_GET['goods_num']);
+		$cartInsert['goods_sn'] = self::$startSet['session']->get('goods_sn');
+		$cartInsert['price'] = self::$startSet['session']->get('group_price');
+		$cartInsert['user_id'] = self::$startSet['session']->get('user_id');
+		$cartInsert['num']	= self::$startSet['request']->get('goods_num');
 		$res = \Yii::$app->db->createCommand()->insert('mb_cart',$cartInsert)->execute();
 	
 		if ($res) {
@@ -181,6 +219,7 @@ class GoodsShowController extends CommonController
 			echo '请登陆后试试';
 		}
 	}
+
 
 
 }
