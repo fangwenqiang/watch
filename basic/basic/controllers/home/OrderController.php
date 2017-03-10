@@ -14,7 +14,10 @@ class OrderController extends CommonController
 
     public function actionIndexs()
     {
-        return $this->render('indexs');
+        $session = Yii::$app->session;
+        $id = $session->get('user_id');
+        $data =   (new \yii\db\Query())->from('mb_cart')->where(array("user_id"=>$id))->all();
+        return $this->render('indexs',array('data'=>$data));
     }
     /*
      *
@@ -29,6 +32,7 @@ class OrderController extends CommonController
         $order_model = new Order();
         //查询购物车
         $data =  (new \yii\db\Query())->from('mb_cart')->where("cart_id in(".substr($car,1).")")->all();
+
         return $this->render('index',array('data'=>$data,'car'=>substr($car,1),'prices'=>$order_model->prices1($data)));
     }
 
@@ -59,7 +63,7 @@ class OrderController extends CommonController
         $arr = $order_model->SelectOrder($order_id);
         $pay_class=new Pay();
         $prices = $order_model->prices($order_id);
-        $pay_link=$pay_class->pay_url($arr['order_sn'],0.01);
+        $pay_link=$pay_class->pay_url($arr['order_sn'],$prices);
         if(($arr['over_time']-time()) < 0){
            return $this->qt_success('/','该订单已失效');
        }
