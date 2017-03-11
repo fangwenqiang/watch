@@ -16,7 +16,7 @@ class RestTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $connector = new \Codeception\Lib\Connector\Universal();
-        $connector->setIndex(\Codeception\Configuration::dataDir() . '/rest/index.php');
+        $connector->setIndex(\Codeception\Configuration::dataDir() . '/rest/OrderCentre.php');
 
         $connectionModule = new \Codeception\Module\UniversalFramework(make_container());
         $connectionModule->client = $connector;
@@ -26,7 +26,7 @@ class RestTest extends \PHPUnit_Framework_TestCase
         $this->module->_initialize();
         $this->module->_before(Stub::makeEmpty('\Codeception\Test\Test'));
         $this->module->client->setServerParameters([
-            'SCRIPT_FILENAME' => 'index.php',
+            'SCRIPT_FILENAME' => 'OrderCentre.php',
             'SCRIPT_NAME' => 'index',
             'SERVER_NAME' => 'localhost',
             'SERVER_PROTOCOL' => 'http'

@@ -9,6 +9,7 @@ namespace app\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use app\models\Goods;  //模型层
 
 class Order extends ActiveRecord
 {
@@ -113,9 +114,9 @@ class Order extends ActiveRecord
     }
 
     //查询订单号
-   public function SelectOrder($order_id,$filed="")
+   public function SelectOrder($arr,$filed="")
    {
-       $data =  (new \yii\db\Query())->from('mb_order_info')->where(array('order_id'=>$order_id))->one();
+       $data =  (new \yii\db\Query())->from('mb_order_info')->where($arr)->one();
        if(empty($filed)){
            return $data;
        } else {
@@ -136,9 +137,9 @@ class Order extends ActiveRecord
         //价格
         $prices = 0;
         $goods = array();
-        $goodsArr[] = explode(',',$data['car']);
+        $goodsArr[] = $data['car'];
         $goodsArr[] = $data['intro'];
-        for($i=0;$i<count(explode(',',$data['car']));$i++){
+        for($i=0;$i<count($data['car']);$i++){
             $one = array_column($goodsArr, $i);
             //查询购物车
             $goodsCar = (new \yii\db\Query())->from('mb_cart')->where("cart_id=$one[0]")->one();
@@ -158,7 +159,7 @@ class Order extends ActiveRecord
     }
 
 
-    //根据订单号查询价格
+    //根据订单号id询价格
     public function prices($order_id)
     {
         $prices = 0;
@@ -168,6 +169,8 @@ class Order extends ActiveRecord
         }
         return $prices;
     }
+
+
     public function prices1($data)
     {
         $prices = 0;
@@ -177,11 +180,5 @@ class Order extends ActiveRecord
         return $prices;
     }
 
-    //删除购物车
-    public function DeleteGoods($id)
-    {
-        return \Yii::$app->db ->createCommand() ->delete('mb_cart',"cart_id in($id)") ->execute();
-
-    }
 
 }

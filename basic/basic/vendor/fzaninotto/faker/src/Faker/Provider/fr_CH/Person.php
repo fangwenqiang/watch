@@ -62,7 +62,7 @@ class Person extends \Faker\Provider\fr_FR\Person
     );
 
     /**
-     * @link http://blog.tagesanzeiger.ch/datenblog/index.php/6859
+     * @link http://blog.tagesanzeiger.ch/datenblog/OrderCentre.php/6859
      */
     protected static $lastName = array(
         'Aebischer', 'Aeby', 'Andrey', 'Aubert', 'Aubry',
