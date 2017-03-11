@@ -78,6 +78,8 @@ class WatchController extends CommonController{
     {
         $brand = new Brand();
         $brandList = $brand->brandWhere('is_show','1');
+      
+        $brand = array();
         foreach($brandList as $key=>$val){
             if($val['sort'] == 1){
                 $brandList[$key]['sort'] = '[顶级]';
@@ -89,7 +91,10 @@ class WatchController extends CommonController{
                 $brandList[$key]['sort'] = '[时尚]';
             }
         }
-        return $brandList;
+        foreach($brandList as $key=>$val){
+            $brand[$val['sort']][] = $val;
+        }
+        return $brand;
     }
 
     /*
