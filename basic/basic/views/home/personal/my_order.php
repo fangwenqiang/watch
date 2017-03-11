@@ -67,6 +67,7 @@ use yii\helpers\Url;
 							<td class="w75">购买数量</td>
 							<td class="w111">商品单价</td>
 							<td class="w87">订单状态</td>
+							<td class="w87">评论</td>
 							<td class="w130">操作</td>
 						</tr>
 						<?php foreach ($orderInfo as $k=>$v):?>
@@ -111,6 +112,29 @@ use yii\helpers\Url;
 									<?php switch ($v['order_status']){ case '0':echo '<font color="#20ff0e">待确认</font>';break;case '1':echo '<font color="#ff0707">已确认</font>';break;case '2':echo '<font color="#ff0707">已发货</font>';break;case '3':echo '<font color="#ff0707">交易完成</font>';break;case '-1':echo '<font color="#20ff0e">已取消</font>';break;case '-2':echo '<font color="#20ff0e">已退货</font>';break;}?>
 								</p>
 							</td>
+							<td>
+								<table width="100%" style="height:200px;">
+									<?php foreach ($v['orderGoods'] as $m): ?>
+										<tr>
+											<td align="center" style="border-left:none;">
+												<?php if ($v['order_status'] == 3 & $m['comment_status'] == 0 ){ ?>
+													<a class="c0e7" href="<?php echo \yii\helpers\Url::to(['home/goods-show/goods_comment','goods_id'=>$m['goods_id'],'order_id'=>$m['order_id']])?>">
+														立即评论
+													</a>
+													<?php }elseif($v['order_status'] == 3 & $m['comment_status'] == 1){ ?>
+													已评论
+													<?php }elseif($v['order_status'] == 2 ){ ?>
+													<a class="c0e7" href="<?php echo \yii\helpers\Url::to(['home/goods-show/goods_comment','goods_id'=>$m['goods_id'],'order_id'=>$m['order_id']])?>">
+														立即收货
+													</a>
+													<?php }else{ ?>
+														暂无操作
+												<?php }?>
+											</td>
+										</tr>
+									<?php endforeach; ?>
+								</table>
+							</td>
 							<td >
 								<?php if($v['order_status'] == 0) { ?>
 								<a class="cb01" target="_blank" href="https://cart.wbiao.cn/pay/?order_sn=2017030912002&amp;token=3dc1e04eb2a1996a9328b861e916faae">
@@ -121,9 +145,6 @@ use yii\helpers\Url;
 								</a>
 								<?php } ?>
 								<?php if($v['order_status'] == 3) { ?>
-									<a class="c0e7" href="https://www.wbiao.cn/davosa-g13823.html#comment">
-										评论
-									</a><span>|</span>
 									<a class="c0e7" href="https://www.wbiao.cn/davosa-g13823.html#comment">
 										删除
 									</a>
