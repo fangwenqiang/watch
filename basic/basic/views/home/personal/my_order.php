@@ -25,76 +25,150 @@ use yii\helpers\Url;
 		<div class="clear"></div>
 		<div class="odrTab">
 			<div class="ot_top">
-				<form action="">
+				<?php $form = yii\widgets\ActiveForm::begin(['method'=>'post'])?>
 					<div class="left">
-						<select name="datetime">
-							<option selected="selected" value="">所有订单</option><option value="1">近一个月订单</option><option value="2">近三个月订单</option><option value="3">近一年订单</option>
-						</select>
-						<select name="order_status">
-							<option value="">全部状态</option><option value="1">未确认</option><option value="2">已确认</option><option value="3">待发货</option><option value="4">分单发货中</option><option value="5">已发货</option><option value="6">已取消</option><option value="7">已退货</option><option value="8">待支付</option>
+						<select name="addTime">
+							<option selected="selected" value="0">所有订单</option>
+							<option value="1">近一个月订单</option>
+							<option value="2">近三个月订单</option>
+							<option value="3">近一年订单</option>
+						</select>&nbsp;
+						<select name="orderStatus">
+							<option value="0">全部状态</option>
+							<option value="1">待确认</option>
+							<option value="2">已确认</option>
+							<option value="3">待发货</option>
+							<option value="4">已发货</option>
+							<option value="5">待支付</option>
+							<option value="6">已支付</option>
+							<option value="7">已取消</option>
+							<option value="8">已退货</option>
+							<option value="9">成功交易</option>
+
 						</select>
 					</div>
 					<div class="right">
 						&lt;订单编号：&gt;
 						<!--订单编号：-->
-						<input type="text" class="txt" name="order_id" value="" onfocus="javascript:$(this).val('');" />
+						<input type="text" class="txt" name="orderSn" value="" onfocus="javascript:$(this).val('');" />
 						<input type="submit" class="lookup" value="查询" />
 					</div>
-				</form>
+				<?php yii\widgets\ActiveForm::end(); ?>
 			</div>
 		</div>
 		<div class="account">
 			<div class="hisOrd">
+				<?php if(count($orderInfo)!=0): ?>
 				<table class="ho_middle" cellpadding="0" cellspacing="0">
 					<tbody>
 						<tr class="t">
-							<td class="w120">订单编号</td>
-							<td class="w186">订单商品</td>
-							<td class="w75">收货人</td>
-							<td class="w111">订单金额</td>
-							<td class="w87">下单时间</td>
+							<td class="w120">订单信息</td>
+							<td class="w186">订购商品</td>
+							<td class="w75">购买数量</td>
+							<td class="w111">商品单价</td>
 							<td class="w87">订单状态</td>
+							<td class="w87">评论</td>
 							<td class="w130">操作</td>
 						</tr>
-						<tr class="c">
-							<td class="w120 h70">
-								<a class="c0e7" target="_blank" href="/order/detail/645323">
-									2017030912002
-								</a></td>
-							<td class="w186 adjust02" style="text-align:left;">
-								<a target="_blank" title="瑞士迪沃斯（DAVOSA）-Classic Quartz 经典系列 16246615 男士商务、石英表" href="https://www.wbiao.cn/davosa-g13823.html">
-									<img alt="瑞士迪沃斯（DAVOSA）-Classic Quartz 经典系列 16246615 男士商务、石英表" src="https://image2.wbiao.co/goods/d/201511/16/16246615_99415.jpg" />
-								</a></td>
-							<td class="w75 h70"><font class="c333">王喜文</font></td>
-							<td class="w111 adjust01"><font class="cb01">￥1580.00</font>
-								<br />
-								<br />
-								<font class="c333">已付：￥0.00</font></td>
-							<td class="w87 adjust01">
-								<div>
-									2017-03-09 16:16:37
-								</div></td>
-							<td class="w87 h70"><font class="c888">已确认</font></td>
-							<td class="w130 adjust03">
-								<a class="c0e7" target="_blank" href="/order/detail/645323">
-									查看
-								</a><span>|</span>
-								<a class="c0e7" href="https://www.wbiao.cn/davosa-g13823.html#comment">
-									评论
-								</a><span>|</span>
+						<?php foreach ($orderInfo as $k=>$v):?>
+						<tr>
+							<td style="text-align: left;width: 200px;">
+								<p></p>
+								<p>订单号：<?=$v['order_sn']?></p>
+								<p>创建时间：<?=date('Y-m-d H:i:s',$v['add_time'])?></p>
+								<p>商品金额：¥ <?=$v['goods_total_prices']?></p>
+								<p>快递公司：<?=$v['express_name']?></p>
+								<p>收货地址：<?=$v['country'].' '.$v['province'].' '.$v['city'].' '.$v['district'].' '.$v['address']?></p>
+								<p>收件号码：<?=$v['mobile']?></p>
+							</td>
+							<td align="center">
+								<table width="100%" style="height: 200px">
+								<?php foreach ($v['orderGoods'] as $m): ?>
+									<tr><td align="center" style="border-left:none;">
+											<img src="<?='http://'.$_SERVER['SERVER_NAME'].'/'.$m['img']?>" alt="商品图片" title="<?=$m['goods_name']?>">
+									</td></tr>
+								<?php endforeach; ?>
+								</table>
+							</td>
+							<td align="center">
+								<table width="100%" style="height:200px;">
+									<?php foreach ($v['orderGoods'] as $m): ?>
+										<tr><td align="center" style="border-left:none;"><?=$m['buy_number']?></td></tr>
+									<?php endforeach; ?>
+								</table>
+							</td>
+							<td align="center">
+								<table width="100%" style="height: 200px">
+									<?php foreach ($v['orderGoods'] as $m): ?>
+										<tr><td align="center" style="border-left:none;">¥ <?=$m['buy_price']?></td></tr>
+									<?php endforeach;?>
+								</table>
+							</td>
+							<td>
+								<p>
+									<?php if($v['pay_status'] == 1){echo '<font color="#8ec52b;">已支付</font>（'.$v['pay_name'].')';}else{echo '<font color="#ff0707">待支付</font>';}?>
+								</p>
+								<p>
+									<?php switch ($v['order_status']){ case '0':echo '<font color="#20ff0e">待确认</font>';break;case '1':echo '<font color="#ff0707">已确认</font>';break;case '2':echo '<font color="#ff0707">已发货</font>';break;case '3':echo '<font color="#ff0707">交易完成</font>';break;case '-1':echo '<font color="#20ff0e">已取消</font>';break;case '-2':echo '<font color="#20ff0e">已退货</font>';break;}?>
+								</p>
+							</td>
+							<td>
+								<table width="100%" style="height:200px;">
+									<?php foreach ($v['orderGoods'] as $m): ?>
+										<tr>
+											<td align="center" style="border-left:none;">
+												<?php if ($v['order_status'] == 3 & $m['comment_status'] == 0 ){ ?>
+													<a class="c0e7" href="<?php echo \yii\helpers\Url::to(['home/goods-show/goods_comment','goods_id'=>$m['goods_id'],'order_id'=>$m['order_id']])?>">
+														立即评论
+													</a>
+													<?php }elseif($v['order_status'] == 3 & $m['comment_status'] == 1){ ?>
+													已评论
+													<?php }elseif($v['order_status'] == 2 ){ ?>
+													<a class="c0e7" href="<?php echo \yii\helpers\Url::to(['home/goods-show/goods_comment','goods_id'=>$m['goods_id'],'order_id'=>$m['order_id']])?>">
+														立即收货
+													</a>
+													<?php }else{ ?>
+														暂无操作
+												<?php }?>
+											</td>
+										</tr>
+									<?php endforeach; ?>
+								</table>
+							</td>
+							<td >
+								<?php if($v['order_status'] == 0) { ?>
 								<a class="cb01" target="_blank" href="https://cart.wbiao.cn/pay/?order_sn=2017030912002&amp;token=3dc1e04eb2a1996a9328b861e916faae">
 									支付
-								</a>
+								</a><span>|</span>
 								<a class="c888 fancybox.iframe cancel_order_link" href="/order/cancel/?order_id=645323">
 									取消
 								</a>
+								<?php } ?>
+								<?php if($v['order_status'] == 3) { ?>
+									<a class="c0e7" href="https://www.wbiao.cn/davosa-g13823.html#comment">
+										删除
+									</a>
+								<?php } ?>
 								<br />
+								<?php if($v['order_status'] == 1) { ?>
 								<a href="javascript:void(0);" class="c0e7 pc_to_ntalk_ser">
-									申请返修/退换货
-								</a></td>
+									退换货
+								</a>
+								<?php } ?>
+								<a class="c0e7" target="_blank" href="#">
+									查看
+								</a>
+							</td>
 						</tr>
+						<?php endforeach; ?>
 					</tbody>
 				</table>
+				<?php else: ?>
+					<div style="margin-left: 30%;margin-top: 10%;">
+						<img src="../admin/images/weizhaodao.jpg" alt="未找到">
+						<span style="color: #ff4b33;font-size: 18px;">暂无相关数据!</span>
+					</div>
+				<?php endif ?>
 			</div>
 		</div>
 	</div>

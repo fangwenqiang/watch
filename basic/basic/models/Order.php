@@ -77,7 +77,7 @@ class Order extends ActiveRecord
             return $this->find()->where(['order_id' => $id])->asArray()->all();
         } else {
             return (new \yii\db\Query())
-                ->select(['order_id', 'order_sn', 'user_id', 'order_status', 'express_status', 'express_id', 'express_name', 'pay_id', 'pay_name', 'pay_status', 'goods_total_prices', 'add_time', 'country', 'province', 'city', 'district', 'address', 'mobile'])
+                ->select(['order_id', 'order_sn', 'user_id', 'order_status', 'express_id', 'express_name', 'pay_id', 'pay_name', 'pay_status', 'goods_total_prices', 'add_time', 'country', 'province', 'city', 'district', 'address', 'mobile'])
                 ->from($table)
                 ->where(['order_id' => $id])
                 ->one();

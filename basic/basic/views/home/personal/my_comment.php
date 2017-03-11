@@ -49,7 +49,7 @@ use yii\helpers\Url;
                     </tr>
                     <?php foreach($comment_list as $key=>$v):?>
                     <tr class="c">
-                    	<td></td>
+                    	<td align="center"><?php echo $v['comment_rank']?></td>
                         <td><a target="_blank" href="#"><?php echo $v['comment_content']?><br><font style="color: gray">[<?php echo date('Y-m-d H:i:s',$v['time'])?>]</font></a></td>
                         <td align="center">商家:喜悦商城</td>
                         <td align="center"><?php echo $v['goods_name']?><br><font style="color: orange"><?php echo $v['shop_price']?></font>元</td>

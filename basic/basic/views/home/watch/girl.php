@@ -63,10 +63,12 @@ use yii\helpers\Url;
                             <input type="text" id="brand_search" class="sa_search" value="输入品牌名" title="输入品牌名" />
                             <a href="<?=url::to(['home/watch/boylist']) ?>" id="showAll" class="all_brands">显示全部品牌</a>
                         </dl>
-                        <?php foreach($data['brandList']as $val){ ?>
+                         <?php foreach($data['brandList']as $key=>$val){ ?>
                             <dl id="level1" num="1" class="s2">
-                                <dt><a href="javascript:;" rel="nofollow"><?=$val['sort']?></a></dt>
-                                <dd><a href="javascript:void (0)"  brand_id="<?=$val['brand_id']?>"  title="<?=$val['brand_name']?>"><?=$val['brand_name']?></a></dd>
+                                <dt><a href="javascript:;" rel="nofollow"><?=$key?></a></dt>
+                                <?php foreach($val as $v){ ?>
+                                <dd><a href="javascript:void (0)"  brand_id="<?=$v['brand_id']?>"  title="<?=$v['brand_name']?>"><?=$v['brand_name']?></a></dd>
+                                <?php } ?>
                             </dl>
                         <?php } ?>
                     </div>

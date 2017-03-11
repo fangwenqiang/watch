@@ -74,12 +74,12 @@ use yii\helpers\Url;
                         <td class="w75 h70"><font class="c333"></font></td>
                         <td class="w111 adjust01"><font class="cb01"><?php echo date('Y-m-d H:i:s',$v['update_date'])?></font><br></td>
                     </tr>
-                <?php endforeach;?>
+                	<?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
-        </div>
-        <!-- order表单 End -->
-
-        <!-- 翻页 Begin -->
-        <!-- 翻页 End -->
+<<<<<<< HEAD
+        </div></div>
+=======
+        </div>	
+>>>>>>> d93b71ce0d48a654a10a250c9ff5cfe3260db1fc

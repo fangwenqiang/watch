@@ -25,7 +25,7 @@ use yii\helpers\Url;
 
         <div class="clear"></div>
         <!-- order表单 Begin -->
-        <table border="1">
+        <table>
         <tr>
             <?php foreach ($collect_list as $key => $value): ?>
                 <?php if($key%5==0){?></tr><tr>
@@ -41,8 +41,10 @@ use yii\helpers\Url;
                         <span style="color:orange">促￥<?php echo $value['market_price']; ?></span>
                         <span style="color:gray;">￥<s><?php echo $value['shop_price']; ?></s></span>
                     </div>
+                    <br /><br />
                 </td>
             <?php endforeach; ?>
+            <br /><br />
         </tr>
         </table>
         <!-- order表单 End -->
