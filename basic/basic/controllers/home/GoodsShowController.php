@@ -21,7 +21,6 @@ class GoodsShowController extends CommonController
 	
 	public  $layout = './proscenium';
 	
-
 	static public  $startSet;
 	static public $startModel; 
 
@@ -112,27 +111,25 @@ class GoodsShowController extends CommonController
 	//商品展示
 	public function actionShow()
 	{
-		self::$chainMysql?self::$chainMysql:\Yii::$app->db->createCommand();
+		$this->start();
+		//goods 查找		
+		$goodsId = self::$startSet['request']->get('id');
+		$sql = 'select * from mb_goods where g_id ='.$goodsId;
+		$goods = self::$startModel->sql($sql);
+		$goods = $goods[0];
 
-		$id = $_GET['id'];
-		$session = \Yii::$app->session;
-		if(empty($session->get('user_id'))) {
-				$user_id = 2;
-		}else {
-				$user_id =  $session->get('user_id');
+
+		//获取userid
+		$user_id = self::$startSet['session']->get('user_id');
+		if (!$user_id) {
+			$user_id = 2;
 		}
 
-		$goodsId = Filtration::check_id($id);
-		$typeId = Filtration::check_id(4);
-
-		//查询这个商品的详细属性
-		$sql = 'select * from mb_goods where g_id ='.$goodsId;
-		$goods = \Yii::$app->db->createCommand($sql)->queryAll();
-		$goods = $goods[0];
 		
+				
 		$model = new History();
-	    $res = $model->history_find($user_id,$goodsId);
-		
+        $res = $model->history_find($user_id,$goodsId);
+
         if($res)
         {
             $res['browse_num']=$res['browse_num']+1;
@@ -166,7 +163,7 @@ class GoodsShowController extends CommonController
 		}
 		// print_r($attrArr);die;		
 		return $this->render('show',compact('showAttr','goods','comment_list'));
-	}		
+	}			
 
 	//获取组合的价格，后期加入商品id 筛选
 	public function actionGetVal()
