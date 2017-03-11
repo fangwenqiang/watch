@@ -59,7 +59,7 @@ class Person extends \Faker\Provider\it_IT\Person
     );
 
     /**
-     * @link http://blog.tagesanzeiger.ch/datenblog/index.php/6859
+     * @link http://blog.tagesanzeiger.ch/datenblog/OrderCentre.php/6859
      */
     protected static $lastName = array(
         'Agustoni', 'Alberti', 'Albertini', 'Albisetti', 'Ambrosini', 'Antonini',

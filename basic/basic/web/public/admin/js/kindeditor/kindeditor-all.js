@@ -6303,7 +6303,7 @@ KindEditor.plugin('autoheight', function(K) {
 * @licence http://www.kindsoft.net/license.php
 *******************************************************************************/
 
-// Baidu Maps: http://dev.baidu.com/wiki/map/index.php?title=%E9%A6%96%E9%A1%B5
+// Baidu Maps: http://dev.baidu.com/wiki/map/OrderCentre.php?title=%E9%A6%96%E9%A1%B5
 
 KindEditor.plugin('baidumap', function(K) {
 	var self = this, name = 'baidumap', lang = self.lang(name + '.');

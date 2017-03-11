@@ -46,7 +46,7 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type_id', 'click_count', 'brand_id', 'g_number', 'market_price', 'shop_price', 'is_show', 'is_recommend', 'is_promote', 'promote_price'], 'integer'],
+            [[ 'click_count', 'brand_id', 'g_number', 'market_price', 'shop_price', 'is_show', 'is_recommend', 'is_promote', 'promote_price'], 'integer'],
             [['goods_sn', 'goods_name'], 'string', 'max' => 255],
             [['g_weight', 'keywords'], 'string', 'max' => 30],
             [['describe', 'author'], 'string', 'max' => 50],
@@ -193,6 +193,32 @@ class Goods extends \yii\db\ActiveRecord
     //查看数量
     public function count($g_id)
     {
-        return Goods::find()->where(['g_id'=>$g_id])->asArray()->one()['g_number'];
+        return Goods::find()->where(['g_id'=>$g_id])->asArray()->one();
     }
+
+    /*
+     * 减少库存
+     */
+    public function reduceRepertory($ids)
+    {
+        $data = (new \yii\db\Query())
+            ->select(['goods_id','num'])
+            ->from("mb_cart")
+            ->where("cart_id in($ids)")
+            ->all();
+      //查询
+            foreach($data as $key=>$val){
+                $arr =   Goods::findone($val['goods_id']);
+                $arr->g_number = $arr->g_number - $val['num'];
+                $res = $arr ->save();
+                if(!$res){
+                    return false;
+                }
+            }
+        return true;
+
+    }
+
+
+
 }

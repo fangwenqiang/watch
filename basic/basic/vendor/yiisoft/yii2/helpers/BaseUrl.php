@@ -37,7 +37,7 @@ class BaseUrl
      * array format must be:
      *
      * ```php
-     * // generates: /index.php?r=site/index&param1=value1&param2=value2
+     * // generates: /OrderCentre.php?r=site/index&param1=value1&param2=value2
      * ['site/index', 'param1' => 'value1', 'param2' => 'value2']
      * ```
      *
@@ -45,7 +45,7 @@ class BaseUrl
      * For example,
      *
      * ```php
-     * // generates: /index.php?r=site/index&param1=value1#name
+     * // generates: /OrderCentre.php?r=site/index&param1=value1#name
      * ['site/index', 'param1' => 'value1', '#' => 'name']
      * ```
      *
@@ -65,19 +65,19 @@ class BaseUrl
      * Below are some examples of using this method:
      *
      * ```php
-     * // /index.php?r=site%2Findex
+     * // /OrderCentre.php?r=site%2Findex
      * echo Url::toRoute('site/index');
      *
-     * // /index.php?r=site%2Findex&src=ref1#name
+     * // /OrderCentre.php?r=site%2Findex&src=ref1#name
      * echo Url::toRoute(['site/index', 'src' => 'ref1', '#' => 'name']);
      *
-     * // http://www.example.com/index.php?r=site%2Findex
+     * // http://www.example.com/OrderCentre.php?r=site%2Findex
      * echo Url::toRoute('site/index', true);
      *
-     * // https://www.example.com/index.php?r=site%2Findex
+     * // https://www.example.com/OrderCentre.php?r=site%2Findex
      * echo Url::toRoute('site/index', 'https');
      *
-     * // /index.php?r=post%2Findex     assume the alias "@posts" is defined as "post/index"
+     * // /OrderCentre.php?r=post%2Findex     assume the alias "@posts" is defined as "post/index"
      * echo Url::toRoute('@posts');
      * ```
      *
@@ -167,13 +167,13 @@ class BaseUrl
      * Below are some examples of using this method:
      *
      * ```php
-     * // /index.php?r=site%2Findex
+     * // /OrderCentre.php?r=site%2Findex
      * echo Url::to(['site/index']);
      *
-     * // /index.php?r=site%2Findex&src=ref1#name
+     * // /OrderCentre.php?r=site%2Findex&src=ref1#name
      * echo Url::to(['site/index', 'src' => 'ref1', '#' => 'name']);
      *
-     * // /index.php?r=post%2Findex     assume the alias "@posts" is defined as "/post/index"
+     * // /OrderCentre.php?r=post%2Findex     assume the alias "@posts" is defined as "/post/index"
      * echo Url::to(['@posts']);
      *
      * // the currently requested URL
@@ -361,13 +361,13 @@ class BaseUrl
      * ```php
      * // assume $_GET = ['id' => 123, 'src' => 'google'], current route is "post/view"
      *
-     * // /index.php?r=post%2Fview&id=123&src=google
+     * // /OrderCentre.php?r=post%2Fview&id=123&src=google
      * echo Url::current();
      *
-     * // /index.php?r=post%2Fview&id=123
+     * // /OrderCentre.php?r=post%2Fview&id=123
      * echo Url::current(['src' => null]);
      *
-     * // /index.php?r=post%2Fview&id=100&src=google
+     * // /OrderCentre.php?r=post%2Fview&id=100&src=google
      * echo Url::current(['id' => 100]);
      * ```
      *
@@ -376,7 +376,7 @@ class BaseUrl
      * would be the following:
      *
      * ```php
-     * // index.php?r=post%2Findex&PostSearchForm%5Bid%5D=100&PostSearchForm%5Bsrc%5D=google
+     * // OrderCentre.php?r=post%2Findex&PostSearchForm%5Bid%5D=100&PostSearchForm%5Bsrc%5D=google
      * echo Url::current([
      *     $postSearch->formName() => ['id' => 100, 'src' => 'google'],
      * ]);

@@ -46,7 +46,7 @@ use yii\helpers\Url;
     </div>
 
 <div id="main">
-    <form action="<?php echo Url::to(['home/order/index_2'])?>" method="post">
+    <form action="<?php echo Url::to(['home/order/submit_order'])?>" method="post">
         <div class="w930 m0a mt30">
             <div class="ml20" style="margin-top: 50px;">
                 <div style="border-bottom: 1px solid #dcdcdc;padding-bottom: 5px;height: 15px;">
@@ -95,6 +95,7 @@ use yii\helpers\Url;
                 </div>
             </div>
             <?php
+             $prices = 0;
              foreach($data as $key=>$val){  ?>
                  <div class="bgf6f br10">
                      <ul class="c999 f13 h40 mt10 li_left">
@@ -138,19 +139,26 @@ use yii\helpers\Url;
                                  </div>
                                  <div style="float: left;width: 75%" >
                                      <textarea rows="5" cols="40" name="intro[]" placeholder="选填:对本次交易的说明(建议填写已和卖家协商一致的内容)" class="textarea"></textarea>
+                                     <input type="hidden" value="<?php echo $val['cart_id']?>" name="car[]">
                                      <p style="margin-left: 245px;" class="str">0/200</p>
                                  </div>
                              </div>
                          </div>
                          <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
-                             <div style="margin:5px;float: left">运送方式:普通配送快递 免邮</div>
+                             <div style="margin:5px;float: left">运送方式:
+                                 <select name="express[]">
+                                     <?php foreach($express as $k=>$v){ ?>
+                                               <option value="<?php echo $v['express_id']?>"><?php echo $v['express_name']?></option>
+                                     <?php   }?> 免邮
+                                 </select>
+                             </div>
                              <div style="margin:5px;float: right"><span style="font-size: 14px;font-weight: bold;color: red;">0.00</span></div>
                          </div>
                          <div style="width: 49%;height: 50px;border-top:  1px solid white;float: left;line-height: 50px;">
                              <div style="margin:5px;">发货时间: 卖家承诺订单在买家付款后, 72小时内发货</div>
                          </div>
                          <div style="width: 49%;height: 50px;;border-top:  1px solid white;float: left;line-height: 50px;">
-                             <div style="margin:5px;float: left">运费险:运费险卖家赠送，若确认收货前退货，可获保险赔付</div>
+                             <div style="margin:5px;float: left">运费险:运费险有<font color="red" style="font-weight: bold;">喜悦手表网</font>赠送，若确认收货前退货，可获保险赔付</div>
                              <div style="margin:5px;float: right">
                                  <span style="font-size: 14px;font-weight: bold;color: red;">0.80</span>
                              </div>
@@ -160,7 +168,9 @@ use yii\helpers\Url;
 
                      <div class="clear"></div>
                  </div>
-             <?php   } ?>
+             <?php
+                $prices = $prices+($val['price']*$val['num']);
+             } ?>
 
             <div class="w930 m0a">
                 <div class="fl">
@@ -177,7 +187,6 @@ use yii\helpers\Url;
                     <div class="mt20 tr">
 
                             <div class="mt20 tr">
-                                <input type="hidden" id="car" value="<?php echo $car?>" name="car">
                                 <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
                                 <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="提交订单" />
                             </div>

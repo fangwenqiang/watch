@@ -23,7 +23,7 @@ use yii\helpers\Url;
 
    </style>
 
-    <div class="w750 mt30 fr" style="margin-right: 500px;" ">
+    <div class="w750 mt30 fr" style="margin-right: 200px;" ">
         <ul class="m_0_23 inline w464 fr li_left li">
             <li class="w14 h14 circle bp_0-36"></li>
             <li class="w136 h8 mt6 bt_2_f1f">&nbsp;</li>
@@ -52,7 +52,7 @@ use yii\helpers\Url;
                 foreach($data as $key=>$val){  ?>
                     <div class="bgf6f br10">
                         <ul class="c999 f13 h40 mt10 li_left">
-                            <li>选择</li>
+                            <li>&nbsp;&nbsp;</li>
                             <li class="w510 tl pl20">商品</li>
                             <li class="w120 tc">单价</li>
                             <li class="w120 tc">数量</li>
@@ -93,7 +93,7 @@ use yii\helpers\Url;
                         <div class="clear"></div>
                     </div>
                 <?php   } ?>
-                <form action="<?php echo Url::to(['home/order/index'])?>" method="post">
+                <form action="<?php echo Url::to(['home/order/order_centre'])?>" method="post">
                     <div class="mt20 tr">
                         <input type="hidden" id="car" value="" name="car" >
                         <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
