@@ -7,8 +7,6 @@ use yii\helpers\Url;
 <div id="main" style="margin-left:200px;">
     <div class="w930 m0a mt30">     
         <div class="bgf6f br10">
-            
-
             <ul class="c999 f13 h40 mt10 li_left">
                 <li class="w510 tl pl20">商品</li>
                 <li class="w120 tc">售价</li>
@@ -107,6 +105,6 @@ use yii\helpers\Url;
                     <span class="c999">结算后可选择礼品或使用优惠券等操作</span>
                 </div>
             </div>
-                    </div>
+        </div>
     </div>
 </div>
