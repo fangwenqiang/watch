@@ -253,6 +253,7 @@ class PersonalController extends CommonController
      */
     public function actionBack_password()
     {
+        $this->layout = '/proscenium' ;
         return $this->render('forgetPwd');
     }
 

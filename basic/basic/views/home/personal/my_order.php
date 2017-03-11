@@ -69,7 +69,6 @@ use yii\helpers\Url;
 							<td class="w87">订单状态</td>
 							<td class="w130">操作</td>
 						</tr>
-<<<<<<< HEAD
 						<?php foreach ($orderInfo as $k=>$v):?>
 						<tr>
 							<td style="text-align: left;width: 200px;">
@@ -114,34 +113,6 @@ use yii\helpers\Url;
 							</td>
 							<td >
 								<?php if($v['order_status'] == 0) { ?>
-=======
-						<tr class="c">
-							<td class="w120 h70">
-								<a class="c0e7" target="_blank" href="/order/detail/645323">
-									2017030912002
-								</a></td>
-							<td class="w186 adjust02" style="text-align:left;">
-								<a target="_blank" title="瑞士迪沃斯（DAVOSA）-Classic Quartz 经典系列 16246615 男士商务、石英表" href="https://www.wbiao.cn/davosa-g13823.html">
-									<img alt="瑞士迪沃斯（DAVOSA）-Classic Quartz 经典系列 16246615 男士商务、石英表" src="https://image2.wbiao.co/goods/d/201511/16/16246615_99415.jpg" />
-								</a></td>
-							<td class="w75 h70"><font class="c333">王喜文</font></td>
-							<td class="w111 adjust01"><font class="cb01">￥1580.00</font>
-								<br />
-								<br />
-								<font class="c333">已付：￥0.00</font></td>
-							<td class="w87 adjust01">
-								<div>
-									2017-03-09 16:16:37
-								</div></td>
-							<td class="w87 h70"><font class="c888">已确认</font></td>
-							<td class="w130 adjust03">
-								<a class="c0e7" target="_blank" href="/order/detail/645323">
-									查看
-								</a><span>|</span>
-								<a class="c0e7" href="<?php echo Url::to(['home/goods-show/goods_comment','goods_id'=>2])?>">
-									评论
-								</a><span>|</span>
->>>>>>> d93b71ce0d48a654a10a250c9ff5cfe3260db1fc
 								<a class="cb01" target="_blank" href="https://cart.wbiao.cn/pay/?order_sn=2017030912002&amp;token=3dc1e04eb2a1996a9328b861e916faae">
 									支付
 								</a><span>|</span>
