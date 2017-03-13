@@ -3,7 +3,6 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 <script src="js/jquery.js"></script>
-<link rel="stylesheet" href="../admin/css/public.css" type="text/css">
 <div id="main">
 	<div class="position">
 		<a href="<?php echo Url::to(['home/index/index'])?>">

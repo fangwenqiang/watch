@@ -118,7 +118,6 @@
     SERVER_NAME = '<?='http://'.$_SERVER['SERVER_NAME']?>';
     URL = "<?=\yii\helpers\Url::toRoute(['home/personal'])?>";
     CSRF = $('input[name=_csrf]').val();
-
     
 </script>
 </body>
