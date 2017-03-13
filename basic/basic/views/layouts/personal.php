@@ -219,7 +219,7 @@ use yii\helpers\Url;
             {
                   str='<span><a href="<?=Url::to(['home/personal/index']) ?>">欢迎:<font color="red">'+re_val+'</font></a></span>\
                     <span><a href="<?=Url::to(['home/login/logout']) ?>">退出</a></span>\
-                    <span><a href="<?=Url::to(['home/goods-show/car-show']) ?>">购物车</a></span>'
+                    <span><a href="<?=Url::to(['home/order/car_list']) ?>">购物车</a></span>'
                   $("#login").html(str);
             }
         });
