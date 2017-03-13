@@ -30,15 +30,15 @@ use yii\helpers\Url;
 
     <div class="hot_goods_list">
         <div class="context">
-            <?php foreach($data['goodsList'] as $val){ ?>
             <ul>
-                <li> <span class=""></span> <a href="<?=url::to(['home/goods-show/show','id'=>$val['g_id']])?>" target="_blank" class="img"><img src="Images/<?=$val['g_img']?>" alt="<?=$val['goods_name']?>" width="300" height="300" /></a>
-                    <p> <b><?=$val['goods_name']?>品牌：<?=$val['brand_name']?></b><br>
+            <?php foreach($data['goodsList'] as $val){ ?>
+                <li class="hose"> <span class=""></span> <a href="<?=url::to(['home/goods-show/show','id'=>$val['g_id']])?>" target="_blank" class="img"><img src="Images/<?=$val['g_img']?>" alt="<?=$val['goods_name']?>" width="300" height="300" /></a>
+                    <p> <b><?=$val['goods_name']?> | 品牌：<?=$val['brand_name']?> | <span class="cmt">已被评论<i><?=$val['comment']?></i>次</span></b><br>
                         <u></u><ins>￥<?=$val['shop_price']?></ins><del>原价：￥<?=$val['market_price']?></del><br>
-                        <span class="cmt">已被评论<i><?=$val['comment']?></i>次</span> </p>
-                    <a href="<?=url::to(['home/goods-show/show','id'=>$val['g_id']])?>" class="btn">立即抢购</a> </li>
-            </ul>
+                         </p>
+                    <a href="<?=url::to(['home/goods-show/show','id'=>$val['g_id']])?>" class="btn" style="margin-left: 100px">立即抢购</a> </li>
             <?php } ?>
+            </ul>
         </div>
     </div>
 
