@@ -10,7 +10,7 @@ use yii\helpers\Url;
     }
     div.page span.current{
         border:#000099 1px solid;
-        background-color:black;
+        background-color:#A80000;
         padding:4px 5px 4px 5px;
         margin:2px;
         color:#fff;
