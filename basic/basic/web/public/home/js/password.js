@@ -192,5 +192,4 @@ $(function () {
             $('#getCaptcha').val('发送验证码');
         }
     }
-
 });

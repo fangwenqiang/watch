@@ -13,7 +13,7 @@ use app\models\Integral;  //模型层
 use app\models\Integral_rule;  //模型层
 use app\models\History;  //模型层
 use app\models\Comment;  //模型层
-use app\models\Order;
+use yii\data\Pagination;
 use app\lib\PHPMailer;
 
 class PersonalController extends CommonController
@@ -47,8 +47,10 @@ class PersonalController extends CommonController
         echo $model->test();
     }
 
-	/*
+    /**
      * 我的订单
+     * @access public
+     * @return string
      */
     public function actionMy_order()
     {
@@ -57,7 +59,10 @@ class PersonalController extends CommonController
         $userId = $session->get('user_id');
 
         $whereArray = ['and','user_id='.$userId];
-
+        $addTime = '';
+        $orderStatus = '';
+        $orderSn = '';
+    
         //搜索条件
         $request = Yii::$app->request;
         if (Yii::$app->request->isPost) {
@@ -71,7 +76,11 @@ class PersonalController extends CommonController
         //订单信息
         $orderInfo = (new \yii\db\Query())
             ->select(['order_id', 'order_sn', 'user_id', 'order_status', 'express_id', 'express_name', 'pay_id', 'pay_name', 'pay_status', 'goods_total_prices', 'add_time', 'country', 'province', 'city', 'district', 'address', 'mobile'])->from('{{%order_info}}')
-            ->where($whereArray)
+            ->where($whereArray);
+        //分页
+        $pages = new Pagination(['totalCount' => $orderInfo->count(),'defaultPageSize' => 5]);
+        $orderInfo = $orderInfo->offset($pages->offset)
+            ->limit($pages->limit)
             ->all();
 
         //订单商品信息
@@ -99,23 +108,28 @@ class PersonalController extends CommonController
             }
         }
 
-        return $this->render('my_order',['orderInfo'=>$orderInfo]);
+//        var_dump($orderInfo);
+        return $this->render('my_order',['orderInfo'=>$orderInfo,'time'=>$addTime,'status'=>$orderStatus,'sn'=>$orderSn,'pages'=>$pages]);
     }
 
+    /**
+     * 获取订单要搜索的条件
+     * @access protected
+     * @param $where array 原有的条件
+     * @param $arr array 要增加的条件
+     * @return array
+     */
     protected function getWhere($where,$arr)
     {
         //订单号
         if(!empty($arr['orderSn'])) array_push($where,'order_sn="'.$arr['orderSn'].'"');
         //订单状态
         switch ($arr['orderStatus']){
-            case '1': //查未确认订单
-                array_push($where,'order_status=0');
-                break;
-            case '2'://已确认
+            case '2'://已确认订单
                 array_push($where,'order_status=1');
                 break;
             case '3'://待发货
-                array_push($where,'express_status=0');
+                array_push($where,'order_status=0');
                 break;
             case '4'://已发货
                 array_push($where,'order_status=2');
@@ -150,6 +164,11 @@ class PersonalController extends CommonController
         }
         return $where;
 
+    }
+    
+    public function actionSave_pwd()
+    {
+        return $this->render('save_pwd');
     }
 
     /*
@@ -246,7 +265,7 @@ class PersonalController extends CommonController
         return $this->render('gift_card');
     }
 
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //+++++++++++++++++++++++++++++++++++++++++++++++忘记密码+++++++++++++++++++++++++++++++++++++++
     /**
      * 密码找回
      * @access public
