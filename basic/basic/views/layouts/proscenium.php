@@ -150,6 +150,17 @@ use yii\helpers\Url;
 <script type="text/javascript">
     $(function () {
 
+        //我们一开始就隐藏所有的下拉菜单
+        $('#dropdown_nav li').find('.sub_nav').hide();
+        //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
+        $('#dropdown_nav li').hover(function () {
+            $(this).find('.sub_nav').fadeIn(100);
+            $(this).find(".sub_link").addClass("cur");
+        }, function () {
+            $(this).find('.sub_nav').fadeOut(50);
+            $(this).find(".sub_link").removeClass("cur");
+        });
+
         //判断是否登录
         $.get("<?=Url::to(['home/login/login_status']) ?>", function(re_val){
             if(re_val!=0)
@@ -174,19 +185,6 @@ use yii\helpers\Url;
             $("html,body").animate({scrollTop: 0}, 500);
         });
 
-
-        $(function () {
-            //我们一开始就隐藏所有的下拉菜单
-            $('#dropdown_nav li').find('.sub_nav').hide();
-            //当鼠标悬停在主导航链接，我们发现下拉菜单中的相应链接。
-            $('#dropdown_nav li').hover(function () {
-                $(this).find('.sub_nav').fadeIn(100);
-                $(this).find(".sub_link").addClass("cur");
-            }, function () {
-                $(this).find('.sub_nav').fadeOut(50);
-                $(this).find(".sub_link").removeClass("cur");
-            });
-        });
 
     });
 </script>
