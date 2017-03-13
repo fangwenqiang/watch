@@ -123,7 +123,7 @@ use yii\helpers\Url;
                 <div class="c">
                     <ul>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/index'])?>" title="个人资料" rel="nofollow">个人资料</a></li>
-                        <li><i></i><a href="#" title="修改密码" rel="nofollow">修改密码</a></li>
+                        <li><i></i><a href="<?=Url::to(['home/personal/save_pwd'])?>" title="修改密码" rel="nofollow">修改密码</a></li>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/my_collect'])?>" title="我的收藏" rel="nofollow">我的收藏</a></li>
                         <li><i class="u__point"></i><a href="<?php echo Url::to(['home/personal/my_history'])?>" title="浏览历史" class="ccf0" rel="nofollow">最近访问</a></li>
                         <li style="border:0;"><i></i><a href="<?php echo Url::to(['home/personal/my_address'])?>" title="为我推荐" rel="nofollow">为我推荐</a></li>

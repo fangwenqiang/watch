@@ -3,6 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 <script src="js/jquery.js"></script>
+<link rel="stylesheet" href="../admin/css/public.css" type="text/css">
 <div id="main">
 	<div class="position">
 		<a href="<?php echo Url::to(['home/index/index'])?>">
@@ -13,7 +14,7 @@ use yii\helpers\Url;
 			我的喜悦手表
 		</a>
 		<i>&gt;</i>
-		<span>最近访问</span>
+		<span>我的订单</span>
 	</div>
 	<div class="rightArea">
 		<div class="prompt">
@@ -28,29 +29,28 @@ use yii\helpers\Url;
 				<?php $form = yii\widgets\ActiveForm::begin(['method'=>'post'])?>
 					<div class="left">
 						<select name="addTime">
-							<option selected="selected" value="0">所有订单</option>
-							<option value="1">近一个月订单</option>
-							<option value="2">近三个月订单</option>
-							<option value="3">近一年订单</option>
+							<option selected="selected" value="0" <?php if($time == 0)echo 'selected';?>>所有订单</option>
+							<option value="1" <?php if($time == 1)echo 'selected';?>>近一个月订单</option>
+							<option value="2" <?php if($time == 2)echo 'selected';?>>近三个月订单</option>
+							<option value="3" <?php if($time == 3)echo 'selected';?>>近一年订单</option>
 						</select>&nbsp;
 						<select name="orderStatus">
-							<option value="0">全部状态</option>
-							<option value="1">待确认</option>
-							<option value="2">已确认</option>
-							<option value="3">待发货</option>
-							<option value="4">已发货</option>
-							<option value="5">待支付</option>
-							<option value="6">已支付</option>
-							<option value="7">已取消</option>
-							<option value="8">已退货</option>
-							<option value="9">成功交易</option>
+							<option value="0" <?php if($status == 0)echo 'selected';?>>全部状态</option>
+							<option value="2" <?php if($status == 2)echo 'selected';?>>已确认</option>
+							<option value="3" <?php if($status == 3)echo 'selected';?>>待发货</option>
+							<option value="4" <?php if($status == 4)echo 'selected';?>>已发货</option>
+							<option value="5" <?php if($status == 5)echo 'selected';?>>待支付</option>
+							<option value="6" <?php if($status == 6)echo 'selected';?>>已支付</option>
+							<option value="7" <?php if($status == 7)echo 'selected';?>>已取消</option>
+							<option value="8" <?php if($status == 8)echo 'selected';?>>已退货</option>
+							<option value="9" <?php if($status == 9)echo 'selected';?>>成功交易</option>
 
 						</select>
 					</div>
 					<div class="right">
 						&lt;订单编号：&gt;
 						<!--订单编号：-->
-						<input type="text" class="txt" name="orderSn" value="" onfocus="javascript:$(this).val('');" />
+						<input type="text" class="txt" name="orderSn" value="<?=$sn?>" />
 						<input type="submit" class="lookup" value="查询" />
 					</div>
 				<?php yii\widgets\ActiveForm::end(); ?>
@@ -171,4 +171,41 @@ use yii\helpers\Url;
 				<?php endif ?>
 			</div>
 		</div>
+		<style>
+			.pager {
+				padding-left: 0;
+				margin: 20px 0;
+				text-align: center;
+				list-style: none;
+			}
+			.pager li {
+				display: inline;
+			}
+			.pager li > a,
+			.pager li > span {
+				display: inline-block;
+				padding: 5px 14px;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 15px;
+			}
+			.pager li > a:hover,
+			.pager li > a:focus {
+				text-decoration: none;
+				background-color: #eee;
+			}
+			.pager .previous > a,
+			.pager .previous > span {
+				float: left;
+			}
+			.pager .disabled > a,
+			.pager .disabled > a:hover,
+			.pager .disabled > a:focus,
+			.pager .disabled > span {
+				color: #777;
+				cursor: not-allowed;
+				background-color: #fff;
+			}
+		</style>
+		<div class="pager"><?=yii\widgets\LinkPager::widget(['pagination' => $pages])?></div>
 	</div>
