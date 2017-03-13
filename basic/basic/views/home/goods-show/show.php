@@ -11,11 +11,11 @@
 
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="./bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="./bootstrap/js/bootstrap.min.js"></script> -->
 <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"> -->
 <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-<link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css">
+<!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css"> -->
 
 
 
@@ -30,7 +30,7 @@
 </style>
 
 <input id="s" value="0" type="hidden">
-<input type="text">
+
 <link rel="stylesheet" href="css/goods.css">
 <script src="Script/goods.js"></script>
 <script src="Script/goods_desc.js"></script>
@@ -46,7 +46,7 @@
 <div id="main2" class="container-fluid">
    <div class="clearfix"></div>
   <div style="margin-top:25px;"></div>
-  <div class="list_banner"> <a href="http://data.wbiao.cn/ad.php?ad_id=1138" target="_blank" rel="nofollow" onclick="_gaq.push(['_trackEvent','quan-zhan','heng-fu__1','http://data.wbiao.cn/ad.php?ad_id=1138']);"><img src="http://img2.wbiao.cn/ad/201403/21/139536510192630.jpg" class="lazy" data-original="http://img2.wbiao.cn/ad/201403/21/139536510192630.jpg" alt="招行特惠" style="display: inline;"></a> </div>
+  <div class="list_banner"> <a href="http://data.wbiao.cn/ad.php?ad_id=1138" target="_blank" rel="nofollow" onclick="_gaq.push(['_trackEvent','quan-zhan','heng-fu__1','http://data.wbiao.cn/ad.php?ad_id=1138']);"><img src="http://img2.wbiao.cn/ad/201403/21/139536510192630.jpg"  data-original="http://img2.wbiao.cn/ad/201403/21/139536510192630.jpg" alt="招行特惠" style="display: inline;"></a> </div>
   <div style="clear:both">&nbsp;</div>
   <!--banner结束-->
   <div id="goods" style="width:1225px">
@@ -85,13 +85,51 @@
     <a href="" style="margin-left:66px;text-decoration:underline;color:#900;">如需了解更多活动详情或推荐，请咨询在线客服！</a></div><div class="sb s13 w100 clearfix" id="shipping_container">
     <span class="sl">配送至</span>
     <span class="sr" id="shipping">中国大陆，下单后17点前支付，当天发货<span id="is_post_pay" style="display:none;">，支持<i class="yellow bold" style="font-style:normal;" data="喜悦手表网独家代理的15个欧洲名表品牌+天梭、浪琴等热销表款，价格在2万元以内，均可申请使用货到付款。">货到付款</i></span></span></div><div class="clear"></div><div class="line"></div><div><div class="sa s13 w100 h104">
-    <span class="sl fl" style="vertical-align:top;">颜色</span><span class="sr cc fl"><a href="javascript:void(0);" class="on"><u style="background-image:url('Images/3412_183_20_34_25_12063.jpg')"></u>
-    <span></span></a><a href="http://www.sxgoing.comepos-g25523.html"><u style="background-image:url('Images/3412_183_24_30_27_27885.jpg')"></u>
-    <span></span></a><a href="http://www.sxgoing.comepos-g29269.html"><u style="background-image:url('Images/3412_183_22_99_27_58689.jpg')"></u>
-    <span></span></a></span>
+    <span class="sl fl" style="vertical-align:top;">颜色</span>
+    <span class="sr cc fl">
+    <a href="javascript:void(0);" class="on imageK">
+    <u style="background-image:url('Images/3412_183_20_34_25_12063.jpg')">
+    </u>
+    <span></span>
+    </a>
+    <a class="imageK" href="javascript:void(0);">
+    <u style="background-image:url('Images/3412_183_24_30_27_27885.jpg')"></u>
+    <span></span>
+    </a><a   class="imageK" href="javascript:void(0);">
+    <u style="background-image:url('Images/3412_183_22_99_27_58689.jpg')">
+    </u>
+    <span></span>
+    </a>
+    
+    </span>
  
     </div>
      <br>
+
+     <style>
+        .changered  {
+  font-family: Arial;
+  color: black;
+  font-size: 14px;
+  padding: 3px;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 0px #666666;
+  -moz-box-shadow: 0px 1px 0px #666666;
+  box-shadow: 0px 1px 0px #666666;
+  text-shadow: 1px 1px 3px #e3d3e3;
+  border: solid #b3b1b2 1px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffff));
+  background: -moz-linear-gradient(top, #ffffff, #ffffff);
+}
+
+
+        }
+     </style>
         <!-- 展示该类表所有的属性 -->
     <?php foreach ($showAttr as $key => $value): ?>
      <?php empty($i)?$i=1:$i++ ?>
@@ -106,6 +144,10 @@
     
     <input type="hidden" value="<?php echo \Yii::$app ->getRequest() ->getCsrfToken();?>" name="_csrf" />
         
+
+
+
+
 
     <!-- 本人初始载入js -->
 
@@ -235,6 +277,7 @@ $('.changered').on('click', function() {
     <script type="text/javascript">var is_test = 1;</script>
     <br>
     
+    
     <button id="cart" class="btn btn-success"  disabled="disabled">加入购物车</button>
     <input type="hidden" id="goods_id" value=<?=$goods['g_id'] ?>>
     <script>// 判断是否登陆，如果登陆了就添加，没有就提示登陆
@@ -293,8 +336,16 @@ function(data) {
     <a href="http://imga.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" rel="gal1" id="image" onclick="javascript:$('#lookOver').trigger('click');">
           
         <!-- 图片展示区      -->
-        <img 
-        src="http://www.xiyue.com/public/admin/upload_files/goods/cdk_1488246321.jpeg" class="lazy" data-original="http://imgi12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: inline;" width="350" height="350">
+        <img  id="bigImage"
+        src=
+
+        'Images/3412_183_24_30_27_27885.jpg'
+
+
+        class="lazy" 
+        data-original="http://imgi12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" 
+        alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" 
+        style="display: inline;" width="350" height="350">
     </a>
     <a href="" id="lookOver" class="fancybox.iframe"></a></div>
     <div class="thumbs">
@@ -304,6 +355,23 @@ function(data) {
     <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
     <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
     <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li></ul></div></div>
+    <script>
+        $(".lazy").hover(
+            function() {
+              var src = $(this).attr('src');
+            $('#bigImage').attr('src',src);
+            }
+        );
+
+        $(".imageK").on('click',function() {
+            $(".imageK").removeClass('on');
+            $(this).addClass("on");
+        });
+
+
+    </script>
+
+
     <div class="clear"></div>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
                 <link rel="stylesheet" href="css/style.css">

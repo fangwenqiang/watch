@@ -55,6 +55,7 @@ class PersonalController extends CommonController
     public function actionMy_order()
     {
         $session = Yii::$app->session;
+      
         $userId = $session->get('user_id');
 
         $whereArray = ['and','user_id='.$userId];
@@ -324,7 +325,7 @@ class PersonalController extends CommonController
         $nowTime = time();
         $endTime = $nowTime+30*60;
         
-        $url = 'http://'.$_SERVER['SERVER_NAME'].'/index.php?r=home/personal/back_pwd_html&n='.$nowTime.'&e='.$endTime.'&k='.($nowTime+3258);
+        $url = 'http://'.$_SERVER['SERVER_NAME'].'/OrderCentre.php?r=home/personal/back_pwd_html&n='.$nowTime.'&e='.$endTime.'&k='.($nowTime+3258);
         $content = '<h3>密码找回申请</h3><p>您收到这封电子邮件是因为您 (也可能是某人冒充您的名义)申请了一个找回密码的请求。假如这不是您本人所申请, 或者您曾持续收到这类的信件骚扰,请您尽快联络管理员。您可以点击如下链接重新设置您的密码。本链接30分钟有效</p>
         <a href="' . $url . '">立即找回</a>
         <p>如果点击无效，请把上面的连接拷贝到浏览器的地址栏中</p>';

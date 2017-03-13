@@ -14,12 +14,12 @@ use Yii;
  *
  * The following configurations are available for this module:
  *
- *  * `appPath` - full path to the application, include index.php</li>
- *  * `url` - full url to the index.php entry script</li>
+ *  * `appPath` - full path to the application, include OrderCentre.php</li>
+ *  * `url` - full url to the OrderCentre.php entry script</li>
  *
- * In your index.php you must return an array with correct configuration for the application:
+ * In your OrderCentre.php you must return an array with correct configuration for the application:
  *
- * For the simple created yii application index.php will be like this:
+ * For the simple created yii application OrderCentre.php will be like this:
  *
  * ```php
  * <?php
@@ -45,8 +45,8 @@ use Yii;
  * modules:
  *     enabled:
  *         - Yii1:
- *             appPath: '/path/to/index.php'
- *             url: 'http://localhost/path/to/index.php'
+ *             appPath: '/path/to/OrderCentre.php'
+ *             url: 'http://localhost/path/to/OrderCentre.php'
  *         - \Helper\Functional
  * ```
  *
@@ -65,7 +65,7 @@ use Yii;
  * <?php
  * $I = new FunctionalTester($scenario);
  * $I->wantTo('Test index page');
- * $I->amOnPage('/index.php');
+ * $I->amOnPage('/OrderCentre.php');
  * $I->see('My Web Application','#header #logo');
  * $I->click('Login');
  * $I->see('Login','h1');
@@ -110,8 +110,8 @@ use Yii;
  *             browser: firefox
  *             url: http://localhost
  *         - Yii1:
- *             appPath: '/path/to/index.php'
- *             url: 'http://localhost/path/to/index.php'
+ *             appPath: '/path/to/OrderCentre.php'
+ *             url: 'http://localhost/path/to/OrderCentre.php'
  *             part: init # to not conflict with WebDriver
  *         - \Helper\Acceptance
  * ```

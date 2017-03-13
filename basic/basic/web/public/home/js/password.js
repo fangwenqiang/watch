@@ -97,7 +97,7 @@ $(function () {
                         text: "密码已重置",
                         type: "success"
                     });
-                    window.location.href=SERVER_NAME+'/index.php?r=home/login/login'
+                    window.location.href=SERVER_NAME+'/OrderCentre.php?r=home/login/login'
                 } else {
                     swal({
                         title: "哎呀，出错了",

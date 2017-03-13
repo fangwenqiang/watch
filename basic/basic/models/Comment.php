@@ -30,6 +30,7 @@ class Comment extends ActiveRecord{
     public function commentAdd($post)
     {
     	unset($post['_csrf']);
+		unset($post['order_id']);
         $res = Yii::$app->db->createCommand()->insert('mb_comment', $post)->execute();
         if($res)
         {
