@@ -1,6 +1,6 @@
 /**
  * Created by 她说他叫强哥 on 2017/3/2.
- * 密码找回、修改
+ * 密码找回
  */
 $(function () {
     $('#btn_pwd').click(function () {
