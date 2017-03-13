@@ -119,15 +119,12 @@ class GoodsShowController extends CommonController
 		$goods = self::$startModel->sql($sql);
 		$goods = $goods[0];
 
-
 		//获取userid
 		$user_id = self::$startSet['session']->get('user_id');
 		if (!$user_id) {
 			$user_id = 2;
 		}
 
-		
-				
 		$model = new History();
         $res = $model->history_find($user_id,$goodsId);
 
