@@ -6,75 +6,119 @@ use Yii;
 use app\models\Consignment;  //模型层
 use app\models\Bargain;  //模型层
 use app\models\Order;  //模型层
+use app\models\Goods;  //模型层
+use app\models\Cart;  //模型层
 use app\lib\Pay;
 class OrderController extends CommonController
 {
 
     public  $layout = '/proscenium';
 
-    public function actionIndexs()
+    /*
+     * 购物车页面
+     */
+    public function actionCar_list()
     {
         $session = Yii::$app->session;
         $id = $session->get('user_id');
         $data =   (new \yii\db\Query())->from('mb_cart')->where(array("user_id"=>$id))->all();
-        return $this->render('indexs',array('data'=>$data));
+        //把购物车商品存入session
+        $session->set('car',json_encode($data));
+        return $this->render('carList',array('data'=>$data));
     }
     /*
-     *
+     *订单页面
      */
-    public function actionIndex()
+    public function actionOrder_centre()
     {
+        $session = Yii::$app->session;
         $request = \Yii::$app->request;
         if($request->post('car') == ''){
-            return $this->redirect(['home/order/indexs']);
+            return $this->qt_success('home/order/car_list','请选择商品');
         }
-        $car = $request->post('car');
-        $order_model = new Order();
-        //查询购物车
-        $data =  (new \yii\db\Query())->from('mb_cart')->where("cart_id in(".substr($car,1).")")->all();
-
-        return $this->render('index',array('data'=>$data,'car'=>substr($car,1),'prices'=>$order_model->prices1($data)));
-    }
-
-
-    public function actionIndex_2()
-    {
-        //处理订单
-        $request = \Yii::$app->request;
-        $order_model = new Order();
-        $data = $request->post();
-        if(!empty($data)){
-            //添加订单
-            $order_id = $order_model->OrderInserts($data['address']);
-            if($order_id) {
-                //添加商品详情
-                if($order_model->OrderGoodsInserts($data,$order_id)){
-                    //删除商品
-                   $order_model->DeleteGoods($data['car']);
+        //提交的购物车id
+        $carId = explode(',',substr($request->post('car'),1));
+        $CheckCar = array();
+        //选中的购物车
+        foreach(json_decode($session->get('car'),true) as $key=>$val){
+            for($i = 0;$i<count($carId);$i++){
+                if(array_search($carId[$i],$val)){
+                    $CheckCar[]=$val;
                 }
             }
-        } else {
-            //查询订单
-            $order_id = $request->get('order_id');
-            if(empty($order_id)){
-                return  $this->redirect('/');
-            }
+
         }
-        $arr = $order_model->SelectOrder($order_id);
-        $pay_class=new Pay();
-        $prices = $order_model->prices($order_id);
-        $pay_link=$pay_class->pay_url($arr['order_sn'],$prices);
-        if(($arr['over_time']-time()) < 0){
-           return $this->qt_success('/','该订单已失效');
-       }
-        return $this->renderPartial('index_2',array('prices'=>$prices,
-            'link'=>$pay_link,
-            'order_sn'=>$arr['order_sn'],
-            'time'=>($arr['over_time']-time())));
+        $order_model = new Order();
+        //查询快递方式
+        $express =  (new \yii\db\Query())->from('mb_express')->all();
+
+        return $this->render('OrderCentre',[
+            'data'=>$CheckCar,
+            'express' => $express
+        ]);
+    }
+
+
+    /*
+     * 提价订单
+     */
+    public function actionSubmit_order()
+    {
+        $request = \Yii::$app->request;
+        $connection=\Yii::$app->db;
+        $order_model = new Order();
+        $goods_model = new Goods();
+        $cart_model = new Cart();
+        $post = $request->post();
+        if(empty($post)){
+            return $this->redirect(['home/order/car_list']);
+        }
+//        $post = json_decode(file_get_contents('2.txt'),true);
+        unset($post['_csrf']);
+        //开启事务
+        $connection=\Yii::$app->db;
+        $transaction = $connection->beginTransaction();
+
+        try {
+            //处理订单 -- 减少库存
+            $reduceRepertory =   $goods_model->reduceRepertory(implode(',',$post['car']));
+            //处理订单 -- 减少优惠卷
+            //处理订单 -- 订单入库
+            $submitPut = $order_model->OrderInserts($post['address']);
+            //处理订单  -- 订单详情添加
+            $orderDetails = $order_model->OrderGoodsInserts($post,$submitPut);
+            //处理订单 -- 删除购物车
+            $DeleteCar = $cart_model->DeleteGoods($post['car']);
+            // ... 执行其他 SQL 语句 ...
+            $transaction->commit();
+            $order_sn = $order_model->SelectOrder(array('order_id'=>$submitPut),'order_sn');
+            return $this->redirect(['home/order/pay_order','order_sn'=>"$order_sn"]);
+        } catch(Exception $e) {
+            $transaction->rollBack();
+            return $this->qt_error('下单失败,请重新下单，如多次失败，请联系人工客服');
+        }
+
+
     }
 
 
 
+    /*
+     * 支付订单
+     */
+    public function actionPay_order()
+    {
+        //订单
+        $request = \Yii::$app->request;
+        $order_sn = $request->get('order_sn');
+        //查询订单信息 和总价格
+        $order_model = new Order();
+        $order = $order_model->SelectOrder(array('order_sn'=>$order_sn));
+        $order['prices'] = $order_model->prices($order['order_id']);
+        $pay_class=new Pay();
+        $order['link'] = $pay_class->pay_url($order['order_sn'],$order['prices']);
+        return $this->render('OrderPay',array('order'=>$order));
+    }
 
 
      public function selectCar($id)

@@ -73,6 +73,7 @@ class GoodsShowController extends CommonController
 	public function actionAdd_comment()
 	{
 		$post = \Yii::$app->request->post();
+		$res=\Yii::$app->db ->createCommand()->update('mb_order_goods',['comment_status'=>1],array("goods_id"=>$post['goods_id'] ,"order_id"=>$post['order_id'])) ->execute();
 		$uploads_dir = './public/home/Images';
 		foreach ($_FILES["file"]["error"] as $key => $error) { 
 		    if ($error == UPLOAD_ERR_OK) {
@@ -242,7 +243,8 @@ class GoodsShowController extends CommonController
     public function actionGoods_comment()
     {
         $goods_id = \Yii::$app->request->get('goods_id');
-		return $this->render('goods_comment',['goods_id'=>$goods_id]);
+        $order_id = \Yii::$app->request->get('order_id');
+		return $this->render('goods_comment',['goods_id'=>$goods_id,'order_id'=>$order_id]);
     }
 
 

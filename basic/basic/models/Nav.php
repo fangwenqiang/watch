@@ -21,7 +21,7 @@ class Nav extends \yii\db\ActiveRecord
         }
         $info =  Nav::find()->where(['nav_id' => $data['nav_type']])->asArray()->one();
         //导航
-        $data['nav_link'] = '../../index.php?r='.$data['nav_link'];
+        $data['nav_link'] = '../../OrderCentre.php?r='.$data['nav_link'];
         //拼接 nav_pid
         $data['nav_pid'] = $info['nav_pid']."-".$info['nav_id'];
         if($data['nav_type'] == 0){ $data['nav_pid'] =0;}

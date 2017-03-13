@@ -9,7 +9,7 @@ class Yii1 extends Client
 {
     use Shared\PhpSuperGlobalsConverter;
     /**
-     * http://localhost/path/to/your/app/index.php
+     * http://localhost/path/to/your/app/OrderCentre.php
      * @var string url of the entry Yii script
      */
     public $url;

@@ -28,6 +28,7 @@ use yii\helpers\Url;
 			</td>
 		</tr>
 		<input type="hidden" name="goods_id" id="goods_id" value="<?php echo $goods_id;?>"/>
+		<input type="hidden" name="order_id" id="order_id" value="<?php echo $order_id;?>"/>
 		<input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
 		<script>
 			function fileCountCheck(objForm) {
