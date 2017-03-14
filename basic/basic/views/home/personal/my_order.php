@@ -205,6 +205,10 @@ use yii\helpers\Url;
 				cursor: not-allowed;
 				background-color: #fff;
 			}
+			.pager .active > a,.pager .active > a:hover{
+				background-color: #71d7f4;
+				cursor: default;
+			}
 		</style>
 		<div class="pager"><?=yii\widgets\LinkPager::widget(['pagination' => $pages])?></div>
 	</div>

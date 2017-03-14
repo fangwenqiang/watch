@@ -110,7 +110,7 @@ class PersonalController extends CommonController
             ->select([])->from('{{%order_goods}}')
             ->where(['in', 'order_id', $orderId])->all();
 
-        $goodsId = array_column($orderGoods, 'goods_id');
+        $goodsId = array_unique(array_column($orderGoods, 'goods_id'));
         //商品信息
         $goodsInfo = (new \yii\db\Query())
             ->select(['g_id', 'g_thumb'])->from('{{%goods}}')
@@ -129,7 +129,7 @@ class PersonalController extends CommonController
             }
         }
 
-//        var_dump($orderInfo);
+//        var_dump($goodsInfo);
         return $this->render('my_order', ['orderInfo' => $orderInfo, 'time' => $addTime, 'status' => $orderStatus, 'sn' => $orderSn, 'pages' => $pages]);
     }
 
