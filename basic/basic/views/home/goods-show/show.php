@@ -270,14 +270,14 @@ $('.changered').on('click', function() {
     <style>
         .tm-clear li{
                 float: left;
-                width:100px;
+                width:105px;
                 height:50px;
                 margin-left:10px;
                 margin-top:3px;
                 cursor:pointer;
             }
         .nocheck{border: 2px solid #b8b7bd;}
-        .tm-clear{margin-left:60px; width: 350px}
+        .tm-clear{margin-left:60px; width: 380px}
         .check{border: 2px solid #be0106;}
     </style>
 
@@ -286,7 +286,6 @@ $('.changered').on('click', function() {
     <ul class="sa s13 w100 h21 tm-clear" >
            <li class='stages nocheck'>
         <span class="sr bn" style='margin-left:8px;'>
-            <a href="javascript:">
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
@@ -296,99 +295,100 @@ $('.changered').on('click', function() {
             <br>
             <span style='margin-left:10px;'>(含手续费)</span>
             </span>
-            </a>
         </span>
         </li>
              <li class='stages nocheck'>
         <span class="sr bn" style='margin-left:8px;'>
-            <a href="javascript:">
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
             <strong>680.63</strong>
-            x3期
+            x6期
             </span>
             <br>
             <span style='margin-left:10px;'>(含手续费)</span>
             </span>
-            </a>
         </span>
         </li>
                  <li class='stages nocheck'>
         <span class="sr bn" style='margin-left:8px;'>
-            <a href="javascript:">
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
             <strong>680.63</strong>
-            x3期
+            x9期
             </span>
             <br>
             <span style='margin-left:10px;'>(含手续费)</span>
             </span>
-            </a>
         </span>
         </li>
                  <li class='stages nocheck'>
         <span class="sr bn" style='margin-left:8px;'>
-            <a href="javascript:">
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
             <strong>680.63</strong>
-            x3期
+            x12期
             </span>
             <br>
             <span style='margin-left:10px;'>(含手续费)</span>
             </span>
-            </a>
         </span>
         </li>
                  <li class='stages nocheck'>
         <span class="sr bn" style='margin-left:8px;'>
-            <a href="javascript:">
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
             <strong>680.63</strong>
-            x3期
+            x15期
             </span>
             <br>
             <span style='margin-left:10px;'>(含手续费)</span>
             </span>
-            </a>
         </span>
         </li>
                  <li class='stages nocheck'>
         <span class="sr bn" style='margin-left:8px;'>
-            <a href="javascript:">
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
             <strong>680.63</strong>
-            x3期
+            x18期
             </span>
             <br>
             <span style='margin-left:10px;'>(含手续费)</span>
             </span>
-            </a>
         </span>
         </li>
     </ul>
         </div>
     <!-- <button id="cart" class="btn btn-success"  disabled="disabled">a加入购物车</button> -->
     <div style='margin-top:260px;margin-left:70px;'>
-    <img src="Images/1.png" alt="" style='cursor:pointer'>
+    <a href="javascript:" goods_id="<?=$goods['g_id']?>" id='immediatelyBuy'><img src="Images/1.png" alt="" ></a>
+    <a href="javascript:" id='stagesBuy' style='display:none'><img src="Images/fenqi.png" alt=""></a>
     <img src="Images/2.png"  id="cart" alt="" style='margin-left:6px;cursor:pointer'>
     </div> 
     <input type="hidden" id="goods_id" value=<?=$goods['g_id'] ?>>
     <script>// 判断是否登陆，如果登陆了就添加，没有就提示登陆
-
+//分期样式
 $(".stages").click(function(){
     $(this).siblings().removeClass("check");
     $(this).siblings().addClass("nocheck");
     $(this).removeClass("nocheck");
     $(this).addClass("check");
+    $("#stagesBuy").show();
+    $("#immediatelyBuy").hide();
+})
+
+//立即购买
+$("#immediatelyBuy").click(function(){
+    //获取商品id和商品数量
+    var g_id = $(this).attr('goods_id');
+    var nowNum = getNum();
+    var url = "<?= Url::toRoute('home/order/order_immediately')?>"+"&g_id="+g_id+"&nowNum="+nowNum;
+    location.href=url;
 })
 
 function getNum() {
@@ -401,6 +401,9 @@ function setNum(num) {
 
 $('.minus').on('click', function() {
 	var nowNum = getNum();
+    if(isNaN(nowNum)) {
+        alert('请输入数字');
+    }
 	if(nowNum > 1) {
 		nowNum--;
 		setNum(nowNum);
@@ -409,6 +412,9 @@ $('.minus').on('click', function() {
 
 $('.add').on('click', function() {
 	var nowNum = getNum();
+    if(isNaN(nowNum)) {
+        alert('请输入数字');
+    }
 	if(nowNum >= 1) {
 		nowNum++;
 		setNum(nowNum);

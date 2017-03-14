@@ -24,7 +24,7 @@ use yii\helpers\Url;
 
 
 
-    <div class="w750 mt30 fr" style="margin-right: 200px;">
+    <div class="w750 mt30 fr" style='margin-right:604px;'>
         <ul class="m_0_23 inline w464 fr li_left li">
             <li class="w14 h14 circle bp_0-36"></li>
             <li class="w136 h8 mt6 bt_2_f1f">&nbsp;</li>
