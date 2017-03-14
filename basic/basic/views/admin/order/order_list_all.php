@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>DouPHP 管理中心 - 商品列表 </title>
+    <title>DouPHP 管理中心 - 订单列表 </title>
     <meta name="Copyright" content="Douco Design." />
     <style>
         #list table tr{
@@ -18,7 +18,6 @@
     <script typr="text/javascript" src="js/laydate/laydate.js"></script>
 </head>
 <body>
-<div id="dcWrap">
     <div id="dcMain">
         <!-- 当前位置 -->
         <div id="urHere">DouPHP 管理中心<b>></b><strong>订单列表</strong> </div>
@@ -29,27 +28,27 @@
                     <tr>
                         <td style="height: 30px;">订单号：</td>
                         <td>
-                            <input name="orderSn" type="text" class="form-control" placeholder="订单号" style="width: 150px;" />
+                            <input name="orderSn" type="text" class="form-control" placeholder="订单号" value="<?=$order_sn?>" style="width: 150px;" />
                         </td>
                         <td>&nbsp;创建时间：</td>
                         <td>
-                            <input name="firstTime" id="start" type="text" class="form-control layer-date" placeholder="起始(Y-M-D h:i:s)" style="background:url('js/laydate/skins/default/icon.png') no-repeat right"/>
+                            <input name="firstTime" id="start" type="text" class="form-control layer-date" placeholder="起始(Y-M-D h:i:s)" value="<?=$first_Time?>"  style="background:url('js/laydate/skins/default/icon.png') no-repeat right"/>
                         </td>
                         <td>——</td>
-                        <td><input name="lastTime" id="end" type="text" class="form-control layer-date"  placeholder="结束(Y-M-D h:i:s)" style="background:url('js/laydate/skins/default/icon.png') no-repeat right"/></td>
+                        <td><input name="lastTime" id="end" type="text" class="form-control layer-date"  placeholder="结束(Y-M-D h:i:s)" value="<?=$lastTime?>" style="background:url('js/laydate/skins/default/icon.png') no-repeat right"/></td>
                         <td>
                             <select name="orderStatus" class="form-control" style="margin-left: 5px;">
-                                <option value="-1">选择订单状态</option>
-                                <option value="1">已确认</option>
-                                <option value="0">待确定</option>
+                                <option value="-1">全部订单状态</option>
+                                <option value="1" <?php if($order_status == 1)echo 'selected';?>>已确认</option>
+                                <option value="0" <?php if($order_status == 0)echo 'selected';?>>待确定</option>
                             </select>
                         </td>
                         <td>&nbsp;</td>
                         <td>
                             <select name="payStatus" class="form-control" style="margin-left: 5px;">
-                                <option value="-1">选择支付状态</option>
-                                <option value="1">已支付</option>
-                                <option value="0">待支付</option>
+                                <option value="-1">全部支付状态</option>
+                                <option value="1" <?php if($pay_status == 1)echo 'selected';?>>已支付</option>
+                                <option value="0" <?php if($pay_status == 0)echo 'selected';?>>待支付</option>
                             </select>
                         </td>
                         <style>
@@ -118,7 +117,6 @@
     </div>
     <div class="clear"></div>
     <div class="clear"></div>
-</div><br><br><br><br><br><br><br>
 
 <script type="text/javascript">
     $(function () {
