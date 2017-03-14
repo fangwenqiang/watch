@@ -92,7 +92,7 @@ use yii\helpers\Url;
         </dl>
     </div>
 </div>
-
+         <input type="hidden" class="_csrf" value="<?=Yii::$app->request->getCsrfToken() ?>">
 <script src="js/jquery.js"></script>
 
 <script>
@@ -117,17 +117,21 @@ use yii\helpers\Url;
                 second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
                 if (minute <= 9) minute = '0' + minute;
                 if (second <= 9) second = '0' + second;
+                _this = $(this);
                 $(this).html('<span class=stop-tips>离活动开始还有'+day+'天'+hour+'时'+minute+'分'+second+'秒</span>');
             }else if(a < 0){
                 g_id = $(this).attr('g_id');    //商品id
-                $.post('<?=url::to(['home/watch/count'])?>',{id:g_id},function(msg){
-                        //库存不足
+                csrf = $('._csrf').val();   //yii csrf验证
+                $.post('<?=url::to(['home/watch/count'])?>',{id:g_id,_csrf:csrf},function(msg){
+                        // 库存不足
                         if(msg <= 0){
-                            $(this).parent().attr('href','javascript:shield("宝贝已经被抢购完了")');
-                            $(this).parent().addClass('g__add_to_fav');
+                            _this.html('<span class=stop-tips>库存不足</span>');
+                            _this.parent().attr('href','javascript:shield("宝贝已经被抢购完了")');
+                            _this.parent().addClass('g__add_to_fav');
                         }else{
+                            // _this.html('<span class=stop-tips>正在抢购</span>');
                             add = $(this).parent().attr('add');
-                            $(this).parent().attr('href',add);
+                            _this.parent().attr('href',add);
                         }
                 })
             }else{
