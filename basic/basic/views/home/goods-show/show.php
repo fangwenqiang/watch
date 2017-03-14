@@ -387,8 +387,13 @@ $("#immediatelyBuy").click(function(){
     //获取商品id和商品数量
     var g_id = $(this).attr('goods_id');
     var nowNum = getNum();
+    var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
+    if(!user_id) {
+        alert('请先登陆！');
+    } else {
     var url = "<?= Url::toRoute('home/order/order_immediately')?>"+"&g_id="+g_id+"&nowNum="+nowNum;
     location.href=url;
+    }
 })
 
 function getNum() {
@@ -422,10 +427,10 @@ $('.add').on('click', function() {
 });
 
 $('#cart').on('click', function() {
-			var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
+var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
 var goods_num = getNum();
 if(!user_id) {
-	alert('请登录后继续操作');
+	alert('请先登陆！');
 } else {
 	$.get("<?= Url::toRoute('home/goods-show/cart') ?>", {
 	'goods_num': goods_num
