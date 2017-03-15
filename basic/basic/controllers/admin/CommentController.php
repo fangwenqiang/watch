@@ -23,7 +23,7 @@ class CommentController extends CommonController
         $model=new Comment;
         //得到全部品牌下的数据
         $comment_list=$model->commentAll();
-        return $this->render('list',['comment_list'=>$comment_list['models']]);
+        return $this->render('list',['comment_list'=>$comment_list]);
     }
 	
 	/*

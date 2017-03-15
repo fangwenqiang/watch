@@ -10,6 +10,7 @@ use app\models\Integral;  //模型层
 use app\models\Integral_rule;  //模型层
 use app\models\History;  //模型层
 use app\models\Comment;  //模型层
+use app\models\Coupon;  //模型层
 use yii\data\Pagination;
 use app\lib\PHPMailer;
 
@@ -248,6 +249,18 @@ class PersonalController extends CommonController
     {
         return $this->render('my_presell');
     }
+
+	
+	/*
+     * 我的预售
+     */
+    public function actionMy_coupon()
+    {
+    	$model = new Coupon;
+		$coupon_list = $model->couponAll($_SESSION['user_id']);
+        return $this->render('my_coupon',['coupon_list'=>$coupon_list]);
+    }
+
 
     /*
      * 我的收货地址

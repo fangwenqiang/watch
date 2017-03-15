@@ -113,7 +113,7 @@ use yii\helpers\Url;
                         <li><i></i><a href="<?php echo Url::to(['home/personal/my_presell'])?>" title="我的预售" rel="nofollow">我的预售 (<span class="cb01">0</span>)</a></li>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/my_address'])?>" title="收货地址" rel="nofollow">收货地址</a></li>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/gift_card'])?>" title="礼品卡" rel="nofollow">礼品卡</a></li>
-                        <li style="border:0;"><i></i><a href="#" title="代金券/优惠券" rel="nofollow">代金券/优惠券</a></li>
+                        <li style="border:0;"><i></i><a href="<?php echo Url::to(['home/personal/my_coupon'])?>" title="代金券/优惠券" rel="nofollow">代金券/优惠券</a></li>
                     </ul>
                 </div>
             </div>
