@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 ?>
 <div id="dcMain">
    <!-- 当前位置 -->
@@ -16,7 +17,7 @@ use yii\helpers\Url;
             <th width="80" align="center">图片</th>
             <th width="80" align="center">操作</th>
         </tr>
-        <?php foreach($comment_list as $key=>$value):?>
+        <?php foreach($comment_list['models'] as $key=>$value):?>
         <tr>
             <td align="left"><a href="<?php echo Url::to(['home/goods-show/show','id'=>$value['goods_id']])?>"><?php echo $value['goods_name']?></a></td>
             <td><?php echo $value['comment_people']?></td>
@@ -34,5 +35,6 @@ use yii\helpers\Url;
         </tr>
         <?php endforeach; ?>
         </table>
+        <?php echo LinkPager::widget(['pagination' =>$comment_list['pages']]);?>
     </div>
 </div>
