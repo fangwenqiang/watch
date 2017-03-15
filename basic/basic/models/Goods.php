@@ -155,12 +155,13 @@ class Goods extends \yii\db\ActiveRecord
     /**
      * 处理特价商品信息
      */
-    public function speciallistShow($onePage)
+    public function speciallistShow($onePage,$limit)
     {
         $data = Goods::find()
             ->select(array('g_id','goods_name','brand_name','market_price','shop_price','g_img'))
             ->leftJoin('mb_brand','mb_brand.brand_id = mb_goods.brand_id')
             ->where(['mb_goods.is_show'=>'1'])
+            ->offset($limit)
             ->limit($onePage)
             ->asArray()
             ->all();

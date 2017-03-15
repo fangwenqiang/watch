@@ -3,7 +3,6 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 <script src="js/jquery.js"></script>
-<link rel="stylesheet" href="../admin/css/public.css" type="text/css">
 <div id="main">
 	<div class="position">
 		<a href="<?php echo Url::to(['home/index/index'])?>">
@@ -205,6 +204,10 @@ use yii\helpers\Url;
 				color: #777;
 				cursor: not-allowed;
 				background-color: #fff;
+			}
+			.pager .active > a,.pager .active > a:hover{
+				background-color: #71d7f4;
+				cursor: default;
 			}
 		</style>
 		<div class="pager"><?=yii\widgets\LinkPager::widget(['pagination' => $pages])?></div>

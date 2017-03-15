@@ -24,7 +24,7 @@ use yii\helpers\Url;
 
 
 
-    <div class="w750 mt30 fr">
+    <div class="w750 mt30 fr" style='margin-right:624px;'>
         <ul class="m_0_23 inline w464 fr li_left li">
             <li class="w14 h14 circle bp_0-36"></li>
             <li class="w136 h8 mt6 bt_2_f1f">&nbsp;</li>
@@ -34,7 +34,7 @@ use yii\helpers\Url;
             <li class="w136 h8 mt6 bt_2_f1f">&nbsp;</li>
             <li class="w14 h14 circle bp_0-19"></li>
         </ul>
-        <ul class="w510 mt10 fr li_left li">
+        <ul class="w550 mt10 fr li_left li">
             <li class="w60 bold f14 c666">选购商品</li>
             <li class="w90">&nbsp;</li>
             <li class="w60 bold f14 cd00">提交订单</li>
@@ -139,7 +139,12 @@ use yii\helpers\Url;
                                  </div>
                                  <div style="float: left;width: 75%" >
                                      <textarea rows="5" cols="40" name="intro[]" placeholder="选填:对本次交易的说明(建议填写已和卖家协商一致的内容)" class="textarea"></textarea>
-                                     <input type="hidden" value="<?php echo $val['cart_id']?>" name="car[]">
+                                    <?php if(isset($val['cart_id'])){?>
+                                    <input type="hidden" value="<?php echo $val['cart_id']?>" name="car[]">
+                                    <?php }else{ ?>
+                                    <input type="hidden" value="<?php echo $val['num']?>" name="num">
+                                    <input type="hidden" value="<?php echo $val['g_id']?>" name="g_id">
+                                    <?php } ?>
                                      <p style="margin-left: 245px;" class="str">0/200</p>
                                  </div>
                              </div>
@@ -175,7 +180,7 @@ use yii\helpers\Url;
             <div class="w930 m0a">
                 <div class="fl">
                     <div class="mt50">
-                        <a href="http://www.v.com/index.php?r=home%2Forder%2Findexs" class="f14 bold c999 b_1_efe btnf7f w146 h40 fl tc">返回修改</a>
+                        <a href="javascript:history.go(-1)" style='margin-top:8px' class="btnd00 w146 h40 f16 bold fl tc" >返回修改</a>
                     </div>
                 </div>
                 <div class="fr">
@@ -185,7 +190,6 @@ use yii\helpers\Url;
                     </div>
 
                     <div class="mt20 tr">
-
                             <div class="mt20 tr">
                                 <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
                                 <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="提交订单" />

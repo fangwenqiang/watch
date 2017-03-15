@@ -10,7 +10,8 @@
 <div id="dcWrap">
     <div id="dcMain">
         <!-- 当前位置 -->
-        <div id="urHere">DouPHP 管理中心<b>></b><strong>订单详情</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <div id="urHere">DouPHP 管理中心<b>></b><strong>订单详情</strong> </div>   
+        <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
             <h3>订单详情</h3>
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                 <tr>
@@ -64,6 +65,7 @@
         </div>
     </div>
     <div class="clear"></div>
-    <div class="clear"></div> </div>
+    <div class="clear"></div> 
+</div>
 </body>
 </html>

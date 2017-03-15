@@ -32,11 +32,11 @@
 <input id="s" value="0" type="hidden">
 
 <link rel="stylesheet" href="css/goods.css">
-<script src="Script/goods.js"></script>
-<script src="Script/goods_desc.js"></script>
+<!-- <script src="Script/goods.js"></script> -->
+<!-- <script src="Script/goods_desc.js"></script> -->
 
-<link rel="stylesheet" href="css/fancybox.css">
-<script src="Script/fancybox.js"></script>
+<!-- <link rel="stylesheet" href="css/fancybox.css"> -->
+<!-- <script src="Script/fancybox.js"></script> -->
 <style type="text/css">
     * html,* html body /* 修正IE6振动bug */{background-image:url(Images/about:blank);background-attachment:fixed;}
     * html .fixed-top /* IE6 头部固定 */{position:absolute;left:auto;top:expression(eval(document.documentElement.scrollTop > 690 ? document.documentElement.scrollTop : 690));}
@@ -50,7 +50,7 @@
   <div style="clear:both">&nbsp;</div>
   <!--banner结束-->
   <div id="goods" style="width:1225px">
-    <div class="main_info v-1223-998 v-intro-bg"><div class="all_info v-870-646"><div class="info v-634-410"><h1>
+    <div class="main_info v-1223-998 v-intro-bg" style='height:600px;'><div class="all_info v-870-646"><div class="info v-634-410"><h1>
            
             <!-- 瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表 -->
            <?php echo $goods['goods_name'] ?>
@@ -131,16 +131,6 @@
         }
      </style>
         <!-- 展示该类表所有的属性 -->
-    <?php foreach ($showAttr as $key => $value): ?>
-     <?php empty($i)?$i=1:$i++ ?>
-       <?php foreach ($value as $values): ?>
-    <input type="button"  class="changered btn btn-default btn-sm" value=<?=$values?> dif="<?=$i?>" >
-
-       <?php endforeach ?>
-        <br>
-        <!-- 获取这类属性被选定的值 -->
-        <input type="hidden" class="attrNum"  id="thisValue<?=$i?>" value="">
-    <?php endforeach ?>
     
     <input type="hidden" value="<?php echo \Yii::$app ->getRequest() ->getCsrfToken();?>" name="_csrf" />
         
@@ -270,17 +260,141 @@ $('.changered').on('click', function() {
     <span class="sl">数量</span>
 
     <span class="sr bn">
-    <span class="btn minus" onclick="addorminus('minus','25521')"></span>
+    <span class="btn minus" ></span>
     <input id="goods_number_25521" class="quantity" maxlength="4" size="2" value="1" 
     name="goods_number" type="text">
-    <span class="btn add" onclick="addorminus('add','25521')"></span></span></div>
+    <span class="btn add" ></span></span>
+    </div>
     <script type="text/javascript">var is_test = 1;</script>
     <br>
-    
-    
-    <button id="cart" class="btn btn-success"  disabled="disabled">加入购物车</button>
+    <style>
+        .tm-clear li{
+                float: left;
+                width:105px;
+                height:50px;
+                margin-left:10px;
+                margin-top:3px;
+                cursor:pointer;
+            }
+        .nocheck{border: 2px solid #b8b7bd;}
+        .tm-clear{margin-left:60px; width: 380px}
+        .check{border: 2px solid #be0106;}
+    </style>
+
+    <div class="sa s13 w100 h21" style='margin-top:20px;'>
+    <span class="sl" style='float:left'>分期</span>
+    <ul class="sa s13 w100 h21 tm-clear" >
+           <li class='stages nocheck'>
+        <span class="sr bn" style='margin-left:8px;'>
+            <span class="j-content">
+            <span class="tm-msg">
+            <em>¥</em>
+            <strong>680.63</strong>
+            x3期
+            </span>
+            <br>
+            <span style='margin-left:10px;'>(含手续费)</span>
+            </span>
+        </span>
+        </li>
+             <li class='stages nocheck'>
+        <span class="sr bn" style='margin-left:8px;'>
+            <span class="j-content">
+            <span class="tm-msg">
+            <em>¥</em>
+            <strong>680.63</strong>
+            x6期
+            </span>
+            <br>
+            <span style='margin-left:10px;'>(含手续费)</span>
+            </span>
+        </span>
+        </li>
+                 <li class='stages nocheck'>
+        <span class="sr bn" style='margin-left:8px;'>
+            <span class="j-content">
+            <span class="tm-msg">
+            <em>¥</em>
+            <strong>680.63</strong>
+            x9期
+            </span>
+            <br>
+            <span style='margin-left:10px;'>(含手续费)</span>
+            </span>
+        </span>
+        </li>
+                 <li class='stages nocheck'>
+        <span class="sr bn" style='margin-left:8px;'>
+            <span class="j-content">
+            <span class="tm-msg">
+            <em>¥</em>
+            <strong>680.63</strong>
+            x12期
+            </span>
+            <br>
+            <span style='margin-left:10px;'>(含手续费)</span>
+            </span>
+        </span>
+        </li>
+                 <li class='stages nocheck'>
+        <span class="sr bn" style='margin-left:8px;'>
+            <span class="j-content">
+            <span class="tm-msg">
+            <em>¥</em>
+            <strong>680.63</strong>
+            x15期
+            </span>
+            <br>
+            <span style='margin-left:10px;'>(含手续费)</span>
+            </span>
+        </span>
+        </li>
+                 <li class='stages nocheck'>
+        <span class="sr bn" style='margin-left:8px;'>
+            <span class="j-content">
+            <span class="tm-msg">
+            <em>¥</em>
+            <strong>680.63</strong>
+            x18期
+            </span>
+            <br>
+            <span style='margin-left:10px;'>(含手续费)</span>
+            </span>
+        </span>
+        </li>
+    </ul>
+        </div>
+    <!-- <button id="cart" class="btn btn-success"  disabled="disabled">a加入购物车</button> -->
+    <div style='margin-top:260px;margin-left:70px;'>
+    <a href="javascript:" goods_id="<?=$goods['g_id']?>" id='immediatelyBuy'><img src="Images/1.png" alt="" ></a>
+    <a href="javascript:" id='stagesBuy' style='display:none'><img src="Images/fenqi.png" alt=""></a>
+    <img src="Images/2.png"  id="cart" alt="" style='margin-left:6px;cursor:pointer'>
+    </div> 
     <input type="hidden" id="goods_id" value=<?=$goods['g_id'] ?>>
     <script>// 判断是否登陆，如果登陆了就添加，没有就提示登陆
+//分期样式
+$(".stages").click(function(){
+    $(this).siblings().removeClass("check");
+    $(this).siblings().addClass("nocheck");
+    $(this).removeClass("nocheck");
+    $(this).addClass("check");
+    $("#stagesBuy").show();
+    $("#immediatelyBuy").hide();
+})
+
+//立即购买
+$("#immediatelyBuy").click(function(){
+    //获取商品id和商品数量
+    var g_id = $(this).attr('goods_id');
+    var nowNum = getNum();
+    var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
+    if(!user_id) {
+        alert('请先登陆！');
+    } else {
+    var url = "<?= Url::toRoute('home/order/order_immediately')?>"+"&g_id="+g_id+"&nowNum="+nowNum;
+    location.href=url;
+    }
+})
 
 function getNum() {
 	return $('input[name="goods_number"]').val();
@@ -292,6 +406,9 @@ function setNum(num) {
 
 $('.minus').on('click', function() {
 	var nowNum = getNum();
+    if(isNaN(nowNum)) {
+        alert('请输入数字');
+    }
 	if(nowNum > 1) {
 		nowNum--;
 		setNum(nowNum);
@@ -300,6 +417,9 @@ $('.minus').on('click', function() {
 
 $('.add').on('click', function() {
 	var nowNum = getNum();
+    if(isNaN(nowNum)) {
+        alert('请输入数字');
+    }
 	if(nowNum >= 1) {
 		nowNum++;
 		setNum(nowNum);
@@ -307,10 +427,10 @@ $('.add').on('click', function() {
 });
 
 $('#cart').on('click', function() {
-			var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
+var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
 var goods_num = getNum();
 if(!user_id) {
-	alert('请登录后继续操作');
+	alert('请先登陆！');
 } else {
 	$.get("<?= Url::toRoute('home/goods-show/cart') ?>", {
 	'goods_num': goods_num
@@ -377,10 +497,9 @@ function(data) {
                 <link rel="stylesheet" href="css/style.css">
                 <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
                 <div class="gmtw">
-                    <div class="gmt cl">
+                    <div class="gmt cl" style='margin-left:30px'>
                         <a rel="nofollow" href="javascript:void(0)" title="收藏" class="g__add_to_fav">
-                            <i>
-                            </i>收藏</a>
+                            <i></i>收藏</a>
                         <div id="click_count">关注：
                             <code class="red">31694</code>人</div></div>
                 </div>
@@ -390,11 +509,11 @@ function(data) {
                         <br>
                         <p>确认收藏改商品吗?</p>
                         <div class="cd-buttons">
-                            <img src="Images/1-1447F_55779.jpg" height="100px">
-                            <br>我是商品名
-                            <br>￥价格
+                            <img src="Images/<?=$goods['g_img']?>" height="100px" style='margin-top:20px;'>
+                            <br><?=$goods['goods_name']?>
+                            <br>￥<font color='red'><?=$goods['shop_price']?></font>价格
                             <br>
-                            <button style="height:50px;width:100px" class="goods_collect_a">提交</button></div>
+                            <img src="Images/qued.png" class="goods_collect_a" alt="" style='margin-top:20px;cursor:pointer'>
                         <a href="#0" class="cd-popup-close">关闭</a></div>
                 </div>
                 <script type="text/javascript">/*弹框JS内容*/
@@ -416,7 +535,7 @@ jQuery(document).ready(function($) {
 			var _csrf = $('#_csrf').val();
 			$.ajax({
 				type: 'post',
-				url: 'http://www.xiyue.com/index.php?r=home/goods-show/collect',
+				url: "<?= \yii\helpers\Url::toRoute(['home/goods-show/collect']);?>",
 				data: {
 					goods_id: goods_id,
 					goods_name: goods_name,
@@ -451,303 +570,24 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-});</script></div></div>
-    <!--main_info:end-->
-    <script type="text/javascript">$.ajax({
-	type: 'GET',
-	cache: false,
-	dataType: "jsonp",
-	url: user_wbiao_cn + 'goods' + '/' + 'sell_status' + '/',
-	data: { goods_id: $("#goods_id").val(), act: getQueryString('act'), token: "5fdbe7ca2ea3766235d59da6184113cc" },
-	success: function(data) {
-		//购物按钮
-		show_buttons(parseInt(data.s));
-		//显示是否支持到付
-		if(parseInt(data.h) == 1 && data.p <= 20000)
-			$('#is_post_pay').show();
-		//data说明：
-		//s销售状态，m市场价，t是否促销，r价格名称，o原价，p商品价格，f分期价，v节省，d折扣，i活动折扣，a活动价格，y闪电发货，n活动说明，x商品名称前缀，b是否独代, j促销信息数组
-
-		//            $(price).after('<a id="promote_price_notice" href="/goods/promote_notice?goods_id='+$("#goods_id").val()+'&t='+(new Date().getTime())+'" class="iframe blue">&nbsp; (促销通知)</a>');
-
-		//价格名称
-		var price = $("#price");
-		var price_name = $("#price_name");
-		var promote_name = data.r;
-		if(data.t == 1) {
-			price_name.html((has_act_price ? '' : '<span style="color:red;">') + (promote_name == '' ? '促销价' : promote_name) + '' + (has_act_price ? '' : '</span>'));
-		} else if(data.y == 1) {
-			price_name.html((promote_name == '' ? '欧洲同步价' : promote_name));
-		} else {
-			price_name.html('喜悦手表价');
-		}
-		var price_html = data.p > 0 ? ('<font class="f12">￥</font>' + data.p) : '-';
-		//促销通知
-		price.html(price_html);
-
-		//活动价
-		var has_act_price = data.a > 0 && data.a != data.p;
-		if(has_act_price) {
-			price_name.text('活动价').addClass('red');
-			price.html("<font class='f12'>￥</font>" + data.a);
-			//$("#act_price").html("<font class='f12'>￥</font>" + data.a);
-			//$("#act_discount").html(data.i + '折');
-			//$("#act_price_container").show();
-			//$("#wbiao_price").hide();
-			//price.css("color", "#888").css("font-size", "12px").css("text-decoration", "line-through");
-		}
-
-		/*Begin 此处为促销信息 Cale*/
-		low_price = 0;
-		if(data.a > 0) { //市价-活动价
-			low_price = data.m - data.a;
-		} else if(data.p > 0) { //市价-促销价
-			low_price = data.m - data.p;
-		} else {
-			low_price = 0;
-		}
-
-		var promote_info = $('#promote-info');
-		promote_content = '';
-		if(low_price > 0) {
-			//promote_content += '<div><i>直降</i><ins>已优惠￥'+low_price+'</ins></div>';
-		}
-		if($.isEmptyObject(data.j) == false) { //返回是空数组不显示
-			$promote_arr = data.j;
-			for(var $i = 0; $i < $promote_arr[0].length; $i++) {
-				if(typeof($promote_arr[3]) !== 'undefined' && typeof($promote_arr[4]) !== 'undefined') {
-					if($promote_arr[3][$i] < data.z && $promote_arr[4][$i] > data.z) {
-						promote_content += '<div>';
-						promote_content += '<i>' + $promote_arr[0][$i] + '</i><ins>' + $promote_arr[1][$i] + '</ins>';
-						promote_content += $promote_arr[2][$i] == '' ? '' : '&nbsp;&nbsp;<a href="' + $promote_arr[2][$i] + '" class="blue" style="font-family:宋体;" target="_blank">&gt;&gt;详细</a>';
-						promote_content += '</div>';
-					}
-				}
-			}
-		}
-		if(promote_content.length > 0) { //有内容才显示标题
-			promote_info.html('<div class="sc s13"><span class="sl fl">促销</span><span class="sx fl">' + promote_content + '</span></div>').show();
-		}
-		/*End*/
-
-		//折扣
-		var discount = $("#discount");
-		var discount_container = $("#discount_container");
-		if(data.d > 0 && data.d < 10) {
-			discount.html(data.d + '折');
-			discount_container.show();
-		} else {
-			discount_container.hide();
-		}
-
-		//市场价
-		var market_price = $("#market_price");
-		var market_price_container = $("#market_price_container");
-		if(data.p != data.m) {
-			var market_price_html = data.m > 0 ? ('￥' + data.m) : '-';
-			market_price.html(market_price_html);
-			market_price_container.show();
-		} else {
-			market_price_container.hide();
-		}
-
-		//分期价
-		var fen_qi_jia = $("#fen_qi_jia");
-		var fen_qi_jia_container = $("#fen_qi_jia_container");
-		if(data.f > 0) {
-			fen_qi_jia.text('￥' + data.f + ' × 12期');
-			fen_qi_jia_container.show();
-		} else {
-			fen_qi_jia.text('-');
-			fen_qi_jia_container.hide();
-		}
-
-		//闪电发货
-		if(data.y == 1) {
-			$("#quick").show();
-			//  $("#quick2").show();
-			//  $("#quick3").show();
-		} else {
-			$("#quick").hide();
-			//  $("#quick2").hide();
-			//  $("#quick3").hide();
-		}
-
-		if(data.b == 1) {
-			$('#image img').after('<span class="agency" style="display:block;">喜悦手表独家代理</span>');
-		}
-
-		//活动提示
-		//if(data.n != '') $("#activity_note").html("<ul><li><i>【活动】</i>"+data.n+"</li></ul>").show();
-
-		//商品名称前缀
-		if(data.x != '' && data.a > 0 && data.a < data.p) $("#goods").find("h1").prepend(data.x);
-
-		//促销通知弹出层
-		$('#promote_price_notice').fancybox({
-			'titleShow': false,
-			'width': 504,
-			'height': 305,
-			'padding': 0,
-			'margin': 0,
-			'scrolling': 'no',
-			'hideOnOverlayClick': false,
-			'showCloseButton': false
-		});
-
-		$.ajax({
-			type: 'GET',
-			cache: false,
-			dataType: "jsonp",
-			url: user_wbiao_cn + 'goods' + '/' + 'update_click_count' + '/',
-			data: { goods_id: $("#goods_id").val(), s: data.s, token: "5fdbe7ca2ea3766235d59da6184113cc" },
-			success: function(data) {}
-		});
-
-	}
 });
-my_browse_history();
+// //立即购买
+// $("#buy_now").click(function() {
+//  var act = getQueryString('act');
+//  if(act == null) { act = ''; }
+//  var goodsNumbers = $('input[name="goods_number"]').val();
+//  $.post(www_domain + "/cart" + "/buy_now", { goods_id: $('#goods_id').val(), goods_number: goodsNumbers, is_ajax: "1", act: act },
+//      function(result) {
+//          if(result.errors != 0) {
+//              alert(result.message);
+//          } else {
+//              pop_login(result);
+//          }
 
-//立即购买
-$("#buy_now").click(function() {
-	var act = getQueryString('act');
-	if(act == null) { act = ''; }
-	var goodsNumbers = $('input[name="goods_number"]').val();
-	$.post(www_domain + "/cart" + "/buy_now", { goods_id: $('#goods_id').val(), goods_number: goodsNumbers, is_ajax: "1", act: act },
-		function(result) {
-			if(result.errors != 0) {
-				alert(result.message);
-			} else {
-				pop_login(result);
-			}
+//      }, "json");
+// });
 
-		}, "json");
-});
-
-//立即购买
-/*$("#real_buy_now").fancybox({
-    'padding': 0,
-    'titleShow': false,
-    'width': 504,
-    'height': 446,
-    'padding': 0,
-    'margin': 0,
-    'scrolling':'no',
-    'hideOnOverlayClick': false,
-    'showCloseButton':false
-});*/
-
-function show_buttons(sell_status) {
-	//jinzhong 2013-10-14 礼品的不上架 
-	if($("#goods_id").val() == 27054 ||
-		$("#goods_id").val() == 29393 ||
-		$("#goods_id").val() == 29834 ||
-		$("#goods_id").val() == 29833 ||
-		$("#goods_id").val() == 29837 ||
-		$("#goods_id").val() == 29838 ||
-		$("#goods_id").val() == 27693
-	) {
-		sell_status = 4;
-	}
-
-	switch(sell_status) {
-		case 1:
-			show_buy_now_button(); //购买
-			break;
-		case 2:
-			show_pre_sale_button(); //预订
-			break;
-		case 3:
-			show_sale_out_button(); //售罄
-			break;
-		case 4:
-			show_no_sale_button(); //暂无销售
-			break;
-		case 5:
-			show_replenish_button(); //补货中
-			break;
-		case 6:
-			show_stop_pro_button(); //停产
-			break;
-		default:
-			alert("抱歉！找不到当前商品或当前商品已删除！");
-			break;
-	}
-}
-
-function show_buy_now_button() {
-	$("#buy_now, #add_to_cart, #buy_now_son").show();
-}
-
-function show_pre_sale_button() {
-	$("#buy_now, #add_to_cart, #buy_now_son").hide();
-
-	//预售中，我要购买
-	$("#real_pre_sale").fancybox({
-		'titleShow': false,
-		'width': 808,
-		'height': 418,
-		'padding': 0,
-		'margin': 0,
-		'scrolling': 'no',
-		'hideOnOverlayClick': false,
-		helpers: {
-			overlay: {
-				closeClick: false,
-				fixed: !1
-			}
-		}
-	});
-
-	$("#pre_sale").click(function() {
-		$("#real_pre_sale").click();
-	}).show();
-}
-
-function show_sale_out_button() {
-	$("#buy_now, #add_to_cart, #buy_now_son").hide();
-
-	$("#sale_out").show(); //已售完
-}
-
-function show_no_sale_button() {
-	$("#buy_now, #add_to_cart, #buy_now_son").hide();
-
-	$("#no_sale").show(); //已售完
-}
-
-function show_replenish_button() {
-	$("#buy_now, #add_to_cart, #buy_now_son").hide();
-
-	//预售中，我要购买
-	$("#real_pre_sale").fancybox({
-		'titleShow': false,
-		'width': 808,
-		'height': 418,
-		'padding': 0,
-		'margin': 0,
-		'scrolling': 'no',
-		'hideOnOverlayClick': false,
-		helpers: {
-			overlay: {
-				closeClick: false,
-				fixed: !1
-			}
-		}
-	});
-
-	//补货中
-	$("#replenish").click(function() {
-		$("#real_pre_sale").click();
-	}).show();
-
-}
-
-function show_stop_pro_button() {
-	$("#buy_now, #add_to_cart, #buy_now_son").hide();
-
-	$('#stop_pro').show(); //停产
-}</script>
+</script></div></div></div>
     <div class="clear"></div>
         <div id="rightArea" class="w995">
             <div id="fixed" class="w994 fixed-top">
@@ -845,7 +685,7 @@ function show_stop_pro_button() {
     <!--rightArea:end-->
     <div id="leftArea">
       <!--hot:begin-->
-      <div class="hot">
+      <div class="hot" >
         <div class="h_top">
           <div class="h_tit">爱宝时表热销排行</div>
         </div>
@@ -909,7 +749,7 @@ function show_stop_pro_button() {
 <!--main2:end-->
 
 <link rel="stylesheet" href="css/jqzoom.css" type="text/css">
-<script type="text/javascript" src="Script/jqzoom.js"></script>
+<!-- <script type="text/javascript" src="Script/jqzoom.js"></script> -->
 
 <div id="dsp" style="display:none;">
 <script type="text/javascript">var _mvq = _mvq || [];

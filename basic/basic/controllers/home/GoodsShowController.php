@@ -119,15 +119,12 @@ class GoodsShowController extends CommonController
 		$goods = self::$startModel->sql($sql);
 		$goods = $goods[0];
 
-
 		//获取userid
 		$user_id = self::$startSet['session']->get('user_id');
 		if (!$user_id) {
 			$user_id = 2;
 		}
 
-		
-				
 		$model = new History();
         $res = $model->history_find($user_id,$goodsId);
 
@@ -150,20 +147,20 @@ class GoodsShowController extends CommonController
 
 
 		//查询该类商品所有属性
-		$sql = 'select attr_id,attr_name,attr_values from mb_attribute where type_id = 4';
-		$attrArr = self::$startModel->sql($sql);
+		// $sql = 'select attr_id,attr_name,attr_values from mb_attribute where type_id = 4';
+		// $attrArr = self::$startModel->sql($sql);
 		
-		foreach ($attrArr as $key => $value) {
-			 $abc = explode("\r\n",$value['attr_values']);
-			 $showAttr[$value['attr_name']] = $abc;
-		}
+		// foreach ($attrArr as $key => $value) {
+		// 	 $abc = explode("\r\n",$value['attr_values']);
+		// 	 $showAttr[$value['attr_name']] = $abc;
+		// }
 
 		//判断是否有商品的详细描述信息
 		if (empty($goods['describe'])) {
 			$goods['describe'] = ['1'=> '暂时没有详细的商品信息'];
 		}
 		// print_r($attrArr);die;		
-		return $this->render('show',compact('showAttr','goods','comment_list'));
+		return $this->render('show',compact('goods','comment_list'));
 	}			
 
 	//获取组合的价格，后期加入商品id 筛选
@@ -218,18 +215,10 @@ class GoodsShowController extends CommonController
 		if (empty(self::$startSet['session']->get('user_id'))) {
 			echo  "请先登陆";
 		}
-
 		$cartInsert['goods_sn'] = self::$startSet['session']->get('goods_sn');
 		$cartInsert['price'] = self::$startSet['session']->get('group_price');
 		$cartInsert['user_id'] = self::$startSet['session']->get('user_id');
 		$cartInsert['num']	= self::$startSet['request']->get('goods_num');
-		$res = \Yii::$app->db->createCommand()->insert('mb_cart',$cartInsert)->execute();
-	
-	
-		$cartInsert['goods_sn'] = \Yii::$app->session->get('goods_sn');
-		$cartInsert['price'] = \Yii::$app->session->get('group_price');
-		$cartInsert['user_id'] = \Yii::$app->session->get('user_id');
-		$cartInsert['num']	= Filtration::check_id($_GET['goods_num']);
 		$res = \Yii::$app->db->createCommand()->insert('mb_cart',$cartInsert)->execute();
 		if ($res) {
 				echo '加入购物车成功';

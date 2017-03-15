@@ -54,8 +54,7 @@ class WatchController extends CommonController{
     {
         $this->onePage = '12';
         $goods = new Goods();   //商品
-        $order = 'ASC';
-        $data['goodsList'] = $goods->speciallistShow($this->onePage); //查询处理展示商品
+        $data['goodsList'] = $goods->speciallistShow($this->onePage,$limit=0); //查询处理展示商品
         $count = Goods::find()->where(['is_promote'=>'1'])->count();    //数据总条数
         $data['pageStr'] = $this->pageStr($count,$this->onePage);
         return $this->render('tejia',['data'=>$data]);
@@ -111,13 +110,24 @@ class WatchController extends CommonController{
             $gt_id = $data['gt_id'];
             $gt_name = 'gt_id';
         }
+        // 获取当前页 计算偏移量
+        $p = $data['p'];
+        if(empty($p)){
+            $limit = '0';
+        }else{
+            $limit = ($data['p']-1)*$this->onePage; //偏移量
+        }
         // 如果是促销界面  则查询促销产品
         if(!empty($data['limit'])){
             $this->onePage = $data['limit'];
-            $gt_name = 'is_promote';
-            $gt_id = '1';
+            // $gt_name = 'is_promote';
+            // $gt_id = '1';
+            $count = Goods::find()->where(['is_promote'=>'1'])->count();    //数据总条数
+            $data['goodsList'] = $goods->speciallistShow($this->onePage,$limit); //查询处理展示商品
+            $data['pageStr'] = $this->pageStr($count,$this->onePage,$p);
+            // $data['pageStr'] = $this->pageStr($count,$this->onePage,$p);
+            die(json_encode($data));
         }
-        $p = $data['p'];    //当前页
 
         $brand_id = isset($data['brand_id']) ? $data['brand_id'] : null;  //品牌ID
 
@@ -147,12 +157,7 @@ class WatchController extends CommonController{
             $orderField = 'shop_price'; //默认排序字段
         }
 
-        // 获取当前页 计算偏移量
-        if(empty($p)){
-            $limit = '0';
-        }else{
-            $limit = ($p-1)*$this->onePage; //偏移量
-        }
+
         $data['goodsList']= $goods->showBrand($order,$orderField,'brand_id',$brand_id,$limit,$gt_name,$gt_id,$this->onePage);
 
         if(empty($data['goodsList'])){
@@ -164,7 +169,6 @@ class WatchController extends CommonController{
         }else{
             $count = Goods::find()->where(['is_show'=>'1',$gt_name=>$gt_id])->count();    //数据总条数
         }
-
         $data['pageStr'] = $this->pageStr($count,$this->onePage,$p);
         die(json_encode($data));
     }
@@ -237,6 +241,6 @@ class WatchController extends CommonController{
         $g_id= \Yii::$app->request->post('id');
         $goods = new Goods();
         $count = $goods->count($g_id);
-        die($count);
+        die($count['g_number']);
     }
 }

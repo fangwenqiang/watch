@@ -30,7 +30,7 @@ use yii\helpers\Url;
 
     <div class="hot_goods_list">
         <div class="context">
-            <ul>
+            <ul class="ul_one">
             <?php foreach($data['goodsList'] as $val){ ?>
                 <li class="hose"> <span class=""></span> <a href="<?=url::to(['home/goods-show/show','id'=>$val['g_id']])?>" target="_blank" class="img"><img src="Images/<?=$val['g_img']?>" alt="<?=$val['goods_name']?>" width="300" height="300" /></a>
                     <p> <b><?=$val['goods_name']?> | 品牌：<?=$val['brand_name']?> | <span class="cmt">已被评论<i><?=$val['comment']?></i>次</span></b><br>
@@ -70,14 +70,19 @@ use yii\helpers\Url;
                 }else{
                     $.each(msg.goodsList, function (k,v) {
                         url = "<?=url::to(['home/goods-show/show'])?>&id="+v.g_id;
-                        str +='<ul><li> <span class=""></span><a href="'+url+'" target="_blank" class="img"><img src="Images/'+ v.g_img+'" alt="'+v.goods_name+'" width="300" height="300" /></a>';
-                        str +='<p> <b>'+ v.goods_name+'品牌：'+ v.brand_name+'</b><br><u></u><ins>￥'+ v.shop_price+'</ins><del>原价：￥'+v.market_price+'</del><br>';
-                        str +='span class="cmt">已被评论<i>'+ v.comment+'</i>次</span> </p><a href="javascript:addToCartT(5561, 1, 1);" class="btn">立即抢购</a> </li></ul>';
+
+                        str +='<li class="hose"> <span class=""></span><a href="'+url+'" target="_blank" class="img"><img src="Images/'+v.g_img+'" alt="'+v.goods_name+'" width="300" height="300" /></a>';
+                        str +='<p> <b>'+v.goods_name+' | 品牌：'+v.brand_name+' | <span class="cmt">已被评论<i>'+v.comment+'</i>次</span></b><br>';
+                        str +='<u></u><ins>￥'+v.shop_price+'</ins><del>原价：￥'+v.market_price+'</del><br></p>';
+                        str +='<a href="'+url+'" class="btn" style="margin-left: 100px">立即抢购</a> </li>';
                     })
                 }
-                $('.context').html(str);
+                $('.ul_one').html(str);
             }
         });
     }
 
 </script>
+
+                        
+                    

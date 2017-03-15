@@ -24,9 +24,8 @@ use yii\helpers\Url;
     <script src="js/banner.js"></script>
     <!-- end banner js -->
     <link rel="stylesheet" href="css/sxg.css">
-
-
-    <script src="js/saved_resource"></script>
+    <script src="js/jquery.js"></script>
+<!--    <script src="js/saved_resource"></script>-->
     <script type="text/javascript" src="js/user.js"></script>
     <link rel="stylesheet" href="css/user.css">
 </head>
@@ -122,10 +121,10 @@ use yii\helpers\Url;
                 <div class="t"><i class="u__datum"></i><font class="f_fixed">账户管理</font></div>
                 <div class="c">
                     <ul>
-                        <li><i></i><a href="<?php echo Url::to(['home/personal/index'])?>" title="个人资料" rel="nofollow">个人资料</a></li>
+                        <li><i class="u__point"></i><a href="<?php echo Url::to(['home/personal/index'])?>" title="个人资料" class="ccf0" rel="nofollow">个人资料</a></li>
                         <li><i></i><a href="<?=Url::to(['home/personal/save_pwd'])?>" title="修改密码" rel="nofollow">修改密码</a></li>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/my_collect'])?>" title="我的收藏" rel="nofollow">我的收藏</a></li>
-                        <li><i class="u__point"></i><a href="<?php echo Url::to(['home/personal/my_history'])?>" title="浏览历史" class="ccf0" rel="nofollow">最近访问</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_history'])?>" title="浏览历史"  rel="nofollow">最近访问</a></li>
                         <li style="border:0;"><i></i><a href="<?php echo Url::to(['home/personal/my_address'])?>" title="为我推荐" rel="nofollow">为我推荐</a></li>
                     </ul>
                 </div>
@@ -271,5 +270,26 @@ use yii\helpers\Url;
             }
         });
     })
+
+    /**
+     * 显示当前nav小图标
+     */
+    $(function () {
+        var controller = '<?=\Yii::$app->controller->id;?>';
+        controller = controller.replace(/\//g, '%2F');
+        var action = '<?=\Yii::$app->controller->action->id;?>';
+        var liObj = $('.c li');
+        for(var i = 0; i<liObj.length; i++ ){
+            var str = liObj.eq(i).children('a').attr('href');
+            str = str.substr(13);
+            if(str == controller+'%2F'+action ) {
+                liObj.eq(i).children('i').addClass('u__point');
+                liObj.eq(i).children('a').addClass('ccf0');
+            } else {
+                liObj.eq(i).children('i').removeClass('u__point');
+                liObj.eq(i).children('a').removeClass('ccf0');
+            }
+        }
+    });
 
 </script>

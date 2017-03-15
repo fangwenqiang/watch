@@ -27,7 +27,7 @@ class OrderController extends CommonController
         return $this->render('carList',array('data'=>$data));
     }
     /*
-     *订单页面
+     *订单页面（先购物车再到订单）
      */
     public function actionOrder_centre()
     {
@@ -59,6 +59,28 @@ class OrderController extends CommonController
     }
 
 
+      /*
+     *订单页面（适用立即购买）
+     */
+    public function actionOrder_immediately()
+    {
+        $request = \Yii::$app->request;
+        $g_id = $request->get('g_id');
+        $nowNum = $request->get('nowNum');
+        $goods_data = Goods::find()->where(['g_id'=>$g_id])->asArray()->all();
+        $goods_data[0]['price'] =  $goods_data[0]['shop_price'];
+        $goods_data[0]['num'] =  $nowNum;
+
+        //查询快递方式
+        $express =  (new \yii\db\Query())->from('mb_express')->all();
+
+        return $this->render('OrderCentre',[
+            'data'=>$goods_data,
+            'express' => $express
+        ]);
+    }
+
+
     /*
      * 提价订单
      */
@@ -80,15 +102,26 @@ class OrderController extends CommonController
         $transaction = $connection->beginTransaction();
 
         try {
-            //处理订单 -- 减少库存
-            $reduceRepertory =   $goods_model->reduceRepertory(implode(',',$post['car']));
-            //处理订单 -- 减少优惠卷
+
             //处理订单 -- 订单入库
             $submitPut = $order_model->OrderInserts($post['address']);
-            //处理订单  -- 订单详情添加
-            $orderDetails = $order_model->OrderGoodsInserts($post,$submitPut);
-            //处理订单 -- 删除购物车
-            $DeleteCar = $cart_model->DeleteGoods($post['car']);
+            if(!empty($post['car']))
+            {
+                 //处理订单 -- 减少库存
+                $reduceRepertory =   $goods_model->reduceRepertory(implode(',',$post['car']));
+                //处理订单 -- 减少优惠卷
+                // //处理订单 -- 订单入库
+                // $submitPut = $order_model->OrderInserts($post['address']);
+                //处理订单  -- 订单详情添加
+                $orderDetails = $order_model->OrderGoodsInserts($post,$submitPut);
+                //处理订单 -- 删除购物车
+                $DeleteCar = $cart_model->DeleteGoods($post['car']);
+            }
+            else
+            {      
+                $orderDetails = $order_model->OrderGoodsOrder($post,$submitPut);
+            }
+            //处理订单 -- 减少优惠卷
             // ... 执行其他 SQL 语句 ...
             $transaction->commit();
             $order_sn = $order_model->SelectOrder(array('order_id'=>$submitPut),'order_sn');
@@ -117,6 +150,7 @@ class OrderController extends CommonController
         $order['prices'] = $order_model->prices($order['order_id']);
         $pay_class=new Pay();
         $order['link'] = $pay_class->pay_url($order['order_sn'],$order['prices']);
+
         return $this->render('OrderPay',array('order'=>$order));
     }
 

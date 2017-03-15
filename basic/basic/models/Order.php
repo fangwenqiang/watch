@@ -155,7 +155,29 @@ class Order extends ActiveRecord
             $goods[$i]['goods_intro'] = $one[1];
             $prices = $prices + ($goodsCar['num'] * $goodsCar['price']);
         }
+        
         return Yii::$app->db->createCommand()->batchInsert(Order::tableName(),Order::attributeLabels(), $goods)->execute();
+    }
+
+
+    //商品订单详情(立即购买)
+    public function OrderGoodsOrder($data,$order_id)
+    {
+        //查询订单号
+        //价格
+        $prices = 0;
+        $goods = array();
+        //查询购物车
+        $goods_data = (new \yii\db\Query())->from('mb_goods')->where(['g_id'=>$data['g_id']])->one();
+        // $this->from = Order::tableName();
+        $this->order_id = $order_id;
+        $this->goods_id = $data['g_id'];
+        $this->goods_name = $goods_data['goods_name'];
+        $this->goods_sn = $goods_data['goods_sn'];
+        $this->buy_number = $data['num'];
+        $this->buy_price = $goods_data['shop_price'];
+        
+        return $this->save();
     }
 
 

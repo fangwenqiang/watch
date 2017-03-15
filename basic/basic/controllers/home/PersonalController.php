@@ -5,9 +5,6 @@
 namespace app\controllers\home;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
-use yii\filters\VerbFilter;
 use app\models\Collect;  //模型层
 use app\models\Integral;  //模型层
 use app\models\Integral_rule;  //模型层
@@ -21,6 +18,30 @@ class PersonalController extends CommonController
 {
     //前台公共视图
     public $layout = '/personal';
+
+    /**
+     * 防非法操作
+     * @return array
+     */
+//    public function behaviors()
+//    {
+//        $this->isLogin();
+//        return [
+//            [
+//                'class'=>'yii\filters\PageCache',
+//            ]
+//        ];
+//    }
+
+    /**
+     * 判断是否登陆
+     * @return \yii\web\Response
+     */
+    protected function isLogin()
+    {
+        $session = Yii::$app->session;
+        if(!$session->has('user_id')) return $this->redirect(['home/login/login']);
+    }
 
     /*
      * 导航-->首页
@@ -59,18 +80,18 @@ class PersonalController extends CommonController
       
         $userId = $session->get('user_id');
 
-        $whereArray = ['and','user_id='.$userId];
+        $whereArray = ['and', 'user_id=' . $userId];
         $addTime = '';
         $orderStatus = '';
         $orderSn = '';
-    
+
         //搜索条件
         $request = Yii::$app->request;
         if (Yii::$app->request->isPost) {
             $addTime = $request->post('addTime');
             $orderStatus = $request->post('orderStatus');
             $orderSn = addslashes($request->post('orderSn'));
-            $whereArray = $this->getWhere($whereArray,['addTime'=>$addTime,'orderStatus'=>$orderStatus,'orderSn'=>$orderSn]);
+            $whereArray = $this->getWhere($whereArray, ['addTime' => $addTime, 'orderStatus' => $orderStatus, 'orderSn' => $orderSn]);
         }
 
 
@@ -79,38 +100,38 @@ class PersonalController extends CommonController
             ->select(['order_id', 'order_sn', 'user_id', 'order_status', 'express_id', 'express_name', 'pay_id', 'pay_name', 'pay_status', 'goods_total_prices', 'add_time', 'country', 'province', 'city', 'district', 'address', 'mobile'])->from('{{%order_info}}')
             ->where($whereArray);
         //分页
-        $pages = new Pagination(['totalCount' => $orderInfo->count(),'defaultPageSize' => 5]);
+        $pages = new Pagination(['totalCount' => $orderInfo->count(), 'defaultPageSize' => 5]);
         $orderInfo = $orderInfo->offset($pages->offset)
             ->limit($pages->limit)
             ->all();
 
         //订单商品信息
-        $orderId = array_column($orderInfo,'order_id');
+        $orderId = array_column($orderInfo, 'order_id');
         $orderGoods = (new \yii\db\Query())
             ->select([])->from('{{%order_goods}}')
-            ->where(['in','order_id',$orderId])->all();
+            ->where(['in', 'order_id', $orderId])->all();
 
-        $goodsId = array_column($orderGoods,'goods_id');
+        $goodsId = array_unique(array_column($orderGoods, 'goods_id'));
         //商品信息
         $goodsInfo = (new \yii\db\Query())
-            ->select(['g_id','g_thumb'])->from('{{%goods}}')
-            ->where(['in','g_id',$goodsId])->all();
+            ->select(['g_id', 'g_thumb'])->from('{{%goods}}')
+            ->where(['in', 'g_id', $goodsId])->all();
         //处理商品图片
-        foreach ($orderGoods as $k=>$v){
-            foreach ($goodsInfo as $m=>$n){
-                if($v['goods_id'] == $n['g_id']) $orderGoods[$k]['img'] = $n['g_thumb'];
+        foreach ($orderGoods as $k => $v) {
+            foreach ($goodsInfo as $m => $n) {
+                if ($v['goods_id'] == $n['g_id']) $orderGoods[$k]['img'] = $n['g_thumb'];
             }
         }
 
         //合并订单信息与订单商品信息
-        foreach ($orderInfo as $k=>$v){
-            foreach ($orderGoods as $m=>$n){
-                if( $n['order_id'] == $v['order_id']) $orderInfo[$k]['orderGoods'][] = $orderGoods[$m];
+        foreach ($orderInfo as $k => $v) {
+            foreach ($orderGoods as $m => $n) {
+                if ($n['order_id'] == $v['order_id']) $orderInfo[$k]['orderGoods'][] = $orderGoods[$m];
             }
         }
 
-//        var_dump($orderInfo);
-        return $this->render('my_order',['orderInfo'=>$orderInfo,'time'=>$addTime,'status'=>$orderStatus,'sn'=>$orderSn,'pages'=>$pages]);
+//        var_dump($goodsInfo);
+        return $this->render('my_order', ['orderInfo' => $orderInfo, 'time' => $addTime, 'status' => $orderStatus, 'sn' => $orderSn, 'pages' => $pages]);
     }
 
     /**
@@ -120,56 +141,97 @@ class PersonalController extends CommonController
      * @param $arr array 要增加的条件
      * @return array
      */
-    protected function getWhere($where,$arr)
+    protected function getWhere($where, $arr)
     {
         //订单号
-        if(!empty($arr['orderSn'])) array_push($where,'order_sn="'.$arr['orderSn'].'"');
+        if (!empty($arr['orderSn'])) array_push($where, 'order_sn="' . $arr['orderSn'] . '"');
         //订单状态
-        switch ($arr['orderStatus']){
+        switch ($arr['orderStatus']) {
             case '2'://已确认订单
-                array_push($where,'order_status=1');
+                array_push($where, 'order_status=1');
                 break;
             case '3'://待发货
-                array_push($where,'order_status=0');
+                array_push($where, 'order_status=0');
                 break;
             case '4'://已发货
-                array_push($where,'order_status=2');
+                array_push($where, 'order_status=2');
                 break;
             case '5'://待支付
-                array_push($where,'pay_status=0');
+                array_push($where, 'pay_status=0');
                 break;
             case '6'://已支付
-                array_push($where,'pay_status=1');
+                array_push($where, 'pay_status=1');
                 break;
             case '7'://已取消
-                array_push($where,'order_status=-1');
+                array_push($where, 'order_status=-1');
                 break;
             case '8'://已退货
-                array_push($where,'order_status=-2');
+                array_push($where, 'order_status=-2');
                 break;
             case '9'://成功交易
-                array_push($where,'order_status=3');
+                array_push($where, 'order_status=3');
                 break;
         }
         //订单创建时间
-        switch ($arr['addTime']){
+        switch ($arr['addTime']) {
             case '1'://一个月订单
-                array_push($where,['between', 'add_time',strtotime('-1 month'),time()]);
+                array_push($where, ['between', 'add_time', strtotime('-1 month'), time()]);
                 break;
             case '2'://三个月
-                array_push($where,['between', 'add_time',strtotime('-3 month'),time()]);
+                array_push($where, ['between', 'add_time', strtotime('-3 month'), time()]);
                 break;
             case '3'://一年
-                array_push($where,['between', 'add_time',strtotime('-1 year'),time()]);
+                array_push($where, ['between', 'add_time', strtotime('-1 year'), time()]);
                 break;
         }
         return $where;
 
     }
-    
+
+    /**
+     * 修改密码页面
+     * @return string
+     */
     public function actionSave_pwd()
     {
         return $this->render('save_pwd');
+    }
+
+    /**
+     * 修改面，验证原密码，新密码不能与原密码一样
+     * @return string
+     */
+    public function actionSave_pwd_check()
+    {
+        $request = Yii::$app->request;
+        $session = Yii::$app->session;
+        $uid = $session->get('user_id');
+
+        $type = $request->post('type');
+        $pwd = substr(md5($request->post('pwd')),0,20);
+
+        $user = new \app\models\User();
+        $res = $user->find()->where(['user_id'=>$uid,'password' => $pwd])->one();
+
+        switch ($type){
+            case '1'://验证原密码是否正确
+                return $res ? 'true' : 'false';
+            break;
+            case '2'://验证新密码不能与原密码一致
+                return $res ? 'false' : 'true';
+            break;
+            case '3'://修改
+                $oldPwd = substr(md5($request->post('oldPwd')),0,20);
+                $newPwd = substr(md5($request->post('newPwd')),0,20);
+                $res = \Yii::$app->db->createCommand()
+                    ->update('{{%user}}',['password'=>$newPwd],"user_id=$uid AND password='$oldPwd'")
+                    ->execute();
+                return $res ? 'true' : 'false';
+            default:
+                return 'false';
+
+        }
+
     }
 
     /*
@@ -180,13 +242,14 @@ class PersonalController extends CommonController
         return $this->render('message');
     }
 
-	/*
+    /*
      * 我的预售
      */
     public function actionMy_presell()
     {
         return $this->render('my_presell');
     }
+
 	
 	/*
      * 我的预售
@@ -197,15 +260,16 @@ class PersonalController extends CommonController
 		$coupon_list = $model->couponAll($_SESSION['user_id']);
         return $this->render('my_coupon',['coupon_list'=>$coupon_list]);
     }
-	
-	/*
+
+
+    /*
      * 我的收货地址
      */
     public function actionMy_address()
     {
         return $this->render('my_address');
     }
-	
+
     /*
      * 我的积分
      */
@@ -284,7 +348,7 @@ class PersonalController extends CommonController
      */
     public function actionBack_password()
     {
-        $this->layout = '/proscenium' ;
+        $this->layout = '/proscenium';
         return $this->render('forgetPwd');
     }
 
@@ -297,52 +361,51 @@ class PersonalController extends CommonController
     {
         $request = Yii::$app->request;
         $email = $request->post('email');
-        if (!preg_match_all('/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/', $email)) return json_encode(['code'=>0,'message'=>'请填写正确邮箱地址!']);
+        if (!preg_match_all('/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/', $email)) return json_encode(['code' => 0, 'message' => '请填写正确邮箱地址!']);
 
         $userArr = (new \yii\db\Query())
             ->select([])->from('{{%user}}')
             ->where('email=:email', [':email' => $email])->one();
-        if (!$userArr) return json_encode(['code'=>1,'message'=>'该邮箱地址不存在!']);
+        if (!$userArr) return json_encode(['code' => 1, 'message' => '该邮箱地址不存在!']);
 
         // 防止乱刷，一分钟只允许正确请求3次
         $cookies = Yii::$app->request->cookies;
         $cookie = Yii::$app->response->cookies;
-        if(!$cookies->has('num')){
+        if (!$cookies->has('num')) {
             $time = time();
             $cookie->add(new \yii\web\Cookie([
                 'name' => 'num',
                 'value' => 1,
-                'expire'=>$time+60
+                'expire' => $time + 60
             ]));
             $cookie->add(new \yii\web\Cookie([
                 'name' => 'time',
                 'value' => $time,
-                'expire'=>$time+60
+                'expire' => $time + 60
             ]));
         } else {
             $num = $cookies->get('num')->value;
             $time = $cookies->get('time')->value;
-            $t = 60-(time()-$time);
-            if($num > 2) return json_encode(['code'=>4,'message'=>$t]);
+            $t = 60 - (time() - $time);
+            if ($num > 2) return json_encode(['code' => 4, 'message' => $t]);
 
             $cookie->add(new \yii\web\Cookie([
                 'name' => 'num',
-                'value' => $num+1,
-                'expire'=>$time+60
+                'value' => $num + 1,
+                'expire' => $time + 60
             ]));
         }
 
         //发送件进性修改密码
         $nowTime = time();
-        $endTime = $nowTime+30*60;
-        
-        $url = 'http://'.$_SERVER['SERVER_NAME'].'/OrderCentre.php?r=home/personal/back_pwd_html&n='.$nowTime.'&e='.$endTime.'&k='.($nowTime+3258);
+        $endTime = $nowTime + 30 * 60;
+        $url = 'http://' . $_SERVER['SERVER_NAME'] . '/index.php?r=home/personal/back_pwd_html&n=' . $nowTime . '&e=' . $endTime . '&k=' . ($nowTime + 3258);
         $content = '<h3>密码找回申请</h3><p>您收到这封电子邮件是因为您 (也可能是某人冒充您的名义)申请了一个找回密码的请求。假如这不是您本人所申请, 或者您曾持续收到这类的信件骚扰,请您尽快联络管理员。您可以点击如下链接重新设置您的密码。本链接30分钟有效</p>
         <a href="' . $url . '">立即找回</a>
         <p>如果点击无效，请把上面的连接拷贝到浏览器的地址栏中</p>';
 
-        $res = $this->sendEmail(['email'=>$email,'content'=>$content]);
-        return $res ? json_encode(['code'=>2,'message'=>'邮件已发送至你的邮箱，请及时查看']) : json_encode(['code'=>3,'message'=>'邮件发送失败，请重新发送！']);
+        $res = $this->sendEmail(['email' => $email, 'content' => $content]);
+        return $res ? json_encode(['code' => 2, 'message' => '邮件已发送至你的邮箱，请及时查看']) : json_encode(['code' => 3, 'message' => '邮件发送失败，请重新发送！']);
     }
 
     /**
@@ -359,7 +422,7 @@ class PersonalController extends CommonController
         $url = \yii\helpers\Url::to(['home/personal/back_password']);
 
         //判断连接是否超过半小时
-         if(($nowTime-$startTime)>60*30 | $nowTime > $endTime) return '该链接已失效<a href="'.$url.'">重新获取</a>';
+        if (($nowTime - $startTime) > 60 * 30 | $nowTime > $endTime) return '该链接已失效<a href="' . $url . '">重新获取</a>';
 
         return $this->render('back_pwd_html');
 
@@ -375,11 +438,12 @@ class PersonalController extends CommonController
         $request = Yii::$app->request;
         $user = addslashes($request->post('user'));
         $pwd = addslashes($request->post('pwd'));
-        $pwd = substr(md5($pwd),0,20);
+        if(strlen($pwd) < 6 | strlen($pwd) > 15) return '密码长度必须为6-15位';
+        $pwd = substr(md5($pwd), 0, 20);
         $connection = \Yii::$app->db;
 
         return $connection->createCommand()
-            ->update('{{%user}}', ['password' => $pwd], 'username = "'.$user .'"')
+            ->update('{{%user}}', ['password' => $pwd], 'username = "' . $user . '"')
             ->execute();
 
     }
@@ -395,18 +459,18 @@ class PersonalController extends CommonController
         $type = $request->post('type');
         $val = addslashes($request->post('val'));
 
-        if($type == 1 ){
+        if ($type == 1) {
             //验证用户名
             $user = (new \yii\db\Query())
                 ->select([])->from('{{%user}}')
                 ->where('username=:username', [':username' => $val])->one();
-            return $user ? 'true' : 'false' ;
+            return $user ? 'true' : 'false';
 
-        } elseif($type == 2) {
+        } elseif ($type == 2) {
             //验证验证码
             $cookies = Yii::$app->request->cookies;
-            if(!$cookies->has('captcha')) return 'false';
-            return ($cookies->get('captcha')->value == $val) ? 'true' : 'false' ;
+            if (!$cookies->has('captcha')) return 'false';
+            return ($cookies->get('captcha')->value == $val) ? 'true' : 'false';
         }
         return 'false';
     }
@@ -420,26 +484,26 @@ class PersonalController extends CommonController
     {
         $request = Yii::$app->request;
         $tel = $request->post('tel');
-        if (!preg_match_all('/^1[3|4|5|7|8]\d{9}$/', $tel)) return json_encode(['code'=>0,'message'=>'手机号错误!']);
+        if (!preg_match_all('/^1[3|4|5|7|8]\d{9}$/', $tel)) return json_encode(['code' => 0, 'message' => '手机号错误!']);
         //防止重复刷
         $cookies = Yii::$app->request->cookies;
-        if($cookies->has('captcha')) return json_encode(['code'=>0,'message'=>'您已获取，请稍后再试']);
+        if ($cookies->has('captcha')) return json_encode(['code' => 0, 'message' => '您已获取，请稍后再试']);
 
         $num = $this->Random(6);
-        $target    = "http://106.ihuyi.cn/webservice/sms.php?method=Submit";
-        $post_data = "account=cf_fwq103&password=d82d57fe3e4a077f5661d24795b0e936&mobile=".$tel."&content=".rawurlencode("您的验证码是：".$num."。请不要把验证码泄露给其他人。");
-        $gets =  $this->xml_to_array($this->Post($post_data, $target));
+        $target = "http://106.ihuyi.cn/webservice/sms.php?method=Submit";
+        $post_data = "account=cf_fwq103&password=d82d57fe3e4a077f5661d24795b0e936&mobile=" . $tel . "&content=" . rawurlencode("您的验证码是：" . $num . "。请不要把验证码泄露给其他人。");
+        $gets = $this->xml_to_array($this->Post($post_data, $target));
 
-        if (($gets['SubmitResult']['code']==2)){
+        if (($gets['SubmitResult']['code'] == 2)) {
             $cookie = Yii::$app->response->cookies;
             $cookie->add(new \yii\web\Cookie([
                 'name' => 'captcha',
                 'value' => $num,
-                'expire'=>time()+60*3
+                'expire' => time() + 60 * 3
             ]));
-            return json_encode(['code'=>1,'message'=>'验证码已发送至您的手机，3分钟内有效，请注意查收']);
+            return json_encode(['code' => 1, 'message' => '验证码已发送至您的手机，3分钟内有效，请注意查收']);
         } else {
-            return json_encode(['code'=>0,'message'=>'验证码发送失败']);
+            return json_encode(['code' => 0, 'message' => '验证码发送失败']);
         }
     }
 
@@ -451,7 +515,7 @@ class PersonalController extends CommonController
      * @param $url
      * @return mixed
      */
-    private function Post($curlPost,$url)
+    private function Post($curlPost, $url)
     {
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
@@ -473,14 +537,14 @@ class PersonalController extends CommonController
     private function xml_to_array($xml)
     {
         $reg = "/<(\w+)[^>]*>([\\x00-\\xFF]*)<\\/\\1>/";
-        if(preg_match_all($reg, $xml, $matches)){
+        if (preg_match_all($reg, $xml, $matches)) {
             $count = count($matches[0]);
-            for($i = 0; $i < $count; $i++){
-                $subxml= $matches[2][$i];
+            for ($i = 0; $i < $count; $i++) {
+                $subxml = $matches[2][$i];
                 $key = $matches[1][$i];
-                if(preg_match( $reg, $subxml )){
-                    $arr[$key] = $this->xml_to_array( $subxml );
-                }else{
+                if (preg_match($reg, $subxml)) {
+                    $arr[$key] = $this->xml_to_array($subxml);
+                } else {
                     $arr[$key] = $subxml;
                 }
             }
@@ -494,16 +558,16 @@ class PersonalController extends CommonController
      * @param bool $numeric 是否需要字母
      * @return string
      */
-    private function Random($length , $numeric = false)
+    private function Random($length, $numeric = false)
     {
         PHP_VERSION < '4.2.0' && mt_srand((double)microtime() * 1000000);
-        if(!$numeric) {
-            $hash = sprintf('%0'.$length.'d', mt_rand(0, pow(10, $length) - 1));
+        if (!$numeric) {
+            $hash = sprintf('%0' . $length . 'd', mt_rand(0, pow(10, $length) - 1));
         } else {
             $hash = '';
             $chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789abcdefghjkmnpqrstuvwxyz';
             $max = strlen($chars) - 1;
-            for($i = 0; $i < $length; $i++) {
+            for ($i = 0; $i < $length; $i++) {
                 $hash .= $chars[mt_rand(0, $max)];
             }
         }
