@@ -104,7 +104,7 @@ class GoodsShowController extends CommonController
 			$sql = 'SELECT sum(num*price) FROM `mb_cart` where user_id=1';
 			$priceSum = \Yii::$app->db->createCommand($sql)->queryAll();
 			$priceSum = $priceSum[0]['sum(num*price)'];
-			
+
 		return 	$this->render('car',compact('cartShow','priceSum'));
     }
 

@@ -9,6 +9,7 @@ use app\models\Order;  //模型层
 use app\models\Goods;  //模型层
 use app\models\Cart;  //模型层
 use app\lib\Pay;
+
 class OrderController extends CommonController
 {
 
@@ -21,11 +22,43 @@ class OrderController extends CommonController
     {
         $session = Yii::$app->session;
         $id = $session->get('user_id');
-        $data =   (new \yii\db\Query())->from('mb_cart')->where(array("user_id"=>$id))->all();
-        //把购物车商品存入session
-        $session->set('car',json_encode($data));
+        if($id){
+            $data =   (new \yii\db\Query())->from('mb_cart')->where(array("user_id"=>$id))->all();
+            //把购物车商品存入session
+            $session->set('car',json_encode($data));
+        }else{
+            $data = $this->actionAddcookie();
+        }
+
         return $this->render('carList',array('data'=>$data));
     }
+
+
+    //cookie值加入购物车
+    public function actionAddcookie()
+    {
+        $arr = array();
+        $Cart = new \app\lib\cart();
+        $res = $Cart->checkCart();
+        if($res){
+            $goods_desc = $Cart->CartView();
+            foreach ($goods_desc[0] as $key => $value){
+                $data[$key] = array_column($goods_desc,$key);
+            }
+            foreach ($data as $key => $value) {
+                $arr[$key]['goods_id'] = $value[0];
+                $arr[$key]['goods_name'] = $value[1];
+                $arr[$key]['goods_sn'] = rand(1000,999999);
+                $arr[$key]['prices'] = $value[3]*$value[5];
+                $arr[$key]['price'] = $value[3];
+                $arr[$key]['num'] = $value[5];
+                $arr[$key]['type_attr_id'] = rand(1,9);
+            }
+        }
+        
+        return $arr;
+    }
+
     /*
      *订单页面（先购物车再到订单）
      */
