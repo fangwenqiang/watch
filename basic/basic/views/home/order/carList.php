@@ -23,7 +23,7 @@ use yii\helpers\Url;
 
    </style>
 
-    <div class="w750 mt30 fr" style="margin-right: 200px;" ">
+    <div class="w750 mt30 fr" style='margin-right:624px;'>
         <ul class="m_0_23 inline w464 fr li_left li">
             <li class="w14 h14 circle bp_0-36"></li>
             <li class="w136 h8 mt6 bt_2_f1f">&nbsp;</li>
@@ -61,7 +61,7 @@ use yii\helpers\Url;
 
                         <ul class="bt_1_eae bb_1_fff" id="goods_line_548546"></ul>
                         <ul class="999 f13 h120 li_left" id="goods_list_548546">
-                            <li><input type="checkbox" class="car_goods" value="<?php echo $val['cart_id']?>"></li>
+                            <li><input type="checkbox" class="car_goods" value="<?php if(!empty(\Yii::$app->session->get('user_id'))){echo $val['cart_id'];}?>"></li>
                             <li class="w510 tl pl20">
                                 <a href="#" target="_blank" class="fl">
                                     <img src="images/3412_183_24_30_27_27885.jpg" width="100px" height="100px" class="m_10_20_10_0" alt="">
@@ -97,7 +97,11 @@ use yii\helpers\Url;
                     <div class="mt20 tr">
                         <input type="hidden" id="car" value="" name="car" >
                         <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
+                        <?php if(!empty(\Yii::$app->session->get('user_id'))){?>
                         <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="确认购物车" />
+                    	<?php }else{?>
+                        <input  type="button" class="btnd00 w146 h40 f16 bold" id='nologin'  value="确认购物车" />
+                    	<?php } ?>
                     </div>
                 </form>
 
@@ -117,5 +121,8 @@ use yii\helpers\Url;
         });
     });
 
+    $("#nologin").click(function(){
+    	alert('请先登录！')
+    })
 
 </script>
