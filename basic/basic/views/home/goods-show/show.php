@@ -368,7 +368,7 @@ $('.changered').on('click', function() {
     <div style='margin-top:260px;margin-left:70px;'>
     <a href="javascript:" goods_id="<?=$goods['g_id']?>" id='immediatelyBuy'><img src="Images/1.png" alt="" ></a>
     <a href="javascript:" id='stagesBuy' style='display:none'><img src="Images/fenqi.png" alt=""></a>
-    <img src="Images/2.png"  id="cart" alt="" style='margin-left:6px;cursor:pointer'>
+    <img src="Images/2.png"  id="cart"  goods_id="<?=$goods['g_id']?>" alt="" style='margin-left:6px;cursor:pointer'>
     </div> 
     <input type="hidden" id="goods_id" value=<?=$goods['g_id'] ?>>
     <script>// 判断是否登陆，如果登陆了就添加，没有就提示登陆
@@ -426,19 +426,16 @@ $('.add').on('click', function() {
 	}
 });
 
+//添加购物车
 $('#cart').on('click', function() {
-var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
+
 var goods_num = getNum();
-if(!user_id) {
-	alert('请先登陆！');
-} else {
-	$.get("<?= Url::toRoute('home/goods-show/cart') ?>", {
-	'goods_num': goods_num
-},
-function(data) {
+var goods_id = $(this).attr('goods_id');
+
+$.get("<?= Url::toRoute('home/goods-show/cart') ?>",{'goods_id':goods_id,'type_attr_id':1,'goods_num': goods_num},function(data){
 	alert(data)
 });
-}
+
 
 });</script>
     <div class="buy"><div id="clt_msg"></div>

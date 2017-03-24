@@ -12,6 +12,7 @@ use yii\filters\VerbFilter;
 //use yii\widgets\ActiveForm;
 use yii\bootstrap\ActiveForm;
 use app\models\Nav;  //模型层
+use app\lib\cart;//基于cookie的自定义类
 /*
  * 前台登录注册
  * */
@@ -99,6 +100,7 @@ class LoginController extends CommonController
         $model = new User();
         $where['username'] = $user;
         $data = $model->select($where);
+
         if (empty($data)) {
             //判断账号是否存在
             return 1;
@@ -115,15 +117,55 @@ class LoginController extends CommonController
                     $session = \Yii::$app->session;
                     $session->set('user_name', $user);
                     $session->set('user_id', $data[0]['user_id']);
+                    //判断cookie中是否有购物车商品
+                    $res = $this->actionAddcookie($data[0]['user_id']);
+
                     return 0;
                 }
             }
         }
     }
 
+
+    //cookie值加入购物车
+    public function actionAddcookie($user_id)
+    {
+        $Cart = new cart();
+        $res = $Cart->checkCart();
+        if($res){
+            $goods_desc = $Cart->CartView();
+            foreach ($goods_desc[0] as $key => $value){
+                $data[$key] = array_column($goods_desc,$key);
+            }
+            // var_dump($data);die;
+            foreach ($data as $key => $value) {
+                $cart_desc = \Yii::$app->db->createCommand("select * from mb_cart where goods_id=".$key." and user_id=".$user_id)->queryAll();
+                if(empty($cart_desc)){
+                    $arr['goods_id'] = $value[0];
+                    $arr['goods_name'] = $value[1];
+                    $arr['goods_sn'] = rand(1000,999999);
+                    $arr['prices'] = $value[3]*$value[5];
+                    $arr['price'] = $value[3];
+                    $arr['num'] = $value[5];
+                    $arr['user_id'] = $user_id;
+                    $arr['type_attr_id'] = rand(1,9);
+                    $res = \Yii::$app->db->createCommand()->insert('mb_cart',$arr)->execute(); 
+                }else{
+                    $update_value = ['num'=>$cart_desc[0]['num']+$value[5],'prices'=>($cart_desc[0]['num']+$value[5])*$cart_desc[0]['price']];
+                    $res=\Yii::$app->db->createCommand()->update('mb_cart',$update_value,['goods_id'=>$value[0],'user_id'=>$user_id])->execute(); 
+                }
+            }
+
+            //清空cookie
+           $Cart->RemoveAll();
+        }
+
+        return $res;
+    }
+
+
     //退出登录
-    public
-    function actionLogout()
+    public function actionLogout()
     {
         $session = \Yii::$app->session;
         $session->remove('user_name');
@@ -135,8 +177,7 @@ class LoginController extends CommonController
     /**
      * 页面跳转提示
      */
-    public
-    function actionMsg()
+    public function actionMsg()
     {
         $layout = '/background';
         $request = \Yii::$app->request;
@@ -147,8 +188,7 @@ class LoginController extends CommonController
     /**
      * 判断是否登录(ajax)
      */
-    public
-    function actionLogin_status()
+    public function actionLogin_status()
     {
         $session = \Yii::$app->session;
         $user = $session->get('user_name');

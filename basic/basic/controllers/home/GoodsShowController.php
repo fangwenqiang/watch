@@ -9,7 +9,7 @@ use app\models\Comment;
 use yii\web\NotFoundHttpException;
 use app\model\Goodstype;
 use app\models\gongyang\Goods;
-
+use app\lib\cart;//基于cookie的自定义类
 /*
  * 前台商品展示控制器
  * 0227	龚洋
@@ -211,21 +211,45 @@ class GoodsShowController extends CommonController
 
 	public function actionCart()
 	{
-		$this->start();
-		if (empty(self::$startSet['session']->get('user_id'))) {
-			echo  "请先登陆";
+		$user_id =\Yii::$app->session->get('user_id');
+		$request = \Yii::$app->request;
+		$goods_id = $request->get('goods_id');   
+		$goods_num = $request->get('goods_num');   
+		$type_attr_id = $request->get('type_attr_id');   
+		//查询商品信息
+		$goods_desc = \Yii::$app->db->createCommand("select * from mb_goods where g_id=".$goods_id)->queryAll()[0]; 
+
+		//判断用户是否登录
+		if($user_id){
+			//判斷购物车中是否已有
+			$cart_desc = \Yii::$app->db->createCommand("select * from mb_cart where goods_id=".$goods_id." and user_id=".$user_id)->queryAll(); 
+			if(empty($cart_desc)){
+				$data['goods_id'] = $goods_id;
+				$data['goods_name'] = $goods_desc['goods_name'];
+				$data['goods_sn'] = $goods_desc['goods_sn'];
+				$data['prices'] = intval($goods_desc['shop_price'])*intval($goods_num);
+				$data['price'] = $goods_desc['shop_price'];
+				$data['num'] = $goods_num;
+				$data['user_id'] = $user_id;
+				$data['type_attr_id'] = $type_attr_id;
+				$res = \Yii::$app->db->createCommand()->insert('mb_cart',$data)->execute(); 
+			}else{
+				$value = ['num'=>$cart_desc[0]['num']+$goods_num,'prices'=>($cart_desc[0]['num']+$goods_num)*$cart_desc[0]['price']];
+				$res=\Yii::$app->db->createCommand()->update('mb_cart',$value,['goods_id'=>$goods_id,'user_id'=>$user_id])->execute(); 
+			}
+		}else{
+			//这是cookie购物车类
+			$Cart = new cart();
+			$res = $Cart->addCart($goods_id,$goods_desc['goods_name'],intval($goods_desc['market_price']),intval($goods_desc['shop_price']),$goods_desc['promote_price'],$goods_num);
 		}
-		$cartInsert['goods_sn'] = self::$startSet['session']->get('goods_sn');
-		$cartInsert['price'] = self::$startSet['session']->get('group_price');
-		$cartInsert['user_id'] = self::$startSet['session']->get('user_id');
-		$cartInsert['num']	= self::$startSet['request']->get('goods_num');
-		$res = \Yii::$app->db->createCommand()->insert('mb_cart',$cartInsert)->execute();
-		if ($res) {
+		if($res) {
 				echo '加入购物车成功';
 		}else{
 				echo '请登陆后试试';
 		}
 	}
+
+
 	/*
      * 商品评论
      */
@@ -233,6 +257,7 @@ class GoodsShowController extends CommonController
     {
         $goods_id = \Yii::$app->request->get('goods_id');
         $order_id = \Yii::$app->request->get('order_id');
+
 		return $this->render('goods_comment',['goods_id'=>$goods_id,'order_id'=>$order_id]);
     }
 
