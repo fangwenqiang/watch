@@ -105,7 +105,7 @@ use \yii\widgets\LinkPager;
                     $('#msg').html("密码错误")
                 } else if (msg == 3) {
                     $('#msg').html("您的账号因违规操作已被封禁,暂无法登录")
-                } else {
+                } else if(msg==0){  
                     $('#msg').html("登录成功")
                     location.href = "<?=Url::to(['home/index']) ?>";
                 }
