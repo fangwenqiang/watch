@@ -98,11 +98,12 @@ use yii\helpers\Url;
              $prices = 0;
              foreach($data as $key=>$val){  ?>
                  <div class="bgf6f br10">
-                     <ul class="c999 f13 h40 mt10 li_left">
-                         <li class="w510 tl pl20">商品</li>
-                         <li class="w120 tc">单价</li>
-                         <li class="w120 tc">数量</li>
-                         <li class="w120 tc">小计</li>
+                     <ul class="c999 f13 h40 mt10 li_left" style='width:2000px'>
+                         <li class="w510 tl pl20">分期商品</li>
+                         <li class="w90 tc">单价</li>
+                         <li class="w90 tc">数量</li>
+                         <li class="w90 tc">分期期数</li>
+                         <li class="w100 tc" style='margin-right:120px;'>月供</li>
                      </ul>
 
                      <ul class="bt_1_eae bb_1_fff" id="goods_line_548546"></ul>
@@ -111,18 +112,21 @@ use yii\helpers\Url;
                              <a href="#" target="_blank" class="fl">
                                  <img src="images/3412_183_24_30_27_27885.jpg" width="100px" height="100px" class="m_10_20_10_0" alt="">
                              </a>
-                             <a href="#" target="_blank">
+                             <a href="<?=Url::toRoute(['home/goods-show/show', 'id' => $val['g_id']]);?>" target="_blank">
                                  <span class="w390 bold c333 fl h20 mt35"><?php echo $val['goods_name']?></span>
                              </a>
                          </li>
-                         <li class="w120 tc">
+                         <li class="w90 tc">
                              <span class="bold ccf0 f16">￥<?php echo $val['price']?></span>
                          </li>
-                         <li class="w120 tc">
+                         <li class="w90 tc">
                              <span class="btne3d w18 h22 inbl re_t0-l5 ie-t1_m50 ie_mi" oprtype="add" oprid="548546"><?php echo $val['num']?></span>
                          </li>
-                         <li class="w120 tc">
-                             <span class="btne3d" oprtype="add" oprid="548546">￥<?php echo $val['price']*$val['num']?></span>
+                         <li class="w90 tc">
+                             <span class="bold ccf0" oprtype="add" oprid="548546">6个月</span>
+                         </li>
+                         <li class="w100 tc">
+                             <span class="bold ccf0 f16">￥203.63</span>
                          </li>
                      </ul>
 
@@ -178,16 +182,16 @@ use yii\helpers\Url;
              } ?>
 
             <div class="w930 m0a">
-        <!--         <div class="fl">
+         <!--        <div class="fl">
                     <div class="mt50">
                         <a href="javascript:history.go(-1)" style='margin-top:8px' class="btnd00 w146 h40 f16 bold fl tc" >返回修改</a>
                     </div>
                 </div> -->
                 <div class="fr">
-                    <div class="tc cd00 mt20">
+     <!--                <div class="tc cd00 mt20">
                         <span class="f13 bold">商品总额：￥</span>
                         <span class="f20" id="goods_amount"><?php echo $prices?></span>
-                    </div>
+                    </div> -->
 
                     <div class="mt20 tr">
                             <div class="mt20 tr">
