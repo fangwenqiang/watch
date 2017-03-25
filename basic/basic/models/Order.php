@@ -10,6 +10,7 @@ namespace app\models;
 use Yii;
 use yii\db\ActiveRecord;
 use app\models\Goods;  //模型层
+use app\lib\periods;
 
 class Order extends ActiveRecord
 {
@@ -85,8 +86,8 @@ class Order extends ActiveRecord
 
     }
 
-    //处理订单信息
-    public function OrderInserts($address)
+    //处理订单信息($stages分期参数)
+    public function OrderInserts($address,$stages='')
     {
         $user_id = 1;
         $addressArr = (new \yii\db\Query())->from('mb_address')->where("address_id=$address")->one();
@@ -107,6 +108,14 @@ class Order extends ActiveRecord
         $order['address'] = $addressArr['detail_address'];
         $order['zipcode'] = $addressArr['zipcode'];
         $order['mobile'] = $addressArr['tel'];
+        if(!empty($stages))
+        {
+            $periods = new periods;
+            $monthly_money = $periods->assignStages($stages['goods_price'],$stages['periods']);
+            $order['stages_status'] = $stages['status'];
+            $order['stages_periods'] = $stages['periods'];
+            $order['monthly_money'] = $monthly_money['terminally_price'];
+        }
 
         \Yii::$app->db ->createCommand() ->insert('mb_order_info',$order) ->execute();
 

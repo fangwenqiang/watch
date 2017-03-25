@@ -9,6 +9,7 @@ use app\models\Order;  //模型层
 use app\models\Goods;  //模型层
 use app\models\Cart;  //模型层
 use app\lib\Pay;
+use app\lib\periods;
 
 class OrderController extends CommonController
 {
@@ -126,19 +127,39 @@ class OrderController extends CommonController
         $goods_data[0]['price'] =  $goods_data[0]['shop_price'];
         $goods_data[0]['num'] =  1;
 
+        //查询期数数据
+        $Periods = new periods;
+        $periods_data = $Periods->assignStages($goods_data[0]['shop_price'],$periods);
 
         //查询快递方式
         $express =  (new \yii\db\Query())->from('mb_express')->all();
 
         return $this->render('Orderperiods',[
             'data'=>$goods_data,
-            'express' => $express
+            'express' => $express,
+            'periods'=>$periods,
+            'periods_data'=>$periods_data
         ]);
     }
 
 
+    /**
+    * 验证支付密码
+    * 
+    * @param 
+    * @author 
+    */
+    public function actionVerifypwd()
+    {
+        $request = \Yii::$app->request;
+        $pwd = $request->post('pwd');
+
+        return 1;
+    }
+
+
     /*
-     * 提价订单
+     * 提交订单
      */
     public function actionSubmit_order()
     {
@@ -151,8 +172,15 @@ class OrderController extends CommonController
         if(empty($post)){
             return $this->redirect(['home/order/car_list']);
         }
-//        $post = json_decode(file_get_contents('2.txt'),true);
+
         unset($post['_csrf']);
+
+        if(isset($post['stages'])){
+            //查询商品信息
+            $post['stages']['goods_price'] = \Yii::$app->db->createCommand("select shop_price from mb_goods where g_id=".$post['g_id'])->queryAll()[0]['shop_price']; 
+        }else{
+            $post['stages'] = '';
+        }
         //开启事务
         $connection=\Yii::$app->db;
         $transaction = $connection->beginTransaction();
@@ -160,7 +188,7 @@ class OrderController extends CommonController
         try {
 
             //处理订单 -- 订单入库
-            $submitPut = $order_model->OrderInserts($post['address']);
+            $submitPut = $order_model->OrderInserts($post['address'],$post['stages']);
             if(!empty($post['car']))
             {
                  //处理订单 -- 减少库存
@@ -181,7 +209,11 @@ class OrderController extends CommonController
             // ... 执行其他 SQL 语句 ...
             $transaction->commit();
             $order_sn = $order_model->SelectOrder(array('order_id'=>$submitPut),'order_sn');
-            return $this->redirect(['home/order/pay_order','order_sn'=>"$order_sn"]);
+            if(isset($post['stages'])){
+                return $this->qt_success('/home/watch/speciallist','恭喜您，成功购买！');
+            }else{
+                return $this->redirect(['home/order/pay_order','order_sn'=>"$order_sn"]);
+            }
         } catch(Exception $e) {
             $transaction->rollBack();
             return $this->qt_error('下单失败,请重新下单，如多次失败，请联系人工客服');
