@@ -15,8 +15,8 @@ use yii\helpers\Url;
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
 
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>-->
     <!--    BEGIN弹窗效果-->
     <link href="dist/sweetalert.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="dist/sweetalert-dev.js"></script>
@@ -81,6 +81,12 @@ use yii\helpers\Url;
                 <li class="gao"><a href="javascript:void(0)"><i class="mobile"></i><em>首页设置</em></a></li>
                 <ul style="display:none">
                     <li><a href="<?=\yii\helpers\Url::to(['admin/carousel/index'])?>"><i class="article"></i><em>轮播图</em></a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="gao"><a href="javascript:void(0)"><i class="manager"></i><em>优惠券管理</em></a></li>
+                <ul style="display:none">
+                    <li><a href="<?=url::to(['admin/coupon/list'])?>"><i class="nav"></i><em>优惠券列表</em></a></li>
                 </ul>
             </ul>
             <ul>

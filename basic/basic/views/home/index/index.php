@@ -176,18 +176,11 @@ use yii\helpers\Url;
             </div>
         </div>
         <div class="mLnk">
+
         </div>
     </div>
 </div>
 </div>
-<style>
-    .lihove{
-        background-color: #fff;
-        border: 1px solid #d9d9d9;
-        box-shadow: 4px 4px 15px #c6c6c6;
-        box-sizing: border-box;
-    }
-</style>
 <script type="text/javascript">
 
     //根据条件获取商品
@@ -215,16 +208,7 @@ use yii\helpers\Url;
            }
         });
     },function(){
-    });
-
-    $(function(){
-        $(document).on('mouseover','#rankTwo li,#rankOne li,#rankThree li',function(){
-            $(this).addClass('lihove');
-        });
-        $(document).on('mouseout','#rankTwo li,#rankOne li,#rankThree li',function(){
-            $(this).removeClass('lihove');
-        });
-    });
+    })
 
 </script>
 
