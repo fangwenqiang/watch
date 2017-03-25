@@ -115,6 +115,29 @@ class OrderController extends CommonController
 
 
     /*
+     *订单页面（适用分期购买）
+     */
+    public function actionOrder_stages()
+    {
+        $request = \Yii::$app->request;
+        $g_id = $request->get('g_id');
+        $periods = $request->get('periods');
+        $goods_data = Goods::find()->where(['g_id'=>$g_id])->asArray()->all();
+        $goods_data[0]['price'] =  $goods_data[0]['shop_price'];
+        $goods_data[0]['num'] =  1;
+
+
+        //查询快递方式
+        $express =  (new \yii\db\Query())->from('mb_express')->all();
+
+        return $this->render('Orderperiods',[
+            'data'=>$goods_data,
+            'express' => $express
+        ]);
+    }
+
+
+    /*
      * 提价订单
      */
     public function actionSubmit_order()
