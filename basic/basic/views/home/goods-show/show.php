@@ -289,7 +289,7 @@ $('.changered').on('click', function() {
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
-            <strong>680.63</strong>
+            <strong>280.63</strong>
             x3期
             </span>
             <br>
@@ -302,7 +302,7 @@ $('.changered').on('click', function() {
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
-            <strong>680.63</strong>
+            <strong>320.63</strong>
             x6期
             </span>
             <br>
@@ -315,7 +315,7 @@ $('.changered').on('click', function() {
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
-            <strong>680.63</strong>
+            <strong>380.23</strong>
             x9期
             </span>
             <br>
@@ -328,7 +328,7 @@ $('.changered').on('click', function() {
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
-            <strong>680.63</strong>
+            <strong>420.13</strong>
             x12期
             </span>
             <br>
@@ -341,7 +341,7 @@ $('.changered').on('click', function() {
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
-            <strong>680.63</strong>
+            <strong>450.83</strong>
             x15期
             </span>
             <br>
@@ -354,7 +354,7 @@ $('.changered').on('click', function() {
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
-            <strong>680.63</strong>
+            <strong>480.63</strong>
             x18期
             </span>
             <br>
