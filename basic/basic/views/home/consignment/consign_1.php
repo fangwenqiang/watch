@@ -10,7 +10,7 @@ use \yii\widgets\LinkPager;
     <div class="jimai_slider">
         <div class="mtsBanner" id="mtsBanner">
             <ul class="bannerWrap">
-                <img src="Images/banner2.jpg" />
+                <img src="images/banner2.jpg" />
             </ul>
         </div>
     </div>
