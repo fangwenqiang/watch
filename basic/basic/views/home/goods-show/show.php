@@ -284,7 +284,7 @@ $('.changered').on('click', function() {
     <div class="sa s13 w100 h21" style='margin-top:20px;'>
     <span class="sl" style='float:left'>分期</span>
     <ul class="sa s13 w100 h21 tm-clear" >
-           <li class='stages nocheck'>
+           <li class='stages nocheck' num='1'>
         <span class="sr bn" style='margin-left:8px;'>
             <span class="j-content">
             <span class="tm-msg">
@@ -297,7 +297,7 @@ $('.changered').on('click', function() {
             </span>
         </span>
         </li>
-             <li class='stages nocheck'>
+             <li class='stages nocheck' num='1'>
         <span class="sr bn" style='margin-left:8px;'>
             <span class="j-content">
             <span class="tm-msg">
@@ -310,7 +310,7 @@ $('.changered').on('click', function() {
             </span>
         </span>
         </li>
-                 <li class='stages nocheck'>
+                 <li class='stages nocheck' num='1'>
         <span class="sr bn" style='margin-left:8px;'>
             <span class="j-content">
             <span class="tm-msg">
@@ -323,7 +323,7 @@ $('.changered').on('click', function() {
             </span>
         </span>
         </li>
-                 <li class='stages nocheck'>
+                 <li class='stages nocheck' num='1'>
         <span class="sr bn" style='margin-left:8px;'>
             <span class="j-content">
             <span class="tm-msg">
@@ -336,7 +336,7 @@ $('.changered').on('click', function() {
             </span>
         </span>
         </li>
-                 <li class='stages nocheck'>
+                 <li class='stages nocheck' num='1'>
         <span class="sr bn" style='margin-left:8px;'>
             <span class="j-content">
             <span class="tm-msg">
@@ -349,7 +349,7 @@ $('.changered').on('click', function() {
             </span>
         </span>
         </li>
-                 <li class='stages nocheck'>
+                 <li class='stages nocheck' num='1'>
         <span class="sr bn" style='margin-left:8px;'>
             <span class="j-content">
             <span class="tm-msg">
@@ -374,12 +374,28 @@ $('.changered').on('click', function() {
     <script>// 判断是否登陆，如果登陆了就添加，没有就提示登陆
 //分期样式
 $(".stages").click(function(){
-    $(this).siblings().removeClass("check");
-    $(this).siblings().addClass("nocheck");
-    $(this).removeClass("nocheck");
-    $(this).addClass("check");
-    $("#stagesBuy").show();
-    $("#immediatelyBuy").hide();
+    var num = $(this).attr('num');
+    if(num==1)
+    {
+        $(this).siblings().removeClass("check");
+        $(this).siblings().addClass("nocheck");
+        $(this).siblings().attr("num",1);
+        $(this).removeClass("nocheck");
+        $(this).addClass("check");
+        $("#stagesBuy").show();
+        $("#immediatelyBuy").hide();
+        $(this).attr('num',0);
+    }
+    else
+    {
+        $(this).siblings().removeClass("check");
+        $(this).siblings().addClass("nocheck");
+        $(this).removeClass("check");
+        $(this).addClass("nocheck");
+        $("#stagesBuy").hide();
+        $("#immediatelyBuy").show();
+        $(this).attr('num',1);
+    }
 })
 
 //立即购买
