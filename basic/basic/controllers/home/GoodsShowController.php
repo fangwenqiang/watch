@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use app\model\Goodstype;
 use app\models\gongyang\Goods;
 use app\lib\cart;//基于cookie的自定义类
+use app\lib\periods;
 /*
  * 前台商品展示控制器
  * 0227	龚洋
@@ -144,7 +145,9 @@ class GoodsShowController extends CommonController
         }
         $comment = new Comment();
 		$comment_list=$comment->show($goodsId);
-
+    	
+    	$periods = new periods;
+    	$periods_data = $periods->compute($goods['shop_price']);
 
 		//查询该类商品所有属性
 		// $sql = 'select attr_id,attr_name,attr_values from mb_attribute where type_id = 4';
@@ -160,7 +163,7 @@ class GoodsShowController extends CommonController
 			$goods['describe'] = ['1'=> '暂时没有详细的商品信息'];
 		}
 		// print_r($attrArr);die;		
-		return $this->render('show',compact('goods','comment_list'));
+		return $this->render('show',compact('goods','comment_list','periods_data'));
 	}			
 
 	//获取组合的价格，后期加入商品id 筛选
