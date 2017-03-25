@@ -209,7 +209,7 @@ class OrderController extends CommonController
             // ... 执行其他 SQL 语句 ...
             $transaction->commit();
             $order_sn = $order_model->SelectOrder(array('order_id'=>$submitPut),'order_sn');
-            if(isset($post['stages'])){
+            if(!empty($post['stages'])){
                 return $this->qt_success('/home/watch/speciallist','恭喜您，成功购买！');
             }else{
                 return $this->redirect(['home/order/pay_order','order_sn'=>"$order_sn"]);
