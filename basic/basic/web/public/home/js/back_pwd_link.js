@@ -36,6 +36,10 @@ $(function () {
                     type: "error"
                 });
             } else if(msg.code == 2){
+                $('#btn_pwd').attr('disabled','true');
+                $('#btn_pwd').css('cursor','not-allowed');
+                i=30;
+                count = setInterval(go, 1000);
                 swal({
                     title: "太帅了",
                     text: msg.message,
