@@ -52,24 +52,24 @@ class Periods
     public function assignStages($prices,$periods)
     {
         $arr = array();
-        $arr['filed'] = array('goods_price'=>'商品总金额',
-            'repayment_amount'=>'商品+利息总金额',
-            'terminally_corpus'=>'每期本金',
-            'terminally_interests' => '每期利息',
-            'interest_rate' => '利率',
-            'terminally_serviceCharge'=>'每期服务费',
-            'terminally_price' => '每期还款金额'
-        );
+        // $arr['filed'] = array('goods_price'=>'商品总金额',
+        //     'repayment_amount'=>'商品+利息总金额',
+        //     'terminally_corpus'=>'每期本金',
+        //     'terminally_interests' => '每期利息',
+        //     'interest_rate' => '利率',
+        //     'terminally_serviceCharge'=>'每期服务费',
+        //     'terminally_price' => '每期还款金额'
+        // );
            $repayment_amount = $prices+$prices*$this->interestRate*$periods;  //商品+利息总金额
            $terminally_corpus =  $prices/$periods; //每期本金
            $terminally_interests =  $prices*$this->interestRate; //每期利息
            $terminally_serviceCharge =  ($prices/$periods)*$this->serviceCharge;  //利率
            $arr['goods_price'] = $prices;
            $arr['repayment_amount'] = $repayment_amount;
-           $arr['terminally_corpus'] = $terminally_corpus;
+           $arr['terminally_corpus'] = round($terminally_corpus,2);
            $arr['terminally_interests'] = $terminally_interests;
            $arr['interest_rate'] = $this->interestRate;
-           ($periods != 3)? $arr['terminally_serviceCharge'] = $terminally_serviceCharge:$arr['terminally_serviceCharge']=0;  //每期服务费
+           ($periods != 3)? $arr['terminally_serviceCharge'] = round($terminally_serviceCharge,2):$arr['terminally_serviceCharge']=0;  //每期服务费
            $arr['terminally_price'] = round($terminally_corpus + $terminally_interests + $terminally_serviceCharge,2);
         return $arr;
     }

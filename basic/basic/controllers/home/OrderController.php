@@ -164,6 +164,7 @@ class OrderController extends CommonController
     public function actionSubmit_order()
     {
         $request = \Yii::$app->request;
+        $user_id =  \Yii::$app->session->get('user_id');
         $connection=\Yii::$app->db;
         $order_model = new Order();
         $goods_model = new Goods();
@@ -174,10 +175,10 @@ class OrderController extends CommonController
         }
 
         unset($post['_csrf']);
-
+        $goods_desc = \Yii::$app->db->createCommand("select * from mb_goods where g_id=".$post['g_id'])->queryAll()[0]; 
         if(isset($post['stages'])){
             //查询商品信息
-            $post['stages']['goods_price'] = \Yii::$app->db->createCommand("select shop_price from mb_goods where g_id=".$post['g_id'])->queryAll()[0]['shop_price']; 
+            $post['stages']['goods_price'] = $goods_desc['shop_price'];
         }else{
             $post['stages'] = '';
         }
@@ -210,6 +211,37 @@ class OrderController extends CommonController
             $transaction->commit();
             $order_sn = $order_model->SelectOrder(array('order_id'=>$submitPut),'order_sn');
             if(!empty($post['stages'])){
+                $periods = new periods;
+                $periods_data = $periods->assignStages($goods_desc['shop_price'],$post['stages']['periods']);
+                $serve = $periods_data['terminally_serviceCharge']>0?'(含手续费)':'(不含手续费)';
+
+                //商品分期表数据
+                $data['g_id'] = $goods_desc['g_id'];
+                $data['user_id'] = $user_id;
+                $data['g_name'] = $goods_desc['goods_name'];
+                $data['periods_info'] = "¥ ".$periods_data['terminally_price'].'×'.$post['stages']['periods'].$serve;
+                $data['unpaid_periods'] = $post['stages']['periods'];
+
+                $db=\Yii::$app->db->createCommand()->insert('mb_periods',$data)->execute(); 
+                //还款记录表数据
+                if($db)
+                {
+                    //获取分期表的自增id
+                    $periods_id = \Yii::$app->db->getLastInsertID();
+                    $str = "INSERT INTO mb_refund(periods_id,goods_name,periods,money,abort_date,user_id) value";
+                    for ($i=1;$i<=$post['stages']['periods'];$i++) { 
+                        $str.= "(";
+                        $str.= $periods_id.',';
+                        $str.= "'".$goods_desc['goods_name']."',";
+                        $str.= $i.',';
+                        $str.= $periods_data['terminally_price'].",";
+                        $str.= "'".date("Y-m-d H:i:s")."',";
+                        $str.= $user_id;
+                        $str.= "),";
+                    }
+                    $str = substr($str,0,-1);
+                    \Yii::$app->db->createCommand($str)->execute();
+                }
                 return $this->qt_success('/home/watch/speciallist','恭喜您，成功购买！');
             }else{
                 return $this->redirect(['home/order/pay_order','order_sn'=>"$order_sn"]);
