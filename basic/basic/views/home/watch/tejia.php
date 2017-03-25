@@ -48,7 +48,13 @@ use yii\helpers\Url;
     </div>
 </div>
 </div>
-
+<style>
+    .lihove{
+        background-color: #fff;
+        box-shadow: 4px 4px 15px #c6c6c6;
+        box-sizing: border-box;
+    }
+</style>
 <script>
     /*
      * 拼接条件 替换页面
@@ -81,6 +87,14 @@ use yii\helpers\Url;
             }
         });
     }
+
+    $(document).on('mouseover','.ul_one li',function(){
+            $(this).removeClass('hose');
+            $(this).addClass('lihove');
+        });
+        $(document).on('mouseout','.ul_one li',function(){
+            $(this).removeClass('lihove');
+        });
 
 </script>
 

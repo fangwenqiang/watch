@@ -19,18 +19,24 @@ class PersonalController extends CommonController
     public $layout = '/personal';
 
     /**
-     * 防非法操作
+     * 为Index操作添加页面缓存并防非法操作
      * @return array
      */
-//    public function behaviors()
-//    {
+    public function behaviors()
+    {
 //        $this->isLogin();
-//        return [
-//            [
-//                'class'=>'yii\filters\PageCache',
-//            ]
-//        ];
-//    }
+        return [
+            [
+                'class'=>'yii\filters\PageCache',
+                'duration'=>1000,
+                'only'=>['index'],
+                'dependency'=>[
+                    'class'=>'yii\caching\FileDependency',
+                    'fileName'=>'personal.txt'
+                ]
+            ]
+        ];
+    }
 
     /**
      * 判断是否登陆
