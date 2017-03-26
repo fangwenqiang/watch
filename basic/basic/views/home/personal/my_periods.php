@@ -53,7 +53,7 @@ use yii\helpers\Url;
                                     ?></td>
                                 <td><?php echo $val['paid_periods'];?></td>
                                 <td><?php echo $val['unpaid_periods']?></td>
-                                <td><a href="javascript:void(0);" class="periods" data-id="<?php echo $val['periods_id']?>">查看分期</a></td>
+                                <td><a href="javascript:void(0);" class="periods" data-id="<?php echo $val['periods_id']?>" style="color: red;font-weight: bold">查看分期</a></td>
                             </tr>
                         <?php  } ?>
                         </tbody>
@@ -81,16 +81,19 @@ use yii\helpers\Url;
                          </div>
                          <div style="width: 800px;height: auto;border: 1px solid green;float: left;">
                              <table class="ho_middle" cellpadding="0" cellspacing="0" id="tables">
-                                 <tbody>
+                                 <thead>
                                  <tr class="t">
                                      <td class="w120">商品名称</td>
                                      <td class="w75">还款期数</td>
                                      <td class="w75">还款金额</td>
-                                     <td class="w186">还款日期</td>
                                      <td class="w186">截止日期</td>
                                      <td class="w87">还款状态</td>
                                      <td class="w130">操作</td>
                                  </tr>
+
+                                 </thead>
+                                 <tbody>
+
                                  </tbody>
                              </table>
                          </div>
@@ -147,23 +150,22 @@ use yii\helpers\Url;
            $('#hide').show();
            $.get("<?php echo  Url::to(['home/personal/select_periods'])?>",{id:id},function(msg){
                var html = '';
-               $.each(msg,function(k,v){
+               $.each(msg.info,function(k,v){
                    html += '<tr ';
                    if(v.refund_status == 1){ html += 'bgcolor="#696969"';}
                    html += '>\
                    <td>'+v.goods_name+'</td>\
                    <td>第'+v.periods+'期</td>\
                    <td>'+v.money+'</td>\
-                   <td>'+v.refund_date+'</td>\
                    <td>'+v.abort_date+'</td>\
                    <td>';
                    if(v.refund_status == 1){ html += '已还款';} else {html += '未还款';}
                    html += '</td>\
                    <td><a href="javascript:void(0);">';
-                   if(v.refund_status == 1){ html += '<s>还款</s>'; } else { html += '<a href="javascript:void(0);">还款</a>';}
+                   if(v.refund_status == 1){ html += '<s>还款</s>'; } else { html += '<a style="color: red;font-weight: bold" href="<?php echo Url::to(['home/order/pay_periods'])."&order_sn="?>'+msg.order.order_sn+'" >还款</a>';}
                    html += '</a></td></tr>'
                });
-               $('#tables').append(html);
+               $('#tables').find('tbody').html(html);
            },'json')
        });
     </script>
