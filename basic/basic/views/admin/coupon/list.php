@@ -23,7 +23,7 @@ use yii\widgets\LinkPager;
             <td><?php echo $value['coupon_name']?></td>
             <td align="center"><?php echo $value['coupon_value']?></td>
             <td align="center"><?php echo $value['require_spend']?></td>
-            <td align="center"><?php echo date('Y-d-m', $value['start_time']) . '至' . date('Y-d-m', $value['expire_time'])?></td>
+            <td align="center"><?php echo date('Y-m-d', $value['start_time']) . '至' . date('Y-m-d', $value['expire_time'])?></td>
             <td align="center">
             	<a href="<?php echo Url::to(['admin/coupon/update','coupon_id'=>$value['coupon_id']])?>">修改</a> |
             	<a href="<?php echo Url::to(['admin/coupon/delete','coupon_id'=>$value['coupon_id']])?>">删除</a>

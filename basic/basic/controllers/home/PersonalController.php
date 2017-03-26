@@ -235,6 +235,29 @@ class PersonalController extends CommonController
     }
 
     /*
+     * 我的分期
+     */
+    public function actionMy_periods()
+    {
+        //查询分期信息
+        $model = new Integral();
+        $integral_list = $model->show($_SESSION['user_id']);
+        $arr =  (new \yii\db\Query())->from('mb_periods')->where(array('user_id'=>$integral_list))->all();
+        return $this->render('my_periods', ['integral_list' => $integral_list,'info'=>$arr]);
+    }
+
+    //查询分期信息
+    public function actionSelect_periods()
+    {
+        $request = Yii::$app->request;
+        $model = new Integral();
+        $integral_list = $model->show($_SESSION['user_id']);
+        $periods = $request->get('id');
+        $arr =  (new \yii\db\Query())->from('mb_refund')->where(array('user_id'=>$integral_list,'periods_id'=>$periods))->all();
+        echo json_encode($arr);
+    }
+
+    /*
      * 编辑资料
      */
     public function actionMessage()

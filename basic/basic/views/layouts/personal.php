@@ -110,6 +110,7 @@ use yii\helpers\Url;
                 <div class="c">
                     <ul>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/my_order'])?>" title="我的订单" rel="nofollow">我的订单 (<span class="cb01">1</span>)</a></li>
+                        <li><i></i><a href="<?php echo Url::to(['home/personal/my_periods'])?>" title="我的分期" rel="nofollow">我的分期 (<span class="cb01">1</span>)</a></li>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/my_presell'])?>" title="我的预售" rel="nofollow">我的预售 (<span class="cb01">0</span>)</a></li>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/my_address'])?>" title="收货地址" rel="nofollow">收货地址</a></li>
                         <li><i></i><a href="<?php echo Url::to(['home/personal/gift_card'])?>" title="礼品卡" rel="nofollow">礼品卡</a></li>

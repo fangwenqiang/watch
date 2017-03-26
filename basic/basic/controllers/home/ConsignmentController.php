@@ -6,6 +6,7 @@ use Yii;
 use app\models\Consignment;  //模型层
 use app\models\Bargain;  //模型层
 use app\Lib\Functions\Filtration;
+use app\lib\Periods;
 class ConsignmentController extends CommonController
 {
 
@@ -16,6 +17,8 @@ class ConsignmentController extends CommonController
      */
     public function actionConsign_1()
     {
+       $obj = new Periods;
+        print_r($obj->compute(1800,6));
         return $this->render('consign_1');
     }
 
