@@ -214,13 +214,13 @@ class OrderController extends CommonController
                 $periods = new periods;
                 $periods_data = $periods->assignStages($goods_desc['shop_price'],$post['stages']['periods']);
                 $serve = $periods_data['terminally_serviceCharge']>0?'(含手续费)':'(不含手续费)';
-
                 //商品分期表数据
                 $data['g_id'] = $goods_desc['g_id'];
                 $data['user_id'] = $user_id;
                 $data['g_name'] = $goods_desc['goods_name'];
                 $data['periods_info'] = "¥ ".$periods_data['terminally_price'].'×'.$post['stages']['periods'].$serve;
                 $data['unpaid_periods'] = $post['stages']['periods'];
+                $data['order_sn'] = $order_sn;
 
                 $db=\Yii::$app->db->createCommand()->insert('mb_periods',$data)->execute(); 
                 //还款记录表数据
