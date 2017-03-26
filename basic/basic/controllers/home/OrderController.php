@@ -235,7 +235,7 @@ class OrderController extends CommonController
                         $str.= "'".$goods_desc['goods_name']."',";
                         $str.= $i.',';
                         $str.= $periods_data['terminally_price'].",";
-                        $str.= "'".date("Y-m-d H:i:s")."',";
+                        $str.= "'".date("Y-m-d H:i:s",strtotime("+".$i." months",time()))."',";
                         $str.= $user_id;
                         $str.= "),";
                     }
