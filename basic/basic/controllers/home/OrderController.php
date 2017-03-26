@@ -152,9 +152,15 @@ class OrderController extends CommonController
     public function actionVerifypwd()
     {
         $request = \Yii::$app->request;
-        $pwd = $request->post('pwd');
-
-        return 1;
+        $pwd = $request->get('pwd');
+        if($pwd==123456)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
 

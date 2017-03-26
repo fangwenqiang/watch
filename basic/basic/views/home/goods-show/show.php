@@ -6,14 +6,8 @@
   ?>
 <script src="js/jquery.js"></script>
 <link rel="stylesheet" href="css/goods.css">
-
-<!--放大镜定义-->
-<script type="text/javascript" src="Script/mzp-packed.js"></script>
-<link href="css/magiczoomplus.css" type="text/css" rel="stylesheet">
-
-<link rel="stylesheet" href="css/xiangxi.css">
-<link rel="stylesheet" href="css/sxg.css">
-
+<!-- <link rel="stylesheet" href="css/fdj.css"> -->
+<!-- <link rel="stylesheet" href="js/fdj.js"> -->
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <!-- <script src="./bootstrap/js/bootstrap.min.js"></script> -->
