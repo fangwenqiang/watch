@@ -283,91 +283,29 @@ $('.changered').on('click', function() {
 
     <div class="sa s13 w100 h21" style='margin-top:20px;'>
     <span class="sl" style='float:left'>分期</span>
+    <span class="sl" style='float:left'><font color='red'>(0首付！)</font></span>
     <ul class="sa s13 w100 h21 tm-clear" >
-           <li class='stages nocheck' num='1'>
+        <?php foreach($periods_data as $key=>$val){?>
+           <li class='stages nocheck' num='1' periods='<?=$key?>'>
         <span class="sr bn" style='margin-left:8px;'>
             <span class="j-content">
             <span class="tm-msg">
             <em>¥</em>
-            <strong>680.63</strong>
-            x3期
+            <strong><?=$val['terminally_price']?></strong>
+            x<?=$key?>期
             </span>
             <br>
-            <span style='margin-left:10px;'>(含手续费)</span>
+            <span style='margin-left:10px;'><?php if($val['terminally_serviceCharge']>0){echo "(含手续费)";}else{echo "(不含手续费)";}?></span>
             </span>
         </span>
         </li>
-             <li class='stages nocheck' num='1'>
-        <span class="sr bn" style='margin-left:8px;'>
-            <span class="j-content">
-            <span class="tm-msg">
-            <em>¥</em>
-            <strong>680.63</strong>
-            x6期
-            </span>
-            <br>
-            <span style='margin-left:10px;'>(含手续费)</span>
-            </span>
-        </span>
-        </li>
-                 <li class='stages nocheck' num='1'>
-        <span class="sr bn" style='margin-left:8px;'>
-            <span class="j-content">
-            <span class="tm-msg">
-            <em>¥</em>
-            <strong>680.63</strong>
-            x9期
-            </span>
-            <br>
-            <span style='margin-left:10px;'>(含手续费)</span>
-            </span>
-        </span>
-        </li>
-                 <li class='stages nocheck' num='1'>
-        <span class="sr bn" style='margin-left:8px;'>
-            <span class="j-content">
-            <span class="tm-msg">
-            <em>¥</em>
-            <strong>680.63</strong>
-            x12期
-            </span>
-            <br>
-            <span style='margin-left:10px;'>(含手续费)</span>
-            </span>
-        </span>
-        </li>
-                 <li class='stages nocheck' num='1'>
-        <span class="sr bn" style='margin-left:8px;'>
-            <span class="j-content">
-            <span class="tm-msg">
-            <em>¥</em>
-            <strong>680.63</strong>
-            x15期
-            </span>
-            <br>
-            <span style='margin-left:10px;'>(含手续费)</span>
-            </span>
-        </span>
-        </li>
-                 <li class='stages nocheck' num='1'>
-        <span class="sr bn" style='margin-left:8px;'>
-            <span class="j-content">
-            <span class="tm-msg">
-            <em>¥</em>
-            <strong>680.63</strong>
-            x18期
-            </span>
-            <br>
-            <span style='margin-left:10px;'>(含手续费)</span>
-            </span>
-        </span>
-        </li>
+        <?php } ?>
     </ul>
         </div>
     <!-- <button id="cart" class="btn btn-success"  disabled="disabled">a加入购物车</button> -->
     <div style='margin-top:260px;margin-left:70px;'>
     <a href="javascript:" goods_id="<?=$goods['g_id']?>" id='immediatelyBuy'><img src="Images/1.png" alt="" ></a>
-    <a href="javascript:" id='stagesBuy' style='display:none'><img src="Images/fenqi.png" alt=""></a>
+    <a href="javascript:" id='stagesBuy' periods=''  goods_id="<?=$goods['g_id']?>" style='display:none'><img src="Images/fenqi.png" alt=""></a>
     <img src="Images/2.png"  id="cart"  goods_id="<?=$goods['g_id']?>" alt="" style='margin-left:6px;cursor:pointer'>
     </div> 
     <input type="hidden" id="goods_id" value=<?=$goods['g_id'] ?>>
@@ -375,6 +313,7 @@ $('.changered').on('click', function() {
 //分期样式
 $(".stages").click(function(){
     var num = $(this).attr('num');
+    var periods = $(this).attr('periods');
     if(num==1)
     {
         $(this).siblings().removeClass("check");
@@ -385,6 +324,7 @@ $(".stages").click(function(){
         $("#stagesBuy").show();
         $("#immediatelyBuy").hide();
         $(this).attr('num',0);
+        $("#stagesBuy").attr('periods',periods);
     }
     else
     {
@@ -411,6 +351,24 @@ $("#immediatelyBuy").click(function(){
     location.href=url;
     }
 })
+
+
+//分期购买
+$("#stagesBuy").click(function(){
+    var g_id = $(this).attr('goods_id');
+    var periods = $(this).attr('periods');
+    var nowNum = getNum();
+    var user_id = "<?= \Yii::$app->session->get('user_id') ?>";
+    if(!user_id) {
+        alert('请先登陆！');
+    } else if(nowNum>1){
+        alert('分期只能购买一件')
+    }else{
+    var url = "<?= Url::toRoute('home/order/order_stages')?>"+"&g_id="+g_id+"&periods="+periods;
+    location.href=url;
+    }
+})
+
 
 function getNum() {
 	return $('input[name="goods_number"]').val();

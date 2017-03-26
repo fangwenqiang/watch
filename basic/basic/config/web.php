@@ -3,7 +3,8 @@ Yii::$classMap['app\lib\Functions\Filtration'] =__DIR__ . '/../lib/functions/Fil
 Yii::$classMap['app\lib\getThumb'] =__DIR__ . '/../lib/getThumb.php';
 Yii::$classMap['app\lib\Pay'] =__DIR__ . '/../lib/Pay.class.php';
 Yii::$classMap['cart'] ='@app/lib/cart.php';
-Yii::$classMap['Periods'] ='@app/lib/periods.php';
+Yii::$classMap['periods'] ='@app/lib/periods.php';
+
 
 $params = require(__DIR__ . '/params.php');
 

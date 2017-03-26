@@ -98,11 +98,12 @@ use yii\helpers\Url;
              $prices = 0;
              foreach($data as $key=>$val){  ?>
                  <div class="bgf6f br10">
-                     <ul class="c999 f13 h40 mt10 li_left">
-                         <li class="w510 tl pl20">商品</li>
-                         <li class="w120 tc">单价</li>
-                         <li class="w120 tc">数量</li>
-                         <li class="w120 tc">小计</li>
+                     <ul class="c999 f13 h40 mt10 li_left" style='width:2000px'>
+                         <li class="w510 tl pl20">分期商品</li>
+                         <li class="w90 tc">单价</li>
+                         <li class="w90 tc">数量</li>
+                         <li class="w90 tc">分期期数</li>
+                         <li class="w100 tc" style='margin-right:120px;'>月供</li>
                      </ul>
 
                      <ul class="bt_1_eae bb_1_fff" id="goods_line_548546"></ul>
@@ -111,18 +112,21 @@ use yii\helpers\Url;
                              <a href="#" target="_blank" class="fl">
                                  <img src="images/3412_183_24_30_27_27885.jpg" width="100px" height="100px" class="m_10_20_10_0" alt="">
                              </a>
-                             <a href="#" target="_blank">
+                             <a href="<?=Url::toRoute(['home/goods-show/show', 'id' => $val['g_id']]);?>" target="_blank">
                                  <span class="w390 bold c333 fl h20 mt35"><?php echo $val['goods_name']?></span>
                              </a>
                          </li>
-                         <li class="w120 tc">
+                         <li class="w90 tc">
                              <span class="bold ccf0 f16">￥<?php echo $val['price']?></span>
                          </li>
-                         <li class="w120 tc">
+                         <li class="w90 tc">
                              <span class="btne3d w18 h22 inbl re_t0-l5 ie-t1_m50 ie_mi" oprtype="add" oprid="548546"><?php echo $val['num']?></span>
                          </li>
-                         <li class="w120 tc">
-                             <span class="btne3d" oprtype="add" oprid="548546">￥<?php echo $val['price']*$val['num']?></span>
+                         <li class="w90 tc">
+                             <span class="bold ccf0" oprtype="add" oprid="548546"><?=$periods?></span>
+                         </li>
+                         <li class="w100 tc">
+                             <span class="bold ccf0 f16">￥<?=$periods_data['terminally_price']?></span>
                          </li>
                      </ul>
 
@@ -178,21 +182,24 @@ use yii\helpers\Url;
              } ?>
 
             <div class="w930 m0a">
-        <!--         <div class="fl">
+         <!--        <div class="fl">
                     <div class="mt50">
                         <a href="javascript:history.go(-1)" style='margin-top:8px' class="btnd00 w146 h40 f16 bold fl tc" >返回修改</a>
                     </div>
                 </div> -->
                 <div class="fr">
-                    <div class="tc cd00 mt20">
+     <!--                <div class="tc cd00 mt20">
                         <span class="f13 bold">商品总额：￥</span>
                         <span class="f20" id="goods_amount"><?php echo $prices?></span>
-                    </div>
+                    </div> -->
 
                     <div class="mt20 tr">
                             <div class="mt20 tr">
+                            	<!-- 分期数据 -->
+                            	<input type="hidden" name='stages[status]'  value='1'>
+                            	<input type="hidden" name='stages[periods]' value='<?=$periods?>'>
                                 <input name="_csrf" type="hidden" id="_csrf" value="<?= \Yii::$app->request->csrfToken ?>">
-                                <input  type="submit" class="btnd00 w146 h40 f16 bold"  value="确认订单" />
+                                <input  type="button" id='affirm' class="btnd00 w146 h40 f16 bold"  value="确认订单" />
                             </div>
                     </div>
 
@@ -202,8 +209,122 @@ use yii\helpers\Url;
      </form>
 </div>
 
+<!-- 支付密码弹框 -->
+<script src='js/jquery.center.js'></script>
+<style type="text/css">     
+.mask {       
+        position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;     
+        z-index: 1002; left: 0px;     
+        opacity:0.5; -moz-opacity:0.5;     
+    }   
+.alieditContainer{display:none;position:relative;z-index: 2000; background: white;width: 390px;height: 250px;}
+.alieditContainer .i-text{margin-left:30px;position: absolute;color: #fff;opacity:0.2; width:306px; height:48px; font-size:12px; left:0; -webkit-user-select:initial;  /*取消禁用选择页面元素*/z-index:9;	padding:0;	borde:0;}
+.alieditContainer .sixDigitPassword {margin-left:30px;width:306px; height:22px; cursor:text; background:#fff; outline:none; position:relative; padding:13px 0; border:1px solid #ddd; border-radius:5px;}
+.alieditContainer .sixDigitPassword i {width:50px; height:16px; float:left; display:block; padding:4px 0; border-left:1px solid #cccccc;}
+.alieditContainer .sixDigitPassword i:first-child{border-left:0;}
+.alieditContainer .sixDigitPassword i.active{background-image: url("https://t.alipayobjects.com/images/rmsweb/T1nYJhXalXXXXXXXXX.gif");background-repeat: no-repeat;background-position: center center; }
+.alieditContainer .sixDigitPassword b{display:block; margin:5px auto 4px auto; width:7px; height:7px; overflow:hidden; display:none;/*visibility:hidden;*/ background:#000; border-radius:100%;}
+.alieditContainer .sixDigitPassword .guangbiao{width:50px; height:48px; position:absolute; display:block; left:0px; top:-1px; border:1px solid rgba(82, 168, 236, .8); border:1px solid #00ffff\9; border-radius:5px; visibility:visible; -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.75), 0 0 8px rgba(82, 168, 236, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);}  
+</style>   
+<div id="mask" class="mask"></div>    
 
+<div class="alieditContainer" id="payPassword_container">
+	<div id='close' style='float:right;font-size:24px;widht:20px;height:20px;cursor:pointer'>×</div>
+	<h2 style='margin:30px 130px;'>请输入交易密码</h2>
+    <input  minlength="6" maxlength="6" tabindex="1" id="payPassword_rsainput" name="payPassword_rsainput" class="ui-input i-text" oncontextmenu="return false" onpaste="return false" oncopy="return false" oncut="return false" autocomplete="off" value="" type="password">
+    <div class="sixDigitPassword" tabindex="0">
+        <i class="active"><b></b></i>
+        <i><b></b></i>
+        <i><b></b></i>
+        <i><b></b></i>
+        <i><b></b></i>
+        <i><b></b></i>
+        <span class="guangbiao" style="left:0px;"></span>
+    </div>
+    <p id='error'  style='margin:30px 150px;'></p>
+</div>
 <script>
+	//div自动居中
+	$(".alieditContainer").center();
+
+	//关闭支付框
+	$("#close").click(function(){
+		$(".alieditContainer").hide("slow");
+		hideMask();
+	})
+
+	//显示遮罩层    
+	function showMask(){     
+		$("#mask").css("height",$(document).height());     
+		$("#mask").css("width",$(document).width());     
+		$("#mask").show();     
+	}  
+	//隐藏遮罩层  
+	function hideMask(){     
+		$("#mask").hide();     
+	}  
+
+	//确认订单
+	$("#affirm").click(function(){
+		showMask();
+		$(".alieditContainer").show("slow");
+		//鼠标获取焦点事件
+		$("#payPassword_rsainput").focus();
+	})
+
+
+//输入支付密码弹框
+$(window).ready(function() {
+	
+    $(".i-text").keyup(function()
+	{
+		var inp_v = $(this).val();
+		var inp_l = inp_v.length;
+		//$("p").html( "input的值为：" + inp_v +"; " + "值的长度为:" + inp_l);//测试用
+		
+		//请求验证支付密码是否正确
+		if( inp_l == 6)
+		{
+			var pwd  = $("#payPassword_rsainput").val();
+			$.get("<?php echo Url::to(['home/order/verifypwd'])?>", { pwd:pwd},function(re_val){
+			    if(re_val==1)
+			    {
+			    	//提交订单
+			    	$("form").submit();
+			    }
+			    else
+			    {
+			    	$("#error").html( "<font color='red'>密码错误！</font>" );//测试
+			    }
+			});
+		}
+
+		for( var x = 0; x<=6; x++)
+		{			
+			$(".sixDigitPassword").find("i").eq( inp_l ).addClass("active").siblings("i").removeClass("active");
+			$(".sixDigitPassword").find("i").eq( inp_l ).prevAll("i").find("b").css({"display":"block"});
+			$(".sixDigitPassword").find("i").eq( inp_l - 1 ).nextAll("i").find("b").css({"display":"none"});
+			
+			$(".guangbiao").css({"left":inp_l * 51});//光标位置
+			
+			if( inp_l == 0)
+			{
+				$(".sixDigitPassword").find("i").eq( 0 ).addClass("active").siblings("i").removeClass("active");
+				$(".sixDigitPassword").find("b").css({"display":"none"});
+				$(".guangbiao").css({"left":0});
+			}
+			else if( inp_l == 6)
+			{
+				$(".sixDigitPassword").find("b").css({"display":"block"});
+				$(".sixDigitPassword").find("i").eq(5).addClass("active").siblings("i").removeClass("active");
+				$(".guangbiao").css({"left":5 * 51});
+			}
+			
+			
+		}
+	});
+
+
     $(function(){
        $('.address').click(function(){
            $("#address_div div").removeClass('address_div1');
@@ -232,4 +353,6 @@ use yii\helpers\Url;
             }
         });
     });
+	
+});
 </script>
