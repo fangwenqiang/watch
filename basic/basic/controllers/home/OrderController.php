@@ -274,6 +274,23 @@ class OrderController extends CommonController
         return $this->render('OrderPay',array('order'=>$order));
     }
 
+    /*
+     * 分期还款
+     */
+    public function actionPay_periods()
+    {
+        //订单
+        $request = \Yii::$app->request;
+        $order_sn = $request->get('order_sn');
+        //查询订单信息 和总价格
+        $order_model = new Order();
+        $order = $order_model->SelectOrder(array('order_sn'=>$order_sn));
+        $order['prices'] = $order['monthly_money'];
+        $pay_class=new Pay();
+        $order['link'] = $pay_class->pay_url($order['order_sn'],$order['monthly_money']);
+
+        return $this->render('OrderPay',array('order'=>$order));
+    }
 
      public function selectCar($id)
      {

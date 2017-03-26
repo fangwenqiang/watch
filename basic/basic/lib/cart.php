@@ -1,15 +1,15 @@
 <?php
 namespace app\lib;
 /**
- * ¹ºÎï³µÀà Cookies ±£´æ£¬±£´æÖÜÆÚÎª1Ìì ×¢Òâ£ºä¯ÀÀÆ÷±ØÐëÖ§³ÖCookie²ÅÄÜ¹»Ê¹ÓÃ
- * ¼¼Êõ½»Á÷Èº£º100352308
+ * ï¿½ï¿½ï¿½ï³µï¿½ï¿½ Cookies ï¿½ï¿½ï¿½æ£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1ï¿½ï¿½ ×¢ï¿½â£ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½Cookieï¿½ï¿½ï¿½Ü¹ï¿½Ê¹ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èºï¿½ï¿½100352308
  */
 class Cart {
-	private $CartArray = array(); // ´æ·Å¹ºÎï³µµÄ¶þÎ¬Êý×é
-	private $CartCount; // Í³¼Æ¹ºÎï³µÊýÁ¿
-	public $Expires = 86400; // Cookies¹ýÆÚÊ±¼ä£¬Èç¹ûÎª0Ôò²»±£´æµ½±¾µØ µ¥Î»ÎªÃë
+	private $CartArray = array(); // ï¿½ï¿½Å¹ï¿½ï¿½ï³µï¿½Ä¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
+	private $CartCount; // Í³ï¿½Æ¹ï¿½ï¿½ï³µï¿½ï¿½ï¿½ï¿½
+	public $Expires = 86400; // Cookiesï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½ï¿½Îª0ï¿½ò²»±ï¿½ï¿½æµ½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î»Îªï¿½ï¿½
 	/**
-	 * ¹¹Ôìº¯Êý ³õÊ¼»¯²Ù×÷ Èç¹û$Id²»Îª¿Õ£¬ÔòÖ±½ÓÌí¼Óµ½¹ºÎï³µ
+	 * ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½ ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½$Idï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï³µ
 	 *
 	 */
 	public function __construct($Id = "",$Name = "",$Price1 = "",$Price2 = "",$Price3 = "",$Count = "",$Image = "",$Expires = 86400) {
@@ -19,24 +19,24 @@ class Cart {
 		}
 	}
 	/**
-	 * Ìí¼ÓÉÌÆ·µ½¹ºÎï³µ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï³µ
 	 *
-	 * @param int $Id ÉÌÆ·µÄ±àºÅ
-	 * @param string $Name ÉÌÆ·Ãû³Æ
-	 * @param decimal $Price1 ÉÌÆ·¼Û¸ñ
-	 * @param decimal $Price2 ÉÌÆ·¼Û¸ñ
-	 * @param decimal $Price3 ÉÌÆ·¼Û¸ñ
-	 * @param int $Count ÉÌÆ·ÊýÁ¿
-	 * @param string $Image ÉÌÆ·Í¼Æ¬
-	 * @return Èç¹ûÉÌÆ·´æÔÚ£¬ÔòÔÚÔ­À´µÄÊýÁ¿ÉÏ¼Ó1£¬²¢·µ»Øfalse
+	 * @param int $Id ï¿½ï¿½Æ·ï¿½Ä±ï¿½ï¿½
+	 * @param string $Name ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+	 * @param decimal $Price1 ï¿½ï¿½Æ·ï¿½Û¸ï¿½
+	 * @param decimal $Price2 ï¿½ï¿½Æ·ï¿½Û¸ï¿½
+	 * @param decimal $Price3 ï¿½ï¿½Æ·ï¿½Û¸ï¿½
+	 * @param int $Count ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * @param string $Image ï¿½ï¿½Æ·Í¼Æ¬
+	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½false
 	 */
 	public function addCart($Id,$Name,$Price1,$Price2,$Price3,$Count,$Image='') {
-		//ÅÐ¶ÏcookieÖÐ¹ºÎï³µÊý×éÊÇ·ñÒÑ´æÔÚ
+		//ï¿½Ð¶ï¿½cookieï¿½Ð¹ï¿½ï¿½ï³µï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½
 		if(isset($_COOKIE['CartAPI'])){
-			$this->CartArray = $this->CartView(); // °ÑÊý¾Ý¶ÁÈ¡²¢Ð´ÈëÊý×é
+			$this->CartArray = $this->CartView(); // ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½È¡ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		}
-		if ($this->checkItem($Id)) { // ¼ì²âÉÌÆ·ÊÇ·ñ´æÔÚ
-			$this->ModifyCart($Id,$Count,0); // ÉÌÆ·ÊýÁ¿¼Ó$Count
+		if ($this->checkItem($Id)) { // ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+			$this->ModifyCart($Id,$Count,0); // ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$Count
 			return true;
 		}
 		$this->CartArray[0][$Id] = $Id;
@@ -50,17 +50,17 @@ class Cart {
 		return $this->save();
 	}
 	/**
-	 * ÐÞ¸Ä¹ºÎï³µÀïµÄÉÌÆ·
+	 * ï¿½Þ¸Ä¹ï¿½ï¿½ï³µï¿½ï¿½ï¿½ï¿½ï¿½Æ·
 	 *
-	 * @param int $Id ÉÌÆ·±àºÅ
-	 * @param int $Count ÉÌÆ·ÊýÁ¿
-	 * @param int $Flag ÐÞ¸ÄÀàÐÍ 0£º¼Ó 1:¼õ 2:ÐÞ¸Ä 3:Çå¿Õ
-	 * @return Èç¹ûÐÞ¸ÄÊ§°Ü£¬Ôò·µ»Øfalse
+	 * @param int $Id ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+	 * @param int $Count ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * @param int $Flag ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ 1:ï¿½ï¿½ 2:ï¿½Þ¸ï¿½ 3:ï¿½ï¿½ï¿½
+	 * @return ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½ï¿½ò·µ»ï¿½false
 	 */
 	public function ModifyCart($Id, $Count, $Flag = "") {
 		$tmpId = $Id;
-		$this->CartArray = $this->CartView(); // °ÑÊý¾Ý¶ÁÈ¡²¢Ð´ÈëÊý×é
-		$tmpArray = &$this->CartArray;  // ÒýÓÃ
+		$this->CartArray = $this->CartView(); // ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½È¡ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		$tmpArray = &$this->CartArray;  // ï¿½ï¿½ï¿½ï¿½
 		if (!is_array($tmpArray[0])) return false;
 		if ($Id < 1) {
 			return false;
@@ -68,13 +68,13 @@ class Cart {
 		foreach ($tmpArray[0] as $item) {
 			if ($item === $tmpId) {
 				switch ($Flag) {
-					case 0: // Ìí¼ÓÊýÁ¿ Ò»°ã$CountÎª1
+					case 0: // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ò»ï¿½ï¿½$CountÎª1
 						$tmpArray[5][$Id] += $Count;
 						break;
-					case 1: // ¼õÉÙÊýÁ¿
+					case 1: // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						$tmpArray[5][$Id] -= $Count;
 						break;
-					case 2: // ÐÞ¸ÄÊýÁ¿
+					case 2: // ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½
 						if ($Count == 0) {
 							unset($tmpArray[0][$Id]);
 							unset($tmpArray[1][$Id]);
@@ -88,7 +88,7 @@ class Cart {
 							$tmpArray[5][$Id] = $Count;
 							break;
 						}
-					case 3: // Çå¿ÕÉÌÆ·
+					case 3: // ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
 						unset($tmpArray[0][$Id]);
 						unset($tmpArray[1][$Id]);
 						unset($tmpArray[2][$Id]);
@@ -105,7 +105,7 @@ class Cart {
 		return $this->save();
 	}
 	/**
-	 * Çå¿Õ¹ºÎï³µ
+	 * ï¿½ï¿½Õ¹ï¿½ï¿½ï³µ
 	 *
 	 */
 	public function RemoveAll() {
@@ -113,24 +113,24 @@ class Cart {
 		return $this->save();
 	}
 	/**
-	 * ²é¿´¹ºÎï³µÐÅÏ¢
+	 * ï¿½é¿´ï¿½ï¿½ï¿½ï³µï¿½ï¿½Ï¢
 	 *
-	 * @return array ·µ»ØÒ»¸ö¶þÎ¬Êý×é
+	 * @return array ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
 	 */
 	public function CartView() {
-		$cookie = stripslashes($_COOKIE['CartAPI']);
-		if(empty($cookie)){
+		if(empty($_COOKIE['CartAPI'])){
 			return false;
 		}else{
+            $cookie = stripslashes($_COOKIE['CartAPI']);
 			if (!$cookie) return false;
 			$tmpUnSerialize = unserialize($cookie);
 			return $tmpUnSerialize;
 		}
 	}
 	/**
-	 * ¼ì²é¹ºÎï³µÊÇ·ñÓÐÉÌÆ·
+	 * ï¿½ï¿½é¹ºï¿½ï³µï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
 	 *
-	 * @return bool Èç¹ûÓÐÉÌÆ·£¬·µ»Øtrue£¬·ñÔòfalse
+	 * @return bool ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½trueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½false
 	 */
 	public function checkCart() {
 		$tmpArray = $this->CartView();
@@ -144,13 +144,13 @@ class Cart {
 		}
 	}
 	/**
-	 * ÉÌÆ·Í³¼Æ
+	 * ï¿½ï¿½Æ·Í³ï¿½ï¿½
 	 *
-	 * @return array ·µ»ØÒ»¸ö¶þÎ¬Êý×é£¬ÒÔÃ¿¼þÉÌÆ·µÄidÎª¼ü£¬È»ºóÊý×éÖÐÊÇ²»Í¬¼Û¸ñµÄ×ÜºÍ£¬numÎªÉÌÆ·ÊýÁ¿
+	 * @return array ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½é£¬ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½idÎªï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½Í¬ï¿½Û¸ï¿½ï¿½ï¿½ÜºÍ£ï¿½numÎªï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 	 */
 	public function CountPrice() {
 		$tmpArray = $this->CartArray = $this->CartView();
-		$outArray = array(); //Ò»Î¬Êý×é
+		$outArray = array(); //Ò»Î¬ï¿½ï¿½ï¿½ï¿½
 		$i = 0;
 		if (is_array($tmpArray[0])) {
 			foreach ($tmpArray[0] as $key=>$val) {
@@ -165,7 +165,7 @@ class Cart {
 		return $outArray;
 	}
 	/**
-	 * Í³¼ÆÉÌÆ·ÊýÁ¿
+	 * Í³ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 	 *
 	 * @return int
 	 */
@@ -176,7 +176,7 @@ class Cart {
 		return $tmpCount;
 	}
 	/**
-	 * ±£´æÉÌÆ· Èç¹û²»Ê¹ÓÃ¹¹Ôì·½·¨£¬´Ë·½·¨±ØÐëÊ¹ÓÃ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ· ï¿½ï¿½ï¿½Ê¹ï¿½Ã¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
 	 *
 	 */
 	public function save() {
@@ -186,10 +186,10 @@ class Cart {
 		return setcookie("CartAPI",$tmpSerialize,time()+$this->Expires);
 	}
 	/**
-	 * ¼ì²é¹ºÎï³µÉÌÆ·ÊÇ·ñ´æÔÚ
+	 * ï¿½ï¿½é¹ºï¿½ï³µï¿½ï¿½Æ·ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 	 *
 	 * @param int $Id
-	 * @return bool Èç¹û´æÔÚ true ·ñÔòfalse
+	 * @return bool ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ true ï¿½ï¿½ï¿½ï¿½false
 	 */
 	private function checkItem($Id) {
 		$tmpArray = $this->CartArray;
