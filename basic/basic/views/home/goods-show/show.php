@@ -7,7 +7,12 @@
 <script src="js/jquery.js"></script>
 <link rel="stylesheet" href="css/goods.css">
 
+<!--放大镜定义-->
+<script type="text/javascript" src="Script/mzp-packed.js"></script>
+<link href="css/magiczoomplus.css" type="text/css" rel="stylesheet">
 
+<link rel="stylesheet" href="css/xiangxi.css">
+<link rel="stylesheet" href="css/sxg.css">
 
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
@@ -427,12 +432,7 @@ $.get("<?= Url::toRoute('home/goods-show/cart') ?>",{'goods_id':goods_id,'type_a
     <a href="http://imga.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" rel="gal1" id="image" onclick="javascript:$('#lookOver').trigger('click');">
           
         <!-- 图片展示区      -->
-        <img  id="bigImage"
-        src=
-
-        'Images/3412_183_24_30_27_27885.jpg'
-
-
+        <img  id="bigImage"src='Images/img02.jpg'
         class="lazy" 
         data-original="http://imgi12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" 
         alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" 
@@ -440,12 +440,14 @@ $.get("<?= Url::toRoute('home/goods-show/cart') ?>",{'goods_id':goods_id,'type_a
     </a>
     <a href="" id="lookOver" class="fancybox.iframe"></a></div>
     <div class="thumbs">
-    <div class="context"><ul id="sImg"><li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg',largeimage:'http://imga.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg'}"><img src="http://imgd12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" class="lazy" data-original="http://imgd12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li><li>
-    <a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
+    <div class="context"><ul id="sImg">
+    <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg',largeimage:'http://imga.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg'}"><img src="Images/img02s.jpg" class="lazy" data-original="http://imgd12.wbiao.cn/201303/01/3412_183_20_34_25_12063.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
+    <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_27910.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
     <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_82122.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_82122.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_82122.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_82122.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
     <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_95305.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
     <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_32663.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
-    <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li></ul></div></div>
+    <li><a href="javascript:void(0);" rel="{gallery:'gal1',smallimage:'http://imgi13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg',largeimage:'http://imga13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg'}"><img src="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg" class="lazy" data-original="http://imgd13.wbiao.cn/201402/11/3412_183_20_34_25_38405.jpg" alt="瑞士爱宝时（EPOS）-Passion系列 3412.183.20.34.25 机械男表" style="display: block;"></a></li>
+    </ul></div></div>
     <script>
         $(".lazy").hover(
             function() {

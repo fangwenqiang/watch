@@ -118,10 +118,10 @@ class Cart {
 	 * @return array 返回一个二维数组
 	 */
 	public function CartView() {
-		$cookie = stripslashes($_COOKIE['CartAPI']);
 		if(empty($cookie)){
 			return false;
 		}else{
+			$cookie = stripslashes($_COOKIE['CartAPI']);
 			if (!$cookie) return false;
 			$tmpUnSerialize = unserialize($cookie);
 			return $tmpUnSerialize;
