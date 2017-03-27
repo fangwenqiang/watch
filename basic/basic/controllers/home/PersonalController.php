@@ -253,7 +253,8 @@ class PersonalController extends CommonController
         $model = new Integral();
         $integral_list = $model->show($_SESSION['user_id']);
         $periods = $request->get('id');
-        $arr =  (new \yii\db\Query())->from('mb_refund')->where(array('user_id'=>$integral_list,'periods_id'=>$periods))->all();
+        $arr['info'] =  (new \yii\db\Query())->from('mb_refund')->where(array('user_id'=>$integral_list,'periods_id'=>$periods))->all();
+        $arr['order'] = (new \yii\db\Query())->from('mb_periods')->where(array('user_id'=>$integral_list,'periods_id'=>$periods))->one();
         echo json_encode($arr);
     }
 

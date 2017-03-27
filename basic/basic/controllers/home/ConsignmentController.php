@@ -17,8 +17,6 @@ class ConsignmentController extends CommonController
      */
     public function actionConsign_1()
     {
-       $obj = new Periods;
-        print_r($obj->compute(1800,6));
         return $this->render('consign_1');
     }
 
