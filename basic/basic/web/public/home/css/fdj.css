@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: rgba(0,0,0,.5);
+}
+.main{
+	width: 1002px;
+	height: 1000px;
+	background: #fff;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+}
+.small{
+	width: 430px;
+	height: 430px;
+	position: relative;
+}
+.fdj{
+	width: 215px;
+	height: 215px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(103,155,255,.3);
+	border:1px solid #ccc;
+	cursor: move;
+	display: none;
+}
+.big{
+	width: 430px;
+	height: 430px;
+	position: absolute;
+	left: 450px;
+	top: 10px;
+	overflow: hidden;
+	display: none;
+}
+.big img{
+	position: absolute;
+	left: 0;
+	top:0;
+}
